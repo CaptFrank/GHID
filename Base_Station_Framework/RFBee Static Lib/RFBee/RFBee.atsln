@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("18599872-015C-41DB-814A-52F22A020CF6") = "RFBee", "RFBee.cppproj", "1E00119F-BE0E-4248-9060-256DC2F57C58"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		1E00119F-BE0E-4248-9060-256DC2F57C58.Debug|AVR.ActiveCfg = Debug|AVR
+		1E00119F-BE0E-4248-9060-256DC2F57C58.Debug|AVR.Build.0 = Debug|AVR
+		1E00119F-BE0E-4248-9060-256DC2F57C58.Release|AVR.ActiveCfg = Release|AVR
+		1E00119F-BE0E-4248-9060-256DC2F57C58.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal 

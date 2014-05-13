@@ -1,0 +1,442 @@
+.TH "XBOXRECV" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XBOXRECV \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <XBOXRECV\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXBOXRECV\fP (USB *\fBpUsb\fP)"
+.br
+.in -1c
+.PP
+.RI "\fBUSBDeviceConfig implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual uint8_t \fBConfigureDevice\fP (uint8_t parent, uint8_t port, bool lowspeed)"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBInit\fP (uint8_t parent, uint8_t port, bool lowspeed)"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBRelease\fP ()"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBPoll\fP ()"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBGetAddress\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisReady\fP ()"
+.br
+.ti -1c
+.RI "virtual boolean \fBVIDPIDOK\fP (uint16_t vid, uint16_t pid)"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBXbox Controller functions\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "uint8_t \fBgetButtonPress\fP (\fBButtonEnum\fP \fBb\fP, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "bool \fBgetButtonClick\fP (\fBButtonEnum\fP \fBb\fP, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "int16_t \fBgetAnalogHat\fP (\fBAnalogHatEnum\fP a, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBdisconnect\fP (uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetAllOff\fP (uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetRumbleOff\fP (uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetRumbleOn\fP (uint8_t lValue, uint8_t rValue, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetLedRaw\fP (uint8_t value, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetLedOff\fP (uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetLedOn\fP (\fBLEDEnum\fP l, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetLedBlink\fP (\fBLEDEnum\fP l, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBsetLedMode\fP (\fBLEDModeEnum\fP lm, uint8_t controller=0)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetBatteryLevel\fP (uint8_t controller=0)"
+.br
+.ti -1c
+.RI "bool \fBbuttonChanged\fP (uint8_t controller=0)"
+.br
+.ti -1c
+.RI "void \fBattachOnInit\fP (void(*funcOnInit)(void))"
+.br
+.in -1c
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBXboxReceiverConnected\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBXbox360Connected\fP [4]"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "USB * \fBpUsb\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbAddress\fP"
+.br
+.ti -1c
+.RI "EpInfo \fBepInfo\fP [\fBXBOX_MAX_ENDPOINTS\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements support for a Xbox Wireless receiver\&.
+.PP
+Up to four controllers can connect to one receiver, if more is needed one can use a second receiver via the \fBUSBHub\fP class\&. 
+.PP
+Definition at line 58 of file XBOXRECV\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBXBOXRECV::XBOXRECV\fP (USB *pUsb)"Constructor for the \fBXBOXRECV\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpUsb\fP Pointer to USB class instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 25 of file XBOXRECV\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBXBOXRECV::attachOnInit\fP (void(*)(void)funcOnInit)\fC [inline]\fP"Used to call your own function when the controller is successfully initialized\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfuncOnInit\fP Function to call\&. 
+.RE
+.PP
+
+.PP
+Definition at line 226 of file XBOXRECV\&.h\&.
+.SS "bool \fBXBOXRECV::buttonChanged\fP (uint8_tcontroller = \fC0\fP)"Used to check if a button has changed\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP The controller to read from\&. Default to 0\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+True if a button has changed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 441 of file XBOXRECV\&.cpp\&.
+.SS "uint8_t \fBXBOXRECV::ConfigureDevice\fP (uint8_tparent, uint8_tport, boollowspeed)\fC [virtual]\fP"Address assignment and basic initilization is done here\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparent\fP Hub number\&. 
+.br
+\fIport\fP Port number on the hub\&. 
+.br
+\fIlowspeed\fP Speed of the device\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 40 of file XBOXRECV\&.cpp\&.
+.SS "void \fBXBOXRECV::disconnect\fP (uint8_tcontroller = \fC0\fP)"Used to disconnect any of the controllers\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP The controller to disconnect\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 497 of file XBOXRECV\&.cpp\&.
+.SS "virtual uint8_t \fBXBOXRECV::GetAddress\fP ()\fC [inline, virtual]\fP"Get the device address\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The device address\&. 
+.RE
+.PP
+
+.PP
+Definition at line 98 of file XBOXRECV\&.h\&.
+.SS "int16_t \fBXBOXRECV::getAnalogHat\fP (\fBAnalogHatEnum\fPa, uint8_tcontroller = \fC0\fP)"Return the analog value from the joysticks on the controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP Either \fBLeftHatX\fP, \fBLeftHatY\fP, \fBRightHatX\fP or \fBRightHatY\fP\&. 
+.br
+\fIcontroller\fP The controller to read from\&. Default to 0\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns a signed 16-bit integer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 437 of file XBOXRECV\&.cpp\&.
+.SS "uint8_t \fBXBOXRECV::getBatteryLevel\fP (uint8_tcontroller = \fC0\fP)"Used to get the battery level from the controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP The controller to read from\&. Default to 0\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns the battery level as an integer in the range of 0-3\&. 
+.RE
+.PP
+
+.PP
+Definition at line 466 of file XBOXRECV\&.cpp\&.
+.SS "bool \fBXBOXRECV::getButtonClick\fP (\fBButtonEnum\fPb, uint8_tcontroller = \fC0\fP)"
+.PP
+Definition at line 417 of file XBOXRECV\&.cpp\&.
+.SS "uint8_t \fBXBOXRECV::getButtonPress\fP (\fBButtonEnum\fPb, uint8_tcontroller = \fC0\fP)"getButtonPress(uint8_t controller, ButtonEnum b) will return true as long as the button is held down\&.
+.PP
+While getButtonClick(uint8_t controller, ButtonEnum b) will only return it once\&.
+.PP
+So you instance if you need to increase a variable once you would use getButtonClick(uint8_t controller, ButtonEnum b), but if you need to drive a robot forward you would use getButtonPress(uint8_t controller, ButtonEnum b)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIb\fP \fBButtonEnum\fP to read\&. 
+.br
+\fIcontroller\fP The controller to read from\&. Default to 0\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+getButtonClick(uint8_t controller, ButtonEnum b) will return a bool, while getButtonPress(uint8_t controller, ButtonEnum b) will return a byte if reading \fBL2\fP or \fBR2\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 409 of file XBOXRECV\&.cpp\&.
+.SS "uint8_t \fBXBOXRECV::Init\fP (uint8_tparent, uint8_tport, boollowspeed)\fC [virtual]\fP"Initialize the Xbox wireless receiver\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIparent\fP Hub number\&. 
+.br
+\fIport\fP Port number on the hub\&. 
+.br
+\fIlowspeed\fP Speed of the device\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 137 of file XBOXRECV\&.cpp\&.
+.SS "virtual bool \fBXBOXRECV::isReady\fP ()\fC [inline, virtual]\fP"Used to check if the controller has been initialized\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+True if it's ready\&. 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file XBOXRECV\&.h\&.
+.SS "uint8_t \fBXBOXRECV::Poll\fP ()\fC [virtual]\fP"Poll the USB Input endpoins and run the state machines\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 292 of file XBOXRECV\&.cpp\&.
+.SS "uint8_t \fBXBOXRECV::Release\fP ()\fC [virtual]\fP"Release the USB device\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success\&. 
+.RE
+.PP
+
+.PP
+Definition at line 282 of file XBOXRECV\&.cpp\&.
+.SS "void \fBXBOXRECV::setAllOff\fP (uint8_tcontroller = \fC0\fP)\fC [inline]\fP"Turn rumble off and all the LEDs on the specific controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 156 of file XBOXRECV\&.h\&.
+.SS "void \fBXBOXRECV::setLedBlink\fP (\fBLEDEnum\fPl, uint8_tcontroller = \fC0\fP)"Turn on a LED by using \fBLEDEnum\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIl\fP \fBALL\fP, \fBLED1\fP, \fBLED2\fP, \fBLED3\fP and \fBLED4\fP is supported by the Xbox controller\&. 
+.br
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 522 of file XBOXRECV\&.cpp\&.
+.SS "void \fBXBOXRECV::setLedMode\fP (\fBLEDModeEnum\fPlm, uint8_tcontroller = \fC0\fP)"Used to set special LED modes supported by the Xbox controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlm\fP See \fBLEDModeEnum\fP\&. 
+.br
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 526 of file XBOXRECV\&.cpp\&.
+.SS "void \fBXBOXRECV::setLedOff\fP (uint8_tcontroller = \fC0\fP)\fC [inline]\fP"Turn all LEDs off the specific controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 188 of file XBOXRECV\&.h\&.
+.SS "void \fBXBOXRECV::setLedOn\fP (\fBLEDEnum\fPl, uint8_tcontroller = \fC0\fP)"Turn on a LED by using \fBLEDEnum\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIl\fP \fBOFF\fP, \fBLED1\fP, \fBLED2\fP, \fBLED3\fP and \fBLED4\fP is supported by the Xbox controller\&. 
+.br
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 515 of file XBOXRECV\&.cpp\&.
+.SS "void \fBXBOXRECV::setLedRaw\fP (uint8_tvalue, uint8_tcontroller = \fC0\fP)"Set LED value\&. Without using the \fBLEDEnum\fP or \fBLEDModeEnum\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP See: \fBsetLedOff(uint8_t controller)\fP, setLedOn(uint8_t controller, LED l), setLedBlink(uint8_t controller, LED l), and setLedMode(uint8_t controller, LEDMode lm)\&. 
+.br
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 506 of file XBOXRECV\&.cpp\&.
+.SS "void \fBXBOXRECV::setRumbleOff\fP (uint8_tcontroller = \fC0\fP)\fC [inline]\fP"Turn rumble off the specific controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file XBOXRECV\&.h\&.
+.SS "void \fBXBOXRECV::setRumbleOn\fP (uint8_tlValue, uint8_trValue, uint8_tcontroller = \fC0\fP)"Turn rumble on\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlValue\fP Left motor (big weight) inside the controller\&. 
+.br
+\fIrValue\fP Right motor (small weight) inside the controller\&. 
+.br
+\fIcontroller\fP The controller to write to\&. Default to 0\&. 
+.RE
+.PP
+
+.PP
+Definition at line 556 of file XBOXRECV\&.cpp\&.
+.SS "virtual boolean \fBXBOXRECV::VIDPIDOK\fP (uint16_tvid, uint16_tpid)\fC [inline, virtual]\fP"Used by the USB core to check what this driver support\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvid\fP The device's VID\&. 
+.br
+\fIpid\fP The device's PID\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Returns true if the device's VID and PID matches this driver\&. 
+.RE
+.PP
+
+.PP
+Definition at line 116 of file XBOXRECV\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t \fBXBOXRECV::bAddress\fP\fC [protected]\fP"Device address\&. 
+.PP
+Definition at line 240 of file XBOXRECV\&.h\&.
+.SS "EpInfo \fBXBOXRECV::epInfo\fP[\fBXBOX_MAX_ENDPOINTS\fP]\fC [protected]\fP"Endpoint info structure\&. 
+.PP
+Definition at line 242 of file XBOXRECV\&.h\&.
+.SS "USB* \fBXBOXRECV::pUsb\fP\fC [protected]\fP"Pointer to USB class instance\&. 
+.PP
+Definition at line 238 of file XBOXRECV\&.h\&.
+.SS "uint8_t \fBXBOXRECV::Xbox360Connected\fP[4]"Variable used to indicate if the XBOX 360 controller is successfully connected\&. 
+.PP
+Definition at line 234 of file XBOXRECV\&.h\&.
+.SS "bool \fBXBOXRECV::XboxReceiverConnected\fP"True if a wireless receiver is connected\&. 
+.PP
+Definition at line 228 of file XBOXRECV\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

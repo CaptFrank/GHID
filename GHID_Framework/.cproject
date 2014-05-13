@@ -26,10 +26,8 @@
 							<tool command="avr-gcc" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="it.baeyens.avreclipse.tool.assembler.winavr.app.release.2056035817" name="AVR Assembler" superClass="it.baeyens.avreclipse.tool.assembler.winavr.app.release">
 								<option id="it.baeyens.avreclipse.assembler.option.debug.level.22469911" name="Generate Debugging Info" superClass="it.baeyens.avreclipse.assembler.option.debug.level" value="it.baeyens.avreclipse.assembler.option.debug.level.none" valueType="enumerated"/>
 								<option id="it.baeyens.avreclipse.asm.option.include.paths.1193182990" name="#include paths for preprocessor(-I)" superClass="it.baeyens.avreclipse.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/Source Code/Black-Box-Mouse-Interface/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="/usr/local/CrossPack-AVR-20120217/avr/include"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/Source Code/GHID/GHID_Framework/Src/Included Libraries/USB_Host_Shield_2.0-master&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/4th Year Project/Black-Box-Mouse-Interface/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/arduino/cores/arduino&quot;"/>
 								</option>
 								<inputType id="it.baeyens.avreclipse.tool.assembler.input.237159600" superClass="it.baeyens.avreclipse.tool.assembler.input"/>
 							</tool>
@@ -41,10 +39,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ARDUINOBOARDNAME}/${ARDUINOBOARDVARIANT}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/leonardo_test}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GHID_Framework}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/Source Code/Black-Box-Mouse-Interface/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="/usr/local/CrossPack-AVR-20120217/avr/include"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/Source Code/GHID/GHID_Framework/Src/Included Libraries/USB_Host_Shield_2.0-master&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/4th Year Project/Black-Box-Mouse-Interface/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/arduino/cores/arduino&quot;"/>
 								</option>
 								<option id="it.baeyens.avreclipse.compiler.option.def.1485111403" name="Define Syms (-D)" superClass="it.baeyens.avreclipse.compiler.option.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__IN_ECLIPSE__=1"/>
@@ -68,11 +64,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ARDUINOBOARDNAME}/${ARDUINOBOARDVARIANT}}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/leonardo_test}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GHID_Framework}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/4th Year Project/GHID/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/Source Code/Black-Box-Mouse-Interface/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="/usr/local/CrossPack-AVR-20120217/avr/include"/>
-									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/Source Code/GHID/GHID_Framework/Src/Included Libraries/USB_Host_Shield_2.0-master&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/4th Year Project/Black-Box-Mouse-Interface/Arduino ADK USB Host/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/arduino/cores/arduino&quot;"/>
 								</option>
 								<option id="it.baeyens.avreclipse.cppcompiler.option.def.479432623" name="Define Syms (-D)" superClass="it.baeyens.avreclipse.cppcompiler.option.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__IN_ECLIPSE__=1"/>

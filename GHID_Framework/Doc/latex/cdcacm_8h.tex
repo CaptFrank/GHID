@@ -1,0 +1,517 @@
+\hypertarget{cdcacm_8h}{\section{\-Included \-Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.0-\/master/cdcacm.h \-File \-Reference}
+\label{cdcacm_8h}\index{\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/cdcacm.\-h@{\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/cdcacm.\-h}}
+}
+{\ttfamily \#include \char`\"{}\-Usb.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_c_a_l_l___m_g_m_n_t___f_u_n_c___d_e_s_c_r}{\-C\-A\-L\-L\-\_\-\-M\-G\-M\-N\-T\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+\item 
+struct \hyperlink{struct_a_c_m___f_u_n_c___d_e_s_c_r}{\-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+\item 
+struct \hyperlink{struct_t_e_l___r_i_n_g_e_r___f_u_n_c___d_e_s_c_r}{\-T\-E\-L\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+\item 
+struct \hyperlink{struct_l_i_n_e___c_o_d_i_n_g}{\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}
+\item 
+struct \hyperlink{struct_c_l_a_s_s___n_o_t_i_f_i_c_a_t_i_o_n}{\-C\-L\-A\-S\-S\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}
+\item 
+class \hyperlink{class_c_d_c_async_oper}{\-C\-D\-C\-Async\-Oper}
+\item 
+class \hyperlink{class_a_c_m}{\-A\-C\-M}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cdcacm_8h_a5797aa38c730dde78bf3181282bd6bf9}{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-H\-O\-S\-T\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E
+\item 
+\#define \hyperlink{cdcacm_8h_af2ac2e2644603a3d1013be940c43314d}{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-T\-O\-\_\-\-H\-O\-S\-T$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E
+\item 
+\#define \hyperlink{cdcacm_8h_a9d555a2c20cdda9166df1f1a0deb2fe6}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M}~0x01
+\item 
+\#define \hyperlink{cdcacm_8h_acce3aedc4473cc5526efc16448b89221}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M}~0x02
+\item 
+\#define \hyperlink{cdcacm_8h_a8e66107828e9b10a8b37823cb4436209}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M}~0x03
+\item 
+\#define \hyperlink{cdcacm_8h_a279c0e93e9cf1c328e9551e62ebdc342}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M}~0x04
+\item 
+\#define \hyperlink{cdcacm_8h_ab35e4890d2a9820b89f17d86e63e6a30}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I}~0x05
+\item 
+\#define \hyperlink{cdcacm_8h_aad198585b3a333441d39c04c9a6f8dfc}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T}~0x06
+\item 
+\#define \hyperlink{cdcacm_8h_af1a7d3d1e1dd78003500d6fccd205461}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M}~0x07
+\item 
+\#define \hyperlink{cdcacm_8h_ad331bb2702e65696ca33c2d933ab2d73}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T}~0x08
+\item 
+\#define \hyperlink{cdcacm_8h_a27674e866e3a2422d8fc38b873f19723}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T}~0x09
+\item 
+\#define \hyperlink{cdcacm_8h_a110580c0368ed8a8d657e6812fa5cffe}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E}~0x0\-A
+\item 
+\#define \hyperlink{cdcacm_8h_ab1094071380f381e0b8b88d240aedd03}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X}~0x0\-B
+\item 
+\#define \hyperlink{cdcacm_8h_a6ef074fafbca12dadc97de1511563629}{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U}~0x0\-C
+\item 
+\#define \hyperlink{cdcacm_8h_a13977894f3398454f6573995afb89c5b}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250}~0x01
+\item 
+\#define \hyperlink{cdcacm_8h_ad5fce51c970f6a1c2bd70a304db8504f}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101}~0x02
+\item 
+\#define \hyperlink{cdcacm_8h_a199157a779e1f1d70b7460157b874fbb}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O}~0x03
+\item 
+\#define \hyperlink{cdcacm_8h_a74f58c97749d65adfcf0d8fcd8739713}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07}~0x04
+\item 
+\#define \hyperlink{cdcacm_8h_a0cdc3e66270e78dc62f6fdab6806e4ac}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07}~0x05
+\item 
+\#define \hyperlink{cdcacm_8h_a25dc8a5a03fa46bc6d18be73a318b725}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0}~0x06
+\item 
+\#define \hyperlink{cdcacm_8h_ae0e669ccb182282b45af577b84ea190f}{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M}~0x07
+\item 
+\#define \hyperlink{cdcacm_8h_a7aaa245703a0a2191c27697715f3727c}{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D}~0x00
+\item 
+\#define \hyperlink{cdcacm_8h_a6170632c774a3163b5a9927cc4e960ec}{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}~0x01
+\item 
+\#define \hyperlink{cdcacm_8h_a893b79445f99070657e8d45f6495b174}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}~0x02
+\item 
+\#define \hyperlink{cdcacm_8h_ad0912dac888d01142b225b0c6f8a508f}{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}~0x03
+\item 
+\#define \hyperlink{cdcacm_8h_a6c79b8666110840333ad3785bf7ce87c}{\-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}~0x04
+\item 
+\#define \hyperlink{cdcacm_8h_ac39a42b128864ba4fae224be0078adba}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}~0x10
+\item 
+\#define \hyperlink{cdcacm_8h_a367e07b7ce50e3a17703da1dea7f05a1}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}~0x11
+\item 
+\#define \hyperlink{cdcacm_8h_aab5439915442bd5b835d7c755ba5fec1}{\-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P}~0x12
+\item 
+\#define \hyperlink{cdcacm_8h_af83535db4560a2fa52c72571f914dfc1}{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E}~0x13
+\item 
+\#define \hyperlink{cdcacm_8h_a83ededfa85fdc32e603f9d1cdccbad78}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E}~0x14
+\item 
+\#define \hyperlink{cdcacm_8h_a763f022025ebdaa3e6fb3dd6b5bef118}{\-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K}~0x15
+\item 
+\#define \hyperlink{cdcacm_8h_ad07ce089c8757b8d2ff37ddd83dc9351}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}~0x20
+\item 
+\#define \hyperlink{cdcacm_8h_a1068ab45668e413d964a01bc36fa2d43}{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}~0x21
+\item 
+\#define \hyperlink{cdcacm_8h_a11c392243dec4d03970f1eaa1f8053ae}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}~0x22
+\item 
+\#define \hyperlink{cdcacm_8h_a868c480caf0abda6b458c82281dda8ad}{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K}~0x23
+\item 
+\#define \hyperlink{cdcacm_8h_aacceff07ade4b94b3c924d4f4ad6b139}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}~0x30
+\item 
+\#define \hyperlink{cdcacm_8h_a7a17ca0755e655bd1fe6ac97b68ec10f}{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}~0x31
+\item 
+\#define \hyperlink{cdcacm_8h_a437557c6adb23d8cdde7842b62a03a21}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}~0x32
+\item 
+\#define \hyperlink{cdcacm_8h_a257e7150670c8cc0b1d90c8f19c36b38}{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}~0x33
+\item 
+\#define \hyperlink{cdcacm_8h_a74433e0421d2cfd59982db6417a8ea41}{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}~0x34
+\item 
+\#define \hyperlink{cdcacm_8h_a725da0e1d595c7aebacb9fa3df4d7231}{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}~0x35
+\item 
+\#define \hyperlink{cdcacm_8h_a4d1029757801882e8d6589c05a3c41db}{\-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S}~0x36
+\item 
+\#define \hyperlink{cdcacm_8h_a9e48b736a3dbd35ebbe8507b29dec86a}{\-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N}~0x00
+\item 
+\#define \hyperlink{cdcacm_8h_ac0ba0ade7f2d2a3b9c4cef90931e8237}{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}~0x01
+\item 
+\#define \hyperlink{cdcacm_8h_ac79c185e34b15634c1ba5d15eb8c831c}{\-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}~0x08
+\item 
+\#define \hyperlink{cdcacm_8h_a83130a0c72dea5b783134e28665628ee}{\-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T}~0x09
+\item 
+\#define \hyperlink{cdcacm_8h_a8e278dbd137d5d873d24e1647be9d4e6}{\-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E}~0x20
+\item 
+\#define \hyperlink{cdcacm_8h_a16e45b21be9797a7190330fd10bc1b07}{\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}~0x28
+\item 
+\#define \hyperlink{cdcacm_8h_a0a06858faca59d300fbadd0e37e312c9}{\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}~0x29
+\item 
+\#define \hyperlink{cdcacm_8h_a0bf4e444b84f8ab8bb1b3dfe16dc93de}{\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E}~0x2a
+\item 
+\#define \hyperlink{cdcacm_8h_aa11e629b02a0cd7d768f796732cb2694}{\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}~4
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_a_c_m___f_u_n_c___d_e_s_c_r}{\-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R} \hyperlink{cdcacm_8h_aee9cef95b49c643abc3269666b62aa1b}{\-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+\item 
+typedef struct \hyperlink{struct_a_c_m___f_u_n_c___d_e_s_c_r}{\-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R} \hyperlink{cdcacm_8h_ad377d3305b15e93acb1e0799ee7c3972}{\-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+\item 
+typedef struct \hyperlink{struct_a_c_m___f_u_n_c___d_e_s_c_r}{\-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R} \hyperlink{cdcacm_8h_a01d7daaa4bdcff9f84f1a49206933cb2}{\-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{cdcacm_8h_aa11e629b02a0cd7d768f796732cb2694}{\index{cdcacm.\-h@{cdcacm.\-h}!\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S@{\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}}
+\index{\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S@{\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}~4}}\label{cdcacm_8h_aa11e629b02a0cd7d768f796732cb2694}
+
+
+\-Definition at line 136 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ac79c185e34b15634c1ba5d15eb8c831c}{\index{cdcacm.\-h@{cdcacm.\-h}!\-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E@{\-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}}
+\index{\-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E@{\-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-U\-X\-\_\-\-J\-A\-C\-K\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}~0x08}}\label{cdcacm_8h_ac79c185e34b15634c1ba5d15eb8c831c}
+
+
+\-Definition at line 77 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_af2ac2e2644603a3d1013be940c43314d}{\index{cdcacm.\-h@{cdcacm.\-h}!bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N@{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N}}
+\index{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N@{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf bm\-R\-E\-Q\-\_\-\-C\-D\-C\-I\-N}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-T\-O\-\_\-\-H\-O\-S\-T$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}\label{cdcacm_8h_af2ac2e2644603a3d1013be940c43314d}
+
+
+\-Definition at line 23 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a5797aa38c730dde78bf3181282bd6bf9}{\index{cdcacm.\-h@{cdcacm.\-h}!bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T@{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T}}
+\index{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T@{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf bm\-R\-E\-Q\-\_\-\-C\-D\-C\-O\-U\-T}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-H\-O\-S\-T\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}\label{cdcacm_8h_a5797aa38c730dde78bf3181282bd6bf9}
+
+
+\-Definition at line 22 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a16e45b21be9797a7190330fd10bc1b07}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E@{\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}}
+\index{\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E@{\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}~0x28}}\label{cdcacm_8h_a16e45b21be9797a7190330fd10bc1b07}
+
+
+\-Definition at line 80 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a6c79b8666110840333ad3785bf7ce87c}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E@{\-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}}
+\index{\-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E@{\-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-C\-L\-E\-A\-R\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}~0x04}}\label{cdcacm_8h_a6c79b8666110840333ad3785bf7ce87c}
+
+
+\-Definition at line 55 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a4d1029757801882e8d6589c05a3c41db}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S@{\-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S}}
+\index{\-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S@{\-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-D\-I\-A\-L\-\_\-\-D\-I\-G\-I\-T\-S}~0x36}}\label{cdcacm_8h_a4d1029757801882e8d6589c05a3c41db}
+
+
+\-Definition at line 72 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ad0912dac888d01142b225b0c6f8a508f}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}}
+\index{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}~0x03}}\label{cdcacm_8h_ad0912dac888d01142b225b0c6f8a508f}
+
+
+\-Definition at line 54 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a6170632c774a3163b5a9927cc4e960ec}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}}
+\index{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}~0x01}}\label{cdcacm_8h_a6170632c774a3163b5a9927cc4e960ec}
+
+
+\-Definition at line 50 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a1068ab45668e413d964a01bc36fa2d43}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}}
+\index{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}~0x21}}\label{cdcacm_8h_a1068ab45668e413d964a01bc36fa2d43}
+
+
+\-Definition at line 63 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a725da0e1d595c7aebacb9fa3df4d7231}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}}
+\index{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}~0x35}}\label{cdcacm_8h_a725da0e1d595c7aebacb9fa3df4d7231}
+
+
+\-Definition at line 71 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a257e7150670c8cc0b1d90c8f19c36b38}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}}
+\index{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}~0x33}}\label{cdcacm_8h_a257e7150670c8cc0b1d90c8f19c36b38}
+
+
+\-Definition at line 69 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a7a17ca0755e655bd1fe6ac97b68ec10f}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}}
+\index{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-G\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}~0x31}}\label{cdcacm_8h_a7a17ca0755e655bd1fe6ac97b68ec10f}
+
+
+\-Definition at line 67 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a0cdc3e66270e78dc62f6fdab6806e4ac}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-3\-G\-P\-P\-\_\-27\-\_\-07}~0x05}}\label{cdcacm_8h_a0cdc3e66270e78dc62f6fdab6806e4ac}
+
+
+\-Definition at line 44 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a25dc8a5a03fa46bc6d18be73a318b725}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-C\-\_\-\-S0017\-\_\-0}~0x06}}\label{cdcacm_8h_a25dc8a5a03fa46bc6d18be73a318b725}
+
+
+\-Definition at line 45 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a74f58c97749d65adfcf0d8fcd8739713}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-G\-S\-M\-\_\-7\-\_\-07}~0x04}}\label{cdcacm_8h_a74f58c97749d65adfcf0d8fcd8739713}
+
+
+\-Definition at line 43 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a13977894f3398454f6573995afb89c5b}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-T\-U\-\_\-\-T\-\_\-\-V\-\_\-250}~0x01}}\label{cdcacm_8h_a13977894f3398454f6573995afb89c5b}
+
+
+\-Definition at line 40 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ad5fce51c970f6a1c2bd70a304db8504f}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101}~0x02}}\label{cdcacm_8h_ad5fce51c970f6a1c2bd70a304db8504f}
+
+
+\-Definition at line 41 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a199157a779e1f1d70b7460157b874fbb}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-P\-C\-C\-A\-\_\-101\-\_\-\-O}~0x03}}\label{cdcacm_8h_a199157a779e1f1d70b7460157b874fbb}
+
+
+\-Definition at line 42 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ae0e669ccb182282b45af577b84ea190f}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M}}
+\index{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M@{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-U\-S\-B\-\_\-\-E\-E\-M}~0x07}}\label{cdcacm_8h_ae0e669ccb182282b45af577b84ea190f}
+
+
+\-Definition at line 46 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_aab5439915442bd5b835d7c755ba5fec1}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P@{\-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P}}
+\index{\-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P@{\-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-P\-U\-L\-S\-E\-\_\-\-S\-E\-T\-U\-P}~0x12}}\label{cdcacm_8h_aab5439915442bd5b835d7c755ba5fec1}
+
+
+\-Definition at line 58 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a763f022025ebdaa3e6fb3dd6b5bef118}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K@{\-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K}}
+\index{\-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K@{\-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-R\-I\-N\-G\-\_\-\-A\-U\-X\-\_\-\-J\-A\-C\-K}~0x15}}\label{cdcacm_8h_a763f022025ebdaa3e6fb3dd6b5bef118}
+
+
+\-Definition at line 61 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a868c480caf0abda6b458c82281dda8ad}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K@{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K@{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-B\-R\-E\-A\-K}~0x23}}\label{cdcacm_8h_a868c480caf0abda6b458c82281dda8ad}
+
+
+\-Definition at line 65 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a7aaa245703a0a2191c27697715f3727c}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D@{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D@{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-E\-N\-C\-A\-P\-S\-U\-L\-A\-T\-E\-D\-\_\-\-C\-O\-M\-M\-A\-N\-D}~0x00}}\label{cdcacm_8h_a7aaa245703a0a2191c27697715f3727c}
+
+
+\-Definition at line 49 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_af83535db4560a2fa52c72571f914dfc1}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E@{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E@{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-N\-D\-\_\-\-P\-U\-L\-S\-E}~0x13}}\label{cdcacm_8h_af83535db4560a2fa52c72571f914dfc1}
+
+
+\-Definition at line 59 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ac39a42b128864ba4fae224be0078adba}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-A\-U\-X\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}~0x10}}\label{cdcacm_8h_ac39a42b128864ba4fae224be0078adba}
+
+
+\-Definition at line 56 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a893b79445f99070657e8d45f6495b174}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-M\-\_\-\-F\-E\-A\-T\-U\-R\-E}~0x02}}\label{cdcacm_8h_a893b79445f99070657e8d45f6495b174}
+
+
+\-Definition at line 53 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a11c392243dec4d03970f1eaa1f8053ae}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E}~0x22}}\label{cdcacm_8h_a11c392243dec4d03970f1eaa1f8053ae}
+
+
+\-Definition at line 64 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a367e07b7ce50e3a17703da1dea7f05a1}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-A\-T\-E}~0x11}}\label{cdcacm_8h_a367e07b7ce50e3a17703da1dea7f05a1}
+
+
+\-Definition at line 57 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ad07ce089c8757b8d2ff37ddd83dc9351}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G}~0x20}}\label{cdcacm_8h_ad07ce089c8757b8d2ff37ddd83dc9351}
+
+
+\-Definition at line 62 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a74433e0421d2cfd59982db6417a8ea41}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-L\-I\-N\-E\-\_\-\-P\-A\-R\-M\-S}~0x34}}\label{cdcacm_8h_a74433e0421d2cfd59982db6417a8ea41}
+
+
+\-Definition at line 70 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a437557c6adb23d8cdde7842b62a03a21}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-P\-A\-R\-M\-S}~0x32}}\label{cdcacm_8h_a437557c6adb23d8cdde7842b62a03a21}
+
+
+\-Definition at line 68 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a83ededfa85fdc32e603f9d1cdccbad78}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-P\-U\-L\-S\-E\-\_\-\-T\-I\-M\-E}~0x14}}\label{cdcacm_8h_a83ededfa85fdc32e603f9d1cdccbad78}
+
+
+\-Definition at line 60 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_aacceff07ade4b94b3c924d4f4ad6b139}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}}
+\index{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S@{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-E\-T\-\_\-\-R\-I\-N\-G\-E\-R\-\_\-\-P\-A\-R\-M\-S}~0x30}}\label{cdcacm_8h_aacceff07ade4b94b3c924d4f4ad6b139}
+
+
+\-Definition at line 66 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_acce3aedc4473cc5526efc16448b89221}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-C\-M}~0x02}}\label{cdcacm_8h_acce3aedc4473cc5526efc16448b89221}
+
+
+\-Definition at line 27 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_af1a7d3d1e1dd78003500d6fccd205461}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-M}~0x07}}\label{cdcacm_8h_af1a7d3d1e1dd78003500d6fccd205461}
+
+
+\-Definition at line 32 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ab35e4890d2a9820b89f17d86e63e6a30}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-C\-A\-P\-I}~0x05}}\label{cdcacm_8h_ab35e4890d2a9820b89f17d86e63e6a30}
+
+
+\-Definition at line 30 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a27674e866e3a2422d8fc38b873f19723}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-M\-A\-N\-A\-G\-E\-M\-E\-N\-T}~0x09}}\label{cdcacm_8h_a27674e866e3a2422d8fc38b873f19723}
+
+
+\-Definition at line 34 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a9d555a2c20cdda9166df1f1a0deb2fe6}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-D\-L\-C\-M}~0x01}}\label{cdcacm_8h_a9d555a2c20cdda9166df1f1a0deb2fe6}
+
+
+\-Definition at line 26 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_aad198585b3a333441d39c04c9a6f8dfc}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T}~0x06}}\label{cdcacm_8h_aad198585b3a333441d39c04c9a6f8dfc}
+
+
+\-Definition at line 31 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a6ef074fafbca12dadc97de1511563629}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-E\-T\-H\-E\-R\-N\-E\-T\-\_\-\-E\-M\-U}~0x0\-C}}\label{cdcacm_8h_a6ef074fafbca12dadc97de1511563629}
+
+
+\-Definition at line 37 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a279c0e93e9cf1c328e9551e62ebdc342}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-C\-C\-M}~0x04}}\label{cdcacm_8h_a279c0e93e9cf1c328e9551e62ebdc342}
+
+
+\-Definition at line 29 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a110580c0368ed8a8d657e6812fa5cffe}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-M\-O\-B\-I\-L\-E\-\_\-\-D\-I\-R\-E\-C\-T\-\_\-\-L\-I\-N\-E}~0x0\-A}}\label{cdcacm_8h_a110580c0368ed8a8d657e6812fa5cffe}
+
+
+\-Definition at line 35 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ab1094071380f381e0b8b88d240aedd03}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-E\-X}~0x0\-B}}\label{cdcacm_8h_ab1094071380f381e0b8b88d240aedd03}
+
+
+\-Definition at line 36 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a8e66107828e9b10a8b37823cb4436209}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-T\-C\-M}~0x03}}\label{cdcacm_8h_a8e66107828e9b10a8b37823cb4436209}
+
+
+\-Definition at line 28 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ad331bb2702e65696ca33c2d933ab2d73}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T}}
+\index{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T@{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-D\-C\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-W\-I\-R\-E\-L\-E\-S\-S\-\_\-\-H\-A\-N\-D\-S\-E\-T}~0x08}}\label{cdcacm_8h_ad331bb2702e65696ca33c2d933ab2d73}
+
+
+\-Definition at line 33 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a0bf4e444b84f8ab8bb1b3dfe16dc93de}{\index{cdcacm.\-h@{cdcacm.\-h}!\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E@{\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E}}
+\index{\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E@{\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-P\-E\-E\-D\-\_\-\-C\-H\-A\-N\-G\-E}~0x2a}}\label{cdcacm_8h_a0bf4e444b84f8ab8bb1b3dfe16dc93de}
+
+
+\-Definition at line 82 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a0a06858faca59d300fbadd0e37e312c9}{\index{cdcacm.\-h@{cdcacm.\-h}!\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E@{\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}}
+\index{\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E@{\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-I\-N\-E\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}~0x29}}\label{cdcacm_8h_a0a06858faca59d300fbadd0e37e312c9}
+
+
+\-Definition at line 81 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a9e48b736a3dbd35ebbe8507b29dec86a}{\index{cdcacm.\-h@{cdcacm.\-h}!\-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N@{\-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N}}
+\index{\-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N@{\-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-E\-T\-W\-O\-R\-K\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N}~0x00}}\label{cdcacm_8h_a9e48b736a3dbd35ebbe8507b29dec86a}
+
+
+\-Definition at line 75 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_ac0ba0ade7f2d2a3b9c4cef90931e8237}{\index{cdcacm.\-h@{cdcacm.\-h}!\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E@{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}}
+\index{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E@{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}~0x01}}\label{cdcacm_8h_ac0ba0ade7f2d2a3b9c4cef90931e8237}
+
+
+\-Definition at line 76 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a83130a0c72dea5b783134e28665628ee}{\index{cdcacm.\-h@{cdcacm.\-h}!\-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T@{\-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T}}
+\index{\-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T@{\-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-I\-N\-G\-\_\-\-D\-E\-T\-E\-C\-T}~0x09}}\label{cdcacm_8h_a83130a0c72dea5b783134e28665628ee}
+
+
+\-Definition at line 78 of file cdcacm.\-h.
+
+\hypertarget{cdcacm_8h_a8e278dbd137d5d873d24e1647be9d4e6}{\index{cdcacm.\-h@{cdcacm.\-h}!\-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E@{\-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E}}
+\index{\-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E@{\-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-R\-I\-A\-L\-\_\-\-S\-T\-A\-T\-E}~0x20}}\label{cdcacm_8h_a8e278dbd137d5d873d24e1647be9d4e6}
+
+
+\-Definition at line 79 of file cdcacm.\-h.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{cdcacm_8h_aee9cef95b49c643abc3269666b62aa1b}{\index{cdcacm.\-h@{cdcacm.\-h}!\-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R@{\-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}}
+\index{\-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R@{\-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf \-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}  {\bf \-D\-L\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}}}\label{cdcacm_8h_aee9cef95b49c643abc3269666b62aa1b}
+\hypertarget{cdcacm_8h_a01d7daaa4bdcff9f84f1a49206933cb2}{\index{cdcacm.\-h@{cdcacm.\-h}!\-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R@{\-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}}
+\index{\-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R@{\-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf \-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}
+ {\bf \-T\-E\-L\-\_\-\-C\-A\-L\-L\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-P\-\_\-\-C\-P\-B\-L\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}}}\label{cdcacm_8h_a01d7daaa4bdcff9f84f1a49206933cb2}
+\hypertarget{cdcacm_8h_ad377d3305b15e93acb1e0799ee7c3972}{\index{cdcacm.\-h@{cdcacm.\-h}!\-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R@{\-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}}
+\index{\-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R@{\-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}!cdcacm.h@{cdcacm.\-h}}
+\subsubsection[{\-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}typedef  struct {\bf \-A\-C\-M\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}  {\bf \-T\-E\-L\-\_\-\-O\-P\-E\-R\-\_\-\-M\-O\-D\-E\-S\-\_\-\-F\-U\-N\-C\-\_\-\-D\-E\-S\-C\-R}}}\label{cdcacm_8h_ad377d3305b15e93acb1e0799ee7c3972}

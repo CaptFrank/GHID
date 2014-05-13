@@ -1,0 +1,107 @@
+.TH "CDB10" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CDB10 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <masstorage\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCDB10\fP (uint8_t _Opcode, uint8_t _LUN)"
+.br
+.ti -1c
+.RI "\fBCDB10\fP (uint8_t _Opcode, uint8_t _LUN, uint16_t xflen, uint32_t _LBA)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBOpcode\fP"
+.br
+.ti -1c
+.RI "unsigned \fBService_Action\fP: 5"
+.br
+.ti -1c
+.RI "unsigned \fBLUN\fP: 3"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_M_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_M_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_L_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_L_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBMisc2\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBControl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 222 of file masstorage\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBCDB10::CDB10\fP (uint8_t_Opcode, uint8_t_LUN)\fC [inline]\fP"
+.PP
+Definition at line 241 of file masstorage\&.h\&.
+.SS "\fBCDB10::CDB10\fP (uint8_t_Opcode, uint8_t_LUN, uint16_txflen, uint32_t_LBA)\fC [inline]\fP"
+.PP
+Definition at line 247 of file masstorage\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t \fBCDB10::ALC_LB\fP"
+.PP
+Definition at line 236 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::ALC_MB\fP"
+.PP
+Definition at line 235 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::Control\fP"
+.PP
+Definition at line 238 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::LBA_L_L_LB\fP"
+.PP
+Definition at line 231 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::LBA_L_L_MB\fP"
+.PP
+Definition at line 230 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::LBA_L_M_LB\fP"
+.PP
+Definition at line 229 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::LBA_L_M_MB\fP"
+.PP
+Definition at line 228 of file masstorage\&.h\&.
+.SS "unsigned \fBCDB10::LUN\fP"
+.PP
+Definition at line 226 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::Misc2\fP"
+.PP
+Definition at line 233 of file masstorage\&.h\&.
+.SS "uint8_t \fBCDB10::Opcode\fP"
+.PP
+Definition at line 223 of file masstorage\&.h\&.
+.SS "unsigned \fBCDB10::Service_Action\fP"
+.PP
+Definition at line 225 of file masstorage\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

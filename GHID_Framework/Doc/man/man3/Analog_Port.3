@@ -1,0 +1,95 @@
+.TH "Analog_Port" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Analog_Port \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_Analog_Port\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnalog_Port\fP (byte pin, byte direction)"
+.br
+.RI "\fIPublic Context\&. \fP"
+.ti -1c
+.RI "word \fBread_port\fP ()"
+.br
+.RI "\fIThe read port method\&. \fP"
+.ti -1c
+.RI "void \fBwrite_port\fP (byte duty_cycle)"
+.br
+.RI "\fIThe write to the port method\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This framework back end allows for easy programming of each type of sensor\&. Either Analog, Digital or Serial Bus devices\&. 
+.PP
+Definition at line 19 of file GHID_Analog_Port\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBAnalog_Port::Analog_Port\fP (bytepin, bytedirection)"
+.PP
+Public Context\&. The default constructor\&.
+.PP
+This is the default constructor for analog ports\&. We can use this for individual analog ports used\&.
+.PP
+.IP "\(bu" 2
+The pin value is the analog port used on the Arduino, this value is the mapped name (i\&.e\&. Analog port 1 = A1)
+.PP
+.PP
+.IP "\(bu" 2
+The direction value is the direction of the analog pin that is used\&. In this case this value can be input ('I'), output ('O')
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpin\fP - byte the pin that is used as analog pin 
+.br
+\fIdirection\fP - byte the direction of the pin (Input / Output) 
+.RE
+.PP
+Set the important values
+.PP
+Initialize internal variables\&.
+.PP
+Setup the port 
+.PP
+Definition at line 8 of file GHID_Analog_Port\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "word \fBAnalog_Port::read_port\fP ()"
+.PP
+The read port method\&. This method is the public access reading method to enable reading of the analog port\&. This returns the value read in an unsigned integer (word - 16bit value), the ADC read results in a 10bit value with a range or:
+.IP "\(bu" 2
+Min: 0
+.IP "\(bu" 2
+Max: 1024
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+result - word the read value from the ADC\&. 
+.RE
+.PP
+Assign the internal value and return it\&. 
+.PP
+Definition at line 22 of file GHID_Analog_Port\&.cpp\&.
+.SS "void \fBAnalog_Port::write_port\fP (byteduty_cycle)"
+.PP
+The write to the port method\&. This method is the public access method that writes to the analog value\&. Note: This method does not output a digital value such as: 00001010 Instead, this method outputs a PWM (Pulse width modulated) signal, with range oF:
+.IP "\(bu" 2
+Min: 0
+.IP "\(bu" 2
+Max: 255 
+.PP
+Write the analog duty cycle to the PWM generator\&. 
+.PP
+Definition at line 29 of file GHID_Analog_Port\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

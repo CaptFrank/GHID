@@ -1,0 +1,109 @@
+.TH "SoftwareSerial" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SoftwareSerial \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SoftwareSerial\&.h>\fP
+.PP
+Inherited by \fBGHID_UART\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSoftwareSerial\fP (uint8_t receivePin, uint8_t transmitPin, bool inverse_logic=false)"
+.br
+.ti -1c
+.RI "\fB~SoftwareSerial\fP ()"
+.br
+.ti -1c
+.RI "void \fBbegin\fP (long speed)"
+.br
+.ti -1c
+.RI "bool \fBlisten\fP ()"
+.br
+.ti -1c
+.RI "void \fBend\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisListening\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoverflow\fP ()"
+.br
+.ti -1c
+.RI "int \fBpeek\fP ()"
+.br
+.ti -1c
+.RI "virtual size_t \fBwrite\fP (uint8_t byte)"
+.br
+.ti -1c
+.RI "virtual int \fBread\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBavailable\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBflush\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBhandle_interrupt\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 47 of file SoftwareSerial\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBSoftwareSerial::SoftwareSerial\fP (uint8_treceivePin, uint8_ttransmitPin, boolinverse_logic = \fCfalse\fP)"
+.PP
+Definition at line 338 of file SoftwareSerial\&.cpp\&.
+.SS "\fBSoftwareSerial::~SoftwareSerial\fP ()"
+.PP
+Definition at line 353 of file SoftwareSerial\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int \fBSoftwareSerial::available\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 441 of file SoftwareSerial\&.cpp\&.
+.SS "void \fBSoftwareSerial::begin\fP (longspeed)"
+.PP
+Definition at line 382 of file SoftwareSerial\&.cpp\&.
+.SS "void \fBSoftwareSerial::end\fP ()"
+.PP
+Definition at line 418 of file SoftwareSerial\&.cpp\&.
+.SS "void \fBSoftwareSerial::flush\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 499 of file SoftwareSerial\&.cpp\&.
+.SS "void \fBSoftwareSerial::handle_interrupt\fP ()\fC [inline, static]\fP"
+.PP
+Definition at line 299 of file SoftwareSerial\&.cpp\&.
+.SS "bool \fBSoftwareSerial::isListening\fP ()\fC [inline]\fP"
+.PP
+Definition at line 88 of file SoftwareSerial\&.h\&.
+.SS "bool \fBSoftwareSerial::listen\fP ()"
+.PP
+Definition at line 182 of file SoftwareSerial\&.cpp\&.
+.SS "bool \fBSoftwareSerial::overflow\fP ()\fC [inline]\fP"
+.PP
+Definition at line 89 of file SoftwareSerial\&.h\&.
+.SS "int \fBSoftwareSerial::peek\fP ()"
+.PP
+Definition at line 510 of file SoftwareSerial\&.cpp\&.
+.SS "int \fBSoftwareSerial::read\fP (void)\fC [virtual]\fP"
+.PP
+Definition at line 426 of file SoftwareSerial\&.cpp\&.
+.SS "size_t \fBSoftwareSerial::write\fP (uint8_tbyte)\fC [virtual]\fP"
+.PP
+Definition at line 449 of file SoftwareSerial\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

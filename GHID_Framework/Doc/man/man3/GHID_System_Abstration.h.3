@@ -1,0 +1,53 @@
+.TH "GHID API/GHID_System_Abstration.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GHID API/GHID_System_Abstration.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <Arduino\&.h>\fP
+.br
+\fC#include 'avr/interrupt\&.h'\fP
+.br
+\fC#include 'TimerOne\&.h'\fP
+.br
+\fC#include 'TimerThree\&.h'\fP
+.br
+\fC#include 'GHID_USB_Structures\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGHID_System_Abstration\fP"
+.br
+.ti -1c
+.RI "class \fBGHID_System_Abstration::GHID_Timer_One\fP"
+.br
+.ti -1c
+.RI "class \fBGHID_System_Abstration::GHID_Timer_Three\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBJOYSTICK_REPORT\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBJOYSTICK_REPORT\fP"Only one of these can be defined at once\&. These define the USB frame that is sent\&. Either:
+.IP "\(bu" 2
+Joystick Report
+.IP "\(bu" 2
+Mouse Report 
+.PP
+
+.PP
+Definition at line 23 of file GHID_System_Abstration\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

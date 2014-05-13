@@ -1,0 +1,326 @@
+\hypertarget{class_x_b_o_x_o_l_d}{\section{\-X\-B\-O\-X\-O\-L\-D \-Class \-Reference}
+\label{class_x_b_o_x_o_l_d}\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}}
+}
+
+
+{\ttfamily \#include $<$\-X\-B\-O\-X\-O\-L\-D.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_x_b_o_x_o_l_d_a119c511d09ecc777437584a86858d86f}{\-X\-B\-O\-X\-O\-L\-D} (\-U\-S\-B $\ast$\hyperlink{class_x_b_o_x_o_l_d_a2b4d7d994ab6f5e1d1344d4162e9f5fb}{p\-Usb})
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf \-U\-S\-B\-Device\-Config implementation}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual uint8\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_a7260253c704b147e6dfd762e13222434}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_a8245e0d30eed5fb7dc761fc350fd1765}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_a332bf499dd0434d70db8ad8a6f3f4850}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_ac2db53abfe0aae15d56ef65b57a2b38a}{\-Get\-Address} ()
+\item 
+virtual bool \hyperlink{class_x_b_o_x_o_l_d_af4d77a5108f2e6812ba00be1b0374829}{is\-Ready} ()
+\item 
+virtual boolean \hyperlink{class_x_b_o_x_o_l_d_a20c8b928ca5e7c1a758a605ec45fe2ee}{\-V\-I\-D\-P\-I\-D\-O\-K} (uint16\-\_\-t vid, uint16\-\_\-t pid)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-Xbox \-Controller functions}\par
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_a81c07adc969bcfbbb10a36b3544ee85a}{get\-Button\-Press} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+bool \hyperlink{class_x_b_o_x_o_l_d_a61ed3d2e7d782b4456b3ed863a50789f}{get\-Button\-Click} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+int16\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_af1ed3d92780ba8771219c1ecf4f06485}{get\-Analog\-Hat} (\hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093}{\-Analog\-Hat\-Enum} a)
+\item 
+void \hyperlink{class_x_b_o_x_o_l_d_a8014cc70e141362e09beeedb49428746}{set\-Rumble\-Off} ()
+\item 
+void \hyperlink{class_x_b_o_x_o_l_d_ab69673ea316c30268a5eedc893bea3a9}{set\-Rumble\-On} (uint8\-\_\-t l\-Value, uint8\-\_\-t r\-Value)
+\item 
+void \hyperlink{class_x_b_o_x_o_l_d_a7a7d0f28e51ef4650ac5e2b6c883b159}{attach\-On\-Init} (void($\ast$func\-On\-Init)(void))
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_x_b_o_x_o_l_d_aa091ff52ba7ad4216b0cd0f18651b755}{\-Xbox\-Connected}
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-U\-S\-B $\ast$ \hyperlink{class_x_b_o_x_o_l_d_a2b4d7d994ab6f5e1d1344d4162e9f5fb}{p\-Usb}
+\item 
+uint8\-\_\-t \hyperlink{class_x_b_o_x_o_l_d_ae28d3306b484750d7067fa5f7ed0beae}{b\-Address}
+\item 
+\-Ep\-Info \hyperlink{class_x_b_o_x_o_l_d_a06a318db8037f25a8d9bb62785dbacb9}{ep\-Info} \mbox{[}\hyperlink{_x_b_o_x_u_s_b_8h_af35f872fc33e690571eb99de648e8e96}{\-X\-B\-O\-X\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class implements support for a the original \-Xbox controller via \-U\-S\-B. 
+
+\-Definition at line 52 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_x_b_o_x_o_l_d_a119c511d09ecc777437584a86858d86f}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}}
+\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-X\-B\-O\-X\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-X\-B\-O\-X\-O\-L\-D\-::\-X\-B\-O\-X\-O\-L\-D} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p\-Usb}
+\end{DoxyParamCaption}
+)}}\label{class_x_b_o_x_o_l_d_a119c511d09ecc777437584a86858d86f}
+\-Constructor for the \hyperlink{class_x_b_o_x_o_l_d}{\-X\-B\-O\-X\-O\-L\-D} class. 
+\begin{DoxyParams}{\-Parameters}
+{\em p\-Usb} & \-Pointer to \-U\-S\-B class instance. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 47 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_x_b_o_x_o_l_d_a7a7d0f28e51ef4650ac5e2b6c883b159}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!attach\-On\-Init@{attach\-On\-Init}}
+\index{attach\-On\-Init@{attach\-On\-Init}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{attach\-On\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-X\-B\-O\-X\-O\-L\-D\-::attach\-On\-Init} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{func\-On\-Init}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a7a7d0f28e51ef4650ac5e2b6c883b159}
+\-Used to call your own function when the controller is successfully initialized. 
+\begin{DoxyParams}{\-Parameters}
+{\em func\-On\-Init} & \-Function to call. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 145 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_ac2db53abfe0aae15d56ef65b57a2b38a}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_x_b_o_x_o_l_d_ac2db53abfe0aae15d56ef65b57a2b38a}
+\-Get the device address. \begin{DoxyReturn}{\-Returns}
+\-The device address. 
+\end{DoxyReturn}
+
+
+\-Definition at line 84 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_af1ed3d92780ba8771219c1ecf4f06485}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!get\-Analog\-Hat@{get\-Analog\-Hat}}
+\index{get\-Analog\-Hat@{get\-Analog\-Hat}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{get\-Analog\-Hat}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::get\-Analog\-Hat} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Analog\-Hat\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_x_b_o_x_o_l_d_af1ed3d92780ba8771219c1ecf4f06485}
+\-Return the analog value from the joysticks on the controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-Either \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093a383cb8895dd296b7f69ce845ed16b0ca}{\-Left\-Hat\-X}, \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093af3f3925efa9762c4e9e71ac7da7a94a3}{\-Left\-Hat\-Y}, \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093aaeb027a0ae5bbc6ba25e1c78a6486c7b}{\-Right\-Hat\-X} or \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093a7f1fb2db5381286691f4dec179ed5d5a}{\-Right\-Hat\-Y}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns a signed 16-\/bit integer. 
+\end{DoxyReturn}
+
+
+\-Definition at line 316 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_a61ed3d2e7d782b4456b3ed863a50789f}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!get\-Button\-Click@{get\-Button\-Click}}
+\index{get\-Button\-Click@{get\-Button\-Click}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{get\-Button\-Click}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-X\-B\-O\-X\-O\-L\-D\-::get\-Button\-Click} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_x_b_o_x_o_l_d_a61ed3d2e7d782b4456b3ed863a50789f}
+
+
+\-Definition at line 301 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_a81c07adc969bcfbbb10a36b3544ee85a}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!get\-Button\-Press@{get\-Button\-Press}}
+\index{get\-Button\-Press@{get\-Button\-Press}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{get\-Button\-Press}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::get\-Button\-Press} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_x_b_o_x_o_l_d_a81c07adc969bcfbbb10a36b3544ee85a}
+\hyperlink{class_x_b_o_x_o_l_d_a81c07adc969bcfbbb10a36b3544ee85a}{get\-Button\-Press(\-Button\-Enum b)} will return true as long as the button is held down.
+
+\-While \hyperlink{class_x_b_o_x_o_l_d_a61ed3d2e7d782b4456b3ed863a50789f}{get\-Button\-Click(\-Button\-Enum b)} will only return it once.
+
+\-So you instance if you need to increase a variable once you would use \hyperlink{class_x_b_o_x_o_l_d_a61ed3d2e7d782b4456b3ed863a50789f}{get\-Button\-Click(\-Button\-Enum b)}, but if you need to drive a robot forward you would use \hyperlink{class_x_b_o_x_o_l_d_a81c07adc969bcfbbb10a36b3544ee85a}{get\-Button\-Press(\-Button\-Enum b)}. 
+\begin{DoxyParams}{\-Parameters}
+{\em b} & \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{class_x_b_o_x_o_l_d_a61ed3d2e7d782b4456b3ed863a50789f}{get\-Button\-Click(\-Button\-Enum b)} will return a bool, while \hyperlink{class_x_b_o_x_o_l_d_a81c07adc969bcfbbb10a36b3544ee85a}{get\-Button\-Press(\-Button\-Enum b)} will return a byte if reading \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda0adffb24dae0c41be5b803f4d444f066}{\-L2} or \hyperlink{masstorage_8h_a7dae2a007c34ecf4796811a14e1c11e2}{\-R2}. 
+\end{DoxyReturn}
+
+
+\-Definition at line 294 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_a7260253c704b147e6dfd762e13222434}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a7260253c704b147e6dfd762e13222434}
+\-Initialize the \-Xbox \-Controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em parent} & \-Hub number. \\
+\hline
+{\em port} & \-Port number on the hub. \\
+\hline
+{\em lowspeed} & \-Speed of the device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\-Definition at line 62 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_af4d77a5108f2e6812ba00be1b0374829}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!is\-Ready@{is\-Ready}}
+\index{is\-Ready@{is\-Ready}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-X\-B\-O\-X\-O\-L\-D\-::is\-Ready} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_x_b_o_x_o_l_d_af4d77a5108f2e6812ba00be1b0374829}
+\-Used to check if the controller has been initialized. \begin{DoxyReturn}{\-Returns}
+\-True if it's ready. 
+\end{DoxyReturn}
+
+
+\-Definition at line 92 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_a332bf499dd0434d70db8ad8a6f3f4850}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a332bf499dd0434d70db8ad8a6f3f4850}
+\-Poll the \-U\-S\-B \-Input endpoins and run the state machines. \begin{DoxyReturn}{\-Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\-Definition at line 244 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_a8245e0d30eed5fb7dc761fc350fd1765}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a8245e0d30eed5fb7dc761fc350fd1765}
+\-Release the \-U\-S\-B device. \begin{DoxyReturn}{\-Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\-Definition at line 236 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_a8014cc70e141362e09beeedb49428746}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!set\-Rumble\-Off@{set\-Rumble\-Off}}
+\index{set\-Rumble\-Off@{set\-Rumble\-Off}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{set\-Rumble\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-X\-B\-O\-X\-O\-L\-D\-::set\-Rumble\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a8014cc70e141362e09beeedb49428746}
+\-Turn rumble off the controller. 
+
+\-Definition at line 131 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_ab69673ea316c30268a5eedc893bea3a9}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!set\-Rumble\-On@{set\-Rumble\-On}}
+\index{set\-Rumble\-On@{set\-Rumble\-On}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{set\-Rumble\-On}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-X\-B\-O\-X\-O\-L\-D\-::set\-Rumble\-On} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{l\-Value, }
+\item[{uint8\-\_\-t}]{r\-Value}
+\end{DoxyParamCaption}
+)}}\label{class_x_b_o_x_o_l_d_ab69673ea316c30268a5eedc893bea3a9}
+\-Turn rumble on. 
+\begin{DoxyParams}{\-Parameters}
+{\em l\-Value} & \-Left motor (big weight) inside the controller. \\
+\hline
+{\em r\-Value} & \-Right motor (small weight) inside the controller. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 326 of file \-X\-B\-O\-X\-O\-L\-D.\-cpp.
+
+\hypertarget{class_x_b_o_x_o_l_d_a20c8b928ca5e7c1a758a605ec45fe2ee}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-V\-I\-D\-P\-I\-D\-O\-K@{\-V\-I\-D\-P\-I\-D\-O\-K}}
+\index{\-V\-I\-D\-P\-I\-D\-O\-K@{\-V\-I\-D\-P\-I\-D\-O\-K}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-V\-I\-D\-P\-I\-D\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}virtual boolean {\bf \-X\-B\-O\-X\-O\-L\-D\-::\-V\-I\-D\-P\-I\-D\-O\-K} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{vid, }
+\item[{uint16\-\_\-t}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a20c8b928ca5e7c1a758a605ec45fe2ee}
+\-Used by the \-U\-S\-B core to check what this driver support. 
+\begin{DoxyParams}{\-Parameters}
+{\em vid} & \-The device's \-V\-I\-D. \\
+\hline
+{\em pid} & \-The device's \-P\-I\-D. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns true if the device's \-V\-I\-D and \-P\-I\-D matches this driver. 
+\end{DoxyReturn}
+
+
+\-Definition at line 102 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_x_b_o_x_o_l_d_ae28d3306b484750d7067fa5f7ed0beae}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!b\-Address@{b\-Address}}
+\index{b\-Address@{b\-Address}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{b\-Address}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-X\-B\-O\-X\-O\-L\-D\-::b\-Address}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_x_b_o_x_o_l_d_ae28d3306b484750d7067fa5f7ed0beae}
+\-Device address. 
+
+\-Definition at line 157 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_a06a318db8037f25a8d9bb62785dbacb9}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!ep\-Info@{ep\-Info}}
+\index{ep\-Info@{ep\-Info}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{ep\-Info}]{\setlength{\rightskip}{0pt plus 5cm}\-Ep\-Info {\bf \-X\-B\-O\-X\-O\-L\-D\-::ep\-Info}\mbox{[}{\bf \-X\-B\-O\-X\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a06a318db8037f25a8d9bb62785dbacb9}
+\-Endpoint info structure. 
+
+\-Definition at line 159 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_a2b4d7d994ab6f5e1d1344d4162e9f5fb}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!p\-Usb@{p\-Usb}}
+\index{p\-Usb@{p\-Usb}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{p\-Usb}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-S\-B$\ast$ {\bf \-X\-B\-O\-X\-O\-L\-D\-::p\-Usb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_x_b_o_x_o_l_d_a2b4d7d994ab6f5e1d1344d4162e9f5fb}
+\-Pointer to \-U\-S\-B class instance. 
+
+\-Definition at line 155 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+\hypertarget{class_x_b_o_x_o_l_d_aa091ff52ba7ad4216b0cd0f18651b755}{\index{\-X\-B\-O\-X\-O\-L\-D@{\-X\-B\-O\-X\-O\-L\-D}!\-Xbox\-Connected@{\-Xbox\-Connected}}
+\index{\-Xbox\-Connected@{\-Xbox\-Connected}!XBOXOLD@{\-X\-B\-O\-X\-O\-L\-D}}
+\subsubsection[{\-Xbox\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-X\-B\-O\-X\-O\-L\-D\-::\-Xbox\-Connected}}}\label{class_x_b_o_x_o_l_d_aa091ff52ba7ad4216b0cd0f18651b755}
+\-True if a \-Xbox controller is connected. 
+
+\-Definition at line 147 of file \-X\-B\-O\-X\-O\-L\-D.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_x_b_o_x_o_l_d_8h}{\-X\-B\-O\-X\-O\-L\-D.\-h}\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_x_b_o_x_o_l_d_8cpp}{\-X\-B\-O\-X\-O\-L\-D.\-cpp}\end{DoxyCompactItemize}

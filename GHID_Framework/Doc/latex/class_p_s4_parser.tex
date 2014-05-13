@@ -1,0 +1,462 @@
+\hypertarget{class_p_s4_parser}{\section{\-P\-S4\-Parser \-Class \-Reference}
+\label{class_p_s4_parser}\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}}
+}
+
+
+{\ttfamily \#include $<$\-P\-S4\-Parser.\-h$>$}
+
+\-Inheritance diagram for \-P\-S4\-Parser\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_s4_parser}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_p_s4_parser_a3ef06f8737f1088dbdbbc351b576c1cf}{\-P\-S4\-Parser} ()
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf \-P\-S4 \-Controller functions}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_p_s4_parser_ad352f30e4ab772246574bbf654248906}{get\-Button\-Press} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+bool \hyperlink{class_p_s4_parser_a92a4ea3d328426b9f86be05cabaad91c}{get\-Button\-Click} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+uint8\-\_\-t \hyperlink{class_p_s4_parser_a66151c4e4601f80492cd5b2451a2f87a}{get\-Analog\-Button} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+uint8\-\_\-t \hyperlink{class_p_s4_parser_a9b11c5b27f9c9501fdb4f616cb3b194c}{get\-Analog\-Hat} (\hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093}{\-Analog\-Hat\-Enum} a)
+\item 
+uint16\-\_\-t \hyperlink{class_p_s4_parser_aa149326d97c6231087f81d954a994493}{get\-X} (uint8\-\_\-t finger=0, uint8\-\_\-t xy\-Id=0)
+\item 
+uint16\-\_\-t \hyperlink{class_p_s4_parser_a9972eeb87f2ed4a96dcdccf2dabbbc5a}{get\-Y} (uint8\-\_\-t finger=0, uint8\-\_\-t xy\-Id=0)
+\item 
+bool \hyperlink{class_p_s4_parser_a6770a72c17062c2e00fb3602435fcade}{is\-Touching} (uint8\-\_\-t finger=0, uint8\-\_\-t xy\-Id=0)
+\item 
+uint8\-\_\-t \hyperlink{class_p_s4_parser_a0b3de008ae8aaa057c571081b1b64e88}{get\-Touch\-Counter} (uint8\-\_\-t finger=0, uint8\-\_\-t xy\-Id=0)
+\item 
+double \hyperlink{class_p_s4_parser_ac4b7e6c29af23a88d41a83e82c87c888}{get\-Angle} (\hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6}{\-Angle\-Enum} a)
+\item 
+int16\-\_\-t \hyperlink{class_p_s4_parser_a2b06200adee0c8ed616c4d18c23a584a}{get\-Sensor} (\hyperlink{controller_enums_8h_a00d5030559c481763282483889597d51}{\-Sensor\-Enum} s)
+\item 
+void \hyperlink{class_p_s4_parser_adf2b7f2888fb7ebc9c58595a85568d65}{set\-All\-Off} ()
+\item 
+void \hyperlink{class_p_s4_parser_acc9b3be8fb673e8e1f637c56d72f1180}{set\-Rumble\-Off} ()
+\item 
+void \hyperlink{class_p_s4_parser_a44628a8521ef9c19d773347156962cab}{set\-Rumble\-On} (\hyperlink{controller_enums_8h_ab195293384292950ebc2166bfe360fd1}{\-Rumble\-Enum} mode)
+\item 
+void \hyperlink{class_p_s4_parser_a8299bdbb9d790e6b2e98e942e9bd154e}{set\-Rumble\-On} (uint8\-\_\-t \hyperlink{_p_s4_parser_8h_af293beb2bff1b47c0fb060411dd68b0f}{big\-Rumble}, uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a9a2c63b6ac73cde8ded7e2b90460cdcc}{small\-Rumble})
+\item 
+void \hyperlink{class_p_s4_parser_a820f1caf266224d1c1bb83b550ef4c97}{set\-Led\-Off} ()
+\item 
+void \hyperlink{class_p_s4_parser_a3f709524b0303086591d81bd238e62e8}{set\-Led} (uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4c5c6ceb8ed33456261fa907136e0c3a}{r}, uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a1673907d4d89d763bb7b94ec1eeb7b60}{g}, uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+void \hyperlink{class_p_s4_parser_a58e7a4746ee4e1fc5ceea44f64ffc3f2}{set\-Led} (\hyperlink{controller_enums_8h_aac6fa7b0395b95cc528deaad0ce884a2}{\-Colors\-Enum} color)
+\item 
+void \hyperlink{class_p_s4_parser_a26342dea530bf09e2ac8df847c1874fc}{set\-Led\-Flash} (uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a7d332ba0c3474500fdc43e1f04cedc0e}{flash\-On}, uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a2a0da35e9b74068cfe3a5d1ce6a035f4}{flash\-Off})
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_p_s4_parser_a6498fdeb767364e84ce09ef208980622}{\-Parse} (uint8\-\_\-t len, uint8\-\_\-t $\ast$buf)
+\item 
+void \hyperlink{class_p_s4_parser_a24640b2362b0f6f51785fbd3dd4f13f9}{\-Reset} ()
+\item 
+virtual void \hyperlink{class_p_s4_parser_a8788530b0c213dedfcf56b78e8ca4879}{send\-Output\-Report} (\hyperlink{struct_p_s4_output}{\-P\-S4\-Output} $\ast$output)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class parses all the data sent by the \-P\-S4 controller 
+
+\-Definition at line 125 of file \-P\-S4\-Parser.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_p_s4_parser_a3ef06f8737f1088dbdbbc351b576c1cf}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!\-P\-S4\-Parser@{\-P\-S4\-Parser}}
+\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{\-P\-S4\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-S4\-Parser\-::\-P\-S4\-Parser} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a3ef06f8737f1088dbdbbc351b576c1cf}
+\-Constructor for the \hyperlink{class_p_s4_parser}{\-P\-S4\-Parser} class. 
+
+\-Definition at line 128 of file \-P\-S4\-Parser.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_p_s4_parser_a66151c4e4601f80492cd5b2451a2f87a}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Analog\-Button@{get\-Analog\-Button}}
+\index{get\-Analog\-Button@{get\-Analog\-Button}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Analog\-Button}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S4\-Parser\-::get\-Analog\-Button} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_p_s4_parser_a66151c4e4601f80492cd5b2451a2f87a}
+\-Used to get the analog value from button presses. 
+\begin{DoxyParams}{\-Parameters}
+{\em b} & \-The \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} to read. \-The supported buttons are\-: \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdaba595d8bca8bc5e67c37c0a9d89becfa}{\-U\-P}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdaec8379af7490bb9eaaf579cf17876f38}{\-R\-I\-G\-H\-T}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda9b0b4a95b99523966e0e34ffdadac9da}{\-D\-O\-W\-N}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdadb45120aafd37a973140edee24708065}{\-L\-E\-F\-T}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdae5bc7ee7d6dda5340a28f91834f10543}{\-L1}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda0adffb24dae0c41be5b803f4d444f066}{\-L2}, \hyperlink{masstorage_8h_a7e60b2ca7f2f6943225add97ee69ed00}{\-R1}, \hyperlink{masstorage_8h_a7dae2a007c34ecf4796811a14e1c11e2}{\-R2}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda2fd33892864d1c342d3bead2f2d9ad56}{\-T\-R\-I\-A\-N\-G\-L\-E}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdaa79c827759ea48f0735386c4b1188911}{\-C\-I\-R\-C\-L\-E}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdad699bdf1731bd839b56c299536ba1d9d}{\-C\-R\-O\-S\-S}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda4233fbf0cafb86abcee94b38d769fc59}{\-S\-Q\-U\-A\-R\-E}, and \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda21f40778b7db9343a6ca75ec2c41ccce}{\-T}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Analog value in the range of 0-\/255. 
+\end{DoxyReturn}
+
+
+\-Definition at line 52 of file \-P\-S4\-Parser.\-cpp.
+
+\hypertarget{class_p_s4_parser_a9b11c5b27f9c9501fdb4f616cb3b194c}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Analog\-Hat@{get\-Analog\-Hat}}
+\index{get\-Analog\-Hat@{get\-Analog\-Hat}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Analog\-Hat}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S4\-Parser\-::get\-Analog\-Hat} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Analog\-Hat\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s4_parser_a9b11c5b27f9c9501fdb4f616cb3b194c}
+\-Used to read the analog joystick. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093a383cb8895dd296b7f69ce845ed16b0ca}{\-Left\-Hat\-X}, \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093af3f3925efa9762c4e9e71ac7da7a94a3}{\-Left\-Hat\-Y}, \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093aaeb027a0ae5bbc6ba25e1c78a6486c7b}{\-Right\-Hat\-X}, and \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093a7f1fb2db5381286691f4dec179ed5d5a}{\-Right\-Hat\-Y}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Return the analog value in the range of 0-\/255. 
+\end{DoxyReturn}
+
+
+\-Definition at line 60 of file \-P\-S4\-Parser.\-cpp.
+
+\hypertarget{class_p_s4_parser_ac4b7e6c29af23a88d41a83e82c87c888}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Angle@{get\-Angle}}
+\index{get\-Angle@{get\-Angle}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-P\-S4\-Parser\-::get\-Angle} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Angle\-Enum}}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_ac4b7e6c29af23a88d41a83e82c87c888}
+\-Get the angle of the controller calculated using the accelerometer. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-Either \hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6ae3a34b760fa4a6854f28852e91d8bb47}{\-Pitch} or \hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6a9d80e5f030503ccac779c6491826a173}{\-Roll}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Return the angle in the range of 0-\/360. 
+\end{DoxyReturn}
+
+
+\-Definition at line 217 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a92a4ea3d328426b9f86be05cabaad91c}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Button\-Click@{get\-Button\-Click}}
+\index{get\-Button\-Click@{get\-Button\-Click}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Button\-Click}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S4\-Parser\-::get\-Button\-Click} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_p_s4_parser_a92a4ea3d328426b9f86be05cabaad91c}
+
+
+\-Definition at line 45 of file \-P\-S4\-Parser.\-cpp.
+
+\hypertarget{class_p_s4_parser_ad352f30e4ab772246574bbf654248906}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Button\-Press@{get\-Button\-Press}}
+\index{get\-Button\-Press@{get\-Button\-Press}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Button\-Press}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S4\-Parser\-::get\-Button\-Press} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_p_s4_parser_ad352f30e4ab772246574bbf654248906}
+\hyperlink{class_p_s4_parser_ad352f30e4ab772246574bbf654248906}{get\-Button\-Press(\-Button\-Enum b)} will return true as long as the button is held down.
+
+\-While \hyperlink{class_p_s4_parser_a92a4ea3d328426b9f86be05cabaad91c}{get\-Button\-Click(\-Button\-Enum b)} will only return it once.
+
+\-So you instance if you need to increase a variable once you would use \hyperlink{class_p_s4_parser_a92a4ea3d328426b9f86be05cabaad91c}{get\-Button\-Click(\-Button\-Enum b)}, but if you need to drive a robot forward you would use \hyperlink{class_p_s4_parser_ad352f30e4ab772246574bbf654248906}{get\-Button\-Press(\-Button\-Enum b)}. 
+\begin{DoxyParams}{\-Parameters}
+{\em b} & \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{class_p_s4_parser_ad352f30e4ab772246574bbf654248906}{get\-Button\-Press(\-Button\-Enum b)} will return a true as long as a button is held down, while \hyperlink{class_p_s4_parser_a92a4ea3d328426b9f86be05cabaad91c}{get\-Button\-Click(\-Button\-Enum b)} will return true once for each button press. 
+\end{DoxyReturn}
+
+
+\-Definition at line 38 of file \-P\-S4\-Parser.\-cpp.
+
+\hypertarget{class_p_s4_parser_a2b06200adee0c8ed616c4d18c23a584a}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Sensor@{get\-Sensor}}
+\index{get\-Sensor@{get\-Sensor}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf \-P\-S4\-Parser\-::get\-Sensor} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Sensor\-Enum}}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a2b06200adee0c8ed616c4d18c23a584a}
+\-Used to get the raw values from the 3-\/axis gyroscope and 3-\/axis accelerometer inside the \-P\-S4 controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em s} & \-The sensor to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the raw sensor reading. 
+\end{DoxyReturn}
+
+
+\-Definition at line 229 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a0b3de008ae8aaa057c571081b1b64e88}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Touch\-Counter@{get\-Touch\-Counter}}
+\index{get\-Touch\-Counter@{get\-Touch\-Counter}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Touch\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S4\-Parser\-::get\-Touch\-Counter} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{finger = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{xy\-Id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a0b3de008ae8aaa057c571081b1b64e88}
+\-This counter increments every time a finger touches the touchpad. 
+\begin{DoxyParams}{\-Parameters}
+{\em finger} & 0 = first finger, 1 = second finger. \-If omitted, then 0 will be used. \\
+\hline
+{\em xy\-Id} & \-The controller sends out three packets with the same structure. \-The third one will contain the last measure, but if you read from the controller then there is only be data in the first one. \-For that reason it will be set to 0 if the argument is omitted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Return the value of the counter, note that it is only a 7-\/bit value. 
+\end{DoxyReturn}
+
+
+\-Definition at line 208 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_aa149326d97c6231087f81d954a994493}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-X@{get\-X}}
+\index{get\-X@{get\-X}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-X}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-P\-S4\-Parser\-::get\-X} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{finger = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{xy\-Id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_aa149326d97c6231087f81d954a994493}
+\-Get the x-\/coordinate of the touchpad. \-Position 0 is in the top left. 
+\begin{DoxyParams}{\-Parameters}
+{\em finger} & 0 = first finger, 1 = second finger. \-If omitted, then 0 will be used. \\
+\hline
+{\em xy\-Id} & \-The controller sends out three packets with the same structure. \-The third one will contain the last measure, but if you read from the controller then there is only be data in the first one. \-For that reason it will be set to 0 if the argument is omitted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the x-\/coordinate of the finger. 
+\end{DoxyReturn}
+
+
+\-Definition at line 172 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a9972eeb87f2ed4a96dcdccf2dabbbc5a}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!get\-Y@{get\-Y}}
+\index{get\-Y@{get\-Y}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-P\-S4\-Parser\-::get\-Y} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{finger = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{xy\-Id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a9972eeb87f2ed4a96dcdccf2dabbbc5a}
+\-Get the y-\/coordinate of the touchpad. \-Position 0 is in the top left. 
+\begin{DoxyParams}{\-Parameters}
+{\em finger} & 0 = first finger, 1 = second finger. \-If omitted, then 0 will be used. \\
+\hline
+{\em xy\-Id} & \-The controller sends out three packets with the same structure. \-The third one will contain the last measure, but if you read from the controller then there is only be data in the first one. \-For that reason it will be set to 0 if the argument is omitted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the y-\/coordinate of the finger. 
+\end{DoxyReturn}
+
+
+\-Definition at line 184 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a6770a72c17062c2e00fb3602435fcade}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!is\-Touching@{is\-Touching}}
+\index{is\-Touching@{is\-Touching}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{is\-Touching}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S4\-Parser\-::is\-Touching} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{finger = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{xy\-Id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a6770a72c17062c2e00fb3602435fcade}
+\-Returns whenever the user is toucing the touchpad. 
+\begin{DoxyParams}{\-Parameters}
+{\em finger} & 0 = first finger, 1 = second finger. \-If omitted, then 0 will be used. \\
+\hline
+{\em xy\-Id} & \-The controller sends out three packets with the same structure. \-The third one will contain the last measure, but if you read from the controller then there is only be data in the first one. \-For that reason it will be set to 0 if the argument is omitted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns true if the specific finger is touching the touchpad. 
+\end{DoxyReturn}
+
+
+\-Definition at line 196 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a6498fdeb767364e84ce09ef208980622}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::\-Parse} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_p_s4_parser_a6498fdeb767364e84ce09ef208980622}
+\-Used to parse data sent from the \-P\-S4 controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em len} & \-Length of the data. \\
+\hline
+{\em buf} & \-Pointer to the data buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 64 of file \-P\-S4\-Parser.\-cpp.
+
+\hypertarget{class_p_s4_parser_a24640b2362b0f6f51785fbd3dd4f13f9}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!\-Reset@{\-Reset}}
+\index{\-Reset@{\-Reset}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::\-Reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{class_p_s4_parser_a24640b2362b0f6f51785fbd3dd4f13f9}
+\-Used to reset the different buffers to their default values 
+
+\-Definition at line 326 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a8788530b0c213dedfcf56b78e8ca4879}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!send\-Output\-Report@{send\-Output\-Report}}
+\index{send\-Output\-Report@{send\-Output\-Report}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{send\-Output\-Report}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-P\-S4\-Parser\-::send\-Output\-Report} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-P\-S4\-Output} $\ast$}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}\label{class_p_s4_parser_a8788530b0c213dedfcf56b78e8ca4879}
+\-Send the output to the \-P\-S4 controller. \-This is implemented in \hyperlink{_p_s4_b_t_8h}{\-P\-S4\-B\-T.\-h} and \hyperlink{_p_s4_u_s_b_8h}{\-P\-S4\-U\-S\-B.\-h}. 
+\begin{DoxyParams}{\-Parameters}
+{\em output} & \-Pointer to \hyperlink{struct_p_s4_output}{\-P\-S4\-Output} buffer; \\
+\hline
+\end{DoxyParams}
+
+
+\-Implemented in \hyperlink{class_p_s4_b_t_ad3bb50902905677726bd62d5f394b062}{\-P\-S4\-B\-T}, and \hyperlink{class_p_s4_u_s_b_a75dc09d15f149e1a1b96b8d2ccbbff89}{\-P\-S4\-U\-S\-B}.
+
+\hypertarget{class_p_s4_parser_adf2b7f2888fb7ebc9c58595a85568d65}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-All\-Off@{set\-All\-Off}}
+\index{set\-All\-Off@{set\-All\-Off}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-All\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-All\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_adf2b7f2888fb7ebc9c58595a85568d65}
+\-Turn both rumble and the \-L\-E\-Ds off. 
+
+\-Definition at line 249 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a3f709524b0303086591d81bd238e62e8}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Led@{set\-Led}}
+\index{set\-Led@{set\-Led}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Led}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Led} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{r, }
+\item[{uint8\-\_\-t}]{g, }
+\item[{uint8\-\_\-t}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a3f709524b0303086591d81bd238e62e8}
+\-Use this to set the color using \-R\-G\-B values. 
+\begin{DoxyParams}{\-Parameters}
+{\em r,g,b} & \-R\-G\-B value. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 290 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a58e7a4746ee4e1fc5ceea44f64ffc3f2}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Led@{set\-Led}}
+\index{set\-Led@{set\-Led}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Led}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Led} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Colors\-Enum}}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a58e7a4746ee4e1fc5ceea44f64ffc3f2}
+\-Use this to set the color using the predefined colors in \hyperlink{controller_enums_8h_aac6fa7b0395b95cc528deaad0ce884a2}{\-Colors\-Enum}. 
+\begin{DoxyParams}{\-Parameters}
+{\em color} & \-The desired color. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 301 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a26342dea530bf09e2ac8df847c1874fc}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Led\-Flash@{set\-Led\-Flash}}
+\index{set\-Led\-Flash@{set\-Led\-Flash}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Led\-Flash}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Led\-Flash} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{flash\-On, }
+\item[{uint8\-\_\-t}]{flash\-Off}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a26342dea530bf09e2ac8df847c1874fc}
+\-Set the \-L\-E\-Ds flash time. 
+\begin{DoxyParams}{\-Parameters}
+{\em flash\-On} & \-Time to flash bright (255 = 2.\-5 seconds). \\
+\hline
+{\em flash\-Off} & \-Time to flash dark (255 = 2.\-5 seconds). \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 310 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a820f1caf266224d1c1bb83b550ef4c97}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Led\-Off@{set\-Led\-Off}}
+\index{set\-Led\-Off@{set\-Led\-Off}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Led\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Led\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a820f1caf266224d1c1bb83b550ef4c97}
+\-Turn all \-L\-E\-Ds off. 
+
+\-Definition at line 282 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_acc9b3be8fb673e8e1f637c56d72f1180}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Rumble\-Off@{set\-Rumble\-Off}}
+\index{set\-Rumble\-Off@{set\-Rumble\-Off}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Rumble\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Rumble\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_acc9b3be8fb673e8e1f637c56d72f1180}
+\-Set rumble off. 
+
+\-Definition at line 255 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a44628a8521ef9c19d773347156962cab}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Rumble\-On@{set\-Rumble\-On}}
+\index{set\-Rumble\-On@{set\-Rumble\-On}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Rumble\-On}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Rumble\-On} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Rumble\-Enum}}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a44628a8521ef9c19d773347156962cab}
+\-Turn on rumble. 
+\begin{DoxyParams}{\-Parameters}
+{\em mode} & \-Either \hyperlink{controller_enums_8h_ab195293384292950ebc2166bfe360fd1a5819f165165589a8e65b07bf46c7382b}{\-Rumble\-High} or \hyperlink{controller_enums_8h_ab195293384292950ebc2166bfe360fd1a080b52389e532b79b9e48f43ae6086ac}{\-Rumble\-Low}. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 263 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{class_p_s4_parser_a8299bdbb9d790e6b2e98e942e9bd154e}{\index{\-P\-S4\-Parser@{\-P\-S4\-Parser}!set\-Rumble\-On@{set\-Rumble\-On}}
+\index{set\-Rumble\-On@{set\-Rumble\-On}!PS4Parser@{\-P\-S4\-Parser}}
+\subsubsection[{set\-Rumble\-On}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-Parser\-::set\-Rumble\-On} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{big\-Rumble, }
+\item[{uint8\-\_\-t}]{small\-Rumble}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_parser_a8299bdbb9d790e6b2e98e942e9bd154e}
+\-Turn on rumble. 
+\begin{DoxyParams}{\-Parameters}
+{\em big\-Rumble} & \-Value for big motor. \\
+\hline
+{\em small\-Rumble} & \-Value for small motor. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 275 of file \-P\-S4\-Parser.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_p_s4_parser_8h}{\-P\-S4\-Parser.\-h}\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_p_s4_parser_8cpp}{\-P\-S4\-Parser.\-cpp}\end{DoxyCompactItemize}

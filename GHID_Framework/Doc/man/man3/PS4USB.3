@@ -1,0 +1,130 @@
+.TH "PS4USB" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PS4USB \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PS4USB\&.h>\fP
+.PP
+Inherits \fBHIDUniversal\fP, and \fBPS4Parser\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPS4USB\fP (USB *p)"
+.br
+.ti -1c
+.RI "bool \fBconnected\fP ()"
+.br
+.ti -1c
+.RI "void \fBattachOnInit\fP (void(*funcOnInit)(void))"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.PP
+.RI "\fBHIDUniversal implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBParseHIDData\fP (\fBHID\fP *hid, bool is_rpt_id, uint8_t len, uint8_t *buf)"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBOnInitSuccessful\fP ()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBPS4Parser implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBsendOutputReport\fP (\fBPS4Output\fP *output)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements support for the PS4 controller via USB\&. It uses the \fBHIDUniversal\fP class for all the USB communication\&. 
+.PP
+Definition at line 31 of file PS4USB\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBPS4USB::PS4USB\fP (USB *p)\fC [inline]\fP"Constructor for the \fBPS4USB\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP Pointer to the USB class instance\&. 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file PS4USB\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBPS4USB::attachOnInit\fP (void(*)(void)funcOnInit)\fC [inline]\fP"Used to call your own function when the device is successfully initialized\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfuncOnInit\fP Function to call\&. 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file PS4USB\&.h\&.
+.SS "bool \fBPS4USB::connected\fP ()\fC [inline]\fP"Used to check if a PS4 controller is connected\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns true if it is connected\&. 
+.RE
+.PP
+
+.PP
+Definition at line 46 of file PS4USB\&.h\&.
+.SS "virtual uint8_t \fBPS4USB::OnInitSuccessful\fP ()\fC [inline, protected, virtual]\fP"Called when a device is successfully initialized\&. Use attachOnInit(void (*funcOnInit)(void)) to call your own function\&. This is useful for instance if you want to set the LEDs in a specific way\&. 
+.PP
+Reimplemented from \fBHIDUniversal\fP\&.
+.PP
+Definition at line 77 of file PS4USB\&.h\&.
+.SS "virtual void \fBPS4USB::ParseHIDData\fP (\fBHID\fP *hid, boolis_rpt_id, uint8_tlen, uint8_t *buf)\fC [inline, protected, virtual]\fP"Used to parse USB \fBHID\fP data\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhid\fP Pointer to the \fBHID\fP class\&. 
+.br
+\fIis_rpt_id\fP Only used for Hubs\&. 
+.br
+\fIlen\fP The length of the incoming data\&. 
+.br
+\fIbuf\fP Pointer to the data buffer\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBHIDUniversal\fP\&.
+.PP
+Definition at line 67 of file PS4USB\&.h\&.
+.SS "virtual void \fBPS4USB::sendOutputReport\fP (\fBPS4Output\fP *output)\fC [inline, protected, virtual]\fP"Send the output to the PS4 controller\&. This is implemented in \fBPS4BT\&.h\fP and \fBPS4USB\&.h\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutput\fP Pointer to \fBPS4Output\fP buffer; 
+.RE
+.PP
+
+.PP
+Implements \fBPS4Parser\fP\&.
+.PP
+Definition at line 90 of file PS4USB\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

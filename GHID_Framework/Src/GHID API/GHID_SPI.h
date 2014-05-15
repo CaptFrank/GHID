@@ -1,5 +1,5 @@
 /*
- * GHIDSPI.h
+* GHIDSPI.h
  *
  *  Created on: 2014-02-06
  *      Author: francispapineau
@@ -13,13 +13,18 @@
 
 //! These are hardware definitions for the SPI interface \
 	on the Arduino Mega 2560
-#define MOSI		51
-#define MISO		51
-#define SCLK		52
-#define SS			53
+#ifdef __ATMEGA_2560__
+	#define MOSI		51
+	#define MISO		51
+	#define SCLK		52
+	#define SS			53
+#endif
 
 //! Max buffer size
-#define MAX_BUFFER	255
+#define MAX_BUFFER		255
+
+//! Delays
+#define ONE_MICRO_SEC	1
 
 //! Buffer structure
 struct buffer_struct_t {
@@ -42,6 +47,7 @@ enum spi_device_address_map_t {
 struct spi_settings_t {
 
 	byte attach_interrupt;			//! do we attach an interrupt on the SPI bus?
+	void (*service_method)(void);	//! Service method for spi input
 
 	byte data_mode;					//! The data mode as per Arduino API
 	byte bit_order;					//! The order of bits

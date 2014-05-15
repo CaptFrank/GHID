@@ -27,12 +27,6 @@ typedef struct callback_t {
 	void* object_ptr;
 };
 
-struct callback_t callback_table[] = {
-
-		// COMMAND,				METHOD POINTER, 				OBJECT POINTER
-		// TODO
-};
-
 /**
  * This class is the connection handler for any connection type.
  * In this case we are using this handler to handle the Bluetooth connection
@@ -49,7 +43,7 @@ class Connection_Handler {
 		/**
 		 * This is the default connection handler constructor.
 		 */
-		virtual Connection_Handler();
+		Connection_Handler(callback_t* table);
 
 		/**
 		 * A Connection method to connect to the target device.

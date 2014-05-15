@@ -48,6 +48,7 @@ void GHID_SPI::tranfer_data(spi_device_address_map_t device, byte data){
 
 	//! Send the data byte
 	SPI.transfer(data);
+	delayMicroseconds(ONE_MICRO_SEC);
 
 	//! Stop listening
 	digitalWrite(device, HIGH);
@@ -57,8 +58,17 @@ void GHID_SPI::tranfer_data(spi_device_address_map_t device, byte data){
 //! Transfer bulk data
 void GHID_SPI::transfer_bulk(spi_device_address_map_t device, byte* data, byte length){
 
-	for(register byte i = 0; i < length; i ++)
-		this->tranfer_data(device, (*data) + i);
+	//! Start listening
+	digitalWrite(device, LOW);
+
+	for(register byte i = 0; i < length; i ++){
+
+		//! Send the data byte
+		SPI.transfer((*data) + i);
+		delayMicroseconds(ONE_MICRO_SEC);
+	}
+	//! Stop listening
+	digitalWrite(device, HIGH);
 }
 
 //! Read data into a buffer struct
@@ -90,9 +100,9 @@ ISR(SPI_STC_vect){
 	byte c = SPDR;
 
 	//! If not full
-	if(spi_buffer.length < sizeof(spi_buffer.buffer)){
+	if(MAX_BUFFER < sizeof(spi_buffer.length)){
 
 		//! We add one more byte to the array
-		spi_buffer.length[spi_buffer.length ++] = c;
+		spi_buffer.buffer[spi_buffer.length ++] = c;
 	}
 }

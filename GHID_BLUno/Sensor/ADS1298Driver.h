@@ -59,8 +59,13 @@ class ADS1298_Driver : GHID_SPI{
 
 		/**
 		 * This is the default constructor for the class
+		 *
+		 * @param setup_method					- The setup method.
+		 * 										- Allows to customize the setup sequence
+		 * 											based on needs. By default we set to the
+		 * 											internal method.
 		 */
-		ADS1298_Driver();
+		ADS1298_Driver(void(*setup_method)(void) = this->_setup_method);
 
 		/**
 		 * This method sets up the ADS1298 chip
@@ -93,6 +98,9 @@ class ADS1298_Driver : GHID_SPI{
 	//! Private Context
 	private:
 
+		//! Internal setup method pointer
+		void(*_setup_method)(void);
+
 		//! Init methods
 
 		/**
@@ -119,6 +127,16 @@ class ADS1298_Driver : GHID_SPI{
 		 * Reset the comms on the ADS1298
 		 */
 		void _reset_ads1298_comms();
+
+		/**
+		 * This starts the ADS1298 Conversions
+		 */
+		void _start_ads1298();
+
+		/**
+		 * This stops the ADS1298 Conversions
+		 */
+		void _stop_ads1298();
 
 };
 

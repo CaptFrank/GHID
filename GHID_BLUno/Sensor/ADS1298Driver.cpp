@@ -12,13 +12,16 @@
 /**
  * This is the default constructor for the class
  */
-ADS1298_Driver::ADS1298_Driver(){
+ADS1298_Driver::ADS1298_Driver(void(*setup_method)(void)){
 
 	//! Here we setup the pins
 	this->_init_pins();
 
 	//! Here we setup the SPI bus
 	this->_init_spi();
+
+	//! Set the setup method
+	this->_setup_method = setup_method;
 }
 
 /**
@@ -134,8 +137,43 @@ void ADS1298_Driver::_init_spi(){
 void ADS1298_Driver::_init_ads(){
 
 
+	delay(ONE_MILLI); //pause to provide ads129n enough time to boot up...
+	  adc_send_command(SDATAC);
+	  delay(10);
+	  // Determine model number and number of channels available
+	  int IDval = adc_rreg(ID) ;
+	  switch (IDval & B00011111 ) { //least significant bits reports channels
+	          case  B10000: //16
+	            gMaxChan = 4; //ads1294
+	            break;
+	          case B10001: //17
+	            gMaxChan = 6; //ads1296
+	            break;
+	          case B10010: //18
+	            gMaxChan = 8; //ads1298
+	            break;
+	          case B11110: //30
+	            gMaxChan = 8; //ads1299
+	            break;
+	          default:
+	            gMaxChan = 0;
+	  }
 
+    //! All GPIO set to output 0x0000: (floating CMOS inputs can flicker on and off, creating noise)
+	write_byte(GPIO, EMPTY);
+	write_byte(CONFIG3, PD_REFBUF | CONFIG3_const);
 
+	//! Setup sampling rate
+	write_byte(CONFIG1, HIGH_RES_1k_SPS);
+
+	//! Set the 8 channels to input signal
+	//! Set each channel to have 12x gain
+	for (register uint8_t i = 1; i < 9; i++) {
+		write_byte(CHnSET + i, ELECTRODE_INPUT | GAIN_12X); //report this channel with x12 gain
+	}
+
+	//! We start the ads1298
+	this->_start_ads1298();
 }
 
 /**

@@ -45,7 +45,7 @@ uint8_t ADS1298_Driver::read_byte(int address){
 	  digitalWrite(PIN_SS, LOW);
 	  SPI.transfer(RREG | address);
 	  delayMicroseconds(5);
-	  SPI.transfer(0);	// number of registers to be read/written – 1
+	  SPI.transfer(0);	// number of registers to be read/written ��� 1
 	  delayMicroseconds(5);
 	  out = SPI.transfer(0);
 	  delayMicroseconds(1);
@@ -63,7 +63,7 @@ void ADS1298_Driver::write_byte(int reg_address, int val_hex){
 
 	digitalWrite(PIN_SS, LOW);
 	SPI.transfer(WREG | reg_address);
-	SPI.transfer(0);	// number of registers to be read/written – 1
+	SPI.transfer(0);	// number of registers to be read/written ��� 1
 	SPI.transfer(val_hex);
 	delayMicroseconds(1);
 	digitalWrite(PIN_SS, HIGH);
@@ -78,7 +78,24 @@ void ADS1298_Driver::write_byte(int reg_address, int val_hex){
 void ADS1298_Driver::send_command(uint8_t cmd){
 
 	//! We send the command
-	this->tranfer_data(DEVICE_ADS1298, cmd);
+	//! Start listening
+	digitalWrite(DEVICE_ADS1298, LOW);
+
+	//! Send the data byte
+	SPI.transfer(cmd);
+
+	//! Stop listening
+	digitalWrite(DEVICE_ADS1298, HIGH);
+}
+
+/**
+ * This is the static method that adds one spi data component
+ * to a generic ring buffer for read later on.
+ */
+static void ADS1298_Driver::execute_isr(void){
+
+
+
 }
 
 //! Private Context
@@ -100,15 +117,14 @@ void ADS1298_Driver::_init_pins(){
 
 	//! SIGNALS
 	pinMode(PIN_LED, 		OUTPUT);
-	pinMode(PIN_DRDY, 		OUTPUT);
 	pinMode(PIN_RESET, 		OUTPUT);
 	pinMode(PIN_START, 		OUTPUT);
+	pinMode(PIN_DRDY, 		INPUT);
 
-	//! We trigger the CS
-	digitalWrite(PIN_SS,	HIGH);
+	this->_set_ss_pin();
 
 	//! We stop the conversions
-	digitalWrite(PIN_START, LOW);
+	this->_stop_ads1298();
 
 	//! Delay until done setting up
 	delay(1);
@@ -136,27 +152,44 @@ void ADS1298_Driver::_init_spi(){
  */
 void ADS1298_Driver::_init_ads(){
 
+	//! Let the ads1298 time to boot up
+	delay(ONE_MILLI);
 
-	delay(ONE_MILLI); //pause to provide ads129n enough time to boot up...
-	  adc_send_command(SDATAC);
-	  delay(10);
-	  // Determine model number and number of channels available
-	  int IDval = adc_rreg(ID) ;
-	  switch (IDval & B00011111 ) { //least significant bits reports channels
-	          case  B10000: //16
-	            gMaxChan = 4; //ads1294
-	            break;
-	          case B10001: //17
-	            gMaxChan = 6; //ads1296
-	            break;
-	          case B10010: //18
-	            gMaxChan = 8; //ads1298
-	            break;
-	          case B11110: //30
-	            gMaxChan = 8; //ads1299
-	            break;
-	          default:
-	            gMaxChan = 0;
+	//! Start read command is written
+	this->send_command(SDATAC);
+
+	//! Wait 10 milliseconds
+	delay(ONE_MILLI * 10);
+
+	//! Check the model number and the available channels
+	this->configs._id = this->read_byte(ID);
+
+	//! We check the number of channels available
+	switch (this->configs._id & B00011111) {
+
+		//! ADS1294
+		case  B10000: //16
+	        this->configs._channels = 4;
+	        break;
+
+	    //! ADS1296
+		case B10001: //17
+			this->configs._channels = 6;
+	        break;
+
+	    //! ADS1298
+		case B10010: //18
+			this->configs._channels = 8;
+	        break;
+
+	    //! ADS1299
+		case B11110: //30
+			this->configs._channels = 8;
+	        break;
+
+		default:
+			this->configs._channels = 0;
+	        break;
 	  }
 
     //! All GPIO set to output 0x0000: (floating CMOS inputs can flicker on and off, creating noise)
@@ -202,5 +235,31 @@ void ADS1298_Driver::_reset_ads1298_comms(){
 
 	//! Wait longer for TI chip to start
 	delay(HALF_SECOND);
+}
 
+/**
+ * This starts the ADS1298 Conversions
+ */
+void ADS1298_Driver::_start_ads1298(){
+
+	//! We start the conversions
+	digitalWrite(PIN_START, HIGH);
+}
+
+/**
+ * This stops the ADS1298 Conversions
+ */
+void ADS1298_Driver::_stop_ads1298(){
+
+	//! We stop the conversions
+	digitalWrite(PIN_START, LOW);
+}
+
+/**
+ * Set SS pin high
+ */
+void ADS1298_Driver::_set_ss_pin(){
+
+	//! We trigger the CS
+	digitalWrite(PIN_SS,	HIGH);
 }

@@ -10,7 +10,7 @@
 //! --------------------------------------------------
 
 #include <Arduino.h>
-#include "GHID_Project.h"
+#include "ADS1298Driver.h"
 
 //! --------------------------------------------------
 //! Defines
@@ -42,7 +42,7 @@ void setup(void){
 	//=========================================
 	// INSERT SETUP CODE HERE
 	//=========================================
-
+	attachInterrupt(PIN_DRDY, ADS1298_Driver::execute_isr, CHANGE);
 }
 
 /**

@@ -23,7 +23,7 @@
 //! Pin definitions - Signals
 #define PIN_RESET		9
 #define PIN_START		8
-#define PIN_DRDY		7
+#define PIN_DRDY		2
 #define PIN_LED			6
 
 //! I/O Commands
@@ -42,17 +42,22 @@
 //! This is a spi network device list.
 //! You must implement this map with the appropriate pin allocations
 //! so that SS can select propertly.
-enum spi_device_address_map_t {
+
+//! We define the SPI CS map
+#define SPI_MAP //! We define the spi map
+typedef enum spi_device_address_map_t {
 
 	START_DEVICE_ENUM,
 	DEVICE_ADS1298 = PIN_SS, //! OUR DEVICE SS
 	END_DEVICE_ENUM
+
 } ads1298_map;
+
 /**
  * This is the ADS1298 Driver. It handles the reads and writes to the ADS1298
  * device.
  */
-class ADS1298_Driver : GHID_SPI{
+class ADS1298_Driver : GHID_SPI {
 
 	//! Public Context
 	public:
@@ -95,11 +100,30 @@ class ADS1298_Driver : GHID_SPI{
 		 */
 		void send_command(uint8_t cmd);
 
+		/**
+		 * This is the static method that adds one spi data component
+		 * to a generic ring buffer for read later on.
+		 */
+		static void execute_isr(void);
+
 	//! Private Context
 	private:
 
 		//! Internal setup method pointer
 		void(*_setup_method)(void);
+
+		//! Configuration strucuture
+		struct {
+
+			//! The id of the device
+			uint8_t _id;
+
+			//! Number of channels available
+			uint8_t _channels;
+
+		}configs;
+
+
 
 		//! Init methods
 
@@ -138,7 +162,16 @@ class ADS1298_Driver : GHID_SPI{
 		 * This stops the ADS1298 Conversions
 		 */
 		void _stop_ads1298();
+<<<<<<< HEAD
 		//TODO
+=======
+
+		/**
+		 * Set SS pin high
+		 */
+		void _set_ss_pin();
+
+>>>>>>> FETCH_HEAD
 };
 
 #endif /* ADS1298DRIVER_H_ */

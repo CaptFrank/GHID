@@ -132,12 +132,13 @@ class ADS1298_Driver : GHID_SPI{
 		 * This starts the ADS1298 Conversions
 		 */
 		void _start_ads1298();
+		//TODO
 
 		/**
 		 * This stops the ADS1298 Conversions
 		 */
 		void _stop_ads1298();
-
+		//TODO
 };
 
 #endif /* ADS1298DRIVER_H_ */

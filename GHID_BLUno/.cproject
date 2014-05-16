@@ -26,13 +26,10 @@
 							<tool id="de.innot.avreclipse.tool.assembler.winavr.app.debug.1456249336" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.app.debug">
 								<option id="de.innot.avreclipse.assembler.option.debug.level.1375150575" name="Generate Debugging Info" superClass="de.innot.avreclipse.assembler.option.debug.level"/>
 								<option id="de.innot.avreclipse.asm.option.include.paths.1374772401" name="#include paths for preprocessor(-I)" superClass="de.innot.avreclipse.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/libraries&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/GHID - Beta/GHID/GHID_Framework/Src/GHID API&quot;"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include-fixed"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/GHID API&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/Included Libraries&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.tool.assembler.input.449088163" superClass="de.innot.avreclipse.tool.assembler.input"/>
 							</tool>
@@ -40,13 +37,10 @@
 								<option id="de.innot.avreclipse.compiler.option.debug.level.759950439" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.1299785643" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.2122001394" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/libraries&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/GHID - Beta/GHID/GHID_Framework/Src/GHID API&quot;"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include-fixed"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/GHID API&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/Included Libraries&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.237850051" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
@@ -54,13 +48,10 @@
 								<option id="de.innot.avreclipse.cppcompiler.option.debug.level.1871138049" name="Generate Debugging Info" superClass="de.innot.avreclipse.cppcompiler.option.debug.level"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.optimize.2130574163" name="Optimization Level" superClass="de.innot.avreclipse.cppcompiler.option.optimize"/>
 								<option id="de.innot.avreclipse.cppcompiler.option.incpath.779350883" name="Include Paths (-I)" superClass="de.innot.avreclipse.cppcompiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/arduino/cores/arduino&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/Arduino Base/libraries&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;/Volumes/DataHDD/Documents/Development Projects/GHID - Beta/GHID/GHID_Framework/Src/GHID API&quot;"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include"/>
-									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include-fixed"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/GHID API&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/Included Libraries&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.cppcompiler.input.1011445408" superClass="de.innot.avreclipse.cppcompiler.input"/>
 							</tool>
@@ -119,6 +110,10 @@
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include"/>
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include"/>
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include-fixed"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/GHID API&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/Included Libraries&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.tool.assembler.input.1821135477" superClass="de.innot.avreclipse.tool.assembler.input"/>
 							</tool>
@@ -137,6 +132,10 @@
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include"/>
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include"/>
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include-fixed"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/GHID API&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/Included Libraries&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.40015966" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
@@ -155,6 +154,10 @@
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/avr/include"/>
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include"/>
 									<listOptionValue builtIn="false" value="/Applications/Development/Arduino.app/Contents/Resources/Java/hardware/tools/avr/lib/gcc/avr/4.3.2/include-fixed"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/arduino/cores/arduino&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/Coding Projects/Arduino Base/libraries&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/GHID API&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Users/francispapineau/Documents/4th year project/GHID_Project/GHID_Framework/Src/Included Libraries&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.cppcompiler.input.869102493" superClass="de.innot.avreclipse.cppcompiler.input"/>
 							</tool>

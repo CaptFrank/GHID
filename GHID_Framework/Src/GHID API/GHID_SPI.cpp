@@ -93,6 +93,7 @@ void GHID_SPI::check_spi_buffer(){
 	spi_buffer.length = 0x00;
 }
 
+#ifdef SLAVE_MODE
 //! If the interrupt is online
 ISR(SPI_STC_vect){
 
@@ -106,3 +107,4 @@ ISR(SPI_STC_vect){
 		spi_buffer.buffer[spi_buffer.length ++] = c;
 	}
 }
+#endif

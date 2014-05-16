@@ -21,7 +21,9 @@
 #endif
 
 //! Max buffer size
+#ifndef MAX_BUFFER
 #define MAX_BUFFER		255
+#endif
 
 //! Delays
 #define ONE_MICRO_SEC	1
@@ -84,7 +86,7 @@ class GHID_SPI : SPIClass{
 	 * @param device - the address to send
 	 * @param data - the data to send
 	 */
-	void tranfer_data(spi_device_address_map_t device, byte data);
+	static void tranfer_data(spi_device_address_map_t device, byte data);
 
 	/**
 	 * This method sends a bulk byte array to the requested address.
@@ -93,7 +95,7 @@ class GHID_SPI : SPIClass{
 	 * @param data - the data to send
 	 * @param length - the length of the array
 	 */
-	void transfer_bulk(spi_device_address_map_t device, byte* data, byte length);
+	static void transfer_bulk(spi_device_address_map_t device, byte* data, byte length);
 
 	/**
 	 * This is the read data from device method. We specify the address to
@@ -103,7 +105,7 @@ class GHID_SPI : SPIClass{
 	 * @param length - the length to receive
 	 * @param command - the read command
 	 */
-	buffer_struct_t* read_data(spi_device_address_map_t device, byte length, byte command);
+	static buffer_struct_t* read_data(spi_device_address_map_t device, byte length, byte command);
 
 	/**
 	 * This checks the spi buffer for any bytes received.

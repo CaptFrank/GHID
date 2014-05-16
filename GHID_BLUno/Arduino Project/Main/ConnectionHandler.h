@@ -12,6 +12,15 @@
 #include "DataProcessor.h"
 
 /**
+ * This is the definition of the transmit buffer.
+ */
+typedef struct tx_buffer_t {
+
+	uint8_t _data[DATA_PACKET_SIZE];
+	const uint8_t _size = DATA_PACKET_SIZE;
+};
+
+/**
  * This is the callback definition type.
  */
 typedef struct callback_t {
@@ -21,10 +30,19 @@ typedef struct callback_t {
 
 	//! Registers the callback method.
 	//! *** Note: This method must be static.
-	void(*callback)(void);
+	void(*callback)(void* object, uint8_t command);
 
 	//! Register the object to pass through to act out action
 	void* object_ptr;
+};
+
+/**
+ * This determines what kind of connection the bluetooth connection is
+ */
+enum connection_type_t {
+
+	DATA_STREAM_BASED,
+	DATA_REQUEST_BASED
 };
 
 /**
@@ -83,6 +101,9 @@ class Connection_Handler {
 
 	//! Private Context
 	private:
+
+		//! Connection type
+		connection_type_t _con_type;
 
 		/**
 		 * This is the virtual deconstructor for the class.

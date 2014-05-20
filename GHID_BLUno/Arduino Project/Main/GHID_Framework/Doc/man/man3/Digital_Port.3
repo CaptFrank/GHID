@@ -1,0 +1,144 @@
+.TH "Digital_Port" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Digital_Port \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_Digital_Port\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDigital_Port\fP (byte pin, byte direction)"
+.br
+.RI "\fIPublic Context\&. \fP"
+.ti -1c
+.RI "void \fBset_trigger_settings\fP (int trigger_value, void *function_ptr, byte interrupt_number)"
+.br
+.RI "\fIThe trigger settings setter method\&. \fP"
+.ti -1c
+.RI "byte \fBread_port\fP ()"
+.br
+.RI "\fIThe read port method\&. \fP"
+.ti -1c
+.RI "void \fBwrite_port\fP (byte value)"
+.br
+.RI "\fIThe write port method\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This framework back end allows for easy programming of each type of sensor\&. Either Analog, Digital or Serial Bus devices\&. 
+.PP
+Definition at line 17 of file GHID_Digital_Port\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBDigital_Port::Digital_Port\fP (bytepin, bytedirection)"
+.PP
+Public Context\&. The default constructor\&.
+.PP
+This is the default constructor for digital ports\&. We can use this for individual digital ports used\&.
+.PP
+.IP "\(bu" 2
+The pin value is the digital port used on the Arduino, this value is the mapped name (i\&.e\&. digital port 1 = 1)
+.PP
+.PP
+.IP "\(bu" 2
+The direction value is the direction of the analog pin that is used\&. In this case this value can be input ('I'), output ('O') or even an input channel with a pull-up resistor ('P')
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpin\fP - byte the pin that is used as digital pin 
+.br
+\fIdirection\fP - byte the direction of the pin (Input / Output) 
+.RE
+.PP
+Set the parameters within the class
+.PP
+initializing the internal variables
+.PP
+Setup the pin with the values\&. 
+.PP
+Definition at line 14 of file GHID_Digital_Port\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "byte \fBDigital_Port::read_port\fP ()"
+.PP
+The read port method\&. This method is the public access reading method to enable reading of the digital port\&. This returns the value read in an unsigned character container\&. This value can be either:
+.IP "\(bu" 2
+Min: 0
+.IP "\(bu" 2
+Max: 1
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+result - byte the read value from the digital port 
+.RE
+.PP
+We read the digital port and return the read value 
+.PP
+Definition at line 60 of file GHID_Digital_Port\&.cpp\&.
+.SS "void \fBDigital_Port::set_trigger_settings\fP (inttrigger_value, void *function_ptr, byteinterrupt_number)"
+.PP
+The trigger settings setter method\&. This method sets a trigger on the digital port\&. The 2 parameters trigger value is the actual triggered value\&. This value can be on of the following:
+.IP "\(bu" 2
+LOW -> 0 (0V or reference voltage)
+.PP
+.PP
+HIGH -> 1 (5V)
+.IP "\(bu" 2
+CHANGE -> 1 (When the pin toggles)
+.IP "\(bu" 2
+FALLING -> 2 (HIGH to LOW)
+.IP "\(bu" 2
+RISING -> 3 (LOW to HIGH)
+.PP
+.PP
+While the function pointer is a void* to the function that will be activated when we get an interrupt on the digital interface\&.
+.PP
+Note: The interrupts can only be set on pins {2, 3, 21, 20, 19, 18}\&. These are mapped to {0, 1, 2, 3, 4, 5} respectively\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItrigger_value\fP - byte triggered value 
+.br
+\fIfunction_ptr\fP - void* function that will be activated 
+.RE
+.PP
+Check if applicable
+.PP
+Check if valid interrupt
+.PP
+Assign parameters internaly
+.PP
+Assign the function address to the internal function pointer\&.
+.PP
+Set the interrupt on the vector table 
+.PP
+Definition at line 32 of file GHID_Digital_Port\&.cpp\&.
+.SS "void \fBDigital_Port::write_port\fP (bytevalue)"
+.PP
+The write port method\&. This method is the write method to write to a digital port\&. This is a bit wise write\&. The value that is written to the port, must either be 1 or 0\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP - byte either 1 or 0 
+.RE
+.PP
+We write the value given We only write the last bit though\&.\&.\&.
+.IP "\(bu" 2
+01010001 & 0x01 = 1
+.IP "\(bu" 2
+00101000 & 0x01 = 0 
+.PP
+
+.PP
+Definition at line 69 of file GHID_Digital_Port\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

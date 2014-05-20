@@ -1,0 +1,86 @@
+.TH "GHID_System_Abstration" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GHID_System_Abstration \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_System_Abstration\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGHID_Timer_One\fP"
+.br
+.ti -1c
+.RI "class \fBGHID_Timer_Three\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetup_analog_reference\fP (byte reference)"
+.br
+.RI "\fISets the analog voltage reference\&. \fP"
+.ti -1c
+.RI "void \fBsetup_USB_interface\fP ()"
+.br
+.RI "\fISets up the serial interface\&. \fP"
+.ti -1c
+.RI "void \fBsend_USB_frame\fP ()"
+.br
+.RI "\fISends a USB frame\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBjoystick_report_t\fP \fBjoystick_report\fP"
+.br
+.RI "\fIPublic Context\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a grouping of both the \fBTimerOne\fP class, which provides the Timer1 timing ability, and also the \fBTimerThree\fP class which supports the Timer3 on the Arduino Mega\&. It also provides the interface to the USB communication between the system and the Computer\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTimerOne\&.h\fP 
+.PP
+\fBTimerThree\&.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file GHID_System_Abstration\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBGHID_System_Abstration::send_USB_frame\fP ()"
+.PP
+Sends a USB frame\&. This sends out a USB frame to the computer\&. Send the frame 
+.PP
+Definition at line 25 of file GHID_System_Abstration\&.cpp\&.
+.SS "void \fBGHID_System_Abstration::setup_analog_reference\fP (bytereference)"
+.PP
+Sets the analog voltage reference\&. This method is the private access analog reference setup routine for the analog sensor bus\&. It only really needs to be accessed once\&. Set the analog reference 
+.PP
+Definition at line 11 of file GHID_System_Abstration\&.cpp\&.
+.SS "void \fBGHID_System_Abstration::setup_USB_interface\fP ()"
+.PP
+Sets up the serial interface\&. This method sets up the interface to the USB PHY\&. Setup the Serial0 to 115200 and default parity 
+.PP
+Definition at line 18 of file GHID_System_Abstration\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBjoystick_report_t\fP \fBGHID_System_Abstration::joystick_report\fP"
+.PP
+Public Context\&. This defines the usb frame 
+.PP
+Definition at line 46 of file GHID_System_Abstration\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

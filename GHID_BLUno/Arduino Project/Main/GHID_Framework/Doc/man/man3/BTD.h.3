@@ -1,0 +1,750 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/BTD.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/BTD.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Usb\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBBluetoothService\fP"
+.br
+.ti -1c
+.RI "class \fBBTD\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPS3_VID\fP   0x054C"
+.br
+.ti -1c
+.RI "#define \fBPS3_PID\fP   0x0268"
+.br
+.ti -1c
+.RI "#define \fBPS3NAVIGATION_PID\fP   0x042F"
+.br
+.ti -1c
+.RI "#define \fBPS3MOVE_PID\fP   0x03D5"
+.br
+.ti -1c
+.RI "#define \fBIOGEAR_GBU521_VID\fP   0x0A5C"
+.br
+.ti -1c
+.RI "#define \fBIOGEAR_GBU521_PID\fP   0x21E8"
+.br
+.ti -1c
+.RI "#define \fBBULK_MAXPKTSIZE\fP   64"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_HCI_OUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_HID_OUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_SET_REPORT\fP   0x09"
+.br
+.ti -1c
+.RI "#define \fBHCI_INIT_STATE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHCI_RESET_STATE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHCI_CLASS_STATE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHCI_BDADDR_STATE\fP   3"
+.br
+.ti -1c
+.RI "#define \fBHCI_LOCAL_VERSION_STATE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBHCI_SET_NAME_STATE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBHCI_CHECK_DEVICE_SERVICE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBHCI_INQUIRY_STATE\fP   7"
+.br
+.ti -1c
+.RI "#define \fBHCI_CONNECT_DEVICE_STATE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBHCI_CONNECTED_DEVICE_STATE\fP   9"
+.br
+.ti -1c
+.RI "#define \fBHCI_SCANNING_STATE\fP   10"
+.br
+.ti -1c
+.RI "#define \fBHCI_CONNECT_IN_STATE\fP   11"
+.br
+.ti -1c
+.RI "#define \fBHCI_REMOTE_NAME_STATE\fP   12"
+.br
+.ti -1c
+.RI "#define \fBHCI_CONNECTED_STATE\fP   13"
+.br
+.ti -1c
+.RI "#define \fBHCI_DISABLE_SCAN_STATE\fP   14"
+.br
+.ti -1c
+.RI "#define \fBHCI_DONE_STATE\fP   15"
+.br
+.ti -1c
+.RI "#define \fBHCI_DISCONNECT_STATE\fP   16"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_CMD_COMPLETE\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_CONNECT_COMPLETE\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_DISCONNECT_COMPLETE\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_REMOTE_NAME_COMPLETE\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_INCOMING_REQUEST\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_READ_BDADDR\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_READ_VERSION\fP   0x40"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_DEVICE_FOUND\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBHCI_FLAG_CONNECT_EVENT\fP   0x100"
+.br
+.ti -1c
+.RI "#define \fBhci_check_flag\fP(flag)   (hci_event_flag & (flag))"
+.br
+.ti -1c
+.RI "#define \fBhci_set_flag\fP(flag)   (hci_event_flag |= (flag))"
+.br
+.ti -1c
+.RI "#define \fBhci_clear_flag\fP(flag)   (hci_event_flag &= ~(flag))"
+.br
+.ti -1c
+.RI "#define \fBEV_INQUIRY_COMPLETE\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBEV_INQUIRY_RESULT\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBEV_CONNECT_COMPLETE\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBEV_INCOMING_CONNECT\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBEV_DISCONNECT_COMPLETE\fP   0x05"
+.br
+.ti -1c
+.RI "#define \fBEV_AUTHENTICATION_COMPLETE\fP   0x06"
+.br
+.ti -1c
+.RI "#define \fBEV_REMOTE_NAME_COMPLETE\fP   0x07"
+.br
+.ti -1c
+.RI "#define \fBEV_ENCRYPTION_CHANGE\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBEV_CHANGE_CONNECTION_LINK\fP   0x09"
+.br
+.ti -1c
+.RI "#define \fBEV_ROLE_CHANGED\fP   0x12"
+.br
+.ti -1c
+.RI "#define \fBEV_NUM_COMPLETE_PKT\fP   0x13"
+.br
+.ti -1c
+.RI "#define \fBEV_PIN_CODE_REQUEST\fP   0x16"
+.br
+.ti -1c
+.RI "#define \fBEV_LINK_KEY_REQUEST\fP   0x17"
+.br
+.ti -1c
+.RI "#define \fBEV_LINK_KEY_NOTIFICATION\fP   0x18"
+.br
+.ti -1c
+.RI "#define \fBEV_DATA_BUFFER_OVERFLOW\fP   0x1A"
+.br
+.ti -1c
+.RI "#define \fBEV_MAX_SLOTS_CHANGE\fP   0x1B"
+.br
+.ti -1c
+.RI "#define \fBEV_READ_REMOTE_VERSION_INFORMATION_COMPLETE\fP   0x0C"
+.br
+.ti -1c
+.RI "#define \fBEV_QOS_SETUP_COMPLETE\fP   0x0D"
+.br
+.ti -1c
+.RI "#define \fBEV_COMMAND_COMPLETE\fP   0x0E"
+.br
+.ti -1c
+.RI "#define \fBEV_COMMAND_STATUS\fP   0x0F"
+.br
+.ti -1c
+.RI "#define \fBEV_LOOPBACK_COMMAND\fP   0x19"
+.br
+.ti -1c
+.RI "#define \fBEV_PAGE_SCAN_REP_MODE\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_WAIT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_DONE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CONTROL_CONNECT_REQUEST\fP   2"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CONTROL_CONFIG_REQUEST\fP   3"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CONTROL_SUCCESS\fP   4"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CONTROL_DISCONNECT\fP   5"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_INTERRUPT_SETUP\fP   6"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_INTERRUPT_CONNECT_REQUEST\fP   7"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_INTERRUPT_CONFIG_REQUEST\fP   8"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_INTERRUPT_DISCONNECT\fP   9"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_SDP_WAIT\fP   10"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_SDP_SUCCESS\fP   11"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_RFCOMM_WAIT\fP   12"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_RFCOMM_SUCCESS\fP   13"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_DISCONNECT_RESPONSE\fP   14"
+.br
+.ti -1c
+.RI "#define \fBTURN_ON_LED\fP   17"
+.br
+.ti -1c
+.RI "#define \fBPS3_ENABLE_SIXAXIS\fP   18"
+.br
+.ti -1c
+.RI "#define \fBWII_CHECK_MOTION_PLUS_STATE\fP   19"
+.br
+.ti -1c
+.RI "#define \fBWII_CHECK_EXTENSION_STATE\fP   20"
+.br
+.ti -1c
+.RI "#define \fBWII_INIT_MOTION_PLUS_STATE\fP   21"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONNECTION_CONTROL_REQUEST\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONFIG_CONTROL_SUCCESS\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONTROL_CONNECTED\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_DISCONNECT_CONTROL_RESPONSE\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONNECTION_INTERRUPT_REQUEST\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONFIG_INTERRUPT_SUCCESS\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_INTERRUPT_CONNECTED\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_DISCONNECT_INTERRUPT_RESPONSE\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONNECTION_SDP_REQUEST\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONFIG_SDP_SUCCESS\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_DISCONNECT_SDP_REQUEST\fP   0x00000400"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONNECTION_RFCOMM_REQUEST\fP   0x00000800"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_CONFIG_RFCOMM_SUCCESS\fP   0x00001000"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_DISCONNECT_RFCOMM_REQUEST\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_FLAG_DISCONNECT_RESPONSE\fP   0x00004000"
+.br
+.ti -1c
+.RI "#define \fBl2cap_check_flag\fP(flag)   (l2cap_event_flag & (flag))"
+.br
+.ti -1c
+.RI "#define \fBl2cap_set_flag\fP(flag)   (l2cap_event_flag |= (flag))"
+.br
+.ti -1c
+.RI "#define \fBl2cap_clear_flag\fP(flag)   (l2cap_event_flag &= ~(flag))"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_COMMAND_REJECT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_CONNECTION_REQUEST\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_CONNECTION_RESPONSE\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_CONFIG_REQUEST\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_CONFIG_RESPONSE\fP   0x05"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_DISCONNECT_REQUEST\fP   0x06"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_DISCONNECT_RESPONSE\fP   0x07"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_INFORMATION_REQUEST\fP   0x0A"
+.br
+.ti -1c
+.RI "#define \fBL2CAP_CMD_INFORMATION_RESPONSE\fP   0x0B"
+.br
+.ti -1c
+.RI "#define \fBPENDING\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBSUCCESSFUL\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBSDP_PSM\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBRFCOMM_PSM\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBHID_CTRL_PSM\fP   0x11"
+.br
+.ti -1c
+.RI "#define \fBHID_INTR_PSM\fP   0x13"
+.br
+.ti -1c
+.RI "#define \fBWI_SUBCLASS_RF\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBWI_PROTOCOL_BT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBBTD_MAX_ENDPOINTS\fP   4"
+.br
+.ti -1c
+.RI "#define \fBBTD_NUM_SERVICES\fP   4"
+.br
+.ti -1c
+.RI "#define \fBPAIR\fP   1"
+.br
+.ti -1c
+.RI "#define \fBUHS_ACL_HANDLE_OK\fP(\fBx\fP, \fBy\fP)   ((\fBx\fP[0] == (\fBy\fP & 0xff)) && (x[1] == ((y >> 8) | 0x20)))"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBbmREQ_HCI_OUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.PP
+Definition at line 36 of file BTD\&.h\&.
+.SS "#define \fBbmREQ_HID_OUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.PP
+Definition at line 38 of file BTD\&.h\&.
+.SS "#define \fBBTD_MAX_ENDPOINTS\fP   4"
+.PP
+Definition at line 189 of file BTD\&.h\&.
+.SS "#define \fBBTD_NUM_SERVICES\fP   4"
+.PP
+Definition at line 190 of file BTD\&.h\&.
+.SS "#define \fBBULK_MAXPKTSIZE\fP   64"
+.PP
+Definition at line 33 of file BTD\&.h\&.
+.SS "#define \fBEV_AUTHENTICATION_COMPLETE\fP   0x06"
+.PP
+Definition at line 84 of file BTD\&.h\&.
+.SS "#define \fBEV_CHANGE_CONNECTION_LINK\fP   0x09"
+.PP
+Definition at line 87 of file BTD\&.h\&.
+.SS "#define \fBEV_COMMAND_COMPLETE\fP   0x0E"
+.PP
+Definition at line 97 of file BTD\&.h\&.
+.SS "#define \fBEV_COMMAND_STATUS\fP   0x0F"
+.PP
+Definition at line 98 of file BTD\&.h\&.
+.SS "#define \fBEV_CONNECT_COMPLETE\fP   0x03"
+.PP
+Definition at line 81 of file BTD\&.h\&.
+.SS "#define \fBEV_DATA_BUFFER_OVERFLOW\fP   0x1A"
+.PP
+Definition at line 93 of file BTD\&.h\&.
+.SS "#define \fBEV_DISCONNECT_COMPLETE\fP   0x05"
+.PP
+Definition at line 83 of file BTD\&.h\&.
+.SS "#define \fBEV_ENCRYPTION_CHANGE\fP   0x08"
+.PP
+Definition at line 86 of file BTD\&.h\&.
+.SS "#define \fBEV_INCOMING_CONNECT\fP   0x04"
+.PP
+Definition at line 82 of file BTD\&.h\&.
+.SS "#define \fBEV_INQUIRY_COMPLETE\fP   0x01"
+.PP
+Definition at line 79 of file BTD\&.h\&.
+.SS "#define \fBEV_INQUIRY_RESULT\fP   0x02"
+.PP
+Definition at line 80 of file BTD\&.h\&.
+.SS "#define \fBEV_LINK_KEY_NOTIFICATION\fP   0x18"
+.PP
+Definition at line 92 of file BTD\&.h\&.
+.SS "#define \fBEV_LINK_KEY_REQUEST\fP   0x17"
+.PP
+Definition at line 91 of file BTD\&.h\&.
+.SS "#define \fBEV_LOOPBACK_COMMAND\fP   0x19"
+.PP
+Definition at line 99 of file BTD\&.h\&.
+.SS "#define \fBEV_MAX_SLOTS_CHANGE\fP   0x1B"
+.PP
+Definition at line 94 of file BTD\&.h\&.
+.SS "#define \fBEV_NUM_COMPLETE_PKT\fP   0x13"
+.PP
+Definition at line 89 of file BTD\&.h\&.
+.SS "#define \fBEV_PAGE_SCAN_REP_MODE\fP   0x20"
+.PP
+Definition at line 100 of file BTD\&.h\&.
+.SS "#define \fBEV_PIN_CODE_REQUEST\fP   0x16"
+.PP
+Definition at line 90 of file BTD\&.h\&.
+.SS "#define \fBEV_QOS_SETUP_COMPLETE\fP   0x0D"
+.PP
+Definition at line 96 of file BTD\&.h\&.
+.SS "#define \fBEV_READ_REMOTE_VERSION_INFORMATION_COMPLETE\fP   0x0C"
+.PP
+Definition at line 95 of file BTD\&.h\&.
+.SS "#define \fBEV_REMOTE_NAME_COMPLETE\fP   0x07"
+.PP
+Definition at line 85 of file BTD\&.h\&.
+.SS "#define \fBEV_ROLE_CHANGED\fP   0x12"
+.PP
+Definition at line 88 of file BTD\&.h\&.
+.SS "#define \fBHCI_BDADDR_STATE\fP   3"
+.PP
+Definition at line 45 of file BTD\&.h\&.
+.SS "#define \fBHCI_CHECK_DEVICE_SERVICE\fP   6"
+.PP
+Definition at line 48 of file BTD\&.h\&.
+.SS "#define \fBhci_check_flag\fP(flag)   (hci_event_flag & (flag))"
+.PP
+Definition at line 74 of file BTD\&.h\&.
+.SS "#define \fBHCI_CLASS_STATE\fP   2"
+.PP
+Definition at line 44 of file BTD\&.h\&.
+.SS "#define \fBhci_clear_flag\fP(flag)   (hci_event_flag &= ~(flag))"
+.PP
+Definition at line 76 of file BTD\&.h\&.
+.SS "#define \fBHCI_CONNECT_DEVICE_STATE\fP   8"
+.PP
+Definition at line 51 of file BTD\&.h\&.
+.SS "#define \fBHCI_CONNECT_IN_STATE\fP   11"
+.PP
+Definition at line 55 of file BTD\&.h\&.
+.SS "#define \fBHCI_CONNECTED_DEVICE_STATE\fP   9"
+.PP
+Definition at line 52 of file BTD\&.h\&.
+.SS "#define \fBHCI_CONNECTED_STATE\fP   13"
+.PP
+Definition at line 57 of file BTD\&.h\&.
+.SS "#define \fBHCI_DISABLE_SCAN_STATE\fP   14"
+.PP
+Definition at line 58 of file BTD\&.h\&.
+.SS "#define \fBHCI_DISCONNECT_STATE\fP   16"
+.PP
+Definition at line 60 of file BTD\&.h\&.
+.SS "#define \fBHCI_DONE_STATE\fP   15"
+.PP
+Definition at line 59 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_CMD_COMPLETE\fP   0x01"
+.PP
+Definition at line 63 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_CONNECT_COMPLETE\fP   0x02"
+.PP
+Definition at line 64 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_CONNECT_EVENT\fP   0x100"
+.PP
+Definition at line 71 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_DEVICE_FOUND\fP   0x80"
+.PP
+Definition at line 70 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_DISCONNECT_COMPLETE\fP   0x04"
+.PP
+Definition at line 65 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_INCOMING_REQUEST\fP   0x10"
+.PP
+Definition at line 67 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_READ_BDADDR\fP   0x20"
+.PP
+Definition at line 68 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_READ_VERSION\fP   0x40"
+.PP
+Definition at line 69 of file BTD\&.h\&.
+.SS "#define \fBHCI_FLAG_REMOTE_NAME_COMPLETE\fP   0x08"
+.PP
+Definition at line 66 of file BTD\&.h\&.
+.SS "#define \fBHCI_INIT_STATE\fP   0"
+.PP
+Definition at line 42 of file BTD\&.h\&.
+.SS "#define \fBHCI_INQUIRY_STATE\fP   7"
+.PP
+Definition at line 50 of file BTD\&.h\&.
+.SS "#define \fBHCI_LOCAL_VERSION_STATE\fP   4"
+.PP
+Definition at line 46 of file BTD\&.h\&.
+.SS "#define \fBHCI_REMOTE_NAME_STATE\fP   12"
+.PP
+Definition at line 56 of file BTD\&.h\&.
+.SS "#define \fBHCI_RESET_STATE\fP   1"
+.PP
+Definition at line 43 of file BTD\&.h\&.
+.SS "#define \fBHCI_SCANNING_STATE\fP   10"
+.PP
+Definition at line 54 of file BTD\&.h\&.
+.SS "#define \fBhci_set_flag\fP(flag)   (hci_event_flag |= (flag))"
+.PP
+Definition at line 75 of file BTD\&.h\&.
+.SS "#define \fBHCI_SET_NAME_STATE\fP   5"
+.PP
+Definition at line 47 of file BTD\&.h\&.
+.SS "#define \fBHID_CTRL_PSM\fP   0x11"
+.PP
+Definition at line 182 of file BTD\&.h\&.
+.SS "#define \fBHID_INTR_PSM\fP   0x13"
+.PP
+Definition at line 183 of file BTD\&.h\&.
+.SS "#define \fBHID_REQUEST_SET_REPORT\fP   0x09"
+.PP
+Definition at line 39 of file BTD\&.h\&.
+.SS "#define \fBIOGEAR_GBU521_PID\fP   0x21E8"
+.PP
+Definition at line 30 of file BTD\&.h\&.
+.SS "#define \fBIOGEAR_GBU521_VID\fP   0x0A5C"
+.PP
+Definition at line 29 of file BTD\&.h\&.
+.SS "#define \fBl2cap_check_flag\fP(flag)   (l2cap_event_flag & (flag))"
+.PP
+Definition at line 160 of file BTD\&.h\&.
+.SS "#define \fBl2cap_clear_flag\fP(flag)   (l2cap_event_flag &= ~(flag))"
+.PP
+Definition at line 162 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_COMMAND_REJECT\fP   0x01"
+.PP
+Definition at line 165 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_CONFIG_REQUEST\fP   0x04"
+.PP
+Definition at line 168 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_CONFIG_RESPONSE\fP   0x05"
+.PP
+Definition at line 169 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_CONNECTION_REQUEST\fP   0x02"
+.PP
+Definition at line 166 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_CONNECTION_RESPONSE\fP   0x03"
+.PP
+Definition at line 167 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_DISCONNECT_REQUEST\fP   0x06"
+.PP
+Definition at line 170 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_DISCONNECT_RESPONSE\fP   0x07"
+.PP
+Definition at line 171 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_INFORMATION_REQUEST\fP   0x0A"
+.PP
+Definition at line 172 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CMD_INFORMATION_RESPONSE\fP   0x0B"
+.PP
+Definition at line 173 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CONTROL_CONFIG_REQUEST\fP   3"
+.PP
+Definition at line 108 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CONTROL_CONNECT_REQUEST\fP   2"
+.PP
+Definition at line 107 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CONTROL_DISCONNECT\fP   5"
+.PP
+Definition at line 110 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_CONTROL_SUCCESS\fP   4"
+.PP
+Definition at line 109 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_DISCONNECT_RESPONSE\fP   14"
+.PP
+Definition at line 126 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_DONE\fP   1"
+.PP
+Definition at line 104 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONFIG_CONTROL_SUCCESS\fP   0x00000002"
+.PP
+Definition at line 137 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONFIG_INTERRUPT_SUCCESS\fP   0x00000020"
+.PP
+Definition at line 143 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONFIG_RFCOMM_SUCCESS\fP   0x00001000"
+.PP
+Definition at line 154 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONFIG_SDP_SUCCESS\fP   0x00000200"
+.PP
+Definition at line 149 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONNECTION_CONTROL_REQUEST\fP   0x00000001"
+.PP
+Definition at line 136 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONNECTION_INTERRUPT_REQUEST\fP   0x00000010"
+.PP
+Definition at line 142 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONNECTION_RFCOMM_REQUEST\fP   0x00000800"
+.PP
+Definition at line 153 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONNECTION_SDP_REQUEST\fP   0x00000100"
+.PP
+Definition at line 148 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_CONTROL_CONNECTED\fP   0x00000004"
+.PP
+Definition at line 138 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_DISCONNECT_CONTROL_RESPONSE\fP   0x00000008"
+.PP
+Definition at line 139 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_DISCONNECT_INTERRUPT_RESPONSE\fP   0x00000080"
+.PP
+Definition at line 145 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_DISCONNECT_RESPONSE\fP   0x00004000"
+.PP
+Definition at line 157 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_DISCONNECT_RFCOMM_REQUEST\fP   0x00002000"
+.PP
+Definition at line 155 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_DISCONNECT_SDP_REQUEST\fP   0x00000400"
+.PP
+Definition at line 150 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_FLAG_INTERRUPT_CONNECTED\fP   0x00000040"
+.PP
+Definition at line 144 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_INTERRUPT_CONFIG_REQUEST\fP   8"
+.PP
+Definition at line 115 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_INTERRUPT_CONNECT_REQUEST\fP   7"
+.PP
+Definition at line 114 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_INTERRUPT_DISCONNECT\fP   9"
+.PP
+Definition at line 116 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_INTERRUPT_SETUP\fP   6"
+.PP
+Definition at line 113 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_RFCOMM_SUCCESS\fP   13"
+.PP
+Definition at line 124 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_RFCOMM_WAIT\fP   12"
+.PP
+Definition at line 123 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_SDP_SUCCESS\fP   11"
+.PP
+Definition at line 120 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_SDP_WAIT\fP   10"
+.PP
+Definition at line 119 of file BTD\&.h\&.
+.SS "#define \fBl2cap_set_flag\fP(flag)   (l2cap_event_flag |= (flag))"
+.PP
+Definition at line 161 of file BTD\&.h\&.
+.SS "#define \fBL2CAP_WAIT\fP   0"
+.PP
+Definition at line 103 of file BTD\&.h\&.
+.SS "#define \fBPAIR\fP   1"
+.PP
+Definition at line 192 of file BTD\&.h\&.
+.SS "#define \fBPENDING\fP   0x01"
+.PP
+Definition at line 176 of file BTD\&.h\&.
+.SS "#define \fBPS3_ENABLE_SIXAXIS\fP   18"
+.PP
+Definition at line 130 of file BTD\&.h\&.
+.SS "#define \fBPS3_PID\fP   0x0268"
+.PP
+Definition at line 25 of file BTD\&.h\&.
+.SS "#define \fBPS3_VID\fP   0x054C"
+.PP
+Definition at line 24 of file BTD\&.h\&.
+.SS "#define \fBPS3MOVE_PID\fP   0x03D5"
+.PP
+Definition at line 27 of file BTD\&.h\&.
+.SS "#define \fBPS3NAVIGATION_PID\fP   0x042F"
+.PP
+Definition at line 26 of file BTD\&.h\&.
+.SS "#define \fBRFCOMM_PSM\fP   0x03"
+.PP
+Definition at line 181 of file BTD\&.h\&.
+.SS "#define \fBSDP_PSM\fP   0x01"
+.PP
+Definition at line 180 of file BTD\&.h\&.
+.SS "#define \fBSUCCESSFUL\fP   0x00"
+.PP
+Definition at line 177 of file BTD\&.h\&.
+.SS "#define \fBTURN_ON_LED\fP   17"
+.PP
+Definition at line 129 of file BTD\&.h\&.
+.SS "#define \fBUHS_ACL_HANDLE_OK\fP(\fBx\fP, \fBy\fP)   ((\fBx\fP[0] == (\fBy\fP & 0xff)) && (x[1] == ((y >> 8) | 0x20)))"
+.PP
+Definition at line 207 of file BTD\&.h\&.
+.SS "#define \fBWI_PROTOCOL_BT\fP   0x01"
+.PP
+Definition at line 187 of file BTD\&.h\&.
+.SS "#define \fBWI_SUBCLASS_RF\fP   0x01"
+.PP
+Definition at line 186 of file BTD\&.h\&.
+.SS "#define \fBWII_CHECK_EXTENSION_STATE\fP   20"
+.PP
+Definition at line 132 of file BTD\&.h\&.
+.SS "#define \fBWII_CHECK_MOTION_PLUS_STATE\fP   19"
+.PP
+Definition at line 131 of file BTD\&.h\&.
+.SS "#define \fBWII_INIT_MOTION_PLUS_STATE\fP   21"
+.PP
+Definition at line 133 of file BTD\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

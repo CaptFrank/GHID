@@ -1,0 +1,176 @@
+\hypertarget{structjoystick__report__t}{\section{joystick\-\_\-report\-\_\-t \-Struct \-Reference}
+\label{structjoystick__report__t}\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}}
+}
+
+
+\-If the mouse is chosen.  
+
+
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>byte \hyperlink{structjoystick__report__t_a886edb5222b7c842f1c2f80e65cb301f}{button\_1}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_af142ca63810131e6386b3bde9de28864}{button\_2}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_ae2f9a864f5f3f93f8a2975542b019c81}{button\_3}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_a6e6f89e0ae6bfa464e58e6cf13e58780}{button\_4}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_a40d6ab0397fbb594304c624a03da1eed}{button\_5}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_a962c2ec3124700193a5153f9efe862bd}{button\_6}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_af93282ad1ac14cace7c2c1739b6d0998}{button\_7}: 1\\
+\>\>byte \hyperlink{structjoystick__report__t_a26bd852e878a85aa8bfe428832cc8fe6}{button\_8}: 1\\
+\>\} \hyperlink{structjoystick__report__t_aade536be4f91757b2ecd075fcf2f0a3d}{buttons\_bits}\\
+\>\>\>{\em Defining the buttons. }\\
+\>uint8\_t \hyperlink{structjoystick__report__t_a1b9fb1806c80f76292cba7c719ac6c6c}{buttons\_byte}\\
+\>\>\>{\em We can also call the buttons as a group with this byte. }\\
+\} \hyperlink{structjoystick__report__t_a653cada3bce72bb704999f5dc08faba2}{buttons}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em \-Buttons can be individually assigned, $\backslash$. \end{DoxyCompactList}\item 
+int8\-\_\-t \hyperlink{structjoystick__report__t_a00eddcf4aba7402e3f0fdd1e7ab09d13}{x\-\_\-axis}
+\begin{DoxyCompactList}\small\item\em \-Axis definition. \end{DoxyCompactList}\item 
+int8\-\_\-t \hyperlink{structjoystick__report__t_a6abec4aa980f7c029aaaa216c448e7af}{y\-\_\-axis}
+\item 
+int8\-\_\-t \hyperlink{structjoystick__report__t_ab213b4d95036f350509ba4e4f056ca97}{z\-\_\-axis}
+\item 
+uint8\-\_\-t \hyperlink{structjoystick__report__t_a4b7eb53cb199dc64ceea758f0baacbcc}{spacer}
+\begin{DoxyCompactList}\small\item\em \-We need this to separate our data between the packets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-If the mouse is chosen. 
+
+\-If the joystick is chosen \-Creating a structure of variable data. \-This is used to be able to vary the data from the input parameters such as buttons (\-Setting them \-H\-I\-G\-H/\-L\-O\-W). 
+
+\-Definition at line 61 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structjoystick__report__t_a886edb5222b7c842f1c2f80e65cb301f}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-1@{button\-\_\-1}}
+\index{button\-\_\-1@{button\-\_\-1}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-1}}}\label{structjoystick__report__t_a886edb5222b7c842f1c2f80e65cb301f}
+
+
+\-Definition at line 69 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_af142ca63810131e6386b3bde9de28864}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-2@{button\-\_\-2}}
+\index{button\-\_\-2@{button\-\_\-2}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-2}}}\label{structjoystick__report__t_af142ca63810131e6386b3bde9de28864}
+
+
+\-Definition at line 70 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_ae2f9a864f5f3f93f8a2975542b019c81}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-3@{button\-\_\-3}}
+\index{button\-\_\-3@{button\-\_\-3}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-3}}}\label{structjoystick__report__t_ae2f9a864f5f3f93f8a2975542b019c81}
+
+
+\-Definition at line 71 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a6e6f89e0ae6bfa464e58e6cf13e58780}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-4@{button\-\_\-4}}
+\index{button\-\_\-4@{button\-\_\-4}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-4}}}\label{structjoystick__report__t_a6e6f89e0ae6bfa464e58e6cf13e58780}
+
+
+\-Definition at line 72 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a40d6ab0397fbb594304c624a03da1eed}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-5@{button\-\_\-5}}
+\index{button\-\_\-5@{button\-\_\-5}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-5}}}\label{structjoystick__report__t_a40d6ab0397fbb594304c624a03da1eed}
+
+
+\-Definition at line 73 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a962c2ec3124700193a5153f9efe862bd}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-6@{button\-\_\-6}}
+\index{button\-\_\-6@{button\-\_\-6}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-6}}}\label{structjoystick__report__t_a962c2ec3124700193a5153f9efe862bd}
+
+
+\-Definition at line 74 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_af93282ad1ac14cace7c2c1739b6d0998}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-7@{button\-\_\-7}}
+\index{button\-\_\-7@{button\-\_\-7}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-7}}}\label{structjoystick__report__t_af93282ad1ac14cace7c2c1739b6d0998}
+
+
+\-Definition at line 75 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a26bd852e878a85aa8bfe428832cc8fe6}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!button\-\_\-8@{button\-\_\-8}}
+\index{button\-\_\-8@{button\-\_\-8}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{button\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf joystick\-\_\-report\-\_\-t\-::button\-\_\-8}}}\label{structjoystick__report__t_a26bd852e878a85aa8bfe428832cc8fe6}
+
+
+\-Definition at line 76 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a653cada3bce72bb704999f5dc08faba2}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!buttons@{buttons}}
+\index{buttons@{buttons}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{buttons}]{\setlength{\rightskip}{0pt plus 5cm}or \{ ... \}  {\bf joystick\-\_\-report\-\_\-t\-::buttons}}}\label{structjoystick__report__t_a653cada3bce72bb704999f5dc08faba2}
+
+
+\-Buttons can be individually assigned, $\backslash$. 
+
+\hypertarget{structjoystick__report__t_aade536be4f91757b2ecd075fcf2f0a3d}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!buttons\-\_\-bits@{buttons\-\_\-bits}}
+\index{buttons\-\_\-bits@{buttons\-\_\-bits}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{buttons\-\_\-bits}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  {\bf joystick\-\_\-report\-\_\-t\-::buttons\-\_\-bits}}}\label{structjoystick__report__t_aade536be4f91757b2ecd075fcf2f0a3d}
+
+
+\-Defining the buttons. 
+
+\hypertarget{structjoystick__report__t_a1b9fb1806c80f76292cba7c719ac6c6c}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!buttons\-\_\-byte@{buttons\-\_\-byte}}
+\index{buttons\-\_\-byte@{buttons\-\_\-byte}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{buttons\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf joystick\-\_\-report\-\_\-t\-::buttons\-\_\-byte}}}\label{structjoystick__report__t_a1b9fb1806c80f76292cba7c719ac6c6c}
+
+
+\-We can also call the buttons as a group with this byte. 
+
+
+
+\-Definition at line 80 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a4b7eb53cb199dc64ceea758f0baacbcc}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!spacer@{spacer}}
+\index{spacer@{spacer}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{spacer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf joystick\-\_\-report\-\_\-t\-::spacer}}}\label{structjoystick__report__t_a4b7eb53cb199dc64ceea758f0baacbcc}
+
+
+\-We need this to separate our data between the packets. 
+
+
+
+\-Definition at line 89 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a00eddcf4aba7402e3f0fdd1e7ab09d13}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!x\-\_\-axis@{x\-\_\-axis}}
+\index{x\-\_\-axis@{x\-\_\-axis}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{x\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}int8\-\_\-t {\bf joystick\-\_\-report\-\_\-t\-::x\-\_\-axis}}}\label{structjoystick__report__t_a00eddcf4aba7402e3f0fdd1e7ab09d13}
+
+
+\-Axis definition. 
+
+
+
+\-Definition at line 84 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_a6abec4aa980f7c029aaaa216c448e7af}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!y\-\_\-axis@{y\-\_\-axis}}
+\index{y\-\_\-axis@{y\-\_\-axis}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{y\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}int8\-\_\-t {\bf joystick\-\_\-report\-\_\-t\-::y\-\_\-axis}}}\label{structjoystick__report__t_a6abec4aa980f7c029aaaa216c448e7af}
+
+
+\-Definition at line 85 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+\hypertarget{structjoystick__report__t_ab213b4d95036f350509ba4e4f056ca97}{\index{joystick\-\_\-report\-\_\-t@{joystick\-\_\-report\-\_\-t}!z\-\_\-axis@{z\-\_\-axis}}
+\index{z\-\_\-axis@{z\-\_\-axis}!joystick_report_t@{joystick\-\_\-report\-\_\-t}}
+\subsubsection[{z\-\_\-axis}]{\setlength{\rightskip}{0pt plus 5cm}int8\-\_\-t {\bf joystick\-\_\-report\-\_\-t\-::z\-\_\-axis}}}\label{structjoystick__report__t_ab213b4d95036f350509ba4e4f056ca97}
+
+
+\-Definition at line 86 of file \-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___u_s_b___structures_8h}{\-G\-H\-I\-D\-\_\-\-U\-S\-B\-\_\-\-Structures.\-h}\end{DoxyCompactItemize}

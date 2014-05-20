@@ -1,0 +1,156 @@
+.TH "GHID_SPI" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GHID_SPI \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_SPI\&.h>\fP
+.PP
+Inherits \fBSPIClass\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGHID_SPI\fP (\fBspi_settings_t\fP *settings)"
+.br
+.RI "\fIDefault constructor\&. \fP"
+.ti -1c
+.RI "void \fBtranfer_data\fP (\fBspi_device_address_map_t\fP device, byte \fBdata\fP)"
+.br
+.RI "\fITransfer Data method\&. \fP"
+.ti -1c
+.RI "void \fBtransfer_bulk\fP (\fBspi_device_address_map_t\fP device, byte *\fBdata\fP, byte length)"
+.br
+.RI "\fITransfer bulk data\&. \fP"
+.ti -1c
+.RI "\fBbuffer_struct_t\fP * \fBread_data\fP (\fBspi_device_address_map_t\fP device, byte length, byte command)"
+.br
+.RI "\fIRead data into a buffer struct\&. \fP"
+.ti -1c
+.RI "void \fBcheck_spi_buffer\fP ()"
+.br
+.RI "\fIChecks for the isr buffer if its full\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBbuffer_struct_t\fP \fBbuffer\fP"
+.br
+.RI "\fIPublic Context\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is an extended class of the Arduino \fBSPIClass\fP\&. It provides a wrapper to the \fBSPIClass\fP with additional extra features\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSPI\&.h\fP 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file GHID_SPI\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBGHID_SPI::GHID_SPI\fP (\fBspi_settings_t\fP *settings)"
+.PP
+Default constructor\&. This is the default constructor for the class\&. It sets up the required SPI device with a passed settings_t pointer\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsettings\fP - pointer to settings 
+.RE
+.PP
+We copy the settings into our internal class\&.
+.PP
+We set the SS pins to outputs
+.PP
+We set the ss pin as an output\&.
+.PP
+We start the SPI engine
+.PP
+We set the SPI bit order
+.PP
+We set the clock divider
+.PP
+We set the data mode of the bus
+.PP
+We setup the interrupt
+.PP
+We reset the buffer position 
+.PP
+Definition at line 11 of file GHID_SPI\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBGHID_SPI::check_spi_buffer\fP ()"
+.PP
+Checks for the isr buffer if its full\&. This checks the spi buffer for any bytes received\&. Copy the data received
+.PP
+Reset the position\&. 
+.PP
+Definition at line 77 of file GHID_SPI\&.cpp\&.
+.SS "\fBbuffer_struct_t\fP * \fBGHID_SPI::read_data\fP (\fBspi_device_address_map_t\fPdevice, bytelength, bytecommand)"
+.PP
+Read data into a buffer struct\&. This is the read data from device method\&. We specify the address to receive data from and how long of data we need to receive\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdevice\fP - address 
+.br
+\fIlength\fP - the length to receive 
+.br
+\fIcommand\fP - the read command 
+.RE
+.PP
+
+.PP
+Definition at line 65 of file GHID_SPI\&.cpp\&.
+.SS "void \fBGHID_SPI::tranfer_data\fP (\fBspi_device_address_map_t\fPdevice, bytedata)"
+.PP
+Transfer Data method\&. This transfers one byte to the slave selected\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdevice\fP - the address to send 
+.br
+\fIdata\fP - the data to send 
+.RE
+.PP
+Start listening
+.PP
+Send the data byte
+.PP
+Stop listening 
+.PP
+Definition at line 44 of file GHID_SPI\&.cpp\&.
+.SS "void \fBGHID_SPI::transfer_bulk\fP (\fBspi_device_address_map_t\fPdevice, byte *data, bytelength)"
+.PP
+Transfer bulk data\&. This method sends a bulk byte array to the requested address\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdevice\fP - the address of the slave 
+.br
+\fIdata\fP - the data to send 
+.br
+\fIlength\fP - the length of the array 
+.RE
+.PP
+
+.PP
+Definition at line 58 of file GHID_SPI\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBbuffer_struct_t\fP \fBGHID_SPI::buffer\fP"
+.PP
+Public Context\&. The publicly accessible buffer 
+.PP
+Definition at line 65 of file GHID_SPI\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

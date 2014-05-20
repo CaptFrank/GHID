@@ -17,6 +17,12 @@
 #define SUCCESS						0
 #define EMPTY						0
 
+//! Define the setup type
+enum cc2540_setup_t {
+	DEFAULT_SETUP,
+	CUSTOM_SETUP
+	};
+
 /**
  * This is the CC2540 chip driver. This class handles the setting up and
  * direct access to the bluetooth transceivers settings.
@@ -31,29 +37,20 @@ class CC2540_Driver {
 		 *
 		 * @param device_name						- The name of the device
 		 * @param command_table						- The pointer to the command list
-		 * @param setup_method						- The setup method called.
 		 * @param serial							- The hardware serial port used
+		 * @param setup								- The setup type
+		 * @param setup_method						- The setup method called.
 		 */
-		CC2540_Driver(char* device_name = "UNKNOWN",
-							void* command_table,
-							bool(*setup_method)() = this->_default_setup(),
-							Bluetooth_Dispatcher* serial);
-
-		/**
-		 * The abstract view of the setup of the device.
-		 *
-		 * @return success							- If the setup was successful
-		 */
-		bool setup_device();
+		CC2540_Driver(char* device_name,
+							char* command_table,
+							Bluetooth_Dispatcher* serial,
+							void (*setup_method)(CC2540_Driver* driver) = _default_setup);
 
 	//! Private Context
 	private:
 
 		//! Internal access to the command table
-		void* _command_table;
-
-		//! Internal access
-		bool(*_setup_method)(void* object);
+		const char* _command_table;
 
 		//! The device name
 		char* _name;
@@ -66,7 +63,7 @@ class CC2540_Driver {
 		 *
 		 * @return success							- If the dispatch was successful
 		 */
-		bool _default_setup();
+		static void _default_setup(CC2540_Driver* object);
 
 		//! Generic commands
 

@@ -80,7 +80,7 @@ buffer_struct_t* GHID_SPI::read_data(byte device,
 		this->buffer.buffer[i] = SPI.transfer(command);
 	}
 
-	return this->buffer;
+	return &this->buffer;
 }
 
 //! Checks for the isr buffer if its full

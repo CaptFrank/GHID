@@ -1,0 +1,111 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/hidboot.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/hidboot.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'hid\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMOUSEINFO\fP"
+.br
+.ti -1c
+.RI "class \fBMouseReportParser\fP"
+.br
+.ti -1c
+.RI "struct \fBMODIFIERKEYS\fP"
+.br
+.ti -1c
+.RI "struct \fBKBDINFO\fP"
+.br
+.ti -1c
+.RI "struct \fBKBDLEDS\fP"
+.br
+.ti -1c
+.RI "class \fBKeyboardReportParser\fP"
+.br
+.ti -1c
+.RI "class \fBHIDBoot< BOOT_PROTOCOL >\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_ZERO\fP   0x27"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_ENTER\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_SPACE\fP   0x2c"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_CAPS_LOCK\fP   0x39"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_SCROLL_LOCK\fP   0x47"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_NUM_LOCK\fP   0x53"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_ZERO2\fP   0x62"
+.br
+.ti -1c
+.RI "#define \fBUHS_HID_BOOT_KEY_PERIOD\fP   0x63"
+.br
+.ti -1c
+.RI "#define \fBbitsEndpoints\fP(p)   ((((p) & \fBHID_PROTOCOL_KEYBOARD\fP)? 2 : 0) | (((p) & \fBHID_PROTOCOL_MOUSE\fP)? 1 : 0))"
+.br
+.ti -1c
+.RI "#define \fBtotalEndpoints\fP(p)   ((\fBbitsEndpoints\fP(p) == 3) ? 3 : 2)"
+.br
+.ti -1c
+.RI "#define \fBepMUL\fP(p)   ((((p) & \fBHID_PROTOCOL_KEYBOARD\fP)? 1 : 0) + (((p) & \fBHID_PROTOCOL_MOUSE\fP)? 1 : 0))"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBbitsEndpoints\fP(p)   ((((p) & \fBHID_PROTOCOL_KEYBOARD\fP)? 2 : 0) | (((p) & \fBHID_PROTOCOL_MOUSE\fP)? 1 : 0))"
+.PP
+Definition at line 32 of file hidboot\&.h\&.
+.SS "#define \fBepMUL\fP(p)   ((((p) & \fBHID_PROTOCOL_KEYBOARD\fP)? 1 : 0) + (((p) & \fBHID_PROTOCOL_MOUSE\fP)? 1 : 0))"
+.PP
+Definition at line 34 of file hidboot\&.h\&.
+.SS "#define \fBtotalEndpoints\fP(p)   ((\fBbitsEndpoints\fP(p) == 3) ? 3 : 2)"
+.PP
+Definition at line 33 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_CAPS_LOCK\fP   0x39"
+.PP
+Definition at line 25 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_ENTER\fP   0x28"
+.PP
+Definition at line 23 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_NUM_LOCK\fP   0x53"
+.PP
+Definition at line 27 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_PERIOD\fP   0x63"
+.PP
+Definition at line 29 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_SCROLL_LOCK\fP   0x47"
+.PP
+Definition at line 26 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_SPACE\fP   0x2c"
+.PP
+Definition at line 24 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_ZERO\fP   0x27"
+.PP
+Definition at line 22 of file hidboot\&.h\&.
+.SS "#define \fBUHS_HID_BOOT_KEY_ZERO2\fP   0x62"
+.PP
+Definition at line 28 of file hidboot\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

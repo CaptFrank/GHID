@@ -5,6 +5,8 @@
  *      Author: francispapineau
  */
 
+#include "Dispatcher.h"
+
 /**
  * This method creates a dispatch item.
  *

@@ -19,8 +19,7 @@ extern "C" void __cxa_pure_virtual() {;}
 
 void setup(void);
 //
-void start_device(void);
-void stop_device(void);
+void execute_isr(void);
 
 #include "C:\Program Files\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
 #include "C:\Program Files\Arduino\hardware\arduino\cores\arduino\arduino.h"
@@ -47,3 +46,6 @@ void stop_device(void);
 #include "Z:\GHID_BLUno\Arduino Project\Main\GHID_SPI.cpp"
 #include "Z:\GHID_BLUno\Arduino Project\Main\GHID_SPI.h"
 #include "Z:\GHID_BLUno\Arduino Project\Main\RingBuffer.h"
+#include "Z:\GHID_BLUno\Arduino Project\Main\SPI.cpp"
+#include "Z:\GHID_BLUno\Arduino Project\Main\SPI.h"
+#include "Z:\GHID_BLUno\Arduino Project\Main\Utilities.h"

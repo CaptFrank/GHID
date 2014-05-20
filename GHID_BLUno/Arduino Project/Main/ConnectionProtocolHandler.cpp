@@ -13,14 +13,21 @@
  * This is the default constructor for the class
  *
  * @param buffer						- The ring buffer pointer
- * @param table							- The lookup table
  * @param serial						- The Hardware serial to read and write
  */
-ConnectionProtocolHandler::ConnectionProtocolHandler(RingBuff_t* buffer, callback_t* table, HardwareSerial* serial){
+ConnectionProtocolHandler::ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial){
 
 	//! Set internals
 	this->_serial = serial;
 	this->_buffer = buffer;
+}
+/**
+ * This sets up the callback table.
+ *
+ * @param table							- The callback table
+ */
+void ConnectionProtocolHandler::set_callback_table(callback_t* table){
+	
 	this->_table = table;
 }
 
@@ -41,7 +48,7 @@ void ConnectionProtocolHandler::poll(){
 			if(this->_table[i].command_id == command){
 
 				//! We fire the particular function
-				this->_table[i].callback(this->_table[i].object_ptr);
+				this->_table[i].callback(command, this->_table[i].object);
 			}
 		}
 	}
@@ -50,10 +57,9 @@ void ConnectionProtocolHandler::poll(){
 /**
  * This method is used to generic system wide actions
  *
- * @param object						- The access object
  * @param command						- The issued command
  */
-void ConnectionProtocolHandler::generic(void* object, uint8_t command){
+void ConnectionProtocolHandler::generic(uint8_t command, void* object){
 
 	//! We switch on the command
 	switch(command){
@@ -85,25 +91,27 @@ void ConnectionProtocolHandler::generic(void* object, uint8_t command){
 /**
  * This method is used when the request connection type is used.
  *
- * @param object						- The access object
  * @param command						- The issued command
  */
-void ConnectionProtocolHandler::request(void* object, uint8_t command){
+void ConnectionProtocolHandler::request(uint8_t command, void* object){
+
+	//! Cast the object
+	ConnectionProtocolHandler* access = (ConnectionProtocolHandler*) object;
 
 	//! Container
 	buffer_t* buff;
 
-	if(!RingBuffer_IsEmpty(this->_buffer)){
+	if(!RingBuffer_IsEmpty(access->_buffer)){
 
 		//! We process the data to be sent
-		buff = Data_Processor::process_data(this->_buffer);
+		buff = Data_Processor::process_data(access->_buffer, &access->_buff);
 	}else{
 
 		//! We get the last values processed
-		buff = Data_Processor::get_last_values();
+		buff = Data_Processor::get_last_values(&access->_buff);
 	}
 
 	//! We send them
-	this->_serial->write(buff->data, buff->length);
+	access->_serial->write(buff->data, buff->length);
 }
 

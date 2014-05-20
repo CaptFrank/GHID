@@ -1,0 +1,81 @@
+\hypertarget{class_g_h_i_d___dallas__1___wire}{\section{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire \-Class \-Reference}
+\label{class_g_h_i_d___dallas__1___wire}\index{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire@{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire}}
+}
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire.\-h$>$}
+
+\-Inheritance diagram for \-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_h_i_d___dallas__1___wire}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} $\ast$ \hyperlink{class_g_h_i_d___dallas__1___wire_a10488575da11f8b85134c5692c52f275}{read\-\_\-bulk} (byte length)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} \hyperlink{class_g_h_i_d___dallas__1___wire_a45b4a311e55a4222fcaa7584e3d5defc}{buffer}
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is an extended class of the \-Dallas \hyperlink{class_one_wire}{\-One\-Wire} class. \-It provides a more comprehensive methodology for the user to implement this type of device.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{_one_wire_8h}{\-One\-Wire.\-h} 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 30 of file \-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_g_h_i_d___dallas__1___wire_a10488575da11f8b85134c5692c52f275}{\index{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire@{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire}!read\-\_\-bulk@{read\-\_\-bulk}}
+\index{read\-\_\-bulk@{read\-\_\-bulk}!GHID_Dallas_1_Wire@{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire}}
+\subsubsection[{read\-\_\-bulk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-struct\-\_\-t} $\ast$ {\bf \-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire\-::read\-\_\-bulk} (
+\begin{DoxyParamCaption}
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___dallas__1___wire_a10488575da11f8b85134c5692c52f275}
+\-This is the read bulk method. \-We give it a length and, this method handles the reading of the one wire bus.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em length} & -\/ byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} -\/ buffer struct 
+\end{DoxyReturn}
+\-Read for length times
+
+returns the pointer to the class internal buffer struct 
+
+\-Definition at line 10 of file \-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_g_h_i_d___dallas__1___wire_a45b4a311e55a4222fcaa7584e3d5defc}{\index{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire@{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire}!buffer@{buffer}}
+\index{buffer@{buffer}!GHID_Dallas_1_Wire@{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-struct\-\_\-t} {\bf \-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire\-::buffer}}}\label{class_g_h_i_d___dallas__1___wire_a45b4a311e55a4222fcaa7584e3d5defc}
+
+
+\-Public \-Context. 
+
+\-Frankly there is nothing to be implemented in this api in which is not touched on in the \-A\-P\-I added to the includes folder. \-Publicly accessible buffer struct 
+
+\-Definition at line 42 of file \-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___dallas__1___wire_8h}{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire.\-h}\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___dallas__1___wire_8cpp}{\-G\-H\-I\-D\-\_\-\-Dallas\-\_\-1\-\_\-\-Wire.\-cpp}\end{DoxyCompactItemize}

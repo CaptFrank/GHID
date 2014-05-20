@@ -14,12 +14,11 @@
  */
 Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_serial,
 						connection_type_t type, RingBuff_t* ring,
-						ConnectionProtocolHandler* handler) : Connection_Handler(this->_table){
+						ConnectionProtocolHandler* handler){
 
 	//! Set the internal serial port
 	this->_serial = hw_serial;
 	this->_con_type = type;
-	this->run = 0x00;
 	this->_buff = ring;
 	this->_handler = handler;
 
@@ -28,7 +27,7 @@ Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_se
 	this->_serial->flush();
 
 	//! We set the run type
-	this->_set_run_method(type);
+	this->_type = type;
 }
 
 /**
@@ -74,22 +73,32 @@ void Bluetooth_Connection_Handler::reboot(){
  */
 buffer_t* Bluetooth_Connection_Handler::read(byte length){
 
-	//! the bufer container
-	buffer_t buff, i = 0;
+	byte i = 0;
 
-	buff.length = length;
+	this->_buf.length = length;
 
 	//! First we see of the host device is ok
-	if(!this->_read_response()) return ERROR;
+	if(!this->_read_response()){
+		 this->_buf.valid = false;
+		 return &this->_buf;
+	}
 
+	uint8_t timeout = TIMEOUT;
 	//! We read a raw response
-	while(TIMEOUT --){
+	while(timeout --){
 		if(this->_serial->available()){
-			buff.data[i] = this->_serial->read();
+			this->_buf.data[i] = this->_serial->read();
 			i ++;
 		}
 	}
-	return buff;
+	
+	//! We check if we got the ok signal
+	if(this->_buf.data[HEADER_INDEX] == HEADER_ID){	
+		this->_buf.valid = true;
+	}else{
+		this->_buf.valid = false;
+	}
+	return &this->_buf;
 }
 
 /**
@@ -104,12 +113,29 @@ void Bluetooth_Connection_Handler::write(buffer_t* buf){
 	this->_serial->write(buf->data, buf->length);
 }
 
-//! Private Context
-
 /**
- * This is the virtual deconstructor for the class.
- */
-Bluetooth_Connection_Handler::~Bluetooth_Connection_Handler(){}
+ *  This is the run method
+ */ 
+void Bluetooth_Connection_Handler::run(void){
+	
+	//! We set the pointer to the right method.
+	switch(this->_type){
+			
+		//! Request based
+		case DATA_REQUEST_BASED:
+			this->_run_request_based();
+			break;
+
+		//! Stream based - Default method
+		case DATA_STREAM_BASED:
+		default:
+			this->_run_stream_based();
+			break;
+	}
+	
+}
+
+//! Private Context
 
 /**
  * This writes a command to the remote host device.
@@ -134,7 +160,8 @@ bool Bluetooth_Connection_Handler::_write_command(uint8_t command){
  */
 bool Bluetooth_Connection_Handler::_read_response(){
 
-	while(TIMEOUT --){
+	uint8_t timeout = TIMEOUT;
+	while(timeout --){
 		if(this->_serial->available()){
 			uint8_t response = this->_serial->read();
 
@@ -144,26 +171,6 @@ bool Bluetooth_Connection_Handler::_read_response(){
 		}
 	}
 	return false;
-}
-
-/**
- * We set the run method.
- *
- * @param type							- the connection type
- */
-void Bluetooth_Connection_Handler::_set_run_method(connection_type_t type){
-
-	//! We set the pointer to the right method.
-	switch(type){
-		case DATA_REQUEST_BASED:
-			this->run = this->_run_request_based();
-			break;
-
-		case DATA_STREAM_BASED:
-		default:
-			this->run = this->_run_stream_based();
-			break;
-	}
 }
 
 /**
@@ -183,14 +190,17 @@ void Bluetooth_Connection_Handler::_run_stream_based(){
 	//! Container
 	buffer_t* buff;
 
+	//! New values?
 	if(!RingBuffer_IsEmpty(this->_buff)){
 
 		//! We process the data to be sent
-		buff = Data_Processor::process_data(this->_buff);
+		buff = Data_Processor::process_data(this->_buff, &this->_buf);
+		
+	//! No new values
 	}else{
 
 		//! We get the last values processed
-		buff = Data_Processor::get_last_values();
+		buff = Data_Processor::get_last_values(&this->_buf);
 	}
 
 	//! We send them

@@ -30,10 +30,10 @@ typedef struct callback_t {
 
 	//! Registers the callback method.
 	//! *** Note: This method must be static.
-	void(*callback)(void* object, uint8_t command);
-
-	//! Register the object to pass through to act out action
-	void* object_ptr;
+	void(*callback)(uint8_t command, void* object);
+	
+	//! The access object
+	void* object;
 };
 
 /**
@@ -57,11 +57,6 @@ class Connection_Handler {
 
 	//! Public Context
 	public:
-
-		/**
-		 * This is the default connection handler constructor.
-		 */
-		Connection_Handler(callback_t* table);
 
 		/**
 		 * A Connection method to connect to the target device.
@@ -104,6 +99,9 @@ class Connection_Handler {
 
 		//! Connection type
 		connection_type_t _con_type;
+		
+		//! Internal Buffer
+		buffer_t _buff;
 };
 
 #endif /* CONNECTIONHANDLER_H_ */

@@ -9,9 +9,8 @@
 #define BLUETOOTHCONNECTIONHANDLER_H_
 
 #include <Arduino.h>
-#include "DataProcessor.h"
-#include "ConnectionHandler.h"
-#include "BluetoothConnectionCommands.h"
+
+#include "Utilities.h"
 #include "ConnectionProtocolHandler.h"
 
 //! Configs Defines
@@ -27,6 +26,9 @@
 #define CONNECT				'C'
 #define DISCONNECT			'D'
 #define REBOOT				'R'
+
+#define HEADER_INDEX		0
+#define HEADER_ID			'#'
 
 /**
  * This is the main class that arbitrates between the point-to-point Bluetooth
@@ -82,9 +84,11 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		 * @param buf							- the buffer structure to write
 		 */
 		void write(buffer_t* buf);
-
-		//! The run method pointer
-		void (*run)(void);
+		
+		/**
+		 *  This is the run method
+		 */ 
+		void run(void);
 
 	//! Private Context
 	private:
@@ -97,14 +101,15 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 
 		//! Buffer
 		RingBuff_t* _buff;
+		
+		//! Internal buffer
+		buffer_t _buf;
+		
+		//! Connection Type
+		connection_type_t _type;
 
 		//! Protocol Handler
 		ConnectionProtocolHandler* _handler;
-
-		/**
-		 * This is the virtual deconstructor for the class.
-		 */
-		~Bluetooth_Connection_Handler();
 
 		/**
 		 * This writes a command to the remote host device.
@@ -121,13 +126,6 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		 * @return success						- the command success
 		 */
 		bool _read_response();
-
-		/**
-		 * We set the run method.
-		 *
-		 * @param type							- the connection type
-		 */
-		void _set_run_method(connection_type_t type);
 
 		/**
 		 * We run the request based method... Using callbacks

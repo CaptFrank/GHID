@@ -157,6 +157,4 @@ PROGMEM const char *command_pointers[] = {
 		//! PSW CHANGE
 		password_change
 };
-
-
 #endif /* BLUETOOTHCOMMANDTABLE_H_ */

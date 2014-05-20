@@ -40,9 +40,14 @@ class Bluetooth_Dispatcher : public Dispatcher{
 		 * @return success							- If the dispatch was successful
 		 */
 		bool run_dispatch();
-
+		
+		/**
+		 * Get access to the response entity.
+		 */
+		response_t* get_response();
+		
 	//! Private Context
-	private:
+	protected:
 
 		//! The internal access to the serial
 		HardwareSerial* _serial;

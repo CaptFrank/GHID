@@ -21,6 +21,9 @@ typedef struct buffer_t {
 
 	//! The data in the buffer.
 	byte data[DATA_PACKET_SIZE - 1];
+	
+	//! Valid?
+	bool valid;
 };
 
 /**
@@ -38,23 +41,20 @@ class Data_Processor {
 		 * passed to this method and returns an axis buffer type structure.
 		 *
 		 * @param buf								- the buffer type structure
+		 * @param buffer							- the buffer object
 		 * @return axis_t							- the axis type structure returned
 		 */
-		static buffer_t* process_data(RingBuff_t* buf);
+		static buffer_t* process_data(RingBuff_t* buf, buffer_t* buffer);
 
 		/**
 		 * We simply return the last valid values.
 		 *
+		 * @param buffer							- the buffer object
 		 * @return buf								- the last valid buffer values
 		 */
-		static buffer_t* get_last_values();
-
-
-	//! Private Context
-	private:
-
-		//! The internal access buffer type pointer
-		buffer_t _buffer;
+		static buffer_t* get_last_values(buffer_t* buffer){
+			return buffer;
+		}
 };
 
 #endif /* DATAPROCESSOR_H_ */

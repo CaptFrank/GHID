@@ -1,0 +1,109 @@
+.TH "TimerThree" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TimerThree \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TimerThree\&.h>\fP
+.PP
+Inherited by \fBGHID_System_Abstration::GHID_Timer_Three\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitialize\fP (long microseconds=1000000)"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBrestart\fP ()"
+.br
+.ti -1c
+.RI "void \fBpwm\fP (char pin, int duty, long microseconds=-1)"
+.br
+.ti -1c
+.RI "void \fBdisablePwm\fP (char pin)"
+.br
+.ti -1c
+.RI "void \fBattachInterrupt\fP (void(*isr)(), long microseconds=-1)"
+.br
+.ti -1c
+.RI "void \fBdetachInterrupt\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPeriod\fP (long microseconds)"
+.br
+.ti -1c
+.RI "void \fBsetPwmDuty\fP (char pin, int duty)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBpwmPeriod\fP"
+.br
+.ti -1c
+.RI "unsigned char \fBclockSelectBits\fP"
+.br
+.ti -1c
+.RI "void(* \fBisrCallback\fP )()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 19 of file TimerThree\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBTimerThree::attachInterrupt\fP (void(*)()isr, longmicroseconds = \fC-1\fP)"
+.PP
+Definition at line 75 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::detachInterrupt\fP ()"
+.PP
+Definition at line 84 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::disablePwm\fP (charpin)"
+.PP
+Definition at line 68 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::initialize\fP (longmicroseconds = \fC1000000\fP)"
+.PP
+Definition at line 24 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::pwm\fP (charpin, intduty, longmicroseconds = \fC-1\fP)"
+.PP
+Definition at line 55 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::restart\fP ()"
+.PP
+Definition at line 99 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::setPeriod\fP (longmicroseconds)"
+.PP
+Definition at line 31 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::setPwmDuty\fP (charpin, intduty)"
+.PP
+Definition at line 45 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::start\fP ()"
+.PP
+Definition at line 89 of file TimerThree\&.cpp\&.
+.SS "void \fBTimerThree::stop\fP ()"
+.PP
+Definition at line 94 of file TimerThree\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned char \fBTimerThree::clockSelectBits\fP"
+.PP
+Definition at line 25 of file TimerThree\&.h\&.
+.SS "void(* \fBTimerThree::isrCallback\fP)()"
+.PP
+Definition at line 38 of file TimerThree\&.h\&.
+.SS "unsigned int \fBTimerThree::pwmPeriod\fP"
+.PP
+Definition at line 24 of file TimerThree\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

@@ -1,0 +1,2233 @@
+\hypertarget{masstorage_8h}{\section{\-Included \-Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.0-\/master/masstorage.h \-File \-Reference}
+\label{masstorage_8h}\index{\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/masstorage.\-h@{\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/masstorage.\-h}}
+}
+{\ttfamily \#include \char`\"{}\-Usb.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_capacity}{\-Capacity}
+\item 
+struct \hyperlink{struct_b_a_s_i_c_c_d_b}{\-B\-A\-S\-I\-C\-C\-D\-B}
+\item 
+struct \hyperlink{struct_c_d_b6}{\-C\-D\-B6}
+\item 
+struct \hyperlink{struct_c_d_b10}{\-C\-D\-B10}
+\item 
+struct \hyperlink{struct_c_d_b12}{\-C\-D\-B12}
+\item 
+struct \hyperlink{struct_c_d_b___l_b_a32__16}{\-C\-D\-B\-\_\-\-L\-B\-A32\-\_\-16}
+\item 
+struct \hyperlink{struct_c_d_b___l_b_a64__16}{\-C\-D\-B\-\_\-\-L\-B\-A64\-\_\-16}
+\item 
+struct \hyperlink{struct_inquiry_response}{\-Inquiry\-Response}
+\item 
+struct \hyperlink{struct_command_block_wrapper_base}{\-Command\-Block\-Wrapper\-Base}
+\item 
+struct \hyperlink{struct_command_block_wrapper}{\-Command\-Block\-Wrapper}
+\item 
+struct \hyperlink{struct_command_status_wrapper}{\-Command\-Status\-Wrapper}
+\item 
+struct \hyperlink{struct_request_sense_responce}{\-Request\-Sense\-Responce}
+\item 
+class \hyperlink{class_bulk_only}{\-Bulk\-Only}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{masstorage_8h_a86a509a216410b0e356f0fa91c48cdc0}{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-H\-O\-S\-T\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E
+\item 
+\#define \hyperlink{masstorage_8h_affadc780007914e4b4de088b4df8ddf6}{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-T\-O\-\_\-\-H\-O\-S\-T$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E
+\item 
+\#define \hyperlink{masstorage_8h_a9564704f249ab75db55a303f331fbedc}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D}~0x00
+\item 
+\#define \hyperlink{masstorage_8h_a0abf867686c58deb8a409bf82941e125}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C}~0x01
+\item 
+\#define \hyperlink{masstorage_8h_a370a8e5d533df93f23e122dea2468ecb}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I}~0x02
+\item 
+\#define \hyperlink{masstorage_8h_a5b4847f36fec399d12580113ab50e293}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1}~0x03
+\item 
+\#define \hyperlink{masstorage_8h_acbb017bda59fefb8bd39f9ea6f11b8ac}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I}~0x04
+\item 
+\#define \hyperlink{masstorage_8h_a54a77ed01b69a7b2d8acbf70ba3ff018}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2}~0x05
+\item 
+\#define \hyperlink{masstorage_8h_aaf635eb9151eb63855fe227584bb00eb}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I}~0x06
+\item 
+\#define \hyperlink{masstorage_8h_a9dba9091cf98b47104ccb400482a46ab}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S}~0x07
+\item 
+\#define \hyperlink{masstorage_8h_aeac7060fd6a1fba50872ffb0c9dcba32}{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667}~0x08
+\item 
+\#define \hyperlink{masstorage_8h_a64c21e402034e68542f25358c7978a67}{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I}~0x00
+\item 
+\#define \hyperlink{masstorage_8h_a5930934a4ce762f4cb9666d8f95ddee9}{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T}~0x01
+\item 
+\#define \hyperlink{masstorage_8h_a3a6df686184b5c83eeee1f3a23f3e187}{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E}~0x02
+\item 
+\#define \hyperlink{masstorage_8h_a17a026f7d64e8daf27b45c295755fdf0}{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B}~0x50
+\item 
+\#define \hyperlink{masstorage_8h_a32a5145018b9953b26a0c47a3e55f1ea}{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S}~0x62
+\item 
+\#define \hyperlink{masstorage_8h_a667c00401398c62b8e7edf729d944d78}{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C}~0x00
+\item 
+\#define \hyperlink{masstorage_8h_a42e56089ee1706ec829f8cebb224b1dc}{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T}~0x\-F\-C
+\item 
+\#define \hyperlink{masstorage_8h_afe9a90b1dd89a2b1c12eb9b844d6120d}{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T}~0x\-F\-D
+\item 
+\#define \hyperlink{masstorage_8h_a3fc37932ad8bcc25c185fb1efbc099b8}{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N}~0x\-F\-E
+\item 
+\#define \hyperlink{masstorage_8h_a172c269d960fa57ce6dfeaacc6f6197f}{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R}~0x\-F\-F
+\item 
+\#define \hyperlink{masstorage_8h_a439c9558fff25c40219c0f20244e666d}{\-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}~0x43425355
+\item 
+\#define \hyperlink{masstorage_8h_af92587f54f4d56af3dd2fb3a474c0b33}{\-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}~0x53425355
+\item 
+\#define \hyperlink{masstorage_8h_ad74d783991b5eea6ad8ef2feb2ce03ea}{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T}~0
+\item 
+\#define \hyperlink{masstorage_8h_a012ee34e4ce8d644c2f75099867b26c0}{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N}~0x80
+\item 
+\#define \hyperlink{masstorage_8h_aa84c8ac327fad55b9d0e40fea9eda699}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y}~0x00
+\item 
+\#define \hyperlink{masstorage_8h_ad0ffafc58d70417e80425b2ee80c1769}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E}~0x03
+\item 
+\#define \hyperlink{masstorage_8h_ac436d150389d8a97693e63041f440d82}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T}~0x04
+\item 
+\#define \hyperlink{masstorage_8h_af3f8eee2dcef5f8a49602fbedad6c7cd}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6}~0x08
+\item 
+\#define \hyperlink{masstorage_8h_aea0f916f6039e8c8a3d614a3f9f70072}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6}~0x0\-A
+\item 
+\#define \hyperlink{masstorage_8h_ac1f82346efef75cf197abb8e29cc5f44}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y}~0x12
+\item 
+\#define \hyperlink{masstorage_8h_a3e22395bf2c8cd17fe9b54ff1adeeaaa}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6}~0x15
+\item 
+\#define \hyperlink{masstorage_8h_ab6164a7d5f81211ce8d98b6a731b4f69}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6}~0x1\-A
+\item 
+\#define \hyperlink{masstorage_8h_a17b47e6ce4b10688ac30666c16b14d86}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T}~0x1\-B
+\item 
+\#define \hyperlink{masstorage_8h_ac6435ab2e468a79816db996b0a16c024}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L}~0x1\-E
+\item 
+\#define \hyperlink{masstorage_8h_a0cf196180f614d0a3c956a6ad4623fba}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S}~0x23
+\item 
+\#define \hyperlink{masstorage_8h_a1f08c7a277432486b2f875035df6790b}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10}~0x25
+\item 
+\#define \hyperlink{masstorage_8h_ad3900f141fb70afb8def054384805a2e}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10}~0x28
+\item 
+\#define \hyperlink{masstorage_8h_ad1733ce8730cdaab39b9b868b73128a0}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10}~0x2\-A
+\item 
+\#define \hyperlink{masstorage_8h_a8cf967a95a100190e34e1d36ac8af8ac}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10}~0x2\-B
+\item 
+\#define \hyperlink{masstorage_8h_a4d0fa61cb5f052f57cb6ae0c7130ffed}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10}~0x2\-C
+\item 
+\#define \hyperlink{masstorage_8h_a6eda361c8742e151c31ba536cf20119e}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}~0x2\-E
+\item 
+\#define \hyperlink{masstorage_8h_a8d3ebefbce899ff775e8fab101f59080}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}~0x2\-F
+\item 
+\#define \hyperlink{masstorage_8h_a827c601eec66a6ebc6236839a9041c53}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E}~0x35
+\item 
+\#define \hyperlink{masstorage_8h_a508d064f36c9d623b785c30c97f9b951}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R}~0x3\-B
+\item 
+\#define \hyperlink{masstorage_8h_a1ff23f30c34cfb2888cd2df1d40e1b9d}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R}~0x3\-C
+\item 
+\#define \hyperlink{masstorage_8h_adf4eedc9f90ef434238a4a8e8afdca73}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L}~0x42
+\item 
+\#define \hyperlink{masstorage_8h_a0ebdd01a67e4369aea92f24a721a809f}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C}~0x43
+\item 
+\#define \hyperlink{masstorage_8h_a353644f9db92ca364cece3d0ade758a5}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R}~0x44
+\item 
+\#define \hyperlink{masstorage_8h_a95d32a2c09bbf0c4dfd4af1b7e46cdc5}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10}~0x45
+\item 
+\#define \hyperlink{masstorage_8h_afb11c6718111a43ef7c428fd74094884}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}~0x46
+\item 
+\#define \hyperlink{masstorage_8h_ad569cac66033c4ee22588556e10401ec}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F}~0x47
+\item 
+\#define \hyperlink{masstorage_8h_a86981910a450d8fbeef52d0624cd895b}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I}~0x48
+\item 
+\#define \hyperlink{masstorage_8h_a619fe714336e8ff0ffe1a29b5d07dc2a}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10}~0x49
+\item 
+\#define \hyperlink{masstorage_8h_a4ecef213f959406552b3cec16e45ad4a}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S}~0x4\-A
+\item 
+\#define \hyperlink{masstorage_8h_a6f0410bab960fd45711a5bb54f42163e}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E}~0x4\-B
+\item 
+\#define \hyperlink{masstorage_8h_a919892a5c1907067abc52cc318d8243c}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}~0x51
+\item 
+\#define \hyperlink{masstorage_8h_a84e65c5e60bd12522e64e5065e747e74}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}~0x52
+\item 
+\#define \hyperlink{masstorage_8h_a14d6804a7f68e14cbac6acf04d5d2979}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K}~0x53
+\item 
+\#define \hyperlink{masstorage_8h_a2e84c1764b0763610a1485a0ac7277ac}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}~0x54
+\item 
+\#define \hyperlink{masstorage_8h_a4e76274cd7e386da0ef9ea72f0243bdb}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10}~0x55
+\item 
+\#define \hyperlink{masstorage_8h_af66870e8e5d9bfcac89b86007033c959}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K}~0x58
+\item 
+\#define \hyperlink{masstorage_8h_a95f71a5e11726543881ca39a47563daa}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10}~0x5\-A
+\item 
+\#define \hyperlink{masstorage_8h_aace342bd260644b20dc095779b606ab0}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N}~0x5\-B
+\item 
+\#define \hyperlink{masstorage_8h_ac1133fe2a2516328335f6dfd7c78422a}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y}~0x5\-C
+\item 
+\#define \hyperlink{masstorage_8h_a1d7eebb93a9054a0cab613247d398552}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T}~0x5\-D
+\item 
+\#define \hyperlink{masstorage_8h_a8ef3d9a42b0b1d5b0218720236e148c4}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S}~0x\-A0
+\item 
+\#define \hyperlink{masstorage_8h_a753c8d9d8c57e824a134f26158bb18ee}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K}~0x\-A1
+\item 
+\#define \hyperlink{masstorage_8h_a4aae30f44cbe99052cb945666b4247f9}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N}~0x\-A2
+\item 
+\#define \hyperlink{masstorage_8h_ad72fd236fa7f7e53c4aae0067883e5f2}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y}~0x\-A3
+\item 
+\#define \hyperlink{masstorage_8h_aed5b1fe70478a123edf6d01af9e14138}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y}~0x\-A4
+\item 
+\#define \hyperlink{masstorage_8h_ab1423093448ed003ce7dde48546b1fb0}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12}~0x\-A5
+\item 
+\#define \hyperlink{masstorage_8h_a30aa97d80e09dc7655f6057ef8a76bf8}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D}~0x\-A6
+\item 
+\#define \hyperlink{masstorage_8h_a2b95e6df1bf9b03b22d3eb7a9a4a1a8f}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D}~0x\-A7
+\item 
+\#define \hyperlink{masstorage_8h_ae424e09f43b58d823bdf7ab537425ae1}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12}~0x\-A8
+\item 
+\#define \hyperlink{masstorage_8h_aed4e79ab4e47d23b6e49561be3392434}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12}~0x\-A9
+\item 
+\#define \hyperlink{masstorage_8h_abb489ac989eb7453a5ac000f78c7f7b0}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12}~0x\-A\-A
+\item 
+\#define \hyperlink{masstorage_8h_a475c01dc106b8de86d42d806b585c7eb}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12}~0x\-A\-B
+\item 
+\#define \hyperlink{masstorage_8h_a95bfc5bbb9bc239124420a080ad3aff0}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E}~0x\-A\-C
+\item 
+\#define \hyperlink{masstorage_8h_aaadf1967210007cbc969fd13fd910425}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}~0x\-A\-D
+\item 
+\#define \hyperlink{masstorage_8h_acffe854ef54bbaec223a0dbc968e12e5}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T}~0x\-B5
+\item 
+\#define \hyperlink{masstorage_8h_aa615cd1a9113b55ea3def7ce1e39fdc0}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G}~0x\-B6
+\item 
+\#define \hyperlink{masstorage_8h_ac022877c7248b787fe5c074c5a579282}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F}~0x\-B9
+\item 
+\#define \hyperlink{masstorage_8h_a78d22b4df645b4100d61760024cf5217}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D}~0x\-B\-B
+\item 
+\#define \hyperlink{masstorage_8h_af425268596a7979929bf85112adcbadb}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S}~0x\-B\-D
+\item 
+\#define \hyperlink{masstorage_8h_ae5e0a6ea45e5aa4efd866325ecc8a519}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D}~0x\-B\-E
+\item 
+\#define \hyperlink{masstorage_8h_a76da46661cf03125908a6d32f3c6672d}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}~0x\-B\-F
+\item 
+\#define \hyperlink{masstorage_8h_a341436a3b87d4ccd8c1ba00a52319494}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S}~0x\-C4 /$\ast$ S\-O\-N\-Y unique $\ast$/
+\item 
+\#define \hyperlink{masstorage_8h_aae41f85d64995d1522571998642b7674}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}~0x\-C9 /$\ast$ S\-O\-N\-Y unique $\ast$/
+\item 
+\#define \hyperlink{masstorage_8h_a3cf8a0b8b509552305d90cdb009041a6}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A}~0x\-D8 /$\ast$ Vendor unique $\ast$/
+\item 
+\#define \hyperlink{masstorage_8h_acff26776fc541ceb3d739f303255ff3e}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A}~0x\-D\-B /$\ast$ Vendor unique $\ast$/
+\item 
+\#define \hyperlink{masstorage_8h_aacde7972a7bd398cf43dc65878b1aa92}{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S}~0x\-D\-F /$\ast$ Vendor unique $\ast$/
+\item 
+\#define \hyperlink{masstorage_8h_a613422ba27c89fe5d72d06d216c9f2a5}{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}~0x02
+\item 
+\#define \hyperlink{masstorage_8h_a2f2fcd62d5fea0322095b2c4c9d2dd91}{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R}~0x03
+\item 
+\#define \hyperlink{masstorage_8h_a3f36c4b24d404a7bde02e6bf3f87a0cd}{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T}~0x05
+\item 
+\#define \hyperlink{masstorage_8h_ae7ab5840b35001bba68d7adae4abcd11}{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N}~0x06
+\item 
+\#define \hyperlink{masstorage_8h_ac6d64023e2b8137eed90917f362ab262}{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E}~0x21
+\item 
+\#define \hyperlink{masstorage_8h_a9fd5f74b6bac6c95990f5f211c04894b}{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}~0x28
+\item 
+\#define \hyperlink{masstorage_8h_ac0c79fb555815317d46e9af6192d959d}{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T}~0x3\-A
+\item 
+\#define \hyperlink{masstorage_8h_a450c2a67aa2b6a1f6593113dcb847569}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0x00
+\item 
+\#define \hyperlink{masstorage_8h_afe7b492eca9349e54443c5c08f77b238}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R}~0x02
+\item 
+\#define \hyperlink{masstorage_8h_a128e4910df8d7770c6f9af7700b9ccb1}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}~0x03
+\item 
+\#define \hyperlink{masstorage_8h_ab8e02094ea448728c4229e348c90cc54}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y}~0x04
+\item 
+\#define \hyperlink{masstorage_8h_a13aee9eab965d570a4a00463cd20ca29}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L}~0x05
+\item 
+\#define \hyperlink{masstorage_8h_ac3364cf841936aa8c3107e14c06ff65f}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D}~0x06
+\item 
+\#define \hyperlink{masstorage_8h_a8521fd3c4b7901296d3edae0632c162d}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W}~0x07
+\item 
+\#define \hyperlink{masstorage_8h_aec47def0928045fdca474d78db866c39}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A}~0x08
+\item 
+\#define \hyperlink{masstorage_8h_a57edffb4395696374818f80202aedca4}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A}~0x09
+\item 
+\#define \hyperlink{masstorage_8h_a6ddc06e45101114eb7842a7ee57f7d43}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}~0x0\-A
+\item 
+\#define \hyperlink{masstorage_8h_a75359f810ebeccd313e4ad9c3a88f231}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}~0x11
+\item 
+\#define \hyperlink{masstorage_8h_a33f8a926c98ea3a3b7aea4006069a251}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R}~0x12
+\item 
+\#define \hyperlink{masstorage_8h_a5341c969f1daf8a9e8d345c0ba36fa54}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N}~0x13
+\item 
+\#define \hyperlink{masstorage_8h_a1b4efb4cfc2b0d4a912abe587a145b84}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L}~0x14
+\item 
+\#define \hyperlink{masstorage_8h_a4da4bdba7c86bcd6d0a97883de976b74}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S}~0x15
+\item 
+\#define \hyperlink{masstorage_8h_a607fa695e441ced8955a48455cd7259d}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S}~0x16
+\item 
+\#define \hyperlink{masstorage_8h_ac8c588cb96077b615de2bd53f77d4c15}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}~0x17
+\item 
+\#define \hyperlink{masstorage_8h_a4c80ae6c61331a0dd2a1950a25829a85}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D}~0x\-F\-D
+\item 
+\#define \hyperlink{masstorage_8h_a2815b1980ee4f05d2712a6492b5272b3}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R}~0x\-F\-E
+\item 
+\#define \hyperlink{masstorage_8h_a6c2dcf2fe5e2bead7ce82793de900eaf}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R}~0x\-F\-F
+\item 
+\#define \hyperlink{masstorage_8h_ac6e389db899b3083f85ad02f5b4f9711}{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R}~0x\-A0
+\item 
+\#define \hyperlink{masstorage_8h_a597e2a0f4ee36172c260976af9805415}{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K}~0x01
+\item 
+\#define \hyperlink{masstorage_8h_aa230fd8de3da0bcfbd1627e9177de452}{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K}~0x02
+\item 
+\#define \hyperlink{masstorage_8h_a473b3774eb9f7df7f20f676f55deb47e}{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K}~0x04
+\item 
+\#define \hyperlink{masstorage_8h_ab4baa1ea500923e1fc59e5991f05fe99}{\-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}~3
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct_b_a_s_i_c_c_d_b}{\-B\-A\-S\-I\-C\-C\-D\-B} \hyperlink{masstorage_8h_aa0e2e213a2f05df124f199eeac3dbdd8}{\-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t}
+\item 
+typedef \hyperlink{struct_c_d_b6}{\-C\-D\-B6} \hyperlink{masstorage_8h_a56ab0baf4e98a591274bf8d1acf96d85}{\-C\-D\-B6\-\_\-t}
+\item 
+typedef \hyperlink{struct_c_d_b10}{\-C\-D\-B10} \hyperlink{masstorage_8h_af952fd9270407996656ba95772511002}{\-C\-D\-B10\-\_\-t}
+\item 
+typedef \hyperlink{struct_c_d_b12}{\-C\-D\-B12} \hyperlink{masstorage_8h_aef69aa16d6edcea3e79cb44775be6b94}{\-C\-D\-B12\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_capacity}{\-Capacity} \hyperlink{masstorage_8h_a1592e777b31a321b7c51e7a49f010d9b}{\-\_\-\-\_\-attribute\-\_\-\-\_\-} ((packed))
+\item 
+\hyperlink{masstorage_8h_a21ead088c70b34440ce8bf4adfafce9c}{\-C\-D\-B6} (uint8\-\_\-t \-\_\-\-Opcode, uint8\-\_\-t \-\_\-\-L\-U\-N, uint32\-\_\-t \-L\-B\-A, uint8\-\_\-t \-\_\-\-Allocation\-Length, uint8\-\_\-t \-\_\-\-Control)
+\item 
+\hyperlink{masstorage_8h_a7e73a3226d48ded537f47cd27eb18a6f}{\-C\-D\-B6} (uint8\-\_\-t \-\_\-\-Opcode, uint8\-\_\-t \-\_\-\-L\-U\-N, uint8\-\_\-t \-\_\-\-Allocation\-Length, uint8\-\_\-t \-\_\-\-Control)
+\item 
+\hyperlink{masstorage_8h_ab81528e21d88e012bc2399c76a860baf}{\-C\-D\-B10} (uint8\-\_\-t \-\_\-\-Opcode, uint8\-\_\-t \-\_\-\-L\-U\-N)
+\item 
+\hyperlink{masstorage_8h_a0fe6273376e5ce64106750559b0c9242}{\-C\-D\-B10} (uint8\-\_\-t \-\_\-\-Opcode, uint8\-\_\-t \-\_\-\-L\-U\-N, uint16\-\_\-t xflen, uint32\-\_\-t \-\_\-\-L\-B\-A)
+\item 
+\hyperlink{masstorage_8h_aa264822104bbdb6fbad650b4f9b8218a}{\-Command\-Block\-Wrapper\-Base} ()
+\item 
+\hyperlink{masstorage_8h_a748c6ac32965264a2ec689bcf0137cdd}{\-Command\-Block\-Wrapper\-Base} (uint32\-\_\-t tag, uint32\-\_\-t xflen, uint8\-\_\-t flgs)
+\item 
+\hyperlink{masstorage_8h_a16bd83701afd2cf52d741ab0b6a7e479}{\-Command\-Block\-Wrapper} ()
+\item 
+\hyperlink{masstorage_8h_a3e531c8033e5833858a7b14c8fc0333f}{\-Command\-Block\-Wrapper} (uint32\-\_\-t tag, uint32\-\_\-t xflen, uint8\-\_\-t flgs, uint8\-\_\-t lu, uint8\-\_\-t cmdlen, uint8\-\_\-t cmd)
+\item 
+\hyperlink{masstorage_8h_af5fd16a72e21dd33988d224d5d4c8a52}{\-Command\-Block\-Wrapper} (uint32\-\_\-t tag, uint32\-\_\-t xflen, \hyperlink{masstorage_8h_a56ab0baf4e98a591274bf8d1acf96d85}{\-C\-D\-B6\-\_\-t} $\ast$cdb, uint8\-\_\-t dir)
+\item 
+\hyperlink{masstorage_8h_a6be66ad718eae87431ba2bf41a36cdc1}{\-Command\-Block\-Wrapper} (uint32\-\_\-t tag, uint32\-\_\-t xflen, \hyperlink{masstorage_8h_af952fd9270407996656ba95772511002}{\-C\-D\-B10\-\_\-t} $\ast$cdb, uint8\-\_\-t dir)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data} \mbox{[}8\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_aae73b2e7584b87acb54fd7cb3d0253e7}{\-Opcode}
+\item 
+unsigned \hyperlink{masstorage_8h_a3a1285aa3d4106cecde1c176f8865f50}{unused}
+\item 
+unsigned \hyperlink{masstorage_8h_a9ede1b7f8b8e88fc8323d9d0cde12cea}{\-L\-U\-N}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a85366fe2ca206c0ef75c9f4fc775ebd8}{info} \mbox{[}12\mbox{]}
+\item 
+unsigned \hyperlink{masstorage_8h_a4e65295b6d615cbeee126c33010a0bd1}{\-L\-B\-A\-M\-S\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a2d251919405af7270d23752b0d56e6e7}{\-L\-B\-A\-H\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a177d0ceb550c157a829a8426097975ff}{\-L\-B\-A\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ac0779d1acf9a7d8e8d67c0dec4d60c17}{\-Allocation\-Length}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a0b2b0e323d0266572561824cdaa0fc45}{\-Control}
+\item 
+unsigned \hyperlink{masstorage_8h_a50a2c92c4dacb9f13db919e67fe975fa}{\-Service\-\_\-\-Action}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a802f8a2352f6b8f3e55411224f23438d}{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ad0f532137e24739e40e169ca30e7ace9}{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a894713dc6bc9de2ed7f4766e4e6f236d}{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a97e3397543e63b18f3c23e25fa22c1d5}{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a29217ca6bc0940d57ba2b5b185a80e22}{\-Misc2}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a8f6423997f320a143a865f752bca7dfd}{\-A\-L\-C\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a1f5b82f6f192708d33a8731b2faad9dc}{\-A\-L\-C\-\_\-\-L\-B}
+\item 
+unsigned \hyperlink{masstorage_8h_aecd8fb147462950f22ffae4eee69f7db}{\-Misc}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a53b73d8f8e4666a5954607c57853edd7}{\-A\-L\-C\-\_\-\-M\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a4dd6de611712ffb360c702061d8d5080}{\-A\-L\-C\-\_\-\-L\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_aa4d67ea09adcd6895a6d3ffca42e322d}{\-A\-L\-C\-\_\-\-L\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a3a1ecb7fb0d67e5a77b21186dafd0988}{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ac74078ee862cf21ebd658b5ec3fb6f41}{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ad09946f85b9c7c731185735fe731bcfb}{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ae13b67c42c915550295b0fbf372eafbc}{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ad329a81ac527bd22356961b788787389}{\-A\-L\-C\-\_\-\-M\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a68ca6361f11d73b4eead4642f93fa611}{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ab35f2258f6af6f52300f4e43bab77e87}{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a20195a62d686cb30ae40b1fc485dd494}{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a0312ba3b329b60c50af6392bdb3c4f05}{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a4e1cd5751661114587f4fd623ba998e6}{\-Device\-Type}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_aa74731ce00c7b19ddb90fc2348d87e3b}{\-Peripheral\-Qualifier}
+\item 
+unsigned \hyperlink{masstorage_8h_a0d430d8eaa55cef3712e2bd0ec15b006}{\-Reserved}
+\item 
+unsigned \hyperlink{masstorage_8h_a38bab4da595bd2cf269d05c2c2049984}{\-Removable}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a3bee6b95c6449755b9e7c167d1360dc5}{\-Version}
+\item 
+unsigned \hyperlink{masstorage_8h_a80f08a30b3fce214a59d2450f3476c97}{\-Response\-Data\-Format}
+\item 
+unsigned \hyperlink{masstorage_8h_a6c5a196fc6765353565735716fbc758e}{\-H\-I\-S\-U\-P}
+\item 
+unsigned \hyperlink{masstorage_8h_a2648e22b8437be83af34cdecc067dce8}{\-Norm\-A\-C\-A}
+\item 
+unsigned \hyperlink{masstorage_8h_a69dea8dd58b86fe80b01a48545608a1d}{\-Trm\-Tsk}
+\item 
+unsigned \hyperlink{masstorage_8h_a02635bc3ceab76715ff891abbe598bcc}{\-A\-E\-R\-C}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a5dbf9572d645742bd06236ea863bced8}{\-Additional\-Length}
+\item 
+unsigned \hyperlink{masstorage_8h_a12937b1125b69a0f086789cd866f62b6}{\-P\-R\-O\-T\-E\-C\-T}
+\item 
+unsigned \hyperlink{masstorage_8h_a61fc767e89549019ca99adbf939b7861}{\-Res}
+\item 
+unsigned \hyperlink{masstorage_8h_a0233c56b4842f6fcedb90eca2561d266}{\-Three\-P\-C}
+\item 
+unsigned \hyperlink{masstorage_8h_a1b1ebeaeacdb239a77820197fbdfff69}{\-T\-P\-G\-S}
+\item 
+unsigned \hyperlink{masstorage_8h_a173ddda31c5e6be6eb19a36729ca1bd7}{\-A\-C\-C}
+\item 
+unsigned \hyperlink{masstorage_8h_a2d698250083f18418a1b9bfdab0986be}{\-S\-C\-C\-S}
+\item 
+unsigned \hyperlink{masstorage_8h_ab8cd1d6a438c357422babb53d9d42945}{\-A\-D\-D\-R16}
+\item 
+unsigned \hyperlink{masstorage_8h_a7e60b2ca7f2f6943225add97ee69ed00}{\-R1}
+\item 
+unsigned \hyperlink{masstorage_8h_a7dae2a007c34ecf4796811a14e1c11e2}{\-R2}
+\item 
+unsigned \hyperlink{masstorage_8h_a17c5dd317f41443c0492ba115c4b3b4e}{\-M\-C\-H\-N\-G\-R}
+\item 
+unsigned \hyperlink{masstorage_8h_ad3bc9889e38ad020d23934165f3ad8cb}{\-M\-U\-L\-T\-I\-P}
+\item 
+unsigned \hyperlink{masstorage_8h_aa25518c3e9ec408cda72ba0348de230c}{\-V\-S}
+\item 
+unsigned \hyperlink{masstorage_8h_a0454969a3a83325bf2244a640492c897}{\-E\-N\-C\-S\-E\-R\-V}
+\item 
+unsigned \hyperlink{masstorage_8h_a1e9eb66f8124b63e7c9135c14b50939c}{\-B\-Q\-U\-E}
+\item 
+unsigned \hyperlink{masstorage_8h_a251bc7f70dc85dfaf9e8ff302c65ad5a}{\-Soft\-Reset}
+\item 
+unsigned \hyperlink{masstorage_8h_a3a5052a3b7eef8a46a61b10121e31f50}{\-Cmd\-Que}
+\item 
+unsigned \hyperlink{masstorage_8h_a4917f5463930dbe04f9be93991b03824}{\-Reserved4}
+\item 
+unsigned \hyperlink{masstorage_8h_a4a0f4a5c2179d73937150c9bf46ac7d8}{\-Linked}
+\item 
+unsigned \hyperlink{masstorage_8h_a6c6a93e636a8048d26a7b23adb6fde0f}{\-Sync}
+\item 
+unsigned \hyperlink{masstorage_8h_a13d4749e731a4d1695fd3f42cb70e266}{\-Wide\-Bus16\-Bit}
+\item 
+unsigned \hyperlink{masstorage_8h_a35371888eae12e18ffdf8013c2c2876c}{\-Wide\-Bus32\-Bit}
+\item 
+unsigned \hyperlink{masstorage_8h_aeb05aa58c792c081444fbabc78e1d7d8}{\-Rel\-Addr}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a0e2871fe4fddf323d475e80c6f3e0532}{\-Vendor\-I\-D} \mbox{[}8\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a891ccc75e93d0882157ec51229dbb212}{\-Product\-I\-D} \mbox{[}16\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_adfb28fe580a2dfe29b641eb7865f132d}{\-Revision\-I\-D} \mbox{[}4\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{masstorage_8h_a25dd7ce6b77786d6f489dddb6e792922}{d\-C\-B\-W\-Signature}
+\item 
+uint32\-\_\-t \hyperlink{masstorage_8h_a6490a217070a49d7b312b9ae89a7a13d}{d\-C\-B\-W\-Tag}
+\item 
+uint32\-\_\-t \hyperlink{masstorage_8h_ac2c0350283b9f39e01d9fcd06739d44b}{d\-C\-B\-W\-Data\-Transfer\-Length}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_adbcff2be14450de51d5d055a666050e9}{bm\-C\-B\-W\-Flags}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{masstorage_8h_a39841b5e0d1a574e30073fbd4f23000c}{bmCBWLUN}: 4\\
+\>uint8\_t \hyperlink{masstorage_8h_a5ca3a43729f20909bb189e7928be3ca2}{bmReserved1}: 4\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint8\_t \hyperlink{masstorage_8h_a3f608a611b9928fb5018703bd931c5d2}{bmCBWCBLength}: 4\\
+\>uint8\_t \hyperlink{masstorage_8h_a09d926de5a9cac16de0dc704c48f908e}{bmReserved2}: 4\\
+\}; \\
+
+\end{tabbing}\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ac7174140836bafcce11192c288d618e7}{\-C\-B\-W\-C\-B} \mbox{[}16\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{masstorage_8h_a00618cfef87f1f50506029b4b9ba5b26}{d\-C\-S\-W\-Signature}
+\item 
+uint32\-\_\-t \hyperlink{masstorage_8h_a6d632dc494a1ecab945e85f7cf2ebebe}{d\-C\-S\-W\-Tag}
+\item 
+uint32\-\_\-t \hyperlink{masstorage_8h_a0828bc16e03cb92f0fc0eed899ed2afd}{d\-C\-S\-W\-Data\-Residue}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a1375947e53883d17bd586b6037626268}{b\-C\-S\-W\-Status}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a9ad34963d2fa3a5be497560bc55bee44}{b\-Response\-Code}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a22bedeff46488189a5f88e98cec430e8}{b\-Segment\-Number}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a5932d6de03a3f9c75539da43aa28934d}{bm\-Sense\-Key}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a6a49cb6134ecc35cbb6a8258376fcc62}{bm\-Reserved}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a994ad75e34d6b5b477c0ebfaeb51aefd}{bm\-I\-L\-I}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ac68fef4742bfdcb5c59654628e2dce5a}{bm\-E\-O\-M}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a06d23e48902c1a988deaf327b68ab7d7}{bm\-File\-Mark}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a16ca141ca74dabf04aa26e3b7b12fb28}{\-Information} \mbox{[}4\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a369cb5cbcadb0bdd547800bf01059fb2}{b\-Additional\-Length}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a05aba9b794ae73e471ad10a4acdd92f9}{\-Cmd\-Specific\-Information} \mbox{[}4\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a4a67cd27b64af91a82d3beb9c64a6045}{b\-Additional\-Sense\-Code}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ad8cf8402094b9b9b7800e2d76d440a5a}{b\-Additional\-Sense\-Qualifier}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_ad9cd4740e458278f31db2cd1e8ddfdde}{b\-Field\-Replaceable\-Unit\-Code}
+\item 
+uint8\-\_\-t \hyperlink{masstorage_8h_a0eaca2cd55762c8df53f183558b529b6}{\-Sense\-Key\-Specific} \mbox{[}3\mbox{]}
+\item 
+\hyperlink{class_bulk_only}{\-Bulk\-Only} \hyperlink{masstorage_8h_afb11be68f67463995b57d93d0f8840f5}{\-\_\-\-\_\-attribute\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{masstorage_8h_affadc780007914e4b4de088b4df8ddf6}{\index{masstorage.\-h@{masstorage.\-h}!bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N@{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N}}
+\index{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N@{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-I\-N}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-T\-O\-\_\-\-H\-O\-S\-T$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}\label{masstorage_8h_affadc780007914e4b4de088b4df8ddf6}
+
+
+\-Definition at line 29 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a86a509a216410b0e356f0fa91c48cdc0}{\index{masstorage.\-h@{masstorage.\-h}!bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T@{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T}}
+\index{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T@{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf bm\-R\-E\-Q\-\_\-\-M\-A\-S\-S\-O\-U\-T}~\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-H\-O\-S\-T\-\_\-\-T\-O\-\_\-\-D\-E\-V\-I\-C\-E$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-A\-S\-S$|$\-U\-S\-B\-\_\-\-S\-E\-T\-U\-P\-\_\-\-R\-E\-C\-I\-P\-I\-E\-N\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}\label{masstorage_8h_a86a509a216410b0e356f0fa91c48cdc0}
+
+
+\-Definition at line 28 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a439c9558fff25c40219c0f20244e666d}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E@{\-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}}
+\index{\-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E@{\-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-C\-B\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}~0x43425355}}\label{masstorage_8h_a439c9558fff25c40219c0f20244e666d}
+
+
+\-Definition at line 56 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a012ee34e4ce8d644c2f75099867b26c0}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N@{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N}}
+\index{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N@{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-I\-N}~0x80}}\label{masstorage_8h_a012ee34e4ce8d644c2f75099867b26c0}
+
+
+\-Definition at line 60 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad74d783991b5eea6ad8ef2feb2ce03ea}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T@{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T}}
+\index{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T@{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-C\-M\-D\-\_\-\-D\-I\-R\-\_\-\-O\-U\-T}~0}}\label{masstorage_8h_ad74d783991b5eea6ad8ef2feb2ce03ea}
+
+
+\-Definition at line 59 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_af92587f54f4d56af3dd2fb3a474c0b33}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E@{\-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}}
+\index{\-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E@{\-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-C\-S\-W\-\_\-\-S\-I\-G\-N\-A\-T\-U\-R\-E}~0x53425355}}\label{masstorage_8h_af92587f54f4d56af3dd2fb3a474c0b33}
+
+
+\-Definition at line 57 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a57edffb4395696374818f80202aedca4}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-B\-A\-D\-\_\-\-L\-B\-A}~0x09}}\label{masstorage_8h_a57edffb4395696374818f80202aedca4}
+
+
+\-Definition at line 159 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac3364cf841936aa8c3107e14c06ff65f}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-C\-M\-D\-\_\-\-N\-O\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-E\-D}~0x06}}\label{masstorage_8h_ac3364cf841936aa8c3107e14c06ff65f}
+
+
+\-Definition at line 156 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a75359f810ebeccd313e4ad9c3a88f231}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}~0x11}}\label{masstorage_8h_a75359f810ebeccd313e4ad9c3a88f231}
+
+
+\-Definition at line 161 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2815b1980ee4f05d2712a6492b5272b3}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-S\-C\-S\-I\-\_\-\-E\-R\-R\-O\-R}~0x\-F\-E}}\label{masstorage_8h_a2815b1980ee4f05d2712a6492b5272b3}
+
+
+\-Definition at line 169 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6c2dcf2fe5e2bead7ce82793de900eaf}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-G\-E\-N\-E\-R\-A\-L\-\_\-\-U\-S\-B\-\_\-\-E\-R\-R\-O\-R}~0x\-F\-F}}\label{masstorage_8h_a6c2dcf2fe5e2bead7ce82793de900eaf}
+
+
+\-Definition at line 170 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a8521fd3c4b7901296d3edae0632c162d}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-S\-W}~0x07}}\label{masstorage_8h_a8521fd3c4b7901296d3edae0632c162d}
+
+
+\-Definition at line 157 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a5341c969f1daf8a9e8d345c0ba36fa54}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-U\-N}~0x13}}\label{masstorage_8h_a5341c969f1daf8a9e8d345c0ba36fa54}
+
+
+\-Definition at line 163 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6ddc06e45101114eb7842a7ee57f7d43}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}~0x0\-A}}\label{masstorage_8h_a6ddc06e45101114eb7842a7ee57f7d43}
+
+
+\-Definition at line 160 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aec47def0928045fdca474d78db866c39}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-\_\-\-M\-E\-D\-I\-A}~0x08}}\label{masstorage_8h_aec47def0928045fdca474d78db866c39}
+
+
+\-Definition at line 158 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4c80ae6c61331a0dd2a1950a25829a85}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-N\-O\-T\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-E\-D}~0x\-F\-D}}\label{masstorage_8h_a4c80ae6c61331a0dd2a1950a25829a85}
+
+
+\-Definition at line 168 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_afe7b492eca9349e54443c5c08f77b238}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-P\-H\-A\-S\-E\-\_\-\-E\-R\-R\-O\-R}~0x02}}\label{masstorage_8h_afe7b492eca9349e54443c5c08f77b238}
+
+
+\-Definition at line 152 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4da4bdba7c86bcd6d0a97883de976b74}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-R\-E\-A\-D\-\_\-\-N\-A\-K\-S}~0x15}}\label{masstorage_8h_a4da4bdba7c86bcd6d0a97883de976b74}
+
+
+\-Definition at line 165 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a13aee9eab965d570a4a00463cd20ca29}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-T\-A\-L\-L}~0x05}}\label{masstorage_8h_a13aee9eab965d570a4a00463cd20ca29}
+
+
+\-Definition at line 155 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a450c2a67aa2b6a1f6593113dcb847569}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0x00}}\label{masstorage_8h_a450c2a67aa2b6a1f6593113dcb847569}
+
+
+\-Definition at line 151 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a33f8a926c98ea3a3b7aea4006069a251}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-A\-B\-L\-E\-\_\-\-T\-O\-\_\-\-R\-E\-C\-O\-V\-E\-R}~0x12}}\label{masstorage_8h_a33f8a926c98ea3a3b7aea4006069a251}
+
+
+\-Definition at line 162 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ab8e02094ea448728c4229e348c90cc54}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-B\-U\-S\-Y}~0x04}}\label{masstorage_8h_ab8e02094ea448728c4229e348c90cc54}
+
+
+\-Definition at line 154 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a128e4910df8d7770c6f9af7700b9ccb1}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-N\-I\-T\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}~0x03}}\label{masstorage_8h_a128e4910df8d7770c6f9af7700b9ccb1}
+
+
+\-Definition at line 153 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac6e389db899b3083f85ad02f5b4f9711}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-U\-S\-E\-R}~0x\-A0}}\label{masstorage_8h_ac6e389db899b3083f85ad02f5b4f9711}
+
+
+\-Definition at line 171 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a607fa695e441ced8955a48455cd7259d}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-N\-A\-K\-S}~0x16}}\label{masstorage_8h_a607fa695e441ced8955a48455cd7259d}
+
+
+\-Definition at line 166 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac8c588cb96077b615de2bd53f77d4c15}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}~0x17}}\label{masstorage_8h_ac8c588cb96077b615de2bd53f77d4c15}
+
+
+\-Definition at line 167 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1b4efb4cfc2b0d4a912abe587a145b84}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L}}
+\index{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L@{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-E\-R\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-S\-T\-A\-L\-L}~0x14}}\label{masstorage_8h_a1b4efb4cfc2b0d4a912abe587a145b84}
+
+
+\-Definition at line 164 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ab4baa1ea500923e1fc59e5991f05fe99}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S@{\-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}}
+\index{\-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S@{\-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}~3}}\label{masstorage_8h_ab4baa1ea500923e1fc59e5991f05fe99}
+
+
+\-Definition at line 177 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a17a026f7d64e8daf27b45c295755fdf0}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B}}
+\index{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-B\-B\-B}~0x50}}\label{masstorage_8h_a17a026f7d64e8daf27b45c295755fdf0}
+
+
+\-Definition at line 46 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a64c21e402034e68542f25358c7978a67}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I}}
+\index{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I}~0x00}}\label{masstorage_8h_a64c21e402034e68542f25358c7978a67}
+
+
+\-Definition at line 43 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a5930934a4ce762f4cb9666d8f95ddee9}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T}}
+\index{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-C\-B\-I\-\_\-\-N\-O\-\_\-\-I\-N\-T}~0x01}}\label{masstorage_8h_a5930934a4ce762f4cb9666d8f95ddee9}
+
+
+\-Definition at line 44 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3a6df686184b5c83eeee1f3a23f3e187}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E}}
+\index{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E}~0x02}}\label{masstorage_8h_a3a6df686184b5c83eeee1f3a23f3e187}
+
+
+\-Definition at line 45 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a32a5145018b9953b26a0c47a3e55f1ea}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S}}
+\index{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S@{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-A\-S}~0x62}}\label{masstorage_8h_a32a5145018b9953b26a0c47a3e55f1ea}
+
+
+\-Definition at line 47 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a667c00401398c62b8e7edf729d944d78}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C}}
+\index{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-A\-D\-S\-C}~0x00}}\label{masstorage_8h_a667c00401398c62b8e7edf729d944d78}
+
+
+\-Definition at line 50 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a172c269d960fa57ce6dfeaacc6f6197f}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R}}
+\index{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-B\-O\-M\-S\-R}~0x\-F\-F}}\label{masstorage_8h_a172c269d960fa57ce6dfeaacc6f6197f}
+
+
+\-Definition at line 54 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a42e56089ee1706ec829f8cebb224b1dc}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T}}
+\index{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T}~0x\-F\-C}}\label{masstorage_8h_a42e56089ee1706ec829f8cebb224b1dc}
+
+
+\-Definition at line 51 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3fc37932ad8bcc25c185fb1efbc099b8}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N}}
+\index{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-G\-E\-T\-\_\-\-M\-A\-X\-\_\-\-L\-U\-N}~0x\-F\-E}}\label{masstorage_8h_a3fc37932ad8bcc25c185fb1efbc099b8}
+
+
+\-Definition at line 53 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_afe9a90b1dd89a2b1c12eb9b844d6120d}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T}}
+\index{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T@{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-R\-E\-Q\-\_\-\-P\-U\-T}~0x\-F\-D}}\label{masstorage_8h_afe9a90b1dd89a2b1c12eb9b844d6120d}
+
+
+\-Definition at line 52 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a370a8e5d533df93f23e122dea2468ecb}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-A\-T\-A\-P\-I}~0x02}}\label{masstorage_8h_a370a8e5d533df93f23e122dea2468ecb}
+
+
+\-Definition at line 34 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aeac7060fd6a1fba50872ffb0c9dcba32}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-I\-E\-E\-E1667}~0x08}}\label{masstorage_8h_aeac7060fd6a1fba50872ffb0c9dcba32}
+
+
+\-Definition at line 40 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a9dba9091cf98b47104ccb400482a46ab}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-L\-S\-D\-F\-S}~0x07}}\label{masstorage_8h_a9dba9091cf98b47104ccb400482a46ab}
+
+
+\-Definition at line 39 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a5b4847f36fec399d12580113ab50e293}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E1}~0x03}}\label{masstorage_8h_a5b4847f36fec399d12580113ab50e293}
+
+
+\-Definition at line 35 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a54a77ed01b69a7b2d8acbf70ba3ff018}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-O\-B\-S\-O\-L\-E\-T\-E2}~0x05}}\label{masstorage_8h_a54a77ed01b69a7b2d8acbf70ba3ff018}
+
+
+\-Definition at line 37 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0abf867686c58deb8a409bf82941e125}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-R\-B\-C}~0x01}}\label{masstorage_8h_a0abf867686c58deb8a409bf82941e125}
+
+
+\-Definition at line 33 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aaf635eb9151eb63855fe227584bb00eb}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I}~0x06}}\label{masstorage_8h_aaf635eb9151eb63855fe227584bb00eb}
+
+
+\-Definition at line 38 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a9564704f249ab75db55a303f331fbedc}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-S\-C\-S\-I\-\_\-\-N\-O\-T\-\_\-\-R\-E\-P\-O\-R\-T\-E\-D}~0x00}}\label{masstorage_8h_a9564704f249ab75db55a303f331fbedc}
+
+
+\-Definition at line 32 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_acbb017bda59fefb8bd39f9ea6f11b8ac}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I}}
+\index{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I@{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-S\-U\-B\-C\-L\-A\-S\-S\-\_\-\-U\-F\-I}~0x04}}\label{masstorage_8h_acbb017bda59fefb8bd39f9ea6f11b8ac}
+
+
+\-Definition at line 36 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a597e2a0f4ee36172c260976af9805415}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K@{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K}}
+\index{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K@{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K}~0x01}}\label{masstorage_8h_a597e2a0f4ee36172c260976af9805415}
+
+
+\-Definition at line 173 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a473b3774eb9f7df7f20f676f55deb47e}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K@{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K}}
+\index{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K@{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-P\-H\-A\-S\-E\-\_\-\-C\-H\-E\-C\-K}~0x04}}\label{masstorage_8h_a473b3774eb9f7df7f20f676f55deb47e}
+
+
+\-Definition at line 175 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa230fd8de3da0bcfbd1627e9177de452}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K@{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K}}
+\index{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K@{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-S\-S\-\_\-\-T\-R\-A\-N\-S\-\_\-\-F\-L\-G\-\_\-\-N\-O\-\_\-\-S\-T\-A\-L\-L\-\_\-\-C\-H\-E\-C\-K}~0x02}}\label{masstorage_8h_aa230fd8de3da0bcfbd1627e9177de452}
+
+
+\-Definition at line 174 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac6d64023e2b8137eed90917f362ab262}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E@{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E@{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-L\-B\-A\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E}~0x21}}\label{masstorage_8h_ac6d64023e2b8137eed90917f362ab262}
+
+
+\-Definition at line 146 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a9fd5f74b6bac6c95990f5f211c04894b}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D@{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}}
+\index{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D@{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-A\-\_\-\-C\-H\-A\-N\-G\-E\-D}~0x28}}\label{masstorage_8h_a9fd5f74b6bac6c95990f5f211c04894b}
+
+
+\-Definition at line 147 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac0c79fb555815317d46e9af6192d959d}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T@{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T}}
+\index{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T@{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-A\-S\-C\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T}~0x3\-A}}\label{masstorage_8h_ac0c79fb555815317d46e9af6192d959d}
+
+
+\-Definition at line 148 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a753c8d9d8c57e824a134f26158bb18ee}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-B\-L\-A\-N\-K}~0x\-A1}}\label{masstorage_8h_a753c8d9d8c57e824a134f26158bb18ee}
+
+
+\-Definition at line 114 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a341436a3b87d4ccd8c1ba00a52319494}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-S\-T\-A\-T\-U\-S}~0x\-C4 /$\ast$ S\-O\-N\-Y unique $\ast$/}}\label{masstorage_8h_a341436a3b87d4ccd8c1ba00a52319494}
+
+
+\-Definition at line 135 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aace342bd260644b20dc095779b606ab0}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-C\-L\-O\-S\-E\-\_\-\-T\-R\-A\-C\-K\-\_\-\-S\-E\-S\-S\-I\-O\-N}~0x5\-B}}\label{masstorage_8h_aace342bd260644b20dc095779b606ab0}
+
+
+\-Definition at line 109 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4d0fa61cb5f052f57cb6ae0c7130ffed}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-E\-R\-A\-S\-E\-\_\-10}~0x2\-C}}\label{masstorage_8h_a4d0fa61cb5f052f57cb6ae0c7130ffed}
+
+
+\-Definition at line 86 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac436d150389d8a97693e63041f440d82}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-I\-T}~0x04}}\label{masstorage_8h_ac436d150389d8a97693e63041f440d82}
+
+
+\-Definition at line 72 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_afb11c6718111a43ef7c428fd74094884}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}~0x46}}\label{masstorage_8h_afb11c6718111a43ef7c428fd74094884}
+
+
+\-Definition at line 96 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4ecef213f959406552b3cec16e45ad4a}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-T\-U\-S}~0x4\-A}}\label{masstorage_8h_a4ecef213f959406552b3cec16e45ad4a}
+
+
+\-Definition at line 100 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a95bfc5bbb9bc239124420a080ad3aff0}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-G\-E\-T\-\_\-\-P\-E\-R\-F\-O\-R\-M\-A\-N\-C\-E}~0x\-A\-C}}\label{masstorage_8h_a95bfc5bbb9bc239124420a080ad3aff0}
+
+
+\-Definition at line 125 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac1f82346efef75cf197abb8e29cc5f44}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-I\-N\-Q\-U\-I\-R\-Y}~0x12}}\label{masstorage_8h_ac1f82346efef75cf197abb8e29cc5f44}
+
+
+\-Definition at line 75 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a30aa97d80e09dc7655f6057ef8a76bf8}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-L\-O\-A\-D\-\_\-\-U\-N\-L\-O\-A\-D}~0x\-A6}}\label{masstorage_8h_a30aa97d80e09dc7655f6057ef8a76bf8}
+
+
+\-Definition at line 119 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_af425268596a7979929bf85112adcbadb}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-E\-C\-H\-A\-N\-I\-S\-M\-\_\-\-S\-T\-A\-T\-U\-S}~0x\-B\-D}}\label{masstorage_8h_af425268596a7979929bf85112adcbadb}
+
+
+\-Definition at line 131 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4e76274cd7e386da0ef9ea72f0243bdb}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-10}~0x55}}\label{masstorage_8h_a4e76274cd7e386da0ef9ea72f0243bdb}
+
+
+\-Definition at line 106 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3e22395bf2c8cd17fe9b54ff1adeeaaa}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-6}~0x15}}\label{masstorage_8h_a3e22395bf2c8cd17fe9b54ff1adeeaaa}
+
+
+\-Definition at line 76 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a95f71a5e11726543881ca39a47563daa}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-10}~0x5\-A}}\label{masstorage_8h_a95f71a5e11726543881ca39a47563daa}
+
+
+\-Definition at line 108 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ab6164a7d5f81211ce8d98b6a731b4f69}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-N\-S\-E\-\_\-6}~0x1\-A}}\label{masstorage_8h_ab6164a7d5f81211ce8d98b6a731b4f69}
+
+
+\-Definition at line 77 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6f0410bab960fd45711a5bb54f42163e}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-A\-U\-S\-E\-\_\-\-R\-E\-S\-U\-M\-E}~0x4\-B}}\label{masstorage_8h_a6f0410bab960fd45711a5bb54f42163e}
+
+
+\-Definition at line 101 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a95d32a2c09bbf0c4dfd4af1b7e46cdc5}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-10}~0x45}}\label{masstorage_8h_a95d32a2c09bbf0c4dfd4af1b7e46cdc5}
+
+
+\-Definition at line 95 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ab1423093448ed003ce7dde48546b1fb0}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-12}~0x\-A5}}\label{masstorage_8h_ab1423093448ed003ce7dde48546b1fb0}
+
+
+\-Definition at line 118 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad569cac66033c4ee22588556e10401ec}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-M\-S\-F}~0x47}}\label{masstorage_8h_ad569cac66033c4ee22588556e10401ec}
+
+
+\-Definition at line 97 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a86981910a450d8fbeef52d0624cd895b}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-A\-U\-D\-I\-O\-\_\-\-T\-I}~0x48}}\label{masstorage_8h_a86981910a450d8fbeef52d0624cd895b}
+
+
+\-Definition at line 98 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a619fe714336e8ff0ffe1a29b5d07dc2a}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-10}~0x49}}\label{masstorage_8h_a619fe714336e8ff0ffe1a29b5d07dc2a}
+
+
+\-Definition at line 99 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aed4e79ab4e47d23b6e49561be3392434}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-\_\-\-T\-R\-A\-C\-K\-\_\-\-R\-E\-L\-\_\-12}~0x\-A9}}\label{masstorage_8h_aed4e79ab4e47d23b6e49561be3392434}
+
+
+\-Definition at line 122 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aae41f85d64995d1522571998642b7674}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-L\-A\-Y\-B\-A\-C\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}~0x\-C9 /$\ast$ S\-O\-N\-Y unique $\ast$/}}\label{masstorage_8h_aae41f85d64995d1522571998642b7674}
+
+
+\-Definition at line 136 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac6435ab2e468a79816db996b0a16c024}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-P\-R\-E\-V\-E\-N\-T\-\_\-\-R\-E\-M\-O\-V\-A\-L}~0x1\-E}}\label{masstorage_8h_ac6435ab2e468a79816db996b0a16c024}
+
+
+\-Definition at line 79 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad3900f141fb70afb8def054384805a2e}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-10}~0x28}}\label{masstorage_8h_ad3900f141fb70afb8def054384805a2e}
+
+
+\-Definition at line 83 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ae424e09f43b58d823bdf7ab537425ae1}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-12}~0x\-A8}}\label{masstorage_8h_ae424e09f43b58d823bdf7ab537425ae1}
+
+
+\-Definition at line 121 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_af3f8eee2dcef5f8a49602fbedad6c7cd}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-6}~0x08}}\label{masstorage_8h_af3f8eee2dcef5f8a49602fbedad6c7cd}
+
+
+\-Definition at line 73 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aacde7972a7bd398cf43dc65878b1aa92}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-A\-L\-L\-\_\-\-S\-U\-B\-C\-O\-D\-E\-S}~0x\-D\-F /$\ast$ Vendor unique $\ast$/}}\label{masstorage_8h_aacde7972a7bd398cf43dc65878b1aa92}
+
+
+\-Definition at line 139 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1ff23f30c34cfb2888cd2df1d40e1b9d}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R}~0x3\-C}}\label{masstorage_8h_a1ff23f30c34cfb2888cd2df1d40e1b9d}
+
+
+\-Definition at line 91 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac1133fe2a2516328335f6dfd7c78422a}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y}~0x5\-C}}\label{masstorage_8h_ac1133fe2a2516328335f6dfd7c78422a}
+
+
+\-Definition at line 110 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1f08c7a277432486b2f875035df6790b}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-A\-P\-A\-C\-I\-T\-Y\-\_\-10}~0x25}}\label{masstorage_8h_a1f08c7a277432486b2f875035df6790b}
+
+
+\-Definition at line 82 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ae5e0a6ea45e5aa4efd866325ecc8a519}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D}~0x\-B\-E}}\label{masstorage_8h_ae5e0a6ea45e5aa4efd866325ecc8a519}
+
+
+\-Definition at line 132 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3cf8a0b8b509552305d90cdb009041a6}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-D\-A}~0x\-D8 /$\ast$ Vendor unique $\ast$/}}\label{masstorage_8h_a3cf8a0b8b509552305d90cdb009041a6}
+
+
+\-Definition at line 137 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_acff26776fc541ceb3d739f303255ff3e}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-C\-D\-X\-A}~0x\-D\-B /$\ast$ Vendor unique $\ast$/}}\label{masstorage_8h_acff26776fc541ceb3d739f303255ff3e}
+
+
+\-Definition at line 138 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a919892a5c1907067abc52cc318d8243c}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-I\-S\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}~0x51}}\label{masstorage_8h_a919892a5c1907067abc52cc318d8243c}
+
+
+\-Definition at line 102 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aaadf1967210007cbc969fd13fd910425}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-D\-V\-D\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}~0x\-A\-D}}\label{masstorage_8h_aaadf1967210007cbc969fd13fd910425}
+
+
+\-Definition at line 126 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0cf196180f614d0a3c956a6ad4623fba}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-C\-A\-P\-A\-C\-I\-T\-I\-E\-S}~0x23}}\label{masstorage_8h_a0cf196180f614d0a3c956a6ad4623fba}
+
+
+\-Definition at line 81 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a353644f9db92ca364cece3d0ade758a5}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-H\-E\-A\-D\-E\-R}~0x44}}\label{masstorage_8h_a353644f9db92ca364cece3d0ade758a5}
+
+
+\-Definition at line 94 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a475c01dc106b8de86d42d806b585c7eb}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-E\-D\-I\-A\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-12}~0x\-A\-B}}\label{masstorage_8h_a475c01dc106b8de86d42d806b585c7eb}
+
+
+\-Definition at line 124 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac022877c7248b787fe5c074c5a579282}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-M\-S\-F}~0x\-B9}}\label{masstorage_8h_ac022877c7248b787fe5c074c5a579282}
+
+
+\-Definition at line 129 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_adf4eedc9f90ef434238a4a8e8afdca73}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-S\-U\-B\-C\-H\-A\-N\-N\-E\-L}~0x42}}\label{masstorage_8h_adf4eedc9f90ef434238a4a8e8afdca73}
+
+
+\-Definition at line 92 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0ebdd01a67e4369aea92f24a721a809f}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-O\-C}~0x43}}\label{masstorage_8h_a0ebdd01a67e4369aea92f24a721a809f}
+
+
+\-Definition at line 93 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a84e65c5e60bd12522e64e5065e747e74}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-A\-D\-\_\-\-T\-R\-A\-C\-K\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}~0x52}}\label{masstorage_8h_a84e65c5e60bd12522e64e5065e747e74}
+
+
+\-Definition at line 103 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_af66870e8e5d9bfcac89b86007033c959}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-A\-I\-R\-\_\-\-T\-R\-A\-C\-K}~0x58}}\label{masstorage_8h_af66870e8e5d9bfcac89b86007033c959}
+
+
+\-Definition at line 107 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aed5b1fe70478a123edf6d01af9e14138}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-K\-E\-Y}~0x\-A4}}\label{masstorage_8h_aed5b1fe70478a123edf6d01af9e14138}
+
+
+\-Definition at line 117 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a8ef3d9a42b0b1d5b0218720236e148c4}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-O\-R\-T\-\_\-\-L\-U\-N\-S}~0x\-A0}}\label{masstorage_8h_a8ef3d9a42b0b1d5b0218720236e148c4}
+
+
+\-Definition at line 113 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad0ffafc58d70417e80425b2ee80c1769}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-S\-E\-N\-S\-E}~0x03}}\label{masstorage_8h_ad0ffafc58d70417e80425b2ee80c1769}
+
+
+\-Definition at line 71 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a14d6804a7f68e14cbac6acf04d5d2979}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-R\-E\-S\-E\-R\-V\-E\-\_\-\-T\-R\-A\-C\-K}~0x53}}\label{masstorage_8h_a14d6804a7f68e14cbac6acf04d5d2979}
+
+
+\-Definition at line 104 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4aae30f44cbe99052cb945666b4247f9}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-I\-N}~0x\-A2}}\label{masstorage_8h_a4aae30f44cbe99052cb945666b4247f9}
+
+
+\-Definition at line 115 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_acffe854ef54bbaec223a0dbc968e12e5}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-O\-U\-T}~0x\-B5}}\label{masstorage_8h_acffe854ef54bbaec223a0dbc968e12e5}
+
+
+\-Definition at line 127 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a8cf967a95a100190e34e1d36ac8af8ac}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-E\-K\-\_\-10}~0x2\-B}}\label{masstorage_8h_a8cf967a95a100190e34e1d36ac8af8ac}
+
+
+\-Definition at line 85 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1d7eebb93a9054a0cab613247d398552}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-C\-U\-E\-\_\-\-S\-H\-E\-E\-T}~0x5\-D}}\label{masstorage_8h_a1d7eebb93a9054a0cab613247d398552}
+
+
+\-Definition at line 111 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a76da46661cf03125908a6d32f3c6672d}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-D\-I\-S\-C\-\_\-\-S\-T\-R\-U\-C\-T\-U\-R\-E}~0x\-B\-F}}\label{masstorage_8h_a76da46661cf03125908a6d32f3c6672d}
+
+
+\-Definition at line 133 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad72fd236fa7f7e53c4aae0067883e5f2}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-K\-E\-Y}~0x\-A3}}\label{masstorage_8h_ad72fd236fa7f7e53c4aae0067883e5f2}
+
+
+\-Definition at line 116 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2e84c1764b0763610a1485a0ac7277ac}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-N\-D\-\_\-\-O\-P\-C\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N}~0x54}}\label{masstorage_8h_a2e84c1764b0763610a1485a0ac7277ac}
+
+
+\-Definition at line 105 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2b95e6df1bf9b03b22d3eb7a9a4a1a8f}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-A\-D\-\_\-\-A\-H\-E\-A\-D}~0x\-A7}}\label{masstorage_8h_a2b95e6df1bf9b03b22d3eb7a9a4a1a8f}
+
+
+\-Definition at line 120 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a78d22b4df645b4100d61760024cf5217}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-P\-E\-E\-D}~0x\-B\-B}}\label{masstorage_8h_a78d22b4df645b4100d61760024cf5217}
+
+
+\-Definition at line 130 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa615cd1a9113b55ea3def7ce1e39fdc0}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G}~0x\-B6}}\label{masstorage_8h_aa615cd1a9113b55ea3def7ce1e39fdc0}
+
+
+\-Definition at line 128 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a17b47e6ce4b10688ac30666c16b14d86}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-U\-N\-I\-T}~0x1\-B}}\label{masstorage_8h_a17b47e6ce4b10688ac30666c16b14d86}
+
+
+\-Definition at line 78 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a827c601eec66a6ebc6236839a9041c53}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-S\-Y\-N\-C\-H\-R\-O\-N\-I\-Z\-E\-\_\-\-C\-A\-C\-H\-E}~0x35}}\label{masstorage_8h_a827c601eec66a6ebc6236839a9041c53}
+
+
+\-Definition at line 89 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa84c8ac327fad55b9d0e40fea9eda699}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-T\-E\-S\-T\-\_\-\-U\-N\-I\-T\-\_\-\-R\-E\-A\-D\-Y}~0x00}}\label{masstorage_8h_aa84c8ac327fad55b9d0e40fea9eda699}
+
+
+\-Definition at line 70 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a8d3ebefbce899ff775e8fab101f59080}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}~0x2\-F}}\label{masstorage_8h_a8d3ebefbce899ff775e8fab101f59080}
+
+
+\-Definition at line 88 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad1733ce8730cdaab39b9b868b73128a0}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-10}~0x2\-A}}\label{masstorage_8h_ad1733ce8730cdaab39b9b868b73128a0}
+
+
+\-Definition at line 84 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_abb489ac989eb7453a5ac000f78c7f7b0}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-12}~0x\-A\-A}}\label{masstorage_8h_abb489ac989eb7453a5ac000f78c7f7b0}
+
+
+\-Definition at line 123 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aea0f916f6039e8c8a3d614a3f9f70072}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-6}~0x0\-A}}\label{masstorage_8h_aea0f916f6039e8c8a3d614a3f9f70072}
+
+
+\-Definition at line 74 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6eda361c8742e151c31ba536cf20119e}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-A\-N\-D\-\_\-\-V\-E\-R\-I\-F\-Y\-\_\-10}~0x2\-E}}\label{masstorage_8h_a6eda361c8742e151c31ba536cf20119e}
+
+
+\-Definition at line 87 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a508d064f36c9d623b785c30c97f9b951}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R@{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-C\-M\-D\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R}~0x3\-B}}\label{masstorage_8h_a508d064f36c9d623b785c30c97f9b951}
+
+
+\-Definition at line 90 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3f36c4b24d404a7bde02e6bf3f87a0cd}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T}}
+\index{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-S\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-R\-E\-Q\-U\-E\-S\-T}~0x05}}\label{masstorage_8h_a3f36c4b24d404a7bde02e6bf3f87a0cd}
+
+
+\-Definition at line 144 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2f2fcd62d5fea0322095b2c4c9d2dd91}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R}}
+\index{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-S\-\_\-\-M\-E\-D\-I\-U\-M\-\_\-\-E\-R\-R\-O\-R}~0x03}}\label{masstorage_8h_a2f2fcd62d5fea0322095b2c4c9d2dd91}
+
+
+\-Definition at line 143 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a613422ba27c89fe5d72d06d216c9f2a5}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}}
+\index{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-S\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}~0x02}}\label{masstorage_8h_a613422ba27c89fe5d72d06d216c9f2a5}
+
+
+\-Definition at line 142 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ae7ab5840b35001bba68d7adae4abcd11}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N}}
+\index{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N@{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-S\-I\-\_\-\-S\-\_\-\-U\-N\-I\-T\-\_\-\-A\-T\-T\-E\-N\-T\-I\-O\-N}~0x06}}\label{masstorage_8h_ae7ab5840b35001bba68d7adae4abcd11}
+
+
+\-Definition at line 145 of file masstorage.\-h.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{masstorage_8h_aa0e2e213a2f05df124f199eeac3dbdd8}{\index{masstorage.\-h@{masstorage.\-h}!\-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t@{\-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t}}
+\index{\-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t@{\-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-B\-A\-S\-I\-C\-C\-D\-B} {\bf \-B\-A\-S\-I\-C\-C\-D\-B\-\_\-t}}}\label{masstorage_8h_aa0e2e213a2f05df124f199eeac3dbdd8}
+
+
+\-Definition at line 194 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_af952fd9270407996656ba95772511002}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B10\-\_\-t@{\-C\-D\-B10\-\_\-t}}
+\index{\-C\-D\-B10\-\_\-t@{\-C\-D\-B10\-\_\-t}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B10\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-C\-D\-B10} {\bf \-C\-D\-B10\-\_\-t}}}\label{masstorage_8h_af952fd9270407996656ba95772511002}
+
+
+\-Definition at line 254 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aef69aa16d6edcea3e79cb44775be6b94}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B12\-\_\-t@{\-C\-D\-B12\-\_\-t}}
+\index{\-C\-D\-B12\-\_\-t@{\-C\-D\-B12\-\_\-t}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B12\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-C\-D\-B12} {\bf \-C\-D\-B12\-\_\-t}}}\label{masstorage_8h_aef69aa16d6edcea3e79cb44775be6b94}
+
+
+\-Definition at line 272 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a56ab0baf4e98a591274bf8d1acf96d85}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B6\-\_\-t@{\-C\-D\-B6\-\_\-t}}
+\index{\-C\-D\-B6\-\_\-t@{\-C\-D\-B6\-\_\-t}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B6\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-C\-D\-B6} {\bf \-C\-D\-B6\-\_\-t}}}\label{masstorage_8h_a56ab0baf4e98a591274bf8d1acf96d85}
+
+
+\-Definition at line 220 of file masstorage.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{masstorage_8h_a1592e777b31a321b7c51e7a49f010d9b}{\index{masstorage.\-h@{masstorage.\-h}!\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-\_\-\-\_\-attribute\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \-Capacity} {\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{(packed)}]{}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a1592e777b31a321b7c51e7a49f010d9b}
+\hypertarget{masstorage_8h_ab81528e21d88e012bc2399c76a860baf}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B10@{\-C\-D\-B10}}
+\index{\-C\-D\-B10@{\-C\-D\-B10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B10}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-C\-D\-B10} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-\-Opcode, }
+\item[{uint8\-\_\-t}]{\-\_\-\-L\-U\-N}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_ab81528e21d88e012bc2399c76a860baf}
+
+
+\-Definition at line 271 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0fe6273376e5ce64106750559b0c9242}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B10@{\-C\-D\-B10}}
+\index{\-C\-D\-B10@{\-C\-D\-B10}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B10}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-C\-D\-B10} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-\-Opcode, }
+\item[{uint8\-\_\-t}]{\-\_\-\-L\-U\-N, }
+\item[{uint16\-\_\-t}]{xflen, }
+\item[{uint32\-\_\-t}]{\-\_\-\-L\-B\-A}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a0fe6273376e5ce64106750559b0c9242}
+
+
+\-Definition at line 277 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a21ead088c70b34440ce8bf4adfafce9c}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B6@{\-C\-D\-B6}}
+\index{\-C\-D\-B6@{\-C\-D\-B6}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B6}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-C\-D\-B6} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-\-Opcode, }
+\item[{uint8\-\_\-t}]{\-\_\-\-L\-U\-N, }
+\item[{uint32\-\_\-t}]{\-L\-B\-A, }
+\item[{uint8\-\_\-t}]{\-\_\-\-Allocation\-Length, }
+\item[{uint8\-\_\-t}]{\-\_\-\-Control}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a21ead088c70b34440ce8bf4adfafce9c}
+
+
+\-Definition at line 231 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a7e73a3226d48ded537f47cd27eb18a6f}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-D\-B6@{\-C\-D\-B6}}
+\index{\-C\-D\-B6@{\-C\-D\-B6}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-D\-B6}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-C\-D\-B6} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{\-\_\-\-Opcode, }
+\item[{uint8\-\_\-t}]{\-\_\-\-L\-U\-N, }
+\item[{uint8\-\_\-t}]{\-\_\-\-Allocation\-Length, }
+\item[{uint8\-\_\-t}]{\-\_\-\-Control}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a7e73a3226d48ded537f47cd27eb18a6f}
+
+
+\-Definition at line 236 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a16bd83701afd2cf52d741ab0b6a7e479}{\index{masstorage.\-h@{masstorage.\-h}!\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}}
+\index{\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Command\-Block\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-Command\-Block\-Wrapper} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a16bd83701afd2cf52d741ab0b6a7e479}
+
+
+\-Definition at line 451 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3e531c8033e5833858a7b14c8fc0333f}{\index{masstorage.\-h@{masstorage.\-h}!\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}}
+\index{\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Command\-Block\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-Command\-Block\-Wrapper} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{tag, }
+\item[{uint32\-\_\-t}]{xflen, }
+\item[{uint8\-\_\-t}]{flgs, }
+\item[{uint8\-\_\-t}]{lu, }
+\item[{uint8\-\_\-t}]{cmdlen, }
+\item[{uint8\-\_\-t}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a3e531c8033e5833858a7b14c8fc0333f}
+
+
+\-Definition at line 458 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_af5fd16a72e21dd33988d224d5d4c8a52}{\index{masstorage.\-h@{masstorage.\-h}!\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}}
+\index{\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Command\-Block\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-Command\-Block\-Wrapper} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{tag, }
+\item[{uint32\-\_\-t}]{xflen, }
+\item[{{\bf \-C\-D\-B6\-\_\-t} $\ast$}]{cdb, }
+\item[{uint8\-\_\-t}]{dir}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_af5fd16a72e21dd33988d224d5d4c8a52}
+
+
+\-Definition at line 471 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6be66ad718eae87431ba2bf41a36cdc1}{\index{masstorage.\-h@{masstorage.\-h}!\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}}
+\index{\-Command\-Block\-Wrapper@{\-Command\-Block\-Wrapper}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Command\-Block\-Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-Command\-Block\-Wrapper} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{tag, }
+\item[{uint32\-\_\-t}]{xflen, }
+\item[{{\bf \-C\-D\-B10\-\_\-t} $\ast$}]{cdb, }
+\item[{uint8\-\_\-t}]{dir}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a6be66ad718eae87431ba2bf41a36cdc1}
+
+
+\-Definition at line 478 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa264822104bbdb6fbad650b4f9b8218a}{\index{masstorage.\-h@{masstorage.\-h}!\-Command\-Block\-Wrapper\-Base@{\-Command\-Block\-Wrapper\-Base}}
+\index{\-Command\-Block\-Wrapper\-Base@{\-Command\-Block\-Wrapper\-Base}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Command\-Block\-Wrapper\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-Command\-Block\-Wrapper\-Base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_aa264822104bbdb6fbad650b4f9b8218a}
+
+
+\-Definition at line 390 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a748c6ac32965264a2ec689bcf0137cdd}{\index{masstorage.\-h@{masstorage.\-h}!\-Command\-Block\-Wrapper\-Base@{\-Command\-Block\-Wrapper\-Base}}
+\index{\-Command\-Block\-Wrapper\-Base@{\-Command\-Block\-Wrapper\-Base}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Command\-Block\-Wrapper\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-\-::\-Command\-Block\-Wrapper\-Base} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{tag, }
+\item[{uint32\-\_\-t}]{xflen, }
+\item[{uint8\-\_\-t}]{flgs}
+\end{DoxyParamCaption}
+)}}\label{masstorage_8h_a748c6ac32965264a2ec689bcf0137cdd}
+
+
+\-Definition at line 393 of file masstorage.\-h.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{masstorage_8h_ae316a9ebc1fed998040de31e26170704}{\subsubsection[{"@17}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{masstorage_8h_ae316a9ebc1fed998040de31e26170704}
+\hypertarget{masstorage_8h_a00ef01705ca6bb2b17addcd77223654a}{\subsubsection[{"@19}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{masstorage_8h_a00ef01705ca6bb2b17addcd77223654a}
+\hypertarget{masstorage_8h_afb11be68f67463995b57d93d0f8840f5}{\index{masstorage.\-h@{masstorage.\-h}!\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-\_\-\-\_\-attribute\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-S\-B\-Hub} {\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-}}}\label{masstorage_8h_afb11be68f67463995b57d93d0f8840f5}
+\hypertarget{masstorage_8h_ae13b67c42c915550295b0fbf372eafbc}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B@{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}}
+\index{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B@{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}}}\label{masstorage_8h_ae13b67c42c915550295b0fbf372eafbc}
+
+
+\-Definition at line 311 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad09946f85b9c7c731185735fe731bcfb}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B@{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}}
+\index{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B@{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}}}\label{masstorage_8h_ad09946f85b9c7c731185735fe731bcfb}
+
+
+\-Definition at line 310 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac74078ee862cf21ebd658b5ec3fb6f41}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B@{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}}
+\index{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B@{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}}}\label{masstorage_8h_ac74078ee862cf21ebd658b5ec3fb6f41}
+
+
+\-Definition at line 309 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3a1ecb7fb0d67e5a77b21186dafd0988}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B@{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}}
+\index{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B@{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}}}\label{masstorage_8h_a3a1ecb7fb0d67e5a77b21186dafd0988}
+
+
+\-Definition at line 308 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a173ddda31c5e6be6eb19a36729ca1bd7}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-C\-C@{\-A\-C\-C}}
+\index{\-A\-C\-C@{\-A\-C\-C}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-A\-C\-C}}}\label{masstorage_8h_a173ddda31c5e6be6eb19a36729ca1bd7}
+
+
+\-Definition at line 390 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a5dbf9572d645742bd06236ea863bced8}{\index{masstorage.\-h@{masstorage.\-h}!\-Additional\-Length@{\-Additional\-Length}}
+\index{\-Additional\-Length@{\-Additional\-Length}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Additional\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Additional\-Length}}}\label{masstorage_8h_a5dbf9572d645742bd06236ea863bced8}
+
+
+\-Definition at line 383 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ab8cd1d6a438c357422babb53d9d42945}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-D\-D\-R16@{\-A\-D\-D\-R16}}
+\index{\-A\-D\-D\-R16@{\-A\-D\-D\-R16}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-D\-D\-R16}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-A\-D\-D\-R16}}}\label{masstorage_8h_ab8cd1d6a438c357422babb53d9d42945}
+
+
+\-Definition at line 393 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a02635bc3ceab76715ff891abbe598bcc}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-E\-R\-C@{\-A\-E\-R\-C}}
+\index{\-A\-E\-R\-C@{\-A\-E\-R\-C}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-E\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-A\-E\-R\-C}}}\label{masstorage_8h_a02635bc3ceab76715ff891abbe598bcc}
+
+
+\-Definition at line 381 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa4d67ea09adcd6895a6d3ffca42e322d}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-L\-C\-\_\-\-L\-\_\-\-L\-B@{\-A\-L\-C\-\_\-\-L\-\_\-\-L\-B}}
+\index{\-A\-L\-C\-\_\-\-L\-\_\-\-L\-B@{\-A\-L\-C\-\_\-\-L\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-L\-C\-\_\-\-L\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-L\-C\-\_\-\-L\-\_\-\-L\-B}}}\label{masstorage_8h_aa4d67ea09adcd6895a6d3ffca42e322d}
+
+
+\-Definition at line 282 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4dd6de611712ffb360c702061d8d5080}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-L\-C\-\_\-\-L\-\_\-\-M\-B@{\-A\-L\-C\-\_\-\-L\-\_\-\-M\-B}}
+\index{\-A\-L\-C\-\_\-\-L\-\_\-\-M\-B@{\-A\-L\-C\-\_\-\-L\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-L\-C\-\_\-\-L\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-L\-C\-\_\-\-L\-\_\-\-M\-B}}}\label{masstorage_8h_a4dd6de611712ffb360c702061d8d5080}
+
+
+\-Definition at line 281 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1f5b82f6f192708d33a8731b2faad9dc}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-L\-C\-\_\-\-L\-B@{\-A\-L\-C\-\_\-\-L\-B}}
+\index{\-A\-L\-C\-\_\-\-L\-B@{\-A\-L\-C\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-L\-C\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-L\-C\-\_\-\-L\-B}}}\label{masstorage_8h_a1f5b82f6f192708d33a8731b2faad9dc}
+
+
+\-Definition at line 266 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a53b73d8f8e4666a5954607c57853edd7}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-L\-C\-\_\-\-M\-\_\-\-L\-B@{\-A\-L\-C\-\_\-\-M\-\_\-\-L\-B}}
+\index{\-A\-L\-C\-\_\-\-M\-\_\-\-L\-B@{\-A\-L\-C\-\_\-\-M\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-L\-C\-\_\-\-M\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-L\-C\-\_\-\-M\-\_\-\-L\-B}}}\label{masstorage_8h_a53b73d8f8e4666a5954607c57853edd7}
+
+
+\-Definition at line 280 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad329a81ac527bd22356961b788787389}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-L\-C\-\_\-\-M\-\_\-\-M\-B@{\-A\-L\-C\-\_\-\-M\-\_\-\-M\-B}}
+\index{\-A\-L\-C\-\_\-\-M\-\_\-\-M\-B@{\-A\-L\-C\-\_\-\-M\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-L\-C\-\_\-\-M\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-L\-C\-\_\-\-M\-\_\-\-M\-B}}}\label{masstorage_8h_ad329a81ac527bd22356961b788787389}
+
+
+\-Definition at line 313 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a8f6423997f320a143a865f752bca7dfd}{\index{masstorage.\-h@{masstorage.\-h}!\-A\-L\-C\-\_\-\-M\-B@{\-A\-L\-C\-\_\-\-M\-B}}
+\index{\-A\-L\-C\-\_\-\-M\-B@{\-A\-L\-C\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-A\-L\-C\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-L\-C\-\_\-\-M\-B}}}\label{masstorage_8h_a8f6423997f320a143a865f752bca7dfd}
+
+
+\-Definition at line 265 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac0779d1acf9a7d8e8d67c0dec4d60c17}{\index{masstorage.\-h@{masstorage.\-h}!\-Allocation\-Length@{\-Allocation\-Length}}
+\index{\-Allocation\-Length@{\-Allocation\-Length}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Allocation\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Allocation\-Length}}}\label{masstorage_8h_ac0779d1acf9a7d8e8d67c0dec4d60c17}
+
+
+\-Definition at line 226 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a369cb5cbcadb0bdd547800bf01059fb2}{\index{masstorage.\-h@{masstorage.\-h}!b\-Additional\-Length@{b\-Additional\-Length}}
+\index{b\-Additional\-Length@{b\-Additional\-Length}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-Additional\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-Additional\-Length}}}\label{masstorage_8h_a369cb5cbcadb0bdd547800bf01059fb2}
+
+
+\-Definition at line 471 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4a67cd27b64af91a82d3beb9c64a6045}{\index{masstorage.\-h@{masstorage.\-h}!b\-Additional\-Sense\-Code@{b\-Additional\-Sense\-Code}}
+\index{b\-Additional\-Sense\-Code@{b\-Additional\-Sense\-Code}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-Additional\-Sense\-Code}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-Additional\-Sense\-Code}}}\label{masstorage_8h_a4a67cd27b64af91a82d3beb9c64a6045}
+
+
+\-Definition at line 473 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad8cf8402094b9b9b7800e2d76d440a5a}{\index{masstorage.\-h@{masstorage.\-h}!b\-Additional\-Sense\-Qualifier@{b\-Additional\-Sense\-Qualifier}}
+\index{b\-Additional\-Sense\-Qualifier@{b\-Additional\-Sense\-Qualifier}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-Additional\-Sense\-Qualifier}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-Additional\-Sense\-Qualifier}}}\label{masstorage_8h_ad8cf8402094b9b9b7800e2d76d440a5a}
+
+
+\-Definition at line 474 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1375947e53883d17bd586b6037626268}{\index{masstorage.\-h@{masstorage.\-h}!b\-C\-S\-W\-Status@{b\-C\-S\-W\-Status}}
+\index{b\-C\-S\-W\-Status@{b\-C\-S\-W\-Status}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-C\-S\-W\-Status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-C\-S\-W\-Status}}}\label{masstorage_8h_a1375947e53883d17bd586b6037626268}
+
+
+\-Definition at line 445 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad9cd4740e458278f31db2cd1e8ddfdde}{\index{masstorage.\-h@{masstorage.\-h}!b\-Field\-Replaceable\-Unit\-Code@{b\-Field\-Replaceable\-Unit\-Code}}
+\index{b\-Field\-Replaceable\-Unit\-Code@{b\-Field\-Replaceable\-Unit\-Code}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-Field\-Replaceable\-Unit\-Code}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-Field\-Replaceable\-Unit\-Code}}}\label{masstorage_8h_ad9cd4740e458278f31db2cd1e8ddfdde}
+
+
+\-Definition at line 475 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3f608a611b9928fb5018703bd931c5d2}{\index{masstorage.\-h@{masstorage.\-h}!bm\-C\-B\-W\-C\-B\-Length@{bm\-C\-B\-W\-C\-B\-Length}}
+\index{bm\-C\-B\-W\-C\-B\-Length@{bm\-C\-B\-W\-C\-B\-Length}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-C\-B\-W\-C\-B\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-C\-B\-W\-C\-B\-Length}}}\label{masstorage_8h_a3f608a611b9928fb5018703bd931c5d2}
+
+
+\-Definition at line 442 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_adbcff2be14450de51d5d055a666050e9}{\index{masstorage.\-h@{masstorage.\-h}!bm\-C\-B\-W\-Flags@{bm\-C\-B\-W\-Flags}}
+\index{bm\-C\-B\-W\-Flags@{bm\-C\-B\-W\-Flags}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-C\-B\-W\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-C\-B\-W\-Flags}}}\label{masstorage_8h_adbcff2be14450de51d5d055a666050e9}
+
+
+\-Definition at line 387 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a39841b5e0d1a574e30073fbd4f23000c}{\index{masstorage.\-h@{masstorage.\-h}!bm\-C\-B\-W\-L\-U\-N@{bm\-C\-B\-W\-L\-U\-N}}
+\index{bm\-C\-B\-W\-L\-U\-N@{bm\-C\-B\-W\-L\-U\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-C\-B\-W\-L\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-C\-B\-W\-L\-U\-N}}}\label{masstorage_8h_a39841b5e0d1a574e30073fbd4f23000c}
+
+
+\-Definition at line 437 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac68fef4742bfdcb5c59654628e2dce5a}{\index{masstorage.\-h@{masstorage.\-h}!bm\-E\-O\-M@{bm\-E\-O\-M}}
+\index{bm\-E\-O\-M@{bm\-E\-O\-M}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-E\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-E\-O\-M}}}\label{masstorage_8h_ac68fef4742bfdcb5c59654628e2dce5a}
+
+
+\-Definition at line 467 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a06d23e48902c1a988deaf327b68ab7d7}{\index{masstorage.\-h@{masstorage.\-h}!bm\-File\-Mark@{bm\-File\-Mark}}
+\index{bm\-File\-Mark@{bm\-File\-Mark}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-File\-Mark}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-File\-Mark}}}\label{masstorage_8h_a06d23e48902c1a988deaf327b68ab7d7}
+
+
+\-Definition at line 468 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a994ad75e34d6b5b477c0ebfaeb51aefd}{\index{masstorage.\-h@{masstorage.\-h}!bm\-I\-L\-I@{bm\-I\-L\-I}}
+\index{bm\-I\-L\-I@{bm\-I\-L\-I}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-I\-L\-I}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-I\-L\-I}}}\label{masstorage_8h_a994ad75e34d6b5b477c0ebfaeb51aefd}
+
+
+\-Definition at line 466 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6a49cb6134ecc35cbb6a8258376fcc62}{\index{masstorage.\-h@{masstorage.\-h}!bm\-Reserved@{bm\-Reserved}}
+\index{bm\-Reserved@{bm\-Reserved}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-Reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-Reserved}}}\label{masstorage_8h_a6a49cb6134ecc35cbb6a8258376fcc62}
+
+
+\-Definition at line 465 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a5ca3a43729f20909bb189e7928be3ca2}{\index{masstorage.\-h@{masstorage.\-h}!bm\-Reserved1@{bm\-Reserved1}}
+\index{bm\-Reserved1@{bm\-Reserved1}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-Reserved1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-Reserved1}}}\label{masstorage_8h_a5ca3a43729f20909bb189e7928be3ca2}
+
+
+\-Definition at line 438 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a09d926de5a9cac16de0dc704c48f908e}{\index{masstorage.\-h@{masstorage.\-h}!bm\-Reserved2@{bm\-Reserved2}}
+\index{bm\-Reserved2@{bm\-Reserved2}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-Reserved2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-Reserved2}}}\label{masstorage_8h_a09d926de5a9cac16de0dc704c48f908e}
+
+
+\-Definition at line 443 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a5932d6de03a3f9c75539da43aa28934d}{\index{masstorage.\-h@{masstorage.\-h}!bm\-Sense\-Key@{bm\-Sense\-Key}}
+\index{bm\-Sense\-Key@{bm\-Sense\-Key}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{bm\-Sense\-Key}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf bm\-Sense\-Key}}}\label{masstorage_8h_a5932d6de03a3f9c75539da43aa28934d}
+
+
+\-Definition at line 464 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1e9eb66f8124b63e7c9135c14b50939c}{\index{masstorage.\-h@{masstorage.\-h}!\-B\-Q\-U\-E@{\-B\-Q\-U\-E}}
+\index{\-B\-Q\-U\-E@{\-B\-Q\-U\-E}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-B\-Q\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-B\-Q\-U\-E}}}\label{masstorage_8h_a1e9eb66f8124b63e7c9135c14b50939c}
+
+
+\-Definition at line 400 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a9ad34963d2fa3a5be497560bc55bee44}{\index{masstorage.\-h@{masstorage.\-h}!b\-Response\-Code@{b\-Response\-Code}}
+\index{b\-Response\-Code@{b\-Response\-Code}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-Response\-Code}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-Response\-Code}}}\label{masstorage_8h_a9ad34963d2fa3a5be497560bc55bee44}
+
+
+\-Definition at line 461 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a22bedeff46488189a5f88e98cec430e8}{\index{masstorage.\-h@{masstorage.\-h}!b\-Segment\-Number@{b\-Segment\-Number}}
+\index{b\-Segment\-Number@{b\-Segment\-Number}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{b\-Segment\-Number}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b\-Segment\-Number}}}\label{masstorage_8h_a22bedeff46488189a5f88e98cec430e8}
+
+
+\-Definition at line 462 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac7174140836bafcce11192c288d618e7}{\index{masstorage.\-h@{masstorage.\-h}!\-C\-B\-W\-C\-B@{\-C\-B\-W\-C\-B}}
+\index{\-C\-B\-W\-C\-B@{\-C\-B\-W\-C\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-C\-B\-W\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-C\-B\-W\-C\-B}\mbox{[}16\mbox{]}}}\label{masstorage_8h_ac7174140836bafcce11192c288d618e7}
+
+
+\-Definition at line 446 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3a5052a3b7eef8a46a61b10121e31f50}{\index{masstorage.\-h@{masstorage.\-h}!\-Cmd\-Que@{\-Cmd\-Que}}
+\index{\-Cmd\-Que@{\-Cmd\-Que}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Cmd\-Que}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Cmd\-Que}}}\label{masstorage_8h_a3a5052a3b7eef8a46a61b10121e31f50}
+
+
+\-Definition at line 403 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a05aba9b794ae73e471ad10a4acdd92f9}{\index{masstorage.\-h@{masstorage.\-h}!\-Cmd\-Specific\-Information@{\-Cmd\-Specific\-Information}}
+\index{\-Cmd\-Specific\-Information@{\-Cmd\-Specific\-Information}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Cmd\-Specific\-Information}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Cmd\-Specific\-Information}\mbox{[}4\mbox{]}}}\label{masstorage_8h_a05aba9b794ae73e471ad10a4acdd92f9}
+
+
+\-Definition at line 472 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0b2b0e323d0266572561824cdaa0fc45}{\index{masstorage.\-h@{masstorage.\-h}!\-Control@{\-Control}}
+\index{\-Control@{\-Control}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Control}}}\label{masstorage_8h_a0b2b0e323d0266572561824cdaa0fc45}
+
+
+\-Definition at line 227 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{\index{masstorage.\-h@{masstorage.\-h}!data@{data}}
+\index{data@{data}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf data}\mbox{[}8\mbox{]}}}\label{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}
+
+
+\-Definition at line 184 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ac2c0350283b9f39e01d9fcd06739d44b}{\index{masstorage.\-h@{masstorage.\-h}!d\-C\-B\-W\-Data\-Transfer\-Length@{d\-C\-B\-W\-Data\-Transfer\-Length}}
+\index{d\-C\-B\-W\-Data\-Transfer\-Length@{d\-C\-B\-W\-Data\-Transfer\-Length}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{d\-C\-B\-W\-Data\-Transfer\-Length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf d\-C\-B\-W\-Data\-Transfer\-Length}}}\label{masstorage_8h_ac2c0350283b9f39e01d9fcd06739d44b}
+
+
+\-Definition at line 386 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a25dd7ce6b77786d6f489dddb6e792922}{\index{masstorage.\-h@{masstorage.\-h}!d\-C\-B\-W\-Signature@{d\-C\-B\-W\-Signature}}
+\index{d\-C\-B\-W\-Signature@{d\-C\-B\-W\-Signature}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{d\-C\-B\-W\-Signature}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf d\-C\-B\-W\-Signature}}}\label{masstorage_8h_a25dd7ce6b77786d6f489dddb6e792922}
+
+
+\-Definition at line 384 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6490a217070a49d7b312b9ae89a7a13d}{\index{masstorage.\-h@{masstorage.\-h}!d\-C\-B\-W\-Tag@{d\-C\-B\-W\-Tag}}
+\index{d\-C\-B\-W\-Tag@{d\-C\-B\-W\-Tag}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{d\-C\-B\-W\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf d\-C\-B\-W\-Tag}}}\label{masstorage_8h_a6490a217070a49d7b312b9ae89a7a13d}
+
+
+\-Definition at line 385 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0828bc16e03cb92f0fc0eed899ed2afd}{\index{masstorage.\-h@{masstorage.\-h}!d\-C\-S\-W\-Data\-Residue@{d\-C\-S\-W\-Data\-Residue}}
+\index{d\-C\-S\-W\-Data\-Residue@{d\-C\-S\-W\-Data\-Residue}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{d\-C\-S\-W\-Data\-Residue}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf d\-C\-S\-W\-Data\-Residue}}}\label{masstorage_8h_a0828bc16e03cb92f0fc0eed899ed2afd}
+
+
+\-Definition at line 444 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a00618cfef87f1f50506029b4b9ba5b26}{\index{masstorage.\-h@{masstorage.\-h}!d\-C\-S\-W\-Signature@{d\-C\-S\-W\-Signature}}
+\index{d\-C\-S\-W\-Signature@{d\-C\-S\-W\-Signature}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{d\-C\-S\-W\-Signature}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf d\-C\-S\-W\-Signature}}}\label{masstorage_8h_a00618cfef87f1f50506029b4b9ba5b26}
+
+
+\-Definition at line 442 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6d632dc494a1ecab945e85f7cf2ebebe}{\index{masstorage.\-h@{masstorage.\-h}!d\-C\-S\-W\-Tag@{d\-C\-S\-W\-Tag}}
+\index{d\-C\-S\-W\-Tag@{d\-C\-S\-W\-Tag}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{d\-C\-S\-W\-Tag}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf d\-C\-S\-W\-Tag}}}\label{masstorage_8h_a6d632dc494a1ecab945e85f7cf2ebebe}
+
+
+\-Definition at line 443 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4e1cd5751661114587f4fd623ba998e6}{\index{masstorage.\-h@{masstorage.\-h}!\-Device\-Type@{\-Device\-Type}}
+\index{\-Device\-Type@{\-Device\-Type}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Device\-Type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Device\-Type}}}\label{masstorage_8h_a4e1cd5751661114587f4fd623ba998e6}
+
+
+\-Definition at line 369 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0454969a3a83325bf2244a640492c897}{\index{masstorage.\-h@{masstorage.\-h}!\-E\-N\-C\-S\-E\-R\-V@{\-E\-N\-C\-S\-E\-R\-V}}
+\index{\-E\-N\-C\-S\-E\-R\-V@{\-E\-N\-C\-S\-E\-R\-V}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-E\-N\-C\-S\-E\-R\-V}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-E\-N\-C\-S\-E\-R\-V}}}\label{masstorage_8h_a0454969a3a83325bf2244a640492c897}
+
+
+\-Definition at line 399 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6c5a196fc6765353565735716fbc758e}{\index{masstorage.\-h@{masstorage.\-h}!\-H\-I\-S\-U\-P@{\-H\-I\-S\-U\-P}}
+\index{\-H\-I\-S\-U\-P@{\-H\-I\-S\-U\-P}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-H\-I\-S\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-H\-I\-S\-U\-P}}}\label{masstorage_8h_a6c5a196fc6765353565735716fbc758e}
+
+
+\-Definition at line 378 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a85366fe2ca206c0ef75c9f4fc775ebd8}{\index{masstorage.\-h@{masstorage.\-h}!info@{info}}
+\index{info@{info}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf info}\mbox{[}12\mbox{]}}}\label{masstorage_8h_a85366fe2ca206c0ef75c9f4fc775ebd8}
+
+
+\-Definition at line 198 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a16ca141ca74dabf04aa26e3b7b12fb28}{\index{masstorage.\-h@{masstorage.\-h}!\-Information@{\-Information}}
+\index{\-Information@{\-Information}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Information}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Information}\mbox{[}4\mbox{]}}}\label{masstorage_8h_a16ca141ca74dabf04aa26e3b7b12fb28}
+
+
+\-Definition at line 470 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a97e3397543e63b18f3c23e25fa22c1d5}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B}}
+\index{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-L\-B}}}\label{masstorage_8h_a97e3397543e63b18f3c23e25fa22c1d5}
+
+
+\-Definition at line 261 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a894713dc6bc9de2ed7f4766e4e6f236d}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B}}
+\index{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-L\-\_\-\-L\-\_\-\-M\-B}}}\label{masstorage_8h_a894713dc6bc9de2ed7f4766e4e6f236d}
+
+
+\-Definition at line 260 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad0f532137e24739e40e169ca30e7ace9}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B}}
+\index{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-L\-B}}}\label{masstorage_8h_ad0f532137e24739e40e169ca30e7ace9}
+
+
+\-Definition at line 259 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a802f8a2352f6b8f3e55411224f23438d}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B}}
+\index{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-L\-\_\-\-M\-\_\-\-M\-B}}}\label{masstorage_8h_a802f8a2352f6b8f3e55411224f23438d}
+
+
+\-Definition at line 258 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0312ba3b329b60c50af6392bdb3c4f05}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}}
+\index{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-L\-B}}}\label{masstorage_8h_a0312ba3b329b60c50af6392bdb3c4f05}
+
+
+\-Definition at line 327 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a20195a62d686cb30ae40b1fc485dd494}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}}
+\index{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-M\-\_\-\-L\-\_\-\-M\-B}}}\label{masstorage_8h_a20195a62d686cb30ae40b1fc485dd494}
+
+
+\-Definition at line 326 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ab35f2258f6af6f52300f4e43bab77e87}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}}
+\index{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-L\-B}}}\label{masstorage_8h_ab35f2258f6af6f52300f4e43bab77e87}
+
+
+\-Definition at line 325 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a68ca6361f11d73b4eead4642f93fa611}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}}
+\index{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B@{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-\_\-\-M\-\_\-\-M\-\_\-\-M\-B}}}\label{masstorage_8h_a68ca6361f11d73b4eead4642f93fa611}
+
+
+\-Definition at line 324 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2d251919405af7270d23752b0d56e6e7}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-H\-B@{\-L\-B\-A\-H\-B}}
+\index{\-L\-B\-A\-H\-B@{\-L\-B\-A\-H\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-H\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-H\-B}}}\label{masstorage_8h_a2d251919405af7270d23752b0d56e6e7}
+
+
+\-Definition at line 224 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a177d0ceb550c157a829a8426097975ff}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-L\-B@{\-L\-B\-A\-L\-B}}
+\index{\-L\-B\-A\-L\-B@{\-L\-B\-A\-L\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-L\-B\-A\-L\-B}}}\label{masstorage_8h_a177d0ceb550c157a829a8426097975ff}
+
+
+\-Definition at line 225 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4e65295b6d615cbeee126c33010a0bd1}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-B\-A\-M\-S\-B@{\-L\-B\-A\-M\-S\-B}}
+\index{\-L\-B\-A\-M\-S\-B@{\-L\-B\-A\-M\-S\-B}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-B\-A\-M\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-L\-B\-A\-M\-S\-B}}}\label{masstorage_8h_a4e65295b6d615cbeee126c33010a0bd1}
+
+
+\-Definition at line 221 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4a0f4a5c2179d73937150c9bf46ac7d8}{\index{masstorage.\-h@{masstorage.\-h}!\-Linked@{\-Linked}}
+\index{\-Linked@{\-Linked}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Linked}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Linked}}}\label{masstorage_8h_a4a0f4a5c2179d73937150c9bf46ac7d8}
+
+
+\-Definition at line 405 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a9ede1b7f8b8e88fc8323d9d0cde12cea}{\index{masstorage.\-h@{masstorage.\-h}!\-L\-U\-N@{\-L\-U\-N}}
+\index{\-L\-U\-N@{\-L\-U\-N}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-L\-U\-N}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-L\-U\-N}}}\label{masstorage_8h_a9ede1b7f8b8e88fc8323d9d0cde12cea}
+
+
+\-Definition at line 196 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a17c5dd317f41443c0492ba115c4b3b4e}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-C\-H\-N\-G\-R@{\-M\-C\-H\-N\-G\-R}}
+\index{\-M\-C\-H\-N\-G\-R@{\-M\-C\-H\-N\-G\-R}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-C\-H\-N\-G\-R}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-M\-C\-H\-N\-G\-R}}}\label{masstorage_8h_a17c5dd317f41443c0492ba115c4b3b4e}
+
+
+\-Definition at line 396 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aecd8fb147462950f22ffae4eee69f7db}{\index{masstorage.\-h@{masstorage.\-h}!\-Misc@{\-Misc}}
+\index{\-Misc@{\-Misc}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Misc}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Misc}}}\label{masstorage_8h_aecd8fb147462950f22ffae4eee69f7db}
+
+
+\-Definition at line 274 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a29217ca6bc0940d57ba2b5b185a80e22}{\index{masstorage.\-h@{masstorage.\-h}!\-Misc2@{\-Misc2}}
+\index{\-Misc2@{\-Misc2}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Misc2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Misc2}}}\label{masstorage_8h_a29217ca6bc0940d57ba2b5b185a80e22}
+
+
+\-Definition at line 263 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_ad3bc9889e38ad020d23934165f3ad8cb}{\index{masstorage.\-h@{masstorage.\-h}!\-M\-U\-L\-T\-I\-P@{\-M\-U\-L\-T\-I\-P}}
+\index{\-M\-U\-L\-T\-I\-P@{\-M\-U\-L\-T\-I\-P}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-M\-U\-L\-T\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-M\-U\-L\-T\-I\-P}}}\label{masstorage_8h_ad3bc9889e38ad020d23934165f3ad8cb}
+
+
+\-Definition at line 397 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2648e22b8437be83af34cdecc067dce8}{\index{masstorage.\-h@{masstorage.\-h}!\-Norm\-A\-C\-A@{\-Norm\-A\-C\-A}}
+\index{\-Norm\-A\-C\-A@{\-Norm\-A\-C\-A}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Norm\-A\-C\-A}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Norm\-A\-C\-A}}}\label{masstorage_8h_a2648e22b8437be83af34cdecc067dce8}
+
+
+\-Definition at line 379 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aae73b2e7584b87acb54fd7cb3d0253e7}{\index{masstorage.\-h@{masstorage.\-h}!\-Opcode@{\-Opcode}}
+\index{\-Opcode@{\-Opcode}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Opcode}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Opcode}}}\label{masstorage_8h_aae73b2e7584b87acb54fd7cb3d0253e7}
+
+
+\-Definition at line 193 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa74731ce00c7b19ddb90fc2348d87e3b}{\index{masstorage.\-h@{masstorage.\-h}!\-Peripheral\-Qualifier@{\-Peripheral\-Qualifier}}
+\index{\-Peripheral\-Qualifier@{\-Peripheral\-Qualifier}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Peripheral\-Qualifier}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Peripheral\-Qualifier}}}\label{masstorage_8h_aa74731ce00c7b19ddb90fc2348d87e3b}
+
+
+\-Definition at line 370 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a891ccc75e93d0882157ec51229dbb212}{\index{masstorage.\-h@{masstorage.\-h}!\-Product\-I\-D@{\-Product\-I\-D}}
+\index{\-Product\-I\-D@{\-Product\-I\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Product\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Product\-I\-D}\mbox{[}16\mbox{]}}}\label{masstorage_8h_a891ccc75e93d0882157ec51229dbb212}
+
+
+\-Definition at line 412 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a12937b1125b69a0f086789cd866f62b6}{\index{masstorage.\-h@{masstorage.\-h}!\-P\-R\-O\-T\-E\-C\-T@{\-P\-R\-O\-T\-E\-C\-T}}
+\index{\-P\-R\-O\-T\-E\-C\-T@{\-P\-R\-O\-T\-E\-C\-T}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-P\-R\-O\-T\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-P\-R\-O\-T\-E\-C\-T}}}\label{masstorage_8h_a12937b1125b69a0f086789cd866f62b6}
+
+
+\-Definition at line 386 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a7e60b2ca7f2f6943225add97ee69ed00}{\index{masstorage.\-h@{masstorage.\-h}!\-R1@{\-R1}}
+\index{\-R1@{\-R1}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-R1}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-R1}}}\label{masstorage_8h_a7e60b2ca7f2f6943225add97ee69ed00}
+
+
+\-Definition at line 394 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a7dae2a007c34ecf4796811a14e1c11e2}{\index{masstorage.\-h@{masstorage.\-h}!\-R2@{\-R2}}
+\index{\-R2@{\-R2}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-R2}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-R2}}}\label{masstorage_8h_a7dae2a007c34ecf4796811a14e1c11e2}
+
+
+\-Definition at line 395 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aeb05aa58c792c081444fbabc78e1d7d8}{\index{masstorage.\-h@{masstorage.\-h}!\-Rel\-Addr@{\-Rel\-Addr}}
+\index{\-Rel\-Addr@{\-Rel\-Addr}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Rel\-Addr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Rel\-Addr}}}\label{masstorage_8h_aeb05aa58c792c081444fbabc78e1d7d8}
+
+
+\-Definition at line 409 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a38bab4da595bd2cf269d05c2c2049984}{\index{masstorage.\-h@{masstorage.\-h}!\-Removable@{\-Removable}}
+\index{\-Removable@{\-Removable}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Removable}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Removable}}}\label{masstorage_8h_a38bab4da595bd2cf269d05c2c2049984}
+
+
+\-Definition at line 373 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a61fc767e89549019ca99adbf939b7861}{\index{masstorage.\-h@{masstorage.\-h}!\-Res@{\-Res}}
+\index{\-Res@{\-Res}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Res}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Res}}}\label{masstorage_8h_a61fc767e89549019ca99adbf939b7861}
+
+
+\-Definition at line 387 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0d430d8eaa55cef3712e2bd0ec15b006}{\index{masstorage.\-h@{masstorage.\-h}!\-Reserved@{\-Reserved}}
+\index{\-Reserved@{\-Reserved}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Reserved}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-Reserved}}}\label{masstorage_8h_a0d430d8eaa55cef3712e2bd0ec15b006}
+
+
+\-Definition at line 372 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a4917f5463930dbe04f9be93991b03824}{\index{masstorage.\-h@{masstorage.\-h}!\-Reserved4@{\-Reserved4}}
+\index{\-Reserved4@{\-Reserved4}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Reserved4}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Reserved4}}}\label{masstorage_8h_a4917f5463930dbe04f9be93991b03824}
+
+
+\-Definition at line 404 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a80f08a30b3fce214a59d2450f3476c97}{\index{masstorage.\-h@{masstorage.\-h}!\-Response\-Data\-Format@{\-Response\-Data\-Format}}
+\index{\-Response\-Data\-Format@{\-Response\-Data\-Format}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Response\-Data\-Format}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Response\-Data\-Format}}}\label{masstorage_8h_a80f08a30b3fce214a59d2450f3476c97}
+
+
+\-Definition at line 377 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_adfb28fe580a2dfe29b641eb7865f132d}{\index{masstorage.\-h@{masstorage.\-h}!\-Revision\-I\-D@{\-Revision\-I\-D}}
+\index{\-Revision\-I\-D@{\-Revision\-I\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Revision\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Revision\-I\-D}\mbox{[}4\mbox{]}}}\label{masstorage_8h_adfb28fe580a2dfe29b641eb7865f132d}
+
+
+\-Definition at line 413 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a2d698250083f18418a1b9bfdab0986be}{\index{masstorage.\-h@{masstorage.\-h}!\-S\-C\-C\-S@{\-S\-C\-C\-S}}
+\index{\-S\-C\-C\-S@{\-S\-C\-C\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-S\-C\-C\-S}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-S\-C\-C\-S}}}\label{masstorage_8h_a2d698250083f18418a1b9bfdab0986be}
+
+
+\-Definition at line 391 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0eaca2cd55762c8df53f183558b529b6}{\index{masstorage.\-h@{masstorage.\-h}!\-Sense\-Key\-Specific@{\-Sense\-Key\-Specific}}
+\index{\-Sense\-Key\-Specific@{\-Sense\-Key\-Specific}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Sense\-Key\-Specific}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Sense\-Key\-Specific}\mbox{[}3\mbox{]}}}\label{masstorage_8h_a0eaca2cd55762c8df53f183558b529b6}
+
+
+\-Definition at line 476 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a50a2c92c4dacb9f13db919e67fe975fa}{\index{masstorage.\-h@{masstorage.\-h}!\-Service\-\_\-\-Action@{\-Service\-\_\-\-Action}}
+\index{\-Service\-\_\-\-Action@{\-Service\-\_\-\-Action}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Service\-\_\-\-Action}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Service\-\_\-\-Action}}}\label{masstorage_8h_a50a2c92c4dacb9f13db919e67fe975fa}
+
+
+\-Definition at line 255 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a251bc7f70dc85dfaf9e8ff302c65ad5a}{\index{masstorage.\-h@{masstorage.\-h}!\-Soft\-Reset@{\-Soft\-Reset}}
+\index{\-Soft\-Reset@{\-Soft\-Reset}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Soft\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Soft\-Reset}}}\label{masstorage_8h_a251bc7f70dc85dfaf9e8ff302c65ad5a}
+
+
+\-Definition at line 402 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a6c6a93e636a8048d26a7b23adb6fde0f}{\index{masstorage.\-h@{masstorage.\-h}!\-Sync@{\-Sync}}
+\index{\-Sync@{\-Sync}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Sync}}}\label{masstorage_8h_a6c6a93e636a8048d26a7b23adb6fde0f}
+
+
+\-Definition at line 406 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0233c56b4842f6fcedb90eca2561d266}{\index{masstorage.\-h@{masstorage.\-h}!\-Three\-P\-C@{\-Three\-P\-C}}
+\index{\-Three\-P\-C@{\-Three\-P\-C}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Three\-P\-C}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Three\-P\-C}}}\label{masstorage_8h_a0233c56b4842f6fcedb90eca2561d266}
+
+
+\-Definition at line 388 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a1b1ebeaeacdb239a77820197fbdfff69}{\index{masstorage.\-h@{masstorage.\-h}!\-T\-P\-G\-S@{\-T\-P\-G\-S}}
+\index{\-T\-P\-G\-S@{\-T\-P\-G\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-T\-P\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-T\-P\-G\-S}}}\label{masstorage_8h_a1b1ebeaeacdb239a77820197fbdfff69}
+
+
+\-Definition at line 389 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a69dea8dd58b86fe80b01a48545608a1d}{\index{masstorage.\-h@{masstorage.\-h}!\-Trm\-Tsk@{\-Trm\-Tsk}}
+\index{\-Trm\-Tsk@{\-Trm\-Tsk}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Trm\-Tsk}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Trm\-Tsk}}}\label{masstorage_8h_a69dea8dd58b86fe80b01a48545608a1d}
+
+
+\-Definition at line 380 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3a1285aa3d4106cecde1c176f8865f50}{\index{masstorage.\-h@{masstorage.\-h}!unused@{unused}}
+\index{unused@{unused}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{unused}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf unused}}}\label{masstorage_8h_a3a1285aa3d4106cecde1c176f8865f50}
+
+
+\-Definition at line 195 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a0e2871fe4fddf323d475e80c6f3e0532}{\index{masstorage.\-h@{masstorage.\-h}!\-Vendor\-I\-D@{\-Vendor\-I\-D}}
+\index{\-Vendor\-I\-D@{\-Vendor\-I\-D}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Vendor\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Vendor\-I\-D}\mbox{[}8\mbox{]}}}\label{masstorage_8h_a0e2871fe4fddf323d475e80c6f3e0532}
+
+
+\-Definition at line 411 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a3bee6b95c6449755b9e7c167d1360dc5}{\index{masstorage.\-h@{masstorage.\-h}!\-Version@{\-Version}}
+\index{\-Version@{\-Version}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Version}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Version}}}\label{masstorage_8h_a3bee6b95c6449755b9e7c167d1360dc5}
+
+
+\-Definition at line 375 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_aa25518c3e9ec408cda72ba0348de230c}{\index{masstorage.\-h@{masstorage.\-h}!\-V\-S@{\-V\-S}}
+\index{\-V\-S@{\-V\-S}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-V\-S}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-V\-S}}}\label{masstorage_8h_aa25518c3e9ec408cda72ba0348de230c}
+
+
+\-Definition at line 398 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a13d4749e731a4d1695fd3f42cb70e266}{\index{masstorage.\-h@{masstorage.\-h}!\-Wide\-Bus16\-Bit@{\-Wide\-Bus16\-Bit}}
+\index{\-Wide\-Bus16\-Bit@{\-Wide\-Bus16\-Bit}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Wide\-Bus16\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Wide\-Bus16\-Bit}}}\label{masstorage_8h_a13d4749e731a4d1695fd3f42cb70e266}
+
+
+\-Definition at line 407 of file masstorage.\-h.
+
+\hypertarget{masstorage_8h_a35371888eae12e18ffdf8013c2c2876c}{\index{masstorage.\-h@{masstorage.\-h}!\-Wide\-Bus32\-Bit@{\-Wide\-Bus32\-Bit}}
+\index{\-Wide\-Bus32\-Bit@{\-Wide\-Bus32\-Bit}!masstorage.h@{masstorage.\-h}}
+\subsubsection[{\-Wide\-Bus32\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}unsigned {\bf \-Wide\-Bus32\-Bit}}}\label{masstorage_8h_a35371888eae12e18ffdf8013c2c2876c}
+
+
+\-Definition at line 408 of file masstorage.\-h.
+

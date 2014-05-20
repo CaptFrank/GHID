@@ -16,23 +16,23 @@
  * @param buf								- the buffer type structure
  * @return buffer_t							- the axis type structure returned
  */
-buffer_t* Data_Processor::process_data(RingBuff_t* buf){
+buffer_t* Data_Processor::process_data(RingBuff_t* buf, buffer_t* _buff){
 
 	//! First we memset the buffer to reset it
-	memset(Data_Processor::_buffer.data, 0x00, sizeof(Data_Processor::_buffer.data));
+	memset(_buff->data, 0x00, sizeof(_buff->data));
 
 	//! We get the count
 	RingBuff_Count_t buff_count = RingBuffer_GetCount(buf);
 
 	//! Then we remove an object from the ring buffer.
-	if(buff_count >= sizeof(Data_Processor::_buffer.data)){
-		for(register uint8_t i = 0; i < sizeof(Data_Processor::_buffer.data); i++){
+	if(buff_count >= sizeof(_buff->data)){
+		for(register uint8_t i = 0; i < sizeof(_buff->data); i++){
 
-			((uint8_t*)&Data_Processor::_buffer.data)[i] = RingBuffer_Remove(buf);
+			((uint8_t*)&_buff->data)[i] = RingBuffer_Remove(buf);
 		}
 
 		//! We remove the spacer
 		RingBuffer_Remove(buf);
 	}
-	return Data_Processor::_buffer;
+	return _buff;
 }

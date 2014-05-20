@@ -16,28 +16,18 @@
  * @param command_table						- The pointer to the command list
  * @param setup_method						- The setup method called.
  * @param serial							- The hardware serial port used
+ * @param setup								- The setup type
  */
 CC2540_Driver::CC2540_Driver(char* device_name,
-							void* command_table,
-							bool(*setup_method)(),
-							Bluetooth_Dispatcher* serial){
+							char* command_table,
+							Bluetooth_Dispatcher* serial,
+							void (*setup_method)(CC2540_Driver* driver)){
 
 	//! Set the internal access points
 	this->_command_table = command_table;
-	this->_setup_method = setup_method;
 	this->_name = device_name;
 	this->_dispacher = serial;
-}
-
-/**
- * The abstract view of the setup of the device.
- *
- * @return success							- If the setup was successful
- */
-bool CC2540_Driver::setup_device(){
-
-	//! We call the setup method
-	return this->_setup_method();
+	setup_method(this);
 }
 
 //! Private Context
@@ -47,25 +37,21 @@ bool CC2540_Driver::setup_device(){
  *
  * @return success							- If the dispatch was successful
  */
-bool CC2540_Driver::_default_setup(){
-
+void CC2540_Driver::_default_setup(CC2540_Driver* driver){
+	
 	//! We send the at command break
-	this->_send_at_commad();
+	driver->_send_at_commad();
 
 	//! We set the name of the device
-	if(this->_set_device_name(this->_name)){
+	if(driver->_set_device_name(driver->_name)){
 
 		//! We set the default setting
-		if(this->_set_setting(SETTING_DEFAULT)){
+		if(driver->_set_setting(SETTING_DEFAULT)){
 
 			//! We reboot the device
-			if(this->_reboot()){
-				return true;
-			}
+			driver->_reboot();
 		}
 	}
-	//! An error occured
-	return false;
 }
 
 //! Utilities
@@ -83,7 +69,7 @@ char* CC2540_Driver::_get_command(uint8_t command){
 	memset(command_buffer, '\0', sizeof(command_buffer));
 
 	//! Copy the command over
-	strcpy_P(command_buffer, (char*)pgm_read_word(&(this->_command_table[command])));
+	strcpy_P((char*)command_buffer, (char*)pgm_read_word(&(this->_command_table[command])));
 	return command_buffer;
 }
 
@@ -102,7 +88,7 @@ bool CC2540_Driver::_send_at_commad(){
 	String command = (this->_get_command(AT_MODE));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -121,7 +107,7 @@ bool CC2540_Driver::_send_help_command(uint8_t command_id){
 	command.concat(this->_get_command(HELP));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -139,9 +125,9 @@ char* CC2540_Driver::_get_firmware_ver(){
 	String command = (this->_get_command(GET_FW_VERSION));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
-	return this->_dispacher->_response->response;
+	return (char*)this->_dispacher->get_response()->response;
 }
 
 /**
@@ -155,9 +141,9 @@ char* CC2540_Driver::_get_rssi_value(){
 	String command = (this->_get_command(GET_RSSI_VALUE));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
-	return this->_dispacher->_response->response;
+	return (char*)this->_dispacher->get_response()->response;
 }
 
 /**
@@ -171,9 +157,9 @@ char* CC2540_Driver::_get_mac_address(){
 	String command = (this->_get_command(GET_MAC_ADDRESS));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
-	return this->_dispacher->_response->response;
+	return (char*)this->_dispacher->get_response()->response;
 }
 
 //! Setters
@@ -191,7 +177,7 @@ bool CC2540_Driver::_set_fsm_mode(uint8_t mode){
 	command.concat(this->_get_command(mode));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -209,7 +195,7 @@ bool CC2540_Driver::_set_role(uint8_t role){
 	command.concat(this->_get_command(role));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -227,7 +213,7 @@ bool CC2540_Driver::_set_min_interval(uint8_t interval){
 	command.concat(this->_get_command(interval));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -245,7 +231,7 @@ bool CC2540_Driver::_set_max_interval(uint8_t interval){
 	command.concat(this->_get_command(interval));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -268,7 +254,7 @@ bool CC2540_Driver::_set_baudrate(char* baud){
 	command.concat(temp);
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -291,7 +277,7 @@ bool CC2540_Driver::_set_binding_address(char* address){
 	command.concat(temp);
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -309,7 +295,7 @@ bool CC2540_Driver::_set_connection_mode(uint8_t mode){
 	command.concat(this->_get_command(mode));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -332,7 +318,7 @@ bool CC2540_Driver::_set_device_name(char* name){
 	command.concat(temp);
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -350,7 +336,7 @@ bool CC2540_Driver::_set_setting(uint8_t mode){
 	command.concat(this->_get_command(mode));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -368,7 +354,7 @@ bool CC2540_Driver::_set_ibeacon_setting(uint8_t setting){
 	command.concat(this->_get_command(setting));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -391,7 +377,7 @@ bool CC2540_Driver::_set_password(char* psw){
 	command.concat(temp);
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -420,7 +406,7 @@ bool CC2540_Driver::_set_tx_power(char* power){
 	command.concat(temp);
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -437,7 +423,7 @@ bool CC2540_Driver::_reboot(){
 	String command = (this->_get_command(REBOOT));
 
 	//! We setup a dispatch
-	this->_dispacher->setup_dispatch((uint8_t*)command, command.len);
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
 	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
@@ -451,7 +437,7 @@ bool CC2540_Driver::_check_ok_response(){
 
 	//! We check the response
 	if(this->_dispacher->run_dispatch()){
-		if(strcmp((char*)this->_dispacher->_response->response, OK) == SUCCESS){
+		if(strcmp((char*)this->_dispacher->get_response()->response, OK) == SUCCESS){
 			return true;
 		}
 	}

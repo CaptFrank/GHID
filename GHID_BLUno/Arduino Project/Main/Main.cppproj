@@ -50,6 +50,13 @@
         <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
+            <Value>__AVR_ATmega328P__</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
@@ -76,10 +83,13 @@
         <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcccpp.compiler.symbols.DefSymbols>
           <ListValues>
-            <Value>ARDUINO=103</Value>
+            <Value>__AVR_ATmega328p__</Value>
             <Value>__AVR_ATmega328P__</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
@@ -120,6 +130,13 @@
         <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
+            <Value>__AVR_ATmega328p__</Value>
+            <Value>__AVR_ATmega328P__</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
@@ -146,10 +163,13 @@
         <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
         <avrgcccpp.compiler.symbols.DefSymbols>
           <ListValues>
-            <Value>ARDUINO=103</Value>
+            <Value>__AVR_ATmega328p__</Value>
             <Value>__AVR_ATmega328P__</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
@@ -183,6 +203,89 @@
     <None Include="Main.ino">
       <SubType>compile</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADS1298Commands.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADS1298Driver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADS1298Driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothCommandDispatcher.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothCommandDispatcher.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothCommands.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothCommandTable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothConnectionCommands.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothConnectionHandler.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BluetoothConnectionHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CC2540Driver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CC2540Driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ConnectionHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ConnectionProtocolHandler.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ConnectionProtocolHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DataProcessor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DataProcessor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Dispatcher.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Dispatcher.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GHID_SPI.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GHID_SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RingBuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SPI.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Utilities.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Visual Micro\.Main.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

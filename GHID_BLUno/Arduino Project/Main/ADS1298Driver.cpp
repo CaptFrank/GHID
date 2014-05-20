@@ -18,27 +18,28 @@
  * 											internal method.
  *
  * @param buff							- The general context ring buffer
+ * @param devices						- The device array
+ * @param spi_settings					- The SPI settings
  */
-ADS1298_Driver::ADS1298_Driver(RingBuff_t* buff) : GHID_SPI(&spi_settings){
+ADS1298_Driver::ADS1298_Driver(RingBuff_t* buff, 
+							    uint8_t* devices,
+							   spi_settings_t* spi_settings,
+							   void (*setup_method)(ADS1298_Driver* driver)) : GHID_SPI(spi_settings){
 
 	//! Assign the global ring buffer type internally
 	this->_buff = buff;
-
+	this->_settings;
+	this->_devices = devices;
+	
 	//! We then init the buffer
 	RingBuffer_InitBuffer(this->_buff);
 
 	//! Here we setup the pins
 	this->_init_pins();
-}
-
-/**
- * This method sets up the ADS1298 chip
- */
-void ADS1298_Driver::setup_ads1298(void(*setup_method)(ADS1298_Driver* driver)){
-
+	
 	//! We setup the ADS1298
 	//! Set the setup method
-	this->_setup_method = setup_method;
+	setup_method(this);
 }
 
 /**
@@ -144,37 +145,37 @@ void ADS1298_Driver::check_active_channels(){
 	}
 }
 
-/**
- * This is the static method that adds one spi data component
- * to a generic ring buffer for read later on.
- */
-void ADS1298_Driver::execute_isr(void){
-
-	/**
-	 * This ISR is triggered only when the DRDY signal on the ADS1298 chip
-	 * is asserted, indicating that there is new data stored on the ADS1298
-	 * registers. In which case, this ISR is activated to acquire this data
-	 * and store it within a global context RingBuffer.
-	 */
-
-	//! Here we add data to the buffer.
-	//! We create a buffer object to contain our data.
-	//! Format of the packet:
-	//! 	- 24 bit header + 24 bit * active channels [3 bytes + 3 * # bytes]
-
-	//! We add the spacer at the end of the data array
-	this->_rx_buff.data.packet._data[sizeof(_rx_buff.data.packet._data)] = SPACER;
-
-	//! We get the data and store it within the buffer
-	GHID_SPI::transfer_bulk(ADS1298_DEVICE,
-			this->_rx_buff.data.packet_array,
-			DATA_PACKET_SIZE);
-
-	uint8_t size = DATA_PACKET_SIZE;
-	while(size --)
-		//! Then we input the data into the ring buffer
-		RingBuffer_Insert(this->_buff, this->_rx_buff.data.packet._data[size]);
-}
+// /**
+//  * This is the static method that adds one spi data component
+//  * to a generic ring buffer for read later on.
+//  */
+// void ADS1298_Driver::execute_isr(void){
+// 
+// 	/**
+// 	 * This ISR is triggered only when the DRDY signal on the ADS1298 chip
+// 	 * is asserted, indicating that there is new data stored on the ADS1298
+// 	 * registers. In which case, this ISR is activated to acquire this data
+// 	 * and store it within a global context RingBuffer.
+// 	 */
+// 
+// 	//! Here we add data to the buffer.
+// 	//! We create a buffer object to contain our data.
+// 	//! Format of the packet:
+// 	//! 	- 24 bit header + 24 bit * active channels [3 bytes + 3 * # bytes]
+// 
+// 	//! We add the spacer at the end of the data array
+// 	this->_rx_buff.data.packet._data[sizeof(_rx_buff.data.packet._data)] = SPACER;
+// 
+// 	//! We get the data and store it within the buffer
+// 	GHID_SPI::transfer_bulk(ADS1298_DEVICE,
+// 			this->_rx_buff.data.packet_array,
+// 			DATA_PACKET_SIZE);
+// 
+// 	uint8_t size = DATA_PACKET_SIZE;
+// 	while(size --)
+// 		//! Then we input the data into the ring buffer
+// 		RingBuffer_Insert(this->_buff, this->_rx_buff.data.packet._data[size]);
+// }
 
 //! Private Context
 

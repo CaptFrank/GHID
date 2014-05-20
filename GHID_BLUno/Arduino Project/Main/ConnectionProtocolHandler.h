@@ -8,7 +8,9 @@
 #ifndef CONNECTIONPROTOCOLHANDLER_H_
 #define CONNECTIONPROTOCOLHANDLER_H_
 
+#include "Utilities.h"
 #include "DataProcessor.h"
+#include "ConnectionHandler.h"
 #include "BluetoothConnectionCommands.h"
 
 #define TIMEOUT				2
@@ -29,11 +31,18 @@ class ConnectionProtocolHandler {
 		 * This is the default constructor for the class
 		 *
 		 * @param buffer						- The ring buffer pointer
-		 * @param table							- The lookup table
 		 * @param serial						- The Hardware serial to read and write
 		 */
-		ConnectionProtocolHandler(RingBuff_t* buffer, callback_t* table, HardwareSerial* serial);
+		ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial);
 
+		/**
+		 * This sets up the callback table.
+		 *
+		 * @param table							- The callback table
+		 */
+		void set_callback_table(callback_t* table); 
+		
+		
 		/**
 		 * This method polls to see if there are some commands received.
 		 */
@@ -42,18 +51,17 @@ class ConnectionProtocolHandler {
 		/**
 		 * This method is used to generic system wide actions
 		 *
-		 * @param object						- The access object
 		 * @param command						- The issued command
+		 * @param object						- The access object
 		 */
-		static void generic(void* object, uint8_t command);
+		static void generic(uint8_t command, void* object);
 
 		/**
 		 * This method is used when the request connection type is used.
 		 *
-		 * @param object						- The access object
 		 * @param command						- The issued command
 		 */
-		static void request(void* object, uint8_t command);
+		static void request(uint8_t command, void* object);
 
 	//! Private Context
 	private:
@@ -66,6 +74,9 @@ class ConnectionProtocolHandler {
 
 		//! Internal serial pointer
 		HardwareSerial* _serial;
+		
+		//! Internal Buffer
+		buffer_t _buff;
 };
 
 #endif /* CONNECTIONPROTOCOLHANDLER_H_ */

@@ -6,17 +6,40 @@ GHID
 
 Still to do in the GHID project:
 	
-	Framework:
-		- Document the SPI, I2C, UART, Dallas 1 Wire 	-- DONE
-		- Create examples for such interfaces 			-- DONE
+---->	Bluno Implementation
 		
-	Bluetooth Capability:
-		- Implement										-- DONE
-		- Creat a Bluetooth stack interface				-- DONE
-		- Test
+		- Accelerometers:
+			- Digital 								- 0%			
+				- Driver							- 0%
+				- Library (API)						- 0%
+				
+			- Analog								- 0%
+				- Driver							- 0%
+				- Library (API)						- 0%
+			
+		- AD1298:
+			- Driver								- 90%
+			- Library (API)							- 30%
+			
+		- Bluetooth Firmware:
+			- Design								- 100%
+			- Implementation						- 100%
+			- Testing								- 50%
+			- Deployment							- 0%
+
+---->	Base Station Implementation
+	
+		USB PHY:
+			- Update MOUSE
+			- Update JOYSTICK
+			- Dual Profile
 		
-	RFBee Capability:
-		- Finalize sensor implementation
-		- Unit Testing
-		- Functinnal testing
-		- Provide an Interface to the RFBee Stack		-- DONE
+		Arbitrator:
+			
+			- Design
+			- Implementation
+			- Testing
+			- Deployement
+			
+	
+	

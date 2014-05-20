@@ -20,50 +20,8 @@
 #include "BluetoothConnectionHandler.h"
 #include "ConnectionProtocolHandler.h"
 
-//! --------------------------------------------------
-//! Global Variables
-//! --------------------------------------------------
-
-//! The start flag
-bool start = false;
-
-//! The global ring buffer type
-RingBuff_t buffer;
-
-//! A protocol handler
-ConnectionProtocolHandler protocol_handler;
-
-/**
- * This is the callback table used for the bluetooth driver.
- */
-struct callback_t callback_table[] = {
-
-		// COMMAND,				METHOD POINTER, 						OBJECT POINTER
-
-		//! Generic commands
-		REBOOT,					ConnectionProtocolHandler::generic,		(void*)&protocol_handler,
-		RESET,					ConnectionProtocolHandler::generic,		(void*)&protocol_handler,
-		SUSPEND,				ConnectionProtocolHandler::generic,		(void*)&protocol_handler,
-		RESUME,					ConnectionProtocolHandler::generic,		(void*)&protocol_handler,
-		START,					ConnectionProtocolHandler::generic,		(void*)&protocol_handler,
-
-		//! We using the request based method
-		GET,					ConnectionProtocolHandler::request,		(void*)&protocol_handler,
-};
-
-//! The Bluetooth Command dispatcher
-Bluetooth_Dispatcher dispatcher(&Serial);
-
-//! The ADS1298 Driver object
-//! 	- Here we use the default setup function.... We could change it
-ADS1298_Driver ads1298_driver(&buffer);
-
-//! The CC2540 Driver
-//! 	- Here we use the default setup function.... We could change it
-CC2540_Driver cc2540_driver("ADS1298", &dispatcher);
-
-//! The conenction
-Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, callback_table, buffer, &protocol_handler);
+//! Commands
+#include "BluetoothCommandTable.h"
 
 //! --------------------------------------------------
 //! Prototypes
@@ -73,12 +31,71 @@ Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, callback_ta
 void setup(void);
 void loop(void);
 
-//! Start / Stop functions
-void start_device(void);
-void stop_device(void);
+//! Interrupt function
+void execute_isr(void);
 
-//! Reset function
-void (*reset_device)(void) = 0;
+//! --------------------------------------------------
+//! Global Variables
+//! --------------------------------------------------
+
+//! The global ring buffer type
+RingBuff_t buffer;
+
+/**
+ * We create a device map
+ */
+uint8_t devices[NUMBER_OF_SPI_DEVICES] = {ADS1298_DEVICE};
+
+/**
+ * SPI Settings definition structure
+ */
+spi_settings_t spi_settings = {
+						FALSE,					//! Not in slave mode
+						NONE,					//! No service method
+			
+						SPI_MODE1,				//! set to SPI mode 1
+						MSBFIRST,				//! msb first
+						SPI_CLOCK_DIV16,		//! devide speed by 6 (16M/6)
+						NUMBER_OF_SPI_DEVICES,	//! Only one device on
+						devices				//! Address of the device
+						};
+
+//! A protocol handler
+ConnectionProtocolHandler protocol_handler(&buffer, &Serial);
+
+/**
+ * This is the callback table used for the bluetooth driver.
+ */
+struct callback_t callback_table[] = {
+
+		// COMMAND,				METHOD POINTER, 							OBJECT POINTER
+
+		//! Generic commands
+		REBOOT,					ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
+		RESET,					ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
+		SUSPEND,				ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
+		RESUME,					ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
+		START,					ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
+
+		//! We using the request based method
+		GET,					ConnectionProtocolHandler::request,			(void*)&protocol_handler
+};
+
+//! The Bluetooth Command dispatcher
+Bluetooth_Dispatcher dispatcher(&Serial);
+
+//! The ADS1298 Driver object
+//! 	- Here we use the default setup function.... We could change it
+ADS1298_Driver ads1298_driver(&buffer, devices, &spi_settings);
+
+//! The CC2540 Driver
+//! 	- Here we use the default setup function.... We could change it
+CC2540_Driver cc2540_driver((char*)"ADS1298", (char*)command_pointers, &dispatcher);
+
+//! The connection
+Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, &protocol_handler);
+
+
 
 //! --------------------------------------------------
 //! Source Code
@@ -95,20 +112,15 @@ void setup(void){
 	//=========================================
 
 	//! SETUP ADS1298
-	//! We setup the ADS1298 with the default settings
-	ads1298_driver.setup_ads1298(ads1298_driver._init_ads);
-
 	//! We trigger the ISR on the LOW change of the ADS1298 DRDY pin
-	attachInterrupt(PIN_DRDY, ads1298_driver.execute_isr, LOW);
+	attachInterrupt(PIN_DRDY, execute_isr, LOW);
 
 	//! SETUP BLUETOOTH
-	//! We setup the CC2540 device
-	if(cc2540_driver.setup_device()){
-		//! We connect to the host device
-		connection.connect();
-	}else{
-		while(1);
-	}
+	//! Set the callback table within the connection protocol handler
+	protocol_handler.set_callback_table(callback_table);
+	
+	//! We connect to the host device
+	connection.connect();
 }
 
 /**
@@ -123,21 +135,36 @@ void loop(){
 
 	//! We run
 	connection.run();
-
 }
 
 /**
- * This function simply acts as a boolean flag toggle. We use
- * it to start the device data acquisition.
+ * This is the static method that adds one spi data component
+ * to a generic ring buffer for read later on.
  */
-void start_device(void){
-	start = true;
-}
+void execute_isr(void){
 
-/**
- * This function simply acts as a boolean flag toggle. We use
- * it to stop the device data acquisition.
- */
-void stop_device(void){
-	start = false;
+	/**
+	 * This ISR is triggered only when the DRDY signal on the ADS1298 chip
+	 * is asserted, indicating that there is new data stored on the ADS1298
+	 * registers. In which case, this ISR is activated to acquire this data
+	 * and store it within a global context RingBuffer.
+	 */
+
+	//! Here we add data to the buffer.
+	//! We create a buffer object to contain our data.
+	//! Format of the packet:
+	//! 	- 24 bit header + 24 bit * active channels [3 bytes + 3 * # bytes]
+
+	//! We add the spacer at the end of the data array
+	ads1298_driver._rx_buff.data.packet._data[sizeof(ads1298_driver._rx_buff.data.packet._data)] = SPACER;
+
+	//! We get the data and store it within the buffer
+	GHID_SPI::transfer_bulk(ADS1298_DEVICE,
+			ads1298_driver._rx_buff.data.packet_array,
+			DATA_PACKET_SIZE);
+
+	uint8_t size = DATA_PACKET_SIZE;
+	while(size --)
+		//! Then we input the data into the ring buffer
+		RingBuffer_Insert(ads1298_driver._buff, ads1298_driver._rx_buff.data.packet._data[size]);
 }

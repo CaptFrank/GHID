@@ -48,3 +48,11 @@ bool Bluetooth_Dispatcher::run_dispatch(){
 	}
 	return false;
 }
+
+/**
+ * Get access to the response entity.
+ */
+response_t* Bluetooth_Dispatcher::get_response(){
+	return this->_response;
+}
+		

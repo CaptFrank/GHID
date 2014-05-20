@@ -8,8 +8,8 @@
 #ifndef GHIDSPI_H_
 #define GHIDSPI_H_
 
-#include <SPI.h>
 #include <Arduino.h>
+#include "SPI.h"
 
 //! These are hardware definitions for the SPI interface \
 	on the Arduino Mega 2560
@@ -40,7 +40,7 @@ struct buffer_struct_t {
 
 	byte length;
 	byte buffer[MAX_BUFFER];
-}spi_buffer;
+};
 
 //! SPI device settings
 struct spi_settings_t {
@@ -62,7 +62,7 @@ struct spi_settings_t {
  *
  * @see SPI.h
  */
-class GHID_SPI : SPIClass{
+class GHID_SPI {
 
 	//! Public Context
 	public:
@@ -103,7 +103,7 @@ class GHID_SPI : SPIClass{
 	 * @param length - the length to receive
 	 * @param command - the read command
 	 */
-	static buffer_struct_t* read_data(byte device, byte length, byte command);
+	buffer_struct_t* read_data(byte device, byte length, byte command);
 
 	/**
 	 * This checks the spi buffer for any bytes received.
@@ -115,6 +115,9 @@ class GHID_SPI : SPIClass{
 
 	//! The settings container
 	spi_settings_t settings;
+	
+	//! buffer
+	buffer_struct_t spi_buffer;
 
 };
 

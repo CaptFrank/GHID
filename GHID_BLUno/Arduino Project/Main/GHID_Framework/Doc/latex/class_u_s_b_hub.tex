@@ -1,0 +1,246 @@
+\hypertarget{class_u_s_b_hub}{\section{\-U\-S\-B\-Hub \-Class \-Reference}
+\label{class_u_s_b_hub}\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}}
+}
+
+
+{\ttfamily \#include $<$usbhub.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_u_s_b_hub_afa7488b7d65926158f6a029ebf40905c}{\-U\-S\-B\-Hub} (\-U\-S\-B $\ast$p)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_afc935651055e4ac1e51575218a51de43}{\-Clear\-Hub\-Feature} (uint8\-\_\-t fid)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_a03c4dce66fbb4b66be9eda8c9b6f5ce4}{\-Clear\-Port\-Feature} (uint8\-\_\-t fid, uint8\-\_\-t port, uint8\-\_\-t sel=0)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_a73abd87f87d6e2982070bc5bb0183e0d}{\-Get\-Hub\-Descriptor} (uint8\-\_\-t index, uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_a626974bb00cfbd5052c8d7e897a9a9d6}{\-Get\-Hub\-Status} (uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_a01c0b9d64fd5314963e7d7f70c0a99c3}{\-Get\-Port\-Status} (uint8\-\_\-t port, uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_a447ea8659279ca7ac99f93d33b426260}{\-Set\-Hub\-Descriptor} (uint8\-\_\-t port, uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_a933658683f6590cd40ff97d08095f5a2}{\-Set\-Hub\-Feature} (uint8\-\_\-t fid)
+\item 
+uint8\-\_\-t \hyperlink{class_u_s_b_hub_ac071f6cf69d0113151f481405f338ce0}{\-Set\-Port\-Feature} (uint8\-\_\-t fid, uint8\-\_\-t port, uint8\-\_\-t sel=0)
+\item 
+void \hyperlink{class_u_s_b_hub_ac705ffc671398ec2170820c1bb16b77c}{\-Print\-Hub\-Status} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_u_s_b_hub_ab2b2e257556e3d59f9258dd84d6f636e}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_u_s_b_hub_a3f0631a3bb6018319107af2fa2373fab}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_u_s_b_hub_ae2d621225444f3186792617cecffbb1b}{\-Poll} ()
+\item 
+virtual void \hyperlink{class_u_s_b_hub_ae7e4c1e231ce7cb56bae1688c0e95e58}{\-Reset\-Hub\-Port} (uint8\-\_\-t port)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_u_s_b_hub_af4052e34bdafa21db5376a3011778b99}{\-Get\-Address} ()
+\item 
+virtual boolean \hyperlink{class_u_s_b_hub_adb0cf72e220cc16a87da685899dfb820}{\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K} (uint8\-\_\-t klass)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 164 of file usbhub.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_u_s_b_hub_afa7488b7d65926158f6a029ebf40905c}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}}
+\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-U\-S\-B\-Hub}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-U\-S\-B\-Hub\-::\-U\-S\-B\-Hub} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_u_s_b_hub_afa7488b7d65926158f6a029ebf40905c}
+
+
+\-Definition at line 21 of file usbhub.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_u_s_b_hub_afc935651055e4ac1e51575218a51de43}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Clear\-Hub\-Feature@{\-Clear\-Hub\-Feature}}
+\index{\-Clear\-Hub\-Feature@{\-Clear\-Hub\-Feature}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Clear\-Hub\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Clear\-Hub\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{fid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_afc935651055e4ac1e51575218a51de43}
+
+
+\-Definition at line 211 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_a03c4dce66fbb4b66be9eda8c9b6f5ce4}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Clear\-Port\-Feature@{\-Clear\-Port\-Feature}}
+\index{\-Clear\-Port\-Feature@{\-Clear\-Port\-Feature}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Clear\-Port\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Clear\-Port\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{fid, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{uint8\-\_\-t}]{sel = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_a03c4dce66fbb4b66be9eda8c9b6f5ce4}
+
+
+\-Definition at line 216 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_adb0cf72e220cc16a87da685899dfb820}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K@{\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K}}
+\index{\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K@{\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}virtual boolean {\bf \-U\-S\-B\-Hub\-::\-D\-E\-V\-C\-L\-A\-S\-S\-O\-K} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{klass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_u_s_b_hub_adb0cf72e220cc16a87da685899dfb820}
+
+
+\-Definition at line 203 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_af4052e34bdafa21db5376a3011778b99}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_u_s_b_hub_af4052e34bdafa21db5376a3011778b99}
+
+
+\-Definition at line 199 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_a73abd87f87d6e2982070bc5bb0183e0d}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Get\-Hub\-Descriptor@{\-Get\-Hub\-Descriptor}}
+\index{\-Get\-Hub\-Descriptor@{\-Get\-Hub\-Descriptor}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Get\-Hub\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Get\-Hub\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{index, }
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_a73abd87f87d6e2982070bc5bb0183e0d}
+
+
+\-Definition at line 221 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_a626974bb00cfbd5052c8d7e897a9a9d6}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Get\-Hub\-Status@{\-Get\-Hub\-Status}}
+\index{\-Get\-Hub\-Status@{\-Get\-Hub\-Status}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Get\-Hub\-Status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Get\-Hub\-Status} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_a626974bb00cfbd5052c8d7e897a9a9d6}
+
+
+\-Definition at line 226 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_a01c0b9d64fd5314963e7d7f70c0a99c3}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Get\-Port\-Status@{\-Get\-Port\-Status}}
+\index{\-Get\-Port\-Status@{\-Get\-Port\-Status}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Get\-Port\-Status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Get\-Port\-Status} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{port, }
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_a01c0b9d64fd5314963e7d7f70c0a99c3}
+
+
+\-Definition at line 231 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_ab2b2e257556e3d59f9258dd84d6f636e}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_u_s_b_hub_ab2b2e257556e3d59f9258dd84d6f636e}
+
+
+\-Definition at line 42 of file usbhub.\-cpp.
+
+\hypertarget{class_u_s_b_hub_ae2d621225444f3186792617cecffbb1b}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_u_s_b_hub_ae2d621225444f3186792617cecffbb1b}
+
+
+\-Definition at line 227 of file usbhub.\-cpp.
+
+\hypertarget{class_u_s_b_hub_ac705ffc671398ec2170820c1bb16b77c}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Print\-Hub\-Status@{\-Print\-Hub\-Status}}
+\index{\-Print\-Hub\-Status@{\-Print\-Hub\-Status}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Print\-Hub\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-U\-S\-B\-Hub\-::\-Print\-Hub\-Status} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_u_s_b_hub_ac705ffc671398ec2170820c1bb16b77c}
+\hypertarget{class_u_s_b_hub_a3f0631a3bb6018319107af2fa2373fab}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_u_s_b_hub_a3f0631a3bb6018319107af2fa2373fab}
+
+
+\-Definition at line 214 of file usbhub.\-cpp.
+
+\hypertarget{class_u_s_b_hub_ae7e4c1e231ce7cb56bae1688c0e95e58}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Reset\-Hub\-Port@{\-Reset\-Hub\-Port}}
+\index{\-Reset\-Hub\-Port@{\-Reset\-Hub\-Port}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Reset\-Hub\-Port}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-U\-S\-B\-Hub\-::\-Reset\-Hub\-Port} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_u_s_b_hub_ae7e4c1e231ce7cb56bae1688c0e95e58}
+
+
+\-Definition at line 307 of file usbhub.\-cpp.
+
+\hypertarget{class_u_s_b_hub_a447ea8659279ca7ac99f93d33b426260}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Set\-Hub\-Descriptor@{\-Set\-Hub\-Descriptor}}
+\index{\-Set\-Hub\-Descriptor@{\-Set\-Hub\-Descriptor}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Set\-Hub\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Set\-Hub\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{port, }
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_a447ea8659279ca7ac99f93d33b426260}
+
+
+\-Definition at line 236 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_a933658683f6590cd40ff97d08095f5a2}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Set\-Hub\-Feature@{\-Set\-Hub\-Feature}}
+\index{\-Set\-Hub\-Feature@{\-Set\-Hub\-Feature}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Set\-Hub\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Set\-Hub\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{fid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_a933658683f6590cd40ff97d08095f5a2}
+
+
+\-Definition at line 241 of file usbhub.\-h.
+
+\hypertarget{class_u_s_b_hub_ac071f6cf69d0113151f481405f338ce0}{\index{\-U\-S\-B\-Hub@{\-U\-S\-B\-Hub}!\-Set\-Port\-Feature@{\-Set\-Port\-Feature}}
+\index{\-Set\-Port\-Feature@{\-Set\-Port\-Feature}!USBHub@{\-U\-S\-B\-Hub}}
+\subsubsection[{\-Set\-Port\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-U\-S\-B\-Hub\-::\-Set\-Port\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{fid, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{uint8\-\_\-t}]{sel = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_u_s_b_hub_ac071f6cf69d0113151f481405f338ce0}
+
+
+\-Definition at line 246 of file usbhub.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{usbhub_8h}{usbhub.\-h}\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{usbhub_8cpp}{usbhub.\-cpp}\end{DoxyCompactItemize}

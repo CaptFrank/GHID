@@ -98,25 +98,6 @@ typedef struct rx_buffer_t {
 };
 
 /**
- * We create a device map
- */
-uint8_t _devices[] = {ADS1298_DEVICE};
-
-/**
- * SPI Settings definition structure
- */
-spi_settings_t spi_settings = { 
-								FALSE,					//! Not in slave mode
-								NONE,					//! No service method
-								
-								SPI_MODE1,				//! set to SPI mode 1
-								MSBFIRST,				//! msb first
-								SPI_CLOCK_DIV16,		//! devide speed by 6 (16M/6)
-								NUMBER_OF_SPI_DEVICES,	//! Only one device on
-								_devices				//! Address of the device
-							   };
-
-/**
  * This is the ADS1298 Driver. It handles the reads and writes to the ADS1298
  * device.
  */
@@ -129,17 +110,14 @@ class ADS1298_Driver : public GHID_SPI {
 		 * This is the default constructor for the class
 		 *
 		 * @param buff							- The general context ring buffer
+		 * @param setup_method					- The setup method called.
+		 * @param devices						- The device array
+		 * @param spi_settings					- The SPI settings
 		 */
-		ADS1298_Driver(RingBuff_t* buff);
-
-		/**
-		 * This method sets up the ADS1298 chip
-		 * @param setup_method					- The setup method.
-		 *  										- Allows to customize the setup sequence
-		 * 											based on needs. By default we set to the
-		 * 											internal method.
-		 */
-		void setup_ads1298(void(*setup_method)(ADS1298_Driver* driver));
+		ADS1298_Driver(RingBuff_t* buff, 
+					   uint8_t* devices, 
+					   spi_settings_t* settings,
+					   void (*setup_method)(ADS1298_Driver* driver) = _init_ads);
 
 		/**
 		 * This method reads a byte from the ADS1298 chip
@@ -169,17 +147,14 @@ class ADS1298_Driver : public GHID_SPI {
 		 */
 		void check_active_channels();
 
-		/**
-		 * This is the static method that adds one spi data component
-		 * to a generic ring buffer for read later on.
-		 */
-		void execute_isr();
+		//! The internal Ring Buffer access
+		RingBuff_t* _buff;
+
+		//! The internal rx buffer type
+		rx_buffer_t _rx_buff;
 
 	//! Private Context
 	private:
-
-		//! Internal setup method pointer
-		static void(*_setup_method)(ADS1298_Driver* driver);
 
 		//! Configuration structure
 		struct {
@@ -198,13 +173,13 @@ class ADS1298_Driver : public GHID_SPI {
 			uint8_t _active;
 
 		}_configs;
-
-		//! The internal Ring Buffer access
-		RingBuff_t* _buff;
-
-		//! The internal rx buffer type
-		rx_buffer_t _rx_buff;
-
+		
+		//! device map
+		uint8_t* _devices;
+		
+		//! spi settings
+		spi_settings_t* _settings;
+		
 		//! Init methods
 
 		/**
@@ -215,7 +190,7 @@ class ADS1298_Driver : public GHID_SPI {
 		/**
 		 * This sets up the ADS1298 chip to function
 		 */
-		void _init_ads(ADS1298_Driver* driver);
+		static void _init_ads(ADS1298_Driver* driver);
 
 		/**
 		 * Reset the entire ADS1298 chip

@@ -122,7 +122,7 @@ enum id_bits {
  */
 enum config1_bits {
 
-	SINGLE_SHOT 				= 0x80,                            	//!< SINGLE_SHOT
+	HR 							= 0x80,                            	//!< HR
 	DR2 						= 0x04,                            	//!< DR2
 	DR1 						= 0x02,                         	//!< DR1
 	DR0 						= 0x01,                             //!< DR0
@@ -130,14 +130,14 @@ enum config1_bits {
 	CLK_EN 						= 0x20,                             //!< CLK_EN
 
 	CONFIG1_const 				= 0x00,                            	//!< CONFIG1_const
-	HIGH_RES_32k_SPS 			= SINGLE_SHOT,            			//!< HIGH_RES_32k_SPS
-	HIGH_RES_16k_SPS 			= (SINGLE_SHOT | DR0),      		//!< HIGH_RES_16k_SPS
-	HIGH_RES_8k_SPS 			= (SINGLE_SHOT | DR1),      		//!< HIGH_RES_8k_SPS
-	HIGH_RES_4k_SPS 			= (SINGLE_SHOT | DR1 | DR0), 		//!< HIGH_RES_4k_SPS
-	HIGH_RES_2k_SPS 			= (SINGLE_SHOT | DR2),       		//!< HIGH_RES_2k_SPS
-	HIGH_RES_1k_SPS 			= (SINGLE_SHOT | DR2 | DR0), 		//!< HIGH_RES_1k_SPS
-	HIGH_RES_500_SPS 			= (SINGLE_SHOT | DR2 | DR1),		//!< HIGH_RES_500_SPS
-	LOW_POWR_250_SPS 			= (SINGLE_SHOT | DR1)       		//!< LOW_POWR_250_SPS
+	HIGH_RES_32k_SPS 			= HR,            					//!< HIGH_RES_32k_SPS
+	HIGH_RES_16k_SPS 			= (HR | DR0),      					//!< HIGH_RES_16k_SPS
+	HIGH_RES_8k_SPS 			= (HR | DR1),      					//!< HIGH_RES_8k_SPS
+	HIGH_RES_4k_SPS 			= (HR | DR1 | DR0), 				//!< HIGH_RES_4k_SPS
+	HIGH_RES_2k_SPS 			= (HR | DR2),       				//!< HIGH_RES_2k_SPS
+	HIGH_RES_1k_SPS 			= (HR | DR2 | DR0), 				//!< HIGH_RES_1k_SPS
+	HIGH_RES_500_SPS 			= (HR | DR2 | DR1),					//!< HIGH_RES_500_SPS
+	LOW_POWR_250_SPS 			= (HR | DR1)       					//!< LOW_POWR_250_SPS
 };
 
 //! -------------------------------------------------------------------------------

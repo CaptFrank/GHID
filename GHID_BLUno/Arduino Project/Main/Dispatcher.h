@@ -8,6 +8,8 @@
 #ifndef DISPATCHER_H_
 #define DISPATCHER_H_
 
+#include <Arduino.h>
+
 #define MAX_RESPONSE_SIZE				20
 
 /**
@@ -38,11 +40,6 @@ class Dispatcher {
 	public:
 
 		/**
-		 * The default constructor for the class
-		 */
-		virtual Dispatcher(HardwareSerial* serial);
-
-		/**
 		 * This is the virtual setup method for the class
 		 */
 		virtual void setup_dispatch(uint8_t* command_ptr, uint8_t length);
@@ -53,7 +50,7 @@ class Dispatcher {
 		virtual bool run_dispatch();
 
 	//! Private Context
-	private:
+	protected:
 
 		//! Internal access to the Serial stream
 		HardwareSerial* _serial;
@@ -63,11 +60,6 @@ class Dispatcher {
 
 		//! The response buffer
 		response_t _response;
-
-		/**
-		 * This is the virtual destructor for the class.
-		 */
-		virtual ~Dispatcher();
 
 		/**
 		 * This method creates a dispatch item.
@@ -90,7 +82,7 @@ class Dispatcher {
 		 * @param timeout 								- The connection timeout (ms)
 		 * @return response_t							- The response from the device
 		 */
-		response_t _receive_dispatch_answer(uint8_t timeout);
+		response_t* _receive_dispatch_answer(uint8_t timeout);
 };
 
 #endif /* DISPATCHER_H_ */

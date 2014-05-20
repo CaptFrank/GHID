@@ -14,7 +14,7 @@
  */
 Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_serial,
 						connection_type_t type, RingBuff_t* ring,
-						ConnectionProtocolHandler* handler){
+						ConnectionProtocolHandler* handler) : Connection_Handler(this->_table){
 
 	//! Set the internal serial port
 	this->_serial = hw_serial;
@@ -22,8 +22,6 @@ Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_se
 	this->run = 0x00;
 	this->_buff = ring;
 	this->_handler = handler;
-
-	this->Connection_Handler(this->_table);
 
 	//! Initialize it
 	this->_serial->begin(BAUDRATE);

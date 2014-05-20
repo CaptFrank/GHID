@@ -19,32 +19,26 @@
  *
  * @param buff							- The general context ring buffer
  */
-ADS1298_Driver::ADS1298_Driver(void(*setup_method)(void) = this->_setup_method, RingBuff_t* buff){
+ADS1298_Driver::ADS1298_Driver(RingBuff_t* buff) : GHID_SPI(&spi_settings){
 
-	//! Assign the global ring buffer type intenally
+	//! Assign the global ring buffer type internally
 	this->_buff = buff;
-	this->_rx_buff = NONE;
 
 	//! We then init the buffer
 	RingBuffer_InitBuffer(this->_buff);
 
 	//! Here we setup the pins
 	this->_init_pins();
-
-	//! Here we setup the SPI bus
-	this->_init_spi();
-
-	//! Set the setup method
-	this->_setup_method = setup_method;
 }
 
 /**
  * This method sets up the ADS1298 chip
  */
-void ADS1298_Driver::setup_ads1298(){
+void ADS1298_Driver::setup_ads1298(void(*setup_method)(ADS1298_Driver* driver)){
 
 	//! We setup the ADS1298
-	this->_init_ads();
+	//! Set the setup method
+	this->_setup_method = setup_method;
 }
 
 /**
@@ -61,15 +55,15 @@ uint8_t ADS1298_Driver::read_byte(int reg_address){
 		this->_unset_ss_pin();
 
 	  //! Send the address to read
-	  this->transfer(RREG | reg_address);
+	  SPI.transfer(RREG | reg_address);
 	  delayMicroseconds(5);
 
 	  //! Send the number of bytes to read - 1
-	  this->transfer(0);
+	  SPI.transfer(0);
 	  delayMicroseconds(5);
 
 	  //! Send the read command @ byte 0
-	  out = this->transfer(0);
+	  out = SPI.transfer(0);
 	  delayMicroseconds(1);
 
 	  //! Deactivate the SPI Device
@@ -89,15 +83,15 @@ void ADS1298_Driver::write_byte(int reg_address, uint8_t val_hex){
 	this->_unset_ss_pin();
 
 	//! Send the address to write to
-	this->transfer(WREG | reg_address);
+	SPI.transfer(WREG | reg_address);
 	delayMicroseconds(5);
 
 	//! Send the number of bytes to write - 1
-	this->transfer(0);
+	SPI.transfer(0);
 	delayMicroseconds(5);
 
 	//! Transfer the value to write
-	this->transfer(val_hex);
+	SPI.transfer(val_hex);
 	delayMicroseconds(1);
 
 	//! Deactivate the SPI device
@@ -117,7 +111,7 @@ void ADS1298_Driver::send_command(uint8_t cmd){
 	this->_unset_ss_pin();
 
 	//! Send the data byte
-	this->transfer(cmd);
+	SPI.transfer(cmd);
 
 	//! Stop listening
 	this->_set_ss_pin();
@@ -134,7 +128,7 @@ void ADS1298_Driver::check_active_channels(){
 		return;
 
 	//! We reset the internal active channels
-	this->_configs._active_channels = NONE;
+	this->_configs._active_channels.channel_byte = NONE;
 	this->_configs._num_active_channels = NONE;
 
 	//! We loop the channels to see which ones are active and which are not
@@ -172,11 +166,11 @@ void ADS1298_Driver::execute_isr(void){
 	this->_rx_buff.data.packet._data[sizeof(_rx_buff.data.packet._data)] = SPACER;
 
 	//! We get the data and store it within the buffer
-	GHID_SPI::transfer_bulk(DEVICE_ADS1298,
+	GHID_SPI::transfer_bulk(ADS1298_DEVICE,
 			this->_rx_buff.data.packet_array,
-			this->_rx_buff._size);
+			DATA_PACKET_SIZE);
 
-	uint8_t size = this->_rx_buff._size;
+	uint8_t size = DATA_PACKET_SIZE;
 	while(size --)
 		//! Then we input the data into the ring buffer
 		RingBuffer_Insert(this->_buff, this->_rx_buff.data.packet._data[size]);
@@ -215,85 +209,68 @@ void ADS1298_Driver::_init_pins(){
 }
 
 /**
- * This sets up the SPI bus
- */
-void ADS1298_Driver::_init_spi(){
-
-	//! We build a spi settings structure
-	spi_settings_t settings;
-	settings.bit_order = MSBFIRST;
-	settings.clock_divider = SPI_CLOCK_DIV16;
-	settings.data_mode = SPI_MODE1;
-	settings.attach_interrupt = FALSE; //! MASTER MODE
-	settings.map = this->_map;
-
-	//! Create the SPI object
-	this->GHID_SPI(&settings);
-}
-
-/**
  * This sets up the ADS1298 chip to function
  */
-void ADS1298_Driver::_init_ads(){
+void ADS1298_Driver::_init_ads(ADS1298_Driver* driver){
 
 	//! Let the ads1298 time to boot up
 	delay(ONE_MILLI);
 
 	//! Start read command is written
-	this->send_command(SDATAC);
+	driver->send_command(SDATAC);
 
 	//! Wait 10 milliseconds
 	delay(ONE_MILLI * 10);
 
 	//! Check the model number and the available channels
-	this->_configs._id = this->read_byte(ID);
+	driver->_configs._id = driver->read_byte(ID);
 
 	//! We check the number of channels available
-	switch (this->_configs._id & B00011111) {
+	switch (driver->_configs._id & B00011111) {
 
 		//! ADS1294
 		case  B10000: //16
-	        this->_configs._channels = 4;
+	        driver->_configs._channels = 4;
 	        break;
 
 	    //! ADS1296
 		case B10001: //17
-			this->_configs._channels = 6;
+			driver->_configs._channels = 6;
 	        break;
 
 	    //! ADS1298
 		case B10010: //18
-			this->_configs._channels = 8;
+			driver->_configs._channels = 8;
 	        break;
 
 	    //! ADS1299
 		case B11110: //30
-			this->_configs._channels = 8;
+			driver->_configs._channels = 8;
 	        break;
 
 		default:
-			this->_configs._channels = 0;
+			driver->_configs._channels = 0;
 	        break;
 	  }
 
     //! All GPIO set to output 0x0000: (floating CMOS inputs can flicker on and off, creating noise)
-	this->write_byte(GPIO, EMPTY);
-	this-write_byte(CONFIG3, PD_REFBUF | CONFIG3_const);
+	driver->write_byte(GPIO, EMPTY);
+	driver->write_byte(CONFIG3, PD_REFBUF | CONFIG3_const);
 
 	//! Setup sampling rate
-	this-write_byte(CONFIG1, HIGH_RES_1k_SPS);
+	driver->write_byte(CONFIG1, HIGH_RES_1k_SPS);
 
 	//! Set the 8 channels to input signal
 	//! Set each channel to have 12x gain
 	for (register uint8_t i = 1; i < 9; i++) {
-		this-write_byte(CHnSET + i, ELECTRODE_INPUT | GAIN_12X); //report this channel with x12 gain
+		driver->write_byte(CHnSET + i, ELECTRODE_INPUT | GAIN_12X); //report this channel with x12 gain
 	}
 
 	//! Check active channels
-	this->check_active_channels();
+	driver->check_active_channels();
 
 	//! We start the ads1298
-	this->_start_ads1298();
+	driver->_start_ads1298();
 }
 
 /**
@@ -348,7 +325,7 @@ void ADS1298_Driver::_stop_ads1298(){
 void ADS1298_Driver::_set_ss_pin(){
 
 	//! We trigger the CS
-	digitalWrite(DEVICE_ADS1298, HIGH);
+	digitalWrite(ADS1298_DEVICE, HIGH);
 }
 
 /**
@@ -357,7 +334,7 @@ void ADS1298_Driver::_set_ss_pin(){
 void ADS1298_Driver::_unset_ss_pin(){
 
 	//! We assert low the ss pin
-	digitalWrite(DEVICE_ADS1298, LOW);
+	digitalWrite(ADS1298_DEVICE, LOW);
 }
 
 /**

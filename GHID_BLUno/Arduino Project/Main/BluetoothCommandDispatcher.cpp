@@ -48,10 +48,3 @@ bool Bluetooth_Dispatcher::run_dispatch(){
 	}
 	return false;
 }
-
-//! Private Context
-
-/**
- * This is the virtual destructor for the class.
- */
-Bluetooth_Dispatcher::~Bluetooth_Dispatcher(){}

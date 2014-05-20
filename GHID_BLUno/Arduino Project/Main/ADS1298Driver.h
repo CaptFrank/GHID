@@ -43,25 +43,18 @@
 #define NONE					0x00
 #define SPACER					0x00
 
+//! SPI Device settings
+#define NUMBER_OF_SPI_DEVICES	1
+#define ADS1298_DEVICE			13
+
 //! Packet defines
 #define HEADER					3
 #define CHANNEL_RESOLUTION		3
 #define NUM_CHANNELS			8
 #define DATA_PACKET_SIZE		HEADER + (CHANNEL_RESOLUTION * NUM_CHANNELS)
 
-//! This is a spi network device list.
-//! You must implement this map with the appropriate pin allocations
-//! so that SS can select propertly.
-
-//! We define the SPI CS map
-#define SPI_MAP //! We define the spi map
-typedef enum spi_device_address_map_t {
-
-	START_DEVICE_ENUM,
-	DEVICE_ADS1298 = PIN_SS, //! OUR DEVICE SS
-	END_DEVICE_ENUM
-
-};
+//! This initializes the pinout and the device map.
+#define __ATMEGA_32__
 
 /**
  * We define a structure that tells us which channels are ON and
@@ -102,16 +95,32 @@ typedef struct rx_buffer_t {
 		}packet;
 		uint8_t packet_array[HEADER + (DATA_PACKET_SIZE)];
 	}data;
-
-	const uint8_t _size = DATA_PACKET_SIZE;
-
 };
+
+/**
+ * We create a device map
+ */
+uint8_t _devices[] = {ADS1298_DEVICE};
+
+/**
+ * SPI Settings definition structure
+ */
+spi_settings_t spi_settings = { 
+								FALSE,					//! Not in slave mode
+								NONE,					//! No service method
+								
+								SPI_MODE1,				//! set to SPI mode 1
+								MSBFIRST,				//! msb first
+								SPI_CLOCK_DIV16,		//! devide speed by 6 (16M/6)
+								NUMBER_OF_SPI_DEVICES,	//! Only one device on
+								_devices				//! Address of the device
+							   };
 
 /**
  * This is the ADS1298 Driver. It handles the reads and writes to the ADS1298
  * device.
  */
-class ADS1298_Driver : GHID_SPI {
+class ADS1298_Driver : public GHID_SPI {
 
 	//! Public Context
 	public:
@@ -119,19 +128,18 @@ class ADS1298_Driver : GHID_SPI {
 		/**
 		 * This is the default constructor for the class
 		 *
-		 * @param setup_method					- The setup method.
-		 * 										- Allows to customize the setup sequence
-		 * 											based on needs. By default we set to the
-		 * 											internal method.
-		 *
 		 * @param buff							- The general context ring buffer
 		 */
-		ADS1298_Driver(void(*setup_method)(void) = this->_setup_method, RingBuff_t* buff);
+		ADS1298_Driver(RingBuff_t* buff);
 
 		/**
 		 * This method sets up the ADS1298 chip
+		 * @param setup_method					- The setup method.
+		 *  										- Allows to customize the setup sequence
+		 * 											based on needs. By default we set to the
+		 * 											internal method.
 		 */
-		void setup_ads1298();
+		void setup_ads1298(void(*setup_method)(ADS1298_Driver* driver));
 
 		/**
 		 * This method reads a byte from the ADS1298 chip
@@ -171,7 +179,7 @@ class ADS1298_Driver : GHID_SPI {
 	private:
 
 		//! Internal setup method pointer
-		void(*_setup_method)(void);
+		static void(*_setup_method)(ADS1298_Driver* driver);
 
 		//! Configuration structure
 		struct {
@@ -197,9 +205,6 @@ class ADS1298_Driver : GHID_SPI {
 		//! The internal rx buffer type
 		rx_buffer_t _rx_buff;
 
-		//! The device map
-		spi_device_address_map_t _map;
-
 		//! Init methods
 
 		/**
@@ -208,14 +213,9 @@ class ADS1298_Driver : GHID_SPI {
 		void _init_pins();
 
 		/**
-		 * This sets up the SPI bus
-		 */
-		void _init_spi();
-
-		/**
 		 * This sets up the ADS1298 chip to function
 		 */
-		void _init_ads();
+		void _init_ads(ADS1298_Driver* driver);
 
 		/**
 		 * Reset the entire ADS1298 chip

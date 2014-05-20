@@ -17,7 +17,7 @@
 typedef struct tx_buffer_t {
 
 	uint8_t _data[DATA_PACKET_SIZE];
-	const uint8_t _size = DATA_PACKET_SIZE;
+	static const uint8_t _size = DATA_PACKET_SIZE;
 };
 
 /**
@@ -100,15 +100,10 @@ class Connection_Handler {
 		virtual void write(buffer_t* buf);
 
 	//! Private Context
-	private:
+	protected:
 
 		//! Connection type
 		connection_type_t _con_type;
-
-		/**
-		 * This is the virtual deconstructor for the class.
-		 */
-		virtual ~Connection_Handler();
 };
 
 #endif /* CONNECTIONHANDLER_H_ */

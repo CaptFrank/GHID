@@ -49,11 +49,6 @@ class Bluetooth_Dispatcher : public Dispatcher{
 
 		//! The response pointer
 		response_t* _response;
-
-		/**
-		 * This is the virtual destructor for the class.
-		 */
-		~Bluetooth_Dispatcher();
 };
 
 #endif /* BLUETOOTHDISPATCHER_H_ */

@@ -34,7 +34,7 @@ void Dispatcher::_send_dispatch(dispatch_t* dispatch){
  * @param timeout 								- The connection timeout (ms)
  * @return response_t							- The response from the device
  */
-response_t Dispatcher::_receive_dispatch_answer(uint8_t timeout){
+response_t* Dispatcher::_receive_dispatch_answer(uint8_t timeout){
 
 	//! Index
 	uint8_t index = 0;
@@ -48,7 +48,7 @@ response_t Dispatcher::_receive_dispatch_answer(uint8_t timeout){
 		delay(100);
 	}
 
-	return this->_response;
+	return &this->_response;
 }
 
 

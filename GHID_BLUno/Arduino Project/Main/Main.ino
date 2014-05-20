@@ -96,7 +96,7 @@ void setup(void){
 
 	//! SETUP ADS1298
 	//! We setup the ADS1298 with the default settings
-	ads1298_driver.setup_ads1298();
+	ads1298_driver.setup_ads1298(ads1298_driver._init_ads);
 
 	//! We trigger the ISR on the LOW change of the ADS1298 DRDY pin
 	attachInterrupt(PIN_DRDY, ads1298_driver.execute_isr, LOW);

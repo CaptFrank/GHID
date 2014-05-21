@@ -142,7 +142,7 @@ prog_char help[]		 					PROGMEM = "?\r\n";
 /**
  * Generic Enter AT Mode command
  */
-prog_char at_mode[]							PROGMEM = "+++\r\n";
+prog_char at_mode[]							PROGMEM = "+++";
 
 /**
  * Generic String formatter.

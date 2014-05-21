@@ -1,7 +1,7 @@
  \
- C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\BluetoothConnectionHandler.cpp.o:  \
- C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\BluetoothConnectionHandler.cpp \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothConnectionHandler.h \
+ C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\MMA7361LDriver.cpp.o:  \
+ C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\MMA7361LDriver.cpp \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/MMA7361LDriver.h \
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/Arduino.h \
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/binary.h \
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/WCharacter.h \
@@ -13,8 +13,7 @@
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/new.h \
   C:\Program\ Files\Arduino\hardware\arduino\variants\standard/pins_arduino.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/Utilities.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ConnectionProtocolHandler.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/DataProcessor.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/RingBuffer.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ConnectionHandler.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothConnectionCommands.h
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/AnalogSensorDriver.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADCDriver.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/FIRFilter.h

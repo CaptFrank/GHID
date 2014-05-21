@@ -1,0 +1,142 @@
+.TH "PS4BT" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PS4BT \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PS4BT\&.h>\fP
+.PP
+Inherits \fBBTHID\fP, and \fBPS4Parser\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPS4BT\fP (\fBBTD\fP *p, bool \fBpair\fP=false, const char *pin='0000')"
+.br
+.ti -1c
+.RI "bool \fBconnected\fP ()"
+.br
+.ti -1c
+.RI "void \fBattachOnInit\fP (void(*funcOnInit)(void))"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.PP
+.RI "\fBBTHID implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBParseBTHIDData\fP (uint8_t len, uint8_t *buf)"
+.br
+.ti -1c
+.RI "virtual void \fBOnInitBTHID\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBResetBTHID\fP ()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBPS4Parser implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBsendOutputReport\fP (\fBPS4Output\fP *output)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements support for the PS4 controller via Bluetooth\&. It uses the \fBBTHID\fP class for all the Bluetooth communication\&. 
+.PP
+Definition at line 28 of file PS4BT\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBPS4BT::PS4BT\fP (\fBBTD\fP *p, boolpair = \fCfalse\fP, const char *pin = \fC'0000'\fP)\fC [inline]\fP"Constructor for the \fBPS4BT\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP Pointer to the \fBBTD\fP class instance\&. 
+.br
+\fIpair\fP Set this to true in order to pair with the device\&. If the argument is omitted then it will not pair with it\&. One can use \fBPAIR\fP to set it to true\&. 
+.br
+\fIpin\fP Write the pin to \fBBTD::btdPin\fP\&. If argument is omitted, then '0000' will be used\&. 
+.RE
+.PP
+
+.PP
+Definition at line 36 of file PS4BT\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBPS4BT::attachOnInit\fP (void(*)(void)funcOnInit)\fC [inline]\fP"Used to call your own function when the device is successfully initialized\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfuncOnInit\fP Function to call\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBBTHID\fP\&.
+.PP
+Definition at line 53 of file PS4BT\&.h\&.
+.SS "bool \fBPS4BT::connected\fP ()\fC [inline]\fP"Used to check if a PS4 controller is connected\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns true if it is connected\&. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file PS4BT\&.h\&.
+.SS "virtual void \fBPS4BT::OnInitBTHID\fP ()\fC [inline, protected, virtual]\fP"Called when a device is successfully initialized\&. Use attachOnInit(void (*funcOnInit)(void)) to call your own function\&. This is useful for instance if you want to set the LEDs in a specific way\&. 
+.PP
+Reimplemented from \fBBTHID\fP\&.
+.PP
+Definition at line 74 of file PS4BT\&.h\&.
+.SS "virtual void \fBPS4BT::ParseBTHIDData\fP (uint8_tlen, uint8_t *buf)\fC [inline, protected, virtual]\fP"Used to parse Bluetooth \fBHID\fP data\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbthid\fP Pointer to the \fBBTHID\fP class\&. 
+.br
+\fIlen\fP The length of the incoming data\&. 
+.br
+\fIbuf\fP Pointer to the data buffer\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBBTHID\fP\&.
+.PP
+Definition at line 65 of file PS4BT\&.h\&.
+.SS "virtual void \fBPS4BT::ResetBTHID\fP ()\fC [inline, protected, virtual]\fP"Used to reset the different buffers to there default values 
+.PP
+Reimplemented from \fBBTHID\fP\&.
+.PP
+Definition at line 84 of file PS4BT\&.h\&.
+.SS "virtual void \fBPS4BT::sendOutputReport\fP (\fBPS4Output\fP *output)\fC [inline, protected, virtual]\fP"Send the output to the PS4 controller\&. This is implemented in \fBPS4BT\&.h\fP and \fBPS4USB\&.h\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutput\fP Pointer to \fBPS4Output\fP buffer; 
+.RE
+.PP
+
+.PP
+Implements \fBPS4Parser\fP\&.
+.PP
+Definition at line 90 of file PS4BT\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

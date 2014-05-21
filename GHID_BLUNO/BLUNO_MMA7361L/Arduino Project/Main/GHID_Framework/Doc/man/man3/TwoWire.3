@@ -1,0 +1,171 @@
+.TH "TwoWire" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TwoWire \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Wire\&.h>\fP
+.PP
+Inherited by \fBGHID_I2C\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTwoWire\fP ()"
+.br
+.ti -1c
+.RI "void \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "void \fBbegin\fP (uint8_t)"
+.br
+.ti -1c
+.RI "void \fBbegin\fP (int)"
+.br
+.ti -1c
+.RI "void \fBbeginTransmission\fP (uint8_t)"
+.br
+.ti -1c
+.RI "void \fBbeginTransmission\fP (int)"
+.br
+.ti -1c
+.RI "uint8_t \fBendTransmission\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBendTransmission\fP (uint8_t)"
+.br
+.ti -1c
+.RI "uint8_t \fBrequestFrom\fP (uint8_t, uint8_t)"
+.br
+.ti -1c
+.RI "uint8_t \fBrequestFrom\fP (uint8_t, uint8_t, uint8_t)"
+.br
+.ti -1c
+.RI "uint8_t \fBrequestFrom\fP (int, int)"
+.br
+.ti -1c
+.RI "uint8_t \fBrequestFrom\fP (int, int, int)"
+.br
+.ti -1c
+.RI "virtual size_t \fBwrite\fP (uint8_t)"
+.br
+.ti -1c
+.RI "virtual size_t \fBwrite\fP (const uint8_t *, size_t)"
+.br
+.ti -1c
+.RI "virtual int \fBavailable\fP (void)"
+.br
+.ti -1c
+.RI "virtual int \fBread\fP (void)"
+.br
+.ti -1c
+.RI "virtual int \fBpeek\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBflush\fP (void)"
+.br
+.ti -1c
+.RI "void \fBonReceive\fP (void(*)(int))"
+.br
+.ti -1c
+.RI "void \fBonRequest\fP (void(*)(void))"
+.br
+.ti -1c
+.RI "size_t \fBwrite\fP (unsigned long n)"
+.br
+.ti -1c
+.RI "size_t \fBwrite\fP (long n)"
+.br
+.ti -1c
+.RI "size_t \fBwrite\fP (unsigned int n)"
+.br
+.ti -1c
+.RI "size_t \fBwrite\fP (int n)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 30 of file Wire\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBTwoWire::TwoWire\fP ()"
+.PP
+Definition at line 48 of file Wire\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int \fBTwoWire::available\fP (void)\fC [virtual]\fP"
+.PP
+Definition at line 203 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::begin\fP (void)"
+.PP
+Definition at line 54 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::begin\fP (uint8_taddress)"
+.PP
+Definition at line 65 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::begin\fP (intaddress)"
+.PP
+Definition at line 73 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::beginTransmission\fP (uint8_taddress)"
+.PP
+Definition at line 108 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::beginTransmission\fP (intaddress)"
+.PP
+Definition at line 119 of file Wire\&.cpp\&.
+.SS "uint8_t \fBTwoWire::endTransmission\fP (void)"
+.PP
+Definition at line 152 of file Wire\&.cpp\&.
+.SS "uint8_t \fBTwoWire::endTransmission\fP (uint8_tsendStop)"
+.PP
+Definition at line 137 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::flush\fP (void)\fC [virtual]\fP"
+.PP
+Definition at line 238 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::onReceive\fP (void(*)(int)function)"
+.PP
+Definition at line 284 of file Wire\&.cpp\&.
+.SS "void \fBTwoWire::onRequest\fP (void(*)(void)function)"
+.PP
+Definition at line 290 of file Wire\&.cpp\&.
+.SS "int \fBTwoWire::peek\fP (void)\fC [virtual]\fP"
+.PP
+Definition at line 227 of file Wire\&.cpp\&.
+.SS "int \fBTwoWire::read\fP (void)\fC [virtual]\fP"
+.PP
+Definition at line 211 of file Wire\&.cpp\&.
+.SS "uint8_t \fBTwoWire::requestFrom\fP (uint8_taddress, uint8_tquantity)"
+.PP
+Definition at line 93 of file Wire\&.cpp\&.
+.SS "uint8_t \fBTwoWire::requestFrom\fP (uint8_taddress, uint8_tquantity, uint8_tsendStop)"
+.PP
+Definition at line 78 of file Wire\&.cpp\&.
+.SS "uint8_t \fBTwoWire::requestFrom\fP (intaddress, intquantity)"
+.PP
+Definition at line 98 of file Wire\&.cpp\&.
+.SS "uint8_t \fBTwoWire::requestFrom\fP (intaddress, intquantity, intsendStop)"
+.PP
+Definition at line 103 of file Wire\&.cpp\&.
+.SS "size_t \fBTwoWire::write\fP (uint8_tdata)\fC [virtual]\fP"
+.PP
+Definition at line 160 of file Wire\&.cpp\&.
+.SS "size_t \fBTwoWire::write\fP (const uint8_t *data, size_tquantity)\fC [virtual]\fP"
+.PP
+Definition at line 185 of file Wire\&.cpp\&.
+.SS "size_t \fBTwoWire::write\fP (unsigned longn)\fC [inline]\fP"
+.PP
+Definition at line 69 of file Wire\&.h\&.
+.SS "size_t \fBTwoWire::write\fP (longn)\fC [inline]\fP"
+.PP
+Definition at line 70 of file Wire\&.h\&.
+.SS "size_t \fBTwoWire::write\fP (unsigned intn)\fC [inline]\fP"
+.PP
+Definition at line 71 of file Wire\&.h\&.
+.SS "size_t \fBTwoWire::write\fP (intn)\fC [inline]\fP"
+.PP
+Definition at line 72 of file Wire\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

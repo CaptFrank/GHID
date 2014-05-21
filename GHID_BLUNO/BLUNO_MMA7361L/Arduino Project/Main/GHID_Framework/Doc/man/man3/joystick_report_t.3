@@ -1,0 +1,137 @@
+.TH "joystick_report_t" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+joystick_report_t \- 
+.PP
+If the mouse is chosen\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_USB_Structures\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      byte \fBbutton_1\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_2\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_3\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_4\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_5\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_6\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_7\fP: 1"
+.br
+.ti -1c
+.RI "      byte \fBbutton_8\fP: 1"
+.br
+.ti -1c
+.RI "   } \fBbuttons_bits\fP"
+.br
+.RI "\fIDefining the buttons\&. \fP"
+.ti -1c
+.RI "   uint8_t \fBbuttons_byte\fP"
+.br
+.RI "\fIWe can also call the buttons as a group with this byte\&. \fP"
+.ti -1c
+.RI "} \fBbuttons\fP"
+.br
+.RI "\fIButtons can be individually assigned, \\\&. \fP"
+.ti -1c
+.RI "int8_t \fBx_axis\fP"
+.br
+.RI "\fIAxis definition\&. \fP"
+.ti -1c
+.RI "int8_t \fBy_axis\fP"
+.br
+.ti -1c
+.RI "int8_t \fBz_axis\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBspacer\fP"
+.br
+.RI "\fIWe need this to separate our data between the packets\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+If the mouse is chosen\&. 
+
+If the joystick is chosen Creating a structure of variable data\&. This is used to be able to vary the data from the input parameters such as buttons (Setting them HIGH/LOW)\&. 
+.PP
+Definition at line 61 of file GHID_USB_Structures\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "byte \fBjoystick_report_t::button_1\fP"
+.PP
+Definition at line 69 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_2\fP"
+.PP
+Definition at line 70 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_3\fP"
+.PP
+Definition at line 71 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_4\fP"
+.PP
+Definition at line 72 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_5\fP"
+.PP
+Definition at line 73 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_6\fP"
+.PP
+Definition at line 74 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_7\fP"
+.PP
+Definition at line 75 of file GHID_USB_Structures\&.h\&.
+.SS "byte \fBjoystick_report_t::button_8\fP"
+.PP
+Definition at line 76 of file GHID_USB_Structures\&.h\&.
+.SS "or { \&.\&.\&. }  \fBjoystick_report_t::buttons\fP"
+.PP
+Buttons can be individually assigned, \\\&. 
+.SS "struct { \&.\&.\&. }  \fBjoystick_report_t::buttons_bits\fP"
+.PP
+Defining the buttons\&. 
+.SS "uint8_t \fBjoystick_report_t::buttons_byte\fP"
+.PP
+We can also call the buttons as a group with this byte\&. 
+.PP
+Definition at line 80 of file GHID_USB_Structures\&.h\&.
+.SS "uint8_t \fBjoystick_report_t::spacer\fP"
+.PP
+We need this to separate our data between the packets\&. 
+.PP
+Definition at line 89 of file GHID_USB_Structures\&.h\&.
+.SS "int8_t \fBjoystick_report_t::x_axis\fP"
+.PP
+Axis definition\&. 
+.PP
+Definition at line 84 of file GHID_USB_Structures\&.h\&.
+.SS "int8_t \fBjoystick_report_t::y_axis\fP"
+.PP
+Definition at line 85 of file GHID_USB_Structures\&.h\&.
+.SS "int8_t \fBjoystick_report_t::z_axis\fP"
+.PP
+Definition at line 86 of file GHID_USB_Structures\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

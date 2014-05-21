@@ -1,0 +1,209 @@
+\hypertarget{class_g_h_i_d___s_p_i}{\section{\-G\-H\-I\-D\-\_\-\-S\-P\-I \-Class \-Reference}
+\label{class_g_h_i_d___s_p_i}\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+}
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-S\-P\-I.\-h$>$}
+
+\-Inheritance diagram for \-G\-H\-I\-D\-\_\-\-S\-P\-I\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_h_i_d___s_p_i}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_h_i_d___s_p_i_a71372a4a455b9ef0a27026f386d88c8d}{\-G\-H\-I\-D\-\_\-\-S\-P\-I} (\hyperlink{structspi__settings__t}{spi\-\_\-settings\-\_\-t} $\ast$settings)
+\begin{DoxyCompactList}\small\item\em \-Default constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___s_p_i_a9cc5cdee38071b54566c57783443b17b}{tranfer\-\_\-data} (\hyperlink{_g_h_i_d___s_p_i_8h_a9d51766baec84fc8f27a377fb7a1ace7}{spi\-\_\-device\-\_\-address\-\_\-map\-\_\-t} device, byte \hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data})
+\begin{DoxyCompactList}\small\item\em \-Transfer \-Data method. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___s_p_i_adb5f0f373d1c6f3da3bb5323c9ad3ec1}{transfer\-\_\-bulk} (\hyperlink{_g_h_i_d___s_p_i_8h_a9d51766baec84fc8f27a377fb7a1ace7}{spi\-\_\-device\-\_\-address\-\_\-map\-\_\-t} device, byte $\ast$\hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data}, byte length)
+\begin{DoxyCompactList}\small\item\em \-Transfer bulk data. \end{DoxyCompactList}\item 
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} $\ast$ \hyperlink{class_g_h_i_d___s_p_i_a1112a6f569a6e570f166a2976f69291e}{read\-\_\-data} (\hyperlink{_g_h_i_d___s_p_i_8h_a9d51766baec84fc8f27a377fb7a1ace7}{spi\-\_\-device\-\_\-address\-\_\-map\-\_\-t} device, byte length, byte command)
+\begin{DoxyCompactList}\small\item\em \-Read data into a buffer struct. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___s_p_i_a81d883b745c3848fb920df0ceb76ab08}{check\-\_\-spi\-\_\-buffer} ()
+\begin{DoxyCompactList}\small\item\em \-Checks for the isr buffer if its full. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} \hyperlink{class_g_h_i_d___s_p_i_a64390f195aa7bb3e4f4077fb80d89c78}{buffer}
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is an extended class of the \-Arduino \hyperlink{class_s_p_i_class}{\-S\-P\-I\-Class}. \-It provides a wrapper to the \hyperlink{class_s_p_i_class}{\-S\-P\-I\-Class} with additional extra features.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{_s_p_i_8h}{\-S\-P\-I.\-h} 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 59 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_g_h_i_d___s_p_i_a71372a4a455b9ef0a27026f386d88c8d}{\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!GHID_SPI@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-S\-P\-I\-::\-G\-H\-I\-D\-\_\-\-S\-P\-I} (
+\begin{DoxyParamCaption}
+\item[{{\bf spi\-\_\-settings\-\_\-t} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___s_p_i_a71372a4a455b9ef0a27026f386d88c8d}
+
+
+\-Default constructor. 
+
+\-This is the default constructor for the class. \-It sets up the required \-S\-P\-I device with a passed settings\-\_\-t pointer.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em settings} & -\/ pointer to settings \\
+\hline
+\end{DoxyParams}
+\-We copy the settings into our internal class.
+
+\-We set the \-S\-S pins to outputs
+
+\-We set the ss pin as an output.
+
+\-We start the \-S\-P\-I engine
+
+\-We set the \-S\-P\-I bit order
+
+\-We set the clock divider
+
+\-We set the data mode of the bus
+
+\-We setup the interrupt
+
+\-We reset the buffer position 
+
+\-Definition at line 11 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_g_h_i_d___s_p_i_a81d883b745c3848fb920df0ceb76ab08}{\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!check\-\_\-spi\-\_\-buffer@{check\-\_\-spi\-\_\-buffer}}
+\index{check\-\_\-spi\-\_\-buffer@{check\-\_\-spi\-\_\-buffer}!GHID_SPI@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\subsubsection[{check\-\_\-spi\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-S\-P\-I\-::check\-\_\-spi\-\_\-buffer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___s_p_i_a81d883b745c3848fb920df0ceb76ab08}
+
+
+\-Checks for the isr buffer if its full. 
+
+\-This checks the spi buffer for any bytes received. \-Copy the data received
+
+\-Reset the position. 
+
+\-Definition at line 77 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-cpp.
+
+\hypertarget{class_g_h_i_d___s_p_i_a1112a6f569a6e570f166a2976f69291e}{\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!read\-\_\-data@{read\-\_\-data}}
+\index{read\-\_\-data@{read\-\_\-data}!GHID_SPI@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\subsubsection[{read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-struct\-\_\-t} $\ast$ {\bf \-G\-H\-I\-D\-\_\-\-S\-P\-I\-::read\-\_\-data} (
+\begin{DoxyParamCaption}
+\item[{{\bf spi\-\_\-device\-\_\-address\-\_\-map\-\_\-t}}]{device, }
+\item[{byte}]{length, }
+\item[{byte}]{command}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___s_p_i_a1112a6f569a6e570f166a2976f69291e}
+
+
+\-Read data into a buffer struct. 
+
+\-This is the read data from device method. \-We specify the address to receive data from and how long of data we need to receive.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & -\/ address \\
+\hline
+{\em length} & -\/ the length to receive \\
+\hline
+{\em command} & -\/ the read command \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 65 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-cpp.
+
+\hypertarget{class_g_h_i_d___s_p_i_a9cc5cdee38071b54566c57783443b17b}{\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!tranfer\-\_\-data@{tranfer\-\_\-data}}
+\index{tranfer\-\_\-data@{tranfer\-\_\-data}!GHID_SPI@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\subsubsection[{tranfer\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-S\-P\-I\-::tranfer\-\_\-data} (
+\begin{DoxyParamCaption}
+\item[{{\bf spi\-\_\-device\-\_\-address\-\_\-map\-\_\-t}}]{device, }
+\item[{byte}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___s_p_i_a9cc5cdee38071b54566c57783443b17b}
+
+
+\-Transfer \-Data method. 
+
+\-This transfers one byte to the slave selected.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & -\/ the address to send \\
+\hline
+{\em data} & -\/ the data to send \\
+\hline
+\end{DoxyParams}
+\-Start listening
+
+\-Send the data byte
+
+\-Stop listening 
+
+\-Definition at line 44 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-cpp.
+
+\hypertarget{class_g_h_i_d___s_p_i_adb5f0f373d1c6f3da3bb5323c9ad3ec1}{\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!transfer\-\_\-bulk@{transfer\-\_\-bulk}}
+\index{transfer\-\_\-bulk@{transfer\-\_\-bulk}!GHID_SPI@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\subsubsection[{transfer\-\_\-bulk}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-S\-P\-I\-::transfer\-\_\-bulk} (
+\begin{DoxyParamCaption}
+\item[{{\bf spi\-\_\-device\-\_\-address\-\_\-map\-\_\-t}}]{device, }
+\item[{byte $\ast$}]{data, }
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___s_p_i_adb5f0f373d1c6f3da3bb5323c9ad3ec1}
+
+
+\-Transfer bulk data. 
+
+\-This method sends a bulk byte array to the requested address.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device} & -\/ the address of the slave \\
+\hline
+{\em data} & -\/ the data to send \\
+\hline
+{\em length} & -\/ the length of the array \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 58 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_g_h_i_d___s_p_i_a64390f195aa7bb3e4f4077fb80d89c78}{\index{\-G\-H\-I\-D\-\_\-\-S\-P\-I@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}!buffer@{buffer}}
+\index{buffer@{buffer}!GHID_SPI@{\-G\-H\-I\-D\-\_\-\-S\-P\-I}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-struct\-\_\-t} {\bf \-G\-H\-I\-D\-\_\-\-S\-P\-I\-::buffer}}}\label{class_g_h_i_d___s_p_i_a64390f195aa7bb3e4f4077fb80d89c78}
+
+
+\-Public \-Context. 
+
+\-The publicly accessible buffer 
+
+\-Definition at line 65 of file \-G\-H\-I\-D\-\_\-\-S\-P\-I.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___s_p_i_8h}{\-G\-H\-I\-D\-\_\-\-S\-P\-I.\-h}\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___s_p_i_8cpp}{\-G\-H\-I\-D\-\_\-\-S\-P\-I.\-cpp}\end{DoxyCompactItemize}

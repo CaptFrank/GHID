@@ -1,0 +1,88 @@
+\hypertarget{class_bluetooth_service}{\section{\-Bluetooth\-Service \-Class \-Reference}
+\label{class_bluetooth_service}\index{\-Bluetooth\-Service@{\-Bluetooth\-Service}}
+}
+
+
+{\ttfamily \#include $<$\-B\-T\-D.\-h$>$}
+
+\-Inheritance diagram for \-Bluetooth\-Service\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bluetooth_service}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_bluetooth_service_a8dc98310fe481357eaa86c53e49af113}{\-A\-C\-L\-Data} (uint8\-\_\-t $\ast$\hyperlink{class_bluetooth_service_a8dc98310fe481357eaa86c53e49af113}{\-A\-C\-L\-Data})
+\item 
+virtual void \hyperlink{class_bluetooth_service_a680692ff13cb37eb81ddbb74bc9e0383}{\-Run} ()
+\item 
+virtual void \hyperlink{class_bluetooth_service_a1dff7caf251f1d8a5f358b368445cb48}{\-Reset} ()
+\item 
+virtual void \hyperlink{class_bluetooth_service_a66ee2f09c6087b82e3920c3d652a99b2}{disconnect} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-All \-Bluetooth services should inherit this class. 
+
+\-Definition at line 211 of file \-B\-T\-D.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_bluetooth_service_a8dc98310fe481357eaa86c53e49af113}{\index{\-Bluetooth\-Service@{\-Bluetooth\-Service}!\-A\-C\-L\-Data@{\-A\-C\-L\-Data}}
+\index{\-A\-C\-L\-Data@{\-A\-C\-L\-Data}!BluetoothService@{\-Bluetooth\-Service}}
+\subsubsection[{\-A\-C\-L\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Bluetooth\-Service\-::\-A\-C\-L\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{\-A\-C\-L\-Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth_service_a8dc98310fe481357eaa86c53e49af113}
+\-Used to pass acldata to the \-Bluetooth service. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-A\-C\-L\-Data} & \-Pointer to the incoming acldata. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_s_p_p_abdfe9453fb82781bec53a191c2e9fb1d}{\-S\-P\-P}, \hyperlink{class_w_i_i_a81e1eb4d9ef9999a84e71d764d54dff7}{\-W\-I\-I}, \hyperlink{class_p_s3_b_t_aa310ede24b68b1b03cfc49c4308c66b7}{\-P\-S3\-B\-T}, and \hyperlink{class_b_t_h_i_d_a84eb1b910027f2d78741f65225c14e54}{\-B\-T\-H\-I\-D}.
+
+\hypertarget{class_bluetooth_service_a66ee2f09c6087b82e3920c3d652a99b2}{\index{\-Bluetooth\-Service@{\-Bluetooth\-Service}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!BluetoothService@{\-Bluetooth\-Service}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Bluetooth\-Service\-::disconnect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth_service_a66ee2f09c6087b82e3920c3d652a99b2}
+\-Used to disconnect both the \-L2\-C\-A\-P \-Channel and the \-H\-C\-I \-Connection for the \-Bluetooth service. 
+
+\-Reimplemented in \hyperlink{class_s_p_p_a2b4b1f85f553c6a2fdd523e50c75c7b0}{\-S\-P\-P}, \hyperlink{class_w_i_i_aabe4780f258dada1c0564a4ac7607370}{\-W\-I\-I}, \hyperlink{class_p_s3_b_t_a39ad8810c67e85eddc68c8a16d38a985}{\-P\-S3\-B\-T}, and \hyperlink{class_b_t_h_i_d_ae1ee62d7b9951ec7960f122c9fc2d2d0}{\-B\-T\-H\-I\-D}.
+
+\hypertarget{class_bluetooth_service_a1dff7caf251f1d8a5f358b368445cb48}{\index{\-Bluetooth\-Service@{\-Bluetooth\-Service}!\-Reset@{\-Reset}}
+\index{\-Reset@{\-Reset}!BluetoothService@{\-Bluetooth\-Service}}
+\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Bluetooth\-Service\-::\-Reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth_service_a1dff7caf251f1d8a5f358b368445cb48}
+\-Used to reset the \-Bluetooth service. 
+
+\-Reimplemented in \hyperlink{class_s_p_p_ae2c661bd46cd2d74bd29c4c771cd2ef0}{\-S\-P\-P}, \hyperlink{class_w_i_i_a769ee2f9a0088da097438bc3cc677f7c}{\-W\-I\-I}, \hyperlink{class_p_s3_b_t_a576d72cdf12af58ae59c8f2a02f99c0f}{\-P\-S3\-B\-T}, and \hyperlink{class_b_t_h_i_d_af4c58b81414a037910dd6fb78f97b96e}{\-B\-T\-H\-I\-D}.
+
+\hypertarget{class_bluetooth_service_a680692ff13cb37eb81ddbb74bc9e0383}{\index{\-Bluetooth\-Service@{\-Bluetooth\-Service}!\-Run@{\-Run}}
+\index{\-Run@{\-Run}!BluetoothService@{\-Bluetooth\-Service}}
+\subsubsection[{\-Run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Bluetooth\-Service\-::\-Run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth_service_a680692ff13cb37eb81ddbb74bc9e0383}
+\-Used to run the different state machines in the \-Bluetooth service. 
+
+\-Reimplemented in \hyperlink{class_s_p_p_a2de67ee7ad1be9d2f3daf7dc08dc5f90}{\-S\-P\-P}, \hyperlink{class_w_i_i_ac5cd06f3e9aa2a0d9b9691f00c047e72}{\-W\-I\-I}, \hyperlink{class_p_s3_b_t_ab41f25f45573239990f68611dc825086}{\-P\-S3\-B\-T}, and \hyperlink{class_b_t_h_i_d_a938eab04e406a29cc9324dad3ccb52cc}{\-B\-T\-H\-I\-D}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_b_t_d_8h}{\-B\-T\-D.\-h}\end{DoxyCompactItemize}

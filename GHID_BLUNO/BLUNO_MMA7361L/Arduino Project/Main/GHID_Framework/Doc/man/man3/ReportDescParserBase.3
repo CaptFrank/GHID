@@ -1,0 +1,1248 @@
+.TH "ReportDescParserBase" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReportDescParserBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hidescriptorparser\&.h>\fP
+.PP
+Inherited by \fBReportDescParser\fP, and \fBReportDescParser2\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBenErrorSuccess\fP =  0, \fBenErrorIncomplete\fP, \fBenErrorBufferTooSmall\fP }"
+.br
+.ti -1c
+.RI "typedef void(* \fBUsagePageFunc\fP )(uint16_t usage)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReportDescParserBase\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBParse\fP (const uint16_t len, const uint8_t *pbuf, const uint16_t &offset)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBPrintGenericDesktopPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintSimulationControlsPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintVRControlsPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintSportsControlsPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintGameControlsPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintGenericDeviceControlsPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintLEDPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintButtonPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintOrdinalPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintTelephonyPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintConsumerPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintDigitizerPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintAlphanumDisplayPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintMedicalInstrumentPageUsage\fP (uint16_t usage)"
+.br
+.ti -1c
+.RI "static void \fBPrintValue\fP (uint8_t *p, uint8_t len)"
+.br
+.ti -1c
+.RI "static void \fBPrintByteValue\fP (uint8_t \fBdata\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintItemTitle\fP (uint8_t prefix)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const char *const \fBusagePageTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBusagePageTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgenDesktopTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgenDesktopTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgenDesktopTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgenDesktopTitles3\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgenDesktopTitles4\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBsimuTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBsimuTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBsimuTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBvrTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBvrTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBsportsCtrlTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBsportsCtrlTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBsportsCtrlTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgameTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgameTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBgenDevCtrlTitles\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBledTitles\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtelTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtelTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtelTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtelTitles3\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtelTitles4\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBtelTitles5\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles3\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles4\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles5\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles6\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles7\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles8\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitles9\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitlesA\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitlesB\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitlesC\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitlesD\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBconsTitlesE\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBdigitTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBdigitTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBdigitTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBaplphanumTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBaplphanumTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBaplphanumTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBmedInstrTitles0\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBmedInstrTitles1\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBmedInstrTitles2\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBmedInstrTitles3\fP []"
+.br
+.ti -1c
+.RI "static const char *const \fBmedInstrTitles4\fP []"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual uint8_t \fBParseItem\fP (uint8_t **pp, uint16_t *pcntdn)"
+.br
+.ti -1c
+.RI "void \fBSetUsagePage\fP (uint16_t page)"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBPrintUsagePage\fP (uint16_t page)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "MultiValueBuffer \fBtheBuffer\fP"
+.br
+.ti -1c
+.RI "MultiByteValueParser \fBvalParser\fP"
+.br
+.ti -1c
+.RI "ByteSkipper \fBtheSkipper\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBvarBuffer\fP [sizeof(USB_CONFIGURATION_DESCRIPTOR)]"
+.br
+.ti -1c
+.RI "uint8_t \fBitemParseState\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBitemSize\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBitemPrefix\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBrptSize\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBrptCount\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBtotalSize\fP"
+.br
+.ti -1c
+.RI "\fBUsagePageFunc\fP \fBpfUsage\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBUsagePageFunc\fP \fBusagePageFunctions\fP []"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 22 of file hidescriptorparser\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef void(* \fBReportDescParserBase::UsagePageFunc\fP)(uint16_t usage)"
+.PP
+Definition at line 24 of file hidescriptorparser\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIenErrorSuccess \fP\fP
+.TP
+\fB\fIenErrorIncomplete \fP\fP
+.TP
+\fB\fIenErrorBufferTooSmall \fP\fP
+
+.PP
+Definition at line 137 of file hidescriptorparser\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBReportDescParserBase::ReportDescParserBase\fP ()\fC [inline]\fP"
+.PP
+Definition at line 123 of file hidescriptorparser\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBReportDescParserBase::Parse\fP (const uint16_tlen, const uint8_t *pbuf, const uint16_t &offset)\fC [virtual]\fP"
+.PP
+Definition at line 993 of file hidescriptorparser\&.cpp\&.
+.SS "uint8_t \fBReportDescParserBase::ParseItem\fP (uint8_t **pp, uint16_t *pcntdn)\fC [protected, virtual]\fP"
+.PP
+Reimplemented in \fBReportDescParser2\fP\&.
+.PP
+Definition at line 1091 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintAlphanumDisplayPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1415 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintButtonPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1287 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintByteValue\fP (uint8_tdata)\fC [static]\fP"
+.PP
+Definition at line 1020 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintConsumerPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1383 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintDigitizerPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1405 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintGameControlsPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1345 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintGenericDesktopPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1304 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintGenericDeviceControlsPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1354 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintItemTitle\fP (uint8_tprefix)\fC [static]\fP"
+.PP
+Definition at line 1026 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintLEDPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1362 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintMedicalInstrumentPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1425 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintOrdinalPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1295 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintSimulationControlsPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1316 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintSportsControlsPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1335 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintTelephonyPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1370 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintUsagePage\fP (uint16_tpage)\fC [static, protected]\fP"
+.PP
+Definition at line 1262 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintValue\fP (uint8_t *p, uint8_tlen)\fC [static]\fP"
+.PP
+Definition at line 1013 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::PrintVRControlsPageUsage\fP (uint16_tusage)\fC [static]\fP"
+.PP
+Definition at line 1326 of file hidescriptorparser\&.cpp\&.
+.SS "void \fBReportDescParserBase::SetUsagePage\fP (uint16_tpage)\fC [protected]\fP"
+.PP
+Definition at line 1233 of file hidescriptorparser\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const char *const \fBReportDescParserBase::aplphanumTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageAlphanumericDisplay,
+        pstrUsageBitmappedDisplay
+}
+.fi
+.PP
+Definition at line 89 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::aplphanumTitles1\fP\fC [static]\fP"
+.PP
+Definition at line 90 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::aplphanumTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageBitmapSizeX,
+        pstrUsageBitmapSizeY,
+        pstrUsagePageReserved,
+        pstrUsageBitDepthFormat,
+        pstrUsageDisplayOrientation,
+        pstrUsagePaletteReport,
+        pstrUsagePaletteDataSize,
+        pstrUsagePaletteDataOffset,
+        pstrUsagePaletteData,
+        pstrUsageBlitReport,
+        pstrUsageBlitRectangleX1,
+        pstrUsageBlitRectangleY1,
+        pstrUsageBlitRectangleX2,
+        pstrUsageBlitRectangleY2,
+        pstrUsageBlitData,
+        pstrUsageSoftButton,
+        pstrUsageSoftButtonID,
+        pstrUsageSoftButtonSide,
+        pstrUsageSoftButtonOffset1,
+        pstrUsageSoftButtonOffset2,
+        pstrUsageSoftButtonReport
+}
+.fi
+.PP
+Definition at line 91 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageConsumerControl,
+        pstrUsageNumericKeyPad,
+        pstrUsageProgrammableButton,
+        pstrUsageMicrophone,
+        pstrUsageHeadphone,
+        pstrUsageGraphicEqualizer
+}
+.fi
+.PP
+Definition at line 71 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePlus10,
+        pstrUsagePlus100,
+        pstrUsageAMPM
+}
+.fi
+.PP
+Definition at line 72 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePower,
+        pstrUsageReset,
+        pstrUsageSleep,
+        pstrUsageSleepAfter,
+        pstrUsageSleepMode,
+        pstrUsageIllumination,
+        pstrUsageFunctionButtons
+
+}
+.fi
+.PP
+Definition at line 73 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles3\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageMenu,
+        pstrUsageMenuPick,
+        pstrUsageMenuUp,
+        pstrUsageMenuDown,
+        pstrUsageMenuLeft,
+        pstrUsageMenuRight,
+        pstrUsageMenuEscape,
+        pstrUsageMenuValueIncrease,
+        pstrUsageMenuValueDecrease
+}
+.fi
+.PP
+Definition at line 74 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles4\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageDataOnScreen,
+        pstrUsageClosedCaption,
+        pstrUsageClosedCaptionSelect,
+        pstrUsageVCRTV,
+        pstrUsageBroadcastMode,
+        pstrUsageSnapshot,
+        pstrUsageStill
+}
+.fi
+.PP
+Definition at line 75 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles5\fP\fC [static]\fP"
+.PP
+Definition at line 76 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles6\fP\fC [static]\fP"
+.PP
+Definition at line 77 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles7\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageVolume,
+        pstrUsageBalance,
+        pstrUsageMute,
+        pstrUsageBass,
+        pstrUsageTreble,
+        pstrUsageBassBoost,
+        pstrUsageSurroundMode,
+        pstrUsageLoudness,
+        pstrUsageMPX,
+        pstrUsageVolumeIncrement,
+        pstrUsageVolumeDecrement
+}
+.fi
+.PP
+Definition at line 78 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles8\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSpeedSelect,
+        pstrUsagePlaybackSpeed,
+        pstrUsageStandardPlay,
+        pstrUsageLongPlay,
+        pstrUsageExtendedPlay,
+        pstrUsageSlow
+}
+.fi
+.PP
+Definition at line 79 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitles9\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageFanEnable,
+        pstrUsageFanSpeed,
+        pstrUsageLightEnable,
+        pstrUsageLightIlluminationLevel,
+        pstrUsageClimateControlEnable,
+        pstrUsageRoomTemperature,
+        pstrUsageSecurityEnable,
+        pstrUsageFireAlarm,
+        pstrUsagePoliceAlarm,
+        pstrUsageProximity,
+        pstrUsageMotion,
+        pstrUsageDuresAlarm,
+        pstrUsageHoldupAlarm,
+        pstrUsageMedicalAlarm
+}
+.fi
+.PP
+Definition at line 80 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitlesA\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageBalanceRight,
+        pstrUsageBalanceLeft,
+        pstrUsageBassIncrement,
+        pstrUsageBassDecrement,
+        pstrUsageTrebleIncrement,
+        pstrUsageTrebleDecrement
+}
+.fi
+.PP
+Definition at line 81 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitlesB\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSpeakerSystem,
+        pstrUsageChannelLeft,
+        pstrUsageChannelRight,
+        pstrUsageChannelCenter,
+        pstrUsageChannelFront,
+        pstrUsageChannelCenterFront,
+        pstrUsageChannelSide,
+        pstrUsageChannelSurround,
+        pstrUsageChannelLowFreqEnhancement,
+        pstrUsageChannelTop,
+        pstrUsageChannelUnknown
+}
+.fi
+.PP
+Definition at line 82 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitlesC\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSubChannel,
+        pstrUsageSubChannelIncrement,
+        pstrUsageSubChannelDecrement,
+        pstrUsageAlternateAudioIncrement,
+        pstrUsageAlternateAudioDecrement
+}
+.fi
+.PP
+Definition at line 83 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitlesD\fP\fC [static]\fP"
+.PP
+Definition at line 84 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::consTitlesE\fP\fC [static]\fP"
+.PP
+Definition at line 85 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::digitTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageDigitizer,
+        pstrUsagePen,
+        pstrUsageLightPen,
+        pstrUsageTouchScreen,
+        pstrUsageTouchPad,
+        pstrUsageWhiteBoard,
+        pstrUsageCoordinateMeasuringMachine,
+        pstrUsage3DDigitizer,
+        pstrUsageStereoPlotter,
+        pstrUsageArticulatedArm,
+        pstrUsageArmature,
+        pstrUsageMultiplePointDigitizer,
+        pstrUsageFreeSpaceWand
+}
+.fi
+.PP
+Definition at line 86 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::digitTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageStylus,
+        pstrUsagePuck,
+        pstrUsageFinger
+
+}
+.fi
+.PP
+Definition at line 87 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::digitTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageTipPressure,
+        pstrUsageBarrelPressure,
+        pstrUsageInRange,
+        pstrUsageTouch,
+        pstrUsageUntouch,
+        pstrUsageTap,
+        pstrUsageQuality,
+        pstrUsageDataValid,
+        pstrUsageTransducerIndex,
+        pstrUsageTabletFunctionKeys,
+        pstrUsageProgramChangeKeys,
+        pstrUsageBatteryStrength,
+        pstrUsageInvert,
+        pstrUsageXTilt,
+        pstrUsageYTilt,
+        pstrUsageAzimuth,
+        pstrUsageAltitude,
+        pstrUsageTwist,
+        pstrUsageTipSwitch,
+        pstrUsageSecondaryTipSwitch,
+        pstrUsageBarrelSwitch,
+        pstrUsageEraser,
+        pstrUsageTabletPick
+}
+.fi
+.PP
+Definition at line 88 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::gameTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsage3DGameController,
+        pstrUsagePinballDevice,
+        pstrUsageGunDevice
+}
+.fi
+.PP
+Definition at line 61 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::gameTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePointOfView,
+        pstrUsageTurnRightLeft,
+        pstrUsagePitchForwardBackward,
+        pstrUsageRollRightLeft,
+        pstrUsageMoveRightLeft,
+        pstrUsageMoveForwardBackward,
+        pstrUsageMoveUpDown,
+        pstrUsageLeanRightLeft,
+        pstrUsageLeanForwardBackward,
+        pstrUsageHeightOfPOV,
+        pstrUsageFlipper,
+        pstrUsageSecondaryFlipper,
+        pstrUsageBump,
+        pstrUsageNewGame,
+        pstrUsageShootBall,
+        pstrUsagePlayer,
+        pstrUsageGunBolt,
+        pstrUsageGunClip,
+        pstrUsageGunSelector,
+        pstrUsageGunSingleShot,
+        pstrUsageGunBurst,
+        pstrUsageGunAutomatic,
+        pstrUsageGunSafety,
+        pstrUsageGamepadFireJump,
+        pstrUsageGamepadTrigger
+}
+.fi
+.PP
+Definition at line 62 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::genDesktopTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePointer,
+        pstrUsageMouse,
+        pstrUsageJoystick,
+        pstrUsageGamePad,
+        pstrUsageKeyboard,
+        pstrUsageKeypad,
+        pstrUsageMultiAxisController,
+        pstrUsageTabletPCSystemControls
+
+}
+.fi
+.PP
+Definition at line 48 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::genDesktopTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageX,
+        pstrUsageY,
+        pstrUsageZ,
+        pstrUsageRx,
+        pstrUsageRy,
+        pstrUsageRz,
+        pstrUsageSlider,
+        pstrUsageDial,
+        pstrUsageWheel,
+        pstrUsageHatSwitch,
+        pstrUsageCountedBuffer,
+        pstrUsageByteCount,
+        pstrUsageMotionWakeup,
+        pstrUsageStart,
+        pstrUsageSelect,
+        pstrUsagePageReserved,
+        pstrUsageVx,
+        pstrUsageVy,
+        pstrUsageVz,
+        pstrUsageVbrx,
+        pstrUsageVbry,
+        pstrUsageVbrz,
+        pstrUsageVno,
+        pstrUsageFeatureNotification,
+        pstrUsageResolutionMultiplier
+}
+.fi
+.PP
+Definition at line 49 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::genDesktopTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSystemControl,
+        pstrUsageSystemPowerDown,
+        pstrUsageSystemSleep,
+        pstrUsageSystemWakeup,
+        pstrUsageSystemContextMenu,
+        pstrUsageSystemMainMenu,
+        pstrUsageSystemAppMenu,
+        pstrUsageSystemMenuHelp,
+        pstrUsageSystemMenuExit,
+        pstrUsageSystemMenuSelect,
+        pstrUsageSystemMenuRight,
+        pstrUsageSystemMenuLeft,
+        pstrUsageSystemMenuUp,
+        pstrUsageSystemMenuDown,
+        pstrUsageSystemColdRestart,
+        pstrUsageSystemWarmRestart,
+        pstrUsageDPadUp,
+        pstrUsageDPadDown,
+        pstrUsageDPadRight,
+        pstrUsageDPadLeft
+}
+.fi
+.PP
+Definition at line 50 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::genDesktopTitles3\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSystemDock,
+        pstrUsageSystemUndock,
+        pstrUsageSystemSetup,
+        pstrUsageSystemBreak,
+        pstrUsageSystemDebuggerBreak,
+        pstrUsageApplicationBreak,
+        pstrUsageApplicationDebuggerBreak,
+        pstrUsageSystemSpeakerMute,
+        pstrUsageSystemHibernate
+}
+.fi
+.PP
+Definition at line 51 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::genDesktopTitles4\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSystemDisplayInvert,
+        pstrUsageSystemDisplayInternal,
+        pstrUsageSystemDisplayExternal,
+        pstrUsageSystemDisplayBoth,
+        pstrUsageSystemDisplayDual,
+        pstrUsageSystemDisplayToggleIntExt,
+        pstrUsageSystemDisplaySwapPriSec,
+        pstrUsageSystemDisplayLCDAutoscale
+}
+.fi
+.PP
+Definition at line 52 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::genDevCtrlTitles\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageBatteryStrength,
+        pstrUsageWirelessChannel,
+        pstrUsageWirelessID,
+        pstrUsageDiscoverWirelessControl,
+        pstrUsageSecurityCodeCharEntered,
+        pstrUsageSecurityCodeCharErased,
+        pstrUsageSecurityCodeCleared
+}
+.fi
+.PP
+Definition at line 63 of file hidescriptorparser\&.h\&.
+.SS "uint8_t \fBReportDescParserBase::itemParseState\fP\fC [protected]\fP"
+.PP
+Definition at line 106 of file hidescriptorparser\&.h\&.
+.SS "uint8_t \fBReportDescParserBase::itemPrefix\fP\fC [protected]\fP"
+.PP
+Definition at line 108 of file hidescriptorparser\&.h\&.
+.SS "uint8_t \fBReportDescParserBase::itemSize\fP\fC [protected]\fP"
+.PP
+Definition at line 107 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::ledTitles\fP\fC [static]\fP"
+.PP
+Definition at line 64 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::medInstrTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageVCRAcquisition,
+        pstrUsageFreezeThaw,
+        pstrUsageClipStore,
+        pstrUsageUpdate,
+        pstrUsageNext,
+        pstrUsageSave,
+        pstrUsagePrint,
+        pstrUsageMicrophoneEnable
+}
+.fi
+.PP
+Definition at line 92 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::medInstrTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageCine,
+        pstrUsageTransmitPower,
+        pstrUsageVolume,
+        pstrUsageFocus,
+        pstrUsageDepth
+}
+.fi
+.PP
+Definition at line 93 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::medInstrTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSoftStepPrimary,
+        pstrUsageSoftStepSecondary
+}
+.fi
+.PP
+Definition at line 94 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::medInstrTitles3\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageZoomSelect,
+        pstrUsageZoomAdjust,
+        pstrUsageSpectralDopplerModeSelect,
+        pstrUsageSpectralDopplerModeAdjust,
+        pstrUsageColorDopplerModeSelect,
+        pstrUsageColorDopplerModeAdjust,
+        pstrUsageMotionModeSelect,
+        pstrUsageMotionModeAdjust,
+        pstrUsage2DModeSelect,
+        pstrUsage2DModeAdjust
+}
+.fi
+.PP
+Definition at line 95 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::medInstrTitles4\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSoftControlSelect,
+        pstrUsageSoftControlAdjust
+}
+.fi
+.PP
+Definition at line 96 of file hidescriptorparser\&.h\&.
+.SS "\fBUsagePageFunc\fP \fBReportDescParserBase::pfUsage\fP\fC [protected]\fP"
+.PP
+Definition at line 116 of file hidescriptorparser\&.h\&.
+.SS "uint8_t \fBReportDescParserBase::rptCount\fP\fC [protected]\fP"
+.PP
+Definition at line 110 of file hidescriptorparser\&.h\&.
+.SS "uint8_t \fBReportDescParserBase::rptSize\fP\fC [protected]\fP"
+.PP
+Definition at line 109 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::simuTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageFlightSimulationDevice,
+        pstrUsageAutomobileSimulationDevice,
+        pstrUsageTankSimulationDevice,
+        pstrUsageSpaceshipSimulationDevice,
+        pstrUsageSubmarineSimulationDevice,
+        pstrUsageSailingSimulationDevice,
+        pstrUsageMotocicleSimulationDevice,
+        pstrUsageSportsSimulationDevice,
+        pstrUsageAirplaneSimulationDevice,
+        pstrUsageHelicopterSimulationDevice,
+        pstrUsageMagicCarpetSimulationDevice,
+        pstrUsageBicycleSimulationDevice
+}
+.fi
+.PP
+Definition at line 53 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::simuTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageFlightControlStick,
+        pstrUsageFlightStick,
+        pstrUsageCyclicControl,
+        pstrUsageCyclicTrim,
+        pstrUsageFlightYoke,
+        pstrUsageTrackControl
+}
+.fi
+.PP
+Definition at line 54 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::simuTitles2\fP\fC [static]\fP"
+.PP
+Definition at line 55 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::sportsCtrlTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageBaseballBat,
+        pstrUsageGolfClub,
+        pstrUsageRowingMachine,
+        pstrUsageTreadmill
+}
+.fi
+.PP
+Definition at line 58 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::sportsCtrlTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageOar,
+        pstrUsageSlope,
+        pstrUsageRate,
+        pstrUsageStickSpeed,
+        pstrUsageStickFaceAngle,
+        pstrUsageStickHeelToe,
+        pstrUsageStickFollowThough,
+        pstrUsageStickTempo,
+        pstrUsageStickType,
+        pstrUsageStickHeight
+}
+.fi
+.PP
+Definition at line 59 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::sportsCtrlTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePutter,
+        pstrUsage1Iron,
+        pstrUsage2Iron,
+        pstrUsage3Iron,
+        pstrUsage4Iron,
+        pstrUsage5Iron,
+        pstrUsage6Iron,
+        pstrUsage7Iron,
+        pstrUsage8Iron,
+        pstrUsage9Iron,
+        pstrUsage10Iron,
+        pstrUsage11Iron,
+        pstrUsageSandWedge,
+        pstrUsageLoftWedge,
+        pstrUsagePowerWedge,
+        pstrUsage1Wood,
+        pstrUsage3Wood,
+        pstrUsage5Wood,
+        pstrUsage7Wood,
+        pstrUsage9Wood
+}
+.fi
+.PP
+Definition at line 60 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::telTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePhone,
+        pstrUsageAnsweringMachine,
+        pstrUsageMessageControls,
+        pstrUsageHandset,
+        pstrUsageHeadset,
+        pstrUsageTelephonyKeyPad,
+        pstrUsageProgrammableButton
+}
+.fi
+.PP
+Definition at line 65 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::telTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageHookSwitch,
+        pstrUsageFlash,
+        pstrUsageFeature,
+        pstrUsageHold,
+        pstrUsageRedial,
+        pstrUsageTransfer,
+        pstrUsageDrop,
+        pstrUsagePark,
+        pstrUsageForwardCalls,
+        pstrUsageAlternateFunction,
+        pstrUsageLine,
+        pstrUsageSpeakerPhone,
+        pstrUsageConference,
+        pstrUsageRingEnable,
+        pstrUsageRingSelect,
+        pstrUsagePhoneMute,
+        pstrUsageCallerID,
+        pstrUsageSend
+}
+.fi
+.PP
+Definition at line 66 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::telTitles2\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageSpeedDial,
+        pstrUsageStoreNumber,
+        pstrUsageRecallNumber,
+        pstrUsagePhoneDirectory
+}
+.fi
+.PP
+Definition at line 67 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::telTitles3\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageVoiceMail,
+        pstrUsageScreenCalls,
+        pstrUsageDoNotDisturb,
+        pstrUsageMessage,
+        pstrUsageAnswerOnOff
+}
+.fi
+.PP
+Definition at line 68 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::telTitles4\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageInsideDialTone,
+        pstrUsageOutsideDialTone,
+        pstrUsageInsideRingTone,
+        pstrUsageOutsideRingTone,
+        pstrUsagePriorityRingTone,
+        pstrUsageInsideRingback,
+        pstrUsagePriorityRingback,
+        pstrUsageLineBusyTone,
+        pstrUsageReorderTone,
+        pstrUsageCallWaitingTone,
+        pstrUsageConfirmationTone1,
+        pstrUsageConfirmationTone2,
+        pstrUsageTonesOff,
+        pstrUsageOutsideRingback,
+        pstrUsageRinger
+}
+.fi
+.PP
+Definition at line 69 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::telTitles5\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePhoneKey0,
+        pstrUsagePhoneKey1,
+        pstrUsagePhoneKey2,
+        pstrUsagePhoneKey3,
+        pstrUsagePhoneKey4,
+        pstrUsagePhoneKey5,
+        pstrUsagePhoneKey6,
+        pstrUsagePhoneKey7,
+        pstrUsagePhoneKey8,
+        pstrUsagePhoneKey9,
+        pstrUsagePhoneKeyStar,
+        pstrUsagePhoneKeyPound,
+        pstrUsagePhoneKeyA,
+        pstrUsagePhoneKeyB,
+        pstrUsagePhoneKeyC,
+        pstrUsagePhoneKeyD
+}
+.fi
+.PP
+Definition at line 70 of file hidescriptorparser\&.h\&.
+.SS "MultiValueBuffer \fBReportDescParserBase::theBuffer\fP\fC [protected]\fP"
+.PP
+Definition at line 101 of file hidescriptorparser\&.h\&.
+.SS "ByteSkipper \fBReportDescParserBase::theSkipper\fP\fC [protected]\fP"
+.PP
+Definition at line 103 of file hidescriptorparser\&.h\&.
+.SS "uint16_t \fBReportDescParserBase::totalSize\fP\fC [protected]\fP"
+.PP
+Definition at line 112 of file hidescriptorparser\&.h\&.
+.SS "\fBReportDescParserBase::UsagePageFunc\fP \fBReportDescParserBase::usagePageFunctions\fP\fC [static, protected]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        &ReportDescParserBase::PrintGenericDesktopPageUsage,
+        &ReportDescParserBase::PrintSimulationControlsPageUsage,
+        &ReportDescParserBase::PrintVRControlsPageUsage,
+        &ReportDescParserBase::PrintSportsControlsPageUsage,
+        &ReportDescParserBase::PrintGameControlsPageUsage,
+        &ReportDescParserBase::PrintGenericDeviceControlsPageUsage,
+        NULL, 
+        &ReportDescParserBase::PrintLEDPageUsage,
+        &ReportDescParserBase::PrintButtonPageUsage,
+        &ReportDescParserBase::PrintOrdinalPageUsage,
+        &ReportDescParserBase::PrintTelephonyPageUsage,
+        &ReportDescParserBase::PrintConsumerPageUsage,
+        &ReportDescParserBase::PrintDigitizerPageUsage,
+        NULL, 
+        NULL, 
+        NULL 
+}
+.fi
+.PP
+Definition at line 99 of file hidescriptorparser\&.h\&.
+.SS "const char* const \fBReportDescParserBase::usagePageTitles0\fP[]\fC [static]\fP"
+.PP
+Definition at line 46 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::usagePageTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsagePageBarCodeScanner,
+        pstrUsagePageScale,
+        pstrUsagePageMSRDevices,
+        pstrUsagePagePointOfSale,
+        pstrUsagePageCameraControl,
+        pstrUsagePageArcade
+}
+.fi
+.PP
+Definition at line 47 of file hidescriptorparser\&.h\&.
+.SS "MultiByteValueParser \fBReportDescParserBase::valParser\fP\fC [protected]\fP"
+.PP
+Definition at line 102 of file hidescriptorparser\&.h\&.
+.SS "uint8_t \fBReportDescParserBase::varBuffer\fP[sizeof(USB_CONFIGURATION_DESCRIPTOR)]\fC [protected]\fP"
+.PP
+Definition at line 104 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::vrTitles0\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageBelt,
+        pstrUsageBodySuit,
+        pstrUsageFlexor,
+        pstrUsageGlove,
+        pstrUsageHeadTracker,
+        pstrUsageHeadMountedDisplay,
+        pstrUsageHandTracker,
+        pstrUsageOculometer,
+        pstrUsageVest,
+        pstrUsageAnimatronicDevice
+}
+.fi
+.PP
+Definition at line 56 of file hidescriptorparser\&.h\&.
+.SS "const char *const \fBReportDescParserBase::vrTitles1\fP\fC [static]\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        pstrUsageStereoEnable,
+        pstrUsageDisplayEnable
+}
+.fi
+.PP
+Definition at line 57 of file hidescriptorparser\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

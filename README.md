@@ -9,17 +9,17 @@ Still to do in the GHID project:
 ---->	Bluno Implementation
 		
 		- Accelerometers:
-			- Digital 								- 0%			
-				- Driver							- 0%
-				- Library (API)						- 0%
+			- Digital			
+				- Driver							- 100%
+				- Library (API)						- 100%
 				
-			- Analog								- 0%
-				- Driver							- 0%
-				- Library (API)						- 0%
+			- Analog
+				- Driver							- 100%
+				- Library (API)						- 100%
 			
 		- AD1298:
-			- Driver								- 90%
-			- Library (API)							- 30%
+			- Driver								- 100%
+			- Library (API)							- 100%
 			
 		- Bluetooth Firmware:
 			- Design								- 100%

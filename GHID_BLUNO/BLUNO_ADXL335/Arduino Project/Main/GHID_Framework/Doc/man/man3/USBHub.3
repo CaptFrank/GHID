@@ -1,0 +1,119 @@
+.TH "USBHub" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USBHub \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <usbhub\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUSBHub\fP (USB *p)"
+.br
+.ti -1c
+.RI "uint8_t \fBClearHubFeature\fP (uint8_t fid)"
+.br
+.ti -1c
+.RI "uint8_t \fBClearPortFeature\fP (uint8_t fid, uint8_t port, uint8_t sel=0)"
+.br
+.ti -1c
+.RI "uint8_t \fBGetHubDescriptor\fP (uint8_t index, uint16_t nbytes, uint8_t *dataptr)"
+.br
+.ti -1c
+.RI "uint8_t \fBGetHubStatus\fP (uint16_t nbytes, uint8_t *dataptr)"
+.br
+.ti -1c
+.RI "uint8_t \fBGetPortStatus\fP (uint8_t port, uint16_t nbytes, uint8_t *dataptr)"
+.br
+.ti -1c
+.RI "uint8_t \fBSetHubDescriptor\fP (uint8_t port, uint16_t nbytes, uint8_t *dataptr)"
+.br
+.ti -1c
+.RI "uint8_t \fBSetHubFeature\fP (uint8_t fid)"
+.br
+.ti -1c
+.RI "uint8_t \fBSetPortFeature\fP (uint8_t fid, uint8_t port, uint8_t sel=0)"
+.br
+.ti -1c
+.RI "void \fBPrintHubStatus\fP ()"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBInit\fP (uint8_t parent, uint8_t port, bool lowspeed)"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBRelease\fP ()"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBPoll\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBResetHubPort\fP (uint8_t port)"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBGetAddress\fP ()"
+.br
+.ti -1c
+.RI "virtual boolean \fBDEVCLASSOK\fP (uint8_t klass)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 164 of file usbhub\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBUSBHub::USBHub\fP (USB *p)"
+.PP
+Definition at line 21 of file usbhub\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint8_t \fBUSBHub::ClearHubFeature\fP (uint8_tfid)\fC [inline]\fP"
+.PP
+Definition at line 211 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::ClearPortFeature\fP (uint8_tfid, uint8_tport, uint8_tsel = \fC0\fP)\fC [inline]\fP"
+.PP
+Definition at line 216 of file usbhub\&.h\&.
+.SS "virtual boolean \fBUSBHub::DEVCLASSOK\fP (uint8_tklass)\fC [inline, virtual]\fP"
+.PP
+Definition at line 203 of file usbhub\&.h\&.
+.SS "virtual uint8_t \fBUSBHub::GetAddress\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 199 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::GetHubDescriptor\fP (uint8_tindex, uint16_tnbytes, uint8_t *dataptr)\fC [inline]\fP"
+.PP
+Definition at line 221 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::GetHubStatus\fP (uint16_tnbytes, uint8_t *dataptr)\fC [inline]\fP"
+.PP
+Definition at line 226 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::GetPortStatus\fP (uint8_tport, uint16_tnbytes, uint8_t *dataptr)\fC [inline]\fP"
+.PP
+Definition at line 231 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::Init\fP (uint8_tparent, uint8_tport, boollowspeed)\fC [virtual]\fP"
+.PP
+Definition at line 42 of file usbhub\&.cpp\&.
+.SS "uint8_t \fBUSBHub::Poll\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 227 of file usbhub\&.cpp\&.
+.SS "void \fBUSBHub::PrintHubStatus\fP ()"
+.SS "uint8_t \fBUSBHub::Release\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 214 of file usbhub\&.cpp\&.
+.SS "void \fBUSBHub::ResetHubPort\fP (uint8_tport)\fC [virtual]\fP"
+.PP
+Definition at line 307 of file usbhub\&.cpp\&.
+.SS "uint8_t \fBUSBHub::SetHubDescriptor\fP (uint8_tport, uint16_tnbytes, uint8_t *dataptr)\fC [inline]\fP"
+.PP
+Definition at line 236 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::SetHubFeature\fP (uint8_tfid)\fC [inline]\fP"
+.PP
+Definition at line 241 of file usbhub\&.h\&.
+.SS "uint8_t \fBUSBHub::SetPortFeature\fP (uint8_tfid, uint8_tport, uint8_tsel = \fC0\fP)\fC [inline]\fP"
+.PP
+Definition at line 246 of file usbhub\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

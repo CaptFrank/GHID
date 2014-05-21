@@ -1,0 +1,103 @@
+.TH "MouseReportParser" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MouseReportParser \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hidboot\&.h>\fP
+.PP
+Inherits \fBHIDReportParser\fP\&.
+.PP
+Inherited by \fBMouseRptParser\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBParse\fP (\fBHID\fP *hid, bool is_rpt_id, uint8_t len, uint8_t *buf)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnMouseMove\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.ti -1c
+.RI "virtual void \fBOnLeftButtonUp\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.ti -1c
+.RI "virtual void \fBOnLeftButtonDown\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.ti -1c
+.RI "virtual void \fBOnRightButtonUp\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.ti -1c
+.RI "virtual void \fBOnRightButtonDown\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.ti -1c
+.RI "virtual void \fBOnMiddleButtonUp\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.ti -1c
+.RI "virtual void \fBOnMiddleButtonDown\fP (\fBMOUSEINFO\fP *mi)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 51 of file hidboot\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void \fBMouseReportParser::OnLeftButtonDown\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 69 of file hidboot\&.h\&.
+.SS "virtual void \fBMouseReportParser::OnLeftButtonUp\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 66 of file hidboot\&.h\&.
+.SS "virtual void \fBMouseReportParser::OnMiddleButtonDown\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 81 of file hidboot\&.h\&.
+.SS "virtual void \fBMouseReportParser::OnMiddleButtonUp\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 78 of file hidboot\&.h\&.
+.SS "virtual void \fBMouseReportParser::OnMouseMove\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 63 of file hidboot\&.h\&.
+.SS "virtual void \fBMouseReportParser::OnRightButtonDown\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 75 of file hidboot\&.h\&.
+.SS "virtual void \fBMouseReportParser::OnRightButtonUp\fP (\fBMOUSEINFO\fP *mi)\fC [inline, protected, virtual]\fP"
+.PP
+Reimplemented in \fBMouseRptParser\fP\&.
+.PP
+Definition at line 72 of file hidboot\&.h\&.
+.SS "void \fBMouseReportParser::Parse\fP (\fBHID\fP *hid, boolis_rpt_id, uint8_tlen, uint8_t *buf)\fC [virtual]\fP"
+.PP
+Implements \fBHIDReportParser\fP\&.
+.PP
+Definition at line 19 of file hidboot\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t \fBMouseReportParser::bInfo\fP[sizeof(\fBMOUSEINFO\fP)]"
+.PP
+Definition at line 55 of file hidboot\&.h\&.
+.SS "\fBMOUSEINFO\fP \fBMouseReportParser::mouseInfo\fP"
+.PP
+Definition at line 54 of file hidboot\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

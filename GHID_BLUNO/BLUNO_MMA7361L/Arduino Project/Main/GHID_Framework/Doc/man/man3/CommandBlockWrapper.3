@@ -1,0 +1,99 @@
+.TH "CommandBlockWrapper" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommandBlockWrapper \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <masstorage\&.h>\fP
+.PP
+Inherits \fBCommandBlockWrapperBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP (uint32_t tag, uint32_t xflen, uint8_t flgs, uint8_t lu, uint8_t cmdlen, uint8_t cmd)"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP (uint32_t tag, uint32_t xflen, \fBCDB6_t\fP *cdb, uint8_t dir)"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP (uint32_t tag, uint32_t xflen, \fBCDB10_t\fP *cdb, uint8_t dir)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmCBWLUN\fP: 4"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmReserved1\fP: 4"
+.br
+.ti -1c
+.RI "}; "
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmCBWCBLength\fP: 4"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmReserved2\fP: 4"
+.br
+.ti -1c
+.RI "}; "
+.br
+.ti -1c
+.RI "uint8_t \fBCBWCB\fP [16]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 385 of file masstorage\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBCommandBlockWrapper::CommandBlockWrapper\fP ()\fC [inline]\fP"
+.PP
+Definition at line 402 of file masstorage\&.h\&.
+.SS "\fBCommandBlockWrapper::CommandBlockWrapper\fP (uint32_ttag, uint32_txflen, uint8_tflgs, uint8_tlu, uint8_tcmdlen, uint8_tcmd)\fC [inline]\fP"
+.PP
+Definition at line 409 of file masstorage\&.h\&.
+.SS "\fBCommandBlockWrapper::CommandBlockWrapper\fP (uint32_ttag, uint32_txflen, \fBCDB6_t\fP *cdb, uint8_tdir)\fC [inline]\fP"
+.PP
+Definition at line 422 of file masstorage\&.h\&.
+.SS "\fBCommandBlockWrapper::CommandBlockWrapper\fP (uint32_ttag, uint32_txflen, \fBCDB10_t\fP *cdb, uint8_tdir)\fC [inline]\fP"
+.PP
+Definition at line 429 of file masstorage\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "struct { \&.\&.\&. } "
+.SS "struct { \&.\&.\&. } "
+.SS "uint8_t \fBCommandBlockWrapper::bmCBWCBLength\fP"
+.PP
+Definition at line 393 of file masstorage\&.h\&.
+.SS "uint8_t \fBCommandBlockWrapper::bmCBWLUN\fP"
+.PP
+Definition at line 388 of file masstorage\&.h\&.
+.SS "uint8_t \fBCommandBlockWrapper::bmReserved1\fP"
+.PP
+Definition at line 389 of file masstorage\&.h\&.
+.SS "uint8_t \fBCommandBlockWrapper::bmReserved2\fP"
+.PP
+Definition at line 394 of file masstorage\&.h\&.
+.SS "uint8_t \fBCommandBlockWrapper::CBWCB\fP[16]"
+.PP
+Definition at line 397 of file masstorage\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

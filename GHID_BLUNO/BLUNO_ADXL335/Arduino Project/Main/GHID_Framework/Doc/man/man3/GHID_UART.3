@@ -1,0 +1,63 @@
+.TH "GHID_UART" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GHID_UART \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_UART\&.h>\fP
+.PP
+Inherits \fBSoftwareSerial\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGHID_UART\fP (\fBserial_settings_t\fP *settings)"
+.br
+.RI "\fIThe public context\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a class in which we can define two types of UART interfaces\&. Either software serial drivers can be instantiated or hardware serial bus drivers can be instantiated\&. This class extends the \fBSoftwareSerial\fP class and the HardwareSerial class which are both included in the Arduino IDE framework\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBSoftwareSerial\&.h\fP 
+.PP
+HardwareSerial\&.h 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file GHID_UART\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBGHID_UART::GHID_UART\fP (\fBserial_settings_t\fP *settings)"
+.PP
+The public context\&. The default constructor\&.
+.PP
+This is the default constructor for the class\&. It mainly assigns the parameters to created serial ports\&.
+.PP
+\fBSee also:\fP
+.RS 4
+serial_settings - the settings for the serial port 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIserial_settings\fP - the settings 
+.RE
+.PP
+We first copy the settings to our container\&.
+.PP
+Then we construct the objects\&.
+.PP
+We then setup the device 
+.PP
+Definition at line 11 of file GHID_UART\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

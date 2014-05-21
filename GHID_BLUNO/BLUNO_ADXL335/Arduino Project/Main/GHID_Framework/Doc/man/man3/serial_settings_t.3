@@ -1,0 +1,88 @@
+.TH "serial_settings_t" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+serial_settings_t \- 
+.PP
+This is a container for the serial settings\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_UART\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "byte \fBhw_sw_flag\fP"
+.br
+.ti -1c
+.RI "\fBqword\fP \fBbaudrate\fP"
+.br
+.RI "\fIThis determines the type of device\&. \fP"
+.ti -1c
+.RI "byte \fBlogic_type\fP"
+.br
+.RI "\fIThis determines the baud rate of the device\&. \fP"
+.ti -1c
+.RI "byte \fBserial_port\fP"
+.br
+.RI "\fIThis determines of the device has reverse logic\&. \fP"
+.ti -1c
+.RI "byte \fBrx_pin\fP"
+.br
+.RI "\fIThe hardware serial port used\&. \fP"
+.ti -1c
+.RI "byte \fBtx_pin\fP"
+.br
+.RI "\fIThe rx pin for the software serial port\&. \fP"
+.ti -1c
+.RI "byte \fBparity\fP"
+.br
+.RI "\fIThe tx pin for the software serial port\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is a container for the serial settings\&. 
+.PP
+Definition at line 24 of file GHID_UART\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBqword\fP \fBserial_settings_t::baudrate\fP"
+.PP
+This determines the type of device\&. 
+.PP
+Definition at line 27 of file GHID_UART\&.h\&.
+.SS "byte \fBserial_settings_t::hw_sw_flag\fP"
+.PP
+Definition at line 26 of file GHID_UART\&.h\&.
+.SS "byte \fBserial_settings_t::logic_type\fP"
+.PP
+This determines the baud rate of the device\&. 
+.PP
+Definition at line 28 of file GHID_UART\&.h\&.
+.SS "byte \fBserial_settings_t::parity\fP"
+.PP
+The tx pin for the software serial port\&. 
+.PP
+Definition at line 32 of file GHID_UART\&.h\&.
+.SS "byte \fBserial_settings_t::rx_pin\fP"
+.PP
+The hardware serial port used\&. 
+.PP
+Definition at line 30 of file GHID_UART\&.h\&.
+.SS "byte \fBserial_settings_t::serial_port\fP"
+.PP
+This determines of the device has reverse logic\&. 
+.PP
+Definition at line 29 of file GHID_UART\&.h\&.
+.SS "byte \fBserial_settings_t::tx_pin\fP"
+.PP
+The rx pin for the software serial port\&. 
+.PP
+Definition at line 31 of file GHID_UART\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

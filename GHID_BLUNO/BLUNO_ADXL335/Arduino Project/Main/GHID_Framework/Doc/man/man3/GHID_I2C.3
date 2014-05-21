@@ -1,0 +1,166 @@
+.TH "GHID_I2C" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GHID_I2C \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GHID_I2C\&.h>\fP
+.PP
+Inherits \fBTwoWire\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGHID_I2C\fP (byte \fBmaster_address\fP)"
+.br
+.RI "\fIDefault constructor - master address passed\&. \fP"
+.ti -1c
+.RI "\fBGHID_I2C\fP ()"
+.br
+.RI "\fIDefault constructor - no parameters passed\&. \fP"
+.ti -1c
+.RI "\fBbuffer_struct_t\fP * \fBread_bulk\fP (byte device_address, byte length)"
+.br
+.RI "\fIRead more than 1 byte at a time\&. \fP"
+.ti -1c
+.RI "void \fBsetup_receive_handler\fP (void(*function_ptr)(int))"
+.br
+.RI "\fISetter method\&. \fP"
+.ti -1c
+.RI "void \fBsetup_request_handler\fP (void(*function_ptr)(void))"
+.br
+.RI "\fISetter method\&. \fP"
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBbuffer_struct_t\fP \fBbuffer\fP"
+.br
+.RI "\fIPublic Context\&. \fP"
+.ti -1c
+.RI "byte \fBmaster_address\fP"
+.br
+.RI "\fIThe master device address\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a wrapper class for the I2C buss class already included in the Arduino framework\&. This class extends the \fBTwoWire\fP class, and still allows access to those functions\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBWire\&.h\fP
+.RE
+.PP
+Note: To start a transmission, the user must use the following sequence of events:
+.IP "\(bu" 2
+Init I2C,
+.IP "\(bu" 2
+Start transmission (address)
+.IP "\(bu" 2
+Send
+.IP "\(bu" 2
+Stop transmission (address) 
+.PP
+
+.PP
+Definition at line 38 of file GHID_I2C\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBGHID_I2C::GHID_I2C\fP (bytemaster_address)"
+.PP
+Default constructor - master address passed\&. This is the default constructor for the class\&. It sets the address of the master node to the given parameter\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImaster_address\fP 
+.RE
+.PP
+We set the master address to the input address
+.PP
+We start the I2C engine 
+.PP
+Definition at line 21 of file GHID_I2C\&.cpp\&.
+.SS "\fBGHID_I2C::GHID_I2C\fP ()"
+.PP
+Default constructor - no parameters passed\&. This is the default constructor for the class\&. It sets the address of the master node to 0x00 We set the master address to 0x00
+.PP
+We start the I2C engine 
+.PP
+Definition at line 11 of file GHID_I2C\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBbuffer_struct_t\fP * \fBGHID_I2C::read_bulk\fP (bytedevice_address, bytelength)"
+.PP
+Read more than 1 byte at a time\&. This is a wrapper method around the requestFrom method in the \fBTwoWire\fP class\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBrequestFrom\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdevice_address\fP - byte device address 
+.br
+\fIlength\fP - number of bytes to receive 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBbuffer_struct_t\fP - buffer containing the response 
+.RE
+.PP
+We return the internal class struct pointer; 
+.PP
+Definition at line 31 of file GHID_I2C\&.cpp\&.
+.SS "void \fBGHID_I2C::setup_receive_handler\fP (void(*)(int)function_ptr)"
+.PP
+Setter method\&. This method sets the function pointer for the interrupt handler, when the I2C bus receives data\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunction_ptr\fP - the receive handler 
+.RE
+.PP
+Set the receiver method 
+.PP
+Definition at line 38 of file GHID_I2C\&.cpp\&.
+.SS "void \fBGHID_I2C::setup_request_handler\fP (void(*)(void)function_ptr)"
+.PP
+Setter method\&. This method sets the function pointer for the interrupt handler, when the I2C bus requests data from a slave\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunction_ptr\fP - the requester handler 
+.RE
+.PP
+Set the request handler 
+.PP
+Definition at line 45 of file GHID_I2C\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBbuffer_struct_t\fP \fBGHID_I2C::buffer\fP"
+.PP
+Public Context\&. All methods which allows any type of I2C communication are held inside the \fBTwoWire\fP class\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBWire\&.h\fP Internal class \fBbuffer\fP structure 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file GHID_I2C\&.h\&.
+.SS "byte \fBGHID_I2C::master_address\fP"
+.PP
+The master device address\&. 
+.PP
+Definition at line 54 of file GHID_I2C\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

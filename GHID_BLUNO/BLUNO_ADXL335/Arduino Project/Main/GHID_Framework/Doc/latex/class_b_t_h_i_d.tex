@@ -1,0 +1,370 @@
+\hypertarget{class_b_t_h_i_d}{\section{\-B\-T\-H\-I\-D \-Class \-Reference}
+\label{class_b_t_h_i_d}\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}}
+}
+
+
+{\ttfamily \#include $<$\-B\-T\-H\-I\-D.\-h$>$}
+
+\-Inheritance diagram for \-B\-T\-H\-I\-D\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_b_t_h_i_d}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_t_h_i_d_a5ee874513852b83d6a04b991ab892f54}{\-B\-T\-H\-I\-D} (\hyperlink{class_b_t_d}{\-B\-T\-D} $\ast$p, bool \hyperlink{class_b_t_h_i_d_afb19720b65cda69d910416c7a689dd45}{pair}=false, const char $\ast$pin=\char`\"{}0000\char`\"{})
+\item 
+\hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} $\ast$ \hyperlink{class_b_t_h_i_d_ade1924514bc9c9cd71f54a1f37529575}{\-Get\-Report\-Parser} (uint8\-\_\-t id)
+\item 
+bool \hyperlink{class_b_t_h_i_d_a0e903f0b5040f3561e5de6c4431027b1}{\-Set\-Report\-Parser} (uint8\-\_\-t id, \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} $\ast$prs)
+\item 
+void \hyperlink{class_b_t_h_i_d_afceaafc89581441da40b141170b98595}{set\-Protocol\-Mode} (uint8\-\_\-t mode)
+\item 
+void \hyperlink{class_b_t_h_i_d_ae222e33ac617620c4cab5c1b23b89310}{set\-Leds} (uint8\-\_\-t \hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data})
+\item 
+void \hyperlink{class_b_t_h_i_d_afb19720b65cda69d910416c7a689dd45}{pair} (void)
+\item 
+void \hyperlink{class_b_t_h_i_d_ac2d67e173774e344bca86fbd0ed5a10c}{attach\-On\-Init} (void($\ast$func\-On\-Init)(void))
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf \-Bluetooth\-Service implementation}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_a84eb1b910027f2d78741f65225c14e54}{\-A\-C\-L\-Data} (uint8\-\_\-t $\ast$\hyperlink{class_b_t_h_i_d_a84eb1b910027f2d78741f65225c14e54}{\-A\-C\-L\-Data})
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_a938eab04e406a29cc9324dad3ccb52cc}{\-Run} ()
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_af4c58b81414a037910dd6fb78f97b96e}{\-Reset} ()
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_ae1ee62d7b9951ec7960f122c9fc2d2d0}{disconnect} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_b_t_h_i_d_ab3a81823a1d8805383146a6baad6ccc4}{connected}
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{Indent}{\bf \-Overridable functions}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_a4de4a1efd32000a0cf5a884456e52c7d}{\-Parse\-B\-T\-H\-I\-D\-Data} (uint8\-\_\-t len, uint8\-\_\-t $\ast$buf)
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_a6d92c1771d643172094fcd084f418421}{\-On\-Init\-B\-T\-H\-I\-D} ()
+\item 
+virtual void \hyperlink{class_b_t_h_i_d_acc22bf5baaa096fe09b72c812c1134f0}{\-Reset\-B\-T\-H\-I\-D} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_t_d}{\-B\-T\-D} $\ast$ \hyperlink{class_b_t_h_i_d_a02c37811a4a401618caf188e744e8e3d}{p\-Btd}
+\item 
+uint16\-\_\-t \hyperlink{class_b_t_h_i_d_a8e4888359cda09bc7123d971bb9d8dcf}{hci\-\_\-handle}
+\item 
+uint8\-\_\-t \hyperlink{class_b_t_h_i_d_acf6933a4988ed9f48c6e08cc7c9b906c}{control\-\_\-scid} \mbox{[}2\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{class_b_t_h_i_d_a34a91f92ea32033403c2b37af92535dc}{interrupt\-\_\-scid} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This \hyperlink{class_bluetooth_service}{\-Bluetooth\-Service} class implements support for \-Bluetooth \hyperlink{class_h_i_d}{\-H\-I\-D} devices. 
+
+\-Definition at line 29 of file \-B\-T\-H\-I\-D.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_b_t_h_i_d_a5ee874513852b83d6a04b991ab892f54}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}}
+\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-B\-T\-H\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-T\-H\-I\-D\-::\-B\-T\-H\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-B\-T\-D} $\ast$}]{p, }
+\item[{bool}]{pair = {\ttfamily false}, }
+\item[{const char $\ast$}]{pin = {\ttfamily \char`\"{}0000\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_b_t_h_i_d_a5ee874513852b83d6a04b991ab892f54}
+\-Constructor for the \hyperlink{class_b_t_h_i_d}{\-B\-T\-H\-I\-D} class. 
+\begin{DoxyParams}{\-Parameters}
+{\em p} & \-Pointer to the \hyperlink{class_b_t_d}{\-B\-T\-D} class instance. \\
+\hline
+{\em pair} & \-Set this to true in order to pair with the device. \-If the argument is omitted then it will not pair with it. \-One can use \hyperlink{_b_t_d_8h_a8f0b5b0dedaf5c25c4887f03ebfdd425}{\-P\-A\-I\-R} to set it to true. \\
+\hline
+{\em pin} & \-Write the pin to \hyperlink{class_b_t_d_a215cb939c01ed3ff56db37841224546c}{\-B\-T\-D\-::btd\-Pin}. \-If argument is omitted, then \char`\"{}0000\char`\"{} will be used. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 23 of file \-B\-T\-H\-I\-D.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_b_t_h_i_d_a84eb1b910027f2d78741f65225c14e54}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-A\-C\-L\-Data@{\-A\-C\-L\-Data}}
+\index{\-A\-C\-L\-Data@{\-A\-C\-L\-Data}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-A\-C\-L\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::\-A\-C\-L\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{\-A\-C\-L\-Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_b_t_h_i_d_a84eb1b910027f2d78741f65225c14e54}
+\-Used to pass acldata to the services. 
+\begin{DoxyParams}{\-Parameters}
+{\em \-A\-C\-L\-Data} & \-Incoming acldata. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{class_bluetooth_service_a8dc98310fe481357eaa86c53e49af113}{\-Bluetooth\-Service}.
+
+
+
+\-Definition at line 59 of file \-B\-T\-H\-I\-D.\-cpp.
+
+\hypertarget{class_b_t_h_i_d_ac2d67e173774e344bca86fbd0ed5a10c}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!attach\-On\-Init@{attach\-On\-Init}}
+\index{attach\-On\-Init@{attach\-On\-Init}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{attach\-On\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::attach\-On\-Init} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{func\-On\-Init}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_t_h_i_d_ac2d67e173774e344bca86fbd0ed5a10c}
+\-Used to call your own function when the device is successfully initialized. 
+\begin{DoxyParams}{\-Parameters}
+{\em func\-On\-Init} & \-Function to call. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_p_s4_b_t_a63c57ecc5c678da13e7787792e385ec9}{\-P\-S4\-B\-T}.
+
+
+
+\-Definition at line 104 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_ae1ee62d7b9951ec7960f122c9fc2d2d0}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::disconnect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_b_t_h_i_d_ae1ee62d7b9951ec7960f122c9fc2d2d0}
+\-Used this to disconnect the devices. 
+
+\-Reimplemented from \hyperlink{class_bluetooth_service_a66ee2f09c6087b82e3920c3d652a99b2}{\-Bluetooth\-Service}.
+
+
+
+\-Definition at line 52 of file \-B\-T\-H\-I\-D.\-cpp.
+
+\hypertarget{class_b_t_h_i_d_ade1924514bc9c9cd71f54a1f37529575}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-Get\-Report\-Parser@{\-Get\-Report\-Parser}}
+\index{\-Get\-Report\-Parser@{\-Get\-Report\-Parser}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-Get\-Report\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-I\-D\-Report\-Parser}$\ast$ {\bf \-B\-T\-H\-I\-D\-::\-Get\-Report\-Parser} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_t_h_i_d_ade1924514bc9c9cd71f54a1f37529575}
+\-Get \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser}. 
+\begin{DoxyParams}{\-Parameters}
+{\em id} & \-I\-D of parser. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns the corresponding \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser}. \-Returns \-N\-U\-L\-L if id is not valid. 
+\end{DoxyReturn}
+
+
+\-Definition at line 58 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a6d92c1771d643172094fcd084f418421}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-On\-Init\-B\-T\-H\-I\-D@{\-On\-Init\-B\-T\-H\-I\-D}}
+\index{\-On\-Init\-B\-T\-H\-I\-D@{\-On\-Init\-B\-T\-H\-I\-D}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-On\-Init\-B\-T\-H\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-B\-T\-H\-I\-D\-::\-On\-Init\-B\-T\-H\-I\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_b_t_h_i_d_a6d92c1771d643172094fcd084f418421}
+\-Called when a device is connected 
+
+\-Reimplemented in \hyperlink{class_p_s4_b_t_a91088a6ed093d3cebb82d8f5e208304b}{\-P\-S4\-B\-T}.
+
+
+
+\-Definition at line 119 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_afb19720b65cda69d910416c7a689dd45}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!pair@{pair}}
+\index{pair@{pair}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{pair}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::pair} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_t_h_i_d_afb19720b65cda69d910416c7a689dd45}
+\-Call this to start the paring sequence with a device 
+
+\-Definition at line 95 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a4de4a1efd32000a0cf5a884456e52c7d}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-Parse\-B\-T\-H\-I\-D\-Data@{\-Parse\-B\-T\-H\-I\-D\-Data}}
+\index{\-Parse\-B\-T\-H\-I\-D\-Data@{\-Parse\-B\-T\-H\-I\-D\-Data}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-Parse\-B\-T\-H\-I\-D\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-B\-T\-H\-I\-D\-::\-Parse\-B\-T\-H\-I\-D\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_b_t_h_i_d_a4de4a1efd32000a0cf5a884456e52c7d}
+\-Used to parse \-Bluetooth \hyperlink{class_h_i_d}{\-H\-I\-D} data to any class that inherits this class. 
+\begin{DoxyParams}{\-Parameters}
+{\em len} & \-The length of the incoming data. \\
+\hline
+{\em buf} & \-Pointer to the data buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_p_s4_b_t_a0d92689d0c24e62ddc7a1b3c4c658512}{\-P\-S4\-B\-T}.
+
+
+
+\-Definition at line 115 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_af4c58b81414a037910dd6fb78f97b96e}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-Reset@{\-Reset}}
+\index{\-Reset@{\-Reset}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::\-Reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_b_t_h_i_d_af4c58b81414a037910dd6fb78f97b96e}
+\-Use this to reset the service. 
+
+\-Reimplemented from \hyperlink{class_bluetooth_service_a1dff7caf251f1d8a5f358b368445cb48}{\-Bluetooth\-Service}.
+
+
+
+\-Definition at line 44 of file \-B\-T\-H\-I\-D.\-cpp.
+
+\hypertarget{class_b_t_h_i_d_acc22bf5baaa096fe09b72c812c1134f0}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-Reset\-B\-T\-H\-I\-D@{\-Reset\-B\-T\-H\-I\-D}}
+\index{\-Reset\-B\-T\-H\-I\-D@{\-Reset\-B\-T\-H\-I\-D}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-Reset\-B\-T\-H\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-B\-T\-H\-I\-D\-::\-Reset\-B\-T\-H\-I\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_b_t_h_i_d_acc22bf5baaa096fe09b72c812c1134f0}
+\-Used to reset any buffers in the class that inherits this 
+
+\-Reimplemented in \hyperlink{class_p_s4_b_t_a4b1c9e15ccdc7ab24f7fb42fc9b5d827}{\-P\-S4\-B\-T}.
+
+
+
+\-Definition at line 123 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a938eab04e406a29cc9324dad3ccb52cc}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-Run@{\-Run}}
+\index{\-Run@{\-Run}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-Run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::\-Run} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_b_t_h_i_d_a938eab04e406a29cc9324dad3ccb52cc}
+\-Used to run part of the state machine. 
+
+\-Reimplemented from \hyperlink{class_bluetooth_service_a680692ff13cb37eb81ddbb74bc9e0383}{\-Bluetooth\-Service}.
+
+
+
+\-Definition at line 347 of file \-B\-T\-H\-I\-D.\-cpp.
+
+\hypertarget{class_b_t_h_i_d_ae222e33ac617620c4cab5c1b23b89310}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!set\-Leds@{set\-Leds}}
+\index{set\-Leds@{set\-Leds}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{set\-Leds}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::set\-Leds} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_b_t_h_i_d_ae222e33ac617620c4cab5c1b23b89310}
+\-Used to set the leds on a keyboard. 
+\begin{DoxyParams}{\-Parameters}
+{\em data} & \-See \hyperlink{struct_k_b_d_l_e_d_s}{\-K\-B\-D\-L\-E\-D\-S} in \hyperlink{hidboot_8h}{hidboot.\-h} \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 396 of file \-B\-T\-H\-I\-D.\-cpp.
+
+\hypertarget{class_b_t_h_i_d_afceaafc89581441da40b141170b98595}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!set\-Protocol\-Mode@{set\-Protocol\-Mode}}
+\index{set\-Protocol\-Mode@{set\-Protocol\-Mode}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{set\-Protocol\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-T\-H\-I\-D\-::set\-Protocol\-Mode} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_t_h_i_d_afceaafc89581441da40b141170b98595}
+\-Set \hyperlink{class_h_i_d}{\-H\-I\-D} protocol mode. 
+\begin{DoxyParams}{\-Parameters}
+{\em mode} & \hyperlink{class_h_i_d}{\-H\-I\-D} protocol to use. \-Either \-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L or \-H\-I\-D\-\_\-\-R\-P\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 81 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a0e903f0b5040f3561e5de6c4431027b1}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!\-Set\-Report\-Parser@{\-Set\-Report\-Parser}}
+\index{\-Set\-Report\-Parser@{\-Set\-Report\-Parser}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{\-Set\-Report\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-T\-H\-I\-D\-::\-Set\-Report\-Parser} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{id, }
+\item[{{\bf \-H\-I\-D\-Report\-Parser} $\ast$}]{prs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_t_h_i_d_a0e903f0b5040f3561e5de6c4431027b1}
+\-Set \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} to be used. 
+\begin{DoxyParams}{\-Parameters}
+{\em id} & \-Id of parser. \\
+\hline
+{\em prs} & \-Pointer to \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns true if the \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} is set. \-False otherwise. 
+\end{DoxyReturn}
+
+
+\-Definition at line 70 of file \-B\-T\-H\-I\-D.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_b_t_h_i_d_ab3a81823a1d8805383146a6baad6ccc4}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!connected@{connected}}
+\index{connected@{connected}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{connected}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-T\-H\-I\-D\-::connected}}}\label{class_b_t_h_i_d_ab3a81823a1d8805383146a6baad6ccc4}
+\-True if a device is connected 
+
+\-Definition at line 92 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_acf6933a4988ed9f48c6e08cc7c9b906c}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!control\-\_\-scid@{control\-\_\-scid}}
+\index{control\-\_\-scid@{control\-\_\-scid}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{control\-\_\-scid}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-B\-T\-H\-I\-D\-::control\-\_\-scid}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_t_h_i_d_acf6933a4988ed9f48c6e08cc7c9b906c}
+\-L2\-C\-A\-P source \-C\-I\-D for \-H\-I\-D\-\_\-\-Control 
+
+\-Definition at line 136 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a8e4888359cda09bc7123d971bb9d8dcf}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!hci\-\_\-handle@{hci\-\_\-handle}}
+\index{hci\-\_\-handle@{hci\-\_\-handle}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{hci\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-B\-T\-H\-I\-D\-::hci\-\_\-handle}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_t_h_i_d_a8e4888359cda09bc7123d971bb9d8dcf}
+\-H\-C\-I \-Handle for connection 
+
+\-Definition at line 132 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a34a91f92ea32033403c2b37af92535dc}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!interrupt\-\_\-scid@{interrupt\-\_\-scid}}
+\index{interrupt\-\_\-scid@{interrupt\-\_\-scid}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{interrupt\-\_\-scid}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-B\-T\-H\-I\-D\-::interrupt\-\_\-scid}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_t_h_i_d_a34a91f92ea32033403c2b37af92535dc}
+\-L2\-C\-A\-P source \-C\-I\-D for \-H\-I\-D\-\_\-\-Interrupt 
+
+\-Definition at line 139 of file \-B\-T\-H\-I\-D.\-h.
+
+\hypertarget{class_b_t_h_i_d_a02c37811a4a401618caf188e744e8e3d}{\index{\-B\-T\-H\-I\-D@{\-B\-T\-H\-I\-D}!p\-Btd@{p\-Btd}}
+\index{p\-Btd@{p\-Btd}!BTHID@{\-B\-T\-H\-I\-D}}
+\subsubsection[{p\-Btd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-T\-D}$\ast$ {\bf \-B\-T\-H\-I\-D\-::p\-Btd}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_t_h_i_d_a02c37811a4a401618caf188e744e8e3d}
+\-Pointer to \hyperlink{class_b_t_d}{\-B\-T\-D} instance 
+
+\-Definition at line 129 of file \-B\-T\-H\-I\-D.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_b_t_h_i_d_8h}{\-B\-T\-H\-I\-D.\-h}\item 
+\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_b_t_h_i_d_8cpp}{\-B\-T\-H\-I\-D.\-cpp}\end{DoxyCompactItemize}

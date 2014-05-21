@@ -1,0 +1,1495 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/masstorage.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/masstorage.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Usb\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCapacity\fP"
+.br
+.ti -1c
+.RI "struct \fBBASICCDB\fP"
+.br
+.ti -1c
+.RI "struct \fBCDB6\fP"
+.br
+.ti -1c
+.RI "struct \fBCDB10\fP"
+.br
+.ti -1c
+.RI "struct \fBCDB12\fP"
+.br
+.ti -1c
+.RI "struct \fBCDB_LBA32_16\fP"
+.br
+.ti -1c
+.RI "struct \fBCDB_LBA64_16\fP"
+.br
+.ti -1c
+.RI "struct \fBInquiryResponse\fP"
+.br
+.ti -1c
+.RI "struct \fBCommandBlockWrapperBase\fP"
+.br
+.ti -1c
+.RI "struct \fBCommandBlockWrapper\fP"
+.br
+.ti -1c
+.RI "struct \fBCommandStatusWrapper\fP"
+.br
+.ti -1c
+.RI "struct \fBRequestSenseResponce\fP"
+.br
+.ti -1c
+.RI "class \fBBulkOnly\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBbmREQ_MASSOUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_MASSIN\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_SCSI_NOT_REPORTED\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_RBC\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_ATAPI\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_OBSOLETE1\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_UFI\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_OBSOLETE2\fP   0x05"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_SCSI\fP   0x06"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_LSDFS\fP   0x07"
+.br
+.ti -1c
+.RI "#define \fBMASS_SUBCLASS_IEEE1667\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBMASS_PROTO_CBI\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBMASS_PROTO_CBI_NO_INT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBMASS_PROTO_OBSOLETE\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBMASS_PROTO_BBB\fP   0x50"
+.br
+.ti -1c
+.RI "#define \fBMASS_PROTO_UAS\fP   0x62"
+.br
+.ti -1c
+.RI "#define \fBMASS_REQ_ADSC\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBMASS_REQ_GET\fP   0xFC"
+.br
+.ti -1c
+.RI "#define \fBMASS_REQ_PUT\fP   0xFD"
+.br
+.ti -1c
+.RI "#define \fBMASS_REQ_GET_MAX_LUN\fP   0xFE"
+.br
+.ti -1c
+.RI "#define \fBMASS_REQ_BOMSR\fP   0xFF"
+.br
+.ti -1c
+.RI "#define \fBMASS_CBW_SIGNATURE\fP   0x43425355"
+.br
+.ti -1c
+.RI "#define \fBMASS_CSW_SIGNATURE\fP   0x53425355"
+.br
+.ti -1c
+.RI "#define \fBMASS_CMD_DIR_OUT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBMASS_CMD_DIR_IN\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_TEST_UNIT_READY\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_REQUEST_SENSE\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_FORMAT_UNIT\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_6\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_WRITE_6\fP   0x0A"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_INQUIRY\fP   0x12"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_MODE_SELECT_6\fP   0x15"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_MODE_SENSE_6\fP   0x1A"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_START_STOP_UNIT\fP   0x1B"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PREVENT_REMOVAL\fP   0x1E"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_FORMAT_CAPACITIES\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_CAPACITY_10\fP   0x25"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_10\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_WRITE_10\fP   0x2A"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SEEK_10\fP   0x2B"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_ERASE_10\fP   0x2C"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_WRITE_AND_VERIFY_10\fP   0x2E"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_VERIFY_10\fP   0x2F"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SYNCHRONIZE_CACHE\fP   0x35"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_WRITE_BUFFER\fP   0x3B"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_BUFFER\fP   0x3C"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_SUBCHANNEL\fP   0x42"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_TOC\fP   0x43"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_HEADER\fP   0x44"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAY_AUDIO_10\fP   0x45"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_GET_CONFIGURATION\fP   0x46"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAY_AUDIO_MSF\fP   0x47"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAY_AUDIO_TI\fP   0x48"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAY_TRACK_REL_10\fP   0x49"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_GET_EVENT_STATUS\fP   0x4A"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PAUSE_RESUME\fP   0x4B"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_DISC_INFORMATION\fP   0x51"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_TRACK_INFORMATION\fP   0x52"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_RESERVE_TRACK\fP   0x53"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SEND_OPC_INFORMATION\fP   0x54"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_MODE_SELECT_10\fP   0x55"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_REPAIR_TRACK\fP   0x58"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_MODE_SENSE_10\fP   0x5A"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_CLOSE_TRACK_SESSION\fP   0x5B"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_BUFFER_CAPACITY\fP   0x5C"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SEND_CUE_SHEET\fP   0x5D"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_REPORT_LUNS\fP   0xA0"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_BLANK\fP   0xA1"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SECURITY_PROTOCOL_IN\fP   0xA2"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SEND_KEY\fP   0xA3"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_REPORT_KEY\fP   0xA4"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAY_AUDIO_12\fP   0xA5"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_LOAD_UNLOAD\fP   0xA6"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SET_READ_AHEAD\fP   0xA7"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_12\fP   0xA8"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAY_TRACK_REL_12\fP   0xA9"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_WRITE_12\fP   0xAA"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_MEDIA_SERIAL_12\fP   0xAB"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_GET_PERFORMANCE\fP   0xAC"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_DVD_STRUCTURE\fP   0xAD"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SECURITY_PROTOCOL_OUT\fP   0xB5"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SET_STREAMING\fP   0xB6"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_MSF\fP   0xB9"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SET_SPEED\fP   0xBB"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_MECHANISM_STATUS\fP   0xBD"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_CD\fP   0xBE"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_SEND_DISC_STRUCTURE\fP   0xBF"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_CD_PLAYBACK_STATUS\fP   0xC4 /* SONY unique */"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_PLAYBACK_CONTROL\fP   0xC9 /* SONY unique */"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_CDDA\fP   0xD8 /* Vendor unique */"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_CDXA\fP   0xDB /* Vendor unique */"
+.br
+.ti -1c
+.RI "#define \fBSCSI_CMD_READ_ALL_SUBCODES\fP   0xDF /* Vendor unique */"
+.br
+.ti -1c
+.RI "#define \fBSCSI_S_NOT_READY\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBSCSI_S_MEDIUM_ERROR\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBSCSI_S_ILLEGAL_REQUEST\fP   0x05"
+.br
+.ti -1c
+.RI "#define \fBSCSI_S_UNIT_ATTENTION\fP   0x06"
+.br
+.ti -1c
+.RI "#define \fBSCSI_ASC_LBA_OUT_OF_RANGE\fP   0x21"
+.br
+.ti -1c
+.RI "#define \fBSCSI_ASC_MEDIA_CHANGED\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBSCSI_ASC_MEDIUM_NOT_PRESENT\fP   0x3A"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_SUCCESS\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_PHASE_ERROR\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_UNIT_NOT_READY\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_UNIT_BUSY\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_STALL\fP   0x05"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_CMD_NOT_SUPPORTED\fP   0x06"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_INVALID_CSW\fP   0x07"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_NO_MEDIA\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_BAD_LBA\fP   0x09"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_MEDIA_CHANGED\fP   0x0A"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_DEVICE_DISCONNECTED\fP   0x11"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_UNABLE_TO_RECOVER\fP   0x12"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_INVALID_LUN\fP   0x13"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_WRITE_STALL\fP   0x14"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_READ_NAKS\fP   0x15"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_WRITE_NAKS\fP   0x16"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_WRITE_PROTECTED\fP   0x17"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_NOT_IMPLEMENTED\fP   0xFD"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_GENERAL_SCSI_ERROR\fP   0xFE"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_GENERAL_USB_ERROR\fP   0xFF"
+.br
+.ti -1c
+.RI "#define \fBMASS_ERR_USER\fP   0xA0"
+.br
+.ti -1c
+.RI "#define \fBMASS_TRANS_FLG_CALLBACK\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBMASS_TRANS_FLG_NO_STALL_CHECK\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBMASS_TRANS_FLG_NO_PHASE_CHECK\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBMASS_MAX_ENDPOINTS\fP   3"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBBASICCDB\fP \fBBASICCDB_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBCDB6\fP \fBCDB6_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBCDB10\fP \fBCDB10_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBCDB12\fP \fBCDB12_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCapacity\fP \fB__attribute__\fP ((packed))"
+.br
+.ti -1c
+.RI "\fBCDB6\fP (uint8_t _Opcode, uint8_t _LUN, uint32_t LBA, uint8_t _AllocationLength, uint8_t _Control)"
+.br
+.ti -1c
+.RI "\fBCDB6\fP (uint8_t _Opcode, uint8_t _LUN, uint8_t _AllocationLength, uint8_t _Control)"
+.br
+.ti -1c
+.RI "\fBCDB10\fP (uint8_t _Opcode, uint8_t _LUN)"
+.br
+.ti -1c
+.RI "\fBCDB10\fP (uint8_t _Opcode, uint8_t _LUN, uint16_t xflen, uint32_t _LBA)"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapperBase\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapperBase\fP (uint32_t tag, uint32_t xflen, uint8_t flgs)"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP ()"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP (uint32_t tag, uint32_t xflen, uint8_t flgs, uint8_t lu, uint8_t cmdlen, uint8_t cmd)"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP (uint32_t tag, uint32_t xflen, \fBCDB6_t\fP *cdb, uint8_t dir)"
+.br
+.ti -1c
+.RI "\fBCommandBlockWrapper\fP (uint32_t tag, uint32_t xflen, \fBCDB10_t\fP *cdb, uint8_t dir)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBdata\fP [8]"
+.br
+.ti -1c
+.RI "uint8_t \fBOpcode\fP"
+.br
+.ti -1c
+.RI "unsigned \fBunused\fP"
+.br
+.ti -1c
+.RI "unsigned \fBLUN\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBinfo\fP [12]"
+.br
+.ti -1c
+.RI "unsigned \fBLBAMSB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBAHB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBALB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBAllocationLength\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBControl\fP"
+.br
+.ti -1c
+.RI "unsigned \fBService_Action\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_M_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_M_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_L_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_L_L_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBMisc2\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_LB\fP"
+.br
+.ti -1c
+.RI "unsigned \fBMisc\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_M_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_L_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_L_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBA_M_M_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBA_M_M_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBA_M_L_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBA_M_L_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBALC_M_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_M_M_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_M_M_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_M_L_MB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBLBA_M_L_LB\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBDeviceType\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBPeripheralQualifier\fP"
+.br
+.ti -1c
+.RI "unsigned \fBReserved\fP"
+.br
+.ti -1c
+.RI "unsigned \fBRemovable\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBVersion\fP"
+.br
+.ti -1c
+.RI "unsigned \fBResponseDataFormat\fP"
+.br
+.ti -1c
+.RI "unsigned \fBHISUP\fP"
+.br
+.ti -1c
+.RI "unsigned \fBNormACA\fP"
+.br
+.ti -1c
+.RI "unsigned \fBTrmTsk\fP"
+.br
+.ti -1c
+.RI "unsigned \fBAERC\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBAdditionalLength\fP"
+.br
+.ti -1c
+.RI "unsigned \fBPROTECT\fP"
+.br
+.ti -1c
+.RI "unsigned \fBRes\fP"
+.br
+.ti -1c
+.RI "unsigned \fBThreePC\fP"
+.br
+.ti -1c
+.RI "unsigned \fBTPGS\fP"
+.br
+.ti -1c
+.RI "unsigned \fBACC\fP"
+.br
+.ti -1c
+.RI "unsigned \fBSCCS\fP"
+.br
+.ti -1c
+.RI "unsigned \fBADDR16\fP"
+.br
+.ti -1c
+.RI "unsigned \fBR1\fP"
+.br
+.ti -1c
+.RI "unsigned \fBR2\fP"
+.br
+.ti -1c
+.RI "unsigned \fBMCHNGR\fP"
+.br
+.ti -1c
+.RI "unsigned \fBMULTIP\fP"
+.br
+.ti -1c
+.RI "unsigned \fBVS\fP"
+.br
+.ti -1c
+.RI "unsigned \fBENCSERV\fP"
+.br
+.ti -1c
+.RI "unsigned \fBBQUE\fP"
+.br
+.ti -1c
+.RI "unsigned \fBSoftReset\fP"
+.br
+.ti -1c
+.RI "unsigned \fBCmdQue\fP"
+.br
+.ti -1c
+.RI "unsigned \fBReserved4\fP"
+.br
+.ti -1c
+.RI "unsigned \fBLinked\fP"
+.br
+.ti -1c
+.RI "unsigned \fBSync\fP"
+.br
+.ti -1c
+.RI "unsigned \fBWideBus16Bit\fP"
+.br
+.ti -1c
+.RI "unsigned \fBWideBus32Bit\fP"
+.br
+.ti -1c
+.RI "unsigned \fBRelAddr\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBVendorID\fP [8]"
+.br
+.ti -1c
+.RI "uint8_t \fBProductID\fP [16]"
+.br
+.ti -1c
+.RI "uint8_t \fBRevisionID\fP [4]"
+.br
+.ti -1c
+.RI "uint32_t \fBdCBWSignature\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdCBWTag\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdCBWDataTransferLength\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbmCBWFlags\fP"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmCBWLUN\fP: 4"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmReserved1\fP: 4"
+.br
+.ti -1c
+.RI "}; "
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmCBWCBLength\fP: 4"
+.br
+.ti -1c
+.RI "   uint8_t \fBbmReserved2\fP: 4"
+.br
+.ti -1c
+.RI "}; "
+.br
+.ti -1c
+.RI "uint8_t \fBCBWCB\fP [16]"
+.br
+.ti -1c
+.RI "uint32_t \fBdCSWSignature\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdCSWTag\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdCSWDataResidue\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbCSWStatus\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbResponseCode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbSegmentNumber\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbmSenseKey\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbmReserved\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbmILI\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbmEOM\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbmFileMark\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBInformation\fP [4]"
+.br
+.ti -1c
+.RI "uint8_t \fBbAdditionalLength\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBCmdSpecificInformation\fP [4]"
+.br
+.ti -1c
+.RI "uint8_t \fBbAdditionalSenseCode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbAdditionalSenseQualifier\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbFieldReplaceableUnitCode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBSenseKeySpecific\fP [3]"
+.br
+.ti -1c
+.RI "\fBBulkOnly\fP \fB__attribute__\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBbmREQ_MASSIN\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.PP
+Definition at line 29 of file masstorage\&.h\&.
+.SS "#define \fBbmREQ_MASSOUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.PP
+Definition at line 28 of file masstorage\&.h\&.
+.SS "#define \fBMASS_CBW_SIGNATURE\fP   0x43425355"
+.PP
+Definition at line 56 of file masstorage\&.h\&.
+.SS "#define \fBMASS_CMD_DIR_IN\fP   0x80"
+.PP
+Definition at line 60 of file masstorage\&.h\&.
+.SS "#define \fBMASS_CMD_DIR_OUT\fP   0"
+.PP
+Definition at line 59 of file masstorage\&.h\&.
+.SS "#define \fBMASS_CSW_SIGNATURE\fP   0x53425355"
+.PP
+Definition at line 57 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_BAD_LBA\fP   0x09"
+.PP
+Definition at line 159 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_CMD_NOT_SUPPORTED\fP   0x06"
+.PP
+Definition at line 156 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_DEVICE_DISCONNECTED\fP   0x11"
+.PP
+Definition at line 161 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_GENERAL_SCSI_ERROR\fP   0xFE"
+.PP
+Definition at line 169 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_GENERAL_USB_ERROR\fP   0xFF"
+.PP
+Definition at line 170 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_INVALID_CSW\fP   0x07"
+.PP
+Definition at line 157 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_INVALID_LUN\fP   0x13"
+.PP
+Definition at line 163 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_MEDIA_CHANGED\fP   0x0A"
+.PP
+Definition at line 160 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_NO_MEDIA\fP   0x08"
+.PP
+Definition at line 158 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_NOT_IMPLEMENTED\fP   0xFD"
+.PP
+Definition at line 168 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_PHASE_ERROR\fP   0x02"
+.PP
+Definition at line 152 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_READ_NAKS\fP   0x15"
+.PP
+Definition at line 165 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_STALL\fP   0x05"
+.PP
+Definition at line 155 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_SUCCESS\fP   0x00"
+.PP
+Definition at line 151 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_UNABLE_TO_RECOVER\fP   0x12"
+.PP
+Definition at line 162 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_UNIT_BUSY\fP   0x04"
+.PP
+Definition at line 154 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_UNIT_NOT_READY\fP   0x03"
+.PP
+Definition at line 153 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_USER\fP   0xA0"
+.PP
+Definition at line 171 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_WRITE_NAKS\fP   0x16"
+.PP
+Definition at line 166 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_WRITE_PROTECTED\fP   0x17"
+.PP
+Definition at line 167 of file masstorage\&.h\&.
+.SS "#define \fBMASS_ERR_WRITE_STALL\fP   0x14"
+.PP
+Definition at line 164 of file masstorage\&.h\&.
+.SS "#define \fBMASS_MAX_ENDPOINTS\fP   3"
+.PP
+Definition at line 177 of file masstorage\&.h\&.
+.SS "#define \fBMASS_PROTO_BBB\fP   0x50"
+.PP
+Definition at line 46 of file masstorage\&.h\&.
+.SS "#define \fBMASS_PROTO_CBI\fP   0x00"
+.PP
+Definition at line 43 of file masstorage\&.h\&.
+.SS "#define \fBMASS_PROTO_CBI_NO_INT\fP   0x01"
+.PP
+Definition at line 44 of file masstorage\&.h\&.
+.SS "#define \fBMASS_PROTO_OBSOLETE\fP   0x02"
+.PP
+Definition at line 45 of file masstorage\&.h\&.
+.SS "#define \fBMASS_PROTO_UAS\fP   0x62"
+.PP
+Definition at line 47 of file masstorage\&.h\&.
+.SS "#define \fBMASS_REQ_ADSC\fP   0x00"
+.PP
+Definition at line 50 of file masstorage\&.h\&.
+.SS "#define \fBMASS_REQ_BOMSR\fP   0xFF"
+.PP
+Definition at line 54 of file masstorage\&.h\&.
+.SS "#define \fBMASS_REQ_GET\fP   0xFC"
+.PP
+Definition at line 51 of file masstorage\&.h\&.
+.SS "#define \fBMASS_REQ_GET_MAX_LUN\fP   0xFE"
+.PP
+Definition at line 53 of file masstorage\&.h\&.
+.SS "#define \fBMASS_REQ_PUT\fP   0xFD"
+.PP
+Definition at line 52 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_ATAPI\fP   0x02"
+.PP
+Definition at line 34 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_IEEE1667\fP   0x08"
+.PP
+Definition at line 40 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_LSDFS\fP   0x07"
+.PP
+Definition at line 39 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_OBSOLETE1\fP   0x03"
+.PP
+Definition at line 35 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_OBSOLETE2\fP   0x05"
+.PP
+Definition at line 37 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_RBC\fP   0x01"
+.PP
+Definition at line 33 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_SCSI\fP   0x06"
+.PP
+Definition at line 38 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_SCSI_NOT_REPORTED\fP   0x00"
+.PP
+Definition at line 32 of file masstorage\&.h\&.
+.SS "#define \fBMASS_SUBCLASS_UFI\fP   0x04"
+.PP
+Definition at line 36 of file masstorage\&.h\&.
+.SS "#define \fBMASS_TRANS_FLG_CALLBACK\fP   0x01"
+.PP
+Definition at line 173 of file masstorage\&.h\&.
+.SS "#define \fBMASS_TRANS_FLG_NO_PHASE_CHECK\fP   0x04"
+.PP
+Definition at line 175 of file masstorage\&.h\&.
+.SS "#define \fBMASS_TRANS_FLG_NO_STALL_CHECK\fP   0x02"
+.PP
+Definition at line 174 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_ASC_LBA_OUT_OF_RANGE\fP   0x21"
+.PP
+Definition at line 146 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_ASC_MEDIA_CHANGED\fP   0x28"
+.PP
+Definition at line 147 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_ASC_MEDIUM_NOT_PRESENT\fP   0x3A"
+.PP
+Definition at line 148 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_BLANK\fP   0xA1"
+.PP
+Definition at line 114 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_CD_PLAYBACK_STATUS\fP   0xC4 /* SONY unique */"
+.PP
+Definition at line 135 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_CLOSE_TRACK_SESSION\fP   0x5B"
+.PP
+Definition at line 109 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_ERASE_10\fP   0x2C"
+.PP
+Definition at line 86 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_FORMAT_UNIT\fP   0x04"
+.PP
+Definition at line 72 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_GET_CONFIGURATION\fP   0x46"
+.PP
+Definition at line 96 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_GET_EVENT_STATUS\fP   0x4A"
+.PP
+Definition at line 100 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_GET_PERFORMANCE\fP   0xAC"
+.PP
+Definition at line 125 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_INQUIRY\fP   0x12"
+.PP
+Definition at line 75 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_LOAD_UNLOAD\fP   0xA6"
+.PP
+Definition at line 119 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_MECHANISM_STATUS\fP   0xBD"
+.PP
+Definition at line 131 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_MODE_SELECT_10\fP   0x55"
+.PP
+Definition at line 106 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_MODE_SELECT_6\fP   0x15"
+.PP
+Definition at line 76 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_MODE_SENSE_10\fP   0x5A"
+.PP
+Definition at line 108 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_MODE_SENSE_6\fP   0x1A"
+.PP
+Definition at line 77 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PAUSE_RESUME\fP   0x4B"
+.PP
+Definition at line 101 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAY_AUDIO_10\fP   0x45"
+.PP
+Definition at line 95 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAY_AUDIO_12\fP   0xA5"
+.PP
+Definition at line 118 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAY_AUDIO_MSF\fP   0x47"
+.PP
+Definition at line 97 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAY_AUDIO_TI\fP   0x48"
+.PP
+Definition at line 98 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAY_TRACK_REL_10\fP   0x49"
+.PP
+Definition at line 99 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAY_TRACK_REL_12\fP   0xA9"
+.PP
+Definition at line 122 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PLAYBACK_CONTROL\fP   0xC9 /* SONY unique */"
+.PP
+Definition at line 136 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_PREVENT_REMOVAL\fP   0x1E"
+.PP
+Definition at line 79 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_10\fP   0x28"
+.PP
+Definition at line 83 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_12\fP   0xA8"
+.PP
+Definition at line 121 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_6\fP   0x08"
+.PP
+Definition at line 73 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_ALL_SUBCODES\fP   0xDF /* Vendor unique */"
+.PP
+Definition at line 139 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_BUFFER\fP   0x3C"
+.PP
+Definition at line 91 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_BUFFER_CAPACITY\fP   0x5C"
+.PP
+Definition at line 110 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_CAPACITY_10\fP   0x25"
+.PP
+Definition at line 82 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_CD\fP   0xBE"
+.PP
+Definition at line 132 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_CDDA\fP   0xD8 /* Vendor unique */"
+.PP
+Definition at line 137 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_CDXA\fP   0xDB /* Vendor unique */"
+.PP
+Definition at line 138 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_DISC_INFORMATION\fP   0x51"
+.PP
+Definition at line 102 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_DVD_STRUCTURE\fP   0xAD"
+.PP
+Definition at line 126 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_FORMAT_CAPACITIES\fP   0x23"
+.PP
+Definition at line 81 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_HEADER\fP   0x44"
+.PP
+Definition at line 94 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_MEDIA_SERIAL_12\fP   0xAB"
+.PP
+Definition at line 124 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_MSF\fP   0xB9"
+.PP
+Definition at line 129 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_SUBCHANNEL\fP   0x42"
+.PP
+Definition at line 92 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_TOC\fP   0x43"
+.PP
+Definition at line 93 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_READ_TRACK_INFORMATION\fP   0x52"
+.PP
+Definition at line 103 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_REPAIR_TRACK\fP   0x58"
+.PP
+Definition at line 107 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_REPORT_KEY\fP   0xA4"
+.PP
+Definition at line 117 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_REPORT_LUNS\fP   0xA0"
+.PP
+Definition at line 113 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_REQUEST_SENSE\fP   0x03"
+.PP
+Definition at line 71 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_RESERVE_TRACK\fP   0x53"
+.PP
+Definition at line 104 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SECURITY_PROTOCOL_IN\fP   0xA2"
+.PP
+Definition at line 115 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SECURITY_PROTOCOL_OUT\fP   0xB5"
+.PP
+Definition at line 127 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SEEK_10\fP   0x2B"
+.PP
+Definition at line 85 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SEND_CUE_SHEET\fP   0x5D"
+.PP
+Definition at line 111 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SEND_DISC_STRUCTURE\fP   0xBF"
+.PP
+Definition at line 133 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SEND_KEY\fP   0xA3"
+.PP
+Definition at line 116 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SEND_OPC_INFORMATION\fP   0x54"
+.PP
+Definition at line 105 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SET_READ_AHEAD\fP   0xA7"
+.PP
+Definition at line 120 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SET_SPEED\fP   0xBB"
+.PP
+Definition at line 130 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SET_STREAMING\fP   0xB6"
+.PP
+Definition at line 128 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_START_STOP_UNIT\fP   0x1B"
+.PP
+Definition at line 78 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_SYNCHRONIZE_CACHE\fP   0x35"
+.PP
+Definition at line 89 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_TEST_UNIT_READY\fP   0x00"
+.PP
+Definition at line 70 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_VERIFY_10\fP   0x2F"
+.PP
+Definition at line 88 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_WRITE_10\fP   0x2A"
+.PP
+Definition at line 84 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_WRITE_12\fP   0xAA"
+.PP
+Definition at line 123 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_WRITE_6\fP   0x0A"
+.PP
+Definition at line 74 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_WRITE_AND_VERIFY_10\fP   0x2E"
+.PP
+Definition at line 87 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_CMD_WRITE_BUFFER\fP   0x3B"
+.PP
+Definition at line 90 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_S_ILLEGAL_REQUEST\fP   0x05"
+.PP
+Definition at line 144 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_S_MEDIUM_ERROR\fP   0x03"
+.PP
+Definition at line 143 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_S_NOT_READY\fP   0x02"
+.PP
+Definition at line 142 of file masstorage\&.h\&.
+.SS "#define \fBSCSI_S_UNIT_ATTENTION\fP   0x06"
+.PP
+Definition at line 145 of file masstorage\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBBASICCDB\fP \fBBASICCDB_t\fP"
+.PP
+Definition at line 194 of file masstorage\&.h\&.
+.SS "typedef \fBCDB10\fP \fBCDB10_t\fP"
+.PP
+Definition at line 254 of file masstorage\&.h\&.
+.SS "typedef \fBCDB12\fP \fBCDB12_t\fP"
+.PP
+Definition at line 272 of file masstorage\&.h\&.
+.SS "typedef \fBCDB6\fP \fBCDB6_t\fP"
+.PP
+Definition at line 220 of file masstorage\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "struct \fBCapacity\fP \fB__attribute__\fP ((packed))"
+.SS "\fB__attribute__::CDB10\fP (uint8_t_Opcode, uint8_t_LUN)"
+.PP
+Definition at line 271 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CDB10\fP (uint8_t_Opcode, uint8_t_LUN, uint16_txflen, uint32_t_LBA)"
+.PP
+Definition at line 277 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CDB6\fP (uint8_t_Opcode, uint8_t_LUN, uint32_tLBA, uint8_t_AllocationLength, uint8_t_Control)"
+.PP
+Definition at line 231 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CDB6\fP (uint8_t_Opcode, uint8_t_LUN, uint8_t_AllocationLength, uint8_t_Control)"
+.PP
+Definition at line 236 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CommandBlockWrapper\fP ()"
+.PP
+Definition at line 451 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CommandBlockWrapper\fP (uint32_ttag, uint32_txflen, uint8_tflgs, uint8_tlu, uint8_tcmdlen, uint8_tcmd)"
+.PP
+Definition at line 458 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CommandBlockWrapper\fP (uint32_ttag, uint32_txflen, \fBCDB6_t\fP *cdb, uint8_tdir)"
+.PP
+Definition at line 471 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CommandBlockWrapper\fP (uint32_ttag, uint32_txflen, \fBCDB10_t\fP *cdb, uint8_tdir)"
+.PP
+Definition at line 478 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CommandBlockWrapperBase\fP ()"
+.PP
+Definition at line 390 of file masstorage\&.h\&.
+.SS "\fB__attribute__::CommandBlockWrapperBase\fP (uint32_ttag, uint32_txflen, uint8_tflgs)"
+.PP
+Definition at line 393 of file masstorage\&.h\&.
+.SH "Variable Documentation"
+.PP 
+.SS "struct { \&.\&.\&. } "
+.SS "struct { \&.\&.\&. } "
+.SS "\fBUSBHub\fP \fB__attribute__\fP"
+.SS "uint8_t \fBA_M_L_LB\fP"
+.PP
+Definition at line 311 of file masstorage\&.h\&.
+.SS "uint8_t \fBA_M_L_MB\fP"
+.PP
+Definition at line 310 of file masstorage\&.h\&.
+.SS "uint8_t \fBA_M_M_LB\fP"
+.PP
+Definition at line 309 of file masstorage\&.h\&.
+.SS "uint8_t \fBA_M_M_MB\fP"
+.PP
+Definition at line 308 of file masstorage\&.h\&.
+.SS "unsigned \fBACC\fP"
+.PP
+Definition at line 390 of file masstorage\&.h\&.
+.SS "uint8_t \fBAdditionalLength\fP"
+.PP
+Definition at line 383 of file masstorage\&.h\&.
+.SS "unsigned \fBADDR16\fP"
+.PP
+Definition at line 393 of file masstorage\&.h\&.
+.SS "unsigned \fBAERC\fP"
+.PP
+Definition at line 381 of file masstorage\&.h\&.
+.SS "uint8_t \fBALC_L_LB\fP"
+.PP
+Definition at line 282 of file masstorage\&.h\&.
+.SS "uint8_t \fBALC_L_MB\fP"
+.PP
+Definition at line 281 of file masstorage\&.h\&.
+.SS "uint8_t \fBALC_LB\fP"
+.PP
+Definition at line 266 of file masstorage\&.h\&.
+.SS "uint8_t \fBALC_M_LB\fP"
+.PP
+Definition at line 280 of file masstorage\&.h\&.
+.SS "uint8_t \fBALC_M_MB\fP"
+.PP
+Definition at line 313 of file masstorage\&.h\&.
+.SS "uint8_t \fBALC_MB\fP"
+.PP
+Definition at line 265 of file masstorage\&.h\&.
+.SS "uint8_t \fBAllocationLength\fP"
+.PP
+Definition at line 226 of file masstorage\&.h\&.
+.SS "uint8_t \fBbAdditionalLength\fP"
+.PP
+Definition at line 471 of file masstorage\&.h\&.
+.SS "uint8_t \fBbAdditionalSenseCode\fP"
+.PP
+Definition at line 473 of file masstorage\&.h\&.
+.SS "uint8_t \fBbAdditionalSenseQualifier\fP"
+.PP
+Definition at line 474 of file masstorage\&.h\&.
+.SS "uint8_t \fBbCSWStatus\fP"
+.PP
+Definition at line 445 of file masstorage\&.h\&.
+.SS "uint8_t \fBbFieldReplaceableUnitCode\fP"
+.PP
+Definition at line 475 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmCBWCBLength\fP"
+.PP
+Definition at line 442 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmCBWFlags\fP"
+.PP
+Definition at line 387 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmCBWLUN\fP"
+.PP
+Definition at line 437 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmEOM\fP"
+.PP
+Definition at line 467 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmFileMark\fP"
+.PP
+Definition at line 468 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmILI\fP"
+.PP
+Definition at line 466 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmReserved\fP"
+.PP
+Definition at line 465 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmReserved1\fP"
+.PP
+Definition at line 438 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmReserved2\fP"
+.PP
+Definition at line 443 of file masstorage\&.h\&.
+.SS "uint8_t \fBbmSenseKey\fP"
+.PP
+Definition at line 464 of file masstorage\&.h\&.
+.SS "unsigned \fBBQUE\fP"
+.PP
+Definition at line 400 of file masstorage\&.h\&.
+.SS "uint8_t \fBbResponseCode\fP"
+.PP
+Definition at line 461 of file masstorage\&.h\&.
+.SS "uint8_t \fBbSegmentNumber\fP"
+.PP
+Definition at line 462 of file masstorage\&.h\&.
+.SS "uint8_t \fBCBWCB\fP[16]"
+.PP
+Definition at line 446 of file masstorage\&.h\&.
+.SS "unsigned \fBCmdQue\fP"
+.PP
+Definition at line 403 of file masstorage\&.h\&.
+.SS "uint8_t \fBCmdSpecificInformation\fP[4]"
+.PP
+Definition at line 472 of file masstorage\&.h\&.
+.SS "uint8_t \fBControl\fP"
+.PP
+Definition at line 227 of file masstorage\&.h\&.
+.SS "uint8_t \fBdata\fP[8]"
+.PP
+Definition at line 184 of file masstorage\&.h\&.
+.SS "uint32_t \fBdCBWDataTransferLength\fP"
+.PP
+Definition at line 386 of file masstorage\&.h\&.
+.SS "uint32_t \fBdCBWSignature\fP"
+.PP
+Definition at line 384 of file masstorage\&.h\&.
+.SS "uint32_t \fBdCBWTag\fP"
+.PP
+Definition at line 385 of file masstorage\&.h\&.
+.SS "uint32_t \fBdCSWDataResidue\fP"
+.PP
+Definition at line 444 of file masstorage\&.h\&.
+.SS "uint32_t \fBdCSWSignature\fP"
+.PP
+Definition at line 442 of file masstorage\&.h\&.
+.SS "uint32_t \fBdCSWTag\fP"
+.PP
+Definition at line 443 of file masstorage\&.h\&.
+.SS "uint8_t \fBDeviceType\fP"
+.PP
+Definition at line 369 of file masstorage\&.h\&.
+.SS "unsigned \fBENCSERV\fP"
+.PP
+Definition at line 399 of file masstorage\&.h\&.
+.SS "unsigned \fBHISUP\fP"
+.PP
+Definition at line 378 of file masstorage\&.h\&.
+.SS "uint8_t \fBinfo\fP[12]"
+.PP
+Definition at line 198 of file masstorage\&.h\&.
+.SS "uint8_t \fBInformation\fP[4]"
+.PP
+Definition at line 470 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_L_L_LB\fP"
+.PP
+Definition at line 261 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_L_L_MB\fP"
+.PP
+Definition at line 260 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_L_M_LB\fP"
+.PP
+Definition at line 259 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_L_M_MB\fP"
+.PP
+Definition at line 258 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_M_L_LB\fP"
+.PP
+Definition at line 327 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_M_L_MB\fP"
+.PP
+Definition at line 326 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_M_M_LB\fP"
+.PP
+Definition at line 325 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBA_M_M_MB\fP"
+.PP
+Definition at line 324 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBAHB\fP"
+.PP
+Definition at line 224 of file masstorage\&.h\&.
+.SS "uint8_t \fBLBALB\fP"
+.PP
+Definition at line 225 of file masstorage\&.h\&.
+.SS "unsigned \fBLBAMSB\fP"
+.PP
+Definition at line 221 of file masstorage\&.h\&.
+.SS "unsigned \fBLinked\fP"
+.PP
+Definition at line 405 of file masstorage\&.h\&.
+.SS "unsigned \fBLUN\fP"
+.PP
+Definition at line 196 of file masstorage\&.h\&.
+.SS "unsigned \fBMCHNGR\fP"
+.PP
+Definition at line 396 of file masstorage\&.h\&.
+.SS "uint8_t \fBMisc\fP"
+.PP
+Definition at line 274 of file masstorage\&.h\&.
+.SS "uint8_t \fBMisc2\fP"
+.PP
+Definition at line 263 of file masstorage\&.h\&.
+.SS "unsigned \fBMULTIP\fP"
+.PP
+Definition at line 397 of file masstorage\&.h\&.
+.SS "unsigned \fBNormACA\fP"
+.PP
+Definition at line 379 of file masstorage\&.h\&.
+.SS "uint8_t \fBOpcode\fP"
+.PP
+Definition at line 193 of file masstorage\&.h\&.
+.SS "uint8_t \fBPeripheralQualifier\fP"
+.PP
+Definition at line 370 of file masstorage\&.h\&.
+.SS "uint8_t \fBProductID\fP[16]"
+.PP
+Definition at line 412 of file masstorage\&.h\&.
+.SS "unsigned \fBPROTECT\fP"
+.PP
+Definition at line 386 of file masstorage\&.h\&.
+.SS "unsigned \fBR1\fP"
+.PP
+Definition at line 394 of file masstorage\&.h\&.
+.SS "unsigned \fBR2\fP"
+.PP
+Definition at line 395 of file masstorage\&.h\&.
+.SS "unsigned \fBRelAddr\fP"
+.PP
+Definition at line 409 of file masstorage\&.h\&.
+.SS "unsigned \fBRemovable\fP"
+.PP
+Definition at line 373 of file masstorage\&.h\&.
+.SS "unsigned \fBRes\fP"
+.PP
+Definition at line 387 of file masstorage\&.h\&.
+.SS "uint16_t \fBReserved\fP"
+.PP
+Definition at line 372 of file masstorage\&.h\&.
+.SS "unsigned \fBReserved4\fP"
+.PP
+Definition at line 404 of file masstorage\&.h\&.
+.SS "unsigned \fBResponseDataFormat\fP"
+.PP
+Definition at line 377 of file masstorage\&.h\&.
+.SS "uint8_t \fBRevisionID\fP[4]"
+.PP
+Definition at line 413 of file masstorage\&.h\&.
+.SS "unsigned \fBSCCS\fP"
+.PP
+Definition at line 391 of file masstorage\&.h\&.
+.SS "uint8_t \fBSenseKeySpecific\fP[3]"
+.PP
+Definition at line 476 of file masstorage\&.h\&.
+.SS "unsigned \fBService_Action\fP"
+.PP
+Definition at line 255 of file masstorage\&.h\&.
+.SS "unsigned \fBSoftReset\fP"
+.PP
+Definition at line 402 of file masstorage\&.h\&.
+.SS "unsigned \fBSync\fP"
+.PP
+Definition at line 406 of file masstorage\&.h\&.
+.SS "unsigned \fBThreePC\fP"
+.PP
+Definition at line 388 of file masstorage\&.h\&.
+.SS "unsigned \fBTPGS\fP"
+.PP
+Definition at line 389 of file masstorage\&.h\&.
+.SS "unsigned \fBTrmTsk\fP"
+.PP
+Definition at line 380 of file masstorage\&.h\&.
+.SS "unsigned \fBunused\fP"
+.PP
+Definition at line 195 of file masstorage\&.h\&.
+.SS "uint8_t \fBVendorID\fP[8]"
+.PP
+Definition at line 411 of file masstorage\&.h\&.
+.SS "uint8_t \fBVersion\fP"
+.PP
+Definition at line 375 of file masstorage\&.h\&.
+.SS "unsigned \fBVS\fP"
+.PP
+Definition at line 398 of file masstorage\&.h\&.
+.SS "unsigned \fBWideBus16Bit\fP"
+.PP
+Definition at line 407 of file masstorage\&.h\&.
+.SS "unsigned \fBWideBus32Bit\fP"
+.PP
+Definition at line 408 of file masstorage\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

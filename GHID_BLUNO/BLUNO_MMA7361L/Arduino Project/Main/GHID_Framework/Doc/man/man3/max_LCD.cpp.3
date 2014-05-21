@@ -1,0 +1,88 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/max_LCD.cpp" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/max_LCD.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'max_LCD\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRS\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBE\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBSET_RS\fP   lcdPins |= \fBRS\fP"
+.br
+.ti -1c
+.RI "#define \fBCLR_RS\fP   lcdPins &= ~\fBRS\fP"
+.br
+.ti -1c
+.RI "#define \fBSET_E\fP   lcdPins |= \fBE\fP"
+.br
+.ti -1c
+.RI "#define \fBCLR_E\fP   lcdPins &= ~\fBE\fP"
+.br
+.ti -1c
+.RI "#define \fBSENDlcdPins\fP()   pUsb->gpioWr( lcdPins )"
+.br
+.ti -1c
+.RI "#define \fBLCD_sendcmd\fP(a)"
+.br
+.ti -1c
+.RI "#define \fBLCD_sendchar\fP(a)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBCLR_E\fP   lcdPins &= ~\fBE\fP"
+.PP
+Definition at line 28 of file max_LCD\&.cpp\&.
+.SS "#define \fBCLR_RS\fP   lcdPins &= ~\fBRS\fP"
+.PP
+Definition at line 26 of file max_LCD\&.cpp\&.
+.SS "#define \fBE\fP   0x08"
+.PP
+Definition at line 23 of file max_LCD\&.cpp\&.
+.SS "#define \fBLCD_sendchar\fP(a)"\fBValue:\fP
+.PP
+.nf
+{   SET_RS;             \
+                            sendbyte(a);    \
+                        }
+.fi
+.PP
+Definition at line 36 of file max_LCD\&.cpp\&.
+.SS "#define \fBLCD_sendcmd\fP(a)"\fBValue:\fP
+.PP
+.nf
+{   CLR_RS;             \
+                            sendbyte(a);    \
+                        }
+.fi
+.PP
+Definition at line 32 of file max_LCD\&.cpp\&.
+.SS "#define \fBRS\fP   0x04"
+.PP
+Definition at line 22 of file max_LCD\&.cpp\&.
+.SS "#define \fBSENDlcdPins\fP()   pUsb->gpioWr( lcdPins )"
+.PP
+Definition at line 30 of file max_LCD\&.cpp\&.
+.SS "#define \fBSET_E\fP   lcdPins |= \fBE\fP"
+.PP
+Definition at line 27 of file max_LCD\&.cpp\&.
+.SS "#define \fBSET_RS\fP   lcdPins |= \fBRS\fP"
+.PP
+Definition at line 25 of file max_LCD\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

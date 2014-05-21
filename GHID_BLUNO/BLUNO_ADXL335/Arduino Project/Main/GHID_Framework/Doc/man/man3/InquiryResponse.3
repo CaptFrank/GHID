@@ -1,0 +1,239 @@
+.TH "InquiryResponse" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InquiryResponse \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <masstorage\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBDeviceType\fP: 5"
+.br
+.ti -1c
+.RI "uint8_t \fBPeripheralQualifier\fP: 3"
+.br
+.ti -1c
+.RI "unsigned \fBReserved\fP: 7"
+.br
+.ti -1c
+.RI "unsigned \fBRemovable\fP: 1"
+.br
+.ti -1c
+.RI "uint8_t \fBVersion\fP"
+.br
+.ti -1c
+.RI "unsigned \fBResponseDataFormat\fP: 4"
+.br
+.ti -1c
+.RI "unsigned \fBHISUP\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBNormACA\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBTrmTsk\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBAERC\fP: 1"
+.br
+.ti -1c
+.RI "uint8_t \fBAdditionalLength\fP"
+.br
+.ti -1c
+.RI "unsigned \fBPROTECT\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBRes\fP: 2"
+.br
+.ti -1c
+.RI "unsigned \fBThreePC\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBTPGS\fP: 2"
+.br
+.ti -1c
+.RI "unsigned \fBACC\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBSCCS\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBADDR16\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBR1\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBR2\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBMCHNGR\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBMULTIP\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBVS\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBENCSERV\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBBQUE\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBSoftReset\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBCmdQue\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBReserved4\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBLinked\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBSync\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBWideBus16Bit\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBWideBus32Bit\fP: 1"
+.br
+.ti -1c
+.RI "unsigned \fBRelAddr\fP: 1"
+.br
+.ti -1c
+.RI "uint8_t \fBVendorID\fP [8]"
+.br
+.ti -1c
+.RI "uint8_t \fBProductID\fP [16]"
+.br
+.ti -1c
+.RI "uint8_t \fBRevisionID\fP [4]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 322 of file masstorage\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned \fBInquiryResponse::ACC\fP"
+.PP
+Definition at line 344 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::AdditionalLength\fP"
+.PP
+Definition at line 337 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::ADDR16\fP"
+.PP
+Definition at line 347 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::AERC\fP"
+.PP
+Definition at line 335 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::BQUE\fP"
+.PP
+Definition at line 354 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::CmdQue\fP"
+.PP
+Definition at line 357 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::DeviceType\fP"
+.PP
+Definition at line 323 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::ENCSERV\fP"
+.PP
+Definition at line 353 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::HISUP\fP"
+.PP
+Definition at line 332 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::Linked\fP"
+.PP
+Definition at line 359 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::MCHNGR\fP"
+.PP
+Definition at line 350 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::MULTIP\fP"
+.PP
+Definition at line 351 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::NormACA\fP"
+.PP
+Definition at line 333 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::PeripheralQualifier\fP"
+.PP
+Definition at line 324 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::ProductID\fP[16]"
+.PP
+Definition at line 366 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::PROTECT\fP"
+.PP
+Definition at line 340 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::R1\fP"
+.PP
+Definition at line 348 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::R2\fP"
+.PP
+Definition at line 349 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::RelAddr\fP"
+.PP
+Definition at line 363 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::Removable\fP"
+.PP
+Definition at line 327 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::Res\fP"
+.PP
+Definition at line 341 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::Reserved\fP"
+.PP
+Definition at line 326 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::Reserved4\fP"
+.PP
+Definition at line 358 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::ResponseDataFormat\fP"
+.PP
+Definition at line 331 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::RevisionID\fP[4]"
+.PP
+Definition at line 367 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::SCCS\fP"
+.PP
+Definition at line 345 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::SoftReset\fP"
+.PP
+Definition at line 356 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::Sync\fP"
+.PP
+Definition at line 360 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::ThreePC\fP"
+.PP
+Definition at line 342 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::TPGS\fP"
+.PP
+Definition at line 343 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::TrmTsk\fP"
+.PP
+Definition at line 334 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::VendorID\fP[8]"
+.PP
+Definition at line 365 of file masstorage\&.h\&.
+.SS "uint8_t \fBInquiryResponse::Version\fP"
+.PP
+Definition at line 329 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::VS\fP"
+.PP
+Definition at line 352 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::WideBus16Bit\fP"
+.PP
+Definition at line 361 of file masstorage\&.h\&.
+.SS "unsigned \fBInquiryResponse::WideBus32Bit\fP"
+.PP
+Definition at line 362 of file masstorage\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

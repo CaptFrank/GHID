@@ -1,0 +1,211 @@
+.TH "SPP" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SPP \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SPP\&.h>\fP
+.PP
+Inherits \fBBluetoothService\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSPP\fP (\fBBTD\fP *p, const char *name='Arduino', const char *pin='0000')"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP ()"
+.br
+.in -1c
+.PP
+.RI "\fBBluetoothService implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBACLData\fP (uint8_t *\fBACLData\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBRun\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdisconnect\fP ()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBSerial port profile (SPP) Print functions\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual int \fBavailable\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBflush\fP (void)"
+.br
+.ti -1c
+.RI "virtual int \fBpeek\fP (void)"
+.br
+.ti -1c
+.RI "virtual int \fBread\fP (void)"
+.br
+.ti -1c
+.RI "virtual void \fBwrite\fP (uint8_t \fBdata\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBwrite\fP (const uint8_t *\fBdata\fP, size_t size)"
+.br
+.ti -1c
+.RI "void \fBdiscard\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsend\fP (void)"
+.br
+.in -1c
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBconnected\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This \fBBluetoothService\fP class implements the Serial Port Protocol (\fBSPP\fP)\&. It inherits the Arduino Stream class\&. This allows it to use all the standard Arduino print and stream functions\&. 
+.PP
+Definition at line 61 of file SPP\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBSPP::SPP\fP (\fBBTD\fP *p, const char *name = \fC'Arduino'\fP, const char *pin = \fC'0000'\fP)"Constructor for the \fBSPP\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP Pointer to \fBBTD\fP class instance\&. 
+.br
+\fIname\fP Set the name to \fBBTD::btdName\fP\&. If argument is omitted, then 'Arduino' will be used\&. 
+.br
+\fIpin\fP Write the pin to \fBBTD::btdPin\fP\&. If argument is omitted, then '0000' will be used\&. 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file SPP\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBSPP::ACLData\fP (uint8_t *ACLData)\fC [virtual]\fP"Used to pass acldata to the services\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIACLData\fP Incoming acldata\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 86 of file SPP\&.cpp\&.
+.SS "int \fBSPP::available\fP (void)\fC [virtual]\fP"Get number of bytes waiting to be read\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Return the number of bytes ready to be read\&. 
+.RE
+.PP
+
+.PP
+Definition at line 783 of file SPP\&.cpp\&.
+.SS "void \fBSPP::discard\fP (void)"Discard all the bytes in the buffer\&. 
+.PP
+Definition at line 787 of file SPP\&.cpp\&.
+.SS "void \fBSPP::disconnect\fP ()\fC [virtual]\fP"Used this to disconnect the virtual serial port\&. 
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 74 of file SPP\&.cpp\&.
+.SS "virtual void \fBSPP::flush\fP (void)\fC [inline, virtual]\fP"Send out all bytes in the buffer\&. 
+.PP
+Definition at line 103 of file SPP\&.h\&.
+.SS "SPP::operator bool ()\fC [inline]\fP"Used to provide Boolean tests for the class\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Return true if \fBSPP\fP communication is connected\&. 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file SPP\&.h\&.
+.SS "int \fBSPP::peek\fP (void)\fC [virtual]\fP"Used to read the next value in the buffer without advancing to the next one\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Return the byte\&. Will return -1 if no bytes are available\&. 
+.RE
+.PP
+
+.PP
+Definition at line 791 of file SPP\&.cpp\&.
+.SS "int \fBSPP::read\fP (void)\fC [virtual]\fP"Used to read the buffer\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Return the byte\&. Will return -1 if no bytes are available\&. 
+.RE
+.PP
+
+.PP
+Definition at line 797 of file SPP\&.cpp\&.
+.SS "void \fBSPP::Reset\fP ()\fC [virtual]\fP"Use this to reset the service\&. 
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 63 of file SPP\&.cpp\&.
+.SS "void \fBSPP::Run\fP ()\fC [virtual]\fP"Used to establish the connection automatically\&. 
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 428 of file SPP\&.cpp\&.
+.SS "void \fBSPP::send\fP (void)"This will send all the bytes in the buffer\&. This is called whenever Usb\&.Task() is called, but can also be called via this function\&. 
+.PP
+Definition at line 755 of file SPP\&.cpp\&.
+.SS "void \fBSPP::write\fP (uint8_tdata)\fC [virtual]\fP"Writes the byte to send to a buffer\&. The message is send when either \fBsend()\fP or after Usb\&.Task() is called\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The byte to write\&. 
+.RE
+.PP
+
+.PP
+Definition at line 733 of file SPP\&.cpp\&.
+.SS "void \fBSPP::write\fP (const uint8_t *data, size_tsize)\fC [virtual]\fP"Writes the bytes to send to a buffer\&. The message is send when either \fBsend()\fP or after Usb\&.Task() is called\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP The data array to send\&. 
+.br
+\fIsize\fP Size of the data\&. 
+.RE
+.PP
+
+.PP
+Definition at line 743 of file SPP\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBSPP::connected\fP"Variable used to indicate if the connection is established\&. 
+.PP
+Definition at line 79 of file SPP\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

@@ -1,0 +1,288 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/cdcftdi.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/cdcftdi.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Usb\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBFTDIAsyncOper\fP"
+.br
+.ti -1c
+.RI "class \fBFTDI\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBbmREQ_FTDI_OUT\fP   0x40"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_FTDI_IN\fP   0xc0"
+.br
+.ti -1c
+.RI "#define \fBFTDI_VID\fP   0x0403"
+.br
+.ti -1c
+.RI "#define \fBFTDI_PID\fP   0x6001"
+.br
+.ti -1c
+.RI "#define \fBFT232AM\fP   0x0200"
+.br
+.ti -1c
+.RI "#define \fBFT232BM\fP   0x0400"
+.br
+.ti -1c
+.RI "#define \fBFT2232\fP   0x0500"
+.br
+.ti -1c
+.RI "#define \fBFT232R\fP   0x0600"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RESET\fP   0 /* Reset the port */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_MODEM_CTRL\fP   1 /* Set the modem control register */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_FLOW_CTRL\fP   2 /* Set flow control register */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_BAUD_RATE\fP   3 /* Set baud rate */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA\fP   4 /* Set the \fBdata\fP characteristics of the port */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_GET_MODEM_STATUS\fP   5 /* Retrieve current value of modem status register */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_EVENT_CHAR\fP   6 /* Set the event character */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_ERROR_CHAR\fP   7 /* Set the error character */"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RESET_SIO\fP   0"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RESET_PURGE_RX\fP   1"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RESET_PURGE_TX\fP   2"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_PARITY_NONE\fP   (0x0 << 8 )"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_PARITY_ODD\fP   (0x1 << 8 )"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_PARITY_EVEN\fP   (0x2 << 8 )"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_PARITY_MARK\fP   (0x3 << 8 )"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_PARITY_SPACE\fP   (0x4 << 8 )"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_STOP_BITS_1\fP   (0x0 << 11)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_STOP_BITS_15\fP   (0x1 << 11)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DATA_STOP_BITS_2\fP   (0x2 << 11)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_BREAK\fP   (0x1 << 14)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DTR_MASK\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DTR_HIGH\fP   ( 1 | ( \fBFTDI_SIO_SET_DTR_MASK\fP  << 8))"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_DTR_LOW\fP   ( 0 | ( \fBFTDI_SIO_SET_DTR_MASK\fP  << 8))"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_RTS_MASK\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_RTS_HIGH\fP   ( 2 | ( \fBFTDI_SIO_SET_RTS_MASK\fP << 8 ))"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_SET_RTS_LOW\fP   ( 0 | ( \fBFTDI_SIO_SET_RTS_MASK\fP << 8 ))"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_DISABLE_FLOW_CTRL\fP   0x0"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RTS_CTS_HS\fP   (0x1 << 8)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_DTR_DSR_HS\fP   (0x2 << 8)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_XON_XOFF_HS\fP   (0x4 << 8)"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_CTS_MASK\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_DSR_MASK\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RI_MASK\fP   0x40"
+.br
+.ti -1c
+.RI "#define \fBFTDI_SIO_RLSD_MASK\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBFTDI_MAX_ENDPOINTS\fP   3"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBbmREQ_FTDI_IN\fP   0xc0"
+.PP
+Definition at line 23 of file cdcftdi\&.h\&.
+.SS "#define \fBbmREQ_FTDI_OUT\fP   0x40"
+.PP
+Definition at line 22 of file cdcftdi\&.h\&.
+.SS "#define \fBFT2232\fP   0x0500"
+.PP
+Definition at line 33 of file cdcftdi\&.h\&.
+.SS "#define \fBFT232AM\fP   0x0200"
+.PP
+Definition at line 31 of file cdcftdi\&.h\&.
+.SS "#define \fBFT232BM\fP   0x0400"
+.PP
+Definition at line 32 of file cdcftdi\&.h\&.
+.SS "#define \fBFT232R\fP   0x0600"
+.PP
+Definition at line 34 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_MAX_ENDPOINTS\fP   3"
+.PP
+Definition at line 87 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_PID\fP   0x6001"
+.PP
+Definition at line 29 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_CTS_MASK\fP   0x10"
+.PP
+Definition at line 72 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_DISABLE_FLOW_CTRL\fP   0x0"
+.PP
+Definition at line 67 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_DSR_MASK\fP   0x20"
+.PP
+Definition at line 73 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_DTR_DSR_HS\fP   (0x2 << 8)"
+.PP
+Definition at line 69 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_GET_MODEM_STATUS\fP   5 /* Retrieve current value of modem status register */"
+.PP
+Definition at line 42 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_MODEM_CTRL\fP   1 /* Set the modem control register */"
+.PP
+Definition at line 38 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RESET\fP   0 /* Reset the port */"
+.PP
+Definition at line 37 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RESET_PURGE_RX\fP   1"
+.PP
+Definition at line 47 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RESET_PURGE_TX\fP   2"
+.PP
+Definition at line 48 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RESET_SIO\fP   0"
+.PP
+Definition at line 46 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RI_MASK\fP   0x40"
+.PP
+Definition at line 74 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RLSD_MASK\fP   0x80"
+.PP
+Definition at line 75 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_RTS_CTS_HS\fP   (0x1 << 8)"
+.PP
+Definition at line 68 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_BAUD_RATE\fP   3 /* Set baud rate */"
+.PP
+Definition at line 40 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_BREAK\fP   (0x1 << 14)"
+.PP
+Definition at line 58 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA\fP   4 /* Set the \fBdata\fP characteristics of the port */"
+.PP
+Definition at line 41 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_PARITY_EVEN\fP   (0x2 << 8 )"
+.PP
+Definition at line 52 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_PARITY_MARK\fP   (0x3 << 8 )"
+.PP
+Definition at line 53 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_PARITY_NONE\fP   (0x0 << 8 )"
+.PP
+Definition at line 50 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_PARITY_ODD\fP   (0x1 << 8 )"
+.PP
+Definition at line 51 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_PARITY_SPACE\fP   (0x4 << 8 )"
+.PP
+Definition at line 54 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_STOP_BITS_1\fP   (0x0 << 11)"
+.PP
+Definition at line 55 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_STOP_BITS_15\fP   (0x1 << 11)"
+.PP
+Definition at line 56 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DATA_STOP_BITS_2\fP   (0x2 << 11)"
+.PP
+Definition at line 57 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DTR_HIGH\fP   ( 1 | ( \fBFTDI_SIO_SET_DTR_MASK\fP  << 8))"
+.PP
+Definition at line 61 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DTR_LOW\fP   ( 0 | ( \fBFTDI_SIO_SET_DTR_MASK\fP  << 8))"
+.PP
+Definition at line 62 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_DTR_MASK\fP   0x1"
+.PP
+Definition at line 60 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_ERROR_CHAR\fP   7 /* Set the error character */"
+.PP
+Definition at line 44 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_EVENT_CHAR\fP   6 /* Set the event character */"
+.PP
+Definition at line 43 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_FLOW_CTRL\fP   2 /* Set flow control register */"
+.PP
+Definition at line 39 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_RTS_HIGH\fP   ( 2 | ( \fBFTDI_SIO_SET_RTS_MASK\fP << 8 ))"
+.PP
+Definition at line 64 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_RTS_LOW\fP   ( 0 | ( \fBFTDI_SIO_SET_RTS_MASK\fP << 8 ))"
+.PP
+Definition at line 65 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_SET_RTS_MASK\fP   0x2"
+.PP
+Definition at line 63 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_SIO_XON_XOFF_HS\fP   (0x4 << 8)"
+.PP
+Definition at line 70 of file cdcftdi\&.h\&.
+.SS "#define \fBFTDI_VID\fP   0x0403"
+.PP
+Definition at line 28 of file cdcftdi\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

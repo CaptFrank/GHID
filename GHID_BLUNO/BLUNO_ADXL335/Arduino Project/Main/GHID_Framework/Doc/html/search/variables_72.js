@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['r',['r',['../struct_p_s4_output.html#a76a85e749899e2e6cb135a6ec6acabb3',1,'PS4Output::r()'],['../_p_s4_parser_8h.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'r():&#160;PS4Parser.h']]],
+  ['r1',['R1',['../struct_inquiry_response.html#a72abbdbd399647227ea05cb1cec32b2d',1,'InquiryResponse::R1()'],['../union_p_s4_buttons.html#aba0cb76ee82bd0ebe9872aa7bcbffac6',1,'PS4Buttons::r1()'],['../_p_s4_parser_8h.html#a8321471905fa41833d37333925f7cb89',1,'r1():&#160;PS4Parser.h'],['../masstorage_8h.html#a7e60b2ca7f2f6943225add97ee69ed00',1,'R1():&#160;masstorage.h']]],
+  ['r2',['r2',['../union_p_s4_buttons.html#a416642ff357b1313825fe94e0491b60e',1,'PS4Buttons::r2()'],['../struct_inquiry_response.html#aa635575deb7f984d27142ee2071af5b3',1,'InquiryResponse::R2()'],['../masstorage_8h.html#a7dae2a007c34ecf4796811a14e1c11e2',1,'R2():&#160;masstorage.h'],['../_p_s4_parser_8h.html#a4026ea78600068f90846f180046bfd3a',1,'r2():&#160;PS4Parser.h']]],
+  ['r3',['r3',['../union_p_s4_buttons.html#a09805f3bcc362c410d7897792599d61d',1,'PS4Buttons::r3()'],['../_p_s4_parser_8h.html#a226c5724d2ffacad48a5ad7a882d453e',1,'r3():&#160;PS4Parser.h']]],
+  ['ready',['ready',['../class_a_d_k.html#a135db75b9e8cdd59b89f46c44dd83dd4',1,'ADK::ready()'],['../class_a_c_m.html#a8ebf4b872b0ed66e93b4ed39f46290fd',1,'ACM::ready()']]],
+  ['reladdr',['RelAddr',['../struct_inquiry_response.html#a64121510090cb38926bbb321e98b1a13',1,'InquiryResponse::RelAddr()'],['../masstorage_8h.html#aeb05aa58c792c081444fbabc78e1d7d8',1,'RelAddr():&#160;masstorage.h']]],
+  ['remote_5fname',['remote_name',['../class_b_t_d.html#aa0fd5483f227e29de23c20ee31c940aa',1,'BTD']]],
+  ['removable',['Removable',['../struct_inquiry_response.html#ab6572ef8e5cd457e0699095f6a0c7a3d',1,'InquiryResponse::Removable()'],['../masstorage_8h.html#a38bab4da595bd2cf269d05c2c2049984',1,'Removable():&#160;masstorage.h']]],
+  ['reportchanged',['reportChanged',['../struct_p_s4_output.html#aff395d1c46c9016ab4ea8ddbf034788b',1,'PS4Output::reportChanged()'],['../_p_s4_parser_8h.html#a12aefd3609642d6e9394c4fbe614cfae',1,'reportChanged():&#160;PS4Parser.h']]],
+  ['reportcounter',['reportCounter',['../union_p_s4_buttons.html#a5c27c151ad76a3675dce1eda1a3e4cc4',1,'PS4Buttons::reportCounter()'],['../_p_s4_parser_8h.html#a05b7e8130c7489c7d9875f369f69ff27',1,'reportCounter():&#160;PS4Parser.h']]],
+  ['res',['Res',['../struct_inquiry_response.html#a9f642c5fccc1c87cf6b444a138b6aa4b',1,'InquiryResponse::Res()'],['../masstorage_8h.html#a61fc767e89549019ca99adbf939b7861',1,'Res():&#160;masstorage.h']]],
+  ['reserved',['Reserved',['../struct_inquiry_response.html#abb4a48d4fc326ad932fb41c82fe289f3',1,'InquiryResponse::Reserved()'],['../struct_hub_descriptor.html#a0c3292fe67fdbdab6ceac8b198ef44bf',1,'HubDescriptor::Reserved()'],['../masstorage_8h.html#a0d430d8eaa55cef3712e2bd0ec15b006',1,'Reserved():&#160;masstorage.h'],['../usbhub_8h.html#a0d430d8eaa55cef3712e2bd0ec15b006',1,'Reserved():&#160;usbhub.h']]],
+  ['reserved4',['Reserved4',['../struct_inquiry_response.html#ae5c315ca0c47104b17d5bde7c4d485a6',1,'InquiryResponse::Reserved4()'],['../masstorage_8h.html#a4917f5463930dbe04f9be93991b03824',1,'Reserved4():&#160;masstorage.h']]],
+  ['responsedataformat',['ResponseDataFormat',['../struct_inquiry_response.html#a801e10546dedbd134568bef84f1b287a',1,'InquiryResponse::ResponseDataFormat()'],['../masstorage_8h.html#a80f08a30b3fce214a59d2450f3476c97',1,'ResponseDataFormat():&#160;masstorage.h']]],
+  ['revisionid',['RevisionID',['../struct_inquiry_response.html#a23775c8cb582ae07c78449dc1a08c23e',1,'InquiryResponse::RevisionID()'],['../masstorage_8h.html#adfb28fe580a2dfe29b641eb7865f132d',1,'RevisionID():&#160;masstorage.h']]],
+  ['rfcommconnectionclaimed',['rfcommConnectionClaimed',['../class_b_t_d.html#a9e5a34242007b64cd6a226cfd1901e74',1,'BTD']]],
+  ['rollgyroscale',['rollGyroScale',['../class_w_i_i.html#a6c0971ae4c9ab752888a5871020c8331',1,'WII']]],
+  ['rollgyrospeed',['rollGyroSpeed',['../class_w_i_i.html#a3fb552c6ad486e23434dcb347a2a4b84',1,'WII']]],
+  ['rptcount',['rptCount',['../class_report_desc_parser_base.html#a2c15a93cace44e39560e4613bbefaf14',1,'ReportDescParserBase']]],
+  ['rptsize',['rptSize',['../class_report_desc_parser_base.html#a222b1c03a4f3e49283a58ecaa853e247',1,'ReportDescParserBase']]],
+  ['rx_5fdelay_5fcentering',['rx_delay_centering',['../struct___d_e_l_a_y___t_a_b_l_e.html#a51aab1d8b68a8ea27646618a30b0e938',1,'_DELAY_TABLE']]],
+  ['rx_5fdelay_5fintrabit',['rx_delay_intrabit',['../struct___d_e_l_a_y___t_a_b_l_e.html#a8b81bfff2b179bdc4b6cd2f57df74e8f',1,'_DELAY_TABLE']]],
+  ['rx_5fdelay_5fstopbit',['rx_delay_stopbit',['../struct___d_e_l_a_y___t_a_b_l_e.html#a459c08839bc23ed1e22b146f7f3ce13d',1,'_DELAY_TABLE']]],
+  ['rx_5fpin',['rx_pin',['../structserial__settings__t.html#a35ec7f2933e8dd3265de62ece1a2073c',1,'serial_settings_t']]]
+];

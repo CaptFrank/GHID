@@ -1,0 +1,369 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/PS4Parser.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/PS4Parser.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Usb\&.h'\fP
+.br
+\fC#include 'controllerEnums\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "union \fBPS4Buttons\fP"
+.br
+.ti -1c
+.RI "struct \fBtouchpadXY\fP"
+.br
+.ti -1c
+.RI "struct \fBPS4Data\fP"
+.br
+.ti -1c
+.RI "struct \fBPS4Output\fP"
+.br
+.ti -1c
+.RI "class \fBPS4Parser\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDPADEnum\fP { \fBDPAD_UP\fP =  0x0, \fBDPAD_UP_RIGHT\fP =  0x1, \fBDPAD_RIGHT\fP =  0x2, \fBDPAD_RIGHT_DOWN\fP =  0x3, \fBDPAD_DOWN\fP =  0x4, \fBDPAD_DOWN_LEFT\fP =  0x5, \fBDPAD_LEFT\fP =  0x6, \fBDPAD_LEFT_UP\fP =  0x7, \fBDPAD_OFF\fP =  0x8 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "union \fBPS4Buttons\fP \fB__attribute__\fP ((packed))"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const uint8_t PS4_BUTTONS[] \fBPROGMEM\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdpad\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBsquare\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBcross\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBcircle\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtriangle\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBl1\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBr1\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBl2\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBr2\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBshare\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBoptions\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBl3\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBr3\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBps\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtouchpad\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBreportCounter\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBval\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBcounter\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtouching\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBx\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBy\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdummy\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBhatValue\fP [4]"
+.br
+.ti -1c
+.RI "\fBPS4Buttons\fP \fBbtn\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBtrigger\fP [2]"
+.br
+.ti -1c
+.RI "int16_t \fBgyroY\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgyroZ\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgyroX\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccX\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccZ\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccY\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBdummy2\fP [9]"
+.br
+.ti -1c
+.RI "\fBtouchpadXY\fP \fBxy\fP [3]"
+.br
+.ti -1c
+.RI "uint8_t \fBbigRumble\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBsmallRumble\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBr\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBg\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBb\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBflashOn\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBflashOff\fP"
+.br
+.ti -1c
+.RI "bool \fBreportChanged\fP"
+.br
+.ti -1c
+.RI "enum \fBDPADEnum\fP \fB__attribute__\fP"
+.br
+.in -1c
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBDPADEnum\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIDPAD_UP \fP\fP
+.TP
+\fB\fIDPAD_UP_RIGHT \fP\fP
+.TP
+\fB\fIDPAD_RIGHT \fP\fP
+.TP
+\fB\fIDPAD_RIGHT_DOWN \fP\fP
+.TP
+\fB\fIDPAD_DOWN \fP\fP
+.TP
+\fB\fIDPAD_DOWN_LEFT \fP\fP
+.TP
+\fB\fIDPAD_LEFT \fP\fP
+.TP
+\fB\fIDPAD_LEFT_UP \fP\fP
+.TP
+\fB\fIDPAD_OFF \fP\fP
+
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "union \fBPS4Buttons\fP \fB__attribute__\fP ((packed))"
+.SH "Variable Documentation"
+.PP 
+.SS "enum \fBDPADEnum\fP  \fB__attribute__\fP"
+.SS "int16_t \fBaccX\fP"
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SS "int16_t \fBaccY\fP"
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SS "int16_t \fBaccZ\fP"
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBb\fP"
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBbigRumble\fP"
+.PP
+Definition at line 111 of file PS4Parser\&.h\&.
+.SS "\fBPS4Buttons\fP \fBbtn\fP"
+.PP
+Definition at line 106 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBcircle\fP"
+.PP
+Definition at line 74 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBcounter\fP"
+.PP
+Definition at line 82 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBcross\fP"
+.PP
+Definition at line 73 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBdpad\fP"
+.PP
+Definition at line 71 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBdummy\fP"
+.PP
+Definition at line 83 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBdummy2\fP[9]"
+.PP
+Definition at line 115 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBflashOff\fP"
+.PP
+Definition at line 113 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBflashOn\fP"
+.PP
+Definition at line 113 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBg\fP"
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SS "int16_t \fBgyroX\fP"
+.PP
+Definition at line 111 of file PS4Parser\&.h\&.
+.SS "int16_t \fBgyroY\fP"
+.PP
+Definition at line 111 of file PS4Parser\&.h\&.
+.SS "int16_t \fBgyroZ\fP"
+.PP
+Definition at line 111 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBhatValue\fP[4]"
+.PP
+Definition at line 105 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBl1\fP"
+.PP
+Definition at line 77 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBl2\fP"
+.PP
+Definition at line 79 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBl3\fP"
+.PP
+Definition at line 83 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBoptions\fP"
+.PP
+Definition at line 82 of file PS4Parser\&.h\&.
+.SS "const uint8_t PS4_BUTTONS [] \fBPROGMEM\fP"\fBInitial value:\fP
+.PP
+.nf
+ {
+        UP, 
+        RIGHT, 
+        DOWN, 
+        LEFT, 
+
+        0x0C, 
+        0x0D, 
+        0x0E, 
+        0x0F, 
+
+        0x0A, 
+        0x0B, 
+        0x08, 
+        0x09, 
+
+        0x07, 
+        0x06, 
+        0x05, 
+        0x04, 
+
+        0x10, 
+        0x11, 
+}
+.fi
+Buttons on the controller 
+.PP
+Definition at line 25 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBps\fP"
+.PP
+Definition at line 86 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBr\fP"
+.PP
+Definition at line 112 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBr1\fP"
+.PP
+Definition at line 78 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBr2\fP"
+.PP
+Definition at line 80 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBr3\fP"
+.PP
+Definition at line 84 of file PS4Parser\&.h\&.
+.SS "bool \fBreportChanged\fP"
+.PP
+Definition at line 114 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBreportCounter\fP"
+.PP
+Definition at line 88 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBshare\fP"
+.PP
+Definition at line 81 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBsmallRumble\fP"
+.PP
+Definition at line 111 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBsquare\fP"
+.PP
+Definition at line 72 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBtouching\fP"
+.PP
+Definition at line 83 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBtouchpad\fP"
+.PP
+Definition at line 87 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBtriangle\fP"
+.PP
+Definition at line 75 of file PS4Parser\&.h\&.
+.SS "uint8_t \fBtrigger\fP[2]"
+.PP
+Definition at line 107 of file PS4Parser\&.h\&.
+.SS "uint32_t \fBval\fP"
+.PP
+Definition at line 93 of file PS4Parser\&.h\&.
+.SS "uint16_t \fBx\fP"
+.PP
+Definition at line 84 of file PS4Parser\&.h\&.
+.SS "\fBtouchpadXY\fP \fBxy\fP[3]"
+.PP
+Definition at line 116 of file PS4Parser\&.h\&.
+.SS "uint16_t \fBy\fP"
+.PP
+Definition at line 85 of file PS4Parser\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

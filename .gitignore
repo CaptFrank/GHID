@@ -6,5 +6,5 @@
 *.settings
 *.settings/
 *.DS_Store
-
+*.cppproj
 GHID_BLUno/.cproject

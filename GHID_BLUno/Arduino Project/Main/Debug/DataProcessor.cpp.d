@@ -13,8 +13,7 @@
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/new.h \
   C:\Program\ Files\Arduino\hardware\arduino\variants\standard/pins_arduino.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADS1298Driver.h \
-  C:\Program\ Files\Arduino\libraries/SPI/SPI.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/GHID_SPI.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/SPI.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/GHID_SPI.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/RingBuffer.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADS1298Commands.h

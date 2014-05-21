@@ -22,6 +22,7 @@
 
 //! Commands
 #include "BluetoothCommandTable.h"
+#include "BluetoothCommandIndexes.h"
 
 //! --------------------------------------------------
 //! Prototypes
@@ -37,6 +38,9 @@ void execute_isr(void);
 //! --------------------------------------------------
 //! Global Variables
 //! --------------------------------------------------
+
+//! Global utilities
+utilities global_utilities;
 
 //! The global ring buffer type
 RingBuff_t buffer;
@@ -61,7 +65,7 @@ spi_settings_t spi_settings = {
 						};
 
 //! A protocol handler
-ConnectionProtocolHandler protocol_handler(&buffer, &Serial);
+ConnectionProtocolHandler protocol_handler(&buffer, &Serial, &global_utilities);
 
 /**
  * This is the callback table used for the bluetooth driver.
@@ -93,9 +97,8 @@ ADS1298_Driver ads1298_driver(&buffer, devices, &spi_settings);
 CC2540_Driver cc2540_driver((char*)"ADS1298", (char*)command_pointers, &dispatcher);
 
 //! The connection
-Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, &protocol_handler);
-
-
+Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
+										&protocol_handler, &global_utilities);
 
 //! --------------------------------------------------
 //! Source Code
@@ -121,6 +124,9 @@ void setup(void){
 	
 	//! We connect to the host device
 	connection.connect();
+	
+	//! We set the global lock to true
+	global_utilities.start_engine = true;
 }
 
 /**
@@ -132,9 +138,11 @@ void loop(){
 	//==========================================
 	// INSERT WORKER CODE HERE
 	//==========================================
-
-	//! We run
-	connection.run();
+	
+	//1 We we are good to go
+	if(global_utilities.start_engine){
+		connection.run(); //! We run the engine
+	}
 }
 
 /**

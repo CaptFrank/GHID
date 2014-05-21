@@ -9,7 +9,7 @@
 #define ADS1298DRIVER_H_
 
 #include <Arduino.h>
-#include <SPI/SPI.h>
+#include "SPI.h"
 
 #include "GHID_SPI.h"
 #include "RingBuffer.h"

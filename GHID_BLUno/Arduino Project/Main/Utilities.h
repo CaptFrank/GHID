@@ -10,33 +10,37 @@
 #define UTILITIES_H_
 
 //! --------------------------------------------------
-//! Global Variables
-//! --------------------------------------------------
-
-//! The start flag
-bool start = false;
-
-//! --------------------------------------------------
 //! Source Code
 //! --------------------------------------------------
 
-//! Reset the mcu
-void (*reset_device)(void) = 0;
-
 /**
- * This function simply acts as a boolean flag toggle. We use
- * it to start the device data acquisition.
+ * This class is the global device handler. It starts and stops the device processe globally.
  */
-inline void start_device(void){
-	start = true;
-}
+class utilities {
 
-/**
- * This function simply acts as a boolean flag toggle. We use
- * it to stop the device data acquisition.
- */
-inline void stop_device(void){
-	start = false;
-}
+	//! Public Context
+	public: 
+		/**
+		 * This function simply acts as a boolean flag toggle. We use
+		 * it to start the device data acquisition.
+		 */
+		void start_device(void);
+
+		/**
+		 * This function simply acts as a boolean flag toggle. We use
+		 * it to stop the device data acquisition.
+		 */
+		void stop_device(void);
+		
+		/**
+		 * Reboot the device
+		 */
+		void reboot();
+			
+		//! start engine boolean
+		bool start_engine;
+	
+};
+
 
 #endif /* UTILITIES_H_ */

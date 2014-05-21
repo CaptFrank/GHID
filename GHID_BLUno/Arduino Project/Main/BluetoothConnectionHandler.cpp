@@ -14,13 +14,14 @@
  */
 Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_serial,
 						connection_type_t type, RingBuff_t* ring,
-						ConnectionProtocolHandler* handler){
+						ConnectionProtocolHandler* handler, utilities* utils){
 
 	//! Set the internal serial port
 	this->_serial = hw_serial;
 	this->_con_type = type;
 	this->_buff = ring;
 	this->_handler = handler;
+	this->_utils = utils;
 
 	//! Initialize it
 	this->_serial->begin(BAUDRATE);
@@ -61,7 +62,7 @@ void Bluetooth_Connection_Handler::reboot(){
 	this->_write_command(REBOOT);
 
 	//! This reboots the device
-	reset_device();
+	this->_utils->reboot();
 }
 
 /**

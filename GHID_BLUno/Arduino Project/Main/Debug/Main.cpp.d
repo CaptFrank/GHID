@@ -12,14 +12,12 @@
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/new.h \
   C:\Program\ Files\Arduino\hardware\arduino\variants\standard/pins_arduino.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADS1298Driver.h \
-  C:\Program\ Files\Arduino\libraries/SPI/SPI.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/GHID_SPI.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/SPI.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/GHID_SPI.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/RingBuffer.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADS1298Commands.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/CC2540Driver.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandTable.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommands.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandDispatcher.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/Dispatcher.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandDispatcher.h \
@@ -32,4 +30,6 @@
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothConnectionCommands.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ConnectionProtocolHandler.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandTable.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommands.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/arduino.h

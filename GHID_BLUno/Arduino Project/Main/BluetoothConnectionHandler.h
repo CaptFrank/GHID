@@ -47,7 +47,8 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		 * This is the default connection handler constructor.
 		 */
 		Bluetooth_Connection_Handler(HardwareSerial* hw_serial, connection_type_t type,
-										RingBuff_t* ring, ConnectionProtocolHandler* handler);
+										RingBuff_t* ring, ConnectionProtocolHandler* handler,
+										utilities* utils);
 
 		/**
 		 * A Connection method to connect to the target device.
@@ -110,6 +111,9 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 
 		//! Protocol Handler
 		ConnectionProtocolHandler* _handler;
+		
+		//! Utilities
+		utilities* _utils;
 
 		/**
 		 * This writes a command to the remote host device.

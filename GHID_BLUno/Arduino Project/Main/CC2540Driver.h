@@ -9,7 +9,7 @@
 #define CC2540DRIVER_H_
 
 #include <Arduino.h>
-#include "BluetoothCommandTable.h"
+#include "BluetoothCommandIndexes.h"
 #include "BluetoothCommandDispatcher.h"
 
 #define OK							"OK"

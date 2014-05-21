@@ -1,6 +1,10 @@
 
 
 *.cproject
+*.project
 *.prefs
+*.settings
+*.settings/
+*.DS_Store
 
 GHID_BLUno/.cproject

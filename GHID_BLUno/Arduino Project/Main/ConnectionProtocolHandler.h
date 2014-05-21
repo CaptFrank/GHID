@@ -33,7 +33,7 @@ class ConnectionProtocolHandler {
 		 * @param buffer						- The ring buffer pointer
 		 * @param serial						- The Hardware serial to read and write
 		 */
-		ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial);
+		ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial, utilities* utils);
 
 		/**
 		 * This sets up the callback table.
@@ -77,6 +77,9 @@ class ConnectionProtocolHandler {
 		
 		//! Internal Buffer
 		buffer_t _buff;
+		
+		//! Utilities
+		utilities* _utils;
 };
 
 #endif /* CONNECTIONPROTOCOLHANDLER_H_ */

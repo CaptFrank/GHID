@@ -20,13 +20,6 @@
 	#define SS			53
 #endif
 
-#ifdef __ATMEGA_32__
-	#define PIN_MOSI				11
-	#define PIN_MISO				12
-	#define PIN_SCLK				10 		//! Default
-	#define PIN_SS					13
-#endif
-
 //! Max buffer size
 #ifndef MAX_BUFFER
 #define MAX_BUFFER		255
@@ -42,6 +35,10 @@ struct buffer_struct_t {
 	byte buffer[MAX_BUFFER];
 };
 
+#ifdef SLAVE_MODE
+buffer_struct_t spi_buffer;
+#endif
+
 //! SPI device settings
 struct spi_settings_t {
 
@@ -51,8 +48,8 @@ struct spi_settings_t {
 	byte data_mode;					//! The data mode as per Arduino API
 	byte bit_order;					//! The order of bits
 	byte clock_divider;				//! Frequency prescaler
-	byte num_device;				//! Number of devices.
-	byte* map;	//! The device map
+	uint8_t num_devices;
+	uint8_t* devices;				//! The device map
 };
 
 /**
@@ -62,7 +59,7 @@ struct spi_settings_t {
  *
  * @see SPI.h
  */
-class GHID_SPI {
+class GHID_SPI{
 
 	//! Public Context
 	public:
@@ -115,9 +112,6 @@ class GHID_SPI {
 
 	//! The settings container
 	spi_settings_t settings;
-	
-	//! buffer
-	buffer_struct_t spi_buffer;
 
 };
 

@@ -14,9 +14,9 @@ GHID_SPI::GHID_SPI(spi_settings_t* settings) {
 	memcpy(&this->settings, settings, sizeof(this->settings));
 
 	//! We set the SS pins to outputs
-	for(register byte i = 0; i != settings->num_device; i ++){
+	for(register byte i = 0; i != settings->num_devices; i ++){
 		//! We set the ss pin as an output.
-		pinMode(static_cast<byte>(this->settings.map[i]), OUTPUT);
+		pinMode(this->settings.devices[i], OUTPUT);
 	}
 
 	//! We start the SPI engine
@@ -36,8 +36,10 @@ GHID_SPI::GHID_SPI(spi_settings_t* settings) {
 		SPI.attachInterrupt();
 	}
 
+	#ifdef SLAVE_MODE
 	//! We reset the buffer position
 	spi_buffer.length = 0;
+	#endif
 }
 
 //! Transfer Data method
@@ -83,6 +85,7 @@ buffer_struct_t* GHID_SPI::read_data(byte device,
 	return &this->buffer;
 }
 
+#ifdef SLAVE_MODE
 //! Checks for the isr buffer if its full
 void GHID_SPI::check_spi_buffer(){
 
@@ -93,7 +96,6 @@ void GHID_SPI::check_spi_buffer(){
 	spi_buffer.length = 0x00;
 }
 
-#ifdef SLAVE_MODE
 //! If the interrupt is online
 ISR(SPI_STC_vect){
 

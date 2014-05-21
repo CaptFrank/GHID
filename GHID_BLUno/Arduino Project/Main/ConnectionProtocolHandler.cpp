@@ -14,12 +14,14 @@
  *
  * @param buffer						- The ring buffer pointer
  * @param serial						- The Hardware serial to read and write
+ * @param utils							- The global utilities
  */
-ConnectionProtocolHandler::ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial){
+ConnectionProtocolHandler::ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial, utilities* utils){
 
 	//! Set internals
 	this->_serial = serial;
 	this->_buffer = buffer;
+	this->_utils = utils;
 }
 /**
  * This sets up the callback table.
@@ -61,25 +63,28 @@ void ConnectionProtocolHandler::poll(){
  */
 void ConnectionProtocolHandler::generic(uint8_t command, void* object){
 
+	//! Cast the object
+	ConnectionProtocolHandler* access = (ConnectionProtocolHandler*) object;
+	
 	//! We switch on the command
 	switch(command){
 
 		//! We reset the device
 		case REBOOT:
 		case RESET:
-			reset_device();
+			access->_utils->reboot();
 			break;
 
 		//! We stop the device
 		case STOP:
 		case SUSPEND:
-			stop_device();
+			access->_utils->stop_device();
 			break;
 
 		//! We start the device
 		case RESUME:
 		case START:
-			start_device();
+			access->_utils->start_device();
 			break;
 
 		//! Nothing happens

@@ -15,7 +15,7 @@
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandDispatcher.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/Dispatcher.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADXL335Driver.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/MMA7361LDriver.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/Utilities.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/RingBuffer.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/AnalogSensorDriver.h \
@@ -31,4 +31,9 @@
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandTable.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommands.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
-  C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/arduino.h
+  C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/arduino.h \
+  C:\Program\ Files\Arduino\libraries\Wire/Wire.h \
+  C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/Stream.h \
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h \
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_Boards.h \
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_mem_check.h

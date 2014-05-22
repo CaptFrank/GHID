@@ -9,8 +9,6 @@
 //! Includes
 //! --------------------------------------------------
 
-#include <Arduino.h>
-
 //! Drivers
 #include "CC2540Driver.h"
 #include "ADXL335Driver.h"
@@ -40,10 +38,6 @@
 //! --------------------------------------------------
 //! Prototypes
 //! --------------------------------------------------
-
-//! Default functions
-void setup(void);
-void loop(void);
 
 //! Interrupt function
 void execute_isr(void);
@@ -138,7 +132,7 @@ void setup(void){
  * This is the main worker function, which never quits until the
  * process is complete.
  */
-void loop(){
+void loop(void){
 
 	//==========================================
 	// INSERT WORKER CODE HERE

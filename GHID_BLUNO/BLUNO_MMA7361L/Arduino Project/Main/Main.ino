@@ -44,10 +44,6 @@
 //! Prototypes
 //! --------------------------------------------------
 
-//! Default functions
-void setup(void);
-void loop(void);
-
 //! Interrupt function
 void execute_isr(void);
 
@@ -124,14 +120,18 @@ void setup(void){
 	analogReference(DEFAULT);
 
 	//! We setup the analog sensor
+	Serial.begin(115200);
+	Serial.println("MMA73611 Driver INIT");
 	mma7361l_driver.begin();
 	mma7361l_driver.calibrate();
 
 	//! SETUP BLUETOOTH
 	//! Set the callback table within the connection protocol handler
 	protocol_handler.set_callback_table(callback_table);
+	Serial.println("Callbacks set");
 	
 	//! We connect to the host device
+	Serial.println("Connecting");
 	connection.connect();
 	
 	//! We set the global lock to true

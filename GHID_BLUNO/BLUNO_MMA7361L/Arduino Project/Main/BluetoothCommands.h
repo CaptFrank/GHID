@@ -140,6 +140,11 @@ prog_char set_tx_power[]					PROGMEM = "AT+TXPOWER=";
 prog_char help[]		 					PROGMEM = "?\r\n";
 
 /**
+ * Exits the AT mode
+ */
+prog_char exit_at[]							PROGMEM = "AT+EXIT\r\n";
+
+/**
  * Generic Enter AT Mode command
  */
 prog_char at_mode[]							PROGMEM = "+++";

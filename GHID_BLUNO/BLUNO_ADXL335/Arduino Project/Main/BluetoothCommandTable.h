@@ -85,6 +85,9 @@ PROGMEM const char *command_pointers[] = {
 		get_firmware_ver,
 
 		//! PSW CHANGE
-		password_change
+		password_change,
+		
+		//! EXIT AT
+		exit_at
 };
 #endif /* BLUETOOTHCOMMANDTABLE_H_ */

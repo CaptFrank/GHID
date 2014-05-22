@@ -49,7 +49,7 @@ void CC2540_Driver::_default_setup(CC2540_Driver* driver){
 		if(driver->_set_setting(SETTING_DEFAULT)){
 
 			//! We reboot the device
-			driver->_reboot();
+			driver->_exit_at();
 		}
 	}
 }
@@ -421,6 +421,22 @@ bool CC2540_Driver::_reboot(){
 
 	//! Get the command
 	String command = (this->_get_command(REBOOT));
+
+	//! We setup a dispatch
+	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
+	this->_dispacher->run_dispatch();
+	return this->_check_ok_response();
+}
+
+/**
+ *  This method exits from the at mode on the ble chip
+ *
+ * @return success							- If the dispatch was successful
+ */
+bool CC2540_Driver::_exit_at(){
+	
+	//! Get the command
+	String command = (this->_get_command(EXIT_AT));
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());

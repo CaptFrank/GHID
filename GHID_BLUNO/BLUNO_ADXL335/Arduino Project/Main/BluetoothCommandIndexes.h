@@ -79,6 +79,7 @@
 //! PSW CHANGE
 #define PSW_CHANGE								35
 
-
+//! EXIT AT
+#define EXIT_AT									36
 
 #endif /* BLUETOOTHCOMMANDINDEXES_H_ */

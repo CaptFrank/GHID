@@ -218,6 +218,13 @@ class CC2540_Driver {
 		 * @return success							- If the dispatch was successful
 		 */
 		bool _reboot();
+		
+		/**
+		 *  This method exits from the at mode on the ble chip
+		 *
+		 * @return success							- If the dispatch was successful
+		 */
+		bool _exit_at();	
 
 		//! Utilities
 

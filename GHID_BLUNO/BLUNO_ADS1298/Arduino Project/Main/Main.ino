@@ -24,13 +24,11 @@
 #include "BluetoothCommandTable.h"
 #include "BluetoothCommandIndexes.h"
 
+#define ISR_NUMBER			PIN_DRDY - 2
+
 //! --------------------------------------------------
 //! Prototypes
 //! --------------------------------------------------
-
-//! Default functions
-void setup(void);
-void loop(void);
 
 //! Interrupt function
 void execute_isr(void);
@@ -48,7 +46,7 @@ RingBuff_t buffer;
 /**
  * We create a device map
  */
-uint8_t devices[NUMBER_OF_SPI_DEVICES] = {ADS1298_DEVICE};
+uint8_t devices[] = {ADS1298_DEVICE};
 
 /**
  * SPI Settings definition structure
@@ -61,7 +59,7 @@ spi_settings_t spi_settings = {
 						MSBFIRST,				//! msb first
 						SPI_CLOCK_DIV16,		//! devide speed by 6 (16M/6)
 						NUMBER_OF_SPI_DEVICES,	//! Only one device on
-						devices				//! Address of the device
+						devices					//! Address of the device
 						};
 
 //! A protocol handler
@@ -94,11 +92,11 @@ ADS1298_Driver ads1298_driver(&buffer, devices, &spi_settings);
 
 //! The CC2540 Driver
 //! 	- Here we use the default setup function.... We could change it
-CC2540_Driver cc2540_driver((char*)"ADS1298", (char*)command_pointers, &dispatcher);
+//CC2540_Driver cc2540_driver((char*)"ADS1298", (char*)command_pointers, &dispatcher);
 
 //! The connection
-Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
-										&protocol_handler, &global_utilities);
+//Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
+//										&protocol_handler, &global_utilities);
 
 //! --------------------------------------------------
 //! Source Code
@@ -114,16 +112,28 @@ void setup(void){
 	// INSERT SETUP CODE HERE
 	//=========================================
 
+	//! Disable the interrupts
+	cli();
+	
+	//! Init the ring buffer
+	RingBuffer_InitBuffer(&buffer);
+
 	//! SETUP ADS1298
+	//! We setup the ADS1298 device.
+	ads1298_driver.begin();
+	
 	//! We trigger the ISR on the LOW change of the ADS1298 DRDY pin
-	attachInterrupt(PIN_DRDY, execute_isr, LOW);
+	attachInterrupt(ISR_NUMBER, execute_isr, FALLING);
 
 	//! SETUP BLUETOOTH
 	//! Set the callback table within the connection protocol handler
 	protocol_handler.set_callback_table(callback_table);
 	
+	//! We allow interrupts
+	sei();
+	
 	//! We connect to the host device
-	connection.connect();
+	//connection.connect();
 	
 	//! We set the global lock to true
 	global_utilities.start_engine = true;
@@ -139,17 +149,19 @@ void loop(){
 	// INSERT WORKER CODE HERE
 	//==========================================
 	
-	//1 We we are good to go
+	//! We we are good to go
 	if(global_utilities.start_engine){
-		connection.run(); //! We run the engine
+		//connection.run(); //! We run the engine
 	}
 }
 
 /**
- * This is the static method that adds one spi data component
+ * This is the ISR that adds one spi data component
  * to a generic ring buffer for read later on.
- */
+ */ 
 void execute_isr(void){
+	
+	Serial.println("Interrupt!!");
 
 	/**
 	 * This ISR is triggered only when the DRDY signal on the ADS1298 chip

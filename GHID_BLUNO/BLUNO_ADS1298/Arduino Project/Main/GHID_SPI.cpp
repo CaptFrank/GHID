@@ -14,25 +14,25 @@ GHID_SPI::GHID_SPI(spi_settings_t* settings) {
 	memcpy(&this->settings, settings, sizeof(this->settings));
 
 	//! We set the SS pins to outputs
-	for(register byte i = 0; i != settings->num_devices; i ++){
+	for(register byte i = 0; i < settings->num_devices; i ++){
 		//! We set the ss pin as an output.
-		pinMode(this->settings.devices[i], OUTPUT);
+		pinMode(settings->devices[i], OUTPUT);
 	}
 
 	//! We start the SPI engine
 	SPI.begin();
 
 	//! We set the SPI bit order
-	SPI.setBitOrder(this->settings.bit_order);
+	SPI.setBitOrder(settings->bit_order);
 
 	//! We set the clock divider
-	SPI.setClockDivider(this->settings.clock_divider);
+	SPI.setClockDivider(settings->clock_divider);
 
 	//! We set the data mode of the bus
-	SPI.setDataMode(this->settings.data_mode);
+	SPI.setDataMode(settings->data_mode);
 
 	//! We setup the interrupt
-	if(this->settings.attach_interrupt == 0x01){
+	if(settings->attach_interrupt == true){
 		SPI.attachInterrupt();
 	}
 

@@ -18,8 +18,8 @@
 //! Pin definitions - SPI Bus
 #define PIN_MOSI				11
 #define PIN_MISO				12
-#define PIN_SCLK				10 		//! Default
-#define PIN_SS					13
+#define PIN_SCLK				13 		//! Default
+#define PIN_SS					10
 
 //! Pin definitions - Signals
 #define PIN_RESET				9
@@ -45,7 +45,7 @@
 
 //! SPI Device settings
 #define NUMBER_OF_SPI_DEVICES	1
-#define ADS1298_DEVICE			13
+#define ADS1298_DEVICE			10
 
 //! Packet defines
 #define HEADER					3
@@ -110,14 +110,19 @@ class ADS1298_Driver : public GHID_SPI {
 		 * This is the default constructor for the class
 		 *
 		 * @param buff							- The general context ring buffer
-		 * @param setup_method					- The setup method called.
 		 * @param devices						- The device array
 		 * @param spi_settings					- The SPI settings
 		 */
 		ADS1298_Driver(RingBuff_t* buff, 
 					   uint8_t* devices, 
-					   spi_settings_t* settings,
-					   void (*setup_method)(ADS1298_Driver* driver) = _init_ads);
+					   spi_settings_t* settings);
+
+		/**	
+		 * This is the setup method for the ads1298
+		 * 
+		 * @param setup_method					- The setup method called.
+		 */	
+		void begin(void (*setup_method)(ADS1298_Driver* driver) = _init_ads);
 
 		/**
 		 * This method reads a byte from the ADS1298 chip
@@ -225,12 +230,12 @@ class ADS1298_Driver : public GHID_SPI {
 		/**
 		 * Set SS pin high
 		 */
-		void _set_ss_pin();
+		void _set_cs_pin();
 
 		/**
 		 * Unset ss pin
 		 */
-		void _unset_ss_pin();
+		void _unset_cs_pin();
 
 };
 

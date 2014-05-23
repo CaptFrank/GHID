@@ -32,4 +32,5 @@
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandTable.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommands.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
-  C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/arduino.h
+  C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/arduino.h \
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h

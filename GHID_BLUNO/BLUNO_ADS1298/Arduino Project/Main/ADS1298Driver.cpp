@@ -22,18 +22,22 @@
  * @param spi_settings					- The SPI settings
  */
 ADS1298_Driver::ADS1298_Driver(RingBuff_t* buff, 
-							    uint8_t* devices,
-							   spi_settings_t* spi_settings,
-							   void (*setup_method)(ADS1298_Driver* driver)) : GHID_SPI(spi_settings){
+							   uint8_t* devices,
+							   spi_settings_t* spi_settings) : GHID_SPI(spi_settings){
 
 	//! Assign the global ring buffer type internally
 	this->_buff = buff;
 	this->_settings;
 	this->_devices = devices;
-	
-	//! We then init the buffer
-	RingBuffer_InitBuffer(this->_buff);
+}
 
+/**	
+ * This is the setup method for the ads1298
+ * 
+ * @param setup_method					- The setup method called.
+ */	
+void ADS1298_Driver::begin(void (*setup_method)(ADS1298_Driver* driver)){
+	
 	//! Here we setup the pins
 	this->_init_pins();
 	
@@ -50,26 +54,26 @@ ADS1298_Driver::ADS1298_Driver(RingBuff_t* buff,
  */
 uint8_t ADS1298_Driver::read_byte(int reg_address){
 
-	  uint8_t out = 0;
+	uint8_t out = 0;
 
-	  //! Activate the SPI device
-		this->_unset_ss_pin();
+	//! Activate the SPI device
+	this->_unset_cs_pin();
 
-	  //! Send the address to read
-	  SPI.transfer(RREG | reg_address);
-	  delayMicroseconds(5);
+	//! Send the address to read
+	SPI.transfer(RREG | reg_address);
+	delayMicroseconds(5);
 
-	  //! Send the number of bytes to read - 1
-	  SPI.transfer(0);
-	  delayMicroseconds(5);
+	//! Send the number of bytes to read - 1
+	SPI.transfer(0);
+	delayMicroseconds(5);
 
-	  //! Send the read command @ byte 0
-	  out = SPI.transfer(0);
-	  delayMicroseconds(1);
+	//! Send the read command @ byte 0
+	out = SPI.transfer(0);
+	delayMicroseconds(1);
 
-	  //! Deactivate the SPI Device
-	  this->_set_ss_pin();
-	  return(out);
+	//! Deactivate the SPI Device
+	this->_set_cs_pin();
+	return(out);
 }
 
 /**
@@ -81,7 +85,7 @@ uint8_t ADS1298_Driver::read_byte(int reg_address){
 void ADS1298_Driver::write_byte(int reg_address, uint8_t val_hex){
 
 	//! Activate the SPI device
-	this->_unset_ss_pin();
+	this->_unset_cs_pin();
 
 	//! Send the address to write to
 	SPI.transfer(WREG | reg_address);
@@ -96,7 +100,7 @@ void ADS1298_Driver::write_byte(int reg_address, uint8_t val_hex){
 	delayMicroseconds(1);
 
 	//! Deactivate the SPI device
-	this->_set_ss_pin();
+	this->_set_cs_pin();
 
 }
 
@@ -109,13 +113,13 @@ void ADS1298_Driver::send_command(uint8_t cmd){
 
 	//! We send the command
 	//! Start listening
-	this->_unset_ss_pin();
+	this->_unset_cs_pin();
 
 	//! Send the data byte
 	SPI.transfer(cmd);
 
 	//! Stop listening
-	this->_set_ss_pin();
+	this->_set_cs_pin();
 }
 
 /**
@@ -145,38 +149,6 @@ void ADS1298_Driver::check_active_channels(){
 	}
 }
 
-// /**
-//  * This is the static method that adds one spi data component
-//  * to a generic ring buffer for read later on.
-//  */
-// void ADS1298_Driver::execute_isr(void){
-// 
-// 	/**
-// 	 * This ISR is triggered only when the DRDY signal on the ADS1298 chip
-// 	 * is asserted, indicating that there is new data stored on the ADS1298
-// 	 * registers. In which case, this ISR is activated to acquire this data
-// 	 * and store it within a global context RingBuffer.
-// 	 */
-// 
-// 	//! Here we add data to the buffer.
-// 	//! We create a buffer object to contain our data.
-// 	//! Format of the packet:
-// 	//! 	- 24 bit header + 24 bit * active channels [3 bytes + 3 * # bytes]
-// 
-// 	//! We add the spacer at the end of the data array
-// 	this->_rx_buff.data.packet._data[sizeof(_rx_buff.data.packet._data)] = SPACER;
-// 
-// 	//! We get the data and store it within the buffer
-// 	GHID_SPI::transfer_bulk(ADS1298_DEVICE,
-// 			this->_rx_buff.data.packet_array,
-// 			DATA_PACKET_SIZE);
-// 
-// 	uint8_t size = DATA_PACKET_SIZE;
-// 	while(size --)
-// 		//! Then we input the data into the ring buffer
-// 		RingBuffer_Insert(this->_buff, this->_rx_buff.data.packet._data[size]);
-// }
-
 //! Private Context
 
 //! Init methods
@@ -189,9 +161,6 @@ void ADS1298_Driver::_init_pins(){
 	//! We setup the pins
 
 	//! SPI BUS
-	pinMode(PIN_SCLK, 		OUTPUT);
-	pinMode(PIN_MISO, 		OUTPUT);
-	pinMode(PIN_MOSI, 		OUTPUT);
 	pinMode(PIN_SS,			OUTPUT);
 
 	//! SIGNALS
@@ -199,8 +168,11 @@ void ADS1298_Driver::_init_pins(){
 	pinMode(PIN_RESET, 		OUTPUT);
 	pinMode(PIN_START, 		OUTPUT);
 	pinMode(PIN_DRDY, 		INPUT);
+	
+	//! Pull up resistors on DRDY
+	digitalWrite(PIN_DRDY,	HIGH);   
 
-	this->_set_ss_pin();
+	this->_set_cs_pin();
 
 	//! We stop the conversions
 	this->_stop_ads1298();
@@ -294,9 +266,9 @@ void ADS1298_Driver::_reset_ads1298(){
 void ADS1298_Driver::_reset_ads1298_comms(){
 
 	//! Reset communication
-	this->_unset_ss_pin();
+	this->_unset_cs_pin();
 	delay(ONE_SECOND);
-	this->_set_ss_pin();
+	this->_set_cs_pin();
 
 	//! Wait longer for TI chip to start
 	delay(HALF_SECOND);
@@ -323,7 +295,7 @@ void ADS1298_Driver::_stop_ads1298(){
 /**
  * Set SS pin high
  */
-void ADS1298_Driver::_set_ss_pin(){
+void ADS1298_Driver::_set_cs_pin(){
 
 	//! We trigger the CS
 	digitalWrite(ADS1298_DEVICE, HIGH);
@@ -332,7 +304,7 @@ void ADS1298_Driver::_set_ss_pin(){
 /**
  * Unset ss pin
  */
-void ADS1298_Driver::_unset_ss_pin(){
+void ADS1298_Driver::_unset_cs_pin(){
 
 	//! We assert low the ss pin
 	digitalWrite(ADS1298_DEVICE, LOW);

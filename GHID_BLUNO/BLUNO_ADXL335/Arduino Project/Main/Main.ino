@@ -105,11 +105,11 @@ void setup(void){
 	// INSERT SETUP CODE HERE
 	//=========================================
 
-	//! We set the analog reference (5V)
-	analogReference(DEFAULT);
-	
 	//! We init the buffer
 	RingBuffer_InitBuffer(&buffer);
+
+	//! We set the analog reference (5V)
+	analogReference(DEFAULT);
 
 	//! We setup the analog sensor
 	adxl335_driver.begin();

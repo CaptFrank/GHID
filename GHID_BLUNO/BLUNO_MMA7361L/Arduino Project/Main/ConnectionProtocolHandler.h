@@ -13,6 +13,7 @@
 #include "ConnectionHandler.h"
 #include "BluetoothConnectionCommands.h"
 
+//! 2 Seconds timeout
 #define TIMEOUT				2
 
 /**

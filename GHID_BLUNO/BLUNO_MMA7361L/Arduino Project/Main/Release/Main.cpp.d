@@ -15,12 +15,10 @@
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandDispatcher.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/Dispatcher.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/MMA7361LDriver.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADXL335Driver.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/Utilities.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/RingBuffer.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/AnalogSensorDriver.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADCDriver.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/FIRFilter.h \
+  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADXL335.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandDispatcher.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothConnectionHandler.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ConnectionProtocolHandler.h \

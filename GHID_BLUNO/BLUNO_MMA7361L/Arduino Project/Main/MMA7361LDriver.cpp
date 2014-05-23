@@ -122,50 +122,6 @@ int MMA7361L_Driver::get_raw(axis_t axis){
 }
 
 /**
- * This is a method that gets the filtered selected axis value.
- *
- * @param axis								- The axis needed to be measured
- * @return int								- The analog value
- */
-int MMA7361L_Driver::get_filtered(axis_t axis){
-
-	//! Temp data
-	Analog_Sensor_Driver* temp;
-	word offset;
-
-	//! We read the raw value of the axis defined
-	switch(axis){
-
-		case X_AXIS:
-			temp = this->_axis._x;
-			offset = this->_offset_configs._offsets._x_offset;
-			break;
-
-		case Y_AXIS:
-			temp = this->_axis._y;
-			offset = this->_offset_configs._offsets._y_offset;
-			break;
-
-		case Z_AXIS:
-			temp = this->_axis._z;
-			offset = this->_offset_configs._offsets._z_offset;
-			break;
-
-		//! Nothing to do
-		default:
-			return 0;
-	}
-
-	//! We measure
-	analog_measurement_t* measurment = temp->measure();
-	if(measurment->valid){
-		return int(measurment->measurement) + offset;
-	}else{
-		return 0;
-	}
-}
-
-/**
  * This is a method that gets the voltage of the selected axis.
  *
  * @param axis								- The axis needed to be measured

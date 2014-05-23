@@ -11,6 +11,7 @@
 #include <Arduino.h>
 #include "RingBuffer.h"
 
+//! Size of the data
 #define MAX_SIZE		3*(sizeof(int))
 
 /**

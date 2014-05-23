@@ -1,101 +1,35 @@
 <VisualMicro>
   <Program Name="Main" Ext=".ino" Location="Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_MMA7361L\Arduino Project\Main">
     <Platform Name="arduino10x" Package="arduino" Platform="avr" Architecture="avr">
-      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\Arduino\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\Arduino\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\Arduino" McuSketchBookPath="\\vmware-host\Shared Folders\Home_Monitoring_Project" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\Arduino" build.system.path="C:\Program Files\Arduino\hardware\arduino\system" runtime.ide.version="105" originalid="uno" vm.platform.root.path="C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x" build.core.vmresolved="C:\Program Files\Arduino\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\Arduino\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\Arduino\hardware\arduino" vm.core.include="arduino.h" ide.hint="Arduino 0023 and 1.0.x Ide" ide.location.key="Arduino" ide.location.ide.winreg="Arduino 1.0.x Application" ide.location.sketchbook.winreg="Arduino 1.0.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.location.sketchbook.default="%MYDOCUMENTS%\arduino" ide.location.preferences="%VM_APPDATA_ROAMING%\arduino\preferences.txt" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="arduino.h" ide.platformswithoutpackage="true" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionLTEQ="149" ide.exe="arduino.exe" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" vm.debug="true" software="ARDUINO" ide.appid="arduino10x" location.sketchbook="\\vmware-host\Shared Folders\Home_Monitoring_Project" build.board="AVR_UNO" vm.boardsource.path="C:\Program Files\Arduino\hardware\arduino" vm.platformname.name="avr" build.arch="AVR" build.variant.vmresolved="C:\Program Files\Arduino\hardware\arduino\variants\standard" vm.runtime.compiler.showwarnings="true" compiler.path="C:\Program Files\Arduino\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\Arduino\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\Arduino\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\Arduino\libraries&quot;  -I&quot;C:\Program Files\Arduino\hardware\arduino\libraries&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers&quot;  -I&quot;\\vmware-host\Shared Folders\Home_Monitoring_Project\libraries&quot; " build.path="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno" build.project_name="Main" build.variant.path="C:\Program Files\Arduino\hardware\arduino\variants\standard" archive_file="core.a" object_file="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\VM_DBG\VM_DBG.cpp.o" source_file="C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers\VM_DBG\VM_DBG.cpp" build.architecture="avr" vmresolved.compiler.path="C:\Program Files\Arduino\hardware\tools\avr\bin\" vmresolved.tools.path="C:\Program Files\Arduino\hardware\tools\avr" />
+      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\Arduino\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\Arduino\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\Arduino" McuSketchBookPath="\\vmware-host\Shared Folders\Home_Monitoring_Project" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\Arduino" build.system.path="C:\Program Files\Arduino\hardware\arduino\system" runtime.ide.version="105" originalid="uno" vm.platform.root.path="C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x" build.core.vmresolved="C:\Program Files\Arduino\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\Arduino\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\Arduino\hardware\arduino" vm.core.include="arduino.h" ide.hint="Arduino 0023 and 1.0.x Ide" ide.location.key="Arduino" ide.location.ide.winreg="Arduino 1.0.x Application" ide.location.sketchbook.winreg="Arduino 1.0.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.location.sketchbook.default="%MYDOCUMENTS%\arduino" ide.location.preferences="%VM_APPDATA_ROAMING%\arduino\preferences.txt" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="arduino.h" ide.platformswithoutpackage="true" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionLTEQ="149" ide.exe="arduino.exe" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" vm.debug="true" software="ARDUINO" ide.appid="arduino10x" location.sketchbook="\\vmware-host\Shared Folders\Home_Monitoring_Project" build.board="AVR_UNO" vm.boardsource.path="C:\Program Files\Arduino\hardware\arduino" vm.platformname.name="avr" build.arch="AVR" build.variant.vmresolved="C:\Program Files\Arduino\hardware\arduino\variants\standard" vm.runtime.compiler.showwarnings="true" compiler.path="C:\Program Files\Arduino\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\Arduino\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\Arduino\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\Arduino\libraries&quot;  -I&quot;C:\Program Files\Arduino\hardware\arduino\libraries&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers&quot;  -I&quot;\\vmware-host\Shared Folders\Home_Monitoring_Project\libraries&quot; " build.path="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno" build.project_name="Main" build.variant.path="C:\Program Files\Arduino\hardware\arduino\variants\standard" archive_file="core.a" object_file="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Utilities.cpp.o" source_file="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Utilities.cpp" build.architecture="avr" vmresolved.compiler.path="C:\Program Files\Arduino\hardware\tools\avr\bin\" vmresolved.tools.path="C:\Program Files\Arduino\hardware\tools\avr" object_files="&quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\ADCDriver.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\AnalogSensorDriver.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\BluetoothCommandDispatcher.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\BluetoothConnectionHandler.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\CC2540Driver.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\ConnectionProtocolHandler.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\DataProcessor.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Dispatcher.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\FIRFilter.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Main.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\MMA7361LDriver.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Utilities.cpp.o&quot; " />
     </Platform>
-    <Compile CompilerErrors="0" ConfigurationName="Debug" StopOnError="True" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno" ReportDetailedMemoryUsage="1" ReportDisassembledView="1" IsDebugStart="1" SketchName="Main" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 50;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE_TTYUART 8;VM_DEBUGGER_TYPE_NET_CONSOLE 9;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;VM_DEBUG_BREAKPAUSE;" IncludesDebug="1" IsCompiled="1" />
-    <Debug EnableBreak="1" JumpToSource="1" LocalPort="COM3" LocalPortSpeed="115200" RemotePortSpeed="115200" RemotePortTransport="HardwareSerial" StartUpMessage="&quot;ENTERING DEBUG&quot;" StartUpPause="1" IncludeDisabledBreakpoints="1" AutoReportAnalogPins="0" AutoReportDigitalPins="0" AutoReportFreeMemory="0" AutoReportI2CScan="0" DebugMode="Full" DebugEnabled="1" />
+    <Compile CompilerErrors="0" ConfigurationName="Release" StopOnError="True" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno" IsDebugStart="1" SketchName="Main" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 50;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE_TTYUART 8;VM_DEBUGGER_TYPE_NET_CONSOLE 9;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;" IncludesDebug="1" IsCompiled="1" />
+    <Debug DebugEnabled="1" />
     <VCCodeModel>
       <VCCodeMacros />
     </VCCodeModel>
     <BreakPoints>
-      <BreakPoint Index="1" Name="Main.ino, line 123 character 1" Id="abbe18ef-ea9f-4167-9912-a8f7e5dcce0c" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="z:\ghid - beta\ghid\ghid_bluno\bluno_mma7361l\arduino project\main\main.ino" FileLine="123" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='abbe18ef-ea9f-4167-9912-a8f7e5dcce0c'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>116		// INSERT SETUP CODE HERE
-117		//=========================================
-118	
-119		//! We init the Ring Buffer object
-120		RingBuffer_InitBuffer(&amp;buffer);
-121	
-122		//! We set the analog reference (5V)
---&gt;123		analogReference(DEFAULT);
-124	
-125		//! We setup the analog sensor
-126		mma7361l_driver.begin();
-127		mma7361l_driver.calibrate();
-128	
-129		//! SETUP BLUETOOTH
-130		//! Set the callback table within the connection protocol handler
-131		protocol_handler.set_callback_table(callback_table);
-132		
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="2" Name="MMA7361LDriver.cpp, line 85 character 1" Id="8b7b0c1f-c1ac-43b4-b522-7a8a4ca7e706" Enabled="1" Message="{z_axis}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="z:\ghid - beta\ghid\ghid_bluno\bluno_mma7361l\arduino project\main\mma7361ldriver.cpp" FileLine="85" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='8b7b0c1f-c1ac-43b4-b522-7a8a4ca7e706'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
-        <Source>78		int z_axis;
-79		
-80		//! We get all axis values
-81		x_axis = this-&gt;get_accel(X_AXIS);
-82		delay(10);
-83		y_axis = this-&gt;get_accel(Y_AXIS);
-84		delay(10);
---&gt;85		z_axis = this-&gt;get_accel(Z_AXIS);
-86		delay(10);
-87		
-88		//! Create a data container
-89		uint8_t _data[SIZE_OF_DATA] = {x_axis, y_axis, z_axis, 0x00};
-90		
-91		//! We put the data into the ringbuffer
-92		for(uint8_t i = 0; i &lt; sizeof(_data); i++){
-93			RingBuffer_Insert(buff, _data[i]);
-94		}
+      <BreakPoint Index="1" Name="Main.ino, line 137 character 1" Id="5555e897-3e22-441f-9670-9eff8d1d3499" Enabled="1" Message="{millis()}" MessageTextType="2" PreProcessedMessage="{0}" Condition="millis()&gt;0 || millis()&gt;1" ConditionType="1" CurrentHits="0" File="z:\ghid - beta\ghid\ghid_bluno\bluno_mma7361l\arduino project\main\main.ino" FileLine="137" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="250" HitCountType="4" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='661b6c50-f106-4b9a-93b6-6e36802047a2'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>130		global_utilities.start_engine = true;
+131	}
+132	
+133	/**
+134	 * This is the main worker function, which never quits until the
+135	 * process is complete.
+136	 */
+--&gt;137	void loop(){
+138	
+139		//==========================================
+140		// INSERT WORKER CODE HERE
+141		//==========================================
+142		
+143		//! We trigger the ADC thread
+144		//! This puts the adc values in the Ringbuffer
+145		mma7361l_driver.run(&amp;buffer);
+146		
 </Source>
         <MessageVariables>
-          <MessageVariable Name="z_axis" Index="1" />
-        </MessageVariables>
-      </BreakPoint>
-      <BreakPoint Index="3" Name="MMA7361LDriver.cpp, line 83 character 1" Id="a2f9ec89-9d88-4ae3-a1b4-1983ba094f46" Enabled="1" Message="{y_axis}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="z:\ghid - beta\ghid\ghid_bluno\bluno_mma7361l\arduino project\main\mma7361ldriver.cpp" FileLine="83" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='a2f9ec89-9d88-4ae3-a1b4-1983ba094f46'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
-        <Source>76		int x_axis;
-77		int y_axis;
-78		int z_axis;
-79		
-80		//! We get all axis values
-81		x_axis = this-&gt;get_accel(X_AXIS);
-82		delay(10);
---&gt;83		y_axis = this-&gt;get_accel(Y_AXIS);
-84		delay(10);
-85		z_axis = this-&gt;get_accel(Z_AXIS);
-86		delay(10);
-87		
-88		//! Create a data container
-89		uint8_t _data[SIZE_OF_DATA] = {x_axis, y_axis, z_axis, 0x00};
-90		
-91		//! We put the data into the ringbuffer
-92		for(uint8_t i = 0; i &lt; sizeof(_data); i++){
-</Source>
-        <MessageVariables>
-          <MessageVariable Name="y_axis" Index="1" />
-        </MessageVariables>
-      </BreakPoint>
-      <BreakPoint Index="4" Name="MMA7361LDriver.cpp, line 81 character 1" Id="01920b91-28fc-44c8-9887-dfffc579ce51" Enabled="1" Message="{x_axis}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="z:\ghid - beta\ghid\ghid_bluno\bluno_mma7361l\arduino project\main\mma7361ldriver.cpp" FileLine="81" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='01920b91-28fc-44c8-9887-dfffc579ce51'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
-        <Source>74		
-75		//! Containers
-76		int x_axis;
-77		int y_axis;
-78		int z_axis;
-79		
-80		//! We get all axis values
---&gt;81		x_axis = this-&gt;get_accel(X_AXIS);
-82		delay(10);
-83		y_axis = this-&gt;get_accel(Y_AXIS);
-84		delay(10);
-85		z_axis = this-&gt;get_accel(Z_AXIS);
-86		delay(10);
-87		
-88		//! Create a data container
-89		uint8_t _data[SIZE_OF_DATA] = {x_axis, y_axis, z_axis, 0x00};
-90		
-</Source>
-        <MessageVariables>
-          <MessageVariable Name="x_axis" Index="1" />
+          <MessageVariable Name="millis()" Index="1" />
         </MessageVariables>
       </BreakPoint>
     </BreakPoints>

@@ -11,6 +11,7 @@
 #include <Arduino.h>
 #include "DataProcessor.h"
 
+//! Max Data Size
 #define MAX_SIZE		3*(sizeof(int))
 
 /**

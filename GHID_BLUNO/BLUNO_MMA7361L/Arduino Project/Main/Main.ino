@@ -41,13 +41,6 @@
 #define MMA7361L_Z_AXIS					2
 
 //! --------------------------------------------------
-//! Prototypes
-//! --------------------------------------------------
-
-//! Interrupt function
-void execute_isr(void);
-
-//! --------------------------------------------------
 //! Global Variables
 //! --------------------------------------------------
 
@@ -158,4 +151,6 @@ void loop(){
 		//! and send them via the Bluetooth interface
 		connection.run(); //! We run the engine
 	}
+	
+	delay(10);
 }

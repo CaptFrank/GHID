@@ -74,14 +74,6 @@ class MMA7361L_Driver {
 		int get_raw(axis_t axis);
 
 		/**
-		 * This is a method that gets the filtered selected axis value.
-		 *
-		 * @param axis								- The axis needed to be measured
-		 * @return int								- The analog value
-		 */
-		int get_filtered(axis_t axis);
-
-		/**
 		 * This is a method that gets the voltage of the selected axis.
 		 *
 		 * @param axis								- The axis needed to be measured

@@ -12,16 +12,11 @@
 #include "BluetoothCommandIndexes.h"
 #include "BluetoothCommandDispatcher.h"
 
+//! Generic defines
 #define OK							"OK"
 #define MAX_COMMAND_LENGTH			30
 #define SUCCESS						0
 #define EMPTY						0
-
-//! Define the setup type
-enum cc2540_setup_t {
-	DEFAULT_SETUP,
-	CUSTOM_SETUP
-	};
 
 /**
  * This is the CC2540 chip driver. This class handles the setting up and

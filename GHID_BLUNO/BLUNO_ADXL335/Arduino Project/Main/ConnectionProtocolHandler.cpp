@@ -16,7 +16,9 @@
  * @param serial						- The Hardware serial to read and write
  * @param utils							- The global utilities
  */
-ConnectionProtocolHandler::ConnectionProtocolHandler(RingBuff_t* buffer, HardwareSerial* serial, utilities* utils){
+ConnectionProtocolHandler::ConnectionProtocolHandler(RingBuff_t* buffer, 
+													 HardwareSerial* serial, 
+													 utilities* utils){
 
 	//! Set internals
 	this->_serial = serial;

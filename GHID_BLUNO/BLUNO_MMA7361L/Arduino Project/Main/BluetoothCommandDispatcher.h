@@ -10,6 +10,7 @@
 
 #include "Dispatcher.h"
 
+//! Generic Defines
 #define BLUETOOTH_BAUDRATE					115200
 #define BLUETOOTH_TIMEOUT					50 //! 5 sec
 #define EMPTY								0

@@ -10,6 +10,7 @@
 
 #include <Arduino.h>
 
+//! MAx response size from host.
 #define MAX_RESPONSE_SIZE				20
 
 /**

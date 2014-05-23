@@ -24,8 +24,8 @@ Still to do in the GHID project:
 		- Bluetooth Firmware:
 			- Design								- 100%
 			- Implementation						- 100%
-			- Testing								- 50%
-			- Deployment							- 0%
+			- Testing								- 90%
+			- Deployment							- 75%
 
 ---->	Base Station Implementation
 	

@@ -95,6 +95,6 @@ void ADC_Driver::_setup_analog_port(){
 word ADC_Driver::filter(word value){
 
 	//! Process the input
-	return (word) this->_filter->process((float) value);
+	return int(this->_filter->process(float(value)));
 }
 

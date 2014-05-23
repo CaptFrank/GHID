@@ -16,6 +16,8 @@
 
 //! Ref voltage defines
 #define V_3V					3.3
+#define MAX_AXIS_VALUE			100
+#define SIZE_OF_DATA			7
 
 /**
  * This is the pin map structure for the MMA7361L sensor.

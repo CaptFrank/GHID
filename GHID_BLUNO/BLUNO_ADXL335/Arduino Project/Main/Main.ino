@@ -9,6 +9,8 @@
 //! Includes
 //! --------------------------------------------------
 
+#include <Arduino.h>
+
 //! Drivers
 #include "CC2540Driver.h"
 #include "ADXL335Driver.h"
@@ -34,13 +36,6 @@
 #define ADXL335_X_AXIS					0
 #define ADXL335_Y_AXIS					1
 #define ADXL335_Z_AXIS					2
-
-//! --------------------------------------------------
-//! Prototypes
-//! --------------------------------------------------
-
-//! Interrupt function
-void execute_isr(void);
 
 //! --------------------------------------------------
 //! Global Variables
@@ -112,10 +107,12 @@ void setup(void){
 
 	//! We set the analog reference (5V)
 	analogReference(DEFAULT);
+	
+	//! We init the buffer
+	RingBuffer_InitBuffer(&buffer);
 
 	//! We setup the analog sensor
 	adxl335_driver.begin();
-	adxl335_driver.calibrate();
 
 	//! SETUP BLUETOOTH
 	//! Set the callback table within the connection protocol handler
@@ -149,4 +146,6 @@ void loop(void){
 		//! and send them via the Bluetooth interface
 		connection.run(); //! We run the engine
 	}
+	
+	delay(100);
 }

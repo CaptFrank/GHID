@@ -74,7 +74,7 @@ void FIR_Filter::set_coefficient(int idx, const float coef){
  *
  * @return float					- The signal output
  */
-float FIR_Filter::process(float in){
+int FIR_Filter::process(float in){
 
 	//! Reset the output variable
 	float out = 0;
@@ -94,6 +94,6 @@ float FIR_Filter::process(float in){
 	this->_k = (this->_k++) % FILTER_TAPS;
 
 	//! Output the result
-	return out;
+	return int(out);
 
 }

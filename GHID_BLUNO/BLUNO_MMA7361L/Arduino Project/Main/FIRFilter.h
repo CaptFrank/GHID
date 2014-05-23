@@ -67,7 +67,7 @@ class FIR_Filter {
 		 *
 		 * @return float					- The signal output
 		 */
-		float process(float in);
+		int process(float in);
 
 	// Private Context
 	private:

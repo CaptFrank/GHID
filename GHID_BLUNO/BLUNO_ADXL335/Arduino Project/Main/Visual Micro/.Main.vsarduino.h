@@ -18,17 +18,15 @@
 extern "C" void __cxa_pure_virtual() {;}
 
 void setup(void);
-//
+void loop(void);
 
 #include "C:\Program Files\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
 #include "C:\Program Files\Arduino\hardware\arduino\cores\arduino\arduino.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\Main.ino"
-#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\ADCDriver.cpp"
-#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\ADCDriver.h"
+#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\ADXL335.cpp"
+#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\ADXL335.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\ADXL335Driver.cpp"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\ADXL335Driver.h"
-#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\AnalogSensorDriver.cpp"
-#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\AnalogSensorDriver.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\BluetoothCommandDispatcher.cpp"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\BluetoothCommandDispatcher.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\BluetoothCommandIndexes.h"
@@ -46,8 +44,6 @@ void setup(void);
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\DataProcessor.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\Dispatcher.cpp"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\Dispatcher.h"
-#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\FIRFilter.cpp"
-#include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\FIRFilter.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\GHID_Project.h"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\GHID_SPI.cpp"
 #include "Z:\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Arduino Project\Main\GHID_SPI.h"

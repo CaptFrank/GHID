@@ -12,10 +12,14 @@
 #include <Arduino.h>
 #include "Utilities.h"
 #include "RingBuffer.h"
-#include "AnalogSensorDriver.h"
+#include "ADXL335.h"
 
 //! Ref voltage defines
 #define V_3V					3.3
+#define Z_AXIS_3D				3
+#define SIZE_OF_DATA			7
+#define SAMPLE_SIZE				10
+#define MAX_AXIS_VALUE			100
 
 /**
  * This is the pin map structure for the ADX355 sensor.
@@ -69,14 +73,6 @@ class ADXL335_Driver{
 		int get_raw(axis_t axis);
 
 		/**
-		 * This is a method that gets the filtered selected axis value.
-		 *
-		 * @param axis								- The axis needed to be measured
-		 * @return int								- The analog value
-		 */
-		int get_filtered(axis_t axis);
-
-		/**
 		 * This is a method that gets the voltage of the selected axis.
 		 *
 		 * @param axis								- The axis needed to be measured
@@ -108,59 +104,14 @@ class ADXL335_Driver{
 		 */
 		int get_total_vector();
 
-		/**
-		 * This method sets the offsets of the axes
-		 *
-		 * @param xOffSet							- The x axis offset
-		 * @param yOffSet							- The y axis offset
-		 * @param zOffSet							- The z axis offset
-		 */
-		void set_offsets(int xOffSet, int yOffSet, int zOffSet);
-
-		/**
-		 *	This method calibrates the sensor
-		 */
-		void calibrate();
-
-		/**
-		 * This gets to global orientation of the sensor
-		 *
-		 * @return									- The orientation
-		 */
-		int get_orientation();
-
 		//! Private Context
 		private:
 
 			//! Pin Map pointer
 			ADXL335_pin_map_t* _pin_map;
-
-			//! Axis sensor objects
-			struct {
-				Analog_Sensor_Driver* _x;
-				Analog_Sensor_Driver* _y;
-				Analog_Sensor_Driver* _z;
-			}_axis;
-
-			//! Offsets structure
-			union {
-				struct {
-					int _x_offset;
-					int _y_offset;
-					int _z_offset;
-				}_offsets;
-				int _offsets_array[3];
-			}_offset_configs;
-
-			//! Polarities structure
-			union {
-				struct {
-					int _x_pol;
-					int _y_pol;
-					int _z_pol;
-				}_pols;
-				int _pols_array[3];
-			}_pols_configs;
+			
+			//! Internal ADX object
+			ADXL335* _accel;
 
 			//! Ref voltage
 			double _ref;

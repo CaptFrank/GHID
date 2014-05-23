@@ -79,14 +79,17 @@ void MMA7361L_Driver::run(RingBuff_t* buff){
 	
 	//! We get all axis values
 	x_axis = this->get_accel(X_AXIS);
+	delay(10);
 	y_axis = this->get_accel(Y_AXIS);
+	delay(10);
 	z_axis = this->get_accel(Z_AXIS);
+	delay(10);
 	
 	//! Create a data container
-	uint8_t _data[7] = {x_axis, y_axis, z_axis, 0x00};
+	uint8_t _data[SIZE_OF_DATA] = {x_axis, y_axis, z_axis, 0x00};
 	
 	//! We put the data into the ringbuffer
-	for(register uint8_t i = 0; i < sizeof(_data); i++){
+	for(uint8_t i = 0; i < sizeof(_data); i++){
 		RingBuffer_Insert(buff, _data[i]);
 	}
 }
@@ -103,13 +106,13 @@ int MMA7361L_Driver::get_raw(axis_t axis){
 	switch(axis){
 
 		case X_AXIS:
-			return analogRead(this->_pin_map->x_pin) + this->_offset_configs._offsets._x_offset + 2;
+			return analogRead(this->_pin_map->x_pin);
 
 		case Y_AXIS:
-			return analogRead(this->_pin_map->y_pin) + this->_offset_configs._offsets._y_offset + 2;
+			return analogRead(this->_pin_map->y_pin);
 
 		case Z_AXIS:
-			return analogRead(this->_pin_map->z_pin) + this->_offset_configs._offsets._z_offset;
+			return analogRead(this->_pin_map->z_pin);
 
 		//! Nothing to do
 		default:
@@ -135,12 +138,12 @@ int MMA7361L_Driver::get_filtered(axis_t axis){
 
 		case X_AXIS:
 			temp = this->_axis._x;
-			offset = this->_offset_configs._offsets._x_offset + 2;
+			offset = this->_offset_configs._offsets._x_offset;
 			break;
 
 		case Y_AXIS:
 			temp = this->_axis._y;
-			offset = this->_offset_configs._offsets._y_offset + 2;
+			offset = this->_offset_configs._offsets._y_offset;
 			break;
 
 		case Z_AXIS:
@@ -156,7 +159,7 @@ int MMA7361L_Driver::get_filtered(axis_t axis){
 	//! We measure
 	analog_measurement_t* measurment = temp->measure();
 	if(measurment->valid){
-		return measurment->measurement + offset;
+		return int(measurment->measurement) + offset;
 	}else{
 		return 0;
 	}
@@ -181,36 +184,29 @@ int MMA7361L_Driver::get_volt(axis_t axis){
 int MMA7361L_Driver::get_accel(axis_t axis){
 
 	//! Temp data
-	Analog_Sensor_Driver* temp;
+	int value;
 
 	//! We read the raw value of the axis defined
 	switch(axis){
 
 		case X_AXIS:
-			temp = this->_axis._x;
-			break;
+		value = this->get_raw(X_AXIS);
+		break;
 
 		case Y_AXIS:
-			temp = this->_axis._y;
-			break;
+		value = this->get_raw(Y_AXIS);
+		break;
 
 		case Z_AXIS:
-			temp = this->_axis._z;
-			break;
+		value = this->get_raw(Z_AXIS);
+		break;
 
 		//! Nothing to do
 		default:
-			return 0;
-	}
-
-	//! We measure
-	analog_measurement_t* measurment = temp->measure();
-	if(measurment->valid){
-		return this->_mapMMA7361G((int)measurment->measurement);
-	}else{
 		return 0;
 	}
 
+	return this->_mapMMA7361G(value);
 }
 
 /**
@@ -295,12 +291,6 @@ void MMA7361L_Driver::calibrate(){
 		//! We adjust the offsets based on the coefficients in the datasheet
 		this->set_offsets(1650 - sumX / var,1650 - sumY / var, 2450 - sumZ / var);
 	}
-
-	//! Otherwise no calibration can be done we reset the offsets
-	if (abs(this->get_orientation()) != 3 ) {
-		this->set_offsets(0, 0, 0);
-	}
-
 }
 
 /**
@@ -456,11 +446,11 @@ int MMA7361L_Driver::_mapMMA7361G(int value){
 	//! Switch on the reference voltage
 	if (this->_ref == V_3V){
 
-		return map(value,0,1024,0,3300);
+		return map(value,0,1024,(-MAX_AXIS_VALUE),(MAX_AXIS_VALUE));
 
 	//! 5V
 	}else{
 
-		return map(value,0,1024,0,5000);
+		return map(value,0,1024,(-MAX_AXIS_VALUE),(MAX_AXIS_VALUE));
 	}
 }

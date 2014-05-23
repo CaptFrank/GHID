@@ -96,11 +96,11 @@ MMA7361L_Driver mma7361l_driver(&mma7361l_pins, 5.0);
 
 //! The CC2540 Driver
 //! 	- Here we use the default setup function.... We could change it
-CC2540_Driver cc2540_driver((char*)"ACCELEROMETER", (char*)command_pointers, &dispatcher);
+//CC2540_Driver cc2540_driver((char*)"ACCELEROMETER", (char*)command_pointers, &dispatcher);
 
 //! The connection
-Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
-										&protocol_handler, &global_utilities);
+//Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
+//										&protocol_handler, &global_utilities);
 
 //! --------------------------------------------------
 //! Source Code
@@ -121,18 +121,15 @@ void setup(void){
 
 	//! We setup the analog sensor
 	Serial.begin(115200);
-	Serial.println("MMA73611 Driver INIT");
 	mma7361l_driver.begin();
 	mma7361l_driver.calibrate();
 
 	//! SETUP BLUETOOTH
 	//! Set the callback table within the connection protocol handler
 	protocol_handler.set_callback_table(callback_table);
-	Serial.println("Callbacks set");
 	
 	//! We connect to the host device
-	Serial.println("Connecting");
-	connection.connect();
+	//connection.connect();
 	
 	//! We set the global lock to true
 	global_utilities.start_engine = true;
@@ -157,6 +154,6 @@ void loop(){
 		
 		//! Get the values within the ring buffer
 		//! and send them via the Bluetooth interface
-		connection.run(); //! We run the engine
+		//connection.run(); //! We run the engine
 	}
 }

@@ -10,8 +10,9 @@
 
 #include <Arduino.h>
 #include "RingBuffer.h"
+#include "ProtocolDefinition.h"
 
-//! Size of the data
+//! Size of message
 #define MAX_SIZE		3*(sizeof(int))
 
 /**
@@ -38,26 +39,51 @@ class Data_Processor {
 
 	//! Public Context
 	public:
-
+		
 		/**
-		 * This is the data processors only public method. It processes the data
-		 * passed to this method and returns an axis buffer type structure.
-		 *
-		 * @param buf								- the buffer type structure
-		 * @param buffer							- the buffer object
-		 * @return axis_t							- the axis type structure returned
+		 *	This creates a heartbeat message to send to the base station.
+		 * 
+		 * @param sensor_type								- the sensor type (mouse, joystick)
+		 * @param sensor_id									- the sensor id	
+		 * @param heart										- the structure ptr to store the information
 		 */
-		static buffer_t* process_data(RingBuff_t* buf, buffer_t* buffer);
-
+		static void create_heartbeat(sensor_t sensor_type, char sensor_id, 
+									 sensor_packet_heartbeat_t* heart);
+		
 		/**
-		 * We simply return the last valid values.
-		 *
-		 * @param buffer							- the buffer object
-		 * @return buf								- the last valid buffer values
+		 *	This create an error report.
+		 * 
+		 * @param sensor_type								- the sensor type (mouse, joystick)
+		 * @param sensor_id									- the sensor id
+		 * @param error_id									- the error that occured
+		 * @param error										- the structure ptr to store the information
 		 */
-		static buffer_t* get_last_values(buffer_t* buffer){
-			return buffer;
-		}
+		static void create_error(sensor_t sensor_type, char sensor_id, uint8_t error_id, 
+								 sensor_packet_error_t* error);
+		
+		/**
+		 *	This creates a data report
+		 * 
+		 * @param sensor_type								- the sensor type (mouse, joystick)
+		 * @param sensor_id									- the sensor id	
+		 * @param buf										- the ring buffer
+		 * @param data										- the structure ptr to store the information
+		 */
+		static void create_data_packet(sensor_t sensor_type, char sensor_id, 
+									   RingBuff_t* buf, sensor_packet_data_t* data);
+									   
+	//! Private Context
+	private:
+		
+		/**
+		 *	This creates a header message to send to the base station.
+		 * 
+		 * @param sensor_type								- the sensor type (mouse, joystick)
+		 * @param sensor_id									- the sensor id	
+		 * @param heart										- the structure ptr to store the information
+		 */
+		static void _create_header(sensor_t sensor_type, char sensor_id, 
+									 sensor_packet_header_t* head);
 };
 
 #endif /* DATAPROCESSOR_H_ */

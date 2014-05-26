@@ -11,7 +11,7 @@
 #include <Arduino.h>
 #include "DataProcessor.h"
 
-//! Max Data Size
+//! Size of message
 #define MAX_SIZE		3*(sizeof(int))
 
 /**
@@ -94,8 +94,9 @@ class Connection_Handler {
 		 * to the connection.
 		 *
 		 * @param buf							- the buffer structure to write
+		 * @param length						- the length to write
 		 */
-		virtual void write(buffer_t* buf);
+		virtual void write(void* buf, uint8_t length);
 
 	//! Private Context
 	protected:

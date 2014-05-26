@@ -12,7 +12,7 @@
 #include "BluetoothCommandIndexes.h"
 #include "BluetoothCommandDispatcher.h"
 
-//! Generic Defines
+//! Generic defines
 #define OK							"OK"
 #define MAX_COMMAND_LENGTH			30
 #define SUCCESS						0

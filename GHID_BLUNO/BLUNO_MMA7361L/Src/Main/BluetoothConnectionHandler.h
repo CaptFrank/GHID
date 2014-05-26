@@ -11,6 +11,8 @@
 #include <Arduino.h>
 
 #include "Utilities.h"
+#include "Watchdog.h"
+#include "ProtocolDefinition.h"
 #include "ConnectionProtocolHandler.h"
 
 //! Configs Defines
@@ -27,8 +29,10 @@
 #define DISCONNECT			'D'
 #define REBOOT				'R'
 
-#define HEADER_INDEX		0
 #define HEADER_ID			'#'
+#define HEADER_INDEX		0
+
+class ConnectionProtocolHandler;
 
 /**
  * This is the main class that arbitrates between the point-to-point Bluetooth
@@ -77,19 +81,27 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		 * @return buffer_t						- the data container
 		 */
 		buffer_t* read(byte length);
-
+		
 		/**
 		 * This is the generic write method that writes a buffer type structure
 		 * to the connection.
 		 *
-		 * @param buf							- the buffer structure to write
+		 * @param ptr							- the pointer to the structure to send
+		 * @param length						- the length to send
 		 */
-		void write(buffer_t* buf);
+		void write(void* ptr, uint8_t length);
 		
 		/**
 		 *  This is the run method
 		 */ 
 		void run(void);
+		
+		/**
+		 *  Public wrapper for send data method
+		 */ 
+		void send_data(void) {
+			this->_send_data();
+		}
 
 	//! Private Context
 	private:
@@ -114,6 +126,18 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		
 		//! Utilities
 		utilities* _utils;
+		
+		//! Private Access to the watchdog
+		Watchdog _watch;
+		
+		//! Union for all packet types
+		union {
+			
+			struct sensor_packet_heartbeat_t		_heartbeat;
+			struct sensor_packet_error_t			_error;
+			struct sensor_packet_data_t				_data;
+			
+		} _packet;
 
 		/**
 		 * This writes a command to the remote host device.
@@ -140,7 +164,16 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		 * We run the stream based method... No callbacks
 		 */
 		void _run_stream_based();
-
+		
+		/**
+		 * This sends a hearbeat signal
+		 */
+		void _send_heartbeat();
+		
+		/**
+		 * Sends data
+		 */
+		void _send_data();
 };
 
 #endif /* BLUETOOTHHANDLER_H_ */

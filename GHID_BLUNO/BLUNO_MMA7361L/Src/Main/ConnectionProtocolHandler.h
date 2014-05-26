@@ -11,9 +11,11 @@
 #include "Utilities.h"
 #include "DataProcessor.h"
 #include "ConnectionHandler.h"
+#include "BluetoothConnectionHandler.h"
 #include "BluetoothConnectionCommands.h"
 
-//! 2 Seconds timeout
+
+//! Link timeout
 #define TIMEOUT				2
 
 /**

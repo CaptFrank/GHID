@@ -6,7 +6,7 @@ GHID
 
 Still to do in the GHID project:
 	
----->	Bluno Implementation
+---->	Bluno Implementation - Drivers
 		
 		- Accelerometers:
 			- Digital			
@@ -23,7 +23,8 @@ Still to do in the GHID project:
 			
 		- Bluetooth Firmware:
 			- Design								- 100%
-			- Implementation						- 100%
+			- Implementation						- 90%
+				- Protocol						
 			- Testing								- 90%
 			- Deployment							- 75%
 

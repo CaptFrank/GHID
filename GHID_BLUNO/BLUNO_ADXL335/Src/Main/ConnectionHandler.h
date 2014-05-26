@@ -94,8 +94,9 @@ class Connection_Handler {
 		 * to the connection.
 		 *
 		 * @param buf							- the buffer structure to write
+		 * @param length						- the length to write
 		 */
-		virtual void write(buffer_t* buf);
+		virtual void write(void* buf, uint8_t length);
 
 	//! Private Context
 	protected:

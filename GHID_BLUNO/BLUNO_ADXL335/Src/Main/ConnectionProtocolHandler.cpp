@@ -103,22 +103,9 @@ void ConnectionProtocolHandler::generic(uint8_t command, void* object){
 void ConnectionProtocolHandler::request(uint8_t command, void* object){
 
 	//! Cast the object
-	ConnectionProtocolHandler* access = (ConnectionProtocolHandler*) object;
+	Bluetooth_Connection_Handler* access = (Bluetooth_Connection_Handler*) object;
 
-	//! Container
-	buffer_t* buff;
-
-	if(!RingBuffer_IsEmpty(access->_buffer)){
-
-		//! We process the data to be sent
-		buff = Data_Processor::process_data(access->_buffer, &access->_buff);
-	}else{
-
-		//! We get the last values processed
-		buff = Data_Processor::get_last_values(&access->_buff);
-	}
-
-	//! We send them
-	access->_serial->write(buff->data, buff->length);
+	//! We send data
+	access->send_data();
 }
 

@@ -14,7 +14,8 @@
  */
 Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_serial,
 						connection_type_t type, RingBuff_t* ring,
-						ConnectionProtocolHandler* handler, utilities* utils){
+						ConnectionProtocolHandler* handler, 
+						utilities* utils){
 
 	//! Set the internal serial port
 	this->_serial = hw_serial;
@@ -106,12 +107,13 @@ buffer_t* Bluetooth_Connection_Handler::read(byte length){
  * This is the generic write method that writes a buffer type structure
  * to the connection.
  *
- * @param buf							- the buffer structure to write
+ * @param ptr							- the pointer to the structure to send
+ * @param length						- the length to send
  */
-void Bluetooth_Connection_Handler::write(buffer_t* buf){
+void Bluetooth_Connection_Handler::write(void* ptr, uint8_t length){
 
 	//! We write raw data
-	this->_serial->write(buf->data, buf->length);
+	this->_serial->write((uint8_t*)ptr, length);
 }
 
 /**
@@ -121,19 +123,25 @@ void Bluetooth_Connection_Handler::run(void){
 	
 	//! We set the pointer to the right method.
 	switch(this->_type){
+		
+		//! We check the watchdog for a heartbeat
+		if(this->_watch.check_watchdog()){
+			this->_send_heartbeat();
+			this->_watch.reset();
+			return;
+		}
 			
 		//! Request based
 		case DATA_REQUEST_BASED:
 			this->_run_request_based();
-			break;
+			return;
 
 		//! Stream based - Default method
 		case DATA_STREAM_BASED:
 		default:
 			this->_run_stream_based();
-			break;
+			return;
 	}
-	
 }
 
 //! Private Context
@@ -188,22 +196,34 @@ void Bluetooth_Connection_Handler::_run_request_based(){
  */
 void Bluetooth_Connection_Handler::_run_stream_based(){
 
-	//! Container
-	buffer_t* buff;
+	//! We send data
+	this->_send_data();
+}
+
+/**
+ * Sends data
+ */
+void Bluetooth_Connection_Handler::_send_data(){
 
 	//! New values?
 	if(!RingBuffer_IsEmpty(this->_buff)){
 
 		//! We process the data to be sent
-		buff = Data_Processor::process_data(this->_buff, &this->_buf);
-		
-	//! No new values
-	}else{
-
-		//! We get the last values processed
-		buff = Data_Processor::get_last_values(&this->_buf);
+		Data_Processor::create_data_packet(SENSOR_TYPE, SENSOR_ID, this->_buff, &this->_packet._data);
 	}
 
 	//! We send them
-	this->write(buff);
+	this->write((void*)&this->_packet._data, sizeof(this->_packet._data));
+}
+
+/**
+ * This sends a hearbeat signal
+ */
+void Bluetooth_Connection_Handler::_send_heartbeat(){
+	
+	//! We create a heartbeat packet
+	Data_Processor::create_heartbeat(SENSOR_TYPE, SENSOR_ID, &this->_packet._heartbeat);
+	
+	//! We send the heartbeat
+	this->write((void*)&this->_packet._heartbeat, sizeof(this->_packet._heartbeat));
 }

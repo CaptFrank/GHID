@@ -11,6 +11,7 @@
 #include "Utilities.h"
 #include "DataProcessor.h"
 #include "ConnectionHandler.h"
+#include "BluetoothConnectionHandler.h"
 #include "BluetoothConnectionCommands.h"
 
 

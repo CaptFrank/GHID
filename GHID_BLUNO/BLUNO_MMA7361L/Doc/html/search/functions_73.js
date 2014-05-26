@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['send_5fdata',['send_data',['../class_bluetooth___connection___handler.html#a5dd84b55bb92330219825fe4d80f8e56',1,'Bluetooth_Connection_Handler']]],
   ['set_5fcallback_5ftable',['set_callback_table',['../class_connection_protocol_handler.html#af8b3a3a0e921bf3d45eaca8301e25fe5',1,'ConnectionProtocolHandler']]],
   ['set_5fcoefficient',['set_coefficient',['../class_f_i_r___filter.html#a1bd8ebb1eb0ce1136d0609736d62fb26',1,'FIR_Filter']]],
   ['set_5fcoefficients',['set_coefficients',['../class_f_i_r___filter.html#a25b51dfbc542d1cbbad7b877ba202793',1,'FIR_Filter']]],

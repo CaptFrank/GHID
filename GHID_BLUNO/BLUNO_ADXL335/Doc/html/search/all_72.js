@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['read',['read',['../class_bluetooth___connection___handler.html#a03944d3fb682688354c132878dd3d8f0',1,'Bluetooth_Connection_Handler::read()'],['../class_connection___handler.html#a5cdbdd2b6451b80ef35580ee8b57fce3',1,'Connection_Handler::read()']]],
+  ['readaxis',['ReadAxis',['../class_a_d_x_l335.html#ab7ec91be33daa5c7204d7b4763a9c1d8',1,'ADXL335']]],
+  ['realloc_2ec_2ed',['realloc.c.d',['../realloc_8c_8d.html',1,'']]],
+  ['reboot',['reboot',['../class_bluetooth___connection___handler.html#a69604d969ecc0514948314cb7b78cd1d',1,'Bluetooth_Connection_Handler::reboot()'],['../class_connection___handler.html#a0c565c93a515e30aca7c5fdf5bd7191e',1,'Connection_Handler::reboot()'],['../classutilities.html#a0c34ffbd0eee5f95f331cdabac4b601b',1,'utilities::reboot()'],['../_bluetooth_command_indexes_8h.html#a4dc886b5a76f9986871e68b72a23e27d',1,'REBOOT():&#160;BluetoothCommandIndexes.h'],['../_bluetooth_connection_commands_8h.html#a4dc886b5a76f9986871e68b72a23e27d',1,'REBOOT():&#160;BluetoothConnectionCommands.h'],['../_bluetooth_connection_handler_8h.html#a4dc886b5a76f9986871e68b72a23e27d',1,'REBOOT():&#160;BluetoothConnectionHandler.h']]],
+  ['request',['request',['../class_connection_protocol_handler.html#a0caba597a54e32503cff6e45c1b26720',1,'ConnectionProtocolHandler']]],
+  ['reset',['reset',['../class_watchdog.html#ad64f941736836164bf9049ead5ca31b2',1,'Watchdog::reset()'],['../_bluetooth_connection_commands_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;BluetoothConnectionCommands.h']]],
+  ['response',['response',['../structresponse__t.html#a2cc532437f164e1982a25e51aedcd09d',1,'response_t']]],
+  ['response_5flength',['response_length',['../structresponse__t.html#aeaab0ceac7abfb8698b31a02f8f9bf36',1,'response_t']]],
+  ['response_5ft',['response_t',['../structresponse__t.html',1,'']]],
+  ['resume',['RESUME',['../_bluetooth_connection_commands_8h.html#a58ed6a8ccad6ef42dc18ad5cfe848256',1,'BluetoothConnectionCommands.h']]],
+  ['ringbuff_5fcount_5ft',['RingBuff_Count_t',['../_ring_buffer_8h.html#ac7138106260c3e40b496566bddacf8f1',1,'RingBuffer.h']]],
+  ['ringbuff_5fdata_5ft',['RingBuff_Data_t',['../_ring_buffer_8h.html#acf1a805a0c6814d6d188a8484895cda4',1,'RingBuffer.h']]],
+  ['ringbuff_5ft',['RingBuff_t',['../struct_ring_buff__t.html',1,'']]],
+  ['ringbuffer_2eh',['RingBuffer.h',['../_ring_buffer_8h.html',1,'']]],
+  ['role_5fcentral',['ROLE_CENTRAL',['../_bluetooth_command_indexes_8h.html#a0a668b51a2e48817961cebdaef7f8797',1,'BluetoothCommandIndexes.h']]],
+  ['role_5fchange',['ROLE_CHANGE',['../_bluetooth_command_indexes_8h.html#ab13711e90009ad9c9c68b1d9e0d06f10',1,'BluetoothCommandIndexes.h']]],
+  ['role_5fperipheral',['ROLE_PERIPHERAL',['../_bluetooth_command_indexes_8h.html#a77af2856acd475eac425c6e077bc9daf',1,'BluetoothCommandIndexes.h']]],
+  ['run',['run',['../class_a_d_x_l335___driver.html#aac4c5aa339ed8acb9e109e3a4b1c2fd8',1,'ADXL335_Driver::run()'],['../class_bluetooth___connection___handler.html#aeccdb22a55988eac70feb174ec10eefb',1,'Bluetooth_Connection_Handler::run()']]],
+  ['run_5fdispatch',['run_dispatch',['../class_bluetooth___dispatcher.html#a9de32e4c1d450d101738185124a873a8',1,'Bluetooth_Dispatcher::run_dispatch()'],['../class_dispatcher.html#ac94ea7b55709830c5e3eaeaa54afb746',1,'Dispatcher::run_dispatch()']]]
+];

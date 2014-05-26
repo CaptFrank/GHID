@@ -58,6 +58,21 @@ ADXL335_pin_map_t adxl335_pin_map = {
 //! A protocol handler
 ConnectionProtocolHandler protocol_handler(&buffer, &Serial, &global_utilities);
 
+//! The Bluetooth Command dispatcher
+Bluetooth_Dispatcher dispatcher(&Serial);
+
+//! The Accelerometer Driver
+//! The ADXL335
+ADXL335_Driver adxl335_driver(&adxl335_pin_map, 5.0);
+
+//! The CC2540 Driver
+//! 	- Here we use the default setup function.... We could change it
+CC2540_Driver cc2540_driver((char*)"ACCELEROMETER", (char*)command_pointers, &dispatcher);
+
+//! The connection
+Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
+										&protocol_handler, &global_utilities);
+
 /**
  * This is the callback table used for the bluetooth driver.
  */
@@ -73,23 +88,8 @@ struct callback_t callback_table[] = {
 		START,					ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
 
 		//! We using the request based method
-		GET,					ConnectionProtocolHandler::request,			(void*)&protocol_handler
+		GET,					ConnectionProtocolHandler::request,			(void*)&connection
 };
-
-//! The Bluetooth Command dispatcher
-Bluetooth_Dispatcher dispatcher(&Serial);
-
-//! The Accelerometer Driver
-//! The ADXL335
-ADXL335_Driver adxl335_driver(&adxl335_pin_map, 5.0);
-
-//! The CC2540 Driver
-//! 	- Here we use the default setup function.... We could change it
-CC2540_Driver cc2540_driver((char*)"ACCELEROMETER", (char*)command_pointers, &dispatcher);
-
-//! The connection
-Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
-										&protocol_handler, &global_utilities);
 
 //! --------------------------------------------------
 //! Source Code
@@ -149,3 +149,4 @@ void loop(void){
 	
 	delay(100);
 }
+

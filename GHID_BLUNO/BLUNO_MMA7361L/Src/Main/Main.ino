@@ -62,6 +62,21 @@ MMA7361L_pin_map_t	mma7361l_pins	= {MMA7361L_SLEEP_PIN,
 //! A protocol handler
 ConnectionProtocolHandler protocol_handler(&buffer, &Serial, &global_utilities);
 
+//! The Bluetooth Command dispatcher
+Bluetooth_Dispatcher dispatcher(&Serial);
+
+//! The Accelerometer Driver
+//! The MMA7361L
+MMA7361L_Driver mma7361l_driver(&mma7361l_pins, 5.0);
+
+//! The CC2540 Driver
+//! 	- Here we use the default setup function.... We could change it
+CC2540_Driver cc2540_driver((char*)"ACCELEROMETER", (char*)command_pointers, &dispatcher);
+
+//! The connection
+Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
+										&protocol_handler, &global_utilities);
+
 /**
  * This is the callback table used for the bluetooth driver.
  */
@@ -77,23 +92,8 @@ struct callback_t callback_table[] = {
 		START,					ConnectionProtocolHandler::generic,			(void*)&protocol_handler,
 
 		//! We using the request based method
-		GET,					ConnectionProtocolHandler::request,			(void*)&protocol_handler
+		GET,					ConnectionProtocolHandler::request,			(void*)&connection
 };
-
-//! The Bluetooth Command dispatcher
-Bluetooth_Dispatcher dispatcher(&Serial);
-
-//! The Accelerometer Driver
-//! The MMA7361L
-MMA7361L_Driver mma7361l_driver(&mma7361l_pins, 5.0);
-
-//! The CC2540 Driver
-//! 	- Here we use the default setup function.... We could change it
-CC2540_Driver cc2540_driver((char*)"ACCELEROMETER", (char*)command_pointers, &dispatcher);
-
-//! The connection
-Bluetooth_Connection_Handler connection(&Serial, DATA_REQUEST_BASED, &buffer, 
-										&protocol_handler, &global_utilities);
 
 //! --------------------------------------------------
 //! Source Code

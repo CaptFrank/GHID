@@ -6,7 +6,6 @@ var searchData=
   ['get_5faccel',['get_accel',['../class_m_m_a7361_l___driver.html#a33d5fe3264a2ecee0bcc5d56328171cb',1,'MMA7361L_Driver']]],
   ['get_5faccel_5fxyz',['get_accel_xyz',['../class_m_m_a7361_l___driver.html#a2bb01f088ddde959c0f3c208cd3b674e',1,'MMA7361L_Driver']]],
   ['get_5ffw_5fversion',['GET_FW_VERSION',['../_bluetooth_command_indexes_8h.html#abe765b488fd74814d88b642a2a5ad40f',1,'BluetoothCommandIndexes.h']]],
-  ['get_5flast_5fvalues',['get_last_values',['../class_data___processor.html#a4627145ab48592923dceb52e4b1ff434',1,'Data_Processor']]],
   ['get_5fmac_5faddress',['GET_MAC_ADDRESS',['../_bluetooth_command_indexes_8h.html#aa19f0d6918a96f81498c9e12c15b6c6e',1,'BluetoothCommandIndexes.h']]],
   ['get_5forientation',['get_orientation',['../class_m_m_a7361_l___driver.html#a9e7a3fd4168fac0dc4b5c34a9dd08998',1,'MMA7361L_Driver']]],
   ['get_5fraw',['get_raw',['../class_m_m_a7361_l___driver.html#a12755e0b931fcd96341008268c63b516',1,'MMA7361L_Driver']]],

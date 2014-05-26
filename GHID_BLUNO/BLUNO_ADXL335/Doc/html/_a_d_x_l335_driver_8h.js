@@ -1,5 +1,7 @@
 var _a_d_x_l335_driver_8h =
 [
+    [ "ADXL335_pin_map_t", "struct_a_d_x_l335__pin__map__t.html", "struct_a_d_x_l335__pin__map__t" ],
+    [ "ADXL335_Driver", "class_a_d_x_l335___driver.html", "class_a_d_x_l335___driver" ],
     [ "MAX_AXIS_VALUE", "_a_d_x_l335_driver_8h.html#ab3c9ccdb1f49aeedc7a4fef3070c2e18", null ],
     [ "SAMPLE_SIZE", "_a_d_x_l335_driver_8h.html#ae25e0da7cdb20c758a56dc6aece92ba7", null ],
     [ "SIZE_OF_DATA", "_a_d_x_l335_driver_8h.html#a458727ba44329288f712b89a0b52199a", null ],

@@ -15,8 +15,17 @@ var hierarchy =
     [ "Dispatcher", "class_dispatcher.html", [
       [ "Bluetooth_Dispatcher", "class_bluetooth___dispatcher.html", null ]
     ] ],
+    [ "sensor_packet_header_t::packet_id_t", "structsensor__packet__header__t_1_1packet__id__t.html", null ],
     [ "response_t", "structresponse__t.html", null ],
     [ "RingBuff_t", "struct_ring_buff__t.html", null ],
+    [ "sensor_packet_data_t::sensor_config_t", "structsensor__packet__data__t_1_1sensor__config__t.html", null ],
+    [ "sensor_packet_data_t::sensor_data_t", "structsensor__packet__data__t_1_1sensor__data__t.html", null ],
+    [ "sensor_packet_header_t::sensor_id_t", "structsensor__packet__header__t_1_1sensor__id__t.html", null ],
+    [ "sensor_packet_data_t", "structsensor__packet__data__t.html", null ],
+    [ "sensor_packet_error_t", "structsensor__packet__error__t.html", null ],
+    [ "sensor_packet_header_t", "structsensor__packet__header__t.html", null ],
+    [ "sensor_packet_heartbeat_t", "structsensor__packet__heartbeat__t.html", null ],
     [ "tx_buffer_t", "structtx__buffer__t.html", null ],
-    [ "utilities", "classutilities.html", null ]
+    [ "utilities", "classutilities.html", null ],
+    [ "Watchdog", "class_watchdog.html", null ]
 ];

@@ -1,5 +1,6 @@
 var _bluetooth_connection_handler_8h =
 [
+    [ "Bluetooth_Connection_Handler", "class_bluetooth___connection___handler.html", "class_bluetooth___connection___handler" ],
     [ "BAUDRATE", "_bluetooth_connection_handler_8h.html#a734bbab06e1a9fd2e5522db0221ff6e3", null ],
     [ "CONNECT", "_bluetooth_connection_handler_8h.html#a65528c74adc6691eac2c7a2f39328064", null ],
     [ "DISCONNECT", "_bluetooth_connection_handler_8h.html#a587604e6f3570c0fc32794384d4d0d1f", null ],

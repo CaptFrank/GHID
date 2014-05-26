@@ -5,7 +5,6 @@ var searchData=
   ['get_5faccel',['get_accel',['../class_a_d_x_l335___driver.html#aae84d9df4e2cc17804e6b65b56380446',1,'ADXL335_Driver']]],
   ['get_5faccel_5fxyz',['get_accel_xyz',['../class_a_d_x_l335___driver.html#a9d2a3cb74eae9505fc6c4c535929f82a',1,'ADXL335_Driver']]],
   ['get_5ffw_5fversion',['GET_FW_VERSION',['../_bluetooth_command_indexes_8h.html#abe765b488fd74814d88b642a2a5ad40f',1,'BluetoothCommandIndexes.h']]],
-  ['get_5flast_5fvalues',['get_last_values',['../class_data___processor.html#a4627145ab48592923dceb52e4b1ff434',1,'Data_Processor']]],
   ['get_5fmac_5faddress',['GET_MAC_ADDRESS',['../_bluetooth_command_indexes_8h.html#aa19f0d6918a96f81498c9e12c15b6c6e',1,'BluetoothCommandIndexes.h']]],
   ['get_5fraw',['get_raw',['../class_a_d_x_l335___driver.html#a2c7fc1ad1a43b35ffbc3ff81365b2b36',1,'ADXL335_Driver']]],
   ['get_5fresponse',['get_response',['../class_bluetooth___dispatcher.html#ab7974859a1f0150b6d0861c7200b9e7d',1,'Bluetooth_Dispatcher']]],
@@ -19,5 +18,6 @@ var searchData=
   ['getx',['getX',['../class_a_d_x_l335.html#a229f47c6ec8f194f71e0856ae5311c52',1,'ADXL335']]],
   ['gety',['getY',['../class_a_d_x_l335.html#a55ba0833f2effbdf93024d03f0bc738b',1,'ADXL335']]],
   ['getz',['getZ',['../class_a_d_x_l335.html#a69dbff4695138b6ec4f9ce9821b7f5eb',1,'ADXL335']]],
+  ['ghid_5fspi_2ecpp_2ed',['GHID_SPI.cpp.d',['../_g_h_i_d___s_p_i_8cpp_8d.html',1,'']]],
   ['global_5futilities',['global_utilities',['../_main_8cpp.html#a21e60683ddd2875edf8f68b049a735af',1,'Main.cpp']]]
 ];

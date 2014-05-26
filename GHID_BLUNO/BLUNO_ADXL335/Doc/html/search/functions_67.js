@@ -3,7 +3,6 @@ var searchData=
   ['generic',['generic',['../class_connection_protocol_handler.html#a956d4439d9ebc3932949c6ff95f9b4d9',1,'ConnectionProtocolHandler']]],
   ['get_5faccel',['get_accel',['../class_a_d_x_l335___driver.html#aae84d9df4e2cc17804e6b65b56380446',1,'ADXL335_Driver']]],
   ['get_5faccel_5fxyz',['get_accel_xyz',['../class_a_d_x_l335___driver.html#a9d2a3cb74eae9505fc6c4c535929f82a',1,'ADXL335_Driver']]],
-  ['get_5flast_5fvalues',['get_last_values',['../class_data___processor.html#a4627145ab48592923dceb52e4b1ff434',1,'Data_Processor']]],
   ['get_5fraw',['get_raw',['../class_a_d_x_l335___driver.html#a2c7fc1ad1a43b35ffbc3ff81365b2b36',1,'ADXL335_Driver']]],
   ['get_5fresponse',['get_response',['../class_bluetooth___dispatcher.html#ab7974859a1f0150b6d0861c7200b9e7d',1,'Bluetooth_Dispatcher']]],
   ['get_5ftotal_5fvector',['get_total_vector',['../class_a_d_x_l335___driver.html#ae2ea2184cdced49bbf81dd142558f0de',1,'ADXL335_Driver']]],

@@ -13,7 +13,6 @@
   C:\Program\ Files\Arduino\hardware\arduino\variants\standard/pins_arduino.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADS1298Driver.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/SPI.h \
-  C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/GHID_SPI.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/RingBuffer.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/ADS1298Commands.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/CC2540Driver.h \
@@ -33,4 +32,6 @@
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommands.h \
   C:\Documents\ and\ Settings\Administrator\Local\ Settings\Application\ Data\VMicro\Arduino\Builds\Main\uno\/BluetoothCommandIndexes.h \
   C:\Program\ Files\Arduino\hardware\arduino\cores\arduino/arduino.h \
-  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_DBG.h \
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_Boards.h \
+  C:\Program\ Files\Visual\ Micro\Visual\ Micro\ for\ Arduino\Micro\ Platforms\default\debuggers\VM_DBG/VM_mem_check.h

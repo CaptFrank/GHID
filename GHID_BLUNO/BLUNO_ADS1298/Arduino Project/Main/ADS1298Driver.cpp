@@ -18,17 +18,14 @@
  * 											internal method.
  *
  * @param buff							- The general context ring buffer
- * @param devices						- The device array
  * @param spi_settings					- The SPI settings
  */
 ADS1298_Driver::ADS1298_Driver(RingBuff_t* buff, 
-							   uint8_t* devices,
-							   spi_settings_t* spi_settings) : GHID_SPI(spi_settings){
+							   spi_settings_t* spi_settings){
 
 	//! Assign the global ring buffer type internally
 	this->_buff = buff;
-	this->_settings;
-	this->_devices = devices;
+	this->_settings = spi_settings;
 }
 
 /**	
@@ -40,6 +37,18 @@ void ADS1298_Driver::begin(void (*setup_method)(ADS1298_Driver* driver)){
 	
 	//! Here we setup the pins
 	this->_init_pins();
+
+	//! We start the SPI engine
+	SPI.begin();
+
+	//! We set the SPI bit order
+	SPI.setBitOrder(this->_settings->bit_order);
+
+	//! We set the clock divider
+	SPI.setClockDivider(this->_settings->clock_divider);
+
+	//! We set the data mode of the bus
+	SPI.setDataMode(this->_settings->data_mode);
 	
 	//! We setup the ADS1298
 	//! Set the setup method
@@ -56,12 +65,8 @@ uint8_t ADS1298_Driver::read_byte(int reg_address){
 
 	uint8_t out = 0;
 
-	//! Activate the SPI device
-	this->_unset_cs_pin();
-
 	//! Send the address to read
 	SPI.transfer(RREG | reg_address);
-	delayMicroseconds(5);
 
 	//! Send the number of bytes to read - 1
 	SPI.transfer(0);
@@ -70,9 +75,6 @@ uint8_t ADS1298_Driver::read_byte(int reg_address){
 	//! Send the read command @ byte 0
 	out = SPI.transfer(0);
 	delayMicroseconds(1);
-
-	//! Deactivate the SPI Device
-	this->_set_cs_pin();
 	return(out);
 }
 
@@ -83,9 +85,6 @@ uint8_t ADS1298_Driver::read_byte(int reg_address){
  * @param val_hex						- The value in hex
  */
 void ADS1298_Driver::write_byte(int reg_address, uint8_t val_hex){
-
-	//! Activate the SPI device
-	this->_unset_cs_pin();
 
 	//! Send the address to write to
 	SPI.transfer(WREG | reg_address);
@@ -98,10 +97,6 @@ void ADS1298_Driver::write_byte(int reg_address, uint8_t val_hex){
 	//! Transfer the value to write
 	SPI.transfer(val_hex);
 	delayMicroseconds(1);
-
-	//! Deactivate the SPI device
-	this->_set_cs_pin();
-
 }
 
 /**
@@ -112,14 +107,8 @@ void ADS1298_Driver::write_byte(int reg_address, uint8_t val_hex){
 void ADS1298_Driver::send_command(uint8_t cmd){
 
 	//! We send the command
-	//! Start listening
-	this->_unset_cs_pin();
-
 	//! Send the data byte
 	SPI.transfer(cmd);
-
-	//! Stop listening
-	this->_set_cs_pin();
 }
 
 /**
@@ -159,10 +148,17 @@ void ADS1298_Driver::check_active_channels(){
 void ADS1298_Driver::_init_pins(){
 
 	//! We setup the pins
-
-	//! SPI BUS
-	pinMode(PIN_SS,			OUTPUT);
-
+		
+	//! We set the ss pin as an output.
+	pinMode(this->_settings->device_cs, OUTPUT);
+		
+	//! Active low line
+	digitalWrite(this->_settings->device_cs, HIGH);
+	
+	pinMode(PIN_MISO,		INPUT);
+	pinMode(PIN_MOSI,		OUTPUT);
+	pinMode(PIN_SCLK,		OUTPUT);
+	
 	//! SIGNALS
 	pinMode(PIN_LED, 		OUTPUT);
 	pinMode(PIN_RESET, 		OUTPUT);
@@ -172,10 +168,8 @@ void ADS1298_Driver::_init_pins(){
 	//! Pull up resistors on DRDY
 	digitalWrite(PIN_DRDY,	HIGH);   
 
+	//! Default deactivate the device
 	this->_set_cs_pin();
-
-	//! We stop the conversions
-	this->_stop_ads1298();
 
 	//! Delay until done setting up
 	delay(1);
@@ -186,17 +180,39 @@ void ADS1298_Driver::_init_pins(){
  */
 void ADS1298_Driver::_init_ads(ADS1298_Driver* driver){
 
+	uint8_t temp;
+
+	//! Activate the SPI BUS
+	ADS1298_Driver::_unset_cs_pin();
+
 	//! Let the ads1298 time to boot up
 	delay(ONE_MILLI);
 
-	//! Start read command is written
+	//! Reset the device
+	driver->send_command(RESET);
+	delayMicroseconds(10);
+	
+	//! Stop the conversions
 	driver->send_command(SDATAC);
 
 	//! Wait 10 milliseconds
 	delay(ONE_MILLI * 10);
+	
+	//! Setup the external clock
+	driver->write_byte(CONFIG1, CLK_EN | DAISY_EN | HIGH_RES_1k_SPS);
+	temp = driver->read_byte(CONFIG1);
+	
+	//! All GPIO set to output 0x0000: (floating CMOS inputs can flicker on and off, creating noise)
+	driver->write_byte(GPIO, EMPTY);
+	temp = driver->read_byte(GPIO);
+		
+	//! Config the 3rd register
+	driver->write_byte(CONFIG3, PD_REFBUF | CONFIG3_const);
+	temp = driver->read_byte(CONFIG3);
 
 	//! Check the model number and the available channels
 	driver->_configs._id = driver->read_byte(ID);
+	temp = driver->_configs._id;
 
 	//! We check the number of channels available
 	switch (driver->_configs._id & B00011111) {
@@ -225,14 +241,9 @@ void ADS1298_Driver::_init_ads(ADS1298_Driver* driver){
 			driver->_configs._channels = 0;
 	        break;
 	  }
-
-    //! All GPIO set to output 0x0000: (floating CMOS inputs can flicker on and off, creating noise)
-	driver->write_byte(GPIO, EMPTY);
-	driver->write_byte(CONFIG3, PD_REFBUF | CONFIG3_const);
-
-	//! Setup sampling rate
-	driver->write_byte(CONFIG1, HIGH_RES_1k_SPS);
-
+	  
+	temp = driver->_configs._channels;
+	
 	//! Set the 8 channels to input signal
 	//! Set each channel to have 12x gain
 	for (register uint8_t i = 1; i < 9; i++) {
@@ -241,9 +252,13 @@ void ADS1298_Driver::_init_ads(ADS1298_Driver* driver){
 
 	//! Check active channels
 	driver->check_active_channels();
+	driver->send_command(RDATA);
 
 	//! We start the ads1298
 	driver->_start_ads1298();
+	
+	//! Unselect the device
+	ADS1298_Driver::_set_cs_pin();
 }
 
 /**
@@ -280,6 +295,7 @@ void ADS1298_Driver::_reset_ads1298_comms(){
 void ADS1298_Driver::_start_ads1298(){
 
 	//! We start the conversions
+	this->send_command(START);
 	digitalWrite(PIN_START, HIGH);
 }
 
@@ -289,6 +305,7 @@ void ADS1298_Driver::_start_ads1298(){
 void ADS1298_Driver::_stop_ads1298(){
 
 	//! We stop the conversions
+	this->send_command(STOP);
 	digitalWrite(PIN_START, LOW);
 }
 
@@ -306,7 +323,7 @@ void ADS1298_Driver::_set_cs_pin(){
  */
 void ADS1298_Driver::_unset_cs_pin(){
 
-	//! We assert low the ss pin
+	//! We assert low the CS pin
 	digitalWrite(ADS1298_DEVICE, LOW);
 }
 

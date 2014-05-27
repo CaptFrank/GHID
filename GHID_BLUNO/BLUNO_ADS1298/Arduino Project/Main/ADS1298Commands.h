@@ -174,7 +174,7 @@ enum config3_bits {
 	RLD_LOFF_SENS 				= 0x02,								//!< RLD_LOFF_SENS
 	RLD_STAT 					= 0x01,     						//!< RLD_STAT
 
-	CONFIG3_const = 0x40 //!< CONFIG3_const
+	CONFIG3_const				= 0x40								//!< CONFIG3_const
 };
 
 //! -------------------------------------------------------------------------------

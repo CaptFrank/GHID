@@ -44,22 +44,13 @@ utilities global_utilities;
 RingBuff_t buffer;
 
 /**
- * We create a device map
- */
-uint8_t devices[] = {ADS1298_DEVICE};
-
-/**
  * SPI Settings definition structure
  */
 spi_settings_t spi_settings = {
-						FALSE,					//! Not in slave mode
-						NONE,					//! No service method
-			
 						SPI_MODE1,				//! set to SPI mode 1
 						MSBFIRST,				//! msb first
 						SPI_CLOCK_DIV16,		//! devide speed by 6 (16M/6)
-						NUMBER_OF_SPI_DEVICES,	//! Only one device on
-						devices					//! Address of the device
+						ADS1298_DEVICE			//! Address of the device
 						};
 
 //! A protocol handler
@@ -88,7 +79,7 @@ Bluetooth_Dispatcher dispatcher(&Serial);
 
 //! The ADS1298 Driver object
 //! 	- Here we use the default setup function.... We could change it
-ADS1298_Driver ads1298_driver(&buffer, devices, &spi_settings);
+ADS1298_Driver ads1298_driver(&buffer, &spi_settings);
 
 //! The CC2540 Driver
 //! 	- Here we use the default setup function.... We could change it
@@ -111,32 +102,28 @@ void setup(void){
 	//=========================================
 	// INSERT SETUP CODE HERE
 	//=========================================
-
-	//! Disable the interrupts
-	cli();
 	
 	//! Init the ring buffer
 	RingBuffer_InitBuffer(&buffer);
+	
+	Serial.begin(115200);
 
 	//! SETUP ADS1298
 	//! We setup the ADS1298 device.
 	ads1298_driver.begin();
 	
 	//! We trigger the ISR on the LOW change of the ADS1298 DRDY pin
-	attachInterrupt(ISR_NUMBER, execute_isr, FALLING);
+	//attachInterrupt(ISR_NUMBER, execute_isr, FALLING);
 
 	//! SETUP BLUETOOTH
 	//! Set the callback table within the connection protocol handler
-	protocol_handler.set_callback_table(callback_table);
-	
-	//! We allow interrupts
-	sei();
+	//protocol_handler.set_callback_table(callback_table);
 	
 	//! We connect to the host device
 	//connection.connect();
 	
 	//! We set the global lock to true
-	global_utilities.start_engine = true;
+	//global_utilities.start_engine = true;
 }
 
 /**
@@ -178,13 +165,22 @@ void execute_isr(void){
 	//! We add the spacer at the end of the data array
 	ads1298_driver._rx_buff.data.packet._data[sizeof(ads1298_driver._rx_buff.data.packet._data)] = SPACER;
 
-	//! We get the data and store it within the buffer
-	GHID_SPI::transfer_bulk(ADS1298_DEVICE,
-			ads1298_driver._rx_buff.data.packet_array,
-			DATA_PACKET_SIZE);
+	//! Start conversions
+	ADS1298_Driver::_unset_cs_pin();
 
+	//! We issue the read command
+	ads1298_driver.send_command(RDATA);
+
+	//! We get the data and store it within the buffer
+	for(register uint8_t i = 0; i < DATA_PACKET_SIZE; i++){
+		ads1298_driver._rx_buff.data.packet_array[i] = SPI.transfer(EMPTY);
+	}
+	
 	uint8_t size = DATA_PACKET_SIZE;
 	while(size --)
 		//! Then we input the data into the ring buffer
 		RingBuffer_Insert(ads1298_driver._buff, ads1298_driver._rx_buff.data.packet._data[size]);
+	
+	//! Stop conversions
+	ADS1298_Driver::_set_cs_pin();
 }

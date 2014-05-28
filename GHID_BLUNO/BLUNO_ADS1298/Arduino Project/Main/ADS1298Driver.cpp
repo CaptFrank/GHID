@@ -69,7 +69,7 @@ uint8_t ADS1298_Driver::read_byte(int reg_address){
 	SPI.transfer(RREG | reg_address);
 
 	//! Send the number of bytes to read - 1
-	SPI.transfer(0);
+	out = SPI.transfer(0);
 	delayMicroseconds(5);
 
 	//! Send the read command @ byte 0
@@ -150,14 +150,7 @@ void ADS1298_Driver::_init_pins(){
 	//! We setup the pins
 		
 	//! We set the ss pin as an output.
-	pinMode(this->_settings->device_cs, OUTPUT);
-		
-	//! Active low line
-	digitalWrite(this->_settings->device_cs, HIGH);
-	
-	pinMode(PIN_MISO,		INPUT);
-	pinMode(PIN_MOSI,		OUTPUT);
-	pinMode(PIN_SCLK,		OUTPUT);
+	pinMode(PIN_SS, OUTPUT);
 	
 	//! SIGNALS
 	pinMode(PIN_LED, 		OUTPUT);
@@ -252,10 +245,12 @@ void ADS1298_Driver::_init_ads(ADS1298_Driver* driver){
 
 	//! Check active channels
 	driver->check_active_channels();
-	driver->send_command(RDATA);
 
 	//! We start the ads1298
 	driver->_start_ads1298();
+	
+	//! Set the data to stream with the DRDY pin toggling
+	driver->send_command(RDATAC);
 	
 	//! Unselect the device
 	ADS1298_Driver::_set_cs_pin();

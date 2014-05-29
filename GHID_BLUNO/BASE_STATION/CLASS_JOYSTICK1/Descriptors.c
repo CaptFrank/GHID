@@ -65,9 +65,9 @@ const USB_Descriptor_Device_t PROGMEM DeviceDescriptor =
 	.Header                 = {.Size = sizeof(USB_Descriptor_Device_t), .Type = DTYPE_Device},
 
 	.USBSpecification       = VERSION_BCD(01.10),
-	.Class                  = USB_CSCP_NoDeviceClass,
-	.SubClass               = USB_CSCP_NoDeviceSubclass,
-	.Protocol               = USB_CSCP_NoDeviceProtocol,
+	.Class                  = MISC_Device_Class,
+	.SubClass               = Common_Device_SubClass,
+	.Protocol               = Interface_Association_desc,
 
 	.Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
 
@@ -110,7 +110,7 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 		{
 			.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
 
-			.InterfaceNumber        = 0x00,
+			.InterfaceNumber        = INTERFACE_ID_HID_JOYSTICK,
 			.AlternateSetting       = 0x00,
 
 			.TotalEndpoints         = 1,
@@ -264,7 +264,7 @@ const USB_Descriptor_String_t PROGMEM LanguageString =
  */
 const USB_Descriptor_String_t PROGMEM ManufacturerString =
 {
-	.Header                 = {.Size = USB_STRING_LEN(11), .Type = DTYPE_String},
+	.Header                 = {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
 
 	.UnicodeString          = L"Francis Papineau"
 };

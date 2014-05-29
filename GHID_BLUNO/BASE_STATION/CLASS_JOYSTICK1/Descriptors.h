@@ -103,9 +103,9 @@
 		 */
 		enum InterfaceDescriptors_t
 		{
-			INTERFACE_ID_HID_JOYSTICK = 0,	/**< CDC1 CCI interface descriptor ID */
-			INTERFACE_ID_CDC_CCI = 1,		/**< CDC DCI interface descriptor ID */
-			INTERFACE_ID_CDC_DCI = 2		/**< CDC2 CCI interface descriptor ID */
+			INTERFACE_ID_CDC_CCI = 0,		/**< CDC DCI interface descriptor ID */
+			INTERFACE_ID_CDC_DCI = 1,		/**< CDC2 CCI interface descriptor ID */
+			INTERFACE_ID_HID_JOYSTICK = 2	/**< CDC1 CCI interface descriptor ID */
 		};
 
 		/** Enum for the device string descriptor IDs within the device. Each string descriptor should

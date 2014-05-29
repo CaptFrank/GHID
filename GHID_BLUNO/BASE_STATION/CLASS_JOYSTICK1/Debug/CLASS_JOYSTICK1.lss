@@ -13,21 +13,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .debug_aranges 00000720  00000000  00000000  00001888  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   0000b33b  00000000  00000000  00001fa8  2**0
+  5 .debug_info   0000b307  00000000  00000000  00001fa8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00002dde  00000000  00000000  0000d2e3  2**0
+  6 .debug_abbrev 00002dde  00000000  00000000  0000d2af  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00014eca  00000000  00000000  000100c1  2**0
+  7 .debug_line   00014eca  00000000  00000000  0001008d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  0000128c  00000000  00000000  00024f8c  2**2
+  8 .debug_frame  0000128c  00000000  00000000  00024f58  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00017a76  00000000  00000000  00026218  2**0
+  9 .debug_str    00017994  00000000  00000000  000261e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00007a70  00000000  00000000  0003dc8e  2**0
+ 10 .debug_loc    00007a70  00000000  00000000  0003db78  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00001158  00000000  00000000  000456fe  2**0
+ 11 .debug_ranges 00001158  00000000  00000000  000455e8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_macro  0000a73e  00000000  00000000  00046856  2**0
+ 12 .debug_macro  0000a73e  00000000  00000000  00046740  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -107,7 +107,7 @@ Disassembly of section .text:
       a8:	61 00 6c 00 00 00                                   a.l...
 
 000000ae <ManufacturerString>:
-      ae:	18 03 46 00 72 00 61 00 6e 00 63 00 69 00 73 00     ..F.r.a.n.c.i.s.
+      ae:	22 03 46 00 72 00 61 00 6e 00 63 00 69 00 73 00     ".F.r.a.n.c.i.s.
       be:	20 00 50 00 61 00 70 00 69 00 6e 00 65 00 61 00      .P.a.p.i.n.e.a.
       ce:	75 00 00 00                                         u...
 
@@ -115,16 +115,16 @@ Disassembly of section .text:
       d2:	04 03 09 04                                         ....
 
 000000d6 <ConfigurationDescriptor>:
-      d6:	09 02 5f 00 03 01 00 c0 32 09 04 00 00 01 03 00     .._.....2.......
-      e6:	00 00 09 21 11 01 00 01 22 3a 00 07 05 81 03 08     ...!....":......
-      f6:	00 05 08 0b 01 02 02 02 01 00 09 04 01 00 01 02     ................
-     106:	02 01 00 05 24 00 10 01 04 24 02 06 05 24 06 01     ....$....$...$..
-     116:	02 07 05 83 03 08 00 ff 09 04 02 00 02 0a 00 00     ................
-     126:	00 07 05 02 02 10 00 05 07 05 81 02 10 00 05        ...............
+      d6:	09 02 5f 00 03 01 00 c0 32 08 0b 00 02 02 02 01     .._.....2.......
+      e6:	00 09 04 00 00 01 02 02 01 00 05 24 00 10 01 04     ...........$....
+      f6:	24 02 06 05 24 06 00 01 07 05 83 03 08 00 ff 09     $...$...........
+     106:	04 01 00 02 0a 00 00 00 07 05 02 02 10 00 05 07     ................
+     116:	05 81 02 10 00 05 09 04 02 00 01 03 00 00 00 09     ................
+     126:	21 11 01 00 01 22 3a 00 07 05 81 03 08 00 05        !....":........
 
 00000135 <DeviceDescriptor>:
-     135:	12 01 10 01 00 00 00 08 eb 03 43 20 01 00 01 02     ..........C ....
-     145:	00 01                                               ..
+     135:	12 01 10 01 ef 02 01 08 eb 03 43 20 01 00 01 02     ..........C ....
+     145:	dc 01                                               ..
 
 00000147 <JoystickReport>:
      147:	05 01 09 04 a1 01 09 01 a1 00 09 30 09 31 09 32     ...........0.1.2
@@ -318,8 +318,8 @@ uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
 			break;
 		case HID_DTYPE_HID:
 			Address = &ConfigurationDescriptor.HID_JoystickHID;
-     232:	28 ee       	ldi	r18, 0xE8	; 232
-     234:	30 e0       	ldi	r19, 0x00	; 0
+     232:	25 e2       	ldi	r18, 0x25	; 37
+     234:	31 e0       	ldi	r19, 0x01	; 1
 			Size    = sizeof(USB_HID_Descriptor_HID_t);
 			break;
      236:	0e c0       	rjmp	.+28     	; 0x254 <CALLBACK_USB_GetDescriptor+0x98>

@@ -11,7 +11,6 @@
 #include <Arduino.h>
 #include "SPI.h"
 
-#include "GHID_SPI.h"
 #include "RingBuffer.h"
 #include "ADS1298Commands.h"
 
@@ -98,10 +97,22 @@ typedef struct rx_buffer_t {
 };
 
 /**
+ * The spi settings structure
+ */
+typedef struct spi_settings_t {
+	
+	uint8_t data_mode;
+	uint8_t bit_order;
+	uint8_t clock_divider;
+	uint8_t device_cs;
+};
+
+
+/**
  * This is the ADS1298 Driver. It handles the reads and writes to the ADS1298
  * device.
  */
-class ADS1298_Driver : public GHID_SPI {
+class ADS1298_Driver {
 
 	//! Public Context
 	public:
@@ -110,11 +121,9 @@ class ADS1298_Driver : public GHID_SPI {
 		 * This is the default constructor for the class
 		 *
 		 * @param buff							- The general context ring buffer
-		 * @param devices						- The device array
 		 * @param spi_settings					- The SPI settings
 		 */
 		ADS1298_Driver(RingBuff_t* buff, 
-					   uint8_t* devices, 
 					   spi_settings_t* settings);
 
 		/**	
@@ -151,6 +160,16 @@ class ADS1298_Driver : public GHID_SPI {
 		 * This method checks which channels are active.
 		 */
 		void check_active_channels();
+		
+		/**
+		 * Set SS pin high
+		 */
+		static void _set_cs_pin();
+
+		/**
+		 * Unset ss pin
+		 */
+		static void _unset_cs_pin();
 
 		//! The internal Ring Buffer access
 		RingBuff_t* _buff;
@@ -226,16 +245,6 @@ class ADS1298_Driver : public GHID_SPI {
 		 * Unpower down the chip
 		 */
 		void _unpower_down_ads1898();
-
-		/**
-		 * Set SS pin high
-		 */
-		void _set_cs_pin();
-
-		/**
-		 * Unset ss pin
-		 */
-		void _unset_cs_pin();
 
 };
 

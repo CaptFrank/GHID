@@ -341,6 +341,16 @@
 			uint8_t                 SlaveInterfaceNumber; /**< Interface number of the CDC Data interface. */
 		} ATTR_PACKED USB_CDC_Descriptor_FunctionalUnion_t;
 
+		typedef struct {
+			
+			USB_Descriptor_Header_t Header;
+			uint8_t					Subtype;
+			
+			uint8_t					Capabilities;
+			uint8_t					Data_Interface;
+			
+		} ATTR_PACKED USB_CDC_Descriptor_Call_Management_t;
+
 		/** \brief CDC class-specific Functional Union Descriptor (USB-IF naming conventions).
 		 *
 		 *  Type define for a CDC class-specific functional Union descriptor. This indicates to the host that specific

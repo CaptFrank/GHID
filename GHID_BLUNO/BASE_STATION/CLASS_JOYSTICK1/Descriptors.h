@@ -64,6 +64,7 @@
 		
 		/** Endpoint address of the Joystick HID reporting IN endpoint. */
 		#define JOYSTICK_EPADDR              (ENDPOINT_DIR_IN | 1)
+		#define JOYSTICK_OPADDR				 1
 
 		/** Size in bytes of the Joystick HID reporting IN endpoint. */
 		#define JOYSTICK_EPSIZE              8
@@ -83,6 +84,7 @@
 			USB_CDC_Descriptor_FunctionalHeader_t    CDC_Functional_Header;
 			USB_CDC_Descriptor_FunctionalACM_t       CDC_Functional_ACM;
 			USB_CDC_Descriptor_FunctionalUnion_t     CDC_Functional_Union;
+			USB_CDC_Descriptor_Call_Management_t	 CDC_Functional_Call_Management;
 			USB_Descriptor_Endpoint_t                CDC_ManagementEndpoint;
 
 			// CDC Data Interface
@@ -94,6 +96,7 @@
 			USB_Descriptor_Interface_t				HID_Interface;
 			USB_HID_Descriptor_HID_t				HID_JoystickHID;
 	        USB_Descriptor_Endpoint_t				HID_ReportINEndpoint;
+			USB_Descriptor_Endpoint_t				HID_ReportOUTEndpoint;
 
 		} USB_Descriptor_Configuration_t;
 		

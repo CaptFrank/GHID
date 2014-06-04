@@ -89,7 +89,6 @@ bool CC2540_Driver::_send_at_commad(){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -108,7 +107,6 @@ bool CC2540_Driver::_send_help_command(uint8_t command_id){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -178,7 +176,6 @@ bool CC2540_Driver::_set_fsm_mode(uint8_t mode){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -196,7 +193,6 @@ bool CC2540_Driver::_set_role(uint8_t role){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -214,7 +210,6 @@ bool CC2540_Driver::_set_min_interval(uint8_t interval){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -232,7 +227,6 @@ bool CC2540_Driver::_set_max_interval(uint8_t interval){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -255,7 +249,6 @@ bool CC2540_Driver::_set_baudrate(char* baud){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -278,7 +271,6 @@ bool CC2540_Driver::_set_binding_address(char* address){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -296,7 +288,6 @@ bool CC2540_Driver::_set_connection_mode(uint8_t mode){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -319,7 +310,6 @@ bool CC2540_Driver::_set_device_name(char* name){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -337,7 +327,6 @@ bool CC2540_Driver::_set_setting(uint8_t mode){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -355,7 +344,6 @@ bool CC2540_Driver::_set_ibeacon_setting(uint8_t setting){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -378,7 +366,6 @@ bool CC2540_Driver::_set_password(char* psw){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -407,7 +394,6 @@ bool CC2540_Driver::_set_tx_power(char* power){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -424,7 +410,6 @@ bool CC2540_Driver::_reboot(){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 
@@ -440,7 +425,6 @@ bool CC2540_Driver::_exit_at(){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 

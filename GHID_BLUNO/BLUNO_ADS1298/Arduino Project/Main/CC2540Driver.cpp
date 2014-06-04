@@ -89,7 +89,6 @@ bool CC2540_Driver::_send_at_commad(){
 
 	//! We setup a dispatch
 	this->_dispacher->setup_dispatch((uint8_t*)command.c_str(), command.length());
-	this->_dispacher->run_dispatch();
 	return this->_check_ok_response();
 }
 

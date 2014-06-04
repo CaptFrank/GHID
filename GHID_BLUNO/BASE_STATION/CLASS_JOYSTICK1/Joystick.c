@@ -97,6 +97,11 @@ RingBuff_t USARTtoUSB_Buffer;
 //! A joystick report used to send to the host pc
 USB_JoystickReport_Data_t joyReport;
 
+//! A file stream
+static FILE USBSerialStream;
+
+uint8_t _buff[INPUT_BUFFER_SIZE];
+
 /** Main program entry point. This routine contains the overall program flow, including initial
  *  setup of all components and the main program loop.
  */
@@ -113,28 +118,22 @@ int main(void)
     RingBuffer_InitBuffer(&USARTtoUSB_Buffer);
 
 	//! Enable the interrupt globally
-    sei();
+    GlobalInterruptEnable();
+	
+	//! We create a Stream type
+	CDC_Device_CreateStream(&VirtualSerial_CDC_Interface, &USBSerialStream);
 
+	//! Our work thread
     for (;;) {
-		
-		//! We check to see if there is a byte in the host -> client buffer
-		int16_t rx_byte = CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
-		
-		//! If this is real data, 
-		if(!(rx_byte < 0)){
-			
-			//! We send the byte to the ATMEGA328 uC
-			Serial_SendByte(rx_byte);
-		}
-		
-		//! CDC Device Serial Task
-		CDC_Device_Serial_Task(&VirtualSerial_CDC_Interface);
-		
-		//! CDC Device USB Task
-		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		
 		//! HID Device Task
 	    HID_Device_USBTask(&Joystick_HID_Interface);
+				
+		//! CDC Device USB Task
+		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
+		
+		//! Serial task
+		CDC_Device_USBSerialTask(&VirtualSerial_CDC_Interface);
 		
 		//! USB Task
 	    USB_USBTask();
@@ -147,6 +146,10 @@ void SetupHardware(void)
     /* Disable watchdog if enabled by bootloader/fuses */
     MCUSR &= ~(1 << WDRF);
     wdt_disable();
+	
+	//! Setup the port pin (Reset) - PD7
+	DDRD  |= (1 << PIND7);	//! Output
+	PORTD |= (1 << PIND7);	//! High
 
     /* Hardware Initialization */
     Serial_Init(9600, true);
@@ -217,12 +220,6 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
 	int ind;
 	
     USB_JoystickReport_Data_t *reportp = (USB_JoystickReport_Data_t*)ReportData;
-	
-	//! We check to see if we need to send a string first...
-	if(RINGBUFF_Check_Packet_Type(SERIAL_DATA_HEADER)){
-		CDC_Device_Serial_Task(&VirtualSerial_CDC_Interface);
-	}
-	
 	RingBuff_Count_t BufferCount = RingBuffer_GetCount(&USARTtoUSB_Buffer);
 
 	if (BufferCount >= 8) {
@@ -263,36 +260,24 @@ void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDI
 	// Unused (but mandatory for the HID class driver) in this demo, since there are no Host->Device reports
 }
 
-//! Custom Task Engine
-void CDC_Device_Serial_Task(USB_ClassInfo_CDC_Device_t* ptr){
+//! Custom write function
+void CDC_Device_USBSerialTask(USB_ClassInfo_CDC_Device_t* ptr){
 	
-	//! We check if there is a serial string that needs to be written
-	//! The data format should be the following:
-	//!		- HEADER 
-	//!		- LENGTH
-	//!		- DATA*
-	if(RINGBUFF_Check_Packet_Type(SERIAL_DATA_HEADER)){
-		
-		//! Remove the header - no need to send it
-		RingBuffer_Remove(&USARTtoUSB_Buffer);
-		
-		//! Remove the length of the data to send
-		uint8_t length = RingBuffer_Remove(&USARTtoUSB_Buffer);
-		
-		//! We write the serial string
-		for(register uint8_t i = 0; i < length; i ++){
-			CDC_Device_SendByte(ptr, (uint8_t)RingBuffer_Remove(&USARTtoUSB_Buffer));
-		}
+	//! We check to see if its a Arduino signal (!!!)
+	
+	fread(_buff, sizeof(uint8_t), sizeof(_buff), &USBSerialStream);
+	if(strcmp((char*)_buff, (char*)PATTERN) == 0){
+		Reset_Mega();
 	}
+	Serial_SendData(_buff, sizeof(_buff));
 }
 
-//! Custom check function
-bool RINGBUFF_Check_Packet_Type(uint8_t type){
+//! Resets the ATMEGA chip
+void Reset_Mega(){
 	
-	if(USARTtoUSB_Buffer.Out[0] == type){
-		return true;
-	}
-	return false;
+	PORTD &= (0 << PIND7);
+	_delay_ms(10);
+	PORTD |= (1 << PIND7);
 }
 
 /** ISR to manage the reception of data from the serial port, placing received bytes into a circular buffer

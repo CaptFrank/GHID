@@ -66,17 +66,6 @@
 			
 		} ATTR_PACKED USB_JoystickReport_Data_t;
 
-		/**
-		 * Serial data from the uC structure define
-		 */
-		typedef struct 
-		{
-			uint8_t		header;
-			uint8_t		length;
-			uint8_t*	data;
-			
-		}ATTR_PACKED USB_CDC_Device_Data_t;
-
 	/* Macros: */
 		/** LED mask for the library LED driver, to indicate that the USB interface is not ready. */
 		#define LEDMASK_USB_NOTREADY      LEDS_LED1
@@ -91,10 +80,19 @@
 		#define LEDMASK_USB_ERROR        (LEDS_LED1 | LEDS_LED3)
 		
 		/** The Serial Data header character */
-		#define SERIAL_DATA_HEADER		 '+'
+		#define SERIAL_DATA_HEADER		 '@'
 		
 		/** The Joystick Data header character */
-		#define JOYTICK_DATA_HEADER		 '*'
+		#define JOYTICK_DATA_HEADER		 '#'
+		
+		/** Size of the receive buffer */
+		#define INPUT_BUFFER_SIZE		 0x03
+		
+		/** Empty define */
+		#define EMPTY					 0x00
+		
+		/** Pattern Trigger */
+		#define PATTERN					"!!!"
 
 	/* Function Prototypes: */
 		void SetupHardware(void);
@@ -105,11 +103,11 @@
 		void EVENT_USB_Device_ControlRequest(void);
 		void EVENT_USB_Device_StartOfFrame(void);
 		
-		//! Custom Task Engine
-		void CDC_Device_Serial_Task(USB_ClassInfo_CDC_Device_t* ptr);
+		//! Custom write function
+		void CDC_Device_USBSerialTask(USB_ClassInfo_CDC_Device_t* ptr);
 		
-		//! Custom check function
-		bool RINGBUFF_Check_Packet_Type(uint8_t type);
+		//! Resets the ATMEGA chip
+		void Reset_Mega();
 
 		bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
 		                                         uint8_t* const ReportID,

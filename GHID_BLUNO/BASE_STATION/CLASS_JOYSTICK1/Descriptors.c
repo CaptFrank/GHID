@@ -52,7 +52,7 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] =
 	 *   Max physical X/Y/Z Axis values (used to determine resolution):  1
 	 *   Buttons: 2
 	 */
-	HID_DESCRIPTOR_JOYSTICK(-100, 100, -1, 1, 8)
+	HID_DESCRIPTOR_JOYSTICK(-1000, 1000, -1, 1, 8)
 };
 
 /** Device descriptor structure. This descriptor, located in FLASH memory, describes the overall
@@ -65,15 +65,15 @@ const USB_Descriptor_Device_t PROGMEM DeviceDescriptor =
 	.Header                 = {.Size = sizeof(USB_Descriptor_Device_t), .Type = DTYPE_Device},
 
 	.USBSpecification       = VERSION_BCD(02.00),
-	.Class                  = MISC_Device_Class,
-	.SubClass               = Common_Device_SubClass,
-	.Protocol               = Interface_Association_desc,
+	.Class                  = 0xEF,
+	.SubClass               = 0x02,
+	.Protocol               = 0x01,
 
 	.Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
 
 	.VendorID               = 0x03EB,
 	.ProductID              = 0x2043,
-	.ReleaseNumber          = VERSION_BCD(01.01),
+	.ReleaseNumber          = VERSION_BCD(01.00),
 
 	.ManufacturerStrIndex   = STRING_ID_Manufacturer,
 	.ProductStrIndex        = STRING_ID_Product,
@@ -102,6 +102,44 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 		.ConfigAttributes       = (USB_CONFIG_ATTR_RESERVED | USB_CONFIG_ATTR_SELFPOWERED),
 
 		.MaxPowerConsumption    = USB_CONFIG_POWER_MA(100)
+	},
+
+	//! Joystick
+	.HID_Interface =
+	{
+		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
+
+		.InterfaceNumber        = INTERFACE_ID_HID_JOYSTICK,
+		.AlternateSetting       = 0x00,
+
+		.TotalEndpoints         = 1,
+
+		.Class                  = HID_CSCP_HIDClass,
+		.SubClass               = HID_CSCP_NonBootSubclass,
+		.Protocol               = HID_CSCP_NonBootProtocol,
+
+		.InterfaceStrIndex      = NO_DESCRIPTOR
+	},
+
+	.HID_JoystickHID =
+	{
+		.Header                 = {.Size = sizeof(USB_HID_Descriptor_HID_t), .Type = HID_DTYPE_HID},
+
+		.HIDSpec                = VERSION_BCD(01.11),
+		.CountryCode            = 0x00,
+		.TotalReportDescriptors = 1,
+		.HIDReportType          = HID_DTYPE_Report,
+		.HIDReportLength        = sizeof(JoystickReport)
+	},
+
+	.HID_ReportINEndpoint =
+	{
+		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
+
+		.EndpointAddress        = JOYSTICK_EPADDR,
+		.Attributes             = (EP_TYPE_INTERRUPT | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
+		.EndpointSize           = JOYSTICK_EPSIZE,
+		.PollingIntervalMS      = 0x05
 	},
 
 	//! CDC
@@ -160,14 +198,6 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 		.SlaveInterfaceNumber   = INTERFACE_ID_CDC_DCI
 	},
 	
-	.CDC_Functional_Call_Management = 
-	{
-		.Header					= {.Size = sizeof(USB_CDC_Descriptor_Call_Management_t), .Type = DTYPE_CSInterface},
-		.Subtype				= 0x01,
-		.Capabilities			= NO_DESCRIPTOR,
-		.Data_Interface			= 0x01
-	},
-
 	.CDC_ManagementEndpoint =
 	{
 		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
@@ -211,54 +241,6 @@ const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 		.EndpointAddress        = CDC_TX_EPADDR,
 		.Attributes             = (EP_TYPE_BULK | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
 		.EndpointSize           = CDC_TXRX_EPSIZE,
-		.PollingIntervalMS      = 0x05
-	},
-		
-	//! Joystick
-	.HID_Interface =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
-
-		.InterfaceNumber        = INTERFACE_ID_HID_JOYSTICK,
-		.AlternateSetting       = 0x00,
-
-		.TotalEndpoints         = 1,
-
-		.Class                  = HID_CSCP_HIDClass,
-		.SubClass               = HID_CSCP_NonBootSubclass,
-		.Protocol               = HID_CSCP_NonBootProtocol,
-
-		.InterfaceStrIndex      = NO_DESCRIPTOR
-	},
-
-	.HID_JoystickHID =
-	{
-		.Header                 = {.Size = sizeof(USB_HID_Descriptor_HID_t), .Type = HID_DTYPE_HID},
-
-		.HIDSpec                = VERSION_BCD(01.11),
-		.CountryCode            = 0x00,
-		.TotalReportDescriptors = 1,
-		.HIDReportType          = HID_DTYPE_Report,
-		.HIDReportLength        = sizeof(JoystickReport)
-	},
-
-	.HID_ReportINEndpoint =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-
-		.EndpointAddress        = JOYSTICK_EPADDR,
-		.Attributes             = (EP_TYPE_INTERRUPT | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
-		.EndpointSize           = JOYSTICK_EPSIZE,
-		.PollingIntervalMS      = 0x05
-	},
-	
-	.HID_ReportOUTEndpoint = 
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-
-		.EndpointAddress        = JOYSTICK_OPADDR,
-		.Attributes             = (EP_TYPE_INTERRUPT | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
-		.EndpointSize           = JOYSTICK_EPSIZE,
 		.PollingIntervalMS      = 0x05
 	}
 };

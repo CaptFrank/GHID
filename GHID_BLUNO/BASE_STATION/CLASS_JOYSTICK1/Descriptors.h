@@ -46,13 +46,13 @@
 		//! CDC Device
 	
 		/** Endpoint address of the first CDC interface's device-to-host data IN endpoint. */
-		#define CDC_TX_EPADDR                 (ENDPOINT_DIR_IN  | 1)
+		#define CDC_TX_EPADDR                 (ENDPOINT_DIR_IN  | 2)
 
 		/** Endpoint address of the first CDC interface's host-to-device data OUT endpoint. */
-		#define CDC_RX_EPADDR                 (ENDPOINT_DIR_OUT | 2)
+		#define CDC_RX_EPADDR                 (ENDPOINT_DIR_OUT | 3)
 
 		/** Endpoint address of the first CDC interface's device-to-host notification IN endpoint. */
-		#define CDC_NOTIFICATION_EPADDR       (ENDPOINT_DIR_IN  | 3)
+		#define CDC_NOTIFICATION_EPADDR       (ENDPOINT_DIR_IN  | 4)
 
 		/** Size in bytes of the CDC device-to-host notification IN endpoints. */
 		#define CDC_NOTIFICATION_EPSIZE        8
@@ -78,25 +78,23 @@
 		{
 			USB_Descriptor_Configuration_Header_t Config;
 
+			// Joystick HID Interface
+			USB_Descriptor_Interface_t				HID_Interface;
+			USB_HID_Descriptor_HID_t				HID_JoystickHID;
+			USB_Descriptor_Endpoint_t				HID_ReportINEndpoint;
+
 			// CDC Control Interface
 			USB_Descriptor_Interface_Association_t   CDC_IAD;
 			USB_Descriptor_Interface_t               CDC_CCI_Interface;
 			USB_CDC_Descriptor_FunctionalHeader_t    CDC_Functional_Header;
 			USB_CDC_Descriptor_FunctionalACM_t       CDC_Functional_ACM;
 			USB_CDC_Descriptor_FunctionalUnion_t     CDC_Functional_Union;
-			USB_CDC_Descriptor_Call_Management_t	 CDC_Functional_Call_Management;
 			USB_Descriptor_Endpoint_t                CDC_ManagementEndpoint;
 
 			// CDC Data Interface
 			USB_Descriptor_Interface_t               CDC_DCI_Interface;
 			USB_Descriptor_Endpoint_t                CDC_DataOutEndpoint;
 			USB_Descriptor_Endpoint_t                CDC_DataInEndpoint;
-
-			// Joystick HID Interface
-			USB_Descriptor_Interface_t				HID_Interface;
-			USB_HID_Descriptor_HID_t				HID_JoystickHID;
-	        USB_Descriptor_Endpoint_t				HID_ReportINEndpoint;
-			USB_Descriptor_Endpoint_t				HID_ReportOUTEndpoint;
 
 		} USB_Descriptor_Configuration_t;
 		
@@ -106,9 +104,9 @@
 		 */
 		enum InterfaceDescriptors_t
 		{
-			INTERFACE_ID_CDC_CCI = 0,		/**< CDC DCI interface descriptor ID */
-			INTERFACE_ID_CDC_DCI = 1,		/**< CDC2 CCI interface descriptor ID */
-			INTERFACE_ID_HID_JOYSTICK = 2	/**< CDC1 CCI interface descriptor ID */
+			INTERFACE_ID_HID_JOYSTICK = 0,	/**< CDC1 CCI interface descriptor ID */
+			INTERFACE_ID_CDC_CCI = 1,		/**< CDC DCI interface descriptor ID */
+			INTERFACE_ID_CDC_DCI = 2,		/**< CDC2 CCI interface descriptor ID */
 		};
 
 		/** Enum for the device string descriptor IDs within the device. Each string descriptor should

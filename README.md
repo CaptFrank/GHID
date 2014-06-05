@@ -23,7 +23,7 @@ Still to do in the GHID project:
 			
 		- Bluetooth Firmware:
 			- Design								- 100%
-			- Implementation						- 90%
+			- Implementation						- 100%
 				- Protocol						
 			- Testing								- 90%
 			- Deployment							- 75%
@@ -31,16 +31,17 @@ Still to do in the GHID project:
 ---->	Base Station Implementation
 	
 		USB PHY:
-			- Update MOUSE
-			- Update JOYSTICK
-			- Dual Profile
-		
+			- Update MOUSE							- 100%
+			- Update JOYSTICK						- 100%
+			- Dual Profile	(MOUSE + JOYSTICK) 		- 0%
+							(JOYSTICK + CDC)		- 100%
+									
 		Arbitrator:
 			
-			- Design
-			- Implementation
-			- Testing
-			- Deployement
+			- Design								- 100%
+			- Implementation						- 90%
+			- Testing								- 0%
+			- Deployement							- 0%
 			
 	
 	

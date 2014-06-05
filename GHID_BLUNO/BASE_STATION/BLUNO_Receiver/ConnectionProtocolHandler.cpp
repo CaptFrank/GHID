@@ -16,7 +16,7 @@
  * @param utils							- The global utilities
  */
 ConnectionProtocolHandler::ConnectionProtocolHandler(HardwareSerial* serial,
-													 utilities* utils){
+													 Utilities* utils){
 
 	//! Set internals
 	this->_serial = serial;

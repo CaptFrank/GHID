@@ -10,7 +10,7 @@
 /**
  * The default constructor for the class
  */
-Bluetooth_Dispatcher::Bluetooth_Dispatcher(HardwareSerial* serial){
+BluetoothDispatcher::BluetoothDispatcher(HardwareSerial* serial){
 
 	//! We set the internal Serial entry
 	this->_serial = serial;
@@ -23,7 +23,7 @@ Bluetooth_Dispatcher::Bluetooth_Dispatcher(HardwareSerial* serial){
 /**
  * This is the virtual setup method for the class
  */
-void Bluetooth_Dispatcher::setup_dispatch(uint8_t* command_ptr, uint8_t length){
+void BluetoothDispatcher::setup_dispatch(uint8_t* command_ptr, uint8_t length){
 
 	//! We create a dispatch
 	this->_create_dispatch(command_ptr, length);
@@ -34,7 +34,7 @@ void Bluetooth_Dispatcher::setup_dispatch(uint8_t* command_ptr, uint8_t length){
  *
  * @return success							- If the dispatch was successful
  */
-bool Bluetooth_Dispatcher::run_dispatch(){
+bool BluetoothDispatcher::run_dispatch(){
 
 	//! We send the dispatch and we listen for a response
 	this->_send_dispatch(&this->_dispatch);
@@ -52,7 +52,7 @@ bool Bluetooth_Dispatcher::run_dispatch(){
 /**
  * Get access to the response entity.
  */
-response_t* Bluetooth_Dispatcher::get_response(){
+response_t* BluetoothDispatcher::get_response(){
 	return this->_response;
 }
 		

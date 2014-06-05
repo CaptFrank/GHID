@@ -34,7 +34,7 @@ class ConnectionProtocolHandler {
 		 *
 		 * @param serial						- The Hardware serial to read and write
 		 */
-		ConnectionProtocolHandler(HardwareSerial* serial, utilities* utils);
+		ConnectionProtocolHandler(HardwareSerial* serial, Utilities* utils);
 
 		/**
 		 * This sets up the callback table.
@@ -67,7 +67,7 @@ class ConnectionProtocolHandler {
 		HardwareSerial* _serial;
 		
 		//! Utilities
-		utilities* _utils;
+		Utilities* _utils;
 };
 
 #endif /* CONNECTIONPROTOCOLHANDLER_H_ */

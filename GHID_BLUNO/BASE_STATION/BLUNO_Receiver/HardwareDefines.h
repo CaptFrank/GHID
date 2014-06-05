@@ -12,7 +12,6 @@
 
 //USB Implementation
 #include <Arduino.h>
-
 #include "HardwareDefines.h"
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,11 +61,11 @@ extern HardwareSerial Serial2;
 
 #ifdef JOYSTICK_REPORT
 //! We define the number of axes needed
-#define NUM_AXES						6
+#define NUM_AXES						3
 #endif
 
 //! We define the number of buttons needed
-#define NUM_BUTTONS						20
+#define NUM_BUTTONS						8
 
 //! Generic empty define
 #define EMPTY							0x00

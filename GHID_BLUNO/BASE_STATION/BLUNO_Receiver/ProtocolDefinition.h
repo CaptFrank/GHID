@@ -143,26 +143,7 @@ typedef struct sensor_packet_data_t {
 	}_sensor_data;
 
 	//! Tail - Determines when the packet stops
-	static const uint8_t 		packet_tail = SENSOR_PACKET_TAIL;
-};
-
-//! -----------------------------------------------------------------------
-//! 					SERVER COMMAND PACKET
-//! -----------------------------------------------------------------------
-
-/**
- * These are the possible server commands that can be issued.
- */
-enum server_command_t {
-
-	REBOOT_CMD						= REBOOT,  			//!< REBOOT_CMD
-	RESET_CMD						= RESET,    		//!< RESET_CMD
-	SUSPEND_CMD						= SUSPEND,			//!< SUSPEND_CMD
-	RESUME_CMD						= RESUME,  			//!< RESUME_CMD
-	START_CMD						= START,    		//!< START_CMD
-	STOP_CMD						= STOP,      		//!< STOP_CMD
-	GET_CMD							= GET        		//!< GET_CMD
-
+	static const uint8_t 			packet_tail = SENSOR_PACKET_TAIL;
 };
 
 #endif /* PROTOCOLDEFINITION_H_ */

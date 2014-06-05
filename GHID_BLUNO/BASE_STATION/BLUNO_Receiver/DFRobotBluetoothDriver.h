@@ -42,7 +42,7 @@ class DFRobotBluetoothDriver {
 		 */
 		DFRobotBluetoothDriver(char* device_name,
 							char* command_table,
-							Bluetooth_Dispatcher* serial);
+							BluetoothDispatcher* serial);
 
 		/**
 		 * This is the begin method for the class.
@@ -61,7 +61,7 @@ class DFRobotBluetoothDriver {
 		char* _name;
 
 		//! The internal command dispacher
-		Bluetooth_Dispatcher* _dispacher;
+		BluetoothDispatcher* _dispacher;
 
 		/**
 		 * This is the default setup method.

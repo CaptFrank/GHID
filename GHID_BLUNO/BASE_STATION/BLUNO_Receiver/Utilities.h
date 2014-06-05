@@ -62,7 +62,7 @@ enum packet_type_t {
 /**
  * This class is the global device handler. It starts and stops the device processe globally.
  */
-class utilities {
+class Utilities {
 
 	//! Public Context
 	public: 

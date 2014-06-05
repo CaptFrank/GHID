@@ -19,7 +19,7 @@
  * that is able to communicate with the USB PHY and thus, allow for USB HID
  * reports to be sent to the host computer.
  */
-class USB_DEVICE {
+class USBDevice {
 
 	//! Private Context
 	private:
@@ -45,7 +45,7 @@ class USB_DEVICE {
 		/**
 		 * The class constructor. We pass it the global void report pointer.
 		 */
-		USB_DEVICE(void* bt_engine);
+		USBDevice(void* bt_engine);
 
 		/**
 		 * Runs the usb device

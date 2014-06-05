@@ -12,10 +12,10 @@
 /**
  * This is the default connection handler constructor.
  */
-Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_serial,
+BluetoothConnectionHandler::BluetoothConnectionHandler(HardwareSerial* hw_serial,
 						connection_type_t type,
 						ConnectionProtocolHandler* handler, 
-						utilities* utils){
+						Utilities* utils){
 
 	//! Set the internal serial port
 	this->_serial = hw_serial;
@@ -32,7 +32,7 @@ Bluetooth_Connection_Handler::Bluetooth_Connection_Handler(HardwareSerial* hw_se
 	this->_table = 0;
 }
 
-void Bluetooth_Connection_Handler::begin(){
+void BluetoothConnectionHandler::begin(){
 
 	//! We wait a couple of seconds to get connected.
 	uint8_t timeout = TIMEOUT;
@@ -52,7 +52,7 @@ void Bluetooth_Connection_Handler::begin(){
 				this->_utils->start_engine = true;
 
 				//! Then we send the start command
-				this->_write_command(START_CMD);
+				this->_write_command(START_SERVER_CMD);
 
 				//! Not connected
 			}else{
@@ -67,7 +67,7 @@ void Bluetooth_Connection_Handler::begin(){
 /**
  *  This is the run method
  */ 
-void Bluetooth_Connection_Handler::run(void){
+void BluetoothConnectionHandler::run(void){
 	
 	//! Poll for a protocol command
 	this->_handler->poll();
@@ -95,7 +95,7 @@ void Bluetooth_Connection_Handler::run(void){
  *
  * @param command						- the command
  */
-void Bluetooth_Connection_Handler::_write_command(uint8_t command){
+void BluetoothConnectionHandler::_write_command(uint8_t command){
 
 	//! We send the command.
 	this->_serial->write(command);
@@ -104,17 +104,17 @@ void Bluetooth_Connection_Handler::_write_command(uint8_t command){
 /**
  * We run the request based method... Using callbacks
  */
-void Bluetooth_Connection_Handler::_run_request_based(){
+void BluetoothConnectionHandler::_run_request_based(){
 
 	//! We send a data request and we read it
-	this->_serial->write(GET_CMD);
+	this->_write_command(GET_SERVER_CMD);
 	this->_poll();
 }
 
 /**
  * We run the stream based method... No callbacks
  */
-void Bluetooth_Connection_Handler::_run_stream_based(){
+void BluetoothConnectionHandler::_run_stream_based(){
 
 	//! We poll for a data packet
 	this->_poll();
@@ -123,7 +123,7 @@ void Bluetooth_Connection_Handler::_run_stream_based(){
 /**
  * This is the main read method to read data packets
  */
-void Bluetooth_Connection_Handler::_read_packet(){
+void BluetoothConnectionHandler::_read_packet(){
 
 	//! We get the header type first
 	uint8_t length = sizeof(sensor_packet_header_t);
@@ -172,7 +172,7 @@ void Bluetooth_Connection_Handler::_read_packet(){
 /**
  * Polling loop
  */
-void Bluetooth_Connection_Handler::_poll(){
+void BluetoothConnectionHandler::_poll(){
 
 	//! A container for the timeout constant
 	uint8_t timeout = TIMEOUT;
@@ -191,7 +191,7 @@ void Bluetooth_Connection_Handler::_poll(){
 /**
  * This gets the data within the sent packet
  */
-void Bluetooth_Connection_Handler::_get_data(){
+void BluetoothConnectionHandler::_get_data(){
 
 	//! Get the bytes
 	uint8_t* packet = this->_get_packet(sizeof(sensor_packet_data_t));
@@ -207,7 +207,7 @@ void Bluetooth_Connection_Handler::_get_data(){
 /**
  * This gets the error within the sent packet
  */
-void Bluetooth_Connection_Handler::_get_error(){
+void BluetoothConnectionHandler::_get_error(){
 
 	//! Get the bytes
 	uint8_t* packet = this->_get_packet(sizeof(sensor_packet_error_t));
@@ -224,7 +224,7 @@ void Bluetooth_Connection_Handler::_get_error(){
 /**
  * This gets the heartbeat within the sent packet
  */
-void Bluetooth_Connection_Handler::_get_heartbeat(){
+void BluetoothConnectionHandler::_get_heartbeat(){
 
 	//! Get the bytes
 	uint8_t* packet = this->_get_packet(sizeof(sensor_packet_heartbeat_t));
@@ -244,7 +244,7 @@ void Bluetooth_Connection_Handler::_get_heartbeat(){
  * @param length 						- the length of the packet
  * @returns bytes						- the packet byte array
  */
-uint8_t* Bluetooth_Connection_Handler::_get_packet(uint8_t length){
+uint8_t* BluetoothConnectionHandler::_get_packet(uint8_t length){
 
 	//! We map the data to our internal structure
 	uint8_t header_size = sizeof(sensor_packet_header_t);

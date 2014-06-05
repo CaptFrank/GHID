@@ -8,14 +8,14 @@
 #include "USBDeviceImplementation.h"
 
 //! Default Constructor
-USB_DEVICE::USB_DEVICE(void* report){
+USBDevice::USBDevice(void* report){
 
 	//! Initializing the environment variables
 	_report = report;
 }
 
 //! Sends a USB report frame
-void USB_DEVICE::_send_usb_report_frame(void* report){
+void USBDevice::_send_usb_report_frame(void* report){
 
 #ifdef MOUSE_REPORT
 
@@ -32,7 +32,7 @@ void USB_DEVICE::_send_usb_report_frame(void* report){
 }
 
 // Run the usb live
-void USB_DEVICE::run_usb(){
+void USBDevice::run_usb(){
 
 	/**
 	 * Once the state machine gets here, it polls for data from the router

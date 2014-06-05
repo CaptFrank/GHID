@@ -17,7 +17,7 @@
  */
 DFRobotBluetoothDriver::DFRobotBluetoothDriver(char* device_name,
 					char* command_table,
-					Bluetooth_Dispatcher* serial){
+					BluetoothDispatcher* serial){
 
 	//! Set the internal access points
 	this->_command_table = command_table;

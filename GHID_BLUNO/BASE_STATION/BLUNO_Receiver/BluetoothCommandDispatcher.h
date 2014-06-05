@@ -20,7 +20,7 @@
  * module.  It is important that this handler class is only for command dispatch
  * to the bluetooth module and not for data.
  */
-class Bluetooth_Dispatcher : public Dispatcher{
+class BluetoothDispatcher : public Dispatcher{
 
 	//! Public Context
 	public:
@@ -28,7 +28,7 @@ class Bluetooth_Dispatcher : public Dispatcher{
 		/**
 		 * The default constructor for the class
 		 */
-		Bluetooth_Dispatcher(HardwareSerial* serial);
+		BluetoothDispatcher(HardwareSerial* serial);
 
 		/**
 		 * This is the virtual setup method for the class

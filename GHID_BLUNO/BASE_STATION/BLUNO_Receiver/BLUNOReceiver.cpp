@@ -45,24 +45,30 @@ mouse_report_t report;
 //! --------------------------------------------------
 
 //! Global utilities
-utilities global_utilities;
+Utilities global_utilities;
+
+//! The watchdog
+Watchdog watchdog;
 
 //! The USB Handler
-USB_DEVICE usb_interface(&report);
+USBDevice usb_interface(&report);
 
 //! A protocol handler
 ConnectionProtocolHandler protocol_handler(&BLUETOOTH_COMMS, &global_utilities);
 
 //! The Bluetooth Command dispatcher
-Bluetooth_Dispatcher dispatcher(&BLUETOOTH_COMMS);
+BluetoothDispatcher dispatcher(&BLUETOOTH_COMMS);
 
 //! The Bluetooth Driver
 //! 	- Here we use the default setup function.... We could change it
 DFRobotBluetoothDriver bluetooth_driver((char*)"Bluetooth Master", (char*)command_pointers, &dispatcher);
 
 //! The connection
-Bluetooth_Connection_Handler connection(&BLUETOOTH_COMMS, DATA_REQUEST_BASED,
+BluetoothConnectionHandler connection(&BLUETOOTH_COMMS, DATA_REQUEST_BASED,
 										&protocol_handler, &global_utilities);
+
+//! The System monitor
+SystemMonitor system(&report, &global_utilities, &connection, &watchdog);
 
 /**
  * This is the callback table used for the bluetooth driver.
@@ -143,8 +149,8 @@ void loop(void){
 		//! Run the bluetooth thread
 		connection.run(); //! We run the engine
 
-		// TODO
-		// DATA PROCESSOR - MAPS DATA TO THE USB FRAME... OR PARSER.
+		//! Run the system monitor
+		system.run();
 
 		//! We run the USB engine
 		usb_interface.run_usb();

@@ -23,6 +23,26 @@
 
 class ConnectionProtocolHandler;
 
+//! -----------------------------------------------------------------------
+//! 					SERVER COMMAND PACKET
+//! -----------------------------------------------------------------------
+
+/**
+ * These are the possible server commands that can be issued.
+ */
+enum server_command_t {
+
+	REBOOT_SERVER_CMD						= REBOOT,  			//!< REBOOT_CMD
+	RESET_SERVER_CMD						= RESET,    		//!< RESET_CMD
+	SUSPEND_SERVER_CMD						= SUSPEND,			//!< SUSPEND_CMD
+	RESUME_SERVER_CMD						= RESUME,  			//!< RESUME_CMD
+	START_SERVER_CMD						= START,    		//!< START_CMD
+	STOP_SERVER_CMD							= STOP,      		//!< STOP_CMD
+	GET_SERVER_CMD							= GET        		//!< GET_CMD
+
+};
+
+
 /**
  * This is the main class that arbitrates between the point-to-point Bluetooth
  * module. It is needed to connect, disconnect, request data and receive data from the sensor
@@ -31,7 +51,7 @@ class ConnectionProtocolHandler;
  * This class extends the connection handler class (@see ConnectionHandler.h),
  * as it manages a connection.
  */
-class Bluetooth_Connection_Handler : public Connection_Handler {
+class BluetoothConnectionHandler : public Connection_Handler {
 
 	//! Public Context
 	public:
@@ -39,9 +59,9 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		/**
 		 * This is the default connection handler constructor.
 		 */
-		Bluetooth_Connection_Handler(HardwareSerial* hw_serial, connection_type_t type,
+		BluetoothConnectionHandler(HardwareSerial* hw_serial, connection_type_t type,
 										ConnectionProtocolHandler* handler,
-										utilities* utils);
+										Utilities* utils);
 		/**
 		 * This is the setup method for the class
 		 */
@@ -71,7 +91,7 @@ class Bluetooth_Connection_Handler : public Connection_Handler {
 		ConnectionProtocolHandler* _handler;
 		
 		//! Utilities
-		utilities* _utils;
+		Utilities* _utils;
 		
 		//! Private Access to the watchdog
 		Watchdog _watch;

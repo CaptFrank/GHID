@@ -39,7 +39,7 @@ Still to do in the GHID project:
 		Arbitrator:
 			
 			- Design								- 100%
-			- Implementation						- 90%
+			- Implementation						- 100%
 			- Testing								- 0%
 			- Deployement							- 0%
 			

@@ -68,8 +68,18 @@ char* CC2540_Driver::_get_command(uint8_t command){
 	char command_buffer[MAX_COMMAND_LENGTH];
 	memset(command_buffer, '\0', sizeof(command_buffer));
 
-	//! Copy the command over
-	strcpy_P((char*)command_buffer, (char*)pgm_read_word(&(this->_command_table[command])));
+	//! The string address
+	uint16_t flash_address = pgm_read_word(&(this->_command_table[command]));
+	
+	//! index count
+	char c = 0;
+	
+	//! Read the command and store it
+	do {
+		command_buffer[c] = (char) pgm_read_byte(flash_address++);
+		c++;
+		
+	} while (command_buffer[c - 1] != '\0');
 	return command_buffer;
 }
 

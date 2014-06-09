@@ -160,9 +160,6 @@
 			CDC_CSCP_NoDataProtocol         = 0x00, /**< Descriptor Protocol value indicating that the device or interface
 			                                         *   belongs to no specific protocol of the CDC data class.
 			                                         */
-			MISC_Device_Class				= 0xEF,
-			Common_Device_SubClass			= 0x02,
-			Interface_Association_desc		= 0x01
 		};
 
 		/** Enum for the CDC class specific control requests that can be issued by the USB bus host. */
@@ -340,16 +337,6 @@
 			uint8_t                 MasterInterfaceNumber; /**< Interface number of the CDC Control interface. */
 			uint8_t                 SlaveInterfaceNumber; /**< Interface number of the CDC Data interface. */
 		} ATTR_PACKED USB_CDC_Descriptor_FunctionalUnion_t;
-
-		typedef struct {
-			
-			USB_Descriptor_Header_t Header;
-			uint8_t					Subtype;
-			
-			uint8_t					Capabilities;
-			uint8_t					Data_Interface;
-			
-		} ATTR_PACKED USB_CDC_Descriptor_Call_Management_t;
 
 		/** \brief CDC class-specific Functional Union Descriptor (USB-IF naming conventions).
 		 *

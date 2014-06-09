@@ -59,105 +59,102 @@ USB_ClassInfo_HID_Device_t Joystick_HID_Interface =
 			},
 	};
 
-
-/** LUFA CDC Class driver interface configuration and state information. This structure is
- *  passed to all CDC Class driver functions, so that multiple instances of the same class
- *  within a device can be differentiated from one another. This is for the first CDC interface,
- *  which sends strings to the host for each joystick movement.
- */
-USB_ClassInfo_CDC_Device_t VirtualSerial_CDC_Interface =
-	{
-		.Config =
-			{
-				.ControlInterfaceNumber   = INTERFACE_ID_CDC_CCI,
-				.DataINEndpoint           =
-					{
-						.Address          = CDC_TX_EPADDR,
-						.Size             = CDC_TXRX_EPSIZE,
-						.Banks            = 1,
-					},
-				.DataOUTEndpoint =
-					{
-						.Address          = CDC_RX_EPADDR,
-						.Size             = CDC_TXRX_EPSIZE,
-						.Banks            = 1,
-					},
-				.NotificationEndpoint =
-					{
-						.Address          = CDC_NOTIFICATION_EPADDR,
-						.Size             = CDC_NOTIFICATION_EPSIZE,
-						.Banks            = 1,
-					},
-			},
-	};
-
 /** Circular buffer to hold data from the serial port before it is sent to the host. */
 RingBuff_t USARTtoUSB_Buffer;
 
-//! A joystick report used to send to the host pc
 USB_JoystickReport_Data_t joyReport;
-
-//! A file stream
-static FILE USBSerialStream;
-
-uint8_t _buff[INPUT_BUFFER_SIZE];
 
 /** Main program entry point. This routine contains the overall program flow, including initial
  *  setup of all components and the main program loop.
  */
 int main(void)
 {	
+	//! INIT the ring buffer
+	RingBuffer_InitBuffer(&USARTtoUSB_Buffer);
 	
-	//! Setup Hardware
+	//! Allow all interrupt
+	sei();
+	
+	//Setup the hardware
 	SetupHardware();
-	
-	//! Set LEDs to a known state
-	LEDs_SetAllLEDs(LEDMASK_USB_NOTREADY);
-	
-	//! Init the buffer
-    RingBuffer_InitBuffer(&USARTtoUSB_Buffer);
 
-	//! Enable the interrupt globally
-    GlobalInterruptEnable();
-	
-	//! We create a Stream type
-	CDC_Device_CreateStream(&VirtualSerial_CDC_Interface, &USBSerialStream);
-
-	//! Our work thread
+	//! Work thread pool
     for (;;) {
 		
-		//! HID Device Task
+		//! HID Thread
 	    HID_Device_USBTask(&Joystick_HID_Interface);
-				
-		//! CDC Device USB Task
-		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		
-		//! Serial task
-		CDC_Device_USBSerialTask(&VirtualSerial_CDC_Interface);
-		
-		//! USB Task
-	    USB_USBTask();
+		//! USB Stack Thread
+	    USB_USBTask();	
 	}
 }
 
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {
-    /* Disable watchdog if enabled by bootloader/fuses */
+    /* Disable watchdog if enabled by boot loader fuses */
     MCUSR &= ~(1 << WDRF);
     wdt_disable();
-	
-	//! Setup the port pin (Reset) - PD7
-	DDRD  |= (1 << PIND7);	//! Output
-	PORTD |= (1 << PIND7);	//! High
 
     /* Hardware Initialization */
-    Serial_Init(9600, true);
+    Serial_Init(115200, true);
     LEDs_Init();
+	
+	//! Setup the USB descriptor and hardware defines
+	Config_Device();
+	
+	//! Init the USB Stack
     USB_Init();
 
-	//! Serial Port Default INIT
     UCSR1B = ((1 << RXCIE1) | (1 << TXEN1) | (1 << RXEN1));
+}
+
+/** Configures the USB descriptor at boot up. **/
+void Config_Device(void){
+	
+	//! Container
+	uint8_t configs[CONFIG_SIZE];
+		
+	//! Wait until we haven't received a config report.
+	while(RingBuffer_GetCount(&USARTtoUSB_Buffer) < CONFIG_SIZE);
+		
+	//! Get the configs
+	for(uint8_t i = 0; i < CONFIG_SIZE; i ++){
+		configs[i] = RingBuffer_Remove(&USARTtoUSB_Buffer);
+	}
+		
+	//! We set the configs
+	numAxes = configs[AXES_INDEX];
+	numButtons = configs[BUTTON_INDEX];
+	
+	//! Create a descriptor
+	Create_Descriptor();
+}
+
+/** Creates a usb HID descriptor based on the configs **/
+void Create_Descriptor(){
+	
+	//! Counter
+	uint8_t j = 0;
+	
+	//! Malloc enough mem
+	descriptor._axes = malloc(numAxes * 2);
+	
+	//! Create the joystick axis report
+	for(uint16_t i = 0; i < numAxes; i ++){
+		
+		//! Assign the axis
+		descriptor._axes[i] = HID_RI_USAGE(8, 0x30 + j);
+		j++;
+	}
+	
+	//! Set the buttons
+	descriptor._buttons[0] = numButtons;
+	descriptor._buttons[4] = numButtons;
+	descriptor._buttons[6] = ((numButtons % 8) ? (8 - (numButtons % 8)) : 0);
+	
+	//! Final joystick report
+	JoystickReport = (uint8_t*) descriptor;
 }
 
 /** Event handler for the library USB Connection event. */
@@ -175,21 +172,14 @@ void EVENT_USB_Device_Disconnect(void)
 /** Event handler for the library USB Configuration Changed event. */
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
-	
-	bool config_success = true;
-	
-	config_success &= CDC_Device_ConfigureEndpoints(&VirtualSerial_CDC_Interface);
-	config_success &= HID_Device_ConfigureEndpoints(&Joystick_HID_Interface);
-	
-	USB_Device_EnableSOFEvents();
-	
-	LEDs_SetAllLEDs(config_success ? LEDMASK_USB_READY : LEDMASK_USB_ERROR);
+   HID_Device_ConfigureEndpoints(&Joystick_HID_Interface);
+
+   USB_Device_EnableSOFEvents();
 }
 
 /** Event handler for the library USB Control Request reception event. */
 void EVENT_USB_Device_ControlRequest(void)
 {
-	CDC_Device_ProcessControlRequest(&VirtualSerial_CDC_Interface);
 	HID_Device_ProcessControlRequest(&Joystick_HID_Interface);
 }
 
@@ -215,15 +205,15 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
                                          void* ReportData,
                                          uint16_t* const ReportSize)
 {
-	
 	USB_JoystickReport_Data_t newReport;
 	int ind;
 	
     USB_JoystickReport_Data_t *reportp = (USB_JoystickReport_Data_t*)ReportData;
+	
 	RingBuff_Count_t BufferCount = RingBuffer_GetCount(&USARTtoUSB_Buffer);
 
 	if (BufferCount >= 8) {
-		for (ind = 0; ind < sizeof(joyReport); ind ++) {
+		for (ind=0; ind<sizeof(joyReport); ind++) {
 			((uint8_t *)&newReport)[ind] = RingBuffer_Remove(&USARTtoUSB_Buffer);
 		}
 
@@ -258,26 +248,6 @@ void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDI
                                           const uint16_t ReportSize)
 {
 	// Unused (but mandatory for the HID class driver) in this demo, since there are no Host->Device reports
-}
-
-//! Custom write function
-void CDC_Device_USBSerialTask(USB_ClassInfo_CDC_Device_t* ptr){
-	
-	//! We check to see if its a Arduino signal (!!!)
-	
-	fread(_buff, sizeof(uint8_t), sizeof(_buff), &USBSerialStream);
-	if(strcmp((char*)_buff, (char*)PATTERN) == 0){
-		Reset_Mega();
-	}
-	Serial_SendData(_buff, sizeof(_buff));
-}
-
-//! Resets the ATMEGA chip
-void Reset_Mega(){
-	
-	PORTD &= (0 << PIND7);
-	_delay_ms(10);
-	PORTD |= (1 << PIND7);
 }
 
 /** ISR to manage the reception of data from the serial port, placing received bytes into a circular buffer

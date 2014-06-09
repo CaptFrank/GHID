@@ -60,6 +60,15 @@ BluetoothDispatcher dispatcher(&BLUETOOTH_COMMS);
 
 //! The Bluetooth Driver
 //! 	- Here we use the default setup function.... We could change it
+//! The default bluetooth settings are as follows:
+//!		- 1. Device class: 0
+//!		- 2. Inquiry code: 0x009e8b33
+//!		- 3. Device mode: Slave mode
+//!		- 4. Binding mode: SPP
+//!		- 5. Serial port: 38400 bits/s; 1 stop bit, no parity
+//!		- 6. Pairing code: “1234”
+//!		- 7. Device name: “BASE_STATION"
+
 DFRobotBluetoothDriver bluetooth_driver((char*)"Bluetooth Master", (char*)command_pointers, &dispatcher);
 
 //! The connection
@@ -98,6 +107,9 @@ void setup(){
 
 	//! SETUP BLUETOOTH
 
+	//! ----------------------------------------------------------------------
+	//! CUSTOM BLUETOOTH SETTINGS
+
 	/**
 	 * Here the user must use the AT toggle switch on the device to
 	 * enter the AT mode within the bluetooth device. This is the only way
@@ -105,7 +117,7 @@ void setup(){
 	 * not have to run this method. The user could comment it out.
 	 */
 	//! We initialize the Bluetooth device
-	bluetooth_driver.begin();
+	//bluetooth_driver.begin();
 
 	/**
 	 * Once this device has been set, it will reset itself and the configurations
@@ -115,14 +127,17 @@ void setup(){
 	 */
 
 	//! We delay 5 seconds
-	delay(5000);
+	//delay(5000);
+	
+	//! CUSTOM BLUETOOTH SETTINGS
+	//! ----------------------------------------------------------------------
 
 	//! Set the callback table within the connection protocol handler
 	protocol_handler.set_callback_table(callback_table);
 
 	//! Setup the connection
 	connection.begin();
-
+	
 	//! We set the global lock to true
 	global_utilities.start_engine = true;
 
@@ -130,6 +145,9 @@ void setup(){
 	if(global_utilities.memory_check() == EMPTY){
 		global_utilities.reboot();
 	}
+	
+	//! Setup the USB
+	if(!usb_interface.begin()) global_utilities.reboot();
 }
 
 /**

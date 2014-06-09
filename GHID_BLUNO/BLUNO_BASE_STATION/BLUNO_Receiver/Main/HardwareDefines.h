@@ -37,17 +37,17 @@ extern "C" {
 
 //! USB COMMUNICATIONS
 
-#define USB_COMMS						Serial1
-#define USB_COMMS_PRINT					Serial1.print
-#define USB_COMMS_PRINTLN				Serial1.println
+#define USB_COMMS						Serial
+#define USB_COMMS_PRINT					Serial.print
+#define USB_COMMS_PRINTLN				Serial.println
 
 extern HardwareSerial Serial1;
 
 //! BLUETOOTH COMMUNICATIONS
 
-#define BLUETOOTH_COMMS					Serial2
-#define BLUETOOTH_COMMS_PRINT			Serial2.print
-#define BLUETOOTH_COMMS_PRINTLN			Serial2.println
+#define BLUETOOTH_COMMS					Serial1
+#define BLUETOOTH_COMMS_PRINT			Serial1.print
+#define BLUETOOTH_COMMS_PRINTLN			Serial1.println
 
 extern HardwareSerial Serial2;
 

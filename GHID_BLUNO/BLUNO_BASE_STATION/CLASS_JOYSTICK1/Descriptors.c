@@ -43,17 +43,10 @@
  *  the device will send, and what it may be sent back from the host. Refer to the HID specification for
  *  more details on HID report descriptors.
  */
-const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] =
+/*const USB_Descriptor_HIDReport_Datatype_t JoystickReport[] =
 {
-	/* Use the HID class driver's standard Joystick report.
-	 *   Min X/Y/Z Axis values: -100
-	 *   Max X/Y/Z Axis values:  100
-	 *   Min physical X/Y/Z Axis values (used to determine resolution): -1
-	 *   Max physical X/Y/Z Axis values (used to determine resolution):  1
-	 *   Buttons: 2
-	 */
-	HID_DESCRIPTOR_JOYSTICK(-1000, 1000, -1, 1, 8)
-};
+	HID_DESCRIPTOR_JOYSTICK(-100, 100, -1, 1, 8, 3)
+};*/
 
 /** Device descriptor structure. This descriptor, located in FLASH memory, describes the overall
  *  device characteristics, including the supported USB version, control endpoint size and the
@@ -64,20 +57,20 @@ const USB_Descriptor_Device_t PROGMEM DeviceDescriptor =
 {
 	.Header                 = {.Size = sizeof(USB_Descriptor_Device_t), .Type = DTYPE_Device},
 
-	.USBSpecification       = VERSION_BCD(02.00),
-	.Class                  = 0xEF,
-	.SubClass               = 0x02,
-	.Protocol               = 0x01,
+	.USBSpecification       = VERSION_BCD(01.10),
+	.Class                  = USB_CSCP_NoDeviceClass,
+	.SubClass               = USB_CSCP_NoDeviceSubclass,
+	.Protocol               = USB_CSCP_NoDeviceProtocol,
 
 	.Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
 
 	.VendorID               = 0x03EB,
 	.ProductID              = 0x2043,
-	.ReleaseNumber          = VERSION_BCD(01.00),
+	.ReleaseNumber          = VERSION_BCD(00.01),
 
 	.ManufacturerStrIndex   = STRING_ID_Manufacturer,
 	.ProductStrIndex        = STRING_ID_Product,
-	.SerialNumStrIndex      = USE_INTERNAL_SERIAL,
+	.SerialNumStrIndex      = NO_DESCRIPTOR,
 
 	.NumberOfConfigurations = FIXED_NUM_CONFIGURATIONS
 };
@@ -90,159 +83,56 @@ const USB_Descriptor_Device_t PROGMEM DeviceDescriptor =
 const USB_Descriptor_Configuration_t PROGMEM ConfigurationDescriptor =
 {
 	.Config =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Configuration_Header_t), .Type = DTYPE_Configuration},
+		{
+			.Header                 = {.Size = sizeof(USB_Descriptor_Configuration_Header_t), .Type = DTYPE_Configuration},
 
-		.TotalConfigurationSize = sizeof(USB_Descriptor_Configuration_t),
-		.TotalInterfaces        = 3, // 1 HID, 2 CDC (1 Data, 1 Control)
+			.TotalConfigurationSize = sizeof(USB_Descriptor_Configuration_t),
+			.TotalInterfaces        = 1,
 
-		.ConfigurationNumber    = 1,
-		.ConfigurationStrIndex  = NO_DESCRIPTOR,
+			.ConfigurationNumber    = 1,
+			.ConfigurationStrIndex  = NO_DESCRIPTOR,
 
-		.ConfigAttributes       = (USB_CONFIG_ATTR_RESERVED | USB_CONFIG_ATTR_SELFPOWERED),
+			.ConfigAttributes       = (USB_CONFIG_ATTR_RESERVED | USB_CONFIG_ATTR_SELFPOWERED),
 
-		.MaxPowerConsumption    = USB_CONFIG_POWER_MA(100)
-	},
+			.MaxPowerConsumption    = USB_CONFIG_POWER_MA(100)
+		},
 
-	//! Joystick
 	.HID_Interface =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
+		{
+			.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
 
-		.InterfaceNumber        = INTERFACE_ID_HID_JOYSTICK,
-		.AlternateSetting       = 0x00,
+			.InterfaceNumber        = 0x00,
+			.AlternateSetting       = 0x00,
 
-		.TotalEndpoints         = 1,
+			.TotalEndpoints         = 1,
 
-		.Class                  = HID_CSCP_HIDClass,
-		.SubClass               = HID_CSCP_NonBootSubclass,
-		.Protocol               = HID_CSCP_NonBootProtocol,
+			.Class                  = HID_CSCP_HIDClass,
+			.SubClass               = HID_CSCP_NonBootSubclass,
+			.Protocol               = HID_CSCP_NonBootProtocol,
 
-		.InterfaceStrIndex      = NO_DESCRIPTOR
-	},
+			.InterfaceStrIndex      = NO_DESCRIPTOR
+		},
 
 	.HID_JoystickHID =
-	{
-		.Header                 = {.Size = sizeof(USB_HID_Descriptor_HID_t), .Type = HID_DTYPE_HID},
+		{
+			.Header                 = {.Size = sizeof(USB_HID_Descriptor_HID_t), .Type = HID_DTYPE_HID},
 
-		.HIDSpec                = VERSION_BCD(01.11),
-		.CountryCode            = 0x00,
-		.TotalReportDescriptors = 1,
-		.HIDReportType          = HID_DTYPE_Report,
-		.HIDReportLength        = sizeof(JoystickReport)
-	},
+			.HIDSpec                = VERSION_BCD(01.11),
+			.CountryCode            = 0x00,
+			.TotalReportDescriptors = 1,
+			.HIDReportType          = HID_DTYPE_Report,
+			.HIDReportLength        = sizeof(JoystickReport)
+		},
 
 	.HID_ReportINEndpoint =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
+		{
+			.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
 
-		.EndpointAddress        = JOYSTICK_EPADDR,
-		.Attributes             = (EP_TYPE_INTERRUPT | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
-		.EndpointSize           = JOYSTICK_EPSIZE,
-		.PollingIntervalMS      = 0x05
-	},
-
-	//! CDC
-	.CDC_IAD =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_Association_t), .Type = DTYPE_InterfaceAssociation},
-
-		.FirstInterfaceIndex    = INTERFACE_ID_CDC_CCI,
-		.TotalInterfaces        = 2,
-
-		.Class                  = CDC_CSCP_CDCClass,
-		.SubClass               = CDC_CSCP_ACMSubclass,
-		.Protocol               = CDC_CSCP_ATCommandProtocol,
-
-		.IADStrIndex            = NO_DESCRIPTOR
-	},
-
-	.CDC_CCI_Interface =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
-
-		.InterfaceNumber        = INTERFACE_ID_CDC_CCI,
-		.AlternateSetting       = 0,
-
-		.TotalEndpoints         = 1,
-
-		.Class                  = CDC_CSCP_CDCClass,
-		.SubClass               = CDC_CSCP_ACMSubclass,
-		.Protocol               = CDC_CSCP_ATCommandProtocol,
-
-		.InterfaceStrIndex      = NO_DESCRIPTOR
-	},
-
-	.CDC_Functional_Header =
-	{
-		.Header                 = {.Size = sizeof(USB_CDC_Descriptor_FunctionalHeader_t), .Type = DTYPE_CSInterface},
-		.Subtype                = CDC_DSUBTYPE_CSInterface_Header,
-
-		.CDCSpecification       = VERSION_BCD(01.10)
-	},
-
-	.CDC_Functional_ACM =
-	{
-		.Header                 = {.Size = sizeof(USB_CDC_Descriptor_FunctionalACM_t), .Type = DTYPE_CSInterface},
-		.Subtype                = CDC_DSUBTYPE_CSInterface_ACM,
-
-		.Capabilities           = 0x06
-	},
-
-	.CDC_Functional_Union =
-	{
-		.Header                 = {.Size = sizeof(USB_CDC_Descriptor_FunctionalUnion_t), .Type = DTYPE_CSInterface},
-		.Subtype                = CDC_DSUBTYPE_CSInterface_Union,
-
-		.MasterInterfaceNumber  = INTERFACE_ID_CDC_CCI,
-		.SlaveInterfaceNumber   = INTERFACE_ID_CDC_DCI
-	},
-	
-	.CDC_ManagementEndpoint =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-
-		.EndpointAddress        = CDC_NOTIFICATION_EPADDR,
-		.Attributes             = (EP_TYPE_INTERRUPT | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
-		.EndpointSize           = CDC_NOTIFICATION_EPSIZE,
-		.PollingIntervalMS      = 0xFF
-	},
-
-	.CDC_DCI_Interface =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Interface_t), .Type = DTYPE_Interface},
-
-		.InterfaceNumber        = INTERFACE_ID_CDC_DCI,
-		.AlternateSetting       = 0,
-
-		.TotalEndpoints         = 2,
-
-		.Class                  = CDC_CSCP_CDCDataClass,
-		.SubClass               = CDC_CSCP_NoDataSubclass,
-		.Protocol               = CDC_CSCP_NoDataProtocol,
-
-		.InterfaceStrIndex      = NO_DESCRIPTOR
-	},
-
-	.CDC_DataOutEndpoint =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-
-		.EndpointAddress        = CDC_RX_EPADDR,
-		.Attributes             = (EP_TYPE_BULK | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
-		.EndpointSize           = CDC_TXRX_EPSIZE,
-		.PollingIntervalMS      = 0x05
-	},
-
-	.CDC_DataInEndpoint =
-	{
-		.Header                 = {.Size = sizeof(USB_Descriptor_Endpoint_t), .Type = DTYPE_Endpoint},
-
-		.EndpointAddress        = CDC_TX_EPADDR,
-		.Attributes             = (EP_TYPE_BULK | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
-		.EndpointSize           = CDC_TXRX_EPSIZE,
-		.PollingIntervalMS      = 0x05
-	}
+			.EndpointAddress        = JOYSTICK_EPADDR,
+			.Attributes             = (EP_TYPE_INTERRUPT | ENDPOINT_ATTR_NO_SYNC | ENDPOINT_USAGE_DATA),
+			.EndpointSize           = JOYSTICK_EPSIZE,
+			.PollingIntervalMS      = 0x05
+		}
 };
 
 /** Language descriptor structure. This descriptor, located in FLASH memory, is returned when the host requests
@@ -262,7 +152,7 @@ const USB_Descriptor_String_t PROGMEM LanguageString =
  */
 const USB_Descriptor_String_t PROGMEM ManufacturerString =
 {
-	.Header                 = {.Size = USB_STRING_LEN(16), .Type = DTYPE_String},
+	.Header                 = {.Size = USB_STRING_LEN(11), .Type = DTYPE_String},
 
 	.UnicodeString          = L"Francis Papineau"
 };
@@ -275,7 +165,7 @@ const USB_Descriptor_String_t PROGMEM ProductString =
 {
 	.Header                 = {.Size = USB_STRING_LEN(18), .Type = DTYPE_String},
 
-	.UnicodeString          = L"Joystick + Serial"
+	.UnicodeString          = L"Joystick"
 };
 
 /** This function is called by the library when in device mode, and must be overridden (see library "USB Descriptors"

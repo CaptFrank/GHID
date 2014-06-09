@@ -33,7 +33,7 @@ DFRobotBluetoothDriver::DFRobotBluetoothDriver(char* device_name,
 void DFRobotBluetoothDriver::begin(void (*setup_method)(DFRobotBluetoothDriver* driver)){
 
 		//! Setup the bluetooth device
-		setup_method(this);
+		// ONLY FOR CUSTOM SETTINGS setup_method(this);
 }
 
 /**

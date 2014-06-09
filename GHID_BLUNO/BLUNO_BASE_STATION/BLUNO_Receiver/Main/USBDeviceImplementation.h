@@ -14,6 +14,13 @@
 #include "USBStructures.h"
 #include "HardwareDefines.h"
 
+//! USB Defines
+#define USB_BAUD						115200
+#define USB_TIMEOUT						500
+#define CONFIG_HEADER					'@'
+#define CONFIG_TAIL						'*'
+#define CONFIGURED						0x01
+
 /**
  * This is the USB device interface class. It provides a handling mechanism
  * that is able to communicate with the USB PHY and thus, allow for USB HID
@@ -38,6 +45,11 @@ class USBDevice {
 		 * Sends the usb report
 		 */
 		void _send_usb_report_frame(void* report);
+		
+		/**
+		 * Sets up the USB device report
+		 */
+		bool _setup_usb_device();
 
 	//! Public Context
 	public:
@@ -48,6 +60,11 @@ class USBDevice {
 		USBDevice(void* bt_engine);
 
 		/**
+		 * Start the USB engine Serial
+		 */
+		bool begin();
+
+		/**
 		 * Runs the usb device
 		 */
 		void run_usb();
@@ -55,3 +72,4 @@ class USBDevice {
 
 
 #endif /* USB_DEVICE_IMPLEMENTATION_H_ */
+

@@ -59,11 +59,10 @@
 		 */
 		typedef struct
 		{
-			int16_t  X; /**< Current absolute joystick X position, as a signed 16-bit integer */
-			int16_t  Y; /**< Current absolute joystick Y position, as a signed 16-bit integer */
-			int16_t  Z; /**< Current absolute joystick Z position, as a signed 16-bit integer */
+			int8_t  X; /**< Current absolute joystick X position, as a signed 8-bit integer */
+			int8_t  Y; /**< Current absolute joystick Y position, as a signed 8-bit integer */
+			int8_t  Z; /**< Current absolute joystick Z position, as a signed 8-bit integer */
 			uint8_t Button; /**< Bit mask of the currently pressed joystick buttons */
-			
 		} ATTR_PACKED USB_JoystickReport_Data_t;
 
 	/* Macros: */
@@ -78,36 +77,21 @@
 
 		/** LED mask for the library LED driver, to indicate that an error has occurred in the USB interface. */
 		#define LEDMASK_USB_ERROR        (LEDS_LED1 | LEDS_LED3)
-		
-		/** The Serial Data header character */
-		#define SERIAL_DATA_HEADER		 '@'
-		
-		/** The Joystick Data header character */
-		#define JOYTICK_DATA_HEADER		 '#'
-		
-		/** Size of the receive buffer */
-		#define INPUT_BUFFER_SIZE		 0x03
-		
-		/** Empty define */
-		#define EMPTY					 0x00
-		
-		/** Pattern Trigger */
-		#define PATTERN					"!!!"
+
+		#define CONFIG_SIZE				 4
+		#define AXES_INDEX				 1
+		#define BUTTON_INDEX			 2
 
 	/* Function Prototypes: */
 		void SetupHardware(void);
+		void Config_Device(void);
+		void Create_Descritor(void);
 
 		void EVENT_USB_Device_Connect(void);
 		void EVENT_USB_Device_Disconnect(void);
 		void EVENT_USB_Device_ConfigurationChanged(void);
 		void EVENT_USB_Device_ControlRequest(void);
 		void EVENT_USB_Device_StartOfFrame(void);
-		
-		//! Custom write function
-		void CDC_Device_USBSerialTask(USB_ClassInfo_CDC_Device_t* ptr);
-		
-		//! Resets the ATMEGA chip
-		void Reset_Mega();
 
 		bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
 		                                         uint8_t* const ReportID,

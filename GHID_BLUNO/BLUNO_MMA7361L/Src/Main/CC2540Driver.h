@@ -15,6 +15,7 @@
 //! Generic defines
 #define OK							"OK"
 #define MAX_COMMAND_LENGTH			30
+#define MASTER_NODE_ADDRESS			"0x20138280703"
 #define SUCCESS						0
 #define EMPTY						0
 

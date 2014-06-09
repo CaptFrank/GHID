@@ -16,7 +16,7 @@
 #include "ConnectionProtocolHandler.h"
 
 //! Configs Defines
-#define BAUDRATE			9600
+#define BAUDRATE			38400
 
 //! The connection timeout
 #define TIMEOUT				10 //! 10 seconds

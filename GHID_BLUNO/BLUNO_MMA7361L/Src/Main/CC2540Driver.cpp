@@ -39,6 +39,8 @@ CC2540_Driver::CC2540_Driver(char* device_name,
  */
 void CC2540_Driver::_default_setup(CC2540_Driver* driver){
 	
+	bool success = false;
+	
 	//! We send the at command break
 	driver->_send_at_commad();
 
@@ -46,11 +48,21 @@ void CC2540_Driver::_default_setup(CC2540_Driver* driver){
 	if(driver->_set_device_name(driver->_name)){
 
 		//! We set the default setting
-		if(driver->_set_setting(SETTING_DEFAULT)){
+		if(driver->_set_setting(SETTING_CENTRAL)){
+			
+			//! Bind to the master node
+			if(driver->_set_binding_address(MASTER_NODE_ADDRESS){
+				
+				success = true;
+				
+			}
 
 			//! We reboot the device
 			driver->_exit_at();
 		}
+	}
+	if(!success){
+		driver->_reboot();
 	}
 }
 

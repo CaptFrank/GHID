@@ -37,6 +37,42 @@ void USBDevice::_send_usb_report_frame(void* report){
 
 }
 
+
+/**
+ * Sets up the USB device report
+ */
+bool USBDevice::_setup_usb_device(){
+
+	uint8_t config[] = {CONFIG_HEADER, NUM_AXES, NUM_BUTTONS, CONFIG_TAIL};
+
+	//! Send configs
+	USB_COMMS.write((uint8_t*)config, sizeof(config));
+	
+	//! Loop to configs
+	uint8_t timeout = USB_TIMEOUT;
+	while(timeout --){
+		
+		if(USB_COMMS.available()){
+			uint8_t response = USB_COMMS.read();
+			if (response == CONFIGURED){
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+/**
+ * Start the USB engine Serial
+ */
+bool USBDevice::begin(){
+	
+	USB_COMMS.begin(USB_BAUD);
+	
+	//! Setup the usb report
+	return this->_setup_usb_device();
+}
+
 // Run the usb live
 void USBDevice::run_usb(){
 

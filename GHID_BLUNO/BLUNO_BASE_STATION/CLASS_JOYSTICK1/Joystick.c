@@ -69,92 +69,32 @@ USB_JoystickReport_Data_t joyReport;
  */
 int main(void)
 {	
-	//! INIT the ring buffer
-	RingBuffer_InitBuffer(&USARTtoUSB_Buffer);
-	
-	//! Allow all interrupt
-	sei();
-	
-	//Setup the hardware
 	SetupHardware();
+    RingBuffer_InitBuffer(&USARTtoUSB_Buffer);
 
-	//! Work thread pool
+    sei();
+
     for (;;) {
 		
-		//! HID Thread
 	    HID_Device_USBTask(&Joystick_HID_Interface);
+	    USB_USBTask();
 		
-		//! USB Stack Thread
-	    USB_USBTask();	
 	}
 }
 
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {
-    /* Disable watchdog if enabled by boot loader fuses */
+    /* Disable watchdog if enabled by bootloader/fuses */
     MCUSR &= ~(1 << WDRF);
     wdt_disable();
 
     /* Hardware Initialization */
     Serial_Init(115200, true);
     LEDs_Init();
-	
-	//! Setup the USB descriptor and hardware defines
-	Config_Device();
-	
-	//! Init the USB Stack
     USB_Init();
 
     UCSR1B = ((1 << RXCIE1) | (1 << TXEN1) | (1 << RXEN1));
-}
-
-/** Configures the USB descriptor at boot up. **/
-void Config_Device(void){
-	
-	//! Container
-	uint8_t configs[CONFIG_SIZE];
-		
-	//! Wait until we haven't received a config report.
-	while(RingBuffer_GetCount(&USARTtoUSB_Buffer) < CONFIG_SIZE);
-		
-	//! Get the configs
-	for(uint8_t i = 0; i < CONFIG_SIZE; i ++){
-		configs[i] = RingBuffer_Remove(&USARTtoUSB_Buffer);
-	}
-		
-	//! We set the configs
-	numAxes = configs[AXES_INDEX];
-	numButtons = configs[BUTTON_INDEX];
-	
-	//! Create a descriptor
-	Create_Descriptor();
-}
-
-/** Creates a usb HID descriptor based on the configs **/
-void Create_Descriptor(){
-	
-	//! Counter
-	uint8_t j = 0;
-	
-	//! Malloc enough mem
-	descriptor._axes = malloc(numAxes * 2);
-	
-	//! Create the joystick axis report
-	for(uint16_t i = 0; i < numAxes; i ++){
-		
-		//! Assign the axis
-		descriptor._axes[i] = HID_RI_USAGE(8, 0x30 + j);
-		j++;
-	}
-	
-	//! Set the buttons
-	descriptor._buttons[0] = numButtons;
-	descriptor._buttons[4] = numButtons;
-	descriptor._buttons[6] = ((numButtons % 8) ? (8 - (numButtons % 8)) : 0);
-	
-	//! Final joystick report
-	JoystickReport = (uint8_t*) descriptor;
 }
 
 /** Event handler for the library USB Connection event. */
@@ -258,6 +198,6 @@ ISR(USART1_RX_vect, ISR_BLOCK)
     uint8_t ReceivedByte = UDR1;
 
     if ((USB_DeviceState == DEVICE_STATE_Configured)) {
-		RingBuffer_Insert(&USARTtoUSB_Buffer, ReceivedByte);
+	RingBuffer_Insert(&USARTtoUSB_Buffer, ReceivedByte);
     }
 }

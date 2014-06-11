@@ -357,7 +357,7 @@
 		 *  \param[in] MaxPhysicalVal  Maximum physical axis value, for movement resolution calculations (16-bit).
 		 *  \param[in] Buttons         Total number of buttons in the device (8-bit).
 		 */
-		#define HID_DESCRIPTOR_JOYSTICK(MinAxisVal, MaxAxisVal, MinPhysicalVal, MaxPhysicalVal, Buttons, Axes) \
+		#define HID_DESCRIPTOR_JOYSTICK(MinAxisVal, MaxAxisVal, MinPhysicalVal, MaxPhysicalVal, Buttons) \
 			HID_RI_USAGE_PAGE(8, 0x01),                     \
 			HID_RI_USAGE(8, 0x04),                          \
 			HID_RI_COLLECTION(8, 0x01),                     \

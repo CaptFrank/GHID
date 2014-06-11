@@ -40,66 +40,6 @@
 		#include <avr/pgmspace.h>
 
 		#include <LUFA/Drivers/USB/USB.h>
-	
-	/* Custom DEscriptor */
-	#define DESCRIPTOR_PART_1 \
-		HID_RI_USAGE_PAGE(8, 0x01),                     \
-		HID_RI_USAGE(8, 0x04),                          \
-		HID_RI_COLLECTION(8, 0x01),                     \
-			HID_RI_USAGE(8, 0x01),                      \
-			HID_RI_COLLECTION(8, 0x00)                
-			
-	#define DESCRIPTOR_PART_2(MinAxisVal, MaxAxisVal, MinPhysicalVal, MaxPhysicalVal) \
-				HID_RI_LOGICAL_MINIMUM(16, MinAxisVal), \
-				HID_RI_LOGICAL_MAXIMUM(16, MaxAxisVal), \
-				HID_RI_PHYSICAL_MINIMUM(16, MinPhysicalVal), \
-				HID_RI_PHYSICAL_MAXIMUM(16, MaxPhysicalVal), \
-				HID_RI_REPORT_COUNT(8, 3),              \
-				HID_RI_REPORT_SIZE(8, (((MinAxisVal >= -128) && (MaxAxisVal <= 127)) ? 8 : 16)), \
-				HID_RI_INPUT(8, HID_IOF_DATA | HID_IOF_VARIABLE | HID_IOF_ABSOLUTE), \
-			HID_RI_END_COLLECTION(0),                   \
-			HID_RI_USAGE_PAGE(8, 0x09),                 \
-			HID_RI_USAGE_MINIMUM(8, 0x01)
-			
-			
-	#define DESCRIPTOR_PART_3 \
-			HID_RI_USAGE_MAXIMUM(8, 0x00),           \
-			HID_RI_LOGICAL_MINIMUM(8, 0x00),            \
-			HID_RI_LOGICAL_MAXIMUM(8, 0x01),            \
-			HID_RI_REPORT_SIZE(8, 0x01),                \
-			HID_RI_REPORT_COUNT(8, 0x00),            \
-			HID_RI_INPUT(8, HID_IOF_DATA | HID_IOF_VARIABLE | HID_IOF_ABSOLUTE), \
-			HID_RI_REPORT_SIZE(8, 0x00), \
-			HID_RI_REPORT_COUNT(8, 0x01),               \
-			HID_RI_INPUT(8, HID_IOF_CONSTANT),          \
-		HID_RI_END_COLLECTION(0)
-		
-	
-	/* Dynamic sizes */
-		uint8_t numButtons = 0;
-		uint8_t numAxes = 0;
-		
-	/* Dynamic Report */
-		USB_Descriptor_HIDReport_Datatype_t JoystickReport[];
-		
-	/* Dynamic Template */
-		struct {
-			
-			//! Header
-			static const _desc_1 = DESCRIPTOR_PART_1;
-			
-			//! Axes pointer
-			uint8_t* _axes;
-			
-			//! Physical limits
-			static const _desc_2 = DESCRIPTOR_PART_2;
-			
-			// Buttons
-			static const _buttons = DESCRIPTOR_PART_3;
-			
-			
-			
-		} descriptor;
 
 	/* Type Defines: */
 		/** Type define for the device configuration descriptor structure. This must be defined in the

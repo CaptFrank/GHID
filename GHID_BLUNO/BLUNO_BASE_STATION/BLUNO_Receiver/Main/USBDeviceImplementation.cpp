@@ -41,6 +41,7 @@ void USBDevice::_send_usb_report_frame(void* report){
 /**
  * Sets up the USB device report
  */
+#ifdef DYNAMIC_JOYSTICK_CONFIG
 bool USBDevice::_setup_usb_device(){
 
 	uint8_t config[] = {CONFIG_HEADER, NUM_AXES, NUM_BUTTONS, CONFIG_TAIL};
@@ -61,6 +62,7 @@ bool USBDevice::_setup_usb_device(){
 	}
 	return false;
 }
+#endif
 
 /**
  * Start the USB engine Serial
@@ -70,7 +72,10 @@ bool USBDevice::begin(){
 	USB_COMMS.begin(USB_BAUD);
 	
 	//! Setup the usb report
+	#ifdef DYNAMIC_JOYSTICK_CONFIG
 	return this->_setup_usb_device();
+	#endif
+	return true;
 }
 
 // Run the usb live

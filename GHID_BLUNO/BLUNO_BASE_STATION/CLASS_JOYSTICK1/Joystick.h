@@ -78,14 +78,8 @@
 		/** LED mask for the library LED driver, to indicate that an error has occurred in the USB interface. */
 		#define LEDMASK_USB_ERROR        (LEDS_LED1 | LEDS_LED3)
 
-		#define CONFIG_SIZE				 4
-		#define AXES_INDEX				 1
-		#define BUTTON_INDEX			 2
-
 	/* Function Prototypes: */
 		void SetupHardware(void);
-		void Config_Device(void);
-		void Create_Descritor(void);
 
 		void EVENT_USB_Device_Connect(void);
 		void EVENT_USB_Device_Disconnect(void);
@@ -98,7 +92,6 @@
 		                                         const uint8_t ReportType,
 		                                         void* ReportData,
 		                                         uint16_t* const ReportSize);
-												 
 		void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
 		                                          const uint8_t ReportID,
 		                                          const uint8_t ReportType,

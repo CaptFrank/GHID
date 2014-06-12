@@ -46,10 +46,12 @@ class USBDevice {
 		 */
 		void _send_usb_report_frame(void* report);
 		
+		#ifdef DYNAMIC_JOYSTICK_CONFIG
 		/**
 		 * Sets up the USB device report
 		 */
 		bool _setup_usb_device();
+		#endif
 
 	//! Public Context
 	public:

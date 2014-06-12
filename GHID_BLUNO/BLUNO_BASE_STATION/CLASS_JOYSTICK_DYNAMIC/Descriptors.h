@@ -86,20 +86,18 @@
 		struct {
 			
 			//! Header
-			static const _desc_1 = DESCRIPTOR_PART_1;
+			const uint8_t* _desc_1;
 			
 			//! Axes pointer
 			uint8_t* _axes;
 			
 			//! Physical limits
-			static const _desc_2 = DESCRIPTOR_PART_2;
+			const uint8_t* _desc_2;
 			
 			// Buttons
-			static const _buttons = DESCRIPTOR_PART_3;
+			const uint8_t* _buttons;
 			
-			
-			
-		} descriptor;
+		} descriptor = {DESCRIPTOR_PART_1, 0x00, DESCRIPTOR_PART_2, DESCRIPTOR_PART_3};
 
 	/* Type Defines: */
 		/** Type define for the device configuration descriptor structure. This must be defined in the

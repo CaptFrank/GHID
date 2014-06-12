@@ -33,6 +33,9 @@ Still to do in the GHID project:
 		USB PHY:
 			- Update MOUSE							- 100%
 			- Update JOYSTICK						- 100%
+			- Update Joystick for dynamic profile	- 100%
+			
+			-- IF TIME PERMITS
 			- Dual Profile	(MOUSE + JOYSTICK) 		- 0%
 							(JOYSTICK + CDC)		- 100%
 									
@@ -40,7 +43,7 @@ Still to do in the GHID project:
 			
 			- Design								- 100%
 			- Implementation						- 100%
-			- Testing								- 0%
+			- Testing								- 50%
 			- Deployement							- 0%
 			
 	

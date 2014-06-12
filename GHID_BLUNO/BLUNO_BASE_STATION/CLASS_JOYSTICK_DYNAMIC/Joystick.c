@@ -137,7 +137,7 @@ void Create_Descriptor(){
 	//! Counter
 	uint8_t j = 0;
 	
-	//! Malloc enough mem
+	//! Malloc enough mem - 16bit *2
 	descriptor._axes = malloc(numAxes * 2);
 	
 	//! Create the joystick axis report

@@ -64,7 +64,6 @@ typedef struct joystick_report_t{
 
  	int8_t axis[NUM_AXES]; // 1 axis with 16 bits.
 	 
-	 
 	 union button_byte_t {
 		 
 		 // Defining the buttons.

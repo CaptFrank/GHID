@@ -61,14 +61,20 @@ extern HardwareSerial Serial2;
 
 #ifdef JOYSTICK_REPORT
 //! We define the number of axes needed
-#define NUM_AXES						3
+#define NUM_AXES						6
 #endif
 
 //! We define the number of buttons needed
-#define NUM_BUTTONS						8
+#define NUM_BUTTONS						30
 
 //! Generic empty define
 #define EMPTY							0x00
+
+//! Dynamic USB Configuration -- BETA
+// #define DYNAMIC_JOYSTICK_CONFIG
+
+//! Big joystick definition (6 axes and 30 buttons)
+// #define BIG_JOYSTICK
 
 
 #endif

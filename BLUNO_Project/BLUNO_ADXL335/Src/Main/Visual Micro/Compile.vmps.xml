@@ -1,0 +1,74 @@
+<VisualMicro>
+  <Program Name="Main" Ext=".ino" Location="\\vmware-host\Shared Folders\GHID - Beta\GHID\GHID_BLUNO\BLUNO_ADXL335\Src\Main">
+    <Debug DebugMode="Full" DebugEnabled="1" EnableBreak="1" LocalPort="COM3" LocalPortSpeed="115200" RemotePortSpeed="115200" StartUpMessage="DEBUGGING" StartUpPause="1" AutoReportFreeMemory="1" StartUpDelayOrDtrEnabled="0" JumpToSource="1" />
+    <Compile ReportDisassembledView="1" IsDebugStart="1" CompilerErrors="0" ConfigurationName="Debug" StopOnError="True" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno" ReportDetailedMemoryUsage="1" SketchName="Main" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 50;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE_TTYUART 8;VM_DEBUGGER_TYPE_NET_CONSOLE 9;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_HARDWARESERIAL;VM_DEBUG_BREAKPAUSE;VM_DEBUG_AUTO_REPORTING;VM_DEBUG_MEM_CHECK 1;" IncludesDebug="1" IsCompiled="1" />
+    <Platform Name="arduino10x" Package="arduino" Platform="avr" Architecture="avr">
+      <Board Name="uno" Description="Arduino Uno" CoreFolder="C:\Program Files\Arduino\hardware\arduino\cores\arduino" VariantFullPath="C:\Program Files\Arduino\hardware\arduino\variants\standard" McuIdePath="C:\Program Files\Arduino" McuSketchBookPath="\\vmware-host\Shared Folders\Home_Monitoring_Project" name="Arduino Uno" upload.protocol="arduino" upload.maximum_size="32256" upload.speed="115200" bootloader.low_fuses="0xff" bootloader.high_fuses="0xde" bootloader.extended_fuses="0x05" bootloader.path="optiboot" bootloader.file="optiboot_atmega328.hex" bootloader.unlock_bits="0x3F" bootloader.lock_bits="0x0F" build.mcu="atmega328p" build.f_cpu="16000000L" build.core="arduino" build.variant="standard" runtime.ide.path="C:\Program Files\Arduino" build.system.path="C:\Program Files\Arduino\hardware\arduino\system" runtime.ide.version="105" originalid="uno" vm.platform.root.path="C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x" build.core.vmresolved="C:\Program Files\Arduino\hardware\arduino\cores\arduino" build.core.parentfolder.vmresolved="C:\Program Files\Arduino\hardware\arduino\cores" build.core.coresparentfolder.vmresolved="C:\Program Files\Arduino\hardware\arduino" vm.core.include="arduino.h" ide.hint="Arduino 0023 and 1.0.x Ide" ide.location.key="Arduino" ide.location.ide.winreg="Arduino 1.0.x Application" ide.location.sketchbook.winreg="Arduino 1.0.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.location.sketchbook.default="%MYDOCUMENTS%\arduino" ide.location.preferences="%VM_APPDATA_ROAMING%\arduino\preferences.txt" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="arduino.h" ide.platformswithoutpackage="true" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionLTEQ="149" ide.exe="arduino.exe" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" vm.debug="true" software="ARDUINO" ide.appid="arduino10x" location.sketchbook="\\vmware-host\Shared Folders\Home_Monitoring_Project" build.board="AVR_UNO" vm.boardsource.path="C:\Program Files\Arduino\hardware\arduino" vm.platformname.name="avr" build.arch="AVR" build.variant.vmresolved="C:\Program Files\Arduino\hardware\arduino\variants\standard" vm.runtime.compiler.showwarnings="true" compiler.path="C:\Program Files\Arduino\hardware\tools\avr\bin\" includes=" -I&quot;C:\Program Files\Arduino\hardware\arduino\cores\arduino&quot;  -I&quot;C:\Program Files\Arduino\hardware\arduino\variants\standard&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers\VM_DBG&quot;  -I&quot;C:\Program Files\Arduino\libraries&quot;  -I&quot;C:\Program Files\Arduino\hardware\arduino\libraries&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers&quot;  -I&quot;\\vmware-host\Shared Folders\Home_Monitoring_Project\libraries&quot; " build.path="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno" build.project_name="Main" build.variant.path="C:\Program Files\Arduino\hardware\arduino\variants\standard" archive_file="core.a" object_file="C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\VM_DBG\VM_DBG.cpp.o" source_file="C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers\VM_DBG\VM_DBG.cpp" build.architecture="avr" vmresolved.compiler.path="C:\Program Files\Arduino\hardware\tools\avr\bin\" vmresolved.tools.path="C:\Program Files\Arduino\hardware\tools\avr" object_files="&quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\ADXL335.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\ADXL335Driver.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\BluetoothCommandDispatcher.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\BluetoothConnectionHandler.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\CC2540Driver.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\ConnectionProtocolHandler.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\DataProcessor.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Dispatcher.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Main.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Utilities.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\Watchdog.cpp.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\VM_DBG\VM_mem_check.c.o&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\VMicro\Arduino\Builds\Main\uno\VM_DBG\VM_DBG.cpp.o&quot; " />
+    </Platform>
+    <VCCodeModel>
+      <VCCodeMacros />
+    </VCCodeModel>
+    <BreakPoints>
+      <BreakPoint Index="1" Name="Main.ino, line 109 character 1" Id="a3318ed7-29ac-474a-b217-1502f842d619" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="\\vmware-host\shared folders\ghid - beta\ghid\ghid_bluno\bluno_adxl335\src\main\main.ino" FileLine="109" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='a3318ed7-29ac-474a-b217-1502f842d619'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>102	//! Source Code
+103	//! --------------------------------------------------
+104	
+105	/**
+106	 * This function overrides the Arduino framework setup function,
+107	 * with our setup routines.
+108	 */
+--&gt;109	void setup(void){
+110	
+111		//=========================================
+112		// INSERT SETUP CODE HERE
+113		//=========================================
+114	
+115		#ifdef DEBUG
+116			Serial.begin(115200);
+117		#endif
+118	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="2" Name="Main.ino, line 123 character 1" Id="14a010a3-8b76-480c-a3ab-428affb6a4da" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="\\vmware-host\shared folders\ghid - beta\ghid\ghid_bluno\bluno_adxl335\src\main\main.ino" FileLine="123" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='14a010a3-8b76-480c-a3ab-428affb6a4da'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>116			Serial.begin(115200);
+117		#endif
+118	
+119		//! We init the buffer
+120		RingBuffer_InitBuffer(&amp;buffer);
+121	
+122		//! We set the analog reference (5V)
+--&gt;123		analogReference(DEFAULT);
+124	
+125		//! We setup the analog sensor
+126		adxl335_driver.begin();
+127	
+128	        Serial.println("Setup Complete.");
+129	
+130		//! SETUP BLUETOOTH
+131		//! Set the callback table within the connection protocol handler
+132		protocol_handler.set_callback_table(callback_table);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="3" Name="Main.ino, line 145 character 1" Id="3d367270-54cb-40e0-8c0f-0aa66e07c5c1" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="\\vmware-host\shared folders\ghid - beta\ghid\ghid_bluno\bluno_adxl335\src\main\main.ino" FileLine="145" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="AVR GCC" LocationType="3" Tag="&lt;vmbp Id='3d367270-54cb-40e0-8c0f-0aa66e07c5c1'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>138		global_utilities.start_engine = true;
+139	}
+140	
+141	/**
+142	 * This is the main worker function, which never quits until the
+143	 * process is complete.
+144	 */
+--&gt;145	void loop(void){
+146	
+147		//==========================================
+148		// INSERT WORKER CODE HERE
+149		//==========================================
+150		
+151		//! We trigger the ADC thread
+152		//! This puts the adc values in the Ringbuffer
+153		adxl335_driver.run(&amp;buffer);
+154		
+</Source>
+      </BreakPoint>
+    </BreakPoints>
+  </Program>
+</VisualMicro>

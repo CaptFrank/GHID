@@ -22,4 +22,5 @@ void setup(void);
 
 #include "C:\Program Files\Arduino\hardware\arduino\variants\standard\pins_arduino.h" 
 #include "C:\Program Files\Arduino\hardware\arduino\cores\arduino\arduino.h"
-#include "Z:\GHID - Beta\GHID\BLUNO_Project\BLUNO_BLUNO\BLUNO_Relay\BLUNO_Relay.ino"
+#include "\\vmware-host\Shared Folders\GHID - Beta\GHID\BLUNO_Project\BLUNO_BLUNO\Src\BLUNO_Relay\BLUNO_Structured_Relay.ino"
+#include "\\vmware-host\Shared Folders\GHID - Beta\GHID\BLUNO_Project\BLUNO_BLUNO\Src\BLUNO_Relay\SimpleProtocol.h"

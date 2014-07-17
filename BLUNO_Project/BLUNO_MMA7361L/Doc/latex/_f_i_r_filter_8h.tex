@@ -1,0 +1,60 @@
+\hypertarget{_f_i_r_filter_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-F\-I\-R\-Filter.h \-File \-Reference}
+\label{_f_i_r_filter_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-F\-I\-R\-Filter.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-F\-I\-R\-Filter.\-h}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_f_i_r___filter}{\-F\-I\-R\-\_\-\-Filter}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_f_i_r_filter_8h_aeeb946ead3b7b7417ad84ccf8f4a0adc}{\-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S}~5
+\begin{DoxyCompactList}\small\item\em number of filter taps used in \-F\-I\-R \-Filter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \hyperlink{_f_i_r_filter_8h_a62beaf7a226193cac18a450574e1d88a}{passband\-\_\-gain} = 1.\-00
+\begin{DoxyCompactList}\small\item\em \-This is the generic unity gain passband gain coeficient. \end{DoxyCompactList}\item 
+const float \hyperlink{_f_i_r_filter_8h_a33bcb10686b68682f31a60c1e38d9e4e}{\-F\-I\-R\-\_\-\-Coefficients} \mbox{[}$\,$\mbox{]} = \{0.\-021, 0.\-096, 0.\-146, 0.\-096, 0.\-021\}
+\begin{DoxyCompactList}\small\item\em \-This are soem generic coeficients for the \-F\-I\-R filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_f_i_r_filter_8h_aeeb946ead3b7b7417ad84ccf8f4a0adc}{\index{\-F\-I\-R\-Filter.\-h@{\-F\-I\-R\-Filter.\-h}!\-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S@{\-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S}}
+\index{\-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S@{\-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S}!FIRFilter.h@{\-F\-I\-R\-Filter.\-h}}
+\subsubsection[{\-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-I\-L\-T\-E\-R\-\_\-\-T\-A\-P\-S}~5}}\label{_f_i_r_filter_8h_aeeb946ead3b7b7417ad84ccf8f4a0adc}
+
+
+number of filter taps used in \-F\-I\-R \-Filter 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-The \-F\-I\-R filter coefficients -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+\-Definition at line 18 of file \-F\-I\-R\-Filter.\-h.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_f_i_r_filter_8h_a33bcb10686b68682f31a60c1e38d9e4e}{\index{\-F\-I\-R\-Filter.\-h@{\-F\-I\-R\-Filter.\-h}!\-F\-I\-R\-\_\-\-Coefficients@{\-F\-I\-R\-\_\-\-Coefficients}}
+\index{\-F\-I\-R\-\_\-\-Coefficients@{\-F\-I\-R\-\_\-\-Coefficients}!FIRFilter.h@{\-F\-I\-R\-Filter.\-h}}
+\subsubsection[{\-F\-I\-R\-\_\-\-Coefficients}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf \-F\-I\-R\-\_\-\-Coefficients}\mbox{[}$\,$\mbox{]} = \{0.\-021, 0.\-096, 0.\-146, 0.\-096, 0.\-021\}}}\label{_f_i_r_filter_8h_a33bcb10686b68682f31a60c1e38d9e4e}
+
+
+\-This are soem generic coeficients for the \-F\-I\-R filter. 
+
+
+
+\-Definition at line 24 of file \-F\-I\-R\-Filter.\-h.
+
+\hypertarget{_f_i_r_filter_8h_a62beaf7a226193cac18a450574e1d88a}{\index{\-F\-I\-R\-Filter.\-h@{\-F\-I\-R\-Filter.\-h}!passband\-\_\-gain@{passband\-\_\-gain}}
+\index{passband\-\_\-gain@{passband\-\_\-gain}!FIRFilter.h@{\-F\-I\-R\-Filter.\-h}}
+\subsubsection[{passband\-\_\-gain}]{\setlength{\rightskip}{0pt plus 5cm}const float {\bf passband\-\_\-gain} = 1.\-00}}\label{_f_i_r_filter_8h_a62beaf7a226193cac18a450574e1d88a}
+
+
+\-This is the generic unity gain passband gain coeficient. 
+
+
+
+\-Definition at line 21 of file \-F\-I\-R\-Filter.\-h.
+

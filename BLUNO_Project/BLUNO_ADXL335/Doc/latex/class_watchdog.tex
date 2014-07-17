@@ -1,0 +1,78 @@
+\hypertarget{class_watchdog}{\section{\-Watchdog \-Class \-Reference}
+\label{class_watchdog}\index{\-Watchdog@{\-Watchdog}}
+}
+
+
+{\ttfamily \#include $<$\-Watchdog.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_watchdog_ab4aa2c62f897880ca29fd64062ab0e04}{\-Watchdog} ()
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+void \hyperlink{class_watchdog_ad64f941736836164bf9049ead5ca31b2}{reset} ()
+\begin{DoxyCompactList}\small\item\em \-Reset the watchog timer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_watchdog_a3ba938a9ac911a27c3faf64c99fff31b}{check\-\_\-watchdog} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class implements the timeout packet receive watchdog, and also implements the check for the timing basis and checks. 
+
+\-Definition at line 21 of file \-Watchdog.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_watchdog_ab4aa2c62f897880ca29fd64062ab0e04}{\index{\-Watchdog@{\-Watchdog}!\-Watchdog@{\-Watchdog}}
+\index{\-Watchdog@{\-Watchdog}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Watchdog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Watchdog\-::\-Watchdog} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_watchdog_ab4aa2c62f897880ca29fd64062ab0e04}
+
+
+\-Public \-Context. 
+
+\-The default constructor for the class \-Set the time to 0; 
+
+\-Definition at line 35 of file \-Watchdog.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_watchdog_a3ba938a9ac911a27c3faf64c99fff31b}{\index{\-Watchdog@{\-Watchdog}!check\-\_\-watchdog@{check\-\_\-watchdog}}
+\index{check\-\_\-watchdog@{check\-\_\-watchdog}!Watchdog@{\-Watchdog}}
+\subsubsection[{check\-\_\-watchdog}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Watchdog\-::check\-\_\-watchdog} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_watchdog_a3ba938a9ac911a27c3faf64c99fff31b}
+\-Checks the watchdog variable
+
+\-The check watchdog method. if we have just timed out, next time around the alarm will sound 
+
+\-Definition at line 16 of file \-Watchdog.\-cpp.
+
+\hypertarget{class_watchdog_ad64f941736836164bf9049ead5ca31b2}{\index{\-Watchdog@{\-Watchdog}!reset@{reset}}
+\index{reset@{reset}!Watchdog@{\-Watchdog}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Watchdog\-::reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_watchdog_ad64f941736836164bf9049ead5ca31b2}
+
+
+\-Reset the watchog timer. 
+
+\-The publicly accessible method to reset the watchdog. \-Remember when we saw this packet 
+
+\-Definition at line 27 of file \-Watchdog.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\hyperlink{_watchdog_8h}{\-Watchdog.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\hyperlink{_watchdog_8cpp}{\-Watchdog.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,721 @@
+\hypertarget{class_p_s3_u_s_b}{\section{\-P\-S3\-U\-S\-B \-Class \-Reference}
+\label{class_p_s3_u_s_b}\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}}
+}
+
+
+{\ttfamily \#include $<$\-P\-S3\-U\-S\-B.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_p_s3_u_s_b_ac919404d4caf4625467756272f8d5502}{\-P\-S3\-U\-S\-B} (\-U\-S\-B $\ast$\hyperlink{class_p_s3_u_s_b_aa1873f41ae0da7c4568cfb7517560c48}{p\-Usb}, uint8\-\_\-t btadr5=0, uint8\-\_\-t btadr4=0, uint8\-\_\-t btadr3=0, uint8\-\_\-t btadr2=0, uint8\-\_\-t btadr1=0, uint8\-\_\-t btadr0=0)
+\item 
+void \hyperlink{class_p_s3_u_s_b_ad50962ff6194746c076084ec0714605a}{set\-Bdaddr} (uint8\-\_\-t $\ast$bdaddr)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a1448bc51226a9b63f2937630da6bd48f}{get\-Bdaddr} (uint8\-\_\-t $\ast$bdaddr)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a3fccc7ef5ac5c414ef8ebcd2e2cdfc80}{set\-Move\-Bdaddr} (uint8\-\_\-t $\ast$bdaddr)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a6c722086999db05d8abf5f1f26c19f77}{get\-Move\-Bdaddr} (uint8\-\_\-t $\ast$bdaddr)
+\item 
+void \hyperlink{class_p_s3_u_s_b_ab6e97f59f4a62e52cf54cdd302679cd9}{get\-Move\-Calibration} (uint8\-\_\-t $\ast$\hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data})
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf \-U\-S\-B\-Device\-Config implementation}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a0083545cb99fb8786e60281fe7a9050d}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a5750c5448bf1ec73a7669ca2e4799c98}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a9068e2a036012614c0db163830cbcf00}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a04b79c271ca14e1e095c6e305c672627}{\-Get\-Address} ()
+\item 
+virtual bool \hyperlink{class_p_s3_u_s_b_a02a5b0244665d5a790d1020e51c94479}{is\-Ready} ()
+\item 
+virtual boolean \hyperlink{class_p_s3_u_s_b_ababb6cbf8297581b27400f9a39d75e5a}{\-V\-I\-D\-P\-I\-D\-O\-K} (uint16\-\_\-t vid, uint16\-\_\-t pid)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-P\-S3 \-Controller functions}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_p_s3_u_s_b_a89df07d76648a48c1f0ef8fd9604c201}{get\-Button\-Press} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+bool \hyperlink{class_p_s3_u_s_b_ac22875ff006c68daad6f688551f5e6d5}{get\-Button\-Click} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a6844111657a882b1997ca30d2649bd1c}{get\-Analog\-Button} (\hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} a)
+\item 
+uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a0de554815afcb66f57d8ac0045f19f2c}{get\-Analog\-Hat} (\hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093}{\-Analog\-Hat\-Enum} a)
+\item 
+uint16\-\_\-t \hyperlink{class_p_s3_u_s_b_aa01170072ec7fd0e557959ea1d79011e}{get\-Sensor} (\hyperlink{controller_enums_8h_a00d5030559c481763282483889597d51}{\-Sensor\-Enum} a)
+\item 
+double \hyperlink{class_p_s3_u_s_b_ae5c5316b4c8dae5927b2a2721a28f6c0}{get\-Angle} (\hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6}{\-Angle\-Enum} a)
+\item 
+bool \hyperlink{class_p_s3_u_s_b_ad0887b415c3ba180789781a713d98be8}{get\-Status} (\hyperlink{_p_s3_enums_8h_add5c7a32e8138b44244caf07232161ae}{\-Status\-Enum} c)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a1328a3f017f8d010cd0559c084981021}{print\-Status\-String} ()
+\item 
+void \hyperlink{class_p_s3_u_s_b_ac7adc7365bb45d15c37e22f26f012498}{set\-All\-Off} ()
+\item 
+void \hyperlink{class_p_s3_u_s_b_aaa1e66d7397be6364d4f76749cbaad5a}{set\-Rumble\-Off} ()
+\item 
+void \hyperlink{class_p_s3_u_s_b_a77f44b6007cc735c47bdeaf672c7e464}{set\-Rumble\-On} (\hyperlink{controller_enums_8h_ab195293384292950ebc2166bfe360fd1}{\-Rumble\-Enum} mode)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a0c2015b53aa60081aa28299800509f80}{set\-Rumble\-On} (uint8\-\_\-t right\-Duration, uint8\-\_\-t right\-Power, uint8\-\_\-t left\-Duration, uint8\-\_\-t left\-Power)
+\item 
+void \hyperlink{class_p_s3_u_s_b_aa0aac5ea016db4cd6736a15e9d6eb41b}{set\-Led\-Raw} (uint8\-\_\-t value)
+\item 
+void \hyperlink{class_p_s3_u_s_b_ac912fd49bd2a415206df7a8c2b672ea4}{set\-Led\-Off} ()
+\item 
+void \hyperlink{class_p_s3_u_s_b_ae13c95a649aba7315c2a18eb5f4277a9}{set\-Led\-Off} (\hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} a)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a3ad10dc81cfca1bdeb2f1310ddf4419d}{set\-Led\-On} (\hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} a)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a87db50031f7e265baaa82365c14befae}{set\-Led\-Toggle} (\hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} a)
+\item 
+void \hyperlink{class_p_s3_u_s_b_ae9cfdaad3e54dbc271519e22082399c7}{move\-Set\-Bulb} (uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4c5c6ceb8ed33456261fa907136e0c3a}{r}, uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a1673907d4d89d763bb7b94ec1eeb7b60}{g}, uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b})
+\item 
+void \hyperlink{class_p_s3_u_s_b_a9eeb0f71719732e44929c64f23c8314c}{move\-Set\-Bulb} (\hyperlink{controller_enums_8h_aac6fa7b0395b95cc528deaad0ce884a2}{\-Colors\-Enum} color)
+\item 
+void \hyperlink{class_p_s3_u_s_b_a66d542c2cec73cefb3cdda36ff080e1a}{move\-Set\-Rumble} (uint8\-\_\-t rumble)
+\item 
+void \hyperlink{class_p_s3_u_s_b_ad06a172d85adf4ffc54dd8117b0be42e}{attach\-On\-Init} (void($\ast$func\-On\-Init)(void))
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_p_s3_u_s_b_a0dad8754ff18d0c375c2569791d50876}{\-P\-S3\-Connected}
+\item 
+bool \hyperlink{class_p_s3_u_s_b_a89aa4233f3eeeb99693a099da527ec28}{\-P\-S3\-Move\-Connected}
+\item 
+bool \hyperlink{class_p_s3_u_s_b_a54b2dcaa1e9acef83de2376b50c7ff09}{\-P\-S3\-Navigation\-Connected}
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-U\-S\-B $\ast$ \hyperlink{class_p_s3_u_s_b_aa1873f41ae0da7c4568cfb7517560c48}{p\-Usb}
+\item 
+uint8\-\_\-t \hyperlink{class_p_s3_u_s_b_a3f43df159277003acdf7dd107bda27fd}{b\-Address}
+\item 
+\-Ep\-Info \hyperlink{class_p_s3_u_s_b_a394dbb0a59b587210e5958f08dac48f1}{ep\-Info} \mbox{[}\hyperlink{_p_s3_u_s_b_8h_a168ab47b14a95d7cf8066d553a9cb862}{\-P\-S3\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class implements support for all the official \-P\-S3 \-Controllers\-: \-Dualshock 3, \-Navigation or a \-Motion controller via \-U\-S\-B.
+
+\-One can only set the color of the bulb, set the rumble, set and get the bluetooth address and calibrate the magnetometer via \-U\-S\-B on the \-Move controller.
+
+\-Information about the protocol can be found at the wiki\-: \href{https://github.com/felis/USB_Host_Shield_2.0/wiki/PS3-Information}{\tt https\-://github.\-com/felis/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0/wiki/\-P\-S3-\/\-Information}. 
+
+\-Definition at line 58 of file \-P\-S3\-U\-S\-B.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_p_s3_u_s_b_ac919404d4caf4625467756272f8d5502}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}}
+\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-P\-S3\-U\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-S3\-U\-S\-B\-::\-P\-S3\-U\-S\-B} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p\-Usb, }
+\item[{uint8\-\_\-t}]{btadr5 = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{btadr4 = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{btadr3 = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{btadr2 = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{btadr1 = {\ttfamily 0}, }
+\item[{uint8\-\_\-t}]{btadr0 = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ac919404d4caf4625467756272f8d5502}
+\-Constructor for the \hyperlink{class_p_s3_u_s_b}{\-P\-S3\-U\-S\-B} class. 
+\begin{DoxyParams}{\-Parameters}
+{\em p\-Usb} & \-Pointer to \-U\-S\-B class instance. \\
+\hline
+{\em btadr5,btadr4,btadr3,btadr2,btadr1,btadr0} & \-Pass your dongles \-Bluetooth address into the constructor, so you are able to pair the controller with a \-Bluetooth dongle. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 23 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_p_s3_u_s_b_ad06a172d85adf4ffc54dd8117b0be42e}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!attach\-On\-Init@{attach\-On\-Init}}
+\index{attach\-On\-Init@{attach\-On\-Init}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{attach\-On\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::attach\-On\-Init} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{func\-On\-Init}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s3_u_s_b_ad06a172d85adf4ffc54dd8117b0be42e}
+\-Used to call your own function when the controller is successfully initialized. 
+\begin{DoxyParams}{\-Parameters}
+{\em func\-On\-Init} & \-Function to call. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 263 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_a04b79c271ca14e1e095c6e305c672627}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_p_s3_u_s_b_a04b79c271ca14e1e095c6e305c672627}
+\-Get the device address. \begin{DoxyReturn}{\-Returns}
+\-The device address. 
+\end{DoxyReturn}
+
+
+\-Definition at line 93 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_a6844111657a882b1997ca30d2649bd1c}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Analog\-Button@{get\-Analog\-Button}}
+\index{get\-Analog\-Button@{get\-Analog\-Button}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Analog\-Button}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::get\-Analog\-Button} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a6844111657a882b1997ca30d2649bd1c}
+\-Used to get the analog value from button presses. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-The \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} to read. \-The supported buttons are\-: \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdaba595d8bca8bc5e67c37c0a9d89becfa}{\-U\-P}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdaec8379af7490bb9eaaf579cf17876f38}{\-R\-I\-G\-H\-T}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda9b0b4a95b99523966e0e34ffdadac9da}{\-D\-O\-W\-N}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdadb45120aafd37a973140edee24708065}{\-L\-E\-F\-T}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdae5bc7ee7d6dda5340a28f91834f10543}{\-L1}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda0adffb24dae0c41be5b803f4d444f066}{\-L2}, \hyperlink{masstorage_8h_a7e60b2ca7f2f6943225add97ee69ed00}{\-R1}, \hyperlink{masstorage_8h_a7dae2a007c34ecf4796811a14e1c11e2}{\-R2}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda2fd33892864d1c342d3bead2f2d9ad56}{\-T\-R\-I\-A\-N\-G\-L\-E}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdaa79c827759ea48f0735386c4b1188911}{\-C\-I\-R\-C\-L\-E}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fdad699bdf1731bd839b56c299536ba1d9d}{\-C\-R\-O\-S\-S}, \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda4233fbf0cafb86abcee94b38d769fc59}{\-S\-Q\-U\-A\-R\-E}, and \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fda21f40778b7db9343a6ca75ec2c41ccce}{\-T}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Analog value in the range of 0-\/255. 
+\end{DoxyReturn}
+
+
+\-Definition at line 326 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a0de554815afcb66f57d8ac0045f19f2c}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Analog\-Hat@{get\-Analog\-Hat}}
+\index{get\-Analog\-Hat@{get\-Analog\-Hat}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Analog\-Hat}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::get\-Analog\-Hat} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Analog\-Hat\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a0de554815afcb66f57d8ac0045f19f2c}
+\-Used to read the analog joystick. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093a383cb8895dd296b7f69ce845ed16b0ca}{\-Left\-Hat\-X}, \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093af3f3925efa9762c4e9e71ac7da7a94a3}{\-Left\-Hat\-Y}, \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093aaeb027a0ae5bbc6ba25e1c78a6486c7b}{\-Right\-Hat\-X}, and \hyperlink{controller_enums_8h_a34dad8f0a0927471137c403216597093a7f1fb2db5381286691f4dec179ed5d5a}{\-Right\-Hat\-Y}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Return the analog value in the range of 0-\/255. 
+\end{DoxyReturn}
+
+
+\-Definition at line 330 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ae5c5316b4c8dae5927b2a2721a28f6c0}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Angle@{get\-Angle}}
+\index{get\-Angle@{get\-Angle}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-P\-S3\-U\-S\-B\-::get\-Angle} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Angle\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ae5c5316b4c8dae5927b2a2721a28f6c0}
+\-Use this to get \hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6ae3a34b760fa4a6854f28852e91d8bb47}{\-Pitch} and \hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6a9d80e5f030503ccac779c6491826a173}{\-Roll} calculated using the accelerometer. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-Either \hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6ae3a34b760fa4a6854f28852e91d8bb47}{\-Pitch} or \hyperlink{controller_enums_8h_a7c7824a10a9ffa8fea85602fcf4d84e6a9d80e5f030503ccac779c6491826a173}{\-Roll}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Return the angle in the range of 0-\/360. 
+\end{DoxyReturn}
+
+
+\-Definition at line 338 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a1448bc51226a9b63f2937630da6bd48f}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Bdaddr@{get\-Bdaddr}}
+\index{get\-Bdaddr@{get\-Bdaddr}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Bdaddr}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::get\-Bdaddr} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{bdaddr}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a1448bc51226a9b63f2937630da6bd48f}
+\-Used to get the \-Bluetooth address inside the \-Dualshock 3 and \-Navigation controller. \-Will return \-L\-S\-B first. 
+\begin{DoxyParams}{\-Parameters}
+{\em bdaddr} & \-Your dongles \-Bluetooth address. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 476 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ac22875ff006c68daad6f688551f5e6d5}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Button\-Click@{get\-Button\-Click}}
+\index{get\-Button\-Click@{get\-Button\-Click}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Button\-Click}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S3\-U\-S\-B\-::get\-Button\-Click} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ac22875ff006c68daad6f688551f5e6d5}
+
+
+\-Definition at line 319 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a89df07d76648a48c1f0ef8fd9604c201}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Button\-Press@{get\-Button\-Press}}
+\index{get\-Button\-Press@{get\-Button\-Press}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Button\-Press}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S3\-U\-S\-B\-::get\-Button\-Press} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Button\-Enum}}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a89df07d76648a48c1f0ef8fd9604c201}
+\hyperlink{class_p_s3_u_s_b_a89df07d76648a48c1f0ef8fd9604c201}{get\-Button\-Press(\-Button\-Enum b)} will return true as long as the button is held down.
+
+\-While \hyperlink{class_p_s3_u_s_b_ac22875ff006c68daad6f688551f5e6d5}{get\-Button\-Click(\-Button\-Enum b)} will only return it once.
+
+\-So you instance if you need to increase a variable once you would use \hyperlink{class_p_s3_u_s_b_ac22875ff006c68daad6f688551f5e6d5}{get\-Button\-Click(\-Button\-Enum b)}, but if you need to drive a robot forward you would use \hyperlink{class_p_s3_u_s_b_a89df07d76648a48c1f0ef8fd9604c201}{get\-Button\-Press(\-Button\-Enum b)}. 
+\begin{DoxyParams}{\-Parameters}
+{\em b} & \hyperlink{controller_enums_8h_a94f7389d205c78830a5441370d7870fd}{\-Button\-Enum} to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{class_p_s3_u_s_b_a89df07d76648a48c1f0ef8fd9604c201}{get\-Button\-Press(\-Button\-Enum b)} will return a true as long as a button is held down, while \hyperlink{class_p_s3_u_s_b_ac22875ff006c68daad6f688551f5e6d5}{get\-Button\-Click(\-Button\-Enum b)} will return true once for each button press. 
+\end{DoxyReturn}
+
+
+\-Definition at line 315 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a6c722086999db05d8abf5f1f26c19f77}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Move\-Bdaddr@{get\-Move\-Bdaddr}}
+\index{get\-Move\-Bdaddr@{get\-Move\-Bdaddr}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Move\-Bdaddr}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::get\-Move\-Bdaddr} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{bdaddr}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a6c722086999db05d8abf5f1f26c19f77}
+\-Used to get the \-Bluetooth address inside the \-Move controller. \-Will return \-L\-S\-B first. 
+\begin{DoxyParams}{\-Parameters}
+{\em bdaddr} & \-Your dongles \-Bluetooth address. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 541 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ab6e97f59f4a62e52cf54cdd302679cd9}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Move\-Calibration@{get\-Move\-Calibration}}
+\index{get\-Move\-Calibration@{get\-Move\-Calibration}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Move\-Calibration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::get\-Move\-Calibration} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ab6e97f59f4a62e52cf54cdd302679cd9}
+\-Used to get the calibration data inside the \-Move controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em data} & \-Buffer to store data in. \-Must be at least 147 bytes \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 551 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_aa01170072ec7fd0e557959ea1d79011e}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Sensor@{get\-Sensor}}
+\index{get\-Sensor@{get\-Sensor}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::get\-Sensor} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Sensor\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_aa01170072ec7fd0e557959ea1d79011e}
+\-Used to read the sensors inside the \-Dualshock 3 controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-The \-Dualshock 3 has a 3-\/axis accelerometer and a 1-\/axis gyro inside. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Return the raw sensor value. 
+\end{DoxyReturn}
+
+
+\-Definition at line 334 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ad0887b415c3ba180789781a713d98be8}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!get\-Status@{get\-Status}}
+\index{get\-Status@{get\-Status}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{get\-Status}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S3\-U\-S\-B\-::get\-Status} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Status\-Enum}}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ad0887b415c3ba180789781a713d98be8}
+\-Get the \hyperlink{_p_s3_enums_8h_add5c7a32e8138b44244caf07232161ae}{\-Status\-Enum} from the controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em c} & \-The \hyperlink{_p_s3_enums_8h_add5c7a32e8138b44244caf07232161ae}{\-Status\-Enum} you want to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if correct and false if not. 
+\end{DoxyReturn}
+
+
+\-Definition at line 361 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a0083545cb99fb8786e60281fe7a9050d}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_p_s3_u_s_b_a0083545cb99fb8786e60281fe7a9050d}
+\-Initialize the \-P\-S3 \-Controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em parent} & \-Hub number. \\
+\hline
+{\em port} & \-Port number on the hub. \\
+\hline
+{\em lowspeed} & \-Speed of the device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\-Definition at line 46 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a02a5b0244665d5a790d1020e51c94479}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!is\-Ready@{is\-Ready}}
+\index{is\-Ready@{is\-Ready}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-P\-S3\-U\-S\-B\-::is\-Ready} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_p_s3_u_s_b_a02a5b0244665d5a790d1020e51c94479}
+\-Used to check if the controller has been initialized. \begin{DoxyReturn}{\-Returns}
+\-True if it's ready. 
+\end{DoxyReturn}
+
+
+\-Definition at line 101 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_ae9cfdaad3e54dbc271519e22082399c7}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!move\-Set\-Bulb@{move\-Set\-Bulb}}
+\index{move\-Set\-Bulb@{move\-Set\-Bulb}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{move\-Set\-Bulb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::move\-Set\-Bulb} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{r, }
+\item[{uint8\-\_\-t}]{g, }
+\item[{uint8\-\_\-t}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ae9cfdaad3e54dbc271519e22082399c7}
+\-Use this to set the \-Color using \-R\-G\-B values. 
+\begin{DoxyParams}{\-Parameters}
+{\em r,g,b} & \-R\-G\-B value. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 502 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a9eeb0f71719732e44929c64f23c8314c}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!move\-Set\-Bulb@{move\-Set\-Bulb}}
+\index{move\-Set\-Bulb@{move\-Set\-Bulb}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{move\-Set\-Bulb}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::move\-Set\-Bulb} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Colors\-Enum}}]{color}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a9eeb0f71719732e44929c64f23c8314c}
+\-Use this to set the color using the predefined colors in \hyperlink{controller_enums_8h_aac6fa7b0395b95cc528deaad0ce884a2}{\-Colors\-Enum}. 
+\begin{DoxyParams}{\-Parameters}
+{\em color} & \-The desired color. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 511 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a66d542c2cec73cefb3cdda36ff080e1a}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!move\-Set\-Rumble@{move\-Set\-Rumble}}
+\index{move\-Set\-Rumble@{move\-Set\-Rumble}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{move\-Set\-Rumble}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::move\-Set\-Rumble} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{rumble}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a66d542c2cec73cefb3cdda36ff080e1a}
+\-Set the rumble value inside the \-Move controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em rumble} & \-The desired value in the range from 64-\/255. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 515 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a9068e2a036012614c0db163830cbcf00}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_p_s3_u_s_b_a9068e2a036012614c0db163830cbcf00}
+\-Poll the \-U\-S\-B \-Input endpoins and run the state machines. \begin{DoxyReturn}{\-Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\-Definition at line 271 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a1328a3f017f8d010cd0559c084981021}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!print\-Status\-String@{print\-Status\-String}}
+\index{print\-Status\-String@{print\-Status\-String}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{print\-Status\-String}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::print\-Status\-String} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a1328a3f017f8d010cd0559c084981021}
+\-Read all the available statuses from the controller and prints it as a nice formated string. 
+
+\-Definition at line 365 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a5750c5448bf1ec73a7669ca2e4799c98}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_p_s3_u_s_b_a5750c5448bf1ec73a7669ca2e4799c98}
+\-Release the \-U\-S\-B device. \begin{DoxyReturn}{\-Returns}
+0 on success. 
+\end{DoxyReturn}
+
+
+\-Definition at line 261 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ac7adc7365bb45d15c37e22f26f012498}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-All\-Off@{set\-All\-Off}}
+\index{set\-All\-Off@{set\-All\-Off}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-All\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-All\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ac7adc7365bb45d15c37e22f26f012498}
+\-Used to set all \-L\-E\-Ds and rumble off. 
+
+\-Definition at line 404 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ad50962ff6194746c076084ec0714605a}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Bdaddr@{set\-Bdaddr}}
+\index{set\-Bdaddr@{set\-Bdaddr}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Bdaddr}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Bdaddr} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{bdaddr}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ad50962ff6194746c076084ec0714605a}
+\-Used to set the \-Bluetooth address inside the \-Dualshock 3 and \-Navigation controller. \-Set using \-L\-S\-B first. 
+\begin{DoxyParams}{\-Parameters}
+{\em bdaddr} & \-Your dongles \-Bluetooth address. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 463 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ac912fd49bd2a415206df7a8c2b672ea4}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Led\-Off@{set\-Led\-Off}}
+\index{set\-Led\-Off@{set\-Led\-Off}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Led\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Led\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s3_u_s_b_ac912fd49bd2a415206df7a8c2b672ea4}
+\-Turn all \-L\-E\-Ds off. 
+
+\-Definition at line 224 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_ae13c95a649aba7315c2a18eb5f4277a9}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Led\-Off@{set\-Led\-Off}}
+\index{set\-Led\-Off@{set\-Led\-Off}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Led\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Led\-Off} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-E\-D\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_ae13c95a649aba7315c2a18eb5f4277a9}
+\-Turn the specific \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} off. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-The \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} to turn off. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 444 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a3ad10dc81cfca1bdeb2f1310ddf4419d}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Led\-On@{set\-Led\-On}}
+\index{set\-Led\-On@{set\-Led\-On}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Led\-On}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Led\-On} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-E\-D\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a3ad10dc81cfca1bdeb2f1310ddf4419d}
+\-Turn the specific \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} on. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-The \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} to turn on. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 449 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_aa0aac5ea016db4cd6736a15e9d6eb41b}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Led\-Raw@{set\-Led\-Raw}}
+\index{set\-Led\-Raw@{set\-Led\-Raw}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Led\-Raw}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Led\-Raw} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_aa0aac5ea016db4cd6736a15e9d6eb41b}
+\-Set \-L\-E\-D value without using the \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum}. 
+\begin{DoxyParams}{\-Parameters}
+{\em value} & \-See\-: \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum}. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 439 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a87db50031f7e265baaa82365c14befae}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Led\-Toggle@{set\-Led\-Toggle}}
+\index{set\-Led\-Toggle@{set\-Led\-Toggle}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Led\-Toggle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Led\-Toggle} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-E\-D\-Enum}}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a87db50031f7e265baaa82365c14befae}
+\-Toggle the specific \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum}. 
+\begin{DoxyParams}{\-Parameters}
+{\em a} & \-The \hyperlink{controller_enums_8h_a70df64e026046bc352983127b7ae2cf0}{\-L\-E\-D\-Enum} to toggle. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 458 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a3fccc7ef5ac5c414ef8ebcd2e2cdfc80}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Move\-Bdaddr@{set\-Move\-Bdaddr}}
+\index{set\-Move\-Bdaddr@{set\-Move\-Bdaddr}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Move\-Bdaddr}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Move\-Bdaddr} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{bdaddr}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a3fccc7ef5ac5c414ef8ebcd2e2cdfc80}
+\-Used to set the \-Bluetooth address inside the \-Move controller. \-Set using \-L\-S\-B first. 
+\begin{DoxyParams}{\-Parameters}
+{\em bdaddr} & \-Your dongles \-Bluetooth address. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 525 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_aaa1e66d7397be6364d4f76749cbaad5a}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Rumble\-Off@{set\-Rumble\-Off}}
+\index{set\-Rumble\-Off@{set\-Rumble\-Off}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Rumble\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Rumble\-Off} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_aaa1e66d7397be6364d4f76749cbaad5a}
+\-Turn off rumble. 
+
+\-Definition at line 411 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a77f44b6007cc735c47bdeaf672c7e464}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Rumble\-On@{set\-Rumble\-On}}
+\index{set\-Rumble\-On@{set\-Rumble\-On}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Rumble\-On}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Rumble\-On} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Rumble\-Enum}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a77f44b6007cc735c47bdeaf672c7e464}
+\-Turn on rumble. 
+\begin{DoxyParams}{\-Parameters}
+{\em mode} & \-Either \hyperlink{controller_enums_8h_ab195293384292950ebc2166bfe360fd1a5819f165165589a8e65b07bf46c7382b}{\-Rumble\-High} or \hyperlink{controller_enums_8h_ab195293384292950ebc2166bfe360fd1a080b52389e532b79b9e48f43ae6086ac}{\-Rumble\-Low}. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 420 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_a0c2015b53aa60081aa28299800509f80}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!set\-Rumble\-On@{set\-Rumble\-On}}
+\index{set\-Rumble\-On@{set\-Rumble\-On}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{set\-Rumble\-On}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S3\-U\-S\-B\-::set\-Rumble\-On} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{right\-Duration, }
+\item[{uint8\-\_\-t}]{right\-Power, }
+\item[{uint8\-\_\-t}]{left\-Duration, }
+\item[{uint8\-\_\-t}]{left\-Power}
+\end{DoxyParamCaption}
+)}}\label{class_p_s3_u_s_b_a0c2015b53aa60081aa28299800509f80}
+\-Turn on rumble using custom duration and power. 
+\begin{DoxyParams}{\-Parameters}
+{\em right\-Duration} & \-The duration of the right/low rumble effect. \\
+\hline
+{\em right\-Power} & \-The intensity of the right/low rumble effect. \\
+\hline
+{\em left\-Duration} & \-The duration of the left/high rumble effect. \\
+\hline
+{\em left\-Power} & \-The intensity of the left/high rumble effect. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 431 of file \-P\-S3\-U\-S\-B.\-cpp.
+
+\hypertarget{class_p_s3_u_s_b_ababb6cbf8297581b27400f9a39d75e5a}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-V\-I\-D\-P\-I\-D\-O\-K@{\-V\-I\-D\-P\-I\-D\-O\-K}}
+\index{\-V\-I\-D\-P\-I\-D\-O\-K@{\-V\-I\-D\-P\-I\-D\-O\-K}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-V\-I\-D\-P\-I\-D\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}virtual boolean {\bf \-P\-S3\-U\-S\-B\-::\-V\-I\-D\-P\-I\-D\-O\-K} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{vid, }
+\item[{uint16\-\_\-t}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_p_s3_u_s_b_ababb6cbf8297581b27400f9a39d75e5a}
+\-Used by the \-U\-S\-B core to check what this driver support. 
+\begin{DoxyParams}{\-Parameters}
+{\em vid} & \-The device's \-V\-I\-D. \\
+\hline
+{\em pid} & \-The device's \-P\-I\-D. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns true if the device's \-V\-I\-D and \-P\-I\-D matches this driver. 
+\end{DoxyReturn}
+
+
+\-Definition at line 111 of file \-P\-S3\-U\-S\-B.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_p_s3_u_s_b_a3f43df159277003acdf7dd107bda27fd}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!b\-Address@{b\-Address}}
+\index{b\-Address@{b\-Address}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{b\-Address}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-P\-S3\-U\-S\-B\-::b\-Address}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_p_s3_u_s_b_a3f43df159277003acdf7dd107bda27fd}
+\-Device address. 
+
+\-Definition at line 279 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_a394dbb0a59b587210e5958f08dac48f1}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!ep\-Info@{ep\-Info}}
+\index{ep\-Info@{ep\-Info}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{ep\-Info}]{\setlength{\rightskip}{0pt plus 5cm}\-Ep\-Info {\bf \-P\-S3\-U\-S\-B\-::ep\-Info}\mbox{[}{\bf \-P\-S3\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_p_s3_u_s_b_a394dbb0a59b587210e5958f08dac48f1}
+\-Endpoint info structure. 
+
+\-Definition at line 281 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_a0dad8754ff18d0c375c2569791d50876}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-P\-S3\-Connected@{\-P\-S3\-Connected}}
+\index{\-P\-S3\-Connected@{\-P\-S3\-Connected}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-P\-S3\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S3\-U\-S\-B\-::\-P\-S3\-Connected}}}\label{class_p_s3_u_s_b_a0dad8754ff18d0c375c2569791d50876}
+\-Variable used to indicate if the normal playstation controller is successfully connected. 
+
+\-Definition at line 265 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_a89aa4233f3eeeb99693a099da527ec28}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-P\-S3\-Move\-Connected@{\-P\-S3\-Move\-Connected}}
+\index{\-P\-S3\-Move\-Connected@{\-P\-S3\-Move\-Connected}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-P\-S3\-Move\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S3\-U\-S\-B\-::\-P\-S3\-Move\-Connected}}}\label{class_p_s3_u_s_b_a89aa4233f3eeeb99693a099da527ec28}
+\-Variable used to indicate if the move controller is successfully connected. 
+
+\-Definition at line 271 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_a54b2dcaa1e9acef83de2376b50c7ff09}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!\-P\-S3\-Navigation\-Connected@{\-P\-S3\-Navigation\-Connected}}
+\index{\-P\-S3\-Navigation\-Connected@{\-P\-S3\-Navigation\-Connected}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{\-P\-S3\-Navigation\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S3\-U\-S\-B\-::\-P\-S3\-Navigation\-Connected}}}\label{class_p_s3_u_s_b_a54b2dcaa1e9acef83de2376b50c7ff09}
+\-Variable used to indicate if the navigation controller is successfully connected. 
+
+\-Definition at line 273 of file \-P\-S3\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s3_u_s_b_aa1873f41ae0da7c4568cfb7517560c48}{\index{\-P\-S3\-U\-S\-B@{\-P\-S3\-U\-S\-B}!p\-Usb@{p\-Usb}}
+\index{p\-Usb@{p\-Usb}!PS3USB@{\-P\-S3\-U\-S\-B}}
+\subsubsection[{p\-Usb}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-S\-B$\ast$ {\bf \-P\-S3\-U\-S\-B\-::p\-Usb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_p_s3_u_s_b_aa1873f41ae0da7c4568cfb7517560c48}
+\-Pointer to \-U\-S\-B class instance. 
+
+\-Definition at line 277 of file \-P\-S3\-U\-S\-B.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_p_s3_u_s_b_8h}{\-P\-S3\-U\-S\-B.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_p_s3_u_s_b_8cpp}{\-P\-S3\-U\-S\-B.\-cpp}\end{DoxyCompactItemize}

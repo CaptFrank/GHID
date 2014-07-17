@@ -1,0 +1,58 @@
+.TH "BluetoothService" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BluetoothService \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BTD\&.h>\fP
+.PP
+Inherited by \fBBTHID\fP, \fBPS3BT\fP, \fBSPP\fP, and \fBWII\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBACLData\fP (uint8_t *\fBACLData\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBRun\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdisconnect\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+All Bluetooth services should inherit this class\&. 
+.PP
+Definition at line 211 of file BTD\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void \fBBluetoothService::ACLData\fP (uint8_t *ACLData)\fC [virtual]\fP"Used to pass acldata to the Bluetooth service\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIACLData\fP Pointer to the incoming acldata\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBSPP\fP, \fBWII\fP, \fBPS3BT\fP, and \fBBTHID\fP\&.
+.SS "virtual void \fBBluetoothService::disconnect\fP ()\fC [virtual]\fP"Used to disconnect both the L2CAP Channel and the HCI Connection for the Bluetooth service\&. 
+.PP
+Reimplemented in \fBSPP\fP, \fBWII\fP, \fBPS3BT\fP, and \fBBTHID\fP\&.
+.SS "virtual void \fBBluetoothService::Reset\fP ()\fC [virtual]\fP"Used to reset the Bluetooth service\&. 
+.PP
+Reimplemented in \fBSPP\fP, \fBWII\fP, \fBPS3BT\fP, and \fBBTHID\fP\&.
+.SS "virtual void \fBBluetoothService::Run\fP ()\fC [virtual]\fP"Used to run the different state machines in the Bluetooth service\&. 
+.PP
+Reimplemented in \fBSPP\fP, \fBWII\fP, \fBPS3BT\fP, and \fBBTHID\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

@@ -1,0 +1,90 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/Wii.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/Wii.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'BTD\&.h'\fP
+.br
+\fC#include 'controllerEnums\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBWII\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWII_FLAG_MOTION_PLUS_CONNECTED\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBWII_FLAG_NUNCHUCK_CONNECTED\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBwii_check_flag\fP(flag)   (wii_event_flag & (flag))"
+.br
+.ti -1c
+.RI "#define \fBwii_set_flag\fP(flag)   (wii_event_flag |= (flag))"
+.br
+.ti -1c
+.RI "#define \fBwii_clear_flag\fP(flag)   (wii_event_flag &= ~(flag))"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHatEnum\fP { \fBHatX\fP =  0, \fBHatY\fP =  1 }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHatEnum\fP \fB__attribute__\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBwii_check_flag\fP(flag)   (wii_event_flag & (flag))"
+.PP
+Definition at line 30 of file Wii\&.h\&.
+.SS "#define \fBwii_clear_flag\fP(flag)   (wii_event_flag &= ~(flag))"
+.PP
+Definition at line 32 of file Wii\&.h\&.
+.SS "#define \fBWII_FLAG_MOTION_PLUS_CONNECTED\fP   0x01"
+.PP
+Definition at line 27 of file Wii\&.h\&.
+.SS "#define \fBWII_FLAG_NUNCHUCK_CONNECTED\fP   0x02"
+.PP
+Definition at line 28 of file Wii\&.h\&.
+.SS "#define \fBwii_set_flag\fP(flag)   (wii_event_flag |= (flag))"
+.PP
+Definition at line 31 of file Wii\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBHatEnum\fP"Enum used to read the joystick on the Nunchuck\&. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIHatX \fP\fP
+Read the x-axis on the Nunchuck joystick\&. 
+.TP
+\fB\fIHatY \fP\fP
+Read the y-axis on the Nunchuck joystick\&. 
+.PP
+Definition at line 35 of file Wii\&.h\&.
+.SH "Variable Documentation"
+.PP 
+.SS "enum \fBHatEnum\fP  \fB__attribute__\fP"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

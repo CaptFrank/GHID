@@ -1,0 +1,363 @@
+\hypertarget{_mouse___chronos_8cpp}{\section{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Mouse\-\_\-\-Chronos.cpp \-File \-Reference}
+\label{_mouse___chronos_8cpp}\index{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Mouse\-\_\-\-Chronos.\-cpp@{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Mouse\-\_\-\-Chronos.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}\-Arduino.\-h\char`\"{}}\*
+{\ttfamily \#include $<$cdcacm.\-h$>$}\*
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-Project.\-h$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrx__packet}{rx\-\_\-packet}
+\item 
+class \hyperlink{class_a_c_m_async_oper}{\-A\-C\-M\-Async\-Oper}
+\begin{DoxyCompactList}\small\item\em ====================================================================== \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_mouse___chronos_8cpp_a87f68e96fb938eddc39ad1f19d923a96}{\-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E}~64
+\begin{DoxyCompactList}\small\item\em \-Here we define the max data size buffer. \end{DoxyCompactList}\item 
+\#define \hyperlink{_mouse___chronos_8cpp_a789bf855a0fc635dbb3471d76e1fa519}{\-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~7
+\item 
+\#define \hyperlink{_mouse___chronos_8cpp_a6fdb9ca3747dd2257c6d6e216d9e56e4}{\-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K}~0x01
+\begin{DoxyCompactList}\small\item\em \-Defined a button state. \end{DoxyCompactList}\item 
+\#define \hyperlink{_mouse___chronos_8cpp_aeb3ed03d6978a737e3d5a3e7b6f32607}{\-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K}~0x00
+\item 
+\#define \hyperlink{_mouse___chronos_8cpp_ab702106cf3b3e96750b6845ded4e0299}{\-R\-E\-S\-E\-T}~0x00
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0b}{ap\-\_\-stat\-\_\-t} \{ \hyperlink{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0babdeec59b0d0ff6c3d3c2da98ced634a9}{\-S\-T\-A\-T\-E\-\_\-\-A\-P\-\_\-\-O\-F\-F}, 
+\hyperlink{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0baaade5e53e88cf231292cd1142cce2afe}{\-S\-T\-A\-T\-E\-\_\-\-I\-D\-L\-E}, 
+\hyperlink{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0ba69a612323ff1aede91385ab6d4b70243}{\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-A\-C\-C\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_mouse___chronos_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup} (void)
+\begin{DoxyCompactList}\small\item\em \-These are the prototypes for the sketch. \end{DoxyCompactList}\item 
+void \hyperlink{_mouse___chronos_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\begin{DoxyCompactList}\small\item\em ====================================================================== \end{DoxyCompactList}\item 
+void \hyperlink{_mouse___chronos_8cpp_ac33f1b8534d346842097d491f9194a9b}{reset\-\_\-joystick\-\_\-report} ()
+\begin{DoxyCompactList}\small\item\em ====================================================================== \end{DoxyCompactList}\item 
+bool \hyperlink{_mouse___chronos_8cpp_a2641445a3d5064dd14d378e9848d7a7c}{send\-\_\-frame} (int len, uint8\-\_\-t $\ast$frame)
+\item 
+bool \hyperlink{_mouse___chronos_8cpp_a8c72e8eea0bfa0c85c41188f834a21fb}{get\-\_\-frame} (uint8\-\_\-t $\ast$buf, uint16\-\_\-t $\ast$len)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0b}{ap\-\_\-stat\-\_\-t} \hyperlink{_mouse___chronos_8cpp_a2db8c09b4598a5b457667c34a46f311e}{state}
+\item 
+uint8\-\_\-t \hyperlink{_mouse___chronos_8cpp_a86767e86d57915ffe7bce47918645a33}{\-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D} \mbox{[}$\,$\mbox{]} = \{ 0x\-F\-F, 0x07, 0x03 \}
+\begin{DoxyCompactList}\small\item\em \-Defining some chronos commands. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{_mouse___chronos_8cpp_ae90d3a1024401fe5a16180c06aeef483}{\-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T} \mbox{[}$\,$\mbox{]} = \{ 0x\-F\-F, 0x08, 0x07, 0x00, 0x00, 0x00, 0x00 \}
+\item 
+\hyperlink{class_g_h_i_d___system___abstration}{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration} \hyperlink{_mouse___chronos_8cpp_ac320aae7656d467a41157a1de0129d32}{system}
+\begin{DoxyCompactList}\small\item\em \-Here we setup a context object. \end{DoxyCompactList}\item 
+\hyperlink{structrx__packet}{rx\-\_\-packet} \hyperlink{_mouse___chronos_8cpp_a86f7c25dabd5e309c30ba8ff0860b2cb}{rx\-\_\-buffer}
+\begin{DoxyCompactList}\small\item\em \-We define a receive buffer. \end{DoxyCompactList}\item 
+\-U\-S\-B \hyperlink{_mouse___chronos_8cpp_aca92ca9c4144feb13dc06e2408e439ed}{\-Usb}
+\begin{DoxyCompactList}\small\item\em ====================================================================== \end{DoxyCompactList}\item 
+\hyperlink{class_a_c_m_async_oper}{\-A\-C\-M\-Async\-Oper} \hyperlink{_mouse___chronos_8cpp_a44e756f7b5c72a79f23b70a1b231c538}{\-Async\-Oper}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_mouse___chronos_8cpp_a6fdb9ca3747dd2257c6d6e216d9e56e4}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K@{\-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K}}
+\index{\-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K@{\-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-U\-T\-T\-O\-N\-\_\-\-C\-L\-I\-C\-K}~0x01}}\label{_mouse___chronos_8cpp_a6fdb9ca3747dd2257c6d6e216d9e56e4}
+
+
+\-Defined a button state. 
+
+
+
+\-Definition at line 18 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_aeb3ed03d6978a737e3d5a3e7b6f32607}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K@{\-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K}}
+\index{\-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K@{\-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-U\-T\-T\-O\-N\-\_\-\-U\-N\-C\-L\-I\-C\-K}~0x00}}\label{_mouse___chronos_8cpp_aeb3ed03d6978a737e3d5a3e7b6f32607}
+
+
+\-Definition at line 19 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a87f68e96fb938eddc39ad1f19d923a96}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E@{\-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E}}
+\index{\-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E@{\-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-S\-I\-Z\-E}~64}}\label{_mouse___chronos_8cpp_a87f68e96fb938eddc39ad1f19d923a96}
+
+
+\-Here we define the max data size buffer. 
+
+
+
+\-Definition at line 14 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_ab702106cf3b3e96750b6845ded4e0299}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-R\-E\-S\-E\-T@{\-R\-E\-S\-E\-T}}
+\index{\-R\-E\-S\-E\-T@{\-R\-E\-S\-E\-T}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-R\-E\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-S\-E\-T}~0x00}}\label{_mouse___chronos_8cpp_ab702106cf3b3e96750b6845ded4e0299}
+
+
+\-Definition at line 20 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a789bf855a0fc635dbb3471d76e1fa519}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E@{\-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}}
+\index{\-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E@{\-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-A\-L\-I\-D\-\_\-\-A\-C\-C\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~7}}\label{_mouse___chronos_8cpp_a789bf855a0fc635dbb3471d76e1fa519}
+
+
+\-Definition at line 15 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0b}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!ap\-\_\-stat\-\_\-t@{ap\-\_\-stat\-\_\-t}}
+\index{ap\-\_\-stat\-\_\-t@{ap\-\_\-stat\-\_\-t}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{ap\-\_\-stat\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ap\-\_\-stat\-\_\-t}}}\label{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0b}
+\-Defining the state of the \-A\-P in our program \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-S\-T\-A\-T\-E\-\_\-\-A\-P\-\_\-\-O\-F\-F@{\-S\-T\-A\-T\-E\-\_\-\-A\-P\-\_\-\-O\-F\-F}!\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-S\-T\-A\-T\-E\-\_\-\-A\-P\-\_\-\-O\-F\-F@{\-S\-T\-A\-T\-E\-\_\-\-A\-P\-\_\-\-O\-F\-F}}\item[{\em 
+\hypertarget{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0babdeec59b0d0ff6c3d3c2da98ced634a9}{\-S\-T\-A\-T\-E\-\_\-\-A\-P\-\_\-\-O\-F\-F}\label{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0babdeec59b0d0ff6c3d3c2da98ced634a9}
+}]\index{\-S\-T\-A\-T\-E\-\_\-\-I\-D\-L\-E@{\-S\-T\-A\-T\-E\-\_\-\-I\-D\-L\-E}!\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-S\-T\-A\-T\-E\-\_\-\-I\-D\-L\-E@{\-S\-T\-A\-T\-E\-\_\-\-I\-D\-L\-E}}\item[{\em 
+\hypertarget{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0baaade5e53e88cf231292cd1142cce2afe}{\-S\-T\-A\-T\-E\-\_\-\-I\-D\-L\-E}\label{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0baaade5e53e88cf231292cd1142cce2afe}
+}]\index{\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-A\-C\-C\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E@{\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-A\-C\-C\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}!\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-A\-C\-C\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E@{\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-A\-C\-C\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}}\item[{\em 
+\hypertarget{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0ba69a612323ff1aede91385ab6d4b70243}{\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-A\-C\-C\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}\label{_mouse___chronos_8cpp_a2e43dfc2345929a7242f678163158a0ba69a612323ff1aede91385ab6d4b70243}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 25 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{_mouse___chronos_8cpp_a8c72e8eea0bfa0c85c41188f834a21fb}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!get\-\_\-frame@{get\-\_\-frame}}
+\index{get\-\_\-frame@{get\-\_\-frame}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{get\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf get\-\_\-frame} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buf, }
+\item[{uint16\-\_\-t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}}\label{_mouse___chronos_8cpp_a8c72e8eea0bfa0c85c41188f834a21fb}
+\-This method gets a frame from the \-U\-S\-B controller.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buf} & -\/ the buffer where our data lies \\
+\hline
+{\em len} & -\/ the length of the data to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ returns success 
+\end{DoxyReturn}
+\-Get the data
+
+\-Send the success back 
+
+\-Definition at line 336 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_afe461d27b9c48d5921c00d521181f12f}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!loop@{loop}}
+\index{loop@{loop}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf loop} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_mouse___chronos_8cpp_afe461d27b9c48d5921c00d521181f12f}
+
+
+====================================================================== 
+
+\-This is the main worker function, which never quits until the process is complete. \-We check to see if the \-U\-S\-B buffer was not empty
+
+\-We check if our receiver is ready
+
+\-An error occured
+
+\-This is the main state machine of the \-U\-S\-B receiver.
+
+\-If the state of the \-A\-P is off
+
+\-We send an \-O\-N command
+
+\-An error occured
+
+\-Then we set the state to \-I\-D\-L\-E
+
+\-If the state is in fact \-I\-D\-L\-E
+
+\-We send a data request command
+
+\-An error occured
+
+\-We set the state to \-W\-A\-I\-T for data
+
+\-If the state is in wait for data mode
+
+\-Assigne the size of the buffer
+
+\-We get the frame from teh \-A\-P
+
+\-An error occured
+
+\-We check if we got a valid packet
+
+\-We type cast the data to respective containers
+
+\-Here we map the inputs to the framework.
+
+\-Button mapping\-:
+\begin{DoxyItemize}
+\item \-Button 1 = \mbox{[}$\ast$\mbox{]}
+\item \-Button 2 = \mbox{[}\#\mbox{]}
+\item \-Button 3 = \mbox{[}$^\wedge$\mbox{]}
+\end{DoxyItemize}
+
+\-We switch on the button pushes
+
+\-We have button 1 pushed
+
+\-We have button 2 pushed
+
+\-We have button 3 pushed
+
+\-No need for this.
+
+\-Default case
+
+\-Send the usb packet
+
+\-Reset the joystick report.
+
+\-We start the state machine over again
+
+\-Nothing happens \hypertarget{_mouse___chronos_8cpp_ac33f1b8534d346842097d491f9194a9b}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!reset\-\_\-joystick\-\_\-report@{reset\-\_\-joystick\-\_\-report}}
+\index{reset\-\_\-joystick\-\_\-report@{reset\-\_\-joystick\-\_\-report}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{reset\-\_\-joystick\-\_\-report}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf reset\-\_\-joystick\-\_\-report} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_mouse___chronos_8cpp_ac33f1b8534d346842097d491f9194a9b}
+
+
+====================================================================== 
+
+\-This is jsut a utility function which resets the joystick report container to allow for less noise in the \-U\-S\-B stream. 
+
+\-Definition at line 301 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a2641445a3d5064dd14d378e9848d7a7c}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!send\-\_\-frame@{send\-\_\-frame}}
+\index{send\-\_\-frame@{send\-\_\-frame}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{send\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf send\-\_\-frame} (
+\begin{DoxyParamCaption}
+\item[{int}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{_mouse___chronos_8cpp_a2641445a3d5064dd14d378e9848d7a7c}
+\-This is the usb frame sender utility function.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em len} & -\/ the length of the frame to send \\
+\hline
+{\em frame} & -\/ the frame buffer to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ returns success 
+\end{DoxyReturn}
+\-Send the data
+
+\-Send the success back 
+
+\-Definition at line 317 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!setup@{setup}}
+\index{setup@{setup}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf setup} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_mouse___chronos_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}
+
+
+\-These are the prototypes for the sketch. 
+
+======================================================================
+
+\-This function overrides the \-Arduino framework setup function, with our setup routines. \-Provide a system setup
+
+\-Init the \-U\-S\-B stack
+
+\-We make the state in power off mode
+
+\-We delay the time to init the \-U\-S\-B stack 
+
+\-Definition at line 57 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_mouse___chronos_8cpp_ae90d3a1024401fe5a16180c06aeef483}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{\-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T}}
+\index{\-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{\-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-C\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T}\mbox{[}$\,$\mbox{]} = \{ 0x\-F\-F, 0x08, 0x07, 0x00, 0x00, 0x00, 0x00 \}}}\label{_mouse___chronos_8cpp_ae90d3a1024401fe5a16180c06aeef483}
+
+
+\-Definition at line 51 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a86767e86d57915ffe7bce47918645a33}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D@{\-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D}}
+\index{\-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D@{\-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-P\-\_\-\-O\-N\-\_\-\-C\-O\-M\-M\-A\-N\-D}\mbox{[}$\,$\mbox{]} = \{ 0x\-F\-F, 0x07, 0x03 \}}}\label{_mouse___chronos_8cpp_a86767e86d57915ffe7bce47918645a33}
+
+
+\-Defining some chronos commands. 
+
+
+
+\-Definition at line 50 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a44e756f7b5c72a79f23b70a1b231c538}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-Async\-Oper@{\-Async\-Oper}}
+\index{\-Async\-Oper@{\-Async\-Oper}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-Async\-Oper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-C\-M\-Async\-Oper} {\bf \-Async\-Oper}}}\label{_mouse___chronos_8cpp_a44e756f7b5c72a79f23b70a1b231c538}
+
+
+\-Definition at line 150 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a86f7c25dabd5e309c30ba8ff0860b2cb}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!rx\-\_\-buffer@{rx\-\_\-buffer}}
+\index{rx\-\_\-buffer@{rx\-\_\-buffer}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{rx\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rx\-\_\-packet} {\bf rx\-\_\-buffer}}}\label{_mouse___chronos_8cpp_a86f7c25dabd5e309c30ba8ff0860b2cb}
+
+
+\-We define a receive buffer. 
+
+
+
+\-Definition at line 57 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_a2db8c09b4598a5b457667c34a46f311e}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!state@{state}}
+\index{state@{state}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ap\-\_\-stat\-\_\-t} {\bf state}}}\label{_mouse___chronos_8cpp_a2db8c09b4598a5b457667c34a46f311e}
+\hypertarget{_mouse___chronos_8cpp_ac320aae7656d467a41157a1de0129d32}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!system@{system}}
+\index{system@{system}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{system}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration} {\bf system}}}\label{_mouse___chronos_8cpp_ac320aae7656d467a41157a1de0129d32}
+
+
+\-Here we setup a context object. 
+
+
+
+\-Definition at line 54 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{_mouse___chronos_8cpp_aca92ca9c4144feb13dc06e2408e439ed}{\index{\-Mouse\-\_\-\-Chronos.\-cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}!\-Usb@{\-Usb}}
+\index{\-Usb@{\-Usb}!Mouse_Chronos.cpp@{\-Mouse\-\_\-\-Chronos.\-cpp}}
+\subsubsection[{\-Usb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-C\-M} \-Acm \& {\bf \-Usb}}}\label{_mouse___chronos_8cpp_aca92ca9c4144feb13dc06e2408e439ed}
+
+
+====================================================================== 
+
+\-Here we setup \-U\-S\-B objects based on the class defined above 
+
+\-Definition at line 149 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+

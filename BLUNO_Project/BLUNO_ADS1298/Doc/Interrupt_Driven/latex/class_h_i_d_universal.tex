@@ -1,0 +1,265 @@
+\hypertarget{class_h_i_d_universal}{\section{\-H\-I\-D\-Universal \-Class \-Reference}
+\label{class_h_i_d_universal}\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}}
+}
+
+
+{\ttfamily \#include $<$hiduniversal.\-h$>$}
+
+\-Inheritance diagram for \-H\-I\-D\-Universal\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_h_i_d_universal}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries \-H\-I\-D\-Interface}
+\item 
+struct {\bfseries \-Report\-Parser}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_h_i_d_universal_abdbac688c7e4b682055cebd82e13a595}{\-H\-I\-D\-Universal} (\-U\-S\-B $\ast$p)
+\item 
+virtual bool \hyperlink{class_h_i_d_universal_afbd599879e9c3cdea382e87afd6ab29a}{\-Set\-Report\-Parser} (uint8\-\_\-t id, \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} $\ast$prs)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_universal_a384b0e219f763e2d6407636bfd4ccea7}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_universal_af999fc50ef4b5dec0391bda79ec83bda}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_universal_ac27e857a0d9619c8abc31be0b690c83c}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_universal_abcc6921b7beaf0aac2acbcdddd535626}{\-Get\-Address} ()
+\item 
+virtual bool \hyperlink{class_h_i_d_universal_aa4be95e8f5164393ea4766f68c5b0ea8}{is\-Ready} ()
+\item 
+virtual void \hyperlink{class_h_i_d_universal_ab9b13f27eca16e0accc14fff9bd318e2}{\-Endpoint\-Xtract} (uint8\-\_\-t conf, uint8\-\_\-t iface, uint8\-\_\-t alt, uint8\-\_\-t proto, const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} $\ast$ \hyperlink{class_h_i_d_universal_aff53de37b98aa1e4a6e45be701ddcc65}{\-Get\-Report\-Parser} (uint8\-\_\-t id)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_universal_a60f06d86767b4b2c973d08383c7a0048}{\-On\-Init\-Successful} ()
+\item 
+virtual void \hyperlink{class_h_i_d_universal_abac95ce57e678236993d85cbbf0c6c32}{\-Parse\-H\-I\-D\-Data} (\hyperlink{class_h_i_d}{\-H\-I\-D} $\ast$hid, bool is\-\_\-rpt\-\_\-id, uint8\-\_\-t len, uint8\-\_\-t $\ast$buf)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Ep\-Info \hyperlink{class_h_i_d_universal_ad26d2e63130abac2059154bf5afbf152}{ep\-Info} \mbox{[}\hyperlink{class_h_i_d_a884aa67312324e7d23a052a6dc80337e}{total\-Endpoints}\mbox{]}
+\item 
+\-H\-I\-D\-Interface \hyperlink{class_h_i_d_universal_a542ee234ff63c01eb3dff607fb3b0def}{hid\-Interfaces} \mbox{[}\hyperlink{class_h_i_d_afe5186f46ac7b580bb3dc289e3f237b2}{max\-Hid\-Interfaces}\mbox{]}
+\item 
+bool \hyperlink{class_h_i_d_universal_a1c333e67c1bd0e69db565d6976d063b1}{b\-Has\-Report\-Id}
+\item 
+uint16\-\_\-t \hyperlink{class_h_i_d_universal_abc609e49d66fa6260e7cdcd2c4ff0a5a}{\-P\-I\-D}
+\item 
+uint16\-\_\-t \hyperlink{class_h_i_d_universal_a7f2123d1f20327600bb9e49a1ef5b0c7}{\-V\-I\-D}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 24 of file hiduniversal.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_h_i_d_universal_abdbac688c7e4b682055cebd82e13a595}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}}
+\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-H\-I\-D\-Universal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-I\-D\-Universal\-::\-H\-I\-D\-Universal} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_h_i_d_universal_abdbac688c7e4b682055cebd82e13a595}
+
+
+\-Definition at line 20 of file hiduniversal.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_h_i_d_universal_ab9b13f27eca16e0accc14fff9bd318e2}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Endpoint\-Xtract@{\-Endpoint\-Xtract}}
+\index{\-Endpoint\-Xtract@{\-Endpoint\-Xtract}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Endpoint\-Xtract}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-H\-I\-D\-Universal\-::\-Endpoint\-Xtract} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{conf, }
+\item[{uint8\-\_\-t}]{iface, }
+\item[{uint8\-\_\-t}]{alt, }
+\item[{uint8\-\_\-t}]{proto, }
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_universal_ab9b13f27eca16e0accc14fff9bd318e2}
+
+
+\-Definition at line 294 of file hiduniversal.\-cpp.
+
+\hypertarget{class_h_i_d_universal_abcc6921b7beaf0aac2acbcdddd535626}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_h_i_d_universal_abcc6921b7beaf0aac2acbcdddd535626}
+
+
+\-Definition at line 93 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_aff53de37b98aa1e4a6e45be701ddcc65}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Get\-Report\-Parser@{\-Get\-Report\-Parser}}
+\index{\-Get\-Report\-Parser@{\-Get\-Report\-Parser}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Get\-Report\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-I\-D\-Report\-Parser} $\ast$ {\bf \-H\-I\-D\-Universal\-::\-Get\-Report\-Parser} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_h_i_d_universal_aff53de37b98aa1e4a6e45be701ddcc65}
+
+
+\-Reimplemented from \hyperlink{class_h_i_d_ac51c88a0be514a748598008d312adc1d}{\-H\-I\-D}.
+
+
+
+\-Definition at line 84 of file hiduniversal.\-cpp.
+
+\hypertarget{class_h_i_d_universal_a384b0e219f763e2d6407636bfd4ccea7}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_universal_a384b0e219f763e2d6407636bfd4ccea7}
+
+
+\-Definition at line 95 of file hiduniversal.\-cpp.
+
+\hypertarget{class_h_i_d_universal_aa4be95e8f5164393ea4766f68c5b0ea8}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!is\-Ready@{is\-Ready}}
+\index{is\-Ready@{is\-Ready}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-H\-I\-D\-Universal\-::is\-Ready} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_h_i_d_universal_aa4be95e8f5164393ea4766f68c5b0ea8}
+
+
+\-Definition at line 97 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_a60f06d86767b4b2c973d08383c7a0048}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-On\-Init\-Successful@{\-On\-Init\-Successful}}
+\index{\-On\-Init\-Successful@{\-On\-Init\-Successful}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-On\-Init\-Successful}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-On\-Init\-Successful} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_h_i_d_universal_a60f06d86767b4b2c973d08383c7a0048}
+
+
+\-Reimplemented in \hyperlink{class_p_s4_u_s_b_a591218572aa8c5f5402483d19c1eebc6}{\-P\-S4\-U\-S\-B}.
+
+
+
+\-Definition at line 74 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_abac95ce57e678236993d85cbbf0c6c32}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Parse\-H\-I\-D\-Data@{\-Parse\-H\-I\-D\-Data}}
+\index{\-Parse\-H\-I\-D\-Data@{\-Parse\-H\-I\-D\-Data}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Parse\-H\-I\-D\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-H\-I\-D\-Universal\-::\-Parse\-H\-I\-D\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-I\-D} $\ast$}]{hid, }
+\item[{bool}]{is\-\_\-rpt\-\_\-id, }
+\item[{uint8\-\_\-t}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_h_i_d_universal_abac95ce57e678236993d85cbbf0c6c32}
+
+
+\-Reimplemented in \hyperlink{class_p_s4_u_s_b_acf805149a0417d40895d5315b6ead9e6}{\-P\-S4\-U\-S\-B}.
+
+
+
+\-Definition at line 78 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_ac27e857a0d9619c8abc31be0b690c83c}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_universal_ac27e857a0d9619c8abc31be0b690c83c}
+
+
+\-Definition at line 367 of file hiduniversal.\-cpp.
+
+\hypertarget{class_h_i_d_universal_af999fc50ef4b5dec0391bda79ec83bda}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_universal_af999fc50ef4b5dec0391bda79ec83bda}
+
+
+\-Definition at line 340 of file hiduniversal.\-cpp.
+
+\hypertarget{class_h_i_d_universal_afbd599879e9c3cdea382e87afd6ab29a}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-Set\-Report\-Parser@{\-Set\-Report\-Parser}}
+\index{\-Set\-Report\-Parser@{\-Set\-Report\-Parser}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-Set\-Report\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-H\-I\-D\-Universal\-::\-Set\-Report\-Parser} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{id, }
+\item[{{\bf \-H\-I\-D\-Report\-Parser} $\ast$}]{prs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_universal_afbd599879e9c3cdea382e87afd6ab29a}
+
+
+\-Reimplemented from \hyperlink{class_h_i_d_ae3b964d20c828fb27076f50d220fe275}{\-H\-I\-D}.
+
+
+
+\-Definition at line 73 of file hiduniversal.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_h_i_d_universal_a1c333e67c1bd0e69db565d6976d063b1}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!b\-Has\-Report\-Id@{b\-Has\-Report\-Id}}
+\index{b\-Has\-Report\-Id@{b\-Has\-Report\-Id}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{b\-Has\-Report\-Id}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-H\-I\-D\-Universal\-::b\-Has\-Report\-Id}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_h_i_d_universal_a1c333e67c1bd0e69db565d6976d063b1}
+
+
+\-Definition at line 67 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_ad26d2e63130abac2059154bf5afbf152}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!ep\-Info@{ep\-Info}}
+\index{ep\-Info@{ep\-Info}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{ep\-Info}]{\setlength{\rightskip}{0pt plus 5cm}\-Ep\-Info {\bf \-H\-I\-D\-Universal\-::ep\-Info}\mbox{[}{\bf total\-Endpoints}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_h_i_d_universal_ad26d2e63130abac2059154bf5afbf152}
+
+
+\-Definition at line 64 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_a542ee234ff63c01eb3dff607fb3b0def}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!hid\-Interfaces@{hid\-Interfaces}}
+\index{hid\-Interfaces@{hid\-Interfaces}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{hid\-Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}\-H\-I\-D\-Interface {\bf \-H\-I\-D\-Universal\-::hid\-Interfaces}\mbox{[}{\bf max\-Hid\-Interfaces}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_h_i_d_universal_a542ee234ff63c01eb3dff607fb3b0def}
+
+
+\-Definition at line 65 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_abc609e49d66fa6260e7cdcd2c4ff0a5a}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-P\-I\-D@{\-P\-I\-D}}
+\index{\-P\-I\-D@{\-P\-I\-D}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-P\-I\-D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_h_i_d_universal_abc609e49d66fa6260e7cdcd2c4ff0a5a}
+
+
+\-Definition at line 69 of file hiduniversal.\-h.
+
+\hypertarget{class_h_i_d_universal_a7f2123d1f20327600bb9e49a1ef5b0c7}{\index{\-H\-I\-D\-Universal@{\-H\-I\-D\-Universal}!\-V\-I\-D@{\-V\-I\-D}}
+\index{\-V\-I\-D@{\-V\-I\-D}!HIDUniversal@{\-H\-I\-D\-Universal}}
+\subsubsection[{\-V\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-H\-I\-D\-Universal\-::\-V\-I\-D}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_h_i_d_universal_a7f2123d1f20327600bb9e49a1ef5b0c7}
+
+
+\-Definition at line 69 of file hiduniversal.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hiduniversal_8h}{hiduniversal.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hiduniversal_8cpp}{hiduniversal.\-cpp}\end{DoxyCompactItemize}

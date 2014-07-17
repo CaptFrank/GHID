@@ -1,0 +1,500 @@
+\hypertarget{_p_s4_parser_8h}{\section{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included \-Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.0-\/master/\-P\-S4\-Parser.h \-File \-Reference}
+\label{_p_s4_parser_8h}\index{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\-P\-S4\-Parser.\-h@{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\-P\-S4\-Parser.\-h}}
+}
+{\ttfamily \#include \char`\"{}\-Usb.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}controller\-Enums.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_p_s4_buttons}{\-P\-S4\-Buttons}
+\item 
+struct \hyperlink{structtouchpad_x_y}{touchpad\-X\-Y}
+\item 
+struct \hyperlink{struct_p_s4_data}{\-P\-S4\-Data}
+\item 
+struct \hyperlink{struct_p_s4_output}{\-P\-S4\-Output}
+\item 
+class \hyperlink{class_p_s4_parser}{\-P\-S4\-Parser}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62}{\-D\-P\-A\-D\-Enum} \{ \*
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62aafb58dc961545afb332266b117e4a332}{\-D\-P\-A\-D\-\_\-\-U\-P} =  0x0, 
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62abc09f2a57c77693c05e8d52917d2bac0}{\-D\-P\-A\-D\-\_\-\-U\-P\-\_\-\-R\-I\-G\-H\-T} =  0x1, 
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62af0f91a0468a0f49170b119f7de0d5cec}{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T} =  0x2, 
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62a352a732e4f7a41d4a92ab99e661094d0}{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N} =  0x3, 
+\*
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62ab5e7d62ac3dfe6a925d1d6be3c756faa}{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N} =  0x4, 
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62a1b679be7217f73f03393bb379b218d66}{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N\-\_\-\-L\-E\-F\-T} =  0x5, 
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62afe9bfbd6550b91f6640b74a155000cba}{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T} =  0x6, 
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62ac6b9de0c407333a7161ca1efe6e30743}{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-U\-P} =  0x7, 
+\*
+\hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62aeb5da32679ab2abc4001f04d5f8c7044}{\-D\-P\-A\-D\-\_\-\-O\-F\-F} =  0x8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_p_s4_buttons}{\-P\-S4\-Buttons} \hyperlink{_p_s4_parser_8h_a99afcd48c1e5a8f209ef32725eac3431}{\-\_\-\-\_\-attribute\-\_\-\-\_\-} ((packed))
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\-\_\-t \-P\-S4\-\_\-\-B\-U\-T\-T\-O\-N\-S\mbox{[}$\,$\mbox{]} \hyperlink{_p_s4_parser_8h_a737238631fb7209fac2de5d66c33f271}{\-P\-R\-O\-G\-M\-E\-M}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a505b1c269213f0238712a961b1c3cc98}{dpad}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a2c3cbfc647be4891fe4b415053f63b9e}{square}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a227407d85fb364ac8df7c435d24468e9}{cross}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_ac9e2b3e9d64040364dd376568d010d6e}{circle}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a8b4db5b5b2da43fb73faaf930666b8eb}{triangle}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a29bd8198ae48eede434cfc98409ad7de}{l1}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a8321471905fa41833d37333925f7cb89}{r1}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_aee113511efddec3b3aa98a2437b580f4}{l2}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4026ea78600068f90846f180046bfd3a}{r2}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a7162c622d36b95efaf316a26bf8ddb34}{share}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_aace3d640c8d449b8db1162993d259d3f}{options}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_af49e9d323fcbd1e3d87a988dc77a8ebf}{l3}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a226c5724d2ffacad48a5ad7a882d453e}{r3}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_ab6035a8cde311e88dd22d4d70042f14d}{ps}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a8d231366c8cdcb2301689f60ea9d0bd1}{touchpad}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a05b7e8130c7489c7d9875f369f69ff27}{report\-Counter}
+\item 
+uint32\-\_\-t \hyperlink{_p_s4_parser_8h_a97ad06b300d95ba1d023dcb1e825335f}{val}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a0480b812cba9c1d9c71a5fb1071bd0fc}{counter}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_ac598ba1efd0c199285473eb421a5b93d}{touching}
+\item 
+uint16\-\_\-t \hyperlink{_p_s4_parser_8h_a4dde988b1b2adba65ae3efa69f65d960}{x}
+\item 
+uint16\-\_\-t \hyperlink{_p_s4_parser_8h_ab0580f504a7428539be299fa71565f30}{y}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_aff7b59f569ec689a7580bd6911daafd5}{dummy}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_aa85ad952932b4583477a6000af11cbf8}{hat\-Value} \mbox{[}4\mbox{]}
+\item 
+\hyperlink{union_p_s4_buttons}{\-P\-S4\-Buttons} \hyperlink{_p_s4_parser_8h_a3e7981b04bf49097bba8d1d942e7015b}{btn}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a14aa716be21cd5ceb9875315866f5df8}{trigger} \mbox{[}2\mbox{]}
+\item 
+int16\-\_\-t \hyperlink{_p_s4_parser_8h_a0cf1e09a53037f437aec2daadcb9ddb7}{gyro\-Y}
+\item 
+int16\-\_\-t \hyperlink{_p_s4_parser_8h_a44e613c7d72156404c45ba95ed1c6979}{gyro\-Z}
+\item 
+int16\-\_\-t \hyperlink{_p_s4_parser_8h_a3c7dca22bf04338b67471b8d6d0edb3f}{gyro\-X}
+\item 
+int16\-\_\-t \hyperlink{_p_s4_parser_8h_ad59fbaca3ad981da48d25379badf11ad}{acc\-X}
+\item 
+int16\-\_\-t \hyperlink{_p_s4_parser_8h_adf2fb8832cf2d4ed54569cc4e438172c}{acc\-Z}
+\item 
+int16\-\_\-t \hyperlink{_p_s4_parser_8h_af160f716d629f9e62018387f9b41c78b}{acc\-Y}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_ac004308575e284eee2681aea9f966ce1}{dummy2} \mbox{[}9\mbox{]}
+\item 
+\hyperlink{structtouchpad_x_y}{touchpad\-X\-Y} \hyperlink{_p_s4_parser_8h_aae32b0ec8a3e33940e50fbb0fd29a05e}{xy} \mbox{[}3\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_af293beb2bff1b47c0fb060411dd68b0f}{big\-Rumble}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a9a2c63b6ac73cde8ded7e2b90460cdcc}{small\-Rumble}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4c5c6ceb8ed33456261fa907136e0c3a}{r}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a1673907d4d89d763bb7b94ec1eeb7b60}{g}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{b}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a7d332ba0c3474500fdc43e1f04cedc0e}{flash\-On}
+\item 
+uint8\-\_\-t \hyperlink{_p_s4_parser_8h_a2a0da35e9b74068cfe3a5d1ce6a035f4}{flash\-Off}
+\item 
+bool \hyperlink{_p_s4_parser_8h_a12aefd3609642d6e9394c4fbe614cfae}{report\-Changed}
+\item 
+enum \hyperlink{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62}{\-D\-P\-A\-D\-Enum} \hyperlink{_p_s4_parser_8h_a7583c90d93e548320e5fcc6d836af103}{\-\_\-\-\_\-attribute\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-Enum@{\-D\-P\-A\-D\-Enum}}
+\index{\-D\-P\-A\-D\-Enum@{\-D\-P\-A\-D\-Enum}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{\-D\-P\-A\-D\-Enum}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-D\-P\-A\-D\-Enum}}}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-D\-P\-A\-D\-\_\-\-U\-P@{\-D\-P\-A\-D\-\_\-\-U\-P}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-U\-P@{\-D\-P\-A\-D\-\_\-\-U\-P}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62aafb58dc961545afb332266b117e4a332}{\-D\-P\-A\-D\-\_\-\-U\-P}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62aafb58dc961545afb332266b117e4a332}
+}]\index{\-D\-P\-A\-D\-\_\-\-U\-P\-\_\-\-R\-I\-G\-H\-T@{\-D\-P\-A\-D\-\_\-\-U\-P\-\_\-\-R\-I\-G\-H\-T}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-U\-P\-\_\-\-R\-I\-G\-H\-T@{\-D\-P\-A\-D\-\_\-\-U\-P\-\_\-\-R\-I\-G\-H\-T}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62abc09f2a57c77693c05e8d52917d2bac0}{\-D\-P\-A\-D\-\_\-\-U\-P\-\_\-\-R\-I\-G\-H\-T}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62abc09f2a57c77693c05e8d52917d2bac0}
+}]\index{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T@{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T@{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62af0f91a0468a0f49170b119f7de0d5cec}{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62af0f91a0468a0f49170b119f7de0d5cec}
+}]\index{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N@{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62a352a732e4f7a41d4a92ab99e661094d0}{\-D\-P\-A\-D\-\_\-\-R\-I\-G\-H\-T\-\_\-\-D\-O\-W\-N}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62a352a732e4f7a41d4a92ab99e661094d0}
+}]\index{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N@{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N@{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62ab5e7d62ac3dfe6a925d1d6be3c756faa}{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62ab5e7d62ac3dfe6a925d1d6be3c756faa}
+}]\index{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N\-\_\-\-L\-E\-F\-T@{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N\-\_\-\-L\-E\-F\-T}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N\-\_\-\-L\-E\-F\-T@{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N\-\_\-\-L\-E\-F\-T}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62a1b679be7217f73f03393bb379b218d66}{\-D\-P\-A\-D\-\_\-\-D\-O\-W\-N\-\_\-\-L\-E\-F\-T}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62a1b679be7217f73f03393bb379b218d66}
+}]\index{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T@{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T@{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62afe9bfbd6550b91f6640b74a155000cba}{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62afe9bfbd6550b91f6640b74a155000cba}
+}]\index{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-U\-P@{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-U\-P}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-U\-P@{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-U\-P}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62ac6b9de0c407333a7161ca1efe6e30743}{\-D\-P\-A\-D\-\_\-\-L\-E\-F\-T\-\_\-\-U\-P}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62ac6b9de0c407333a7161ca1efe6e30743}
+}]\index{\-D\-P\-A\-D\-\_\-\-O\-F\-F@{\-D\-P\-A\-D\-\_\-\-O\-F\-F}!\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}}\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-D\-P\-A\-D\-\_\-\-O\-F\-F@{\-D\-P\-A\-D\-\_\-\-O\-F\-F}}\item[{\em 
+\hypertarget{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62aeb5da32679ab2abc4001f04d5f8c7044}{\-D\-P\-A\-D\-\_\-\-O\-F\-F}\label{_p_s4_parser_8h_a3eca256e8b59574c290177d7df302a62aeb5da32679ab2abc4001f04d5f8c7044}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{_p_s4_parser_8h_a99afcd48c1e5a8f209ef32725eac3431}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{\-\_\-\-\_\-attribute\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}union {\bf \-P\-S4\-Buttons} {\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-} (
+\begin{DoxyParamCaption}
+\item[{(packed)}]{}
+\end{DoxyParamCaption}
+)}}\label{_p_s4_parser_8h_a99afcd48c1e5a8f209ef32725eac3431}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_p_s4_parser_8h_a7583c90d93e548320e5fcc6d836af103}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-attribute\-\_\-\-\_\-@{\-\_\-\-\_\-attribute\-\_\-\-\_\-}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{\-\_\-\-\_\-attribute\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-D\-P\-A\-D\-Enum}  {\bf \-\_\-\-\_\-attribute\-\_\-\-\_\-}}}\label{_p_s4_parser_8h_a7583c90d93e548320e5fcc6d836af103}
+\hypertarget{_p_s4_parser_8h_ad59fbaca3ad981da48d25379badf11ad}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!acc\-X@{acc\-X}}
+\index{acc\-X@{acc\-X}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{acc\-X}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf acc\-X}}}\label{_p_s4_parser_8h_ad59fbaca3ad981da48d25379badf11ad}
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_af160f716d629f9e62018387f9b41c78b}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!acc\-Y@{acc\-Y}}
+\index{acc\-Y@{acc\-Y}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{acc\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf acc\-Y}}}\label{_p_s4_parser_8h_af160f716d629f9e62018387f9b41c78b}
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_adf2fb8832cf2d4ed54569cc4e438172c}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!acc\-Z@{acc\-Z}}
+\index{acc\-Z@{acc\-Z}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{acc\-Z}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf acc\-Z}}}\label{_p_s4_parser_8h_adf2fb8832cf2d4ed54569cc4e438172c}
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!b@{b}}
+\index{b@{b}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{b}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf b}}}\label{_p_s4_parser_8h_a4313c9563516f94387762ab05763456b}
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_af293beb2bff1b47c0fb060411dd68b0f}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!big\-Rumble@{big\-Rumble}}
+\index{big\-Rumble@{big\-Rumble}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{big\-Rumble}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf big\-Rumble}}}\label{_p_s4_parser_8h_af293beb2bff1b47c0fb060411dd68b0f}
+
+
+\-Definition at line 111 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a3e7981b04bf49097bba8d1d942e7015b}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!btn@{btn}}
+\index{btn@{btn}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{btn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-S4\-Buttons} {\bf btn}}}\label{_p_s4_parser_8h_a3e7981b04bf49097bba8d1d942e7015b}
+
+
+\-Definition at line 106 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_ac9e2b3e9d64040364dd376568d010d6e}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!circle@{circle}}
+\index{circle@{circle}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{circle}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf circle}}}\label{_p_s4_parser_8h_ac9e2b3e9d64040364dd376568d010d6e}
+
+
+\-Definition at line 74 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a0480b812cba9c1d9c71a5fb1071bd0fc}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!counter@{counter}}
+\index{counter@{counter}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf counter}}}\label{_p_s4_parser_8h_a0480b812cba9c1d9c71a5fb1071bd0fc}
+
+
+\-Definition at line 82 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a227407d85fb364ac8df7c435d24468e9}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!cross@{cross}}
+\index{cross@{cross}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf cross}}}\label{_p_s4_parser_8h_a227407d85fb364ac8df7c435d24468e9}
+
+
+\-Definition at line 73 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a505b1c269213f0238712a961b1c3cc98}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!dpad@{dpad}}
+\index{dpad@{dpad}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{dpad}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf dpad}}}\label{_p_s4_parser_8h_a505b1c269213f0238712a961b1c3cc98}
+
+
+\-Definition at line 71 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_aff7b59f569ec689a7580bd6911daafd5}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!dummy@{dummy}}
+\index{dummy@{dummy}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{dummy}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf dummy}}}\label{_p_s4_parser_8h_aff7b59f569ec689a7580bd6911daafd5}
+
+
+\-Definition at line 83 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_ac004308575e284eee2681aea9f966ce1}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!dummy2@{dummy2}}
+\index{dummy2@{dummy2}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{dummy2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf dummy2}\mbox{[}9\mbox{]}}}\label{_p_s4_parser_8h_ac004308575e284eee2681aea9f966ce1}
+
+
+\-Definition at line 115 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a2a0da35e9b74068cfe3a5d1ce6a035f4}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!flash\-Off@{flash\-Off}}
+\index{flash\-Off@{flash\-Off}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{flash\-Off}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf flash\-Off}}}\label{_p_s4_parser_8h_a2a0da35e9b74068cfe3a5d1ce6a035f4}
+
+
+\-Definition at line 113 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a7d332ba0c3474500fdc43e1f04cedc0e}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!flash\-On@{flash\-On}}
+\index{flash\-On@{flash\-On}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{flash\-On}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf flash\-On}}}\label{_p_s4_parser_8h_a7d332ba0c3474500fdc43e1f04cedc0e}
+
+
+\-Definition at line 113 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a1673907d4d89d763bb7b94ec1eeb7b60}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!g@{g}}
+\index{g@{g}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf g}}}\label{_p_s4_parser_8h_a1673907d4d89d763bb7b94ec1eeb7b60}
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a3c7dca22bf04338b67471b8d6d0edb3f}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!gyro\-X@{gyro\-X}}
+\index{gyro\-X@{gyro\-X}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{gyro\-X}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf gyro\-X}}}\label{_p_s4_parser_8h_a3c7dca22bf04338b67471b8d6d0edb3f}
+
+
+\-Definition at line 111 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a0cf1e09a53037f437aec2daadcb9ddb7}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!gyro\-Y@{gyro\-Y}}
+\index{gyro\-Y@{gyro\-Y}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{gyro\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf gyro\-Y}}}\label{_p_s4_parser_8h_a0cf1e09a53037f437aec2daadcb9ddb7}
+
+
+\-Definition at line 111 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a44e613c7d72156404c45ba95ed1c6979}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!gyro\-Z@{gyro\-Z}}
+\index{gyro\-Z@{gyro\-Z}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{gyro\-Z}]{\setlength{\rightskip}{0pt plus 5cm}int16\-\_\-t {\bf gyro\-Z}}}\label{_p_s4_parser_8h_a44e613c7d72156404c45ba95ed1c6979}
+
+
+\-Definition at line 111 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_aa85ad952932b4583477a6000af11cbf8}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!hat\-Value@{hat\-Value}}
+\index{hat\-Value@{hat\-Value}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{hat\-Value}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf hat\-Value}\mbox{[}4\mbox{]}}}\label{_p_s4_parser_8h_aa85ad952932b4583477a6000af11cbf8}
+
+
+\-Definition at line 105 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a29bd8198ae48eede434cfc98409ad7de}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!l1@{l1}}
+\index{l1@{l1}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{l1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf l1}}}\label{_p_s4_parser_8h_a29bd8198ae48eede434cfc98409ad7de}
+
+
+\-Definition at line 77 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_aee113511efddec3b3aa98a2437b580f4}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!l2@{l2}}
+\index{l2@{l2}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{l2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf l2}}}\label{_p_s4_parser_8h_aee113511efddec3b3aa98a2437b580f4}
+
+
+\-Definition at line 79 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_af49e9d323fcbd1e3d87a988dc77a8ebf}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!l3@{l3}}
+\index{l3@{l3}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{l3}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf l3}}}\label{_p_s4_parser_8h_af49e9d323fcbd1e3d87a988dc77a8ebf}
+
+
+\-Definition at line 83 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_aace3d640c8d449b8db1162993d259d3f}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!options@{options}}
+\index{options@{options}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{options}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf options}}}\label{_p_s4_parser_8h_aace3d640c8d449b8db1162993d259d3f}
+
+
+\-Definition at line 82 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a737238631fb7209fac2de5d66c33f271}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!\-P\-R\-O\-G\-M\-E\-M@{\-P\-R\-O\-G\-M\-E\-M}}
+\index{\-P\-R\-O\-G\-M\-E\-M@{\-P\-R\-O\-G\-M\-E\-M}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{\-P\-R\-O\-G\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t \-P\-S4\-\_\-\-B\-U\-T\-T\-O\-N\-S \mbox{[}$\,$\mbox{]} {\bf \-P\-R\-O\-G\-M\-E\-M}}}\label{_p_s4_parser_8h_a737238631fb7209fac2de5d66c33f271}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        UP, 
+        RIGHT, 
+        DOWN, 
+        LEFT, 
+
+        0x0C, 
+        0x0D, 
+        0x0E, 
+        0x0F, 
+
+        0x0A, 
+        0x0B, 
+        0x08, 
+        0x09, 
+
+        0x07, 
+        0x06, 
+        0x05, 
+        0x04, 
+
+        0x10, 
+        0x11, 
+}
+\end{DoxyCode}
+\-Buttons on the controller 
+
+\-Definition at line 25 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_ab6035a8cde311e88dd22d4d70042f14d}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!ps@{ps}}
+\index{ps@{ps}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{ps}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf ps}}}\label{_p_s4_parser_8h_ab6035a8cde311e88dd22d4d70042f14d}
+
+
+\-Definition at line 86 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a4c5c6ceb8ed33456261fa907136e0c3a}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!r@{r}}
+\index{r@{r}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{r}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf r}}}\label{_p_s4_parser_8h_a4c5c6ceb8ed33456261fa907136e0c3a}
+
+
+\-Definition at line 112 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a8321471905fa41833d37333925f7cb89}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!r1@{r1}}
+\index{r1@{r1}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{r1}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf r1}}}\label{_p_s4_parser_8h_a8321471905fa41833d37333925f7cb89}
+
+
+\-Definition at line 78 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a4026ea78600068f90846f180046bfd3a}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!r2@{r2}}
+\index{r2@{r2}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{r2}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf r2}}}\label{_p_s4_parser_8h_a4026ea78600068f90846f180046bfd3a}
+
+
+\-Definition at line 80 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a226c5724d2ffacad48a5ad7a882d453e}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!r3@{r3}}
+\index{r3@{r3}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{r3}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf r3}}}\label{_p_s4_parser_8h_a226c5724d2ffacad48a5ad7a882d453e}
+
+
+\-Definition at line 84 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a12aefd3609642d6e9394c4fbe614cfae}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!report\-Changed@{report\-Changed}}
+\index{report\-Changed@{report\-Changed}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{report\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf report\-Changed}}}\label{_p_s4_parser_8h_a12aefd3609642d6e9394c4fbe614cfae}
+
+
+\-Definition at line 114 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a05b7e8130c7489c7d9875f369f69ff27}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!report\-Counter@{report\-Counter}}
+\index{report\-Counter@{report\-Counter}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{report\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf report\-Counter}}}\label{_p_s4_parser_8h_a05b7e8130c7489c7d9875f369f69ff27}
+
+
+\-Definition at line 88 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a7162c622d36b95efaf316a26bf8ddb34}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!share@{share}}
+\index{share@{share}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{share}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf share}}}\label{_p_s4_parser_8h_a7162c622d36b95efaf316a26bf8ddb34}
+
+
+\-Definition at line 81 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a9a2c63b6ac73cde8ded7e2b90460cdcc}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!small\-Rumble@{small\-Rumble}}
+\index{small\-Rumble@{small\-Rumble}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{small\-Rumble}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf small\-Rumble}}}\label{_p_s4_parser_8h_a9a2c63b6ac73cde8ded7e2b90460cdcc}
+
+
+\-Definition at line 111 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a2c3cbfc647be4891fe4b415053f63b9e}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!square@{square}}
+\index{square@{square}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{square}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf square}}}\label{_p_s4_parser_8h_a2c3cbfc647be4891fe4b415053f63b9e}
+
+
+\-Definition at line 72 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_ac598ba1efd0c199285473eb421a5b93d}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!touching@{touching}}
+\index{touching@{touching}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{touching}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf touching}}}\label{_p_s4_parser_8h_ac598ba1efd0c199285473eb421a5b93d}
+
+
+\-Definition at line 83 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a8d231366c8cdcb2301689f60ea9d0bd1}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!touchpad@{touchpad}}
+\index{touchpad@{touchpad}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{touchpad}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf touchpad}}}\label{_p_s4_parser_8h_a8d231366c8cdcb2301689f60ea9d0bd1}
+
+
+\-Definition at line 87 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a8b4db5b5b2da43fb73faaf930666b8eb}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!triangle@{triangle}}
+\index{triangle@{triangle}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{triangle}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf triangle}}}\label{_p_s4_parser_8h_a8b4db5b5b2da43fb73faaf930666b8eb}
+
+
+\-Definition at line 75 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a14aa716be21cd5ceb9875315866f5df8}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!trigger@{trigger}}
+\index{trigger@{trigger}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{trigger}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf trigger}\mbox{[}2\mbox{]}}}\label{_p_s4_parser_8h_a14aa716be21cd5ceb9875315866f5df8}
+
+
+\-Definition at line 107 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a97ad06b300d95ba1d023dcb1e825335f}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!val@{val}}
+\index{val@{val}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf val}}}\label{_p_s4_parser_8h_a97ad06b300d95ba1d023dcb1e825335f}
+
+
+\-Definition at line 93 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_a4dde988b1b2adba65ae3efa69f65d960}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!x@{x}}
+\index{x@{x}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf x}}}\label{_p_s4_parser_8h_a4dde988b1b2adba65ae3efa69f65d960}
+
+
+\-Definition at line 84 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_aae32b0ec8a3e33940e50fbb0fd29a05e}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!xy@{xy}}
+\index{xy@{xy}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{xy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf touchpad\-X\-Y} {\bf xy}\mbox{[}3\mbox{]}}}\label{_p_s4_parser_8h_aae32b0ec8a3e33940e50fbb0fd29a05e}
+
+
+\-Definition at line 116 of file \-P\-S4\-Parser.\-h.
+
+\hypertarget{_p_s4_parser_8h_ab0580f504a7428539be299fa71565f30}{\index{\-P\-S4\-Parser.\-h@{\-P\-S4\-Parser.\-h}!y@{y}}
+\index{y@{y}!PS4Parser.h@{\-P\-S4\-Parser.\-h}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf y}}}\label{_p_s4_parser_8h_ab0580f504a7428539be299fa71565f30}
+
+
+\-Definition at line 85 of file \-P\-S4\-Parser.\-h.
+

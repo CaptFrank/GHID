@@ -1,0 +1,73 @@
+\hypertarget{class_analog___sensor___driver}{\section{\-Analog\-\_\-\-Sensor\-\_\-\-Driver \-Class \-Reference}
+\label{class_analog___sensor___driver}\index{\-Analog\-\_\-\-Sensor\-\_\-\-Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}}
+}
+
+
+{\ttfamily \#include $<$\-Analog\-Sensor\-Driver.\-h$>$}
+
+\-Inheritance diagram for \-Analog\-\_\-\-Sensor\-\_\-\-Driver\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_analog___sensor___driver}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_analog___sensor___driver_afa62b398765d767b2eea98013f0ff398}{\-Analog\-\_\-\-Sensor\-\_\-\-Driver} (uint8\-\_\-t port)
+\item 
+\hyperlink{structanalog__measurement__t}{analog\-\_\-measurement\-\_\-t} $\ast$ \hyperlink{class_analog___sensor___driver_a85eecc1fba4b49cd366695e906ccf7ed}{measure} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is the handler class that measures the battery voltage. \-This class extends the \-A\-D\-C\-Driver class (\begin{DoxySeeAlso}{\-See also}
+\-A\-D\-C\-Driver) as it is in fact an analog measurement. 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 27 of file \-Analog\-Sensor\-Driver.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_analog___sensor___driver_afa62b398765d767b2eea98013f0ff398}{\index{\-Analog\-\_\-\-Sensor\-\_\-\-Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}!\-Analog\-\_\-\-Sensor\-\_\-\-Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}}
+\index{\-Analog\-\_\-\-Sensor\-\_\-\-Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}!Analog_Sensor_Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}}
+\subsubsection[{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Sensor\-\_\-\-Driver\-::\-Analog\-\_\-\-Sensor\-\_\-\-Driver} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{class_analog___sensor___driver_afa62b398765d767b2eea98013f0ff398}
+\-The default constructor for the class. \-Setup the filter 
+
+\-Definition at line 13 of file \-Analog\-Sensor\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_analog___sensor___driver_a85eecc1fba4b49cd366695e906ccf7ed}{\index{\-Analog\-\_\-\-Sensor\-\_\-\-Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}!measure@{measure}}
+\index{measure@{measure}!Analog_Sensor_Driver@{\-Analog\-\_\-\-Sensor\-\_\-\-Driver}}
+\subsubsection[{measure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf analog\-\_\-measurement\-\_\-t} $\ast$ {\bf \-Analog\-\_\-\-Sensor\-\_\-\-Driver\-::measure} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_analog___sensor___driver_a85eecc1fba4b49cd366695e906ccf7ed}
+\-This is the measure method where all the work is done.
+
+\-This is the measure method where all the work is done.
+
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structanalog__measurement__t}{analog\-\_\-measurement\-\_\-t} -\/ the result 
+\end{DoxyReturn}
+\-We filter the input
+
+\-Check if its a valid value 
+
+\-Definition at line 24 of file \-Analog\-Sensor\-Driver.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_analog_sensor_driver_8h}{\-Analog\-Sensor\-Driver.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_analog_sensor_driver_8cpp}{\-Analog\-Sensor\-Driver.\-cpp}\end{DoxyCompactItemize}

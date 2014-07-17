@@ -1,0 +1,141 @@
+\hypertarget{class_g_h_i_d___e_e_p_r_o_m}{\section{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M \-Class \-Reference}
+\label{class_g_h_i_d___e_e_p_r_o_m}\index{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}}
+}
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-h$>$}
+
+\-Inheritance diagram for \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_h_i_d___e_e_p_r_o_m}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_h_i_d___e_e_p_r_o_m_a47a71d5c793a5ca3c63e705f713580be}{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M} ()
+\begin{DoxyCompactList}\small\item\em \-Public context. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___e_e_p_r_o_m_a2efced423e40b744365f535b11b2b38c}{write\-\_\-data} (int eeprom\-\_\-ptr, byte $\ast$\hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data}, byte length)
+\begin{DoxyCompactList}\small\item\em \-Write data is not full. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___e_e_p_r_o_m_a5e464f6c5b053b98cc2348bb88a6cb78}{read\-\_\-data} (\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} $\ast$buffer, int eeprom\-\_\-ptr)
+\begin{DoxyCompactList}\small\item\em \-Read data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is an override of the \-Arduino \-E\-E\-P\-R\-O\-M class, which handles, the eeprom reading and writing on the internal \-Arduino eeprom.
+
+\begin{DoxySeeAlso}{\-See also}
+\-E\-E\-P\-R\-O\-M\-Class.\-h 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 35 of file \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_g_h_i_d___e_e_p_r_o_m_a47a71d5c793a5ca3c63e705f713580be}{\index{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}!\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}}
+\index{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}!GHID_EEPROM@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M\-::\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___e_e_p_r_o_m_a47a71d5c793a5ca3c63e705f713580be}
+
+
+\-Public context. 
+
+\-The default constructor.
+
+\-The default constructor. \-In the default constructor, we check the filesystem integrity, and the remaining space. \-We check the file intergrity
+
+\-We check if the file is full 
+
+\-Definition at line 11 of file \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_g_h_i_d___e_e_p_r_o_m_a5e464f6c5b053b98cc2348bb88a6cb78}{\index{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}!read\-\_\-data@{read\-\_\-data}}
+\index{read\-\_\-data@{read\-\_\-data}!GHID_EEPROM@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}}
+\subsubsection[{read\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M\-::read\-\_\-data} (
+\begin{DoxyParamCaption}
+\item[{{\bf buffer\-\_\-struct\-\_\-t} $\ast$}]{buffer, }
+\item[{int}]{eeprom\-\_\-ptr}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___e_e_p_r_o_m_a5e464f6c5b053b98cc2348bb88a6cb78}
+
+
+\-Read data. 
+
+\-The following is a method that also follows the same path as the given \hyperlink{class_e_e_p_r_o_m_class_aa504020e188bc95dc1d555c6dc254d28}{read()} function in the \hyperlink{class_e_e_p_r_o_m_class}{\-E\-E\-P\-R\-O\-M\-Class} \-A\-P\-I, but instead of reading a byte at a time, we read a certain number of bytes into a buffer.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer\-\_\-struct\-\_\-t$\ast$} & -\/ a pointer to a buffer structure \\
+\hline
+{\em eeprom\-\_\-ptr} & -\/ the start address to read \\
+\hline
+\end{DoxyParams}
+\-Iterate the bytes
+
+\-Assign the data to the buffe struct 
+
+\-Definition at line 43 of file \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-cpp.
+
+\hypertarget{class_g_h_i_d___e_e_p_r_o_m_a2efced423e40b744365f535b11b2b38c}{\index{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}!write\-\_\-data@{write\-\_\-data}}
+\index{write\-\_\-data@{write\-\_\-data}!GHID_EEPROM@{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M}}
+\subsubsection[{write\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M\-::write\-\_\-data} (
+\begin{DoxyParamCaption}
+\item[{int}]{eeprom\-\_\-ptr, }
+\item[{byte $\ast$}]{data, }
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___e_e_p_r_o_m_a2efced423e40b744365f535b11b2b38c}
+
+
+\-Write data is not full. 
+
+\-The extended class has 2 methods that are used.
+\begin{DoxyItemize}
+\item read(eeprom\-\_\-address)
+\begin{DoxyItemize}
+\item \-The eeprom address parameter is the address of the eeprom that we wish to read.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item write(eeprom\-\_\-address, data)
+\begin{DoxyItemize}
+\item \-The eeprom address parameter that we wish to write to.
+\item \-The data is the data that we wish to write to the eeprom.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\-Note\-: these 2 methods override the full flag. \-The following method is essentially the same method, provided by the \hyperlink{class_e_e_p_r_o_m_class}{\-E\-E\-P\-R\-O\-M\-Class} \-A\-P\-I, but instead it uses a byte$\ast$ and a length. \-This method is advantageous, as it throws less data on the stack.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em eeprom\-\_\-ptr} & -\/ byte data address at which we will write the data to \\
+\hline
+{\em data} & -\/ byte$\ast$ data pointer \\
+\hline
+{\em length} & -\/ byte length of data to write. \\
+\hline
+\end{DoxyParams}
+\-Check if full
+
+\-Write data
+
+\-We update the space 
+
+\-Definition at line 28 of file \-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___e_e_p_r_o_m_8h}{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___e_e_p_r_o_m_8cpp}{\-G\-H\-I\-D\-\_\-\-E\-E\-P\-R\-O\-M.\-cpp}\end{DoxyCompactItemize}

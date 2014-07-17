@@ -1,0 +1,585 @@
+.TH "WII" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WII \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Wii\&.h>\fP
+.PP
+Inherits \fBBluetoothService\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWII\fP (\fBBTD\fP *p, bool \fBpair\fP=false)"
+.br
+.in -1c
+.PP
+.RI "\fBBluetoothService implementation\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "virtual void \fBACLData\fP (uint8_t *\fBACLData\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBRun\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBReset\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdisconnect\fP ()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fBWii Controller functions\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBgetButtonPress\fP (\fBButtonEnum\fP \fBb\fP)"
+.br
+.ti -1c
+.RI "bool \fBgetButtonClick\fP (\fBButtonEnum\fP \fBb\fP)"
+.br
+.ti -1c
+.RI "void \fBpair\fP (void)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetAnalogHat\fP (\fBHatEnum\fP a)"
+.br
+.ti -1c
+.RI "uint16_t \fBgetAnalogHat\fP (\fBAnalogHatEnum\fP a)"
+.br
+.ti -1c
+.RI "double \fBgetPitch\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetRoll\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetYaw\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAllOff\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRumbleOff\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRumbleOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRumbleToggle\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLedRaw\fP (uint8_t value)"
+.br
+.ti -1c
+.RI "void \fBsetLedOff\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLedOff\fP (\fBLEDEnum\fP a)"
+.br
+.ti -1c
+.RI "void \fBsetLedOn\fP (\fBLEDEnum\fP a)"
+.br
+.ti -1c
+.RI "void \fBsetLedToggle\fP (\fBLEDEnum\fP a)"
+.br
+.ti -1c
+.RI "void \fBsetLedStatus\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBgetBatteryLevel\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBgetWiiState\fP ()"
+.br
+.ti -1c
+.RI "void \fBattachOnInit\fP (void(*funcOnInit)(void))"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "double \fBgetWiimotePitch\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetWiimoteRoll\fP ()"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "double \fBgetNunchuckPitch\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetNunchuckRoll\fP ()"
+.br
+.in -1c
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBgyroPitch\fP"
+.br
+.ti -1c
+.RI "double \fBgyroRoll\fP"
+.br
+.ti -1c
+.RI "double \fBgyroYaw\fP"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBwiimoteConnected\fP"
+.br
+.ti -1c
+.RI "bool \fBnunchuckConnected\fP"
+.br
+.ti -1c
+.RI "bool \fBmotionPlusConnected\fP"
+.br
+.ti -1c
+.RI "bool \fBwiiUProControllerConnected\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "int16_t \fBaccXwiimote\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccYwiimote\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccZwiimote\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccXnunchuck\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccYnunchuck\fP"
+.br
+.ti -1c
+.RI "int16_t \fBaccZnunchuck\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "double \fBpitchGyroSpeed\fP"
+.br
+.ti -1c
+.RI "double \fBrollGyroSpeed\fP"
+.br
+.ti -1c
+.RI "double \fByawGyroSpeed\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "uint16_t \fBpitchGyroScale\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBrollGyroScale\fP"
+.br
+.ti -1c
+.RI "uint16_t \fByawGyroScale\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "int16_t \fBgyroYawRaw\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgyroRollRaw\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgyroPitchRaw\fP"
+.br
+.in -1c
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "int16_t \fBgyroYawZero\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgyroRollZero\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgyroPitchZero\fP"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+This \fBBluetoothService\fP class implements support for the Wiimote including the Nunchuck and Motion Plus extension\&.
+.PP
+It also support the Wii U Pro Controller\&. 
+.PP
+Definition at line 47 of file Wii\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBWII::WII\fP (\fBBTD\fP *p, boolpair = \fCfalse\fP)"Constructor for the \fBWII\fP class\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP Pointer to \fBBTD\fP class instance\&. 
+.br
+\fIpair\fP Set this to true in order to pair with the Wiimote\&. If the argument is omitted then it won't pair with it\&. One can use \fBPAIR\fP to set it to true\&. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file Wii\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBWII::ACLData\fP (uint8_t *ACLData)\fC [virtual]\fP"Used to pass acldata to the services\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIACLData\fP Incoming acldata\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 135 of file Wii\&.cpp\&.
+.SS "void \fBWII::attachOnInit\fP (void(*)(void)funcOnInit)\fC [inline]\fP"Used to call your own function when the controller is successfully initialized\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfuncOnInit\fP Function to call\&. 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file Wii\&.h\&.
+.SS "void \fBWII::disconnect\fP ()\fC [virtual]\fP"Used this to disconnect any of the controllers\&. 
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 118 of file Wii\&.cpp\&.
+.SS "uint8_t \fBWII::getAnalogHat\fP (\fBHatEnum\fPa)"Used to read the joystick of the Nunchuck\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP Either \fBHatX\fP or \fBHatY\fP\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Return the analog value in the range from approximately 25-230\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1059 of file Wii\&.cpp\&.
+.SS "uint16_t \fBWII::getAnalogHat\fP (\fBAnalogHatEnum\fPa)"Used to read the joystick of the Wii U Pro Controller\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP Either \fBLeftHatX\fP, \fBLeftHatY\fP, \fBRightHatX\fP or \fBRightHatY\fP\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Return the analog value in the range from approximately 800-3200\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1071 of file Wii\&.cpp\&.
+.SS "uint8_t \fBWII::getBatteryLevel\fP ()"Return the battery level of the Wiimote\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The battery level in the range 0-255\&. 
+.RE
+.PP
+
+.PP
+Definition at line 919 of file Wii\&.cpp\&.
+.SS "bool \fBWII::getButtonClick\fP (\fBButtonEnum\fPb)"
+.PP
+Definition at line 1048 of file Wii\&.cpp\&.
+.SS "bool \fBWII::getButtonPress\fP (\fBButtonEnum\fPb)"getButtonPress(Button b) will return true as long as the button is held down\&.
+.PP
+While getButtonClick(Button b) will only return it once\&.
+.PP
+So you instance if you need to increase a variable once you would use getButtonClick(Button b), but if you need to drive a robot forward you would use getButtonPress(Button b)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIb\fP \fBButtonEnum\fP to read\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBgetButtonPress(ButtonEnum b)\fP will return a true as long as a button is held down, while \fBgetButtonClick(ButtonEnum b)\fP will return true once for each button press\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1041 of file Wii\&.cpp\&.
+.SS "double \fBWII::getNunchuckPitch\fP ()\fC [inline]\fP"Pitch and roll calculated from the accelerometer inside the Nunchuck\&. 
+.PP
+Definition at line 230 of file Wii\&.h\&.
+.SS "double \fBWII::getNunchuckRoll\fP ()\fC [inline]\fP"
+.PP
+Definition at line 234 of file Wii\&.h\&.
+.SS "double \fBWII::getPitch\fP ()\fC [inline]\fP"Pitch calculated from the Wiimote\&. A complimentary filter is used if the Motion Plus is connected\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Pitch in the range from 0-360\&. 
+.RE
+.PP
+
+.PP
+Definition at line 110 of file Wii\&.h\&.
+.SS "double \fBWII::getRoll\fP ()\fC [inline]\fP"Roll calculated from the Wiimote\&. A complimentary filter is used if the Motion Plus is connected\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Roll in the range from 0-360\&. 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file Wii\&.h\&.
+.SS "double \fBWII::getWiimotePitch\fP ()\fC [inline]\fP"Pitch and roll calculated from the accelerometer inside the Wiimote\&. 
+.PP
+Definition at line 218 of file Wii\&.h\&.
+.SS "double \fBWII::getWiimoteRoll\fP ()\fC [inline]\fP"
+.PP
+Definition at line 222 of file Wii\&.h\&.
+.SS "uint8_t \fBWII::getWiiState\fP ()\fC [inline]\fP"Return the Wiimote state\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+See: http://wiibrew.org/wiki/Wiimote#0x20:_Status\&. 
+.RE
+.PP
+
+.PP
+Definition at line 189 of file Wii\&.h\&.
+.SS "double \fBWII::getYaw\fP ()\fC [inline]\fP"This is the yaw calculated by the gyro\&.
+.PP
+\fBNOTE:\fP This angle will drift a lot and is only available if the Motion Plus extension is connected\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The angle calculated using the gyro\&. 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file Wii\&.h\&.
+.SS "void \fBWII::pair\fP (void)\fC [inline]\fP"Call this to start the paring sequence with a controller 
+.PP
+Definition at line 89 of file Wii\&.h\&.
+.SS "void \fBWII::Reset\fP ()\fC [virtual]\fP"Use this to reset the service\&. 
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 104 of file Wii\&.cpp\&.
+.SS "void \fBWII::Run\fP ()\fC [virtual]\fP"Used to run part of the state machine\&. 
+.PP
+Reimplemented from \fBBluetoothService\fP\&.
+.PP
+Definition at line 684 of file Wii\&.cpp\&.
+.SS "void \fBWII::setAllOff\fP ()"Used to set all LEDs and rumble off\&. 
+.PP
+Definition at line 854 of file Wii\&.cpp\&.
+.SS "void \fBWII::setLedOff\fP ()\fC [inline]\fP"Turn all LEDs off\&. 
+.PP
+Definition at line 152 of file Wii\&.h\&.
+.SS "void \fBWII::setLedOff\fP (\fBLEDEnum\fPa)"Turn the specific \fBLEDEnum\fP off\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP The \fBLEDEnum\fP to turn off\&. 
+.RE
+.PP
+
+.PP
+Definition at line 884 of file Wii\&.cpp\&.
+.SS "void \fBWII::setLedOn\fP (\fBLEDEnum\fPa)"Turn the specific \fBLEDEnum\fP on\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP The \fBLEDEnum\fP to turn on\&. 
+.RE
+.PP
+
+.PP
+Definition at line 890 of file Wii\&.cpp\&.
+.SS "void \fBWII::setLedRaw\fP (uint8_tvalue)"Set LED value without using the \fBLEDEnum\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP See: \fBLEDEnum\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 878 of file Wii\&.cpp\&.
+.SS "void \fBWII::setLedStatus\fP ()"This will set the LEDs, so the user can see which connections are active\&.
+.PP
+The first \fBLEDEnum\fP indicate that the Wiimote is connected, the second \fBLEDEnum\fP indicate indicate that a Motion Plus is also connected the third \fBLEDEnum\fP will indicate that a Nunchuck controller is also connected\&. 
+.PP
+Definition at line 906 of file Wii\&.cpp\&.
+.SS "void \fBWII::setLedToggle\fP (\fBLEDEnum\fPa)"Toggle the specific \fBLEDEnum\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP The \fBLEDEnum\fP to toggle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 900 of file Wii\&.cpp\&.
+.SS "void \fBWII::setRumbleOff\fP ()"Turn off rumble\&. 
+.PP
+Definition at line 860 of file Wii\&.cpp\&.
+.SS "void \fBWII::setRumbleOn\fP ()"Turn on rumble\&. 
+.PP
+Definition at line 866 of file Wii\&.cpp\&.
+.SS "void \fBWII::setRumbleToggle\fP ()"Toggle rumble\&. 
+.PP
+Definition at line 872 of file Wii\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int16_t \fBWII::accXnunchuck\fP"
+.PP
+Definition at line 242 of file Wii\&.h\&.
+.SS "int16_t \fBWII::accXwiimote\fP"Accelerometer values used to calculate pitch and roll\&. 
+.PP
+Definition at line 236 of file Wii\&.h\&.
+.SS "int16_t \fBWII::accYnunchuck\fP"
+.PP
+Definition at line 242 of file Wii\&.h\&.
+.SS "int16_t \fBWII::accYwiimote\fP"
+.PP
+Definition at line 236 of file Wii\&.h\&.
+.SS "int16_t \fBWII::accZnunchuck\fP"
+.PP
+Definition at line 242 of file Wii\&.h\&.
+.SS "int16_t \fBWII::accZwiimote\fP"
+.PP
+Definition at line 236 of file Wii\&.h\&.
+.SS "double \fBWII::gyroPitch\fP"This is the pitch calculated by the gyro - use this to tune \fBWII::pitchGyroScale\fP\&. 
+.PP
+Definition at line 247 of file Wii\&.h\&.
+.SS "int16_t \fBWII::gyroPitchRaw\fP"
+.PP
+Definition at line 271 of file Wii\&.h\&.
+.SS "int16_t \fBWII::gyroPitchZero\fP"
+.PP
+Definition at line 278 of file Wii\&.h\&.
+.SS "double \fBWII::gyroRoll\fP"This is the roll calculated by the gyro - use this to tune \fBWII::rollGyroScale\fP\&. 
+.PP
+Definition at line 249 of file Wii\&.h\&.
+.SS "int16_t \fBWII::gyroRollRaw\fP"
+.PP
+Definition at line 270 of file Wii\&.h\&.
+.SS "int16_t \fBWII::gyroRollZero\fP"
+.PP
+Definition at line 277 of file Wii\&.h\&.
+.SS "double \fBWII::gyroYaw\fP"This is the yaw calculated by the gyro - use this to tune \fBWII::yawGyroScale\fP\&. 
+.PP
+Definition at line 251 of file Wii\&.h\&.
+.SS "int16_t \fBWII::gyroYawRaw\fP"Raw value read directly from the Motion Plus\&. 
+.PP
+Definition at line 269 of file Wii\&.h\&.
+.SS "int16_t \fBWII::gyroYawZero\fP"These values are set when the controller is first initialized\&. 
+.PP
+Definition at line 276 of file Wii\&.h\&.
+.SS "bool \fBWII::motionPlusConnected\fP"Variable used to indicate if a Nunchuck controller is connected\&. 
+.PP
+Definition at line 208 of file Wii\&.h\&.
+.SS "bool \fBWII::nunchuckConnected\fP"Variable used to indicate if a Nunchuck controller is connected\&. 
+.PP
+Definition at line 206 of file Wii\&.h\&.
+.SS "uint16_t \fBWII::pitchGyroScale\fP"You might need to fine-tune these values\&. 
+.PP
+Definition at line 262 of file Wii\&.h\&.
+.SS "double \fBWII::pitchGyroSpeed\fP"The speed in deg/s from the gyro\&. 
+.PP
+Definition at line 255 of file Wii\&.h\&.
+.SS "uint16_t \fBWII::rollGyroScale\fP"
+.PP
+Definition at line 263 of file Wii\&.h\&.
+.SS "double \fBWII::rollGyroSpeed\fP"
+.PP
+Definition at line 256 of file Wii\&.h\&.
+.SS "bool \fBWII::wiimoteConnected\fP"Variable used to indicate if a Wiimote is connected\&. 
+.PP
+Definition at line 199 of file Wii\&.h\&.
+.SS "bool \fBWII::wiiUProControllerConnected\fP"Variable used to indicate if a Wii U Pro controller is connected\&. 
+.PP
+Definition at line 210 of file Wii\&.h\&.
+.SS "uint16_t \fBWII::yawGyroScale\fP"
+.PP
+Definition at line 264 of file Wii\&.h\&.
+.SS "double \fBWII::yawGyroSpeed\fP"
+.PP
+Definition at line 257 of file Wii\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

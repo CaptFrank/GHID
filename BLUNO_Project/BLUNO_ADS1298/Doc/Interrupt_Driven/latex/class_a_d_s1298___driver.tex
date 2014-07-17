@@ -1,0 +1,347 @@
+\hypertarget{class_a_d_s1298___driver}{\section{\-A\-D\-S1298\-\_\-\-Driver \-Class \-Reference}
+\label{class_a_d_s1298___driver}\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+}
+
+
+{\ttfamily \#include $<$\-A\-D\-S1298\-Driver.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_d_s1298___driver_a9a858be68754f5889a524671c62cd464}{\-A\-D\-S1298\-\_\-\-Driver} (\hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$buff, \hyperlink{structspi__settings__t}{spi\-\_\-settings\-\_\-t} $\ast$settings)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_d_s1298___driver_a409f362235fcabe35b3f60b1bfe660fc}{begin} (void($\ast$setup\-\_\-method)(\hyperlink{class_a_d_s1298___driver}{\-A\-D\-S1298\-\_\-\-Driver} $\ast$driver)=\-\_\-init\-\_\-ads)
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_s1298___driver_a34536e6af6330e36161c1e629ccde82f}{read\-\_\-byte} (int reg\-\_\-address)
+\item 
+void \hyperlink{class_a_d_s1298___driver_a1b9a12caf872c4d5cbc43ae390a3e883}{write\-\_\-byte} (int reg\-\_\-address, uint8\-\_\-t val\-\_\-hex)
+\item 
+void \hyperlink{class_a_d_s1298___driver_af386ede321d263b13634c21ccd24d2dc}{send\-\_\-command} (uint8\-\_\-t cmd)
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{class_a_d_s1298___driver_aa495b39d758bb510e1689cfa51c6b354}{receive\-\_\-response} ()
+\item 
+void \hyperlink{class_a_d_s1298___driver_a4a170ee3c4cf3d3f213add153205ae53}{check\-\_\-active\-\_\-channels} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_a_d_s1298___driver_a52c1a31eba1b18263d749d9b01b8ab99}{\-\_\-set\-\_\-cs\-\_\-pin} ()
+\item 
+static void \hyperlink{class_a_d_s1298___driver_a95a3e2c4377acb9e937f8544d38cf64c}{\-\_\-unset\-\_\-cs\-\_\-pin} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$ \hyperlink{class_a_d_s1298___driver_ac53513e960f78b5ca0713288e410d7d8}{\-\_\-buff}
+\begin{DoxyCompactList}\small\item\em \-The internal \-Ring \-Buffer access. \end{DoxyCompactList}\item 
+\hyperlink{structrx__buffer__t}{rx\-\_\-buffer\-\_\-t} \hyperlink{class_a_d_s1298___driver_ab7156a79b770bfa6d44e753e5d81ceb7}{\-\_\-rx\-\_\-buff}
+\begin{DoxyCompactList}\small\item\em \-The internal rx buffer type. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{class_a_d_s1298___driver_ae61d4626ed0d4fbd566a5a80baa69da6}{\-\_\-id}
+\begin{DoxyCompactList}\small\item\em \-The id of the device. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{class_a_d_s1298___driver_a3f9749dd1e5189a86a513dd654a2bd56}{\-\_\-channels}
+\begin{DoxyCompactList}\small\item\em \-Number of channels available. \end{DoxyCompactList}\item 
+uint8\-\_\-t \hyperlink{class_a_d_s1298___driver_adffccf9bfd40ec402181967dd2a6291f}{\-\_\-num\-\_\-active\-\_\-channels}
+\begin{DoxyCompactList}\small\item\em \-Number of active channels. \end{DoxyCompactList}\item 
+\hyperlink{structactive__channels__t}{active\-\_\-channels\-\_\-t} \hyperlink{class_a_d_s1298___driver_ab8a50f10e853ff7cc5a79ac92f724345}{\-\_\-active\-\_\-channels}
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_s1298___driver_a957aac836bd2d6506a971bcb72cf6de7}{\-\_\-active}
+\begin{DoxyCompactList}\small\item\em \-The guard that tells us if the streaming has started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the \-A\-D\-S1298 \-Driver. \-It handles the reads and writes to the \-A\-D\-S1298 device. 
+
+\-Definition at line 115 of file \-A\-D\-S1298\-Driver.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_a_d_s1298___driver_a9a858be68754f5889a524671c62cd464}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-A\-D\-S1298\-\_\-\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-A\-D\-S1298\-\_\-\-Driver} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Ring\-Buff\-\_\-t} $\ast$}]{buff, }
+\item[{{\bf spi\-\_\-settings\-\_\-t} $\ast$}]{spi\-\_\-settings}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_a9a858be68754f5889a524671c62cd464}
+
+
+\-Public \-Context. 
+
+\-This is the default constructor for the class
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buff} & -\/ \-The general context ring buffer \\
+\hline
+{\em spi\-\_\-settings} & -\/ \-The \-S\-P\-I settings\\
+\hline
+\end{DoxyParams}
+\-This is the default constructor for the class
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em setup\-\_\-method} & -\/ \-The setup method.
+\begin{DoxyItemize}
+\item \-Allows to customize the setup sequence based on needs. \-By default we set to the internal method.
+\end{DoxyItemize}\\
+\hline
+{\em buff} & -\/ \-The general context ring buffer \\
+\hline
+{\em spi\-\_\-settings} & -\/ \-The \-S\-P\-I settings \\
+\hline
+\end{DoxyParams}
+\-Assign the global ring buffer type internally 
+
+\-Definition at line 23 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_a_d_s1298___driver_a52c1a31eba1b18263d749d9b01b8ab99}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-set\-\_\-cs\-\_\-pin@{\-\_\-set\-\_\-cs\-\_\-pin}}
+\index{\-\_\-set\-\_\-cs\-\_\-pin@{\-\_\-set\-\_\-cs\-\_\-pin}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-set\-\_\-cs\-\_\-pin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-set\-\_\-cs\-\_\-pin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_a_d_s1298___driver_a52c1a31eba1b18263d749d9b01b8ab99}
+\-Set \-S\-S pin high \-We trigger the \-C\-S 
+
+\-Definition at line 344 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_a95a3e2c4377acb9e937f8544d38cf64c}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-unset\-\_\-cs\-\_\-pin@{\-\_\-unset\-\_\-cs\-\_\-pin}}
+\index{\-\_\-unset\-\_\-cs\-\_\-pin@{\-\_\-unset\-\_\-cs\-\_\-pin}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-unset\-\_\-cs\-\_\-pin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-unset\-\_\-cs\-\_\-pin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_a_d_s1298___driver_a95a3e2c4377acb9e937f8544d38cf64c}
+\-Unset ss pin \-We assert low the \-C\-S pin 
+
+\-Definition at line 353 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_a409f362235fcabe35b3f60b1bfe660fc}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!begin@{begin}}
+\index{begin@{begin}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-S1298\-\_\-\-Driver\-::begin} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)({\bf \-A\-D\-S1298\-\_\-\-Driver} $\ast$driver)}]{setup\-\_\-method = {\ttfamily \-\_\-init\-\_\-ads}}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_a409f362235fcabe35b3f60b1bfe660fc}
+\-This is the setup method for the ads1298
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em setup\-\_\-method} & -\/ \-The setup method called. \\
+\hline
+\end{DoxyParams}
+\-Here we setup the pins
+
+\-We start the \-S\-P\-I engine
+
+\-We set the \-S\-P\-I bit order
+
+\-We set the clock divider
+
+\-We set the data mode of the bus
+
+\-We setup the \-A\-D\-S1298 \-Set the setup method 
+
+\-Definition at line 36 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_a4a170ee3c4cf3d3f213add153205ae53}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!check\-\_\-active\-\_\-channels@{check\-\_\-active\-\_\-channels}}
+\index{check\-\_\-active\-\_\-channels@{check\-\_\-active\-\_\-channels}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{check\-\_\-active\-\_\-channels}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-S1298\-\_\-\-Driver\-::check\-\_\-active\-\_\-channels} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_a4a170ee3c4cf3d3f213add153205ae53}
+\-This method checks which channels are active. \-Check if we are in read mode or if we do not have a channel available \-We return if that is the case.
+
+\-We reset the internal active channels
+
+\-We loop the channels to see which ones are active and which are not
+
+\-We added the active channel to the struct 
+
+\-Definition at line 152 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_a34536e6af6330e36161c1e629ccde82f}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!read\-\_\-byte@{read\-\_\-byte}}
+\index{read\-\_\-byte@{read\-\_\-byte}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{read\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-S1298\-\_\-\-Driver\-::read\-\_\-byte} (
+\begin{DoxyParamCaption}
+\item[{int}]{reg\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_a34536e6af6330e36161c1e629ccde82f}
+\-This method reads a byte from the \-A\-D\-S1298 chip
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em reg\-\_\-address} & -\/ \-The address to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+byte -\/ \-The byte read 
+\end{DoxyReturn}
+\-Activate the \-S\-P\-I \-B\-U\-S
+
+\-Send the address to read
+
+\-Send the number of bytes to read -\/ 1
+
+\-Send the read command @ byte 0
+
+\-Deactivate the \-S\-P\-I \-B\-U\-S 
+
+\-Definition at line 64 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_aa495b39d758bb510e1689cfa51c6b354}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!receive\-\_\-response@{receive\-\_\-response}}
+\index{receive\-\_\-response@{receive\-\_\-response}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{receive\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t $\ast$ {\bf \-A\-D\-S1298\-\_\-\-Driver\-::receive\-\_\-response} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_aa495b39d758bb510e1689cfa51c6b354}
+\-This method receives a response from the \-A\-D\-S1298
+
+\begin{DoxyReturn}{\-Returns}
+response -\/ \-The response 
+\end{DoxyReturn}
+\-We cycle through the receive structure
+
+\-We get the bytes 
+
+\-Definition at line 138 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_af386ede321d263b13634c21ccd24d2dc}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!send\-\_\-command@{send\-\_\-command}}
+\index{send\-\_\-command@{send\-\_\-command}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{send\-\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-S1298\-\_\-\-Driver\-::send\-\_\-command} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_af386ede321d263b13634c21ccd24d2dc}
+\-This method sends a command to the \-A\-D\-S1298
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em cmd} & -\/ \-The command to send \\
+\hline
+\end{DoxyParams}
+\-Activate the \-S\-P\-I \-B\-U\-S
+
+\-We send the command \-Send the data byte
+
+\-Deactivate the \-S\-P\-I \-B\-U\-S 
+
+\-Definition at line 120 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+\hypertarget{class_a_d_s1298___driver_a1b9a12caf872c4d5cbc43ae390a3e883}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!write\-\_\-byte@{write\-\_\-byte}}
+\index{write\-\_\-byte@{write\-\_\-byte}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{write\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-S1298\-\_\-\-Driver\-::write\-\_\-byte} (
+\begin{DoxyParamCaption}
+\item[{int}]{reg\-\_\-address, }
+\item[{uint8\-\_\-t}]{val\-\_\-hex}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_s1298___driver_a1b9a12caf872c4d5cbc43ae390a3e883}
+\-This method writes a byte to the \-A\-D\-S1298
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em reg\-\_\-address} & -\/ \-The register address \\
+\hline
+{\em val\-\_\-hex} & -\/ \-The value in hex \\
+\hline
+\end{DoxyParams}
+\-Activate the \-S\-P\-I \-B\-U\-S
+
+\-Send the address to write to
+
+\-Send the number of bytes to write -\/ 1
+
+\-Transfer the value to write
+
+\-Deactivate the \-S\-P\-I \-B\-U\-S 
+
+\-Definition at line 94 of file \-A\-D\-S1298\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_a_d_s1298___driver_a957aac836bd2d6506a971bcb72cf6de7}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-active@{\-\_\-active}}
+\index{\-\_\-active@{\-\_\-active}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-active}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-active}}}\label{class_a_d_s1298___driver_a957aac836bd2d6506a971bcb72cf6de7}
+
+
+\-The guard that tells us if the streaming has started. 
+
+
+
+\-Definition at line 204 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{class_a_d_s1298___driver_ab8a50f10e853ff7cc5a79ac92f724345}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-active\-\_\-channels@{\-\_\-active\-\_\-channels}}
+\index{\-\_\-active\-\_\-channels@{\-\_\-active\-\_\-channels}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-active\-\_\-channels}]{\setlength{\rightskip}{0pt plus 5cm}{\bf active\-\_\-channels\-\_\-t} {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-active\-\_\-channels}}}\label{class_a_d_s1298___driver_ab8a50f10e853ff7cc5a79ac92f724345}
+
+
+\-Definition at line 201 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{class_a_d_s1298___driver_ac53513e960f78b5ca0713288e410d7d8}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-buff@{\-\_\-buff}}
+\index{\-\_\-buff@{\-\_\-buff}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-buff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Ring\-Buff\-\_\-t}$\ast$ {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-buff}}}\label{class_a_d_s1298___driver_ac53513e960f78b5ca0713288e410d7d8}
+
+
+\-The internal \-Ring \-Buffer access. 
+
+
+
+\-Definition at line 182 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{class_a_d_s1298___driver_a3f9749dd1e5189a86a513dd654a2bd56}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-channels@{\-\_\-channels}}
+\index{\-\_\-channels@{\-\_\-channels}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-channels}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-channels}}}\label{class_a_d_s1298___driver_a3f9749dd1e5189a86a513dd654a2bd56}
+
+
+\-Number of channels available. 
+
+
+
+\-Definition at line 197 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{class_a_d_s1298___driver_ae61d4626ed0d4fbd566a5a80baa69da6}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-id@{\-\_\-id}}
+\index{\-\_\-id@{\-\_\-id}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-id}}}\label{class_a_d_s1298___driver_ae61d4626ed0d4fbd566a5a80baa69da6}
+
+
+\-The id of the device. 
+
+
+
+\-Definition at line 194 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{class_a_d_s1298___driver_adffccf9bfd40ec402181967dd2a6291f}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-num\-\_\-active\-\_\-channels@{\-\_\-num\-\_\-active\-\_\-channels}}
+\index{\-\_\-num\-\_\-active\-\_\-channels@{\-\_\-num\-\_\-active\-\_\-channels}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-num\-\_\-active\-\_\-channels}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-num\-\_\-active\-\_\-channels}}}\label{class_a_d_s1298___driver_adffccf9bfd40ec402181967dd2a6291f}
+
+
+\-Number of active channels. 
+
+
+
+\-Definition at line 200 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{class_a_d_s1298___driver_ab7156a79b770bfa6d44e753e5d81ceb7}{\index{\-A\-D\-S1298\-\_\-\-Driver@{\-A\-D\-S1298\-\_\-\-Driver}!\-\_\-rx\-\_\-buff@{\-\_\-rx\-\_\-buff}}
+\index{\-\_\-rx\-\_\-buff@{\-\_\-rx\-\_\-buff}!ADS1298_Driver@{\-A\-D\-S1298\-\_\-\-Driver}}
+\subsubsection[{\-\_\-rx\-\_\-buff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rx\-\_\-buffer\-\_\-t} {\bf \-A\-D\-S1298\-\_\-\-Driver\-::\-\_\-rx\-\_\-buff}}}\label{class_a_d_s1298___driver_ab7156a79b770bfa6d44e753e5d81ceb7}
+
+
+\-The internal rx buffer type. 
+
+
+
+\-Definition at line 185 of file \-A\-D\-S1298\-Driver.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_a_d_s1298_driver_8h}{\-A\-D\-S1298\-Driver.\-h}\item 
+\hyperlink{_a_d_s1298_driver_8cpp}{\-A\-D\-S1298\-Driver.\-cpp}\end{DoxyCompactItemize}

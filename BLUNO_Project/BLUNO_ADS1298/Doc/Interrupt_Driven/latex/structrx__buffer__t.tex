@@ -1,0 +1,64 @@
+\hypertarget{structrx__buffer__t}{\section{rx\-\_\-buffer\-\_\-t \-Struct \-Reference}
+\label{structrx__buffer__t}\index{rx\-\_\-buffer\-\_\-t@{rx\-\_\-buffer\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$\-A\-D\-S1298\-Driver.\-h$>$}
+
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>uint8\_t \hyperlink{structrx__buffer__t_a779c76b344879924579b02bfd02de753}{\_header} \mbox{[}\hyperlink{_a_d_s1298_driver_8h_ab7770a7f0d95e67620ff6ed347a07a56}{HEADER}\mbox{]}\\
+\>\>uint8\_t \hyperlink{structrx__buffer__t_a89b7bd9eae7429781faee54444a2824c}{\_data} \mbox{[}\hyperlink{_a_d_s1298_driver_8h_a43ebdae7ab59ca47624db7d5d2e27227}{CHANNEL\_RESOLUTION} \\
+\>\>\>$\ast$\hyperlink{_a_d_s1298_driver_8h_ae5597ce31d23d11493e6e674fe257d73}{NUM\_CHANNELS}+1\mbox{]}\\
+\>\} \hyperlink{structrx__buffer__t_a188d30440082b11b38ec018289ab2c66}{packet}\\
+\>uint8\_t \hyperlink{structrx__buffer__t_a9dd47697370d70c9480f70f9de80809f}{packet\_array} \mbox{[}\hyperlink{_a_d_s1298_driver_8h_ab7770a7f0d95e67620ff6ed347a07a56}{HEADER}+(\hyperlink{_a_d_s1298_driver_8h_abb59a566539e5e148f63599ee6e67ea1}{DATA\_PACKET\_SIZE})\mbox{]}\\
+\} \hyperlink{structrx__buffer__t_a81c8b33ce7d32d86c994e3db9c8b32c6}{data}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-We create an rx buffer 
+
+\-Definition at line 88 of file \-A\-D\-S1298\-Driver.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structrx__buffer__t_a89b7bd9eae7429781faee54444a2824c}{\index{rx\-\_\-buffer\-\_\-t@{rx\-\_\-buffer\-\_\-t}!\-\_\-data@{\-\_\-data}}
+\index{\-\_\-data@{\-\_\-data}!rx_buffer_t@{rx\-\_\-buffer\-\_\-t}}
+\subsubsection[{\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf rx\-\_\-buffer\-\_\-t\-::\-\_\-data}\mbox{[}{\bf \-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N} $\ast${\bf \-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}+1\mbox{]}}}\label{structrx__buffer__t_a89b7bd9eae7429781faee54444a2824c}
+
+
+\-Definition at line 93 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{structrx__buffer__t_a779c76b344879924579b02bfd02de753}{\index{rx\-\_\-buffer\-\_\-t@{rx\-\_\-buffer\-\_\-t}!\-\_\-header@{\-\_\-header}}
+\index{\-\_\-header@{\-\_\-header}!rx_buffer_t@{rx\-\_\-buffer\-\_\-t}}
+\subsubsection[{\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf rx\-\_\-buffer\-\_\-t\-::\-\_\-header}\mbox{[}{\bf \-H\-E\-A\-D\-E\-R}\mbox{]}}}\label{structrx__buffer__t_a779c76b344879924579b02bfd02de753}
+
+
+\-Definition at line 92 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{structrx__buffer__t_a81c8b33ce7d32d86c994e3db9c8b32c6}{\index{rx\-\_\-buffer\-\_\-t@{rx\-\_\-buffer\-\_\-t}!data@{data}}
+\index{data@{data}!rx_buffer_t@{rx\-\_\-buffer\-\_\-t}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}  {\bf rx\-\_\-buffer\-\_\-t\-::data}}}\label{structrx__buffer__t_a81c8b33ce7d32d86c994e3db9c8b32c6}
+\hypertarget{structrx__buffer__t_a188d30440082b11b38ec018289ab2c66}{\index{rx\-\_\-buffer\-\_\-t@{rx\-\_\-buffer\-\_\-t}!packet@{packet}}
+\index{packet@{packet}!rx_buffer_t@{rx\-\_\-buffer\-\_\-t}}
+\subsubsection[{packet}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  {\bf rx\-\_\-buffer\-\_\-t\-::packet}}}\label{structrx__buffer__t_a188d30440082b11b38ec018289ab2c66}
+\hypertarget{structrx__buffer__t_a9dd47697370d70c9480f70f9de80809f}{\index{rx\-\_\-buffer\-\_\-t@{rx\-\_\-buffer\-\_\-t}!packet\-\_\-array@{packet\-\_\-array}}
+\index{packet\-\_\-array@{packet\-\_\-array}!rx_buffer_t@{rx\-\_\-buffer\-\_\-t}}
+\subsubsection[{packet\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf rx\-\_\-buffer\-\_\-t\-::packet\-\_\-array}\mbox{[}{\bf \-H\-E\-A\-D\-E\-R}+({\bf \-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E})\mbox{]}}}\label{structrx__buffer__t_a9dd47697370d70c9480f70f9de80809f}
+
+
+\-Definition at line 95 of file \-A\-D\-S1298\-Driver.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_a_d_s1298_driver_8h}{\-A\-D\-S1298\-Driver.\-h}\end{DoxyCompactItemize}

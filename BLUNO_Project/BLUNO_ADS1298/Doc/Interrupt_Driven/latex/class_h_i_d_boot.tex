@@ -1,0 +1,138 @@
+\hypertarget{class_h_i_d_boot}{\section{\-H\-I\-D\-Boot$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$ \-Class \-Template \-Reference}
+\label{class_h_i_d_boot}\index{\-H\-I\-D\-Boot$<$ B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$@{\-H\-I\-D\-Boot$<$ B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$}}
+}
+
+
+{\ttfamily \#include $<$hidboot.\-h$>$}
+
+\-Inheritance diagram for \-H\-I\-D\-Boot$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_h_i_d_boot}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_h_i_d_boot_a2730c81f6e7ae6aaafa671f55a07620e}{\-H\-I\-D\-Boot} (\-U\-S\-B $\ast$p)
+\item 
+virtual bool \hyperlink{class_h_i_d_boot_a3e44d340fab7e9eedb357ef61e1c19a5}{\-Set\-Report\-Parser} (uint8\-\_\-t id, \hyperlink{class_h_i_d_report_parser}{\-H\-I\-D\-Report\-Parser} $\ast$prs)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_boot_aa30d7cf292378153f41d8a13380c6119}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_boot_aa21946ce7a4531c036180b5de2941502}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_boot_aa950fe6f7e492c2048f59c98a58ac005}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_h_i_d_boot_a6fafa2711d72ff4efd6bf91984585aba}{\-Get\-Address} ()
+\item 
+virtual void \hyperlink{class_h_i_d_boot_a04475d2cd6d8ae19d4e4149714fa4bef}{\-Endpoint\-Xtract} (uint8\-\_\-t conf, uint8\-\_\-t iface, uint8\-\_\-t alt, uint8\-\_\-t proto, const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\subsubsection*{template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$class H\-I\-D\-Boot$<$ B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$}
+
+
+
+\-Definition at line 179 of file hidboot.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_h_i_d_boot_a2730c81f6e7ae6aaafa671f55a07620e}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}}
+\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-H\-I\-D\-Boot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-H\-I\-D\-Boot} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_h_i_d_boot_a2730c81f6e7ae6aaafa671f55a07620e}
+
+
+\-Definition at line 220 of file hidboot.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_h_i_d_boot_a04475d2cd6d8ae19d4e4149714fa4bef}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-Endpoint\-Xtract@{\-Endpoint\-Xtract}}
+\index{\-Endpoint\-Xtract@{\-Endpoint\-Xtract}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-Endpoint\-Xtract}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ void {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-Endpoint\-Xtract} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{conf, }
+\item[{uint8\-\_\-t}]{iface, }
+\item[{uint8\-\_\-t}]{alt, }
+\item[{uint8\-\_\-t}]{proto, }
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_boot_a04475d2cd6d8ae19d4e4149714fa4bef}
+
+
+\-Definition at line 498 of file hidboot.\-h.
+
+\hypertarget{class_h_i_d_boot_a6fafa2711d72ff4efd6bf91984585aba}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ virtual uint8\-\_\-t {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_h_i_d_boot_a6fafa2711d72ff4efd6bf91984585aba}
+
+
+\-Definition at line 211 of file hidboot.\-h.
+
+\hypertarget{class_h_i_d_boot_aa30d7cf292378153f41d8a13380c6119}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ uint8\-\_\-t {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_boot_aa30d7cf292378153f41d8a13380c6119}
+
+
+\-Definition at line 247 of file hidboot.\-h.
+
+\hypertarget{class_h_i_d_boot_aa950fe6f7e492c2048f59c98a58ac005}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ uint8\-\_\-t {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_boot_aa950fe6f7e492c2048f59c98a58ac005}
+
+
+\-Definition at line 536 of file hidboot.\-h.
+
+\hypertarget{class_h_i_d_boot_aa21946ce7a4531c036180b5de2941502}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ uint8\-\_\-t {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_h_i_d_boot_aa21946ce7a4531c036180b5de2941502}
+
+
+\-Definition at line 522 of file hidboot.\-h.
+
+\hypertarget{class_h_i_d_boot_a3e44d340fab7e9eedb357ef61e1c19a5}{\index{\-H\-I\-D\-Boot@{\-H\-I\-D\-Boot}!\-Set\-Report\-Parser@{\-Set\-Report\-Parser}}
+\index{\-Set\-Report\-Parser@{\-Set\-Report\-Parser}!HIDBoot@{\-H\-I\-D\-Boot}}
+\subsubsection[{\-Set\-Report\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const uint8\-\_\-t \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L$>$ virtual bool {\bf \-H\-I\-D\-Boot}$<$ \-B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$\-::{\bf \-Set\-Report\-Parser} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{id, }
+\item[{{\bf \-H\-I\-D\-Report\-Parser} $\ast$}]{prs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_h_i_d_boot_a3e44d340fab7e9eedb357ef61e1c19a5}
+
+
+\-Reimplemented from \hyperlink{class_h_i_d_ae3b964d20c828fb27076f50d220fe275}{\-H\-I\-D}.
+
+
+
+\-Definition at line 201 of file hidboot.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hidboot_8h}{hidboot.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{class_g_h_i_d___system___abstration}{\section{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration \-Class \-Reference}
+\label{class_g_h_i_d___system___abstration}\index{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}}
+}
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_g_h_i_d___system___abstration_1_1_g_h_i_d___timer___one}{\-G\-H\-I\-D\-\_\-\-Timer\-\_\-\-One}
+\item 
+class \hyperlink{class_g_h_i_d___system___abstration_1_1_g_h_i_d___timer___three}{\-G\-H\-I\-D\-\_\-\-Timer\-\_\-\-Three}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_g_h_i_d___system___abstration_a6ba16e9025a2f2d85acc7ddccfb70517}{setup\-\_\-analog\-\_\-reference} (byte reference)
+\begin{DoxyCompactList}\small\item\em \-Sets the analog voltage reference. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___system___abstration_a12335f35cef2bc0829791c05ab3c261e}{setup\-\_\-\-U\-S\-B\-\_\-interface} ()
+\begin{DoxyCompactList}\small\item\em \-Sets up the serial interface. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___system___abstration_ad850bc61e442ec99f8da772768f820a6}{send\-\_\-\-U\-S\-B\-\_\-frame} ()
+\begin{DoxyCompactList}\small\item\em \-Sends a \-U\-S\-B frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structjoystick__report__t}{joystick\-\_\-report\-\_\-t} \hyperlink{class_g_h_i_d___system___abstration_a7b6a61d7f6516c004300bccae5145ca4}{joystick\-\_\-report}
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is a grouping of both the \hyperlink{class_timer_one}{\-Timer\-One} class, which provides the \-Timer1 timing ability, and also the \hyperlink{class_timer_three}{\-Timer\-Three} class which supports the \-Timer3 on the \-Arduino \-Mega. \-It also provides the interface to the \-U\-S\-B communication between the system and the \-Computer.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{_timer_one_8h}{\-Timer\-One.\-h} 
+
+\hyperlink{_timer_three_8h}{\-Timer\-Three.\-h} 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 37 of file \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_g_h_i_d___system___abstration_ad850bc61e442ec99f8da772768f820a6}{\index{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}!send\-\_\-\-U\-S\-B\-\_\-frame@{send\-\_\-\-U\-S\-B\-\_\-frame}}
+\index{send\-\_\-\-U\-S\-B\-\_\-frame@{send\-\_\-\-U\-S\-B\-\_\-frame}!GHID_System_Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}}
+\subsubsection[{send\-\_\-\-U\-S\-B\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration\-::send\-\_\-\-U\-S\-B\-\_\-frame} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___system___abstration_ad850bc61e442ec99f8da772768f820a6}
+
+
+\-Sends a \-U\-S\-B frame. 
+
+\-This sends out a \-U\-S\-B frame to the computer. \-Send the frame 
+
+\-Definition at line 25 of file \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-cpp.
+
+\hypertarget{class_g_h_i_d___system___abstration_a6ba16e9025a2f2d85acc7ddccfb70517}{\index{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}!setup\-\_\-analog\-\_\-reference@{setup\-\_\-analog\-\_\-reference}}
+\index{setup\-\_\-analog\-\_\-reference@{setup\-\_\-analog\-\_\-reference}!GHID_System_Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}}
+\subsubsection[{setup\-\_\-analog\-\_\-reference}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration\-::setup\-\_\-analog\-\_\-reference} (
+\begin{DoxyParamCaption}
+\item[{byte}]{reference}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___system___abstration_a6ba16e9025a2f2d85acc7ddccfb70517}
+
+
+\-Sets the analog voltage reference. 
+
+\-This method is the private access analog reference setup routine for the analog sensor bus. \-It only really needs to be accessed once. \-Set the analog reference 
+
+\-Definition at line 11 of file \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-cpp.
+
+\hypertarget{class_g_h_i_d___system___abstration_a12335f35cef2bc0829791c05ab3c261e}{\index{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}!setup\-\_\-\-U\-S\-B\-\_\-interface@{setup\-\_\-\-U\-S\-B\-\_\-interface}}
+\index{setup\-\_\-\-U\-S\-B\-\_\-interface@{setup\-\_\-\-U\-S\-B\-\_\-interface}!GHID_System_Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}}
+\subsubsection[{setup\-\_\-\-U\-S\-B\-\_\-interface}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration\-::setup\-\_\-\-U\-S\-B\-\_\-interface} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___system___abstration_a12335f35cef2bc0829791c05ab3c261e}
+
+
+\-Sets up the serial interface. 
+
+\-This method sets up the interface to the \-U\-S\-B \-P\-H\-Y. \-Setup the \-Serial0 to 115200 and default parity 
+
+\-Definition at line 18 of file \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_g_h_i_d___system___abstration_a7b6a61d7f6516c004300bccae5145ca4}{\index{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}!joystick\-\_\-report@{joystick\-\_\-report}}
+\index{joystick\-\_\-report@{joystick\-\_\-report}!GHID_System_Abstration@{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration}}
+\subsubsection[{joystick\-\_\-report}]{\setlength{\rightskip}{0pt plus 5cm}{\bf joystick\-\_\-report\-\_\-t} {\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration\-::joystick\-\_\-report}}}\label{class_g_h_i_d___system___abstration_a7b6a61d7f6516c004300bccae5145ca4}
+
+
+\-Public \-Context. 
+
+\-This defines the usb frame 
+
+\-Definition at line 46 of file \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___system___abstration_8h}{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-h}\item 
+\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___system___abstration_8cpp}{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration.\-cpp}\end{DoxyCompactItemize}

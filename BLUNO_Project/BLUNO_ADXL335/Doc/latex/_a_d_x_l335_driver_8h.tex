@@ -1,0 +1,69 @@
+\hypertarget{_a_d_x_l335_driver_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\-A\-D\-X\-L335\-Driver.h \-File \-Reference}
+\label{_a_d_x_l335_driver_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\-A\-D\-X\-L335\-Driver.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\-A\-D\-X\-L335\-Driver.\-h}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Utilities.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Ring\-Buffer.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-A\-D\-X\-L335.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_d_x_l335__pin__map__t}{\-A\-D\-X\-L335\-\_\-pin\-\_\-map\-\_\-t}
+\item 
+class \hyperlink{class_a_d_x_l335___driver}{\-A\-D\-X\-L335\-\_\-\-Driver}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_a_d_x_l335_driver_8h_a65e81052c75a2ccbf1ba05495afd0aba}{\-V\-\_\-3\-V}~3.\-3
+\begin{DoxyCompactList}\small\item\em \-Ref voltage defines. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_x_l335_driver_8h_a4001031329894ef1d9ed360b21a50934}{\-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D}~3
+\item 
+\#define \hyperlink{_a_d_x_l335_driver_8h_a458727ba44329288f712b89a0b52199a}{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}~7
+\item 
+\#define \hyperlink{_a_d_x_l335_driver_8h_ae25e0da7cdb20c758a56dc6aece92ba7}{\-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E}~10
+\item 
+\#define \hyperlink{_a_d_x_l335_driver_8h_ab3c9ccdb1f49aeedc7a4fef3070c2e18}{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}~100
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_a_d_x_l335_driver_8h_ab3c9ccdb1f49aeedc7a4fef3070c2e18}{\index{\-A\-D\-X\-L335\-Driver.\-h@{\-A\-D\-X\-L335\-Driver.\-h}!\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E@{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}}
+\index{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E@{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}!ADXL335Driver.h@{\-A\-D\-X\-L335\-Driver.\-h}}
+\subsubsection[{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}~100}}\label{_a_d_x_l335_driver_8h_ab3c9ccdb1f49aeedc7a4fef3070c2e18}
+
+
+\-Definition at line 22 of file \-A\-D\-X\-L335\-Driver.\-h.
+
+\hypertarget{_a_d_x_l335_driver_8h_ae25e0da7cdb20c758a56dc6aece92ba7}{\index{\-A\-D\-X\-L335\-Driver.\-h@{\-A\-D\-X\-L335\-Driver.\-h}!\-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E@{\-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E}}
+\index{\-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E@{\-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E}!ADXL335Driver.h@{\-A\-D\-X\-L335\-Driver.\-h}}
+\subsubsection[{\-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-A\-M\-P\-L\-E\-\_\-\-S\-I\-Z\-E}~10}}\label{_a_d_x_l335_driver_8h_ae25e0da7cdb20c758a56dc6aece92ba7}
+
+
+\-Definition at line 21 of file \-A\-D\-X\-L335\-Driver.\-h.
+
+\hypertarget{_a_d_x_l335_driver_8h_a458727ba44329288f712b89a0b52199a}{\index{\-A\-D\-X\-L335\-Driver.\-h@{\-A\-D\-X\-L335\-Driver.\-h}!\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A@{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}}
+\index{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A@{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}!ADXL335Driver.h@{\-A\-D\-X\-L335\-Driver.\-h}}
+\subsubsection[{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}~7}}\label{_a_d_x_l335_driver_8h_a458727ba44329288f712b89a0b52199a}
+
+
+\-Definition at line 20 of file \-A\-D\-X\-L335\-Driver.\-h.
+
+\hypertarget{_a_d_x_l335_driver_8h_a65e81052c75a2ccbf1ba05495afd0aba}{\index{\-A\-D\-X\-L335\-Driver.\-h@{\-A\-D\-X\-L335\-Driver.\-h}!\-V\-\_\-3\-V@{\-V\-\_\-3\-V}}
+\index{\-V\-\_\-3\-V@{\-V\-\_\-3\-V}!ADXL335Driver.h@{\-A\-D\-X\-L335\-Driver.\-h}}
+\subsubsection[{\-V\-\_\-3\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-\_\-3\-V}~3.\-3}}\label{_a_d_x_l335_driver_8h_a65e81052c75a2ccbf1ba05495afd0aba}
+
+
+\-Ref voltage defines. 
+
+
+
+\-Definition at line 18 of file \-A\-D\-X\-L335\-Driver.\-h.
+
+\hypertarget{_a_d_x_l335_driver_8h_a4001031329894ef1d9ed360b21a50934}{\index{\-A\-D\-X\-L335\-Driver.\-h@{\-A\-D\-X\-L335\-Driver.\-h}!\-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D@{\-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D}}
+\index{\-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D@{\-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D}!ADXL335Driver.h@{\-A\-D\-X\-L335\-Driver.\-h}}
+\subsubsection[{\-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Z\-\_\-\-A\-X\-I\-S\-\_\-3\-D}~3}}\label{_a_d_x_l335_driver_8h_a4001031329894ef1d9ed360b21a50934}
+
+
+\-Definition at line 19 of file \-A\-D\-X\-L335\-Driver.\-h.
+

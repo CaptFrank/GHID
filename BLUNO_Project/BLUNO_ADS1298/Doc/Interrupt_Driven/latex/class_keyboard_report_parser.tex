@@ -1,0 +1,265 @@
+\hypertarget{class_keyboard_report_parser}{\section{\-Keyboard\-Report\-Parser \-Class \-Reference}
+\label{class_keyboard_report_parser}\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}}
+}
+
+
+{\ttfamily \#include $<$hidboot.\-h$>$}
+
+\-Inheritance diagram for \-Keyboard\-Report\-Parser\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_keyboard_report_parser}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_keyboard_report_parser_aa9b5c7b50c3d2b920060b15e7a5133f9}{\-Keyboard\-Report\-Parser} ()
+\item 
+virtual void \hyperlink{class_keyboard_report_parser_a60d8d4d4d187ce5c0e0d69aee7cc772f}{\-Parse} (\hyperlink{class_h_i_d}{\-H\-I\-D} $\ast$hid, bool is\-\_\-rpt\-\_\-id, uint8\-\_\-t len, uint8\-\_\-t $\ast$buf)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\-\_\-t \hyperlink{class_keyboard_report_parser_aa21e9230ae4c2f068c404a9c2909a1f3}{\-Oem\-To\-Ascii} (uint8\-\_\-t mod, uint8\-\_\-t key)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_keyboard_report_parser_a486df60a3d29f73e9052d3efb0c38de6}{\-Handle\-Locking\-Keys} (\hyperlink{class_h_i_d}{\-H\-I\-D} $\ast$hid, uint8\-\_\-t key)
+\item 
+virtual void \hyperlink{class_keyboard_report_parser_ae8ce494271e8536f4bdc089db51bc67e}{\-On\-Control\-Keys\-Changed} (uint8\-\_\-t before, uint8\-\_\-t after)
+\item 
+virtual void \hyperlink{class_keyboard_report_parser_af855e596bbbb9755535f6e69f4ca2305}{\-On\-Key\-Down} (uint8\-\_\-t mod, uint8\-\_\-t key)
+\item 
+virtual void \hyperlink{class_keyboard_report_parser_a57710d31e5379db14779f960f5c714b2}{\-On\-Key\-Up} (uint8\-\_\-t mod, uint8\-\_\-t key)
+\item 
+virtual const uint8\-\_\-t $\ast$ \hyperlink{class_keyboard_report_parser_a963cbe34cb4061dff6262ce4b39a43e2}{get\-Num\-Keys} ()
+\item 
+virtual const uint8\-\_\-t $\ast$ \hyperlink{class_keyboard_report_parser_a2df76a06fee8df45a3d0850459887427}{get\-Sym\-Keys\-Up} ()
+\item 
+virtual const uint8\-\_\-t $\ast$ \hyperlink{class_keyboard_report_parser_a14a44500a5c22cb7e5374e4e334e0255}{get\-Sym\-Keys\-Lo} ()
+\item 
+virtual const uint8\-\_\-t $\ast$ \hyperlink{class_keyboard_report_parser_afa488405e7ba3ce5249064f38bb8912c}{get\-Pad\-Keys} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{struct_k_b_d_i_n_f_o}{KBDINFO} \hyperlink{class_keyboard_report_parser_ab62ffa0e72677379d1e68538625f2f28}{kbdInfo}\\
+\>uint8\_t \hyperlink{class_keyboard_report_parser_a65e6da24b038be3095d06e13b4a280ba}{bInfo} \mbox{[}sizeof(\hyperlink{struct_k_b_d_i_n_f_o}{KBDINFO})\mbox{]}\\
+\} \hyperlink{class_keyboard_report_parser_af11da7bfeaff2505a36aa68abb0984f1}{prevState}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{struct_k_b_d_l_e_d_s}{KBDLEDS} \hyperlink{class_keyboard_report_parser_aa867ab4b6898efa9b768bd05f275809c}{kbdLeds}\\
+\>uint8\_t \hyperlink{class_keyboard_report_parser_ae910089ecc7caff18429925affc5dc7f}{bLeds}\\
+\} \hyperlink{class_keyboard_report_parser_a8a8bd1a171e6b17d1c6db04cedeeff44}{kbdLockingKeys}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 121 of file hidboot.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_keyboard_report_parser_aa9b5c7b50c3d2b920060b15e7a5133f9}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}}
+\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-Keyboard\-Report\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Keyboard\-Report\-Parser\-::\-Keyboard\-Report\-Parser} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_keyboard_report_parser_aa9b5c7b50c3d2b920060b15e7a5133f9}
+
+
+\-Definition at line 143 of file hidboot.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_keyboard_report_parser_a963cbe34cb4061dff6262ce4b39a43e2}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!get\-Num\-Keys@{get\-Num\-Keys}}
+\index{get\-Num\-Keys@{get\-Num\-Keys}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{get\-Num\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}virtual const uint8\-\_\-t$\ast$ {\bf \-Keyboard\-Report\-Parser\-::get\-Num\-Keys} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_a963cbe34cb4061dff6262ce4b39a43e2}
+
+
+\-Definition at line 161 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_afa488405e7ba3ce5249064f38bb8912c}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!get\-Pad\-Keys@{get\-Pad\-Keys}}
+\index{get\-Pad\-Keys@{get\-Pad\-Keys}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{get\-Pad\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}virtual const uint8\-\_\-t$\ast$ {\bf \-Keyboard\-Report\-Parser\-::get\-Pad\-Keys} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_afa488405e7ba3ce5249064f38bb8912c}
+
+
+\-Definition at line 173 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_a14a44500a5c22cb7e5374e4e334e0255}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!get\-Sym\-Keys\-Lo@{get\-Sym\-Keys\-Lo}}
+\index{get\-Sym\-Keys\-Lo@{get\-Sym\-Keys\-Lo}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{get\-Sym\-Keys\-Lo}]{\setlength{\rightskip}{0pt plus 5cm}virtual const uint8\-\_\-t$\ast$ {\bf \-Keyboard\-Report\-Parser\-::get\-Sym\-Keys\-Lo} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_a14a44500a5c22cb7e5374e4e334e0255}
+
+
+\-Definition at line 169 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_a2df76a06fee8df45a3d0850459887427}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!get\-Sym\-Keys\-Up@{get\-Sym\-Keys\-Up}}
+\index{get\-Sym\-Keys\-Up@{get\-Sym\-Keys\-Up}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{get\-Sym\-Keys\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual const uint8\-\_\-t$\ast$ {\bf \-Keyboard\-Report\-Parser\-::get\-Sym\-Keys\-Up} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_a2df76a06fee8df45a3d0850459887427}
+
+
+\-Definition at line 165 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_a486df60a3d29f73e9052d3efb0c38de6}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-Handle\-Locking\-Keys@{\-Handle\-Locking\-Keys}}
+\index{\-Handle\-Locking\-Keys@{\-Handle\-Locking\-Keys}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-Handle\-Locking\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Keyboard\-Report\-Parser\-::\-Handle\-Locking\-Keys} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-I\-D} $\ast$}]{hid, }
+\item[{uint8\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_a486df60a3d29f73e9052d3efb0c38de6}
+
+
+\-Reimplemented in \hyperlink{class_kbd_rpt_parser_aa0e7ab4e28e1a177208965f9de2cbe4f}{\-Kbd\-Rpt\-Parser}.
+
+
+
+\-Definition at line 160 of file hidboot.\-cpp.
+
+\hypertarget{class_keyboard_report_parser_aa21e9230ae4c2f068c404a9c2909a1f3}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-Oem\-To\-Ascii@{\-Oem\-To\-Ascii}}
+\index{\-Oem\-To\-Ascii@{\-Oem\-To\-Ascii}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-Oem\-To\-Ascii}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Keyboard\-Report\-Parser\-::\-Oem\-To\-Ascii} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{mod, }
+\item[{uint8\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_keyboard_report_parser_aa21e9230ae4c2f068c404a9c2909a1f3}
+
+
+\-Definition at line 186 of file hidboot.\-cpp.
+
+\hypertarget{class_keyboard_report_parser_ae8ce494271e8536f4bdc089db51bc67e}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-On\-Control\-Keys\-Changed@{\-On\-Control\-Keys\-Changed}}
+\index{\-On\-Control\-Keys\-Changed@{\-On\-Control\-Keys\-Changed}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-On\-Control\-Keys\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Keyboard\-Report\-Parser\-::\-On\-Control\-Keys\-Changed} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{before, }
+\item[{uint8\-\_\-t}]{after}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_ae8ce494271e8536f4bdc089db51bc67e}
+
+
+\-Reimplemented in \hyperlink{class_kbd_rpt_parser_a84d8baeb9b6652a6ffa97ce8e6fe6f37}{\-Kbd\-Rpt\-Parser}.
+
+
+
+\-Definition at line 152 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_af855e596bbbb9755535f6e69f4ca2305}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-On\-Key\-Down@{\-On\-Key\-Down}}
+\index{\-On\-Key\-Down@{\-On\-Key\-Down}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-On\-Key\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Keyboard\-Report\-Parser\-::\-On\-Key\-Down} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{mod, }
+\item[{uint8\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_af855e596bbbb9755535f6e69f4ca2305}
+
+
+\-Reimplemented in \hyperlink{class_kbd_rpt_parser_ae97856b3d7d87d7b6e5778690c0de7b8}{\-Kbd\-Rpt\-Parser}.
+
+
+
+\-Definition at line 155 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_a57710d31e5379db14779f960f5c714b2}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-On\-Key\-Up@{\-On\-Key\-Up}}
+\index{\-On\-Key\-Up@{\-On\-Key\-Up}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-On\-Key\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Keyboard\-Report\-Parser\-::\-On\-Key\-Up} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{mod, }
+\item[{uint8\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_keyboard_report_parser_a57710d31e5379db14779f960f5c714b2}
+
+
+\-Reimplemented in \hyperlink{class_kbd_rpt_parser_a93a93ad2c95d01e50943c28ea430f111}{\-Kbd\-Rpt\-Parser}.
+
+
+
+\-Definition at line 158 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_a60d8d4d4d187ce5c0e0d69aee7cc772f}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Report\-Parser\-::\-Parse} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-I\-D} $\ast$}]{hid, }
+\item[{bool}]{is\-\_\-rpt\-\_\-id, }
+\item[{uint8\-\_\-t}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_keyboard_report_parser_a60d8d4d4d187ce5c0e0d69aee7cc772f}
+
+
+\-Implements \hyperlink{class_h_i_d_report_parser_ad2837f3d78c7ac3f1c2b3a4815420d97}{\-H\-I\-D\-Report\-Parser}.
+
+
+
+\-Definition at line 127 of file hidboot.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_keyboard_report_parser_a65e6da24b038be3095d06e13b4a280ba}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!b\-Info@{b\-Info}}
+\index{b\-Info@{b\-Info}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{b\-Info}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Keyboard\-Report\-Parser\-::b\-Info}\mbox{[}sizeof({\bf \-K\-B\-D\-I\-N\-F\-O})\mbox{]}}}\label{class_keyboard_report_parser_a65e6da24b038be3095d06e13b4a280ba}
+
+
+\-Definition at line 131 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_ae910089ecc7caff18429925affc5dc7f}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!b\-Leds@{b\-Leds}}
+\index{b\-Leds@{b\-Leds}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{b\-Leds}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Keyboard\-Report\-Parser\-::b\-Leds}}}\label{class_keyboard_report_parser_ae910089ecc7caff18429925affc5dc7f}
+
+
+\-Definition at line 136 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_ab62ffa0e72677379d1e68538625f2f28}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!kbd\-Info@{kbd\-Info}}
+\index{kbd\-Info@{kbd\-Info}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{kbd\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-K\-B\-D\-I\-N\-F\-O} {\bf \-Keyboard\-Report\-Parser\-::kbd\-Info}}}\label{class_keyboard_report_parser_ab62ffa0e72677379d1e68538625f2f28}
+
+
+\-Definition at line 130 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_aa867ab4b6898efa9b768bd05f275809c}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!kbd\-Leds@{kbd\-Leds}}
+\index{kbd\-Leds@{kbd\-Leds}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{kbd\-Leds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-K\-B\-D\-L\-E\-D\-S} {\bf \-Keyboard\-Report\-Parser\-::kbd\-Leds}}}\label{class_keyboard_report_parser_aa867ab4b6898efa9b768bd05f275809c}
+
+
+\-Definition at line 135 of file hidboot.\-h.
+
+\hypertarget{class_keyboard_report_parser_a8a8bd1a171e6b17d1c6db04cedeeff44}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!kbd\-Locking\-Keys@{kbd\-Locking\-Keys}}
+\index{kbd\-Locking\-Keys@{kbd\-Locking\-Keys}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{kbd\-Locking\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   {\bf \-Keyboard\-Report\-Parser\-::kbd\-Locking\-Keys}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_keyboard_report_parser_a8a8bd1a171e6b17d1c6db04cedeeff44}
+\hypertarget{class_keyboard_report_parser_af11da7bfeaff2505a36aa68abb0984f1}{\index{\-Keyboard\-Report\-Parser@{\-Keyboard\-Report\-Parser}!prev\-State@{prev\-State}}
+\index{prev\-State@{prev\-State}!KeyboardReportParser@{\-Keyboard\-Report\-Parser}}
+\subsubsection[{prev\-State}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   {\bf \-Keyboard\-Report\-Parser\-::prev\-State}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_keyboard_report_parser_af11da7bfeaff2505a36aa68abb0984f1}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hidboot_8h}{hidboot.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hidboot_8cpp}{hidboot.\-cpp}\end{DoxyCompactItemize}

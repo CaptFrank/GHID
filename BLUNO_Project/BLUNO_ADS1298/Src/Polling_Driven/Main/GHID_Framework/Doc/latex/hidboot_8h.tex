@@ -1,0 +1,138 @@
+\hypertarget{hidboot_8h}{\section{\-Included \-Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.0-\/master/hidboot.h \-File \-Reference}
+\label{hidboot_8h}\index{\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/hidboot.\-h@{\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/hidboot.\-h}}
+}
+{\ttfamily \#include \char`\"{}hid.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_o_u_s_e_i_n_f_o}{\-M\-O\-U\-S\-E\-I\-N\-F\-O}
+\item 
+class \hyperlink{class_mouse_report_parser}{\-Mouse\-Report\-Parser}
+\item 
+struct \hyperlink{struct_m_o_d_i_f_i_e_r_k_e_y_s}{\-M\-O\-D\-I\-F\-I\-E\-R\-K\-E\-Y\-S}
+\item 
+struct \hyperlink{struct_k_b_d_i_n_f_o}{\-K\-B\-D\-I\-N\-F\-O}
+\item 
+struct \hyperlink{struct_k_b_d_l_e_d_s}{\-K\-B\-D\-L\-E\-D\-S}
+\item 
+class \hyperlink{class_keyboard_report_parser}{\-Keyboard\-Report\-Parser}
+\item 
+class \hyperlink{class_h_i_d_boot}{\-H\-I\-D\-Boot$<$ B\-O\-O\-T\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L $>$}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hidboot_8h_a2458c33386b5c5d5bd2fc0544c9ff70c}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O}~0x27
+\item 
+\#define \hyperlink{hidboot_8h_a42f71f6d2b7e4f543826af0234834237}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R}~0x28
+\item 
+\#define \hyperlink{hidboot_8h_abedef4cc17add7fafbbcda43b442964b}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E}~0x2c
+\item 
+\#define \hyperlink{hidboot_8h_a85200689879c7520e38541fa8ba29ade}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K}~0x39
+\item 
+\#define \hyperlink{hidboot_8h_ad13513d5056e7bfe9f5a2f17e7cc8e42}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K}~0x47
+\item 
+\#define \hyperlink{hidboot_8h_abed3f994055e37e80bede60fda7ea056}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K}~0x53
+\item 
+\#define \hyperlink{hidboot_8h_a69193f2a5138ebecc6819e21e6b31c45}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2}~0x62
+\item 
+\#define \hyperlink{hidboot_8h_a70520f779398f17618bbf6848472eecd}{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D}~0x63
+\item 
+\#define \hyperlink{hidboot_8h_aeec5ae1b55787b14d82c653eb9b920ee}{bits\-Endpoints}(p)~((((p) \& \hyperlink{hid_8h_a059227938fbd1b45ce693d91d2856ca9}{\-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-K\-E\-Y\-B\-O\-A\-R\-D})? 2 \-: 0) $|$ (((p) \& \hyperlink{hid_8h_aeabcfc288ffa25ac6896d19e0642b104}{\-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-M\-O\-U\-S\-E})? 1 \-: 0))
+\item 
+\#define \hyperlink{hidboot_8h_aa1e198c16d2e9fad0e5c025e801f2fae}{total\-Endpoints}(p)~((\hyperlink{hidboot_8h_aeec5ae1b55787b14d82c653eb9b920ee}{bits\-Endpoints}(p) == 3) ? 3 \-: 2)
+\item 
+\#define \hyperlink{hidboot_8h_abbd1564d789b53fcf08fa5c4d9b0121d}{ep\-M\-U\-L}(p)~((((p) \& \hyperlink{hid_8h_a059227938fbd1b45ce693d91d2856ca9}{\-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-K\-E\-Y\-B\-O\-A\-R\-D})? 1 \-: 0) + (((p) \& \hyperlink{hid_8h_aeabcfc288ffa25ac6896d19e0642b104}{\-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-M\-O\-U\-S\-E})? 1 \-: 0))
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{hidboot_8h_aeec5ae1b55787b14d82c653eb9b920ee}{\index{hidboot.\-h@{hidboot.\-h}!bits\-Endpoints@{bits\-Endpoints}}
+\index{bits\-Endpoints@{bits\-Endpoints}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{bits\-Endpoints}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf bits\-Endpoints}(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~((((p) \& {\bf \-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-K\-E\-Y\-B\-O\-A\-R\-D})? 2 \-: 0) $|$ (((p) \& {\bf \-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-M\-O\-U\-S\-E})? 1 \-: 0))}}\label{hidboot_8h_aeec5ae1b55787b14d82c653eb9b920ee}
+
+
+\-Definition at line 32 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_abbd1564d789b53fcf08fa5c4d9b0121d}{\index{hidboot.\-h@{hidboot.\-h}!ep\-M\-U\-L@{ep\-M\-U\-L}}
+\index{ep\-M\-U\-L@{ep\-M\-U\-L}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{ep\-M\-U\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf ep\-M\-U\-L}(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~((((p) \& {\bf \-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-K\-E\-Y\-B\-O\-A\-R\-D})? 1 \-: 0) + (((p) \& {\bf \-H\-I\-D\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-M\-O\-U\-S\-E})? 1 \-: 0))}}\label{hidboot_8h_abbd1564d789b53fcf08fa5c4d9b0121d}
+
+
+\-Definition at line 34 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_aa1e198c16d2e9fad0e5c025e801f2fae}{\index{hidboot.\-h@{hidboot.\-h}!total\-Endpoints@{total\-Endpoints}}
+\index{total\-Endpoints@{total\-Endpoints}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{total\-Endpoints}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf total\-Endpoints}(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(({\bf bits\-Endpoints}(p) == 3) ? 3 \-: 2)}}\label{hidboot_8h_aa1e198c16d2e9fad0e5c025e801f2fae}
+
+
+\-Definition at line 33 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_a85200689879c7520e38541fa8ba29ade}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K}~0x39}}\label{hidboot_8h_a85200689879c7520e38541fa8ba29ade}
+
+
+\-Definition at line 25 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_a42f71f6d2b7e4f543826af0234834237}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R}~0x28}}\label{hidboot_8h_a42f71f6d2b7e4f543826af0234834237}
+
+
+\-Definition at line 23 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_abed3f994055e37e80bede60fda7ea056}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K}~0x53}}\label{hidboot_8h_abed3f994055e37e80bede60fda7ea056}
+
+
+\-Definition at line 27 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_a70520f779398f17618bbf6848472eecd}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D}~0x63}}\label{hidboot_8h_a70520f779398f17618bbf6848472eecd}
+
+
+\-Definition at line 29 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_ad13513d5056e7bfe9f5a2f17e7cc8e42}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K}~0x47}}\label{hidboot_8h_ad13513d5056e7bfe9f5a2f17e7cc8e42}
+
+
+\-Definition at line 26 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_abedef4cc17add7fafbbcda43b442964b}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E}~0x2c}}\label{hidboot_8h_abedef4cc17add7fafbbcda43b442964b}
+
+
+\-Definition at line 24 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_a2458c33386b5c5d5bd2fc0544c9ff70c}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O}~0x27}}\label{hidboot_8h_a2458c33386b5c5d5bd2fc0544c9ff70c}
+
+
+\-Definition at line 22 of file hidboot.\-h.
+
+\hypertarget{hidboot_8h_a69193f2a5138ebecc6819e21e6b31c45}{\index{hidboot.\-h@{hidboot.\-h}!\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2}}
+\index{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2@{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2}!hidboot.h@{hidboot.\-h}}
+\subsubsection[{\-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-U\-H\-S\-\_\-\-H\-I\-D\-\_\-\-B\-O\-O\-T\-\_\-\-K\-E\-Y\-\_\-\-Z\-E\-R\-O2}~0x62}}\label{hidboot_8h_a69193f2a5138ebecc6819e21e6b31c45}
+
+
+\-Definition at line 28 of file hidboot.\-h.
+

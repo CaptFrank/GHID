@@ -1,0 +1,196 @@
+\hypertarget{class_f_t_d_i}{\section{\-F\-T\-D\-I \-Class \-Reference}
+\label{class_f_t_d_i}\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}}
+}
+
+
+{\ttfamily \#include $<$cdcftdi.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_f_t_d_i_ae517a5435ada4145998aa7b07e78adb3}{\-F\-T\-D\-I} (\-U\-S\-B $\ast$pusb, \hyperlink{class_f_t_d_i_async_oper}{\-F\-T\-D\-I\-Async\-Oper} $\ast$pasync)
+\item 
+uint8\-\_\-t \hyperlink{class_f_t_d_i_acb8efdc33bd503563018b7eee577aecf}{\-Set\-Baud\-Rate} (uint32\-\_\-t baud)
+\item 
+uint8\-\_\-t \hyperlink{class_f_t_d_i_a86130f30e67e934346c3c7faf5ee6c56}{\-Set\-Modem\-Control} (uint16\-\_\-t control)
+\item 
+uint8\-\_\-t \hyperlink{class_f_t_d_i_a7c107efeff2d46cb711cadd0a6c31636}{\-Set\-Flow\-Control} (uint8\-\_\-t protocol, uint8\-\_\-t xon=0x11, uint8\-\_\-t xoff=0x13)
+\item 
+uint8\-\_\-t \hyperlink{class_f_t_d_i_ab7d7c305729fe4bbc746fa0569261a71}{\-Set\-Data} (uint16\-\_\-t databm)
+\item 
+uint8\-\_\-t \hyperlink{class_f_t_d_i_aa367ae72fbfda931cae8ec751e9dc434}{\-Rcv\-Data} (uint16\-\_\-t $\ast$bytes\-\_\-rcvd, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_f_t_d_i_a90309b11a160bad9ceb0b77545b7a240}{\-Snd\-Data} (uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_f_t_d_i_a2d40115414dadfee8c284e0f5d397621}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_f_t_d_i_aadee262e2eda31deda790d5d10090b6f}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_f_t_d_i_a5f383dd8eb114563194da011f1d613fd}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_f_t_d_i_ae224d7ea581e5df3b11416410a679086}{\-Get\-Address} ()
+\item 
+virtual void \hyperlink{class_f_t_d_i_a3e3f771b9f2a99fcedf7ed665b597109}{\-Endpoint\-Xtract} (uint8\-\_\-t conf, uint8\-\_\-t iface, uint8\-\_\-t alt, uint8\-\_\-t proto, const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 89 of file cdcftdi.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_f_t_d_i_ae517a5435ada4145998aa7b07e78adb3}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-F\-T\-D\-I@{\-F\-T\-D\-I}}
+\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-F\-T\-D\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-F\-T\-D\-I\-::\-F\-T\-D\-I} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{pusb, }
+\item[{{\bf \-F\-T\-D\-I\-Async\-Oper} $\ast$}]{pasync}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_ae517a5435ada4145998aa7b07e78adb3}
+
+
+\-Definition at line 23 of file cdcftdi.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_f_t_d_i_a3e3f771b9f2a99fcedf7ed665b597109}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Endpoint\-Xtract@{\-Endpoint\-Xtract}}
+\index{\-Endpoint\-Xtract@{\-Endpoint\-Xtract}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Endpoint\-Xtract}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-F\-T\-D\-I\-::\-Endpoint\-Xtract} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{conf, }
+\item[{uint8\-\_\-t}]{iface, }
+\item[{uint8\-\_\-t}]{alt, }
+\item[{uint8\-\_\-t}]{proto, }
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_f_t_d_i_a3e3f771b9f2a99fcedf7ed665b597109}
+
+
+\-Definition at line 215 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_ae224d7ea581e5df3b11416410a679086}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_f_t_d_i_ae224d7ea581e5df3b11416410a679086}
+
+
+\-Definition at line 125 of file cdcftdi.\-h.
+
+\hypertarget{class_f_t_d_i_a2d40115414dadfee8c284e0f5d397621}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_f_t_d_i_a2d40115414dadfee8c284e0f5d397621}
+
+
+\-Definition at line 41 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_a5f383dd8eb114563194da011f1d613fd}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_f_t_d_i_a5f383dd8eb114563194da011f1d613fd}
+
+
+\-Definition at line 252 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_aa367ae72fbfda931cae8ec751e9dc434}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Rcv\-Data@{\-Rcv\-Data}}
+\index{\-Rcv\-Data@{\-Rcv\-Data}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Rcv\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Rcv\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t $\ast$}]{bytes\-\_\-rcvd, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_aa367ae72fbfda931cae8ec751e9dc434}
+
+
+\-Definition at line 316 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_aadee262e2eda31deda790d5d10090b6f}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_f_t_d_i_aadee262e2eda31deda790d5d10090b6f}
+
+
+\-Definition at line 242 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_acb8efdc33bd503563018b7eee577aecf}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Set\-Baud\-Rate@{\-Set\-Baud\-Rate}}
+\index{\-Set\-Baud\-Rate@{\-Set\-Baud\-Rate}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Set\-Baud\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Set\-Baud\-Rate} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{baud}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_acb8efdc33bd503563018b7eee577aecf}
+
+
+\-Definition at line 267 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_ab7d7c305729fe4bbc746fa0569261a71}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Set\-Data@{\-Set\-Data}}
+\index{\-Set\-Data@{\-Set\-Data}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Set\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{databm}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_ab7d7c305729fe4bbc746fa0569261a71}
+
+
+\-Definition at line 312 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_a7c107efeff2d46cb711cadd0a6c31636}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Set\-Flow\-Control@{\-Set\-Flow\-Control}}
+\index{\-Set\-Flow\-Control@{\-Set\-Flow\-Control}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Set\-Flow\-Control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Set\-Flow\-Control} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{protocol, }
+\item[{uint8\-\_\-t}]{xon = {\ttfamily 0x11}, }
+\item[{uint8\-\_\-t}]{xoff = {\ttfamily 0x13}}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_a7c107efeff2d46cb711cadd0a6c31636}
+
+
+\-Definition at line 308 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_a86130f30e67e934346c3c7faf5ee6c56}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Set\-Modem\-Control@{\-Set\-Modem\-Control}}
+\index{\-Set\-Modem\-Control@{\-Set\-Modem\-Control}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Set\-Modem\-Control}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Set\-Modem\-Control} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{control}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_a86130f30e67e934346c3c7faf5ee6c56}
+
+
+\-Definition at line 304 of file cdcftdi.\-cpp.
+
+\hypertarget{class_f_t_d_i_a90309b11a160bad9ceb0b77545b7a240}{\index{\-F\-T\-D\-I@{\-F\-T\-D\-I}!\-Snd\-Data@{\-Snd\-Data}}
+\index{\-Snd\-Data@{\-Snd\-Data}!FTDI@{\-F\-T\-D\-I}}
+\subsubsection[{\-Snd\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-F\-T\-D\-I\-::\-Snd\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_f_t_d_i_a90309b11a160bad9ceb0b77545b7a240}
+
+
+\-Definition at line 320 of file cdcftdi.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{cdcftdi_8h}{cdcftdi.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{cdcftdi_8cpp}{cdcftdi.\-cpp}\end{DoxyCompactItemize}

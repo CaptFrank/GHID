@@ -1,0 +1,112 @@
+\hypertarget{_bluetooth_connection_handler_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Bluetooth\-Connection\-Handler.h \-File \-Reference}
+\label{_bluetooth_connection_handler_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Bluetooth\-Connection\-Handler.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Bluetooth\-Connection\-Handler.\-h}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Utilities.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Watchdog.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Protocol\-Definition.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Connection\-Protocol\-Handler.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_bluetooth___connection___handler}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a734bbab06e1a9fd2e5522db0221ff6e3}{\-B\-A\-U\-D\-R\-A\-T\-E}~115200
+\begin{DoxyCompactList}\small\item\em \-Configs \-Defines. \end{DoxyCompactList}\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a45ba202b05caf39795aeca91b0ae547e}{\-T\-I\-M\-E\-O\-U\-T}~10
+\begin{DoxyCompactList}\small\item\em \-The connection timeout. \end{DoxyCompactList}\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_aba51915c87d64af47fb1cc59348961c9}{\-O\-K}~'@'
+\begin{DoxyCompactList}\small\item\em \-Connection protocol bytes. \end{DoxyCompactList}\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{\-E\-R\-R\-O\-R}~'!'
+\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a65528c74adc6691eac2c7a2f39328064}{\-C\-O\-N\-N\-E\-C\-T}~'\-C'
+\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a587604e6f3570c0fc32794384d4d0d1f}{\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T}~'\-D'
+\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a4dc886b5a76f9986871e68b72a23e27d}{\-R\-E\-B\-O\-O\-T}~'\-R'
+\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_a1067d5f90fd4deede85bf8fe36c1c57f}{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-D}~'\#'
+\item 
+\#define \hyperlink{_bluetooth_connection_handler_8h_aa5a326aab2cb852f8698733b479fbe54}{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X}~0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_bluetooth_connection_handler_8h_a734bbab06e1a9fd2e5522db0221ff6e3}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-B\-A\-U\-D\-R\-A\-T\-E@{\-B\-A\-U\-D\-R\-A\-T\-E}}
+\index{\-B\-A\-U\-D\-R\-A\-T\-E@{\-B\-A\-U\-D\-R\-A\-T\-E}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-B\-A\-U\-D\-R\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-U\-D\-R\-A\-T\-E}~115200}}\label{_bluetooth_connection_handler_8h_a734bbab06e1a9fd2e5522db0221ff6e3}
+
+
+\-Configs \-Defines. 
+
+
+
+\-Definition at line 19 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_a65528c74adc6691eac2c7a2f39328064}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-C\-O\-N\-N\-E\-C\-T@{\-C\-O\-N\-N\-E\-C\-T}}
+\index{\-C\-O\-N\-N\-E\-C\-T@{\-C\-O\-N\-N\-E\-C\-T}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-C\-O\-N\-N\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-O\-N\-N\-E\-C\-T}~'\-C'}}\label{_bluetooth_connection_handler_8h_a65528c74adc6691eac2c7a2f39328064}
+
+
+\-Definition at line 28 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_a587604e6f3570c0fc32794384d4d0d1f}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T@{\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T}}
+\index{\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T@{\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-I\-S\-C\-O\-N\-N\-E\-C\-T}~'\-D'}}\label{_bluetooth_connection_handler_8h_a587604e6f3570c0fc32794384d4d0d1f}
+
+
+\-Definition at line 29 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_a8fe83ac76edc595f6b98cd4a4127aed5}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-E\-R\-R\-O\-R@{\-E\-R\-R\-O\-R}}
+\index{\-E\-R\-R\-O\-R@{\-E\-R\-R\-O\-R}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-R\-R\-O\-R}~'!'}}\label{_bluetooth_connection_handler_8h_a8fe83ac76edc595f6b98cd4a4127aed5}
+
+
+\-Definition at line 26 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_a1067d5f90fd4deede85bf8fe36c1c57f}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-H\-E\-A\-D\-E\-R\-\_\-\-I\-D@{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-D}}
+\index{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-D@{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-D}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-E\-A\-D\-E\-R\-\_\-\-I\-D}~'\#'}}\label{_bluetooth_connection_handler_8h_a1067d5f90fd4deede85bf8fe36c1c57f}
+
+
+\-Definition at line 32 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_aa5a326aab2cb852f8698733b479fbe54}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X@{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X}}
+\index{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X@{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-E\-A\-D\-E\-R\-\_\-\-I\-N\-D\-E\-X}~0}}\label{_bluetooth_connection_handler_8h_aa5a326aab2cb852f8698733b479fbe54}
+
+
+\-Definition at line 33 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_aba51915c87d64af47fb1cc59348961c9}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-O\-K@{\-O\-K}}
+\index{\-O\-K@{\-O\-K}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-O\-K}~'@'}}\label{_bluetooth_connection_handler_8h_aba51915c87d64af47fb1cc59348961c9}
+
+
+\-Connection protocol bytes. 
+
+
+
+\-Definition at line 25 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_a4dc886b5a76f9986871e68b72a23e27d}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-R\-E\-B\-O\-O\-T@{\-R\-E\-B\-O\-O\-T}}
+\index{\-R\-E\-B\-O\-O\-T@{\-R\-E\-B\-O\-O\-T}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-R\-E\-B\-O\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-B\-O\-O\-T}~'\-R'}}\label{_bluetooth_connection_handler_8h_a4dc886b5a76f9986871e68b72a23e27d}
+
+
+\-Definition at line 30 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+\hypertarget{_bluetooth_connection_handler_8h_a45ba202b05caf39795aeca91b0ae547e}{\index{\-Bluetooth\-Connection\-Handler.\-h@{\-Bluetooth\-Connection\-Handler.\-h}!\-T\-I\-M\-E\-O\-U\-T@{\-T\-I\-M\-E\-O\-U\-T}}
+\index{\-T\-I\-M\-E\-O\-U\-T@{\-T\-I\-M\-E\-O\-U\-T}!BluetoothConnectionHandler.h@{\-Bluetooth\-Connection\-Handler.\-h}}
+\subsubsection[{\-T\-I\-M\-E\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-I\-M\-E\-O\-U\-T}~10}}\label{_bluetooth_connection_handler_8h_a45ba202b05caf39795aeca91b0ae547e}
+
+
+\-The connection timeout. 
+
+
+
+\-Definition at line 22 of file \-Bluetooth\-Connection\-Handler.\-h.
+

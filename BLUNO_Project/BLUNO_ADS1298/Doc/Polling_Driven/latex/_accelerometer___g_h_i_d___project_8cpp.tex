@@ -1,0 +1,303 @@
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.cpp \-File \-Reference}
+\label{_accelerometer___g_h_i_d___project_8cpp}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include $<$\-G\-H\-I\-D A\-P\-I/\-G\-H\-I\-D\-\_\-\-Project.\-h$>$}\*
+{\ttfamily \#include $<$\-Included Libraries/\-A\-D\-X\-L335.\-h$>$}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a3c13f45210a29355cd5cfeefa8f091c2}{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}
+\begin{DoxyCompactList}\small\item\em \-We need digital ports. \end{DoxyCompactList}\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a8150279104183c4da0e3494bf943e927}{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}
+\begin{DoxyCompactList}\small\item\em \-We need analog ports. \end{DoxyCompactList}\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a3846181cf670f578e43772faa4bd3f75}{\-A\-\_\-1}~5
+\begin{DoxyCompactList}\small\item\em \-We define our analog axis. \end{DoxyCompactList}\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a01e92799f99fb681f6db217e5fcce84d}{\-A\-\_\-2}~4
+\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a304db09cca37e303ccb2af2b5e669b84}{\-A\-\_\-3}~3
+\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_ab31d832d82bef7f1c6df989c3040a216}{\-D\-\_\-1}~7
+\begin{DoxyCompactList}\small\item\em \-We define the digital inputs. \end{DoxyCompactList}\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a6b9fc4d1f3b726959596f71e0e5bbe06}{\-D\-\_\-2}~8
+\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a1d003907e9c6c3d9532ba99e3e8a1219}{\-D\-\_\-3}~9
+\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a8f647c8f99a6c7b21a140195549c9560}{\-G\-N\-D\-\_\-}~2
+\begin{DoxyCompactList}\small\item\em \-We define the rails. \end{DoxyCompactList}\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a274684aea661274bdbcf94e777c91d7d}{\-V\-C\-C\-\_\-}~0
+\item 
+\#define \hyperlink{_accelerometer___g_h_i_d___project_8cpp_ad4eed9284dd1d5cddf07e8de0ee8655c}{\-A\-R\-E\-F}~3.\-3
+\begin{DoxyCompactList}\small\item\em \-We define the reference voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup} (void)
+\begin{DoxyCompactList}\small\item\em \-These are the prototypes for the sketch. \end{DoxyCompactList}\item 
+void \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}{loop} (void)
+\begin{DoxyCompactList}\small\item\em ====================================================================== \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_h_i_d___system___abstration}{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_ac320aae7656d467a41157a1de0129d32}{system}
+\begin{DoxyCompactList}\small\item\em \-Here we setup a context object. \end{DoxyCompactList}\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_ace4a8713f080e1304ac2eae92c63354e}{\-A1}
+\begin{DoxyCompactList}\small\item\em \-We need 3 analog ports for the accelerometer. \end{DoxyCompactList}\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a69c2141b7bf5c12f7bc82f085d4eecc4}{\-A2}
+\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a7f5e3eaee7e969842c7cb99275d66d6b}{\-A3}
+\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_afaa4187db3263427554714a693c1048f}{\-G\-N\-D}
+\begin{DoxyCompactList}\small\item\em \-Define the rails. \end{DoxyCompactList}\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a517dd7383214a96a90c004af2c886bf8}{\-V\-C\-C}
+\item 
+\hyperlink{class_digital___port}{\-Digital\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a86e95d29dd37f8827834c0af3086fe11}{\-D1}
+\begin{DoxyCompactList}\small\item\em \-We need 3 digital ports for the buttons. \end{DoxyCompactList}\item 
+\hyperlink{class_digital___port}{\-Digital\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a5ceebc53afbbe9346c111cf404aa0a5f}{\-D2}
+\item 
+\hyperlink{class_digital___port}{\-Digital\-\_\-\-Port} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a945b42c0897f3f945507da371778d725}{\-D3}
+\item 
+\hyperlink{class_a_d_x_l335}{\-A\-D\-X\-L335} \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a1c6cfdb5f3f58c5495e23ba02b45eb41}{accelerometer} (\hyperlink{_accelerometer___g_h_i_d___project_8cpp_a3846181cf670f578e43772faa4bd3f75}{\-A\-\_\-1}, \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a01e92799f99fb681f6db217e5fcce84d}{\-A\-\_\-2}, \hyperlink{_accelerometer___g_h_i_d___project_8cpp_a304db09cca37e303ccb2af2b5e669b84}{\-A\-\_\-3}, \hyperlink{_accelerometer___g_h_i_d___project_8cpp_ad4eed9284dd1d5cddf07e8de0ee8655c}{\-A\-R\-E\-F})
+\begin{DoxyCompactList}\small\item\em \-Create an accelerometer object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a3846181cf670f578e43772faa4bd3f75}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A\-\_\-1@{\-A\-\_\-1}}
+\index{\-A\-\_\-1@{\-A\-\_\-1}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-\_\-1}~5}}\label{_accelerometer___g_h_i_d___project_8cpp_a3846181cf670f578e43772faa4bd3f75}
+
+
+\-We define our analog axis. 
+
+
+
+\-Definition at line 13 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a01e92799f99fb681f6db217e5fcce84d}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A\-\_\-2@{\-A\-\_\-2}}
+\index{\-A\-\_\-2@{\-A\-\_\-2}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-\_\-2}~4}}\label{_accelerometer___g_h_i_d___project_8cpp_a01e92799f99fb681f6db217e5fcce84d}
+
+
+\-Definition at line 14 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a304db09cca37e303ccb2af2b5e669b84}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A\-\_\-3@{\-A\-\_\-3}}
+\index{\-A\-\_\-3@{\-A\-\_\-3}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-\_\-3}~3}}\label{_accelerometer___g_h_i_d___project_8cpp_a304db09cca37e303ccb2af2b5e669b84}
+
+
+\-Definition at line 15 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_ad4eed9284dd1d5cddf07e8de0ee8655c}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A\-R\-E\-F@{\-A\-R\-E\-F}}
+\index{\-A\-R\-E\-F@{\-A\-R\-E\-F}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A\-R\-E\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-R\-E\-F}~3.\-3}}\label{_accelerometer___g_h_i_d___project_8cpp_ad4eed9284dd1d5cddf07e8de0ee8655c}
+
+
+\-We define the reference voltage. 
+
+
+
+\-Definition at line 27 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_ab31d832d82bef7f1c6df989c3040a216}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D\-\_\-1@{\-D\-\_\-1}}
+\index{\-D\-\_\-1@{\-D\-\_\-1}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-1}~7}}\label{_accelerometer___g_h_i_d___project_8cpp_ab31d832d82bef7f1c6df989c3040a216}
+
+
+\-We define the digital inputs. 
+
+
+
+\-Definition at line 18 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a6b9fc4d1f3b726959596f71e0e5bbe06}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D\-\_\-2@{\-D\-\_\-2}}
+\index{\-D\-\_\-2@{\-D\-\_\-2}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-2}~8}}\label{_accelerometer___g_h_i_d___project_8cpp_a6b9fc4d1f3b726959596f71e0e5bbe06}
+
+
+\-Definition at line 19 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a1d003907e9c6c3d9532ba99e3e8a1219}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D\-\_\-3@{\-D\-\_\-3}}
+\index{\-D\-\_\-3@{\-D\-\_\-3}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-3}~9}}\label{_accelerometer___g_h_i_d___project_8cpp_a1d003907e9c6c3d9532ba99e3e8a1219}
+
+
+\-Definition at line 20 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a8150279104183c4da0e3494bf943e927}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}}
+\index{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}}}\label{_accelerometer___g_h_i_d___project_8cpp_a8150279104183c4da0e3494bf943e927}
+
+
+\-We need analog ports. 
+
+
+
+\-Definition at line 7 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a3c13f45210a29355cd5cfeefa8f091c2}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}}
+\index{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}}}\label{_accelerometer___g_h_i_d___project_8cpp_a3c13f45210a29355cd5cfeefa8f091c2}
+
+
+\-We need digital ports. 
+
+
+
+\-Definition at line 4 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a8f647c8f99a6c7b21a140195549c9560}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-G\-N\-D\-\_\-@{\-G\-N\-D\-\_\-}}
+\index{\-G\-N\-D\-\_\-@{\-G\-N\-D\-\_\-}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-G\-N\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-N\-D\-\_\-}~2}}\label{_accelerometer___g_h_i_d___project_8cpp_a8f647c8f99a6c7b21a140195549c9560}
+
+
+\-We define the rails. 
+
+
+
+\-Definition at line 23 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a274684aea661274bdbcf94e777c91d7d}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-V\-C\-C\-\_\-@{\-V\-C\-C\-\_\-}}
+\index{\-V\-C\-C\-\_\-@{\-V\-C\-C\-\_\-}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-V\-C\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-C\-C\-\_\-}~0}}\label{_accelerometer___g_h_i_d___project_8cpp_a274684aea661274bdbcf94e777c91d7d}
+
+
+\-Definition at line 24 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!loop@{loop}}
+\index{loop@{loop}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf loop} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_accelerometer___g_h_i_d___project_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}
+
+
+====================================================================== 
+
+\-This is the main worker function, which never quits until the process is complete. \-We delay 10ms
+
+\-We update the accelerometer values
+
+\-We map the values 
+
+\-Definition at line 91 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!setup@{setup}}
+\index{setup@{setup}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf setup} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_accelerometer___g_h_i_d___project_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}
+
+
+\-These are the prototypes for the sketch. 
+
+======================================================================
+
+\-This function overrides the \-Arduino framework setup function, with our setup routines. \-Here we setup the \-U\-S\-B interface
+
+\-We setup the analog and digital ports;
+
+\-We write the values for the rails
+
+\-O\-N
+
+\-O\-F\-F
+
+\-We set the analog reference 
+
+\-Definition at line 57 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_ace4a8713f080e1304ac2eae92c63354e}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A1@{\-A1}}
+\index{\-A1@{\-A1}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-A1}}}\label{_accelerometer___g_h_i_d___project_8cpp_ace4a8713f080e1304ac2eae92c63354e}
+
+
+\-We need 3 analog ports for the accelerometer. 
+
+
+
+\-Definition at line 37 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a69c2141b7bf5c12f7bc82f085d4eecc4}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A2@{\-A2}}
+\index{\-A2@{\-A2}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-A2}}}\label{_accelerometer___g_h_i_d___project_8cpp_a69c2141b7bf5c12f7bc82f085d4eecc4}
+
+
+\-Definition at line 38 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a7f5e3eaee7e969842c7cb99275d66d6b}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-A3@{\-A3}}
+\index{\-A3@{\-A3}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-A3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-A3}}}\label{_accelerometer___g_h_i_d___project_8cpp_a7f5e3eaee7e969842c7cb99275d66d6b}
+
+
+\-Definition at line 39 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a1c6cfdb5f3f58c5495e23ba02b45eb41}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!accelerometer@{accelerometer}}
+\index{accelerometer@{accelerometer}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{accelerometer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L335} {\bf accelerometer}({\bf \-A\-\_\-1}, {\bf \-A\-\_\-2}, {\bf \-A\-\_\-3}, {\bf \-A\-R\-E\-F})}}\label{_accelerometer___g_h_i_d___project_8cpp_a1c6cfdb5f3f58c5495e23ba02b45eb41}
+
+
+\-Create an accelerometer object. 
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a86e95d29dd37f8827834c0af3086fe11}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D1@{\-D1}}
+\index{\-D1@{\-D1}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-\_\-\-Port} {\bf \-D1}}}\label{_accelerometer___g_h_i_d___project_8cpp_a86e95d29dd37f8827834c0af3086fe11}
+
+
+\-We need 3 digital ports for the buttons. 
+
+
+
+\-Definition at line 46 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a5ceebc53afbbe9346c111cf404aa0a5f}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D2@{\-D2}}
+\index{\-D2@{\-D2}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-\_\-\-Port} {\bf \-D2}}}\label{_accelerometer___g_h_i_d___project_8cpp_a5ceebc53afbbe9346c111cf404aa0a5f}
+
+
+\-Definition at line 47 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a945b42c0897f3f945507da371778d725}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D3@{\-D3}}
+\index{\-D3@{\-D3}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-\_\-\-Port} {\bf \-D3}}}\label{_accelerometer___g_h_i_d___project_8cpp_a945b42c0897f3f945507da371778d725}
+
+
+\-Definition at line 48 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_afaa4187db3263427554714a693c1048f}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-G\-N\-D@{\-G\-N\-D}}
+\index{\-G\-N\-D@{\-G\-N\-D}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-G\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-G\-N\-D}}}\label{_accelerometer___g_h_i_d___project_8cpp_afaa4187db3263427554714a693c1048f}
+
+
+\-Define the rails. 
+
+
+
+\-Definition at line 42 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_ac320aae7656d467a41157a1de0129d32}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!system@{system}}
+\index{system@{system}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{system}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration} {\bf system}}}\label{_accelerometer___g_h_i_d___project_8cpp_ac320aae7656d467a41157a1de0129d32}
+
+
+\-Here we setup a context object. 
+
+
+
+\-Definition at line 34 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_accelerometer___g_h_i_d___project_8cpp_a517dd7383214a96a90c004af2c886bf8}{\index{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-V\-C\-C@{\-V\-C\-C}}
+\index{\-V\-C\-C@{\-V\-C\-C}!Accelerometer_GHID_Project.cpp@{\-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-V\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-V\-C\-C}}}\label{_accelerometer___g_h_i_d___project_8cpp_a517dd7383214a96a90c004af2c886bf8}
+
+
+\-Definition at line 43 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+

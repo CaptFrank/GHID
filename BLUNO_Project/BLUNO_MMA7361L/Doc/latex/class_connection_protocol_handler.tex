@@ -1,0 +1,175 @@
+\hypertarget{class_connection_protocol_handler}{\section{\-Connection\-Protocol\-Handler \-Class \-Reference}
+\label{class_connection_protocol_handler}\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}}
+}
+
+
+{\ttfamily \#include $<$\-Connection\-Protocol\-Handler.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_connection_protocol_handler_aba243f08aafb26db4c9e5e71732ea293}{\-Connection\-Protocol\-Handler} (\hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$\hyperlink{_main_8cpp_af570f243f3075e66aa6b4938759826f0}{buffer}, \-Hardware\-Serial $\ast$serial, \hyperlink{classutilities}{utilities} $\ast$utils)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+void \hyperlink{class_connection_protocol_handler_af8b3a3a0e921bf3d45eaca8301e25fe5}{set\-\_\-callback\-\_\-table} (\hyperlink{structcallback__t}{callback\-\_\-t} $\ast$table)
+\item 
+void \hyperlink{class_connection_protocol_handler_a7ff2a420924a2bc81152f22972ec2822}{poll} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_connection_protocol_handler_a956d4439d9ebc3932949c6ff95f9b4d9}{generic} (uint8\-\_\-t command, void $\ast$object)
+\item 
+static void \hyperlink{class_connection_protocol_handler_a0caba597a54e32503cff6e45c1b26720}{request} (uint8\-\_\-t command, void $\ast$object)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is the callback handler. \-It is used to service incoming commands from the host device.
+
+\-Basically, this class handles the firing of the appropriate service when a command to scan is acquired. 
+
+\-Definition at line 28 of file \-Connection\-Protocol\-Handler.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_connection_protocol_handler_aba243f08aafb26db4c9e5e71732ea293}{\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}!\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}}
+\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}!ConnectionProtocolHandler@{\-Connection\-Protocol\-Handler}}
+\subsubsection[{\-Connection\-Protocol\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Protocol\-Handler\-::\-Connection\-Protocol\-Handler} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Ring\-Buff\-\_\-t} $\ast$}]{buffer, }
+\item[{\-Hardware\-Serial $\ast$}]{serial, }
+\item[{{\bf utilities} $\ast$}]{utils}
+\end{DoxyParamCaption}
+)}}\label{class_connection_protocol_handler_aba243f08aafb26db4c9e5e71732ea293}
+
+
+\-Public \-Context. 
+
+\-This is the default constructor for the class
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & -\/ \-The ring buffer pointer \\
+\hline
+{\em serial} & -\/ \-The \-Hardware serial to read and write\\
+\hline
+\end{DoxyParams}
+\-This is the default constructor for the class
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buffer} & -\/ \-The ring buffer pointer \\
+\hline
+{\em serial} & -\/ \-The \-Hardware serial to read and write \\
+\hline
+{\em utils} & -\/ \-The global utilities \\
+\hline
+\end{DoxyParams}
+\-Set internals 
+
+\-Definition at line 19 of file \-Connection\-Protocol\-Handler.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_connection_protocol_handler_a956d4439d9ebc3932949c6ff95f9b4d9}{\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}!generic@{generic}}
+\index{generic@{generic}!ConnectionProtocolHandler@{\-Connection\-Protocol\-Handler}}
+\subsubsection[{generic}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Connection\-Protocol\-Handler\-::generic} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{command, }
+\item[{void $\ast$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_connection_protocol_handler_a956d4439d9ebc3932949c6ff95f9b4d9}
+\-This method is used to generic system wide actions
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command} & -\/ \-The issued command \\
+\hline
+{\em object} & -\/ \-The access object\\
+\hline
+\end{DoxyParams}
+\-This method is used to generic system wide actions
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command} & -\/ \-The issued command \\
+\hline
+\end{DoxyParams}
+\-Cast the object
+
+\-We switch on the command
+
+\-We reset the device
+
+\-We stop the device
+
+\-We start the device
+
+\-Nothing happens 
+
+\-Definition at line 66 of file \-Connection\-Protocol\-Handler.\-cpp.
+
+\hypertarget{class_connection_protocol_handler_a7ff2a420924a2bc81152f22972ec2822}{\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}!poll@{poll}}
+\index{poll@{poll}!ConnectionProtocolHandler@{\-Connection\-Protocol\-Handler}}
+\subsubsection[{poll}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Connection\-Protocol\-Handler\-::poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_connection_protocol_handler_a7ff2a420924a2bc81152f22972ec2822}
+\-This method polls to see if there are some commands received. \-We check if we got a command
+
+\-We read the command
+
+\-If we find the command within the table
+
+\-We fire the particular function 
+
+\-Definition at line 41 of file \-Connection\-Protocol\-Handler.\-cpp.
+
+\hypertarget{class_connection_protocol_handler_a0caba597a54e32503cff6e45c1b26720}{\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}!request@{request}}
+\index{request@{request}!ConnectionProtocolHandler@{\-Connection\-Protocol\-Handler}}
+\subsubsection[{request}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Connection\-Protocol\-Handler\-::request} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{command, }
+\item[{void $\ast$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_connection_protocol_handler_a0caba597a54e32503cff6e45c1b26720}
+\-This method is used when the request connection type is used.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command} & -\/ \-The issued command \\
+\hline
+\end{DoxyParams}
+\-Cast the object
+
+\-We send data 
+
+\-Definition at line 103 of file \-Connection\-Protocol\-Handler.\-cpp.
+
+\hypertarget{class_connection_protocol_handler_af8b3a3a0e921bf3d45eaca8301e25fe5}{\index{\-Connection\-Protocol\-Handler@{\-Connection\-Protocol\-Handler}!set\-\_\-callback\-\_\-table@{set\-\_\-callback\-\_\-table}}
+\index{set\-\_\-callback\-\_\-table@{set\-\_\-callback\-\_\-table}!ConnectionProtocolHandler@{\-Connection\-Protocol\-Handler}}
+\subsubsection[{set\-\_\-callback\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Connection\-Protocol\-Handler\-::set\-\_\-callback\-\_\-table} (
+\begin{DoxyParamCaption}
+\item[{{\bf callback\-\_\-t} $\ast$}]{table}
+\end{DoxyParamCaption}
+)}}\label{class_connection_protocol_handler_af8b3a3a0e921bf3d45eaca8301e25fe5}
+\-This sets up the callback table.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em table} & -\/ \-The callback table \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 33 of file \-Connection\-Protocol\-Handler.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_connection_protocol_handler_8h}{\-Connection\-Protocol\-Handler.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_connection_protocol_handler_8cpp}{\-Connection\-Protocol\-Handler.\-cpp}\end{DoxyCompactItemize}

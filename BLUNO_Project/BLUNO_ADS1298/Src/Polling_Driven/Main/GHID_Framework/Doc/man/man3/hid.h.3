@@ -1,0 +1,452 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/hid.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/hid.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Usb\&.h'\fP
+.br
+\fC#include 'hidusagestr\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBHidItemPrefix\fP"
+.br
+.ti -1c
+.RI "struct \fBMainItemIOFeature\fP"
+.br
+.ti -1c
+.RI "class \fBHIDReportParser\fP"
+.br
+.ti -1c
+.RI "class \fBHID\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_REPORT_PARSERS\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHID_MAX_HID_CLASS_DESCRIPTORS\fP   5"
+.br
+.ti -1c
+.RI "#define \fBDATA_SIZE_MASK\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBTYPE_MASK\fP   0x0C"
+.br
+.ti -1c
+.RI "#define \fBTAG_MASK\fP   0xF0"
+.br
+.ti -1c
+.RI "#define \fBDATA_SIZE_0\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBDATA_SIZE_1\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBDATA_SIZE_2\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBDATA_SIZE_4\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBTYPE_MAIN\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBTYPE_GLOBAL\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBTYPE_LOCAL\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBTAG_MAIN_INPUT\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBTAG_MAIN_OUTPUT\fP   0x90"
+.br
+.ti -1c
+.RI "#define \fBTAG_MAIN_COLLECTION\fP   0xA0"
+.br
+.ti -1c
+.RI "#define \fBTAG_MAIN_FEATURE\fP   0xB0"
+.br
+.ti -1c
+.RI "#define \fBTAG_MAIN_ENDCOLLECTION\fP   0xC0"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_USAGEPAGE\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_LOGICALMIN\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_LOGICALMAX\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_PHYSMIN\fP   0x30"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_PHYSMAX\fP   0x40"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_UNITEXP\fP   0x50"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_UNIT\fP   0x60"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_REPORTSIZE\fP   0x70"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_REPORTID\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_REPORTCOUNT\fP   0x90"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_PUSH\fP   0xA0"
+.br
+.ti -1c
+.RI "#define \fBTAG_GLOBAL_POP\fP   0xB0"
+.br
+.ti -1c
+.RI "#define \fBTAG_LOCAL_USAGE\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBTAG_LOCAL_USAGEMIN\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBTAG_LOCAL_USAGEMAX\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_HIDOUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_HIDIN\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_HIDREPORT\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_STANDARD|USB_SETUP_RECIPIENT_INTERFACE"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_GET_REPORT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_GET_IDLE\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_GET_PROTOCOL\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_SET_REPORT\fP   0x09"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_SET_IDLE\fP   0x0A"
+.br
+.ti -1c
+.RI "#define \fBHID_REQUEST_SET_PROTOCOL\fP   0x0B"
+.br
+.ti -1c
+.RI "#define \fBHID_DESCRIPTOR_HID\fP   0x21"
+.br
+.ti -1c
+.RI "#define \fBHID_DESCRIPTOR_REPORT\fP   0x22"
+.br
+.ti -1c
+.RI "#define \fBHID_DESRIPTOR_PHY\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBHID_BOOT_PROTOCOL\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBHID_RPT_PROTOCOL\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBHID_INTF\fP   0x03"
+.br
+.ti -1c
+.RI "#define \fBHID_BOOT_INTF_SUBCLASS\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBHID_PROTOCOL_NONE\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBHID_PROTOCOL_KEYBOARD\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBHID_PROTOCOL_MOUSE\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBHID_ITEM_TYPE_MAIN\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHID_ITEM_TYPE_GLOBAL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHID_ITEM_TYPE_LOCAL\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHID_ITEM_TYPE_RESERVED\fP   3"
+.br
+.ti -1c
+.RI "#define \fBHID_LONG_ITEM_PREFIX\fP   0xfe"
+.br
+.ti -1c
+.RI "#define \fBbmHID_MAIN_ITEM_TAG\fP   0xfc"
+.br
+.ti -1c
+.RI "#define \fBbmHID_MAIN_ITEM_INPUT\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBbmHID_MAIN_ITEM_OUTPUT\fP   0x90"
+.br
+.ti -1c
+.RI "#define \fBbmHID_MAIN_ITEM_FEATURE\fP   0xb0"
+.br
+.ti -1c
+.RI "#define \fBbmHID_MAIN_ITEM_COLLECTION\fP   0xa0"
+.br
+.ti -1c
+.RI "#define \fBbmHID_MAIN_ITEM_END_COLLECTION\fP   0xce"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_PHYSICAL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_APPLICATION\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_LOGICAL\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_REPORT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_NAMED_ARRAY\fP   4"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_USAGE_SWITCH\fP   5"
+.br
+.ti -1c
+.RI "#define \fBHID_MAIN_ITEM_COLLECTION_USAGE_MODIFIER\fP   6"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBbmHID_MAIN_ITEM_COLLECTION\fP   0xa0"
+.PP
+Definition at line 108 of file hid\&.h\&.
+.SS "#define \fBbmHID_MAIN_ITEM_END_COLLECTION\fP   0xce"
+.PP
+Definition at line 109 of file hid\&.h\&.
+.SS "#define \fBbmHID_MAIN_ITEM_FEATURE\fP   0xb0"
+.PP
+Definition at line 107 of file hid\&.h\&.
+.SS "#define \fBbmHID_MAIN_ITEM_INPUT\fP   0x80"
+.PP
+Definition at line 105 of file hid\&.h\&.
+.SS "#define \fBbmHID_MAIN_ITEM_OUTPUT\fP   0x90"
+.PP
+Definition at line 106 of file hid\&.h\&.
+.SS "#define \fBbmHID_MAIN_ITEM_TAG\fP   0xfc"
+.PP
+Definition at line 103 of file hid\&.h\&.
+.SS "#define \fBbmREQ_HIDIN\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.PP
+Definition at line 64 of file hid\&.h\&.
+.SS "#define \fBbmREQ_HIDOUT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_INTERFACE"
+.PP
+Definition at line 63 of file hid\&.h\&.
+.SS "#define \fBbmREQ_HIDREPORT\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_STANDARD|USB_SETUP_RECIPIENT_INTERFACE"
+.PP
+Definition at line 65 of file hid\&.h\&.
+.SS "#define \fBDATA_SIZE_0\fP   0x00"
+.PP
+Definition at line 30 of file hid\&.h\&.
+.SS "#define \fBDATA_SIZE_1\fP   0x01"
+.PP
+Definition at line 31 of file hid\&.h\&.
+.SS "#define \fBDATA_SIZE_2\fP   0x02"
+.PP
+Definition at line 32 of file hid\&.h\&.
+.SS "#define \fBDATA_SIZE_4\fP   0x03"
+.PP
+Definition at line 33 of file hid\&.h\&.
+.SS "#define \fBDATA_SIZE_MASK\fP   0x03"
+.PP
+Definition at line 26 of file hid\&.h\&.
+.SS "#define \fBHID_BOOT_INTF_SUBCLASS\fP   0x01"
+.PP
+Definition at line 89 of file hid\&.h\&.
+.SS "#define \fBHID_BOOT_PROTOCOL\fP   0x00"
+.PP
+Definition at line 82 of file hid\&.h\&.
+.SS "#define \fBHID_DESCRIPTOR_HID\fP   0x21"
+.PP
+Definition at line 77 of file hid\&.h\&.
+.SS "#define \fBHID_DESCRIPTOR_REPORT\fP   0x22"
+.PP
+Definition at line 78 of file hid\&.h\&.
+.SS "#define \fBHID_DESRIPTOR_PHY\fP   0x23"
+.PP
+Definition at line 79 of file hid\&.h\&.
+.SS "#define \fBHID_INTF\fP   0x03"
+.PP
+Definition at line 86 of file hid\&.h\&.
+.SS "#define \fBHID_ITEM_TYPE_GLOBAL\fP   1"
+.PP
+Definition at line 97 of file hid\&.h\&.
+.SS "#define \fBHID_ITEM_TYPE_LOCAL\fP   2"
+.PP
+Definition at line 98 of file hid\&.h\&.
+.SS "#define \fBHID_ITEM_TYPE_MAIN\fP   0"
+.PP
+Definition at line 96 of file hid\&.h\&.
+.SS "#define \fBHID_ITEM_TYPE_RESERVED\fP   3"
+.PP
+Definition at line 99 of file hid\&.h\&.
+.SS "#define \fBHID_LONG_ITEM_PREFIX\fP   0xfe"
+.PP
+Definition at line 101 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_APPLICATION\fP   1"
+.PP
+Definition at line 112 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_LOGICAL\fP   2"
+.PP
+Definition at line 113 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_NAMED_ARRAY\fP   4"
+.PP
+Definition at line 115 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_PHYSICAL\fP   0"
+.PP
+Definition at line 111 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_REPORT\fP   3"
+.PP
+Definition at line 114 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_USAGE_MODIFIER\fP   6"
+.PP
+Definition at line 117 of file hid\&.h\&.
+.SS "#define \fBHID_MAIN_ITEM_COLLECTION_USAGE_SWITCH\fP   5"
+.PP
+Definition at line 116 of file hid\&.h\&.
+.SS "#define \fBHID_MAX_HID_CLASS_DESCRIPTORS\fP   5"
+.PP
+Definition at line 24 of file hid\&.h\&.
+.SS "#define \fBHID_PROTOCOL_KEYBOARD\fP   0x01"
+.PP
+Definition at line 93 of file hid\&.h\&.
+.SS "#define \fBHID_PROTOCOL_MOUSE\fP   0x02"
+.PP
+Definition at line 94 of file hid\&.h\&.
+.SS "#define \fBHID_PROTOCOL_NONE\fP   0x00"
+.PP
+Definition at line 92 of file hid\&.h\&.
+.SS "#define \fBHID_REQUEST_GET_IDLE\fP   0x02"
+.PP
+Definition at line 70 of file hid\&.h\&.
+.SS "#define \fBHID_REQUEST_GET_PROTOCOL\fP   0x03"
+.PP
+Definition at line 71 of file hid\&.h\&.
+.SS "#define \fBHID_REQUEST_GET_REPORT\fP   0x01"
+.PP
+Definition at line 69 of file hid\&.h\&.
+.SS "#define \fBHID_REQUEST_SET_IDLE\fP   0x0A"
+.PP
+Definition at line 73 of file hid\&.h\&.
+.SS "#define \fBHID_REQUEST_SET_PROTOCOL\fP   0x0B"
+.PP
+Definition at line 74 of file hid\&.h\&.
+.SS "#define \fBHID_REQUEST_SET_REPORT\fP   0x09"
+.PP
+Definition at line 72 of file hid\&.h\&.
+.SS "#define \fBHID_RPT_PROTOCOL\fP   0x01"
+.PP
+Definition at line 83 of file hid\&.h\&.
+.SS "#define \fBMAX_REPORT_PARSERS\fP   2"
+.PP
+Definition at line 23 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_LOGICALMAX\fP   0x20"
+.PP
+Definition at line 47 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_LOGICALMIN\fP   0x10"
+.PP
+Definition at line 46 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_PHYSMAX\fP   0x40"
+.PP
+Definition at line 49 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_PHYSMIN\fP   0x30"
+.PP
+Definition at line 48 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_POP\fP   0xB0"
+.PP
+Definition at line 56 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_PUSH\fP   0xA0"
+.PP
+Definition at line 55 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_REPORTCOUNT\fP   0x90"
+.PP
+Definition at line 54 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_REPORTID\fP   0x80"
+.PP
+Definition at line 53 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_REPORTSIZE\fP   0x70"
+.PP
+Definition at line 52 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_UNIT\fP   0x60"
+.PP
+Definition at line 51 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_UNITEXP\fP   0x50"
+.PP
+Definition at line 50 of file hid\&.h\&.
+.SS "#define \fBTAG_GLOBAL_USAGEPAGE\fP   0x00"
+.PP
+Definition at line 45 of file hid\&.h\&.
+.SS "#define \fBTAG_LOCAL_USAGE\fP   0x00"
+.PP
+Definition at line 58 of file hid\&.h\&.
+.SS "#define \fBTAG_LOCAL_USAGEMAX\fP   0x20"
+.PP
+Definition at line 60 of file hid\&.h\&.
+.SS "#define \fBTAG_LOCAL_USAGEMIN\fP   0x10"
+.PP
+Definition at line 59 of file hid\&.h\&.
+.SS "#define \fBTAG_MAIN_COLLECTION\fP   0xA0"
+.PP
+Definition at line 41 of file hid\&.h\&.
+.SS "#define \fBTAG_MAIN_ENDCOLLECTION\fP   0xC0"
+.PP
+Definition at line 43 of file hid\&.h\&.
+.SS "#define \fBTAG_MAIN_FEATURE\fP   0xB0"
+.PP
+Definition at line 42 of file hid\&.h\&.
+.SS "#define \fBTAG_MAIN_INPUT\fP   0x80"
+.PP
+Definition at line 39 of file hid\&.h\&.
+.SS "#define \fBTAG_MAIN_OUTPUT\fP   0x90"
+.PP
+Definition at line 40 of file hid\&.h\&.
+.SS "#define \fBTAG_MASK\fP   0xF0"
+.PP
+Definition at line 28 of file hid\&.h\&.
+.SS "#define \fBTYPE_GLOBAL\fP   0x04"
+.PP
+Definition at line 36 of file hid\&.h\&.
+.SS "#define \fBTYPE_LOCAL\fP   0x08"
+.PP
+Definition at line 37 of file hid\&.h\&.
+.SS "#define \fBTYPE_MAIN\fP   0x00"
+.PP
+Definition at line 35 of file hid\&.h\&.
+.SS "#define \fBTYPE_MASK\fP   0x0C"
+.PP
+Definition at line 27 of file hid\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

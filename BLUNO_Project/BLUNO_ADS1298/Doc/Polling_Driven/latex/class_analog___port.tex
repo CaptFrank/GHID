@@ -1,0 +1,119 @@
+\hypertarget{class_analog___port}{\section{\-Analog\-\_\-\-Port \-Class \-Reference}
+\label{class_analog___port}\index{\-Analog\-\_\-\-Port@{\-Analog\-\_\-\-Port}}
+}
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_analog___port_adf978208e03af86c37bdc8ed1ab95d86}{\-Analog\-\_\-\-Port} (byte pin, byte direction)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+word \hyperlink{class_analog___port_ac349375efb7d9a5ec521e4317c38e0c0}{read\-\_\-port} ()
+\begin{DoxyCompactList}\small\item\em \-The read port method. \end{DoxyCompactList}\item 
+void \hyperlink{class_analog___port_a58a29fefacb3b340631ff421d34565da}{write\-\_\-port} (byte duty\-\_\-cycle)
+\begin{DoxyCompactList}\small\item\em \-The write to the port method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This framework back end allows for easy programming of each type of sensor. \-Either \-Analog, \-Digital or \-Serial \-Bus devices. 
+
+\-Definition at line 19 of file \-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_analog___port_adf978208e03af86c37bdc8ed1ab95d86}{\index{\-Analog\-\_\-\-Port@{\-Analog\-\_\-\-Port}!\-Analog\-\_\-\-Port@{\-Analog\-\_\-\-Port}}
+\index{\-Analog\-\_\-\-Port@{\-Analog\-\_\-\-Port}!Analog_Port@{\-Analog\-\_\-\-Port}}
+\subsubsection[{\-Analog\-\_\-\-Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port\-::\-Analog\-\_\-\-Port} (
+\begin{DoxyParamCaption}
+\item[{byte}]{pin, }
+\item[{byte}]{direction}
+\end{DoxyParamCaption}
+)}}\label{class_analog___port_adf978208e03af86c37bdc8ed1ab95d86}
+
+
+\-Public \-Context. 
+
+\-The default constructor.
+
+\-This is the default constructor for analog ports. \-We can use this for individual analog ports used.
+
+
+\begin{DoxyItemize}
+\item \-The pin value is the analog port used on the \-Arduino, this value is the mapped name (i.\-e. \-Analog port 1 = \-A1)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \-The direction value is the direction of the analog pin that is used. \-In this case this value can be input ('\-I'), output ('\-O')
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pin} & -\/ byte the pin that is used as analog pin \\
+\hline
+{\em direction} & -\/ byte the direction of the pin (\-Input / \-Output) \\
+\hline
+\end{DoxyParams}
+\-Set the important values
+
+\-Initialize internal variables.
+
+\-Setup the port 
+
+\-Definition at line 8 of file \-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_analog___port_ac349375efb7d9a5ec521e4317c38e0c0}{\index{\-Analog\-\_\-\-Port@{\-Analog\-\_\-\-Port}!read\-\_\-port@{read\-\_\-port}}
+\index{read\-\_\-port@{read\-\_\-port}!Analog_Port@{\-Analog\-\_\-\-Port}}
+\subsubsection[{read\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}word {\bf \-Analog\-\_\-\-Port\-::read\-\_\-port} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_analog___port_ac349375efb7d9a5ec521e4317c38e0c0}
+
+
+\-The read port method. 
+
+\-This method is the public access reading method to enable reading of the analog port. \-This returns the value read in an unsigned integer (word -\/ 16bit value), the \-A\-D\-C read results in a 10bit value with a range or\-:
+\begin{DoxyItemize}
+\item \-Min\-: 0
+\item \-Max\-: 1024
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+result -\/ word the read value from the \-A\-D\-C. 
+\end{DoxyReturn}
+\-Assign the internal value and return it. 
+
+\-Definition at line 22 of file \-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-cpp.
+
+\hypertarget{class_analog___port_a58a29fefacb3b340631ff421d34565da}{\index{\-Analog\-\_\-\-Port@{\-Analog\-\_\-\-Port}!write\-\_\-port@{write\-\_\-port}}
+\index{write\-\_\-port@{write\-\_\-port}!Analog_Port@{\-Analog\-\_\-\-Port}}
+\subsubsection[{write\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-\_\-\-Port\-::write\-\_\-port} (
+\begin{DoxyParamCaption}
+\item[{byte}]{duty\-\_\-cycle}
+\end{DoxyParamCaption}
+)}}\label{class_analog___port_a58a29fefacb3b340631ff421d34565da}
+
+
+\-The write to the port method. 
+
+\-This method is the public access method that writes to the analog value. \-Note\-: \-This method does not output a digital value such as\-: 00001010 \-Instead, this method outputs a \-P\-W\-M (\-Pulse width modulated) signal, with range o\-F\-:
+\begin{DoxyItemize}
+\item \-Min\-: 0
+\item \-Max\-: 255 
+\end{DoxyItemize}\-Write the analog duty cycle to the \-P\-W\-M generator. 
+
+\-Definition at line 29 of file \-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___analog___port_8h}{\-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___analog___port_8cpp}{\-G\-H\-I\-D\-\_\-\-Analog\-\_\-\-Port.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,187 @@
+\hypertarget{class_dispatcher}{\section{\-Dispatcher \-Class \-Reference}
+\label{class_dispatcher}\index{\-Dispatcher@{\-Dispatcher}}
+}
+
+
+{\ttfamily \#include $<$\-Dispatcher.\-h$>$}
+
+\-Inheritance diagram for \-Dispatcher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dispatcher}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_dispatcher_a2f2dca22ac7a8487399e284499e8095b}{setup\-\_\-dispatch} (uint8\-\_\-t $\ast$command\-\_\-ptr, uint8\-\_\-t length)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_dispatcher_ac94ea7b55709830c5e3eaeaa54afb746}{run\-\_\-dispatch} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_dispatcher_ad805b052d0583e25dee170517740b967}{\-\_\-create\-\_\-dispatch} (uint8\-\_\-t $\ast$command\-\_\-ptr, uint8\-\_\-t length)
+\item 
+void \hyperlink{class_dispatcher_ac0117f0ab105024f5f9342a68a4366c3}{\-\_\-send\-\_\-dispatch} (\hyperlink{structdispatch__t}{dispatch\-\_\-t} $\ast$dispatch)
+\item 
+\hyperlink{structresponse__t}{response\-\_\-t} $\ast$ \hyperlink{class_dispatcher_ab1eb95d6e4eae7883f696ee19ab71a51}{\-\_\-receive\-\_\-dispatch\-\_\-answer} (uint8\-\_\-t timeout)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Hardware\-Serial $\ast$ \hyperlink{class_dispatcher_ab761cd7589c1d5fda8ff1b5ec4ce679f}{\-\_\-serial}
+\begin{DoxyCompactList}\small\item\em \-Private \-Context. \end{DoxyCompactList}\item 
+\hyperlink{structdispatch__t}{dispatch\-\_\-t} \hyperlink{class_dispatcher_aaedb32e8b575e70f297933122fdf7fe0}{\-\_\-dispatch}
+\begin{DoxyCompactList}\small\item\em \-The command buffer. \end{DoxyCompactList}\item 
+\hyperlink{structresponse__t}{response\-\_\-t} \hyperlink{class_dispatcher_a0e3c3d9054c4d8180aa56655bb6206a2}{\-\_\-response}
+\begin{DoxyCompactList}\small\item\em \-The response buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This the interface class for a command / process dispatcher. 
+
+\-Definition at line 38 of file \-Dispatcher.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_dispatcher_ad805b052d0583e25dee170517740b967}{\index{\-Dispatcher@{\-Dispatcher}!\-\_\-create\-\_\-dispatch@{\-\_\-create\-\_\-dispatch}}
+\index{\-\_\-create\-\_\-dispatch@{\-\_\-create\-\_\-dispatch}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{\-\_\-create\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dispatcher\-::\-\_\-create\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{command\-\_\-ptr, }
+\item[{uint8\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_dispatcher_ad805b052d0583e25dee170517740b967}
+\-This method creates a dispatch item.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command\-\_\-ptr} & -\/ \-The command pointer \\
+\hline
+{\em length} & -\/ \-The command length \\
+\hline
+\end{DoxyParams}
+\-We create a dispatch item 
+
+\-Definition at line 16 of file \-Dispatcher.\-cpp.
+
+\hypertarget{class_dispatcher_ab1eb95d6e4eae7883f696ee19ab71a51}{\index{\-Dispatcher@{\-Dispatcher}!\-\_\-receive\-\_\-dispatch\-\_\-answer@{\-\_\-receive\-\_\-dispatch\-\_\-answer}}
+\index{\-\_\-receive\-\_\-dispatch\-\_\-answer@{\-\_\-receive\-\_\-dispatch\-\_\-answer}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{\-\_\-receive\-\_\-dispatch\-\_\-answer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf response\-\_\-t} $\ast$ {\bf \-Dispatcher\-::\-\_\-receive\-\_\-dispatch\-\_\-answer} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_dispatcher_ab1eb95d6e4eae7883f696ee19ab71a51}
+\-This method reads a response
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em timeout} & -\/ \-The connection timeout (ms) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structresponse__t}{response\-\_\-t} -\/ \-The response from the device 
+\end{DoxyReturn}
+\-Index
+
+\-We loop to get info in the buffers 
+
+\-Definition at line 39 of file \-Dispatcher.\-cpp.
+
+\hypertarget{class_dispatcher_ac0117f0ab105024f5f9342a68a4366c3}{\index{\-Dispatcher@{\-Dispatcher}!\-\_\-send\-\_\-dispatch@{\-\_\-send\-\_\-dispatch}}
+\index{\-\_\-send\-\_\-dispatch@{\-\_\-send\-\_\-dispatch}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{\-\_\-send\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dispatcher\-::\-\_\-send\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+\item[{{\bf dispatch\-\_\-t} $\ast$}]{dispatch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_dispatcher_ac0117f0ab105024f5f9342a68a4366c3}
+\-This method sends a dispatch item.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em dispatch} & -\/ \-The dispatch item \\
+\hline
+\end{DoxyParams}
+\-We write the dispatch 
+
+\-Definition at line 28 of file \-Dispatcher.\-cpp.
+
+\hypertarget{class_dispatcher_ac94ea7b55709830c5e3eaeaa54afb746}{\index{\-Dispatcher@{\-Dispatcher}!run\-\_\-dispatch@{run\-\_\-dispatch}}
+\index{run\-\_\-dispatch@{run\-\_\-dispatch}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{run\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Dispatcher\-::run\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_dispatcher_ac94ea7b55709830c5e3eaeaa54afb746}
+\-This is the run dispatch method 
+
+\-Reimplemented in \hyperlink{class_bluetooth___dispatcher_a9de32e4c1d450d101738185124a873a8}{\-Bluetooth\-\_\-\-Dispatcher}.
+
+\hypertarget{class_dispatcher_a2f2dca22ac7a8487399e284499e8095b}{\index{\-Dispatcher@{\-Dispatcher}!setup\-\_\-dispatch@{setup\-\_\-dispatch}}
+\index{setup\-\_\-dispatch@{setup\-\_\-dispatch}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{setup\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Dispatcher\-::setup\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{command\-\_\-ptr, }
+\item[{uint8\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_dispatcher_a2f2dca22ac7a8487399e284499e8095b}
+
+
+\-Public \-Context. 
+
+\-This is the virtual setup method for the class 
+
+\-Reimplemented in \hyperlink{class_bluetooth___dispatcher_a8cf1e22a7e599c1fa8d6741b7b267b3b}{\-Bluetooth\-\_\-\-Dispatcher}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_dispatcher_aaedb32e8b575e70f297933122fdf7fe0}{\index{\-Dispatcher@{\-Dispatcher}!\-\_\-dispatch@{\-\_\-dispatch}}
+\index{\-\_\-dispatch@{\-\_\-dispatch}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dispatch\-\_\-t} {\bf \-Dispatcher\-::\-\_\-dispatch}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_dispatcher_aaedb32e8b575e70f297933122fdf7fe0}
+
+
+\-The command buffer. 
+
+
+
+\-Definition at line 60 of file \-Dispatcher.\-h.
+
+\hypertarget{class_dispatcher_a0e3c3d9054c4d8180aa56655bb6206a2}{\index{\-Dispatcher@{\-Dispatcher}!\-\_\-response@{\-\_\-response}}
+\index{\-\_\-response@{\-\_\-response}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf response\-\_\-t} {\bf \-Dispatcher\-::\-\_\-response}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_dispatcher_a0e3c3d9054c4d8180aa56655bb6206a2}
+
+
+\-The response buffer. 
+
+
+
+\-Reimplemented in \hyperlink{class_bluetooth___dispatcher_a37efed7ffe1b2bcc846ade2406174796}{\-Bluetooth\-\_\-\-Dispatcher}.
+
+
+
+\-Definition at line 63 of file \-Dispatcher.\-h.
+
+\hypertarget{class_dispatcher_ab761cd7589c1d5fda8ff1b5ec4ce679f}{\index{\-Dispatcher@{\-Dispatcher}!\-\_\-serial@{\-\_\-serial}}
+\index{\-\_\-serial@{\-\_\-serial}!Dispatcher@{\-Dispatcher}}
+\subsubsection[{\-\_\-serial}]{\setlength{\rightskip}{0pt plus 5cm}\-Hardware\-Serial$\ast$ {\bf \-Dispatcher\-::\-\_\-serial}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_dispatcher_ab761cd7589c1d5fda8ff1b5ec4ce679f}
+
+
+\-Private \-Context. 
+
+\-Internal access to the \-Serial stream 
+
+\-Reimplemented in \hyperlink{class_bluetooth___dispatcher_a9b30fd1951f4e064a707ec75b941d18e}{\-Bluetooth\-\_\-\-Dispatcher}.
+
+
+
+\-Definition at line 57 of file \-Dispatcher.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_dispatcher_8h}{\-Dispatcher.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_dispatcher_8cpp}{\-Dispatcher.\-cpp}\end{DoxyCompactItemize}

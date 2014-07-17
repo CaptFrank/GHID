@@ -1,0 +1,618 @@
+.TH "Included Libraries/USB_Host_Shield_2.0-master/usbhub.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/USB_Host_Shield_2.0-master/usbhub.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Usb\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBHubDescriptor\fP"
+.br
+.ti -1c
+.RI "struct \fBHubEvent\fP"
+.br
+.ti -1c
+.RI "class \fBUSBHub\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSB_DESCRIPTOR_HUB\fP   0x09"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_CLEAR_HUB_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_CLEAR_PORT_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_CLEAR_TT_BUFFER\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_GET_HUB_DESCRIPTOR\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_GET_HUB_STATUS\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_GET_PORT_STATUS\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_RESET_TT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_SET_HUB_DESCRIPTOR\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_SET_HUB_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_SET_PORT_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_GET_TT_STATE\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBbmREQ_STOP_TT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.br
+.ti -1c
+.RI "#define \fBHUB_REQUEST_CLEAR_TT_BUFFER\fP   8"
+.br
+.ti -1c
+.RI "#define \fBHUB_REQUEST_RESET_TT\fP   9"
+.br
+.ti -1c
+.RI "#define \fBHUB_REQUEST_GET_TT_STATE\fP   10"
+.br
+.ti -1c
+.RI "#define \fBHUB_REQUEST_STOP_TT\fP   11"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_HUB_LOCAL_POWER\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_HUB_OVER_CURRENT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_CONNECTION\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_ENABLE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_SUSPEND\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_OVER_CURRENT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_RESET\fP   4"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_POWER\fP   8"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_LOW_SPEED\fP   9"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_PORT_CONNECTION\fP   16"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_PORT_ENABLE\fP   17"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_PORT_SUSPEND\fP   18"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_PORT_OVER_CURRENT\fP   19"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_C_PORT_RESET\fP   20"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_TEST\fP   21"
+.br
+.ti -1c
+.RI "#define \fBHUB_FEATURE_PORT_INDICATOR\fP   22"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_TEST_MODE_J\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_TEST_MODE_K\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_TEST_MODE_SE0_NAK\fP   3"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_TEST_MODE_PACKET\fP   4"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_TEST_MODE_FORCE_ENABLE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_INDICATOR_AUTO\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_INDICATOR_AMBER\fP   1"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_INDICATOR_GREEN\fP   2"
+.br
+.ti -1c
+.RI "#define \fBHUB_PORT_INDICATOR_OFF\fP   3"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_CONNECTION\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_ENABLE\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_SUSPEND\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_OVER_CURRENT\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_RESET\fP   0x0010"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_POWER\fP   0x0100"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_LOW_SPEED\fP   0x0200"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_HIGH_SPEED\fP   0x0400"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_TEST\fP   0x0800"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_PORT_INDICATOR\fP   0x1000"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_C_PORT_CONNECTION\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_C_PORT_ENABLE\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_C_PORT_SUSPEND\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_C_PORT_OVER_CURRENT\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_C_PORT_RESET\fP   0x0010"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_STATUS_LOCAL_POWER_SOURCE\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_STATUS_OVER_CURRENT\fP   0x12"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_STATUS_C_LOCAL_POWER_SOURCE\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_STATUS_C_OVER_CURRENT\fP   0x12"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_CONFIGURING\fP   0xb0"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_POWERED_OFF\fP   0xb1"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_WAIT_FOR_POWER_GOOD\fP   0xb2"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_DISCONNECTED\fP   0xb3"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_DISABLED\fP   0xb4"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_RESETTING\fP   0xb5"
+.br
+.ti -1c
+.RI "#define \fBUSB_STATE_HUB_PORT_ENABLED\fP   0xb6"
+.br
+.ti -1c
+.RI "#define \fBHUB_ERROR_PORT_HAS_BEEN_RESET\fP   0xb1"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATUS_ALL_MAIN\fP   ((0UL  | bmHUB_PORT_STATUS_C_PORT_CONNECTION  | bmHUB_PORT_STATUS_C_PORT_ENABLE  | bmHUB_PORT_STATUS_C_PORT_SUSPEND  | bmHUB_PORT_STATUS_C_PORT_RESET) << 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_SUSPEND)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATE_CHECK_DISABLED\fP   (0x0000 | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_SUSPEND)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_STATE_DISABLED\fP   (0x0000 | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_CONNECTION)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_EVENT_CONNECT\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION)	<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_CONNECTION)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_EVENT_DISCONNECT\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION)	<< 16) | bmHUB_PORT_STATUS_PORT_POWER)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_EVENT_RESET_COMPLETE\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_RESET)		<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_EVENT_LS_CONNECT\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION)	<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_LOW_SPEED)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_EVENT_LS_RESET_COMPLETE\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_RESET)		<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_LOW_SPEED)"
+.br
+.ti -1c
+.RI "#define \fBbmHUB_PORT_EVENT_LS_PORT_ENABLED\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION | bmHUB_PORT_STATUS_C_PORT_ENABLE)		<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_LOW_SPEED)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "struct \fBHubDescriptor\fP \fB__attribute__\fP ((packed))"
+.br
+.ti -1c
+.RI "void \fBPrintHubPortStatus\fP (USB *usbptr, uint8_t addr, uint8_t port, bool print_changes=false)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint16_t \fBLogPwrSwitchMode\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBCompoundDevice\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBOverCurrentProtectMode\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBTTThinkTime\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBPortIndicatorsSupported\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBReserved\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbDescLength\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbDescriptorType\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbNbrPorts\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbPwrOn2PwrGood\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBbHubContrCurrent\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbmStatus\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBbmChange\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   uint32_t \fBbmEvent\fP"
+.br
+.ti -1c
+.RI "   uint8_t \fBevtBuff\fP [4]"
+.br
+.ti -1c
+.RI "} \fB__attribute__\fP"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBbmHUB_PORT_EVENT_CONNECT\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION)	<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_CONNECTION)"
+.PP
+Definition at line 125 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_EVENT_DISCONNECT\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION)	<< 16) | bmHUB_PORT_STATUS_PORT_POWER)"
+.PP
+Definition at line 126 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_EVENT_LS_CONNECT\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION)	<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_LOW_SPEED)"
+.PP
+Definition at line 129 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_EVENT_LS_PORT_ENABLED\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_CONNECTION | bmHUB_PORT_STATUS_C_PORT_ENABLE)		<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_LOW_SPEED)"
+.PP
+Definition at line 131 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_EVENT_LS_RESET_COMPLETE\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_RESET)		<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_LOW_SPEED)"
+.PP
+Definition at line 130 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_EVENT_RESET_COMPLETE\fP   (((0UL | bmHUB_PORT_STATUS_C_PORT_RESET)		<< 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION)"
+.PP
+Definition at line 127 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATE_CHECK_DISABLED\fP   (0x0000 | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_SUSPEND)"
+.PP
+Definition at line 119 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATE_DISABLED\fP   (0x0000 | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_CONNECTION)"
+.PP
+Definition at line 122 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_ALL_MAIN\fP   ((0UL  | bmHUB_PORT_STATUS_C_PORT_CONNECTION  | bmHUB_PORT_STATUS_C_PORT_ENABLE  | bmHUB_PORT_STATUS_C_PORT_SUSPEND  | bmHUB_PORT_STATUS_C_PORT_RESET) << 16) | bmHUB_PORT_STATUS_PORT_POWER | bmHUB_PORT_STATUS_PORT_ENABLE | bmHUB_PORT_STATUS_PORT_CONNECTION | bmHUB_PORT_STATUS_PORT_SUSPEND)"
+.PP
+Definition at line 116 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_C_PORT_CONNECTION\fP   0x0001"
+.PP
+Definition at line 88 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_C_PORT_ENABLE\fP   0x0002"
+.PP
+Definition at line 89 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_C_PORT_OVER_CURRENT\fP   0x0008"
+.PP
+Definition at line 91 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_C_PORT_RESET\fP   0x0010"
+.PP
+Definition at line 92 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_C_PORT_SUSPEND\fP   0x0004"
+.PP
+Definition at line 90 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_CONNECTION\fP   0x0001"
+.PP
+Definition at line 76 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_ENABLE\fP   0x0002"
+.PP
+Definition at line 77 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_HIGH_SPEED\fP   0x0400"
+.PP
+Definition at line 83 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_INDICATOR\fP   0x1000"
+.PP
+Definition at line 85 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_LOW_SPEED\fP   0x0200"
+.PP
+Definition at line 82 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_OVER_CURRENT\fP   0x0008"
+.PP
+Definition at line 79 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_POWER\fP   0x0100"
+.PP
+Definition at line 81 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_RESET\fP   0x0010"
+.PP
+Definition at line 80 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_SUSPEND\fP   0x0004"
+.PP
+Definition at line 78 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_PORT_STATUS_PORT_TEST\fP   0x0800"
+.PP
+Definition at line 84 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_STATUS_C_LOCAL_POWER_SOURCE\fP   0x01"
+.PP
+Definition at line 99 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_STATUS_C_OVER_CURRENT\fP   0x12"
+.PP
+Definition at line 100 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_STATUS_LOCAL_POWER_SOURCE\fP   0x01"
+.PP
+Definition at line 95 of file usbhub\&.h\&.
+.SS "#define \fBbmHUB_STATUS_OVER_CURRENT\fP   0x12"
+.PP
+Definition at line 96 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_CLEAR_HUB_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.PP
+Definition at line 25 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_CLEAR_PORT_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 26 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_CLEAR_TT_BUFFER\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 27 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_GET_HUB_DESCRIPTOR\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.PP
+Definition at line 28 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_GET_HUB_STATUS\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.PP
+Definition at line 29 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_GET_PORT_STATUS\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 30 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_GET_TT_STATE\fP   USB_SETUP_DEVICE_TO_HOST|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 35 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_RESET_TT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 31 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_SET_HUB_DESCRIPTOR\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.PP
+Definition at line 32 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_SET_HUB_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_DEVICE"
+.PP
+Definition at line 33 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_SET_PORT_FEATURE\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 34 of file usbhub\&.h\&.
+.SS "#define \fBbmREQ_STOP_TT\fP   USB_SETUP_HOST_TO_DEVICE|USB_SETUP_TYPE_CLASS|USB_SETUP_RECIPIENT_OTHER"
+.PP
+Definition at line 36 of file usbhub\&.h\&.
+.SS "#define \fBHUB_ERROR_PORT_HAS_BEEN_RESET\fP   0xb1"
+.PP
+Definition at line 113 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_HUB_LOCAL_POWER\fP   0"
+.PP
+Definition at line 45 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_HUB_OVER_CURRENT\fP   1"
+.PP
+Definition at line 46 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_PORT_CONNECTION\fP   16"
+.PP
+Definition at line 54 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_PORT_ENABLE\fP   17"
+.PP
+Definition at line 55 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_PORT_OVER_CURRENT\fP   19"
+.PP
+Definition at line 57 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_PORT_RESET\fP   20"
+.PP
+Definition at line 58 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_C_PORT_SUSPEND\fP   18"
+.PP
+Definition at line 56 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_CONNECTION\fP   0"
+.PP
+Definition at line 47 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_ENABLE\fP   1"
+.PP
+Definition at line 48 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_INDICATOR\fP   22"
+.PP
+Definition at line 60 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_LOW_SPEED\fP   9"
+.PP
+Definition at line 53 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_OVER_CURRENT\fP   3"
+.PP
+Definition at line 50 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_POWER\fP   8"
+.PP
+Definition at line 52 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_RESET\fP   4"
+.PP
+Definition at line 51 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_SUSPEND\fP   2"
+.PP
+Definition at line 49 of file usbhub\&.h\&.
+.SS "#define \fBHUB_FEATURE_PORT_TEST\fP   21"
+.PP
+Definition at line 59 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_INDICATOR_AMBER\fP   1"
+.PP
+Definition at line 71 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_INDICATOR_AUTO\fP   0"
+.PP
+Definition at line 70 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_INDICATOR_GREEN\fP   2"
+.PP
+Definition at line 72 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_INDICATOR_OFF\fP   3"
+.PP
+Definition at line 73 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_TEST_MODE_FORCE_ENABLE\fP   5"
+.PP
+Definition at line 67 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_TEST_MODE_J\fP   1"
+.PP
+Definition at line 63 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_TEST_MODE_K\fP   2"
+.PP
+Definition at line 64 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_TEST_MODE_PACKET\fP   4"
+.PP
+Definition at line 66 of file usbhub\&.h\&.
+.SS "#define \fBHUB_PORT_TEST_MODE_SE0_NAK\fP   3"
+.PP
+Definition at line 65 of file usbhub\&.h\&.
+.SS "#define \fBHUB_REQUEST_CLEAR_TT_BUFFER\fP   8"
+.PP
+Definition at line 39 of file usbhub\&.h\&.
+.SS "#define \fBHUB_REQUEST_GET_TT_STATE\fP   10"
+.PP
+Definition at line 41 of file usbhub\&.h\&.
+.SS "#define \fBHUB_REQUEST_RESET_TT\fP   9"
+.PP
+Definition at line 40 of file usbhub\&.h\&.
+.SS "#define \fBHUB_REQUEST_STOP_TT\fP   11"
+.PP
+Definition at line 42 of file usbhub\&.h\&.
+.SS "#define \fBUSB_DESCRIPTOR_HUB\fP   0x09"
+.PP
+Definition at line 22 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_CONFIGURING\fP   0xb0"
+.PP
+Definition at line 104 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_DISABLED\fP   0xb4"
+.PP
+Definition at line 108 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_DISCONNECTED\fP   0xb3"
+.PP
+Definition at line 107 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_ENABLED\fP   0xb6"
+.PP
+Definition at line 110 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_POWERED_OFF\fP   0xb1"
+.PP
+Definition at line 105 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_RESETTING\fP   0xb5"
+.PP
+Definition at line 109 of file usbhub\&.h\&.
+.SS "#define \fBUSB_STATE_HUB_PORT_WAIT_FOR_POWER_GOOD\fP   0xb2"
+.PP
+Definition at line 106 of file usbhub\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "struct \fBHubDescriptor\fP \fB__attribute__\fP ((packed))"
+.SS "void \fBPrintHubPortStatus\fP (USB *usbptr, uint8_taddr, uint8_tport, boolprint_changes = \fCfalse\fP)"
+.SH "Variable Documentation"
+.PP 
+.SS " \fBUSBHub\fP  \fB__attribute__\fP"
+.SS "uint8_t \fBbDescLength\fP"
+.PP
+Definition at line 150 of file usbhub\&.h\&.
+.SS "uint8_t \fBbDescriptorType\fP"
+.PP
+Definition at line 151 of file usbhub\&.h\&.
+.SS "uint8_t \fBbHubContrCurrent\fP"
+.PP
+Definition at line 164 of file usbhub\&.h\&.
+.SS "uint16_t \fBbmChange\fP"
+.PP
+Definition at line 160 of file usbhub\&.h\&.
+.SS "uint32_t \fBbmEvent\fP"
+.PP
+Definition at line 170 of file usbhub\&.h\&.
+.SS "uint16_t \fBbmStatus\fP"
+.PP
+Definition at line 159 of file usbhub\&.h\&.
+.SS "uint8_t \fBbNbrPorts\fP"
+.PP
+Definition at line 152 of file usbhub\&.h\&.
+.SS "uint8_t \fBbPwrOn2PwrGood\fP"
+.PP
+Definition at line 163 of file usbhub\&.h\&.
+.SS "uint16_t \fBCompoundDevice\fP"
+.PP
+Definition at line 147 of file usbhub\&.h\&.
+.SS "uint8_t \fBevtBuff\fP[4]"
+.PP
+Definition at line 171 of file usbhub\&.h\&.
+.SS "uint16_t \fBLogPwrSwitchMode\fP"
+.PP
+Definition at line 146 of file usbhub\&.h\&.
+.SS "uint16_t \fBOverCurrentProtectMode\fP"
+.PP
+Definition at line 148 of file usbhub\&.h\&.
+.SS "uint16_t \fBPortIndicatorsSupported\fP"
+.PP
+Definition at line 150 of file usbhub\&.h\&.
+.SS "uint16_t \fBReserved\fP"
+.PP
+Definition at line 151 of file usbhub\&.h\&.
+.SS "uint16_t \fBTTThinkTime\fP"
+.PP
+Definition at line 149 of file usbhub\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

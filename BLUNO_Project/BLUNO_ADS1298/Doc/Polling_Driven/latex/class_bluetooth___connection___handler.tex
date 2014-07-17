@@ -1,0 +1,204 @@
+\hypertarget{class_bluetooth___connection___handler}{\section{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler \-Class \-Reference}
+\label{class_bluetooth___connection___handler}\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+}
+
+
+{\ttfamily \#include $<$\-Bluetooth\-Connection\-Handler.\-h$>$}
+
+\-Inheritance diagram for \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bluetooth___connection___handler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bluetooth___connection___handler_a0732390759ba1b8d14e5ccc5e83ed2cd}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler} (\-Hardware\-Serial $\ast$hw\-\_\-serial, \hyperlink{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5}{connection\-\_\-type\-\_\-t} type, \hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$ring, \hyperlink{class_connection_protocol_handler}{\-Connection\-Protocol\-Handler} $\ast$handler, \hyperlink{classutilities}{utilities} $\ast$utils)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+bool \hyperlink{class_bluetooth___connection___handler_ada4a47ada49b62071fba9d23b63cd128}{connect} ()
+\item 
+bool \hyperlink{class_bluetooth___connection___handler_a35de0a32d9f48521c8e3afd30df823f5}{disconnect} ()
+\item 
+void \hyperlink{class_bluetooth___connection___handler_a69604d969ecc0514948314cb7b78cd1d}{reboot} ()
+\item 
+\hyperlink{structbuffer__t}{buffer\-\_\-t} $\ast$ \hyperlink{class_bluetooth___connection___handler_a03944d3fb682688354c132878dd3d8f0}{read} (byte length)
+\item 
+void \hyperlink{class_bluetooth___connection___handler_afb57232b5a23ddc1be523b9fe6b275b5}{write} (\hyperlink{structbuffer__t}{buffer\-\_\-t} $\ast$buf)
+\item 
+void \hyperlink{class_bluetooth___connection___handler_aeccdb22a55988eac70feb174ec10eefb}{run} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the main class that arbitrates between the point-\/to-\/point \-Bluetooth module. \-It is needed to connect, disconnect, request data and receive data from the sensor node.
+
+\-This class extends the connection handler class (\begin{DoxySeeAlso}{\-See also}
+\hyperlink{_connection_handler_8h}{\-Connection\-Handler.\-h}), as it manages a connection. 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 42 of file \-Bluetooth\-Connection\-Handler.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_bluetooth___connection___handler_a0732390759ba1b8d14e5ccc5e83ed2cd}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler} (
+\begin{DoxyParamCaption}
+\item[{\-Hardware\-Serial $\ast$}]{hw\-\_\-serial, }
+\item[{{\bf connection\-\_\-type\-\_\-t}}]{type, }
+\item[{{\bf \-Ring\-Buff\-\_\-t} $\ast$}]{ring, }
+\item[{{\bf \-Connection\-Protocol\-Handler} $\ast$}]{handler, }
+\item[{{\bf utilities} $\ast$}]{utils}
+\end{DoxyParamCaption}
+)}}\label{class_bluetooth___connection___handler_a0732390759ba1b8d14e5ccc5e83ed2cd}
+
+
+\-Public \-Context. 
+
+\-This is the default connection handler constructor. \-Set the internal serial port
+
+\-Initialize it
+
+\-We set the run type
+
+\-First we memset the buffer to reset it 
+
+\-Definition at line 15 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_bluetooth___connection___handler_ada4a47ada49b62071fba9d23b63cd128}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!connect@{connect}}
+\index{connect@{connect}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::connect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___connection___handler_ada4a47ada49b62071fba9d23b63cd128}
+\-A \-Connection method to connect to the target device.
+
+\begin{DoxyReturn}{\-Returns}
+success -\/ if the connection was successful 
+\end{DoxyReturn}
+\-This sends a connect command to the host device 
+
+\-Reimplemented from \hyperlink{class_connection___handler_a391d131d7d802a8242080a6f44fdd348}{\-Connection\-\_\-\-Handler}.
+
+
+
+\-Definition at line 41 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+\hypertarget{class_bluetooth___connection___handler_a35de0a32d9f48521c8e3afd30df823f5}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::disconnect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___connection___handler_a35de0a32d9f48521c8e3afd30df823f5}
+\-A \-Connection method to disconnect from the target device.
+
+\begin{DoxyReturn}{\-Returns}
+success -\/ if the disconnection was successful 
+\end{DoxyReturn}
+\-This sends a disconnect command to the host device 
+
+\-Reimplemented from \hyperlink{class_connection___handler_a7f266dbbf5c3f030de9a4732bdb17bd1}{\-Connection\-\_\-\-Handler}.
+
+
+
+\-Definition at line 52 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+\hypertarget{class_bluetooth___connection___handler_a03944d3fb682688354c132878dd3d8f0}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!read@{read}}
+\index{read@{read}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-t} $\ast$ {\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::read} (
+\begin{DoxyParamCaption}
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___connection___handler_a03944d3fb682688354c132878dd3d8f0}
+\-The generic read method, which reads a connection for a certain length of data and returns a \hyperlink{structbuffer__t}{buffer\-\_\-t} structure.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em length} & -\/ the buffer length to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structbuffer__t}{buffer\-\_\-t} -\/ the data container 
+\end{DoxyReturn}
+\-First we see of the host device is ok
+
+\-We read a raw response
+
+\-We check if we got the ok signal 
+
+\-Reimplemented from \hyperlink{class_connection___handler_a5cdbdd2b6451b80ef35580ee8b57fce3}{\-Connection\-\_\-\-Handler}.
+
+
+
+\-Definition at line 77 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+\hypertarget{class_bluetooth___connection___handler_a69604d969ecc0514948314cb7b78cd1d}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!reboot@{reboot}}
+\index{reboot@{reboot}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{reboot}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::reboot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___connection___handler_a69604d969ecc0514948314cb7b78cd1d}
+\-A reboot method to reset the connection device. \-Send reboot command
+
+\-This reboots the device 
+
+\-Reimplemented from \hyperlink{class_connection___handler_a0c565c93a515e30aca7c5fdf5bd7191e}{\-Connection\-\_\-\-Handler}.
+
+
+
+\-Definition at line 61 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+\hypertarget{class_bluetooth___connection___handler_aeccdb22a55988eac70feb174ec10eefb}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!run@{run}}
+\index{run@{run}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::run} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_bluetooth___connection___handler_aeccdb22a55988eac70feb174ec10eefb}
+\-This is the run method \-We send a heart beat
+
+\-We set the pointer to the right method.
+
+\-Request based
+
+\-Stream based -\/ \-Default method 
+
+\-Definition at line 125 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+\hypertarget{class_bluetooth___connection___handler_afb57232b5a23ddc1be523b9fe6b275b5}{\index{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}!write@{write}}
+\index{write@{write}!Bluetooth_Connection_Handler@{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler\-::write} (
+\begin{DoxyParamCaption}
+\item[{{\bf buffer\-\_\-t} $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___connection___handler_afb57232b5a23ddc1be523b9fe6b275b5}
+\-This is the generic write method that writes a buffer type structure to the connection.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buf} & -\/ the buffer structure to write \\
+\hline
+\end{DoxyParams}
+\-We write raw data 
+
+\-Reimplemented from \hyperlink{class_connection___handler_ad22f4aeae7b6f43d16ee67c841ff2efa}{\-Connection\-\_\-\-Handler}.
+
+
+
+\-Definition at line 113 of file \-Bluetooth\-Connection\-Handler.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\hyperlink{_bluetooth_connection_handler_8h}{\-Bluetooth\-Connection\-Handler.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\hyperlink{_bluetooth_connection_handler_8cpp}{\-Bluetooth\-Connection\-Handler.\-cpp}\end{DoxyCompactItemize}

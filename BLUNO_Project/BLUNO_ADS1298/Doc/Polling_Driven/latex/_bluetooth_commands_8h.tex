@@ -1,0 +1,63 @@
+\hypertarget{_bluetooth_commands_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-Bluetooth\-Commands.h \-File \-Reference}
+\label{_bluetooth_commands_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-Bluetooth\-Commands.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-Bluetooth\-Commands.\-h}}
+}
+{\ttfamily \#include $<$avr/pgmspace.\-h$>$}\*
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+prog\-\_\-char fsm\-\_\-mode\-\_\-change\mbox{[}$\,$\mbox{]} \hyperlink{_bluetooth_commands_8h_a21d5183aa5a62e1575376296c165bd20}{\-P\-R\-O\-G\-M\-E\-M} = \char`\"{}\-A\-T+\-F\-S\-M=\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_bluetooth_commands_8h_a21d5183aa5a62e1575376296c165bd20}{\index{\-Bluetooth\-Commands.\-h@{\-Bluetooth\-Commands.\-h}!\-P\-R\-O\-G\-M\-E\-M@{\-P\-R\-O\-G\-M\-E\-M}}
+\index{\-P\-R\-O\-G\-M\-E\-M@{\-P\-R\-O\-G\-M\-E\-M}!BluetoothCommands.h@{\-Bluetooth\-Commands.\-h}}
+\subsubsection[{\-P\-R\-O\-G\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}prog\-\_\-char string\-\_\-input \mbox{[}$\,$\mbox{]} {\bf \-P\-R\-O\-G\-M\-E\-M} = \char`\"{}\-A\-T+\-F\-S\-M=\char`\"{}}}\label{_bluetooth_commands_8h_a21d5183aa5a62e1575376296c165bd20}
+\-The following list of strings are the possible commands that the \-B\-T\-L\-E chip in this case the \-T\-I \-C\-C2540 \-B\-T 4.\-0 chip can parse and interpret.
+
+\-We use these commands via the serial connection to the bluetooth device to configure it and load appropriate settings. \-These are the mode change commands that the \-C\-C2540 understands (\-F\-S\-M)
+
+\-These are the role change commands that the \-C\-C2540 understands (\-R\-O\-L\-E)
+
+\-Sets the min connection interval
+
+\-Sets the max connection interval
+
+\-Sets the baud rate of the bluetooth transceiver.
+
+\-Sets the binding address to the \-B\-L\-E
+
+\-Sets the binding scheme for the \-B\-L\-E chip
+
+\-Get the \-M\-A\-C address of the chip
+
+\-Set the device name
+
+\-Restarts the \-B\-L\-E chip process
+
+\-Change the default operation of the \-B\-L\-E chip.
+
+\-Turn on the \-I\-Beacon capability
+
+\-Get the version of the firmware.
+
+\-Get the \-R\-S\-S\-I value for the transceiver
+
+\-Set the \-Major value of the \-I\-Beacon (0-\/65535)
+
+\-Set the \-Minor value of the \-I\-Beacon (0-\/65535)
+
+\-Set the password of the \-B\-L\-E chip
+
+\-Set the \-T\-X power for the transceiver
+
+\-Generic \-Help command
+
+\-Exits the \-A\-T mode
+
+\-Generic \-Enter \-A\-T \-Mode command
+
+\-Generic \-String formatter. 
+
+\-Definition at line 25 of file \-Bluetooth\-Commands.\-h.
+

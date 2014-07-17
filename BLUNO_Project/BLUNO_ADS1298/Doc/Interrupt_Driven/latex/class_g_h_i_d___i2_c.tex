@@ -1,0 +1,209 @@
+\hypertarget{class_g_h_i_d___i2_c}{\section{\-G\-H\-I\-D\-\_\-\-I2\-C \-Class \-Reference}
+\label{class_g_h_i_d___i2_c}\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+}
+
+
+{\ttfamily \#include $<$\-G\-H\-I\-D\-\_\-\-I2\-C.\-h$>$}
+
+\-Inheritance diagram for \-G\-H\-I\-D\-\_\-\-I2\-C\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_h_i_d___i2_c}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_h_i_d___i2_c_ac2a1139ab93465a05ff0006c2e21c052}{\-G\-H\-I\-D\-\_\-\-I2\-C} (byte \hyperlink{class_g_h_i_d___i2_c_ab168a66728f51bbbd877d604ebb18492}{master\-\_\-address})
+\begin{DoxyCompactList}\small\item\em \-Default constructor -\/ master address passed. \end{DoxyCompactList}\item 
+\hyperlink{class_g_h_i_d___i2_c_a7875b11751da7c1f1834bf6b3ec40b81}{\-G\-H\-I\-D\-\_\-\-I2\-C} ()
+\begin{DoxyCompactList}\small\item\em \-Default constructor -\/ no parameters passed. \end{DoxyCompactList}\item 
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} $\ast$ \hyperlink{class_g_h_i_d___i2_c_ace72253b2b6d54a4a43089d46bc816e0}{read\-\_\-bulk} (byte device\-\_\-address, byte length)
+\begin{DoxyCompactList}\small\item\em \-Read more than 1 byte at a time. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___i2_c_a0c887fe9ea0fa9b5dd9bec7305517d51}{setup\-\_\-receive\-\_\-handler} (void($\ast$function\-\_\-ptr)(int))
+\begin{DoxyCompactList}\small\item\em \-Setter method. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_h_i_d___i2_c_ad468c96e0459607e6f21cde030b74377}{setup\-\_\-request\-\_\-handler} (void($\ast$function\-\_\-ptr)(void))
+\begin{DoxyCompactList}\small\item\em \-Setter method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} \hyperlink{class_g_h_i_d___i2_c_a6722de3f1d85e1488ae667f6fb04c2a0}{buffer}
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+byte \hyperlink{class_g_h_i_d___i2_c_ab168a66728f51bbbd877d604ebb18492}{master\-\_\-address}
+\begin{DoxyCompactList}\small\item\em \-The master device address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is a wrapper class for the \-I2\-C buss class already included in the \-Arduino framework. \-This class extends the \hyperlink{class_two_wire}{\-Two\-Wire} class, and still allows access to those functions.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{_wire_8h}{\-Wire.\-h}
+\end{DoxySeeAlso}
+\-Note\-: \-To start a transmission, the user must use the following sequence of events\-:
+\begin{DoxyItemize}
+\item \-Init \-I2\-C,
+\item \-Start transmission (address)
+\item \-Send
+\item \-Stop transmission (address) 
+\end{DoxyItemize}
+
+\-Definition at line 38 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_g_h_i_d___i2_c_ac2a1139ab93465a05ff0006c2e21c052}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-I2\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::\-G\-H\-I\-D\-\_\-\-I2\-C} (
+\begin{DoxyParamCaption}
+\item[{byte}]{master\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___i2_c_ac2a1139ab93465a05ff0006c2e21c052}
+
+
+\-Default constructor -\/ master address passed. 
+
+\-This is the default constructor for the class. \-It sets the address of the master node to the given parameter.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em master\-\_\-address} & \\
+\hline
+\end{DoxyParams}
+\-We set the master address to the input address
+
+\-We start the \-I2\-C engine 
+
+\-Definition at line 21 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-cpp.
+
+\hypertarget{class_g_h_i_d___i2_c_a7875b11751da7c1f1834bf6b3ec40b81}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-I2\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::\-G\-H\-I\-D\-\_\-\-I2\-C} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___i2_c_a7875b11751da7c1f1834bf6b3ec40b81}
+
+
+\-Default constructor -\/ no parameters passed. 
+
+\-This is the default constructor for the class. \-It sets the address of the master node to 0x00 \-We set the master address to 0x00
+
+\-We start the \-I2\-C engine 
+
+\-Definition at line 11 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_g_h_i_d___i2_c_ace72253b2b6d54a4a43089d46bc816e0}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!read\-\_\-bulk@{read\-\_\-bulk}}
+\index{read\-\_\-bulk@{read\-\_\-bulk}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{read\-\_\-bulk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-struct\-\_\-t} $\ast$ {\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::read\-\_\-bulk} (
+\begin{DoxyParamCaption}
+\item[{byte}]{device\-\_\-address, }
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___i2_c_ace72253b2b6d54a4a43089d46bc816e0}
+
+
+\-Read more than 1 byte at a time. 
+
+\-This is a wrapper method around the request\-From method in the \hyperlink{class_two_wire}{\-Two\-Wire} class.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{class_two_wire_ae27d0936487551a05a1e9901bc456599}{request\-From}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{\-Parameters}
+{\em device\-\_\-address} & -\/ byte device address \\
+\hline
+{\em length} & -\/ number of bytes to receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structbuffer__struct__t}{buffer\-\_\-struct\-\_\-t} -\/ buffer containing the response 
+\end{DoxyReturn}
+\-We return the internal class struct pointer; 
+
+\-Definition at line 31 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-cpp.
+
+\hypertarget{class_g_h_i_d___i2_c_a0c887fe9ea0fa9b5dd9bec7305517d51}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!setup\-\_\-receive\-\_\-handler@{setup\-\_\-receive\-\_\-handler}}
+\index{setup\-\_\-receive\-\_\-handler@{setup\-\_\-receive\-\_\-handler}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{setup\-\_\-receive\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::setup\-\_\-receive\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(int)}]{function\-\_\-ptr}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___i2_c_a0c887fe9ea0fa9b5dd9bec7305517d51}
+
+
+\-Setter method. 
+
+\-This method sets the function pointer for the interrupt handler, when the \-I2\-C bus receives data.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em function\-\_\-ptr} & -\/ the receive handler \\
+\hline
+\end{DoxyParams}
+\-Set the receiver method 
+
+\-Definition at line 38 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-cpp.
+
+\hypertarget{class_g_h_i_d___i2_c_ad468c96e0459607e6f21cde030b74377}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!setup\-\_\-request\-\_\-handler@{setup\-\_\-request\-\_\-handler}}
+\index{setup\-\_\-request\-\_\-handler@{setup\-\_\-request\-\_\-handler}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{setup\-\_\-request\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::setup\-\_\-request\-\_\-handler} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{function\-\_\-ptr}
+\end{DoxyParamCaption}
+)}}\label{class_g_h_i_d___i2_c_ad468c96e0459607e6f21cde030b74377}
+
+
+\-Setter method. 
+
+\-This method sets the function pointer for the interrupt handler, when the \-I2\-C bus requests data from a slave.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em function\-\_\-ptr} & -\/ the requester handler \\
+\hline
+\end{DoxyParams}
+\-Set the request handler 
+
+\-Definition at line 45 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_g_h_i_d___i2_c_a6722de3f1d85e1488ae667f6fb04c2a0}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!buffer@{buffer}}
+\index{buffer@{buffer}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-struct\-\_\-t} {\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::buffer}}}\label{class_g_h_i_d___i2_c_a6722de3f1d85e1488ae667f6fb04c2a0}
+
+
+\-Public \-Context. 
+
+\-All methods which allows any type of \-I2\-C communication are held inside the \hyperlink{class_two_wire}{\-Two\-Wire} class.
+
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{_wire_8h}{\-Wire.\-h} \-Internal class \hyperlink{class_g_h_i_d___i2_c_a6722de3f1d85e1488ae667f6fb04c2a0}{buffer} structure 
+\end{DoxySeeAlso}
+
+
+\-Definition at line 51 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-h.
+
+\hypertarget{class_g_h_i_d___i2_c_ab168a66728f51bbbd877d604ebb18492}{\index{\-G\-H\-I\-D\-\_\-\-I2\-C@{\-G\-H\-I\-D\-\_\-\-I2\-C}!master\-\_\-address@{master\-\_\-address}}
+\index{master\-\_\-address@{master\-\_\-address}!GHID_I2C@{\-G\-H\-I\-D\-\_\-\-I2\-C}}
+\subsubsection[{master\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}byte {\bf \-G\-H\-I\-D\-\_\-\-I2\-C\-::master\-\_\-address}}}\label{class_g_h_i_d___i2_c_ab168a66728f51bbbd877d604ebb18492}
+
+
+\-The master device address. 
+
+
+
+\-Definition at line 54 of file \-G\-H\-I\-D\-\_\-\-I2\-C.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___i2_c_8h}{\-G\-H\-I\-D\-\_\-\-I2\-C.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-G\-H\-I\-D A\-P\-I/\hyperlink{_g_h_i_d___i2_c_8cpp}{\-G\-H\-I\-D\-\_\-\-I2\-C.\-cpp}\end{DoxyCompactItemize}

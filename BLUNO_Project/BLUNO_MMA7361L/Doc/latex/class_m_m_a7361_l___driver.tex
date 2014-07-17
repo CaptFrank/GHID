@@ -1,0 +1,482 @@
+\hypertarget{class_m_m_a7361_l___driver}{\section{\-M\-M\-A7361\-L\-\_\-\-Driver \-Class \-Reference}
+\label{class_m_m_a7361_l___driver}\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+}
+
+
+{\ttfamily \#include $<$\-M\-M\-A7361\-L\-Driver.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_m_a7361_l___driver_a3922dcb02cf001fba03106e608568222}{\-M\-M\-A7361\-L\-\_\-\-Driver} (\hyperlink{struct_m_m_a7361_l__pin__map__t}{\-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t} $\ast$pin\-\_\-map, double ref)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+void \hyperlink{class_m_m_a7361_l___driver_a7fdae5f1848de9fc5e3a3b278263042f}{begin} ()
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_a1c76ed75e125432a6424b2a182355e7f}{run} (\hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$buff)
+\item 
+int \hyperlink{class_m_m_a7361_l___driver_a12755e0b931fcd96341008268c63b516}{get\-\_\-raw} (\hyperlink{_utilities_8h_ae7747145441b0591a5c04f20f6f9189a}{axis\-\_\-t} axis)
+\item 
+int \hyperlink{class_m_m_a7361_l___driver_a13345944aee14491138a2266863b0d10}{get\-\_\-volt} (\hyperlink{_utilities_8h_ae7747145441b0591a5c04f20f6f9189a}{axis\-\_\-t} axis)
+\item 
+int \hyperlink{class_m_m_a7361_l___driver_a33d5fe3264a2ecee0bcc5d56328171cb}{get\-\_\-accel} (\hyperlink{_utilities_8h_ae7747145441b0591a5c04f20f6f9189a}{axis\-\_\-t} axis)
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_a2bb01f088ddde959c0f3c208cd3b674e}{get\-\_\-accel\-\_\-xyz} (int $\ast$\-\_\-\-X\-Axis, int $\ast$\-\_\-\-Y\-Axis, int $\ast$\-\_\-\-Z\-Axis)
+\item 
+int \hyperlink{class_m_m_a7361_l___driver_a9f1486f4815a63d1428e9f0855794076}{get\-\_\-total\-\_\-vector} ()
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_a70df270032334f38cd228a9666f6e683}{set\-\_\-offsets} (int x\-Off\-Set, int y\-Off\-Set, int z\-Off\-Set)
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_a9e03b5f0771de27586f2e19af15cb30e}{calibrate} ()
+\item 
+int \hyperlink{class_m_m_a7361_l___driver_a9e7a3fd4168fac0dc4b5c34a9dd08998}{get\-\_\-orientation} ()
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_aac0916c32628f75239fc7fa7bf14551c}{set\-\_\-sensitivity} (bool sensi)
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_a9a4b50df4aa88dd9784e1669b0dfde0c}{sleep} ()
+\item 
+void \hyperlink{class_m_m_a7361_l___driver_ac3c8e3ca43a977552611076ada5c00b2}{wake} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the \-M\-M\-A7361\-L \-Analog sensor driver. \-We use it to acquire data from the sensor as well as trigger actions within the sensor device. 
+
+\-Definition at line 42 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_m_m_a7361_l___driver_a3922dcb02cf001fba03106e608568222}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-M\-M\-A7361\-L\-\_\-\-Driver} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t} $\ast$}]{pin\-\_\-map, }
+\item[{double}]{ref}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a3922dcb02cf001fba03106e608568222}
+
+
+\-Public \-Context. 
+
+\-This is the default constructor for the class. \-A pin map is passed to the constructor to allow for setting up of the device.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pin\-\_\-map} & -\/ \-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t$\ast$ \\
+\hline
+{\em ref} & -\/ \-The reference voltage\\
+\hline
+\end{DoxyParams}
+\-This is the default constructor for the class. \-A pin map is passed to the constructor to allow for setting up of the device.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pin\-\_\-map} & -\/ \-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t$\ast$ \\
+\hline
+\end{DoxyParams}
+\-We set the internal pin map reference
+
+\-Set the other vars
+
+\-Set the reference voltage 
+
+\-Definition at line 18 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_m_m_a7361_l___driver_a7fdae5f1848de9fc5e3a3b278263042f}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!begin@{begin}}
+\index{begin@{begin}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a7fdae5f1848de9fc5e3a3b278263042f}
+\-This is the pin setup method. \-We setup the \-Analog sensors
+
+\-We save the config pins
+
+\-We setup the pins
+
+\-We configure the device
+
+\-We set sleep to false
+
+\-We set the offsets
+
+\-We set the sensiticity 
+
+\-Definition at line 34 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a9e03b5f0771de27586f2e19af15cb30e}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{calibrate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::calibrate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a9e03b5f0771de27586f2e19af15cb30e}
+\-This method calibrates the sensor \-Set containers
+
+\-Get the values of the voltage on each axis 5000 times.
+
+\-If the sensitivity is not set
+
+\-We adjust the offsets based on the coefficients in the datasheet
+
+\-We adjust the offsets based on the coefficients in the datasheet 
+
+\-Definition at line 223 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a33d5fe3264a2ecee0bcc5d56328171cb}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!get\-\_\-accel@{get\-\_\-accel}}
+\index{get\-\_\-accel@{get\-\_\-accel}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-accel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::get\-\_\-accel} (
+\begin{DoxyParamCaption}
+\item[{{\bf axis\-\_\-t}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a33d5fe3264a2ecee0bcc5d56328171cb}
+\-This is a method that gets the accelerometer value of the selected axis.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em axis} & -\/ \-The axis needed to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The analog value 
+\end{DoxyReturn}
+\-Temp data
+
+\-We read the raw value of the axis defined
+
+\-Nothing to do 
+
+\-Definition at line 140 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a2bb01f088ddde959c0f3c208cd3b674e}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!get\-\_\-accel\-\_\-xyz@{get\-\_\-accel\-\_\-xyz}}
+\index{get\-\_\-accel\-\_\-xyz@{get\-\_\-accel\-\_\-xyz}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-accel\-\_\-xyz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::get\-\_\-accel\-\_\-xyz} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{\-\_\-\-X\-Axis, }
+\item[{int $\ast$}]{\-\_\-\-Y\-Axis, }
+\item[{int $\ast$}]{\-\_\-\-Z\-Axis}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a2bb01f088ddde959c0f3c208cd3b674e}
+\-This method does all conversions and returns the values.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-\-X\-Axis} & -\/ \-The x axis value \\
+\hline
+{\em \-\_\-\-Y\-Axis} & -\/ \-The y axis value \\
+\hline
+{\em \-\_\-\-Z\-Axis} & -\/ \-The z axis value \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 175 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a9e7a3fd4168fac0dc4b5c34a9dd08998}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!get\-\_\-orientation@{get\-\_\-orientation}}
+\index{get\-\_\-orientation@{get\-\_\-orientation}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-orientation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::get\-\_\-orientation} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a9e7a3fd4168fac0dc4b5c34a9dd08998}
+\-This gets to global orientation of the sensor
+
+\begin{DoxyReturn}{\-Returns}
+-\/ \-The orientation 
+\end{DoxyReturn}
+\-Set containers
+
+\-We take 10 samples to average
+
+\-We average
+
+\-We get the absolute value of the values
+
+\-If in the direction of x
+
+negative or positive?
+
+\-If in the direction of y
+
+negative or positive?
+
+\-If in the direction of z
+
+negative or positive? 
+
+\-Definition at line 257 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a12755e0b931fcd96341008268c63b516}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!get\-\_\-raw@{get\-\_\-raw}}
+\index{get\-\_\-raw@{get\-\_\-raw}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-raw}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::get\-\_\-raw} (
+\begin{DoxyParamCaption}
+\item[{{\bf axis\-\_\-t}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a12755e0b931fcd96341008268c63b516}
+\-This is a method that gets the raw selected axis value.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em axis} & -\/ \-The axis needed to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The analog value 
+\end{DoxyReturn}
+\-We read the raw value of the axis defined
+
+\-Nothing to do 
+
+\-Definition at line 103 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a9f1486f4815a63d1428e9f0855794076}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!get\-\_\-total\-\_\-vector@{get\-\_\-total\-\_\-vector}}
+\index{get\-\_\-total\-\_\-vector@{get\-\_\-total\-\_\-vector}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-total\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::get\-\_\-total\-\_\-vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a9f1486f4815a63d1428e9f0855794076}
+\-This gets the total vector of the 3 components.
+
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The total vector 
+\end{DoxyReturn}
+
+
+\-Definition at line 188 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a13345944aee14491138a2266863b0d10}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!get\-\_\-volt@{get\-\_\-volt}}
+\index{get\-\_\-volt@{get\-\_\-volt}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-volt}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::get\-\_\-volt} (
+\begin{DoxyParamCaption}
+\item[{{\bf axis\-\_\-t}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a13345944aee14491138a2266863b0d10}
+\-This is a method that gets the voltage of the selected axis.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em axis} & -\/ \-The axis needed to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The analog value 
+\end{DoxyReturn}
+
+
+\-Definition at line 130 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a1c76ed75e125432a6424b2a182355e7f}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!run@{run}}
+\index{run@{run}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::run} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Ring\-Buff\-\_\-t} $\ast$}]{buff}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a1c76ed75e125432a6424b2a182355e7f}
+\-This method runs the \-A\-D\-C thread
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buff} & -\/ \-The \-Ring\-Buff type \\
+\hline
+\end{DoxyParams}
+\-Containers
+
+\-We get all axis values
+
+\-Create a data container
+
+\-We put the data into the ringbuffer 
+
+\-Definition at line 73 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a70df270032334f38cd228a9666f6e683}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!set\-\_\-offsets@{set\-\_\-offsets}}
+\index{set\-\_\-offsets@{set\-\_\-offsets}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{set\-\_\-offsets}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::set\-\_\-offsets} (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Off\-Set, }
+\item[{int}]{y\-Off\-Set, }
+\item[{int}]{z\-Off\-Set}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a70df270032334f38cd228a9666f6e683}
+\-This method sets the offsets of the axes
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em x\-Off\-Set} & -\/ \-The x axis offset \\
+\hline
+{\em y\-Off\-Set} & -\/ \-The y axis offset \\
+\hline
+{\em z\-Off\-Set} & -\/ \-The z axis offset \\
+\hline
+\end{DoxyParams}
+\-Switch based on the reference voltage
+
+\-Set the offsets 
+
+\-Definition at line 203 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_aac0916c32628f75239fc7fa7bf14551c}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!set\-\_\-sensitivity@{set\-\_\-sensitivity}}
+\index{set\-\_\-sensitivity@{set\-\_\-sensitivity}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{set\-\_\-sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::set\-\_\-sensitivity} (
+\begin{DoxyParamCaption}
+\item[{bool}]{sensi}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_aac0916c32628f75239fc7fa7bf14551c}
+\-This sets the sensitivity of the device to either \-L\-O\-W or \-H\-I\-G\-H
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sensi} & -\/ \-The sensitivity \\
+\hline
+\end{DoxyParams}
+\-We set the sensitivity 
+
+\-Definition at line 324 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_a9a4b50df4aa88dd9784e1669b0dfde0c}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!sleep@{sleep}}
+\index{sleep@{sleep}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::sleep} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_a9a4b50df4aa88dd9784e1669b0dfde0c}
+\-This triggers a remtoe sleep. \-We check that the device isn't already in sleep 
+
+\-Definition at line 334 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+\hypertarget{class_m_m_a7361_l___driver_ac3c8e3ca43a977552611076ada5c00b2}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!wake@{wake}}
+\index{wake@{wake}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{wake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::wake} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_m_m_a7361_l___driver_ac3c8e3ca43a977552611076ada5c00b2}
+\-This wakes the sensor. \-Check to see if the device is not already alive 
+
+\-Definition at line 346 of file \-M\-M\-A7361\-L\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_m_m_a7361_l___driver_ab02e3497600e4bf58a8c8c5d0c542c73}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-g\-\_\-select\-\_\-pin@{\-\_\-g\-\_\-select\-\_\-pin}}
+\index{\-\_\-g\-\_\-select\-\_\-pin@{\-\_\-g\-\_\-select\-\_\-pin}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-g\-\_\-select\-\_\-pin}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-g\-\_\-select\-\_\-pin}}}\label{class_m_m_a7361_l___driver_ab02e3497600e4bf58a8c8c5d0c542c73}
+
+
+\-Definition at line 165 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a687f7f21e9ce4c75a341380b086252a2}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-offsets@{\-\_\-offsets}}
+\index{\-\_\-offsets@{\-\_\-offsets}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-offsets}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-offsets}}}\label{class_m_m_a7361_l___driver_a687f7f21e9ce4c75a341380b086252a2}
+\hypertarget{class_m_m_a7361_l___driver_a2aca17da00232bb66ee3cd9cb8c74b78}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-offsets\-\_\-array@{\-\_\-offsets\-\_\-array}}
+\index{\-\_\-offsets\-\_\-array@{\-\_\-offsets\-\_\-array}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-offsets\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-offsets\-\_\-array}\mbox{[}3\mbox{]}}}\label{class_m_m_a7361_l___driver_a2aca17da00232bb66ee3cd9cb8c74b78}
+
+
+\-Definition at line 175 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a93e3dcfc8887bc62e209f42ae824388a}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-pols@{\-\_\-pols}}
+\index{\-\_\-pols@{\-\_\-pols}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-pols}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-pols}}}\label{class_m_m_a7361_l___driver_a93e3dcfc8887bc62e209f42ae824388a}
+\hypertarget{class_m_m_a7361_l___driver_a520769579ca5c7b9279ac60b5377b502}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-pols\-\_\-array@{\-\_\-pols\-\_\-array}}
+\index{\-\_\-pols\-\_\-array@{\-\_\-pols\-\_\-array}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-pols\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-pols\-\_\-array}\mbox{[}3\mbox{]}}}\label{class_m_m_a7361_l___driver_a520769579ca5c7b9279ac60b5377b502}
+
+
+\-Definition at line 185 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a99cc8f1c06bd9e3c25efa6369f5918f8}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-self\-\_\-test\-\_\-pin@{\-\_\-self\-\_\-test\-\_\-pin}}
+\index{\-\_\-self\-\_\-test\-\_\-pin@{\-\_\-self\-\_\-test\-\_\-pin}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-self\-\_\-test\-\_\-pin}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-self\-\_\-test\-\_\-pin}}}\label{class_m_m_a7361_l___driver_a99cc8f1c06bd9e3c25efa6369f5918f8}
+
+
+\-Definition at line 163 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a8d123ee5fb711beadf02a8e6230a91dc}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-sleep\-\_\-pin@{\-\_\-sleep\-\_\-pin}}
+\index{\-\_\-sleep\-\_\-pin@{\-\_\-sleep\-\_\-pin}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-sleep\-\_\-pin}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-sleep\-\_\-pin}}}\label{class_m_m_a7361_l___driver_a8d123ee5fb711beadf02a8e6230a91dc}
+
+
+\-Definition at line 162 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a754cbcff98237680540eed964592a519}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-x@{\-\_\-x}}
+\index{\-\_\-x@{\-\_\-x}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Sensor\-\_\-\-Driver}$\ast$ {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-x}}}\label{class_m_m_a7361_l___driver_a754cbcff98237680540eed964592a519}
+
+
+\-Definition at line 155 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_af3ba686fabfc2bfa1af0c3e88ce4b2ff}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-x\-\_\-offset@{\-\_\-x\-\_\-offset}}
+\index{\-\_\-x\-\_\-offset@{\-\_\-x\-\_\-offset}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-x\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-x\-\_\-offset}}}\label{class_m_m_a7361_l___driver_af3ba686fabfc2bfa1af0c3e88ce4b2ff}
+
+
+\-Definition at line 171 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a92df95d740835749c45fb307117bef0b}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-x\-\_\-pol@{\-\_\-x\-\_\-pol}}
+\index{\-\_\-x\-\_\-pol@{\-\_\-x\-\_\-pol}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-x\-\_\-pol}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-x\-\_\-pol}}}\label{class_m_m_a7361_l___driver_a92df95d740835749c45fb307117bef0b}
+
+
+\-Definition at line 181 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a6587677449e1325bb3d0b29bc1b3ec9c}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-y@{\-\_\-y}}
+\index{\-\_\-y@{\-\_\-y}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Sensor\-\_\-\-Driver}$\ast$ {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-y}}}\label{class_m_m_a7361_l___driver_a6587677449e1325bb3d0b29bc1b3ec9c}
+
+
+\-Definition at line 156 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a23bd5e2ceee3d3de818765d7c0324593}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-y\-\_\-offset@{\-\_\-y\-\_\-offset}}
+\index{\-\_\-y\-\_\-offset@{\-\_\-y\-\_\-offset}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-y\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-y\-\_\-offset}}}\label{class_m_m_a7361_l___driver_a23bd5e2ceee3d3de818765d7c0324593}
+
+
+\-Definition at line 172 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a482e90f06c8c0366f375c71a98d8cd63}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-y\-\_\-pol@{\-\_\-y\-\_\-pol}}
+\index{\-\_\-y\-\_\-pol@{\-\_\-y\-\_\-pol}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-y\-\_\-pol}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-y\-\_\-pol}}}\label{class_m_m_a7361_l___driver_a482e90f06c8c0366f375c71a98d8cd63}
+
+
+\-Definition at line 182 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a0416de491924bc911e577fc6b3ad6221}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-z@{\-\_\-z}}
+\index{\-\_\-z@{\-\_\-z}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-z}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Sensor\-\_\-\-Driver}$\ast$ {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-z}}}\label{class_m_m_a7361_l___driver_a0416de491924bc911e577fc6b3ad6221}
+
+
+\-Definition at line 157 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a2896398d25d793b63335dabaf46c7a87}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-z\-\_\-offset@{\-\_\-z\-\_\-offset}}
+\index{\-\_\-z\-\_\-offset@{\-\_\-z\-\_\-offset}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-z\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-z\-\_\-offset}}}\label{class_m_m_a7361_l___driver_a2896398d25d793b63335dabaf46c7a87}
+
+
+\-Definition at line 173 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a1abc134bb9adaee3a89e65a784e8b831}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-z\-\_\-pol@{\-\_\-z\-\_\-pol}}
+\index{\-\_\-z\-\_\-pol@{\-\_\-z\-\_\-pol}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-z\-\_\-pol}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-z\-\_\-pol}}}\label{class_m_m_a7361_l___driver_a1abc134bb9adaee3a89e65a784e8b831}
+
+
+\-Definition at line 183 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{class_m_m_a7361_l___driver_a09fb128f03f2c1b425e5bb4d4ac4dcb1}{\index{\-M\-M\-A7361\-L\-\_\-\-Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}!\-\_\-zero\-\_\-g\-\_\-pin@{\-\_\-zero\-\_\-g\-\_\-pin}}
+\index{\-\_\-zero\-\_\-g\-\_\-pin@{\-\_\-zero\-\_\-g\-\_\-pin}!MMA7361L_Driver@{\-M\-M\-A7361\-L\-\_\-\-Driver}}
+\subsubsection[{\-\_\-zero\-\_\-g\-\_\-pin}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-M\-M\-A7361\-L\-\_\-\-Driver\-::\-\_\-zero\-\_\-g\-\_\-pin}}}\label{class_m_m_a7361_l___driver_a09fb128f03f2c1b425e5bb4d4ac4dcb1}
+
+
+\-Definition at line 164 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_m_m_a7361_l_driver_8h}{\-M\-M\-A7361\-L\-Driver.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_m_m_a7361_l_driver_8cpp}{\-M\-M\-A7361\-L\-Driver.\-cpp}\end{DoxyCompactItemize}

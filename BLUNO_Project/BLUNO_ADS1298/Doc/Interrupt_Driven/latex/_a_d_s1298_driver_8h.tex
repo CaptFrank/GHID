@@ -1,0 +1,281 @@
+\hypertarget{_a_d_s1298_driver_8h}{\section{\-A\-D\-S1298\-Driver.\-h \-File \-Reference}
+\label{_a_d_s1298_driver_8h}\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-S\-P\-I.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Ring\-Buffer.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-A\-D\-S1298\-Commands.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structactive__channels__t}{active\-\_\-channels\-\_\-t}
+\item 
+struct \hyperlink{structrx__buffer__t}{rx\-\_\-buffer\-\_\-t}
+\item 
+struct \hyperlink{structspi__settings__t}{spi\-\_\-settings\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-S\-P\-I device settings. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_d_s1298___driver}{\-A\-D\-S1298\-\_\-\-Driver}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_abaeddda4b992af7165ed898ab8b2b4ac}{\-P\-I\-N\-\_\-\-M\-O\-S\-I}~11
+\begin{DoxyCompactList}\small\item\em \-Pin definitions -\/ \-S\-P\-I \-Bus. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a46bdd417480dec5cb9cf196af3c7489c}{\-P\-I\-N\-\_\-\-M\-I\-S\-O}~12
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_aa82a66519f1e9a07f2900d2c6d34a437}{\-P\-I\-N\-\_\-\-S\-C\-L\-K}~13
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ab4b553591a495409d4f7cec4b6c3e754}{\-P\-I\-N\-\_\-\-S\-S}~10
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a6d990297df33b717e4d1489159aef8c0}{\-P\-I\-N\-\_\-\-R\-E\-S\-E\-T}~9
+\begin{DoxyCompactList}\small\item\em \-Pin definitions -\/ \-Signals. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ab1d863ec43618bb8ac8ec892273f2215}{\-P\-I\-N\-\_\-\-S\-T\-A\-R\-T}~8
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a5559cd1953e3fce83f6ecf4fc4c1e46a}{\-P\-I\-N\-\_\-\-D\-R\-D\-Y}~3
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ae70934b3338990d4a3faecf2ee172d92}{\-P\-I\-N\-\_\-\-L\-E\-D}~6
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a6ddbf5d5b89e10182c58e6fcb5aa1baf}{\-P\-I\-N\-\_\-\-P\-W\-D\-N}~7
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ada74e7db007a68e763f20c17f2985356}{\-R\-E\-A\-D}~0x20
+\begin{DoxyCompactList}\small\item\em \-I/\-O \-Commands. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_aa10f470e996d0f51210d24f442d25e1e}{\-W\-R\-I\-T\-E}~0x40
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ac93edbf7e8fdbf7398453d51bbd37a97}{\-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D}~1000
+\begin{DoxyCompactList}\small\item\em \-Delays. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_af95f27544f39827250d6bef6fa5fe18e}{\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}~500
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a8de8c8abf816c15bce4a1afe0c28ecc2}{\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I}~1
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{\-T\-R\-U\-E}~0x01
+\begin{DoxyCompactList}\small\item\em \-General defines. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_aa93f0eb578d23995850d61f7d61c55c1}{\-F\-A\-L\-S\-E}~0x00
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a655c84af1b0034986ff56e12e84f983d}{\-N\-O\-N\-E}~0x00
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a34f990a91f8bde3acb64da09eed8a48b}{\-S\-P\-A\-C\-E\-R}~0x00
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ad722e81575141768988a7a874fa6d4e2}{\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S}~1
+\begin{DoxyCompactList}\small\item\em \-S\-P\-I \-Device settings. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_aae0b514e627eddcc4da70987b19ac11b}{\-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E}~10
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ab7770a7f0d95e67620ff6ed347a07a56}{\-H\-E\-A\-D\-E\-R}~3
+\begin{DoxyCompactList}\small\item\em \-Packet defines. \end{DoxyCompactList}\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a43ebdae7ab59ca47624db7d5d2e27227}{\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}~3
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_ae5597ce31d23d11493e6e674fe257d73}{\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}~8
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_abb59a566539e5e148f63599ee6e67ea1}{\-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~\hyperlink{_a_d_s1298_driver_8h_ab7770a7f0d95e67620ff6ed347a07a56}{\-H\-E\-A\-D\-E\-R} + (\hyperlink{_a_d_s1298_driver_8h_a43ebdae7ab59ca47624db7d5d2e27227}{\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N} $\ast$ \hyperlink{_a_d_s1298_driver_8h_ae5597ce31d23d11493e6e674fe257d73}{\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S})
+\item 
+\#define \hyperlink{_a_d_s1298_driver_8h_a01c1c4be22aa6aa9346576f5ff7de54f}{\-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-This initializes the pinout and the device map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_a_d_s1298_driver_8h_a01c1c4be22aa6aa9346576f5ff7de54f}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-@{\-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-@{\-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-\_\-\-\_\-\-A\-T\-M\-E\-G\-A\-\_\-32\-\_\-\-\_\-}}}\label{_a_d_s1298_driver_8h_a01c1c4be22aa6aa9346576f5ff7de54f}
+
+
+\-This initializes the pinout and the device map. 
+
+
+
+\-Definition at line 56 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_aae0b514e627eddcc4da70987b19ac11b}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E@{\-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E}}
+\index{\-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E@{\-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-D\-S1298\-\_\-\-D\-E\-V\-I\-C\-E}~10}}\label{_a_d_s1298_driver_8h_aae0b514e627eddcc4da70987b19ac11b}
+
+
+\-Definition at line 47 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a43ebdae7ab59ca47624db7d5d2e27227}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N@{\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}}
+\index{\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N@{\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N}~3}}\label{_a_d_s1298_driver_8h_a43ebdae7ab59ca47624db7d5d2e27227}
+
+
+\-Definition at line 51 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_abb59a566539e5e148f63599ee6e67ea1}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E@{\-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}}
+\index{\-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E@{\-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-A\-T\-A\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-S\-I\-Z\-E}~{\bf \-H\-E\-A\-D\-E\-R} + ({\bf \-C\-H\-A\-N\-N\-E\-L\-\_\-\-R\-E\-S\-O\-L\-U\-T\-I\-O\-N} $\ast$ {\bf \-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S})}}\label{_a_d_s1298_driver_8h_abb59a566539e5e148f63599ee6e67ea1}
+
+
+\-Definition at line 53 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_aa93f0eb578d23995850d61f7d61c55c1}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-F\-A\-L\-S\-E@{\-F\-A\-L\-S\-E}}
+\index{\-F\-A\-L\-S\-E@{\-F\-A\-L\-S\-E}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-F\-A\-L\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-F\-A\-L\-S\-E}~0x00}}\label{_a_d_s1298_driver_8h_aa93f0eb578d23995850d61f7d61c55c1}
+
+
+\-Definition at line 41 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_af95f27544f39827250d6bef6fa5fe18e}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D@{\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}}
+\index{\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D@{\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}~500}}\label{_a_d_s1298_driver_8h_af95f27544f39827250d6bef6fa5fe18e}
+
+
+\-Definition at line 36 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ab7770a7f0d95e67620ff6ed347a07a56}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-H\-E\-A\-D\-E\-R@{\-H\-E\-A\-D\-E\-R}}
+\index{\-H\-E\-A\-D\-E\-R@{\-H\-E\-A\-D\-E\-R}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-H\-E\-A\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-E\-A\-D\-E\-R}~3}}\label{_a_d_s1298_driver_8h_ab7770a7f0d95e67620ff6ed347a07a56}
+
+
+\-Packet defines. 
+
+
+
+\-Definition at line 50 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a655c84af1b0034986ff56e12e84f983d}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-N\-O\-N\-E@{\-N\-O\-N\-E}}
+\index{\-N\-O\-N\-E@{\-N\-O\-N\-E}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-N\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-O\-N\-E}~0x00}}\label{_a_d_s1298_driver_8h_a655c84af1b0034986ff56e12e84f983d}
+
+
+\-Definition at line 42 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ae5597ce31d23d11493e6e674fe257d73}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S@{\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}}
+\index{\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S@{\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}~8}}\label{_a_d_s1298_driver_8h_ae5597ce31d23d11493e6e674fe257d73}
+
+
+\-Definition at line 52 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ad722e81575141768988a7a874fa6d4e2}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S@{\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S}}
+\index{\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S@{\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-U\-M\-B\-E\-R\-\_\-\-O\-F\-\_\-\-S\-P\-I\-\_\-\-D\-E\-V\-I\-C\-E\-S}~1}}\label{_a_d_s1298_driver_8h_ad722e81575141768988a7a874fa6d4e2}
+
+
+\-S\-P\-I \-Device settings. 
+
+
+
+\-Definition at line 46 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a8de8c8abf816c15bce4a1afe0c28ecc2}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I@{\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I}}
+\index{\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I@{\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-O\-N\-E\-\_\-\-M\-I\-L\-L\-I}~1}}\label{_a_d_s1298_driver_8h_a8de8c8abf816c15bce4a1afe0c28ecc2}
+
+
+\-Definition at line 37 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ac93edbf7e8fdbf7398453d51bbd37a97}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D@{\-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D}}
+\index{\-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D@{\-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-O\-N\-E\-\_\-\-S\-E\-C\-O\-N\-D}~1000}}\label{_a_d_s1298_driver_8h_ac93edbf7e8fdbf7398453d51bbd37a97}
+
+
+\-Delays. 
+
+
+
+\-Definition at line 35 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a5559cd1953e3fce83f6ecf4fc4c1e46a}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-D\-R\-D\-Y@{\-P\-I\-N\-\_\-\-D\-R\-D\-Y}}
+\index{\-P\-I\-N\-\_\-\-D\-R\-D\-Y@{\-P\-I\-N\-\_\-\-D\-R\-D\-Y}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-D\-R\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-D\-R\-D\-Y}~3}}\label{_a_d_s1298_driver_8h_a5559cd1953e3fce83f6ecf4fc4c1e46a}
+
+
+\-Definition at line 26 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ae70934b3338990d4a3faecf2ee172d92}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-L\-E\-D@{\-P\-I\-N\-\_\-\-L\-E\-D}}
+\index{\-P\-I\-N\-\_\-\-L\-E\-D@{\-P\-I\-N\-\_\-\-L\-E\-D}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-L\-E\-D}~6}}\label{_a_d_s1298_driver_8h_ae70934b3338990d4a3faecf2ee172d92}
+
+
+\-Definition at line 27 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a46bdd417480dec5cb9cf196af3c7489c}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-M\-I\-S\-O@{\-P\-I\-N\-\_\-\-M\-I\-S\-O}}
+\index{\-P\-I\-N\-\_\-\-M\-I\-S\-O@{\-P\-I\-N\-\_\-\-M\-I\-S\-O}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-M\-I\-S\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-M\-I\-S\-O}~12}}\label{_a_d_s1298_driver_8h_a46bdd417480dec5cb9cf196af3c7489c}
+
+
+\-Definition at line 19 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_abaeddda4b992af7165ed898ab8b2b4ac}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-M\-O\-S\-I@{\-P\-I\-N\-\_\-\-M\-O\-S\-I}}
+\index{\-P\-I\-N\-\_\-\-M\-O\-S\-I@{\-P\-I\-N\-\_\-\-M\-O\-S\-I}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-M\-O\-S\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-M\-O\-S\-I}~11}}\label{_a_d_s1298_driver_8h_abaeddda4b992af7165ed898ab8b2b4ac}
+
+
+\-Pin definitions -\/ \-S\-P\-I \-Bus. 
+
+
+
+\-Definition at line 18 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a6ddbf5d5b89e10182c58e6fcb5aa1baf}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-P\-W\-D\-N@{\-P\-I\-N\-\_\-\-P\-W\-D\-N}}
+\index{\-P\-I\-N\-\_\-\-P\-W\-D\-N@{\-P\-I\-N\-\_\-\-P\-W\-D\-N}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-P\-W\-D\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-P\-W\-D\-N}~7}}\label{_a_d_s1298_driver_8h_a6ddbf5d5b89e10182c58e6fcb5aa1baf}
+
+
+\-Definition at line 28 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a6d990297df33b717e4d1489159aef8c0}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-R\-E\-S\-E\-T@{\-P\-I\-N\-\_\-\-R\-E\-S\-E\-T}}
+\index{\-P\-I\-N\-\_\-\-R\-E\-S\-E\-T@{\-P\-I\-N\-\_\-\-R\-E\-S\-E\-T}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-R\-E\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-R\-E\-S\-E\-T}~9}}\label{_a_d_s1298_driver_8h_a6d990297df33b717e4d1489159aef8c0}
+
+
+\-Pin definitions -\/ \-Signals. 
+
+
+
+\-Definition at line 24 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_aa82a66519f1e9a07f2900d2c6d34a437}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-S\-C\-L\-K@{\-P\-I\-N\-\_\-\-S\-C\-L\-K}}
+\index{\-P\-I\-N\-\_\-\-S\-C\-L\-K@{\-P\-I\-N\-\_\-\-S\-C\-L\-K}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-S\-C\-L\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-S\-C\-L\-K}~13}}\label{_a_d_s1298_driver_8h_aa82a66519f1e9a07f2900d2c6d34a437}
+
+
+\-Definition at line 20 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ab4b553591a495409d4f7cec4b6c3e754}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-S\-S@{\-P\-I\-N\-\_\-\-S\-S}}
+\index{\-P\-I\-N\-\_\-\-S\-S@{\-P\-I\-N\-\_\-\-S\-S}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-S\-S}~10}}\label{_a_d_s1298_driver_8h_ab4b553591a495409d4f7cec4b6c3e754}
+
+
+\-Definition at line 21 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ab1d863ec43618bb8ac8ec892273f2215}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-P\-I\-N\-\_\-\-S\-T\-A\-R\-T@{\-P\-I\-N\-\_\-\-S\-T\-A\-R\-T}}
+\index{\-P\-I\-N\-\_\-\-S\-T\-A\-R\-T@{\-P\-I\-N\-\_\-\-S\-T\-A\-R\-T}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-P\-I\-N\-\_\-\-S\-T\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-I\-N\-\_\-\-S\-T\-A\-R\-T}~8}}\label{_a_d_s1298_driver_8h_ab1d863ec43618bb8ac8ec892273f2215}
+
+
+\-Definition at line 25 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_ada74e7db007a68e763f20c17f2985356}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-R\-E\-A\-D@{\-R\-E\-A\-D}}
+\index{\-R\-E\-A\-D@{\-R\-E\-A\-D}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-E\-A\-D}~0x20}}\label{_a_d_s1298_driver_8h_ada74e7db007a68e763f20c17f2985356}
+
+
+\-I/\-O \-Commands. 
+
+
+
+\-Definition at line 31 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_a34f990a91f8bde3acb64da09eed8a48b}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-S\-P\-A\-C\-E\-R@{\-S\-P\-A\-C\-E\-R}}
+\index{\-S\-P\-A\-C\-E\-R@{\-S\-P\-A\-C\-E\-R}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-S\-P\-A\-C\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-P\-A\-C\-E\-R}~0x00}}\label{_a_d_s1298_driver_8h_a34f990a91f8bde3acb64da09eed8a48b}
+
+
+\-Definition at line 43 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-T\-R\-U\-E@{\-T\-R\-U\-E}}
+\index{\-T\-R\-U\-E@{\-T\-R\-U\-E}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-T\-R\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-R\-U\-E}~0x01}}\label{_a_d_s1298_driver_8h_aa8cecfc5c5c054d2875c03e77b7be15d}
+
+
+\-General defines. 
+
+
+
+\-Definition at line 40 of file \-A\-D\-S1298\-Driver.\-h.
+
+\hypertarget{_a_d_s1298_driver_8h_aa10f470e996d0f51210d24f442d25e1e}{\index{\-A\-D\-S1298\-Driver.\-h@{\-A\-D\-S1298\-Driver.\-h}!\-W\-R\-I\-T\-E@{\-W\-R\-I\-T\-E}}
+\index{\-W\-R\-I\-T\-E@{\-W\-R\-I\-T\-E}!ADS1298Driver.h@{\-A\-D\-S1298\-Driver.\-h}}
+\subsubsection[{\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-W\-R\-I\-T\-E}~0x40}}\label{_a_d_s1298_driver_8h_aa10f470e996d0f51210d24f442d25e1e}
+
+
+\-Definition at line 32 of file \-A\-D\-S1298\-Driver.\-h.
+

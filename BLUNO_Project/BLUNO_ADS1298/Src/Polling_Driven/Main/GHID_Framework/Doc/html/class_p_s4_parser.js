@@ -1,0 +1,25 @@
+var class_p_s4_parser =
+[
+    [ "PS4Parser", "class_p_s4_parser.html#a3ef06f8737f1088dbdbbc351b576c1cf", null ],
+    [ "getAnalogButton", "class_p_s4_parser.html#a66151c4e4601f80492cd5b2451a2f87a", null ],
+    [ "getAnalogHat", "class_p_s4_parser.html#a9b11c5b27f9c9501fdb4f616cb3b194c", null ],
+    [ "getAngle", "class_p_s4_parser.html#ac4b7e6c29af23a88d41a83e82c87c888", null ],
+    [ "getButtonClick", "class_p_s4_parser.html#a92a4ea3d328426b9f86be05cabaad91c", null ],
+    [ "getButtonPress", "class_p_s4_parser.html#ad352f30e4ab772246574bbf654248906", null ],
+    [ "getSensor", "class_p_s4_parser.html#a2b06200adee0c8ed616c4d18c23a584a", null ],
+    [ "getTouchCounter", "class_p_s4_parser.html#a0b3de008ae8aaa057c571081b1b64e88", null ],
+    [ "getX", "class_p_s4_parser.html#aa149326d97c6231087f81d954a994493", null ],
+    [ "getY", "class_p_s4_parser.html#a9972eeb87f2ed4a96dcdccf2dabbbc5a", null ],
+    [ "isTouching", "class_p_s4_parser.html#a6770a72c17062c2e00fb3602435fcade", null ],
+    [ "Parse", "class_p_s4_parser.html#a6498fdeb767364e84ce09ef208980622", null ],
+    [ "Reset", "class_p_s4_parser.html#a24640b2362b0f6f51785fbd3dd4f13f9", null ],
+    [ "sendOutputReport", "class_p_s4_parser.html#a8788530b0c213dedfcf56b78e8ca4879", null ],
+    [ "setAllOff", "class_p_s4_parser.html#adf2b7f2888fb7ebc9c58595a85568d65", null ],
+    [ "setLed", "class_p_s4_parser.html#a3f709524b0303086591d81bd238e62e8", null ],
+    [ "setLed", "class_p_s4_parser.html#a58e7a4746ee4e1fc5ceea44f64ffc3f2", null ],
+    [ "setLedFlash", "class_p_s4_parser.html#a26342dea530bf09e2ac8df847c1874fc", null ],
+    [ "setLedOff", "class_p_s4_parser.html#a820f1caf266224d1c1bb83b550ef4c97", null ],
+    [ "setRumbleOff", "class_p_s4_parser.html#acc9b3be8fb673e8e1f637c56d72f1180", null ],
+    [ "setRumbleOn", "class_p_s4_parser.html#a44628a8521ef9c19d773347156962cab", null ],
+    [ "setRumbleOn", "class_p_s4_parser.html#a8299bdbb9d790e6b2e98e942e9bd154e", null ]
+];

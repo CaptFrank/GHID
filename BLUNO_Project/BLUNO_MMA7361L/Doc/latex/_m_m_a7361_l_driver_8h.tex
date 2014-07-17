@@ -1,0 +1,51 @@
+\hypertarget{_m_m_a7361_l_driver_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-M\-M\-A7361\-L\-Driver.h \-File \-Reference}
+\label{_m_m_a7361_l_driver_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-M\-M\-A7361\-L\-Driver.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-M\-M\-A7361\-L\-Driver.\-h}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Utilities.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Ring\-Buffer.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Analog\-Sensor\-Driver.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_m_a7361_l__pin__map__t}{\-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t}
+\item 
+class \hyperlink{class_m_m_a7361_l___driver}{\-M\-M\-A7361\-L\-\_\-\-Driver}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m_m_a7361_l_driver_8h_a65e81052c75a2ccbf1ba05495afd0aba}{\-V\-\_\-3\-V}~3.\-3
+\begin{DoxyCompactList}\small\item\em \-Ref voltage defines. \end{DoxyCompactList}\item 
+\#define \hyperlink{_m_m_a7361_l_driver_8h_ab3c9ccdb1f49aeedc7a4fef3070c2e18}{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}~100
+\item 
+\#define \hyperlink{_m_m_a7361_l_driver_8h_a458727ba44329288f712b89a0b52199a}{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}~7
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_m_m_a7361_l_driver_8h_ab3c9ccdb1f49aeedc7a4fef3070c2e18}{\index{\-M\-M\-A7361\-L\-Driver.\-h@{\-M\-M\-A7361\-L\-Driver.\-h}!\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E@{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}}
+\index{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E@{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}!MMA7361LDriver.h@{\-M\-M\-A7361\-L\-Driver.\-h}}
+\subsubsection[{\-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X\-\_\-\-A\-X\-I\-S\-\_\-\-V\-A\-L\-U\-E}~100}}\label{_m_m_a7361_l_driver_8h_ab3c9ccdb1f49aeedc7a4fef3070c2e18}
+
+
+\-Definition at line 19 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{_m_m_a7361_l_driver_8h_a458727ba44329288f712b89a0b52199a}{\index{\-M\-M\-A7361\-L\-Driver.\-h@{\-M\-M\-A7361\-L\-Driver.\-h}!\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A@{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}}
+\index{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A@{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}!MMA7361LDriver.h@{\-M\-M\-A7361\-L\-Driver.\-h}}
+\subsubsection[{\-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-I\-Z\-E\-\_\-\-O\-F\-\_\-\-D\-A\-T\-A}~7}}\label{_m_m_a7361_l_driver_8h_a458727ba44329288f712b89a0b52199a}
+
+
+\-Definition at line 20 of file \-M\-M\-A7361\-L\-Driver.\-h.
+
+\hypertarget{_m_m_a7361_l_driver_8h_a65e81052c75a2ccbf1ba05495afd0aba}{\index{\-M\-M\-A7361\-L\-Driver.\-h@{\-M\-M\-A7361\-L\-Driver.\-h}!\-V\-\_\-3\-V@{\-V\-\_\-3\-V}}
+\index{\-V\-\_\-3\-V@{\-V\-\_\-3\-V}!MMA7361LDriver.h@{\-M\-M\-A7361\-L\-Driver.\-h}}
+\subsubsection[{\-V\-\_\-3\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-\_\-3\-V}~3.\-3}}\label{_m_m_a7361_l_driver_8h_a65e81052c75a2ccbf1ba05495afd0aba}
+
+
+\-Ref voltage defines. 
+
+
+
+\-Definition at line 18 of file \-M\-M\-A7361\-L\-Driver.\-h.
+

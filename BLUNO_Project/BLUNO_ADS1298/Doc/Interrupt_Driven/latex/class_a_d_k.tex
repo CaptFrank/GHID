@@ -1,0 +1,286 @@
+\hypertarget{class_a_d_k}{\section{\-A\-D\-K \-Class \-Reference}
+\label{class_a_d_k}\index{\-A\-D\-K@{\-A\-D\-K}}
+}
+
+
+{\ttfamily \#include $<$adk.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_d_k_a29492dcd9b7f6023b7866cd05188d61c}{\-A\-D\-K} (\-U\-S\-B $\ast$\hyperlink{class_a_d_k_ab28e3a19569c27f3ed5362e9800065c1}{p\-Usb}, const char $\ast$manufacturer, const char $\ast$model, const char $\ast$description, const char $\ast$version, const char $\ast$uri, const char $\ast$serial)
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_k_a66b9943dfa89f783a8cdeb655e6fe9b1}{\-Rcv\-Data} (uint16\-\_\-t $\ast$nbytesptr, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_k_ac37bde02b6ed1436712d3619afb07c84}{\-Snd\-Data} (uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_d_k_a14f24ca8246c5b6126a5aa72cf6ee120}{\-Configure\-Device} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_d_k_a8c5c2e212c748966ccd863499d202063}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_d_k_a7f64af34d7890f87ceab5d144f6c26ef}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_d_k_af3784434ee6a1c6f3dc5b591f467e703}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_d_k_a1a972e8dc98b60ab27528db3af2618c3}{\-Get\-Address} ()
+\item 
+virtual bool \hyperlink{class_a_d_k_a1dee02856625dfcac4b0cdd4e8672cef}{is\-Ready} ()
+\item 
+virtual boolean \hyperlink{class_a_d_k_a1fc7e5918fa0b5fbffdd1e488dd08427}{\-V\-I\-D\-P\-I\-D\-O\-K} (uint16\-\_\-t vid, uint16\-\_\-t pid)
+\item 
+virtual void \hyperlink{class_a_d_k_aac2fac5410faea0e439b4f7e688b3d75}{\-Endpoint\-Xtract} (uint8\-\_\-t conf, uint8\-\_\-t iface, uint8\-\_\-t alt, uint8\-\_\-t proto, const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_a_d_k_ac4bd3303b99921289c3f59e2df219e50}{\-Print\-Endpoint\-Descriptor} (const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep\-\_\-ptr)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-U\-S\-B $\ast$ \hyperlink{class_a_d_k_ab28e3a19569c27f3ed5362e9800065c1}{p\-Usb}
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_k_ab22a7c60cec56823727d4ff2cf2c4edf}{b\-Address}
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_k_ae8fcc6a6fccab61116cea10dd1f17738}{b\-Conf\-Num}
+\item 
+uint8\-\_\-t \hyperlink{class_a_d_k_adf969d306da15baecd5c59bbb568053e}{b\-Num\-E\-P}
+\item 
+bool \hyperlink{class_a_d_k_a135db75b9e8cdd59b89f46c44dd83dd4}{ready}
+\item 
+\-Ep\-Info \hyperlink{class_a_d_k_a6ffc693d731ddeb9499c11e893fc467d}{ep\-Info} \mbox{[}\hyperlink{adk_8h_ac39da606ffc273bd855152107297d6a1}{\-A\-D\-K\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\-\_\-t \hyperlink{class_a_d_k_a964ec80ac133bf8d65cf0274e37b29da}{ep\-Data\-In\-Index} = 1
+\item 
+static const uint8\-\_\-t \hyperlink{class_a_d_k_acfc5a7e45f15bba7ff8cd42552796624}{ep\-Data\-Out\-Index} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 53 of file adk.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_a_d_k_a29492dcd9b7f6023b7866cd05188d61c}{\index{\-A\-D\-K@{\-A\-D\-K}!\-A\-D\-K@{\-A\-D\-K}}
+\index{\-A\-D\-K@{\-A\-D\-K}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-A\-D\-K}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-K\-::\-A\-D\-K} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p\-Usb, }
+\item[{const char $\ast$}]{manufacturer, }
+\item[{const char $\ast$}]{model, }
+\item[{const char $\ast$}]{description, }
+\item[{const char $\ast$}]{version, }
+\item[{const char $\ast$}]{uri, }
+\item[{const char $\ast$}]{serial}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_k_a29492dcd9b7f6023b7866cd05188d61c}
+
+
+\-Definition at line 25 of file adk.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_a_d_k_a14f24ca8246c5b6126a5aa72cf6ee120}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Configure\-Device@{\-Configure\-Device}}
+\index{\-Configure\-Device@{\-Configure\-Device}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Configure\-Device}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::\-Configure\-Device} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_d_k_a14f24ca8246c5b6126a5aa72cf6ee120}
+
+
+\-Definition at line 58 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_aac2fac5410faea0e439b4f7e688b3d75}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Endpoint\-Xtract@{\-Endpoint\-Xtract}}
+\index{\-Endpoint\-Xtract@{\-Endpoint\-Xtract}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Endpoint\-Xtract}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-K\-::\-Endpoint\-Xtract} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{conf, }
+\item[{uint8\-\_\-t}]{iface, }
+\item[{uint8\-\_\-t}]{alt, }
+\item[{uint8\-\_\-t}]{proto, }
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_d_k_aac2fac5410faea0e439b4f7e688b3d75}
+
+
+\-Definition at line 311 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_a1a972e8dc98b60ab27528db3af2618c3}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-A\-D\-K\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_a_d_k_a1a972e8dc98b60ab27528db3af2618c3}
+
+
+\-Definition at line 107 of file adk.\-h.
+
+\hypertarget{class_a_d_k_a8c5c2e212c748966ccd863499d202063}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_d_k_a8c5c2e212c748966ccd863499d202063}
+
+
+\-Definition at line 63 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_a1dee02856625dfcac4b0cdd4e8672cef}{\index{\-A\-D\-K@{\-A\-D\-K}!is\-Ready@{is\-Ready}}
+\index{is\-Ready@{is\-Ready}!ADK@{\-A\-D\-K}}
+\subsubsection[{is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-A\-D\-K\-::is\-Ready} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_a_d_k_a1dee02856625dfcac4b0cdd4e8672cef}
+
+
+\-Definition at line 111 of file adk.\-h.
+
+\hypertarget{class_a_d_k_af3784434ee6a1c6f3dc5b591f467e703}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-A\-D\-K\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_a_d_k_af3784434ee6a1c6f3dc5b591f467e703}
+
+
+\-Definition at line 103 of file adk.\-h.
+
+\hypertarget{class_a_d_k_ac4bd3303b99921289c3f59e2df219e50}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Print\-Endpoint\-Descriptor@{\-Print\-Endpoint\-Descriptor}}
+\index{\-Print\-Endpoint\-Descriptor@{\-Print\-Endpoint\-Descriptor}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Print\-Endpoint\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-K\-::\-Print\-Endpoint\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_ac4bd3303b99921289c3f59e2df219e50}
+
+
+\-Definition at line 356 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_a66b9943dfa89f783a8cdeb655e6fe9b1}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Rcv\-Data@{\-Rcv\-Data}}
+\index{\-Rcv\-Data@{\-Rcv\-Data}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Rcv\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::\-Rcv\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t $\ast$}]{nbytesptr, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_k_a66b9943dfa89f783a8cdeb655e6fe9b1}
+
+
+\-Definition at line 346 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_a7f64af34d7890f87ceab5d144f6c26ef}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_d_k_a7f64af34d7890f87ceab5d144f6c26ef}
+
+
+\-Definition at line 336 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_ac37bde02b6ed1436712d3619afb07c84}{\index{\-A\-D\-K@{\-A\-D\-K}!\-Snd\-Data@{\-Snd\-Data}}
+\index{\-Snd\-Data@{\-Snd\-Data}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-Snd\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::\-Snd\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_k_ac37bde02b6ed1436712d3619afb07c84}
+
+
+\-Definition at line 352 of file adk.\-cpp.
+
+\hypertarget{class_a_d_k_a1fc7e5918fa0b5fbffdd1e488dd08427}{\index{\-A\-D\-K@{\-A\-D\-K}!\-V\-I\-D\-P\-I\-D\-O\-K@{\-V\-I\-D\-P\-I\-D\-O\-K}}
+\index{\-V\-I\-D\-P\-I\-D\-O\-K@{\-V\-I\-D\-P\-I\-D\-O\-K}!ADK@{\-A\-D\-K}}
+\subsubsection[{\-V\-I\-D\-P\-I\-D\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}virtual boolean {\bf \-A\-D\-K\-::\-V\-I\-D\-P\-I\-D\-O\-K} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{vid, }
+\item[{uint16\-\_\-t}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_a_d_k_a1fc7e5918fa0b5fbffdd1e488dd08427}
+
+
+\-Definition at line 115 of file adk.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_a_d_k_ab22a7c60cec56823727d4ff2cf2c4edf}{\index{\-A\-D\-K@{\-A\-D\-K}!b\-Address@{b\-Address}}
+\index{b\-Address@{b\-Address}!ADK@{\-A\-D\-K}}
+\subsubsection[{b\-Address}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::b\-Address}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_ab22a7c60cec56823727d4ff2cf2c4edf}
+
+
+\-Definition at line 74 of file adk.\-h.
+
+\hypertarget{class_a_d_k_ae8fcc6a6fccab61116cea10dd1f17738}{\index{\-A\-D\-K@{\-A\-D\-K}!b\-Conf\-Num@{b\-Conf\-Num}}
+\index{b\-Conf\-Num@{b\-Conf\-Num}!ADK@{\-A\-D\-K}}
+\subsubsection[{b\-Conf\-Num}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::b\-Conf\-Num}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_ae8fcc6a6fccab61116cea10dd1f17738}
+
+
+\-Definition at line 75 of file adk.\-h.
+
+\hypertarget{class_a_d_k_adf969d306da15baecd5c59bbb568053e}{\index{\-A\-D\-K@{\-A\-D\-K}!b\-Num\-E\-P@{b\-Num\-E\-P}}
+\index{b\-Num\-E\-P@{b\-Num\-E\-P}!ADK@{\-A\-D\-K}}
+\subsubsection[{b\-Num\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-D\-K\-::b\-Num\-E\-P}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_adf969d306da15baecd5c59bbb568053e}
+
+
+\-Definition at line 77 of file adk.\-h.
+
+\hypertarget{class_a_d_k_a964ec80ac133bf8d65cf0274e37b29da}{\index{\-A\-D\-K@{\-A\-D\-K}!ep\-Data\-In\-Index@{ep\-Data\-In\-Index}}
+\index{ep\-Data\-In\-Index@{ep\-Data\-In\-Index}!ADK@{\-A\-D\-K}}
+\subsubsection[{ep\-Data\-In\-Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t {\bf \-A\-D\-K\-::ep\-Data\-In\-Index} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_a_d_k_a964ec80ac133bf8d65cf0274e37b29da}
+
+
+\-Definition at line 69 of file adk.\-h.
+
+\hypertarget{class_a_d_k_acfc5a7e45f15bba7ff8cd42552796624}{\index{\-A\-D\-K@{\-A\-D\-K}!ep\-Data\-Out\-Index@{ep\-Data\-Out\-Index}}
+\index{ep\-Data\-Out\-Index@{ep\-Data\-Out\-Index}!ADK@{\-A\-D\-K}}
+\subsubsection[{ep\-Data\-Out\-Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t {\bf \-A\-D\-K\-::ep\-Data\-Out\-Index} = 2\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_a_d_k_acfc5a7e45f15bba7ff8cd42552796624}
+
+
+\-Definition at line 70 of file adk.\-h.
+
+\hypertarget{class_a_d_k_a6ffc693d731ddeb9499c11e893fc467d}{\index{\-A\-D\-K@{\-A\-D\-K}!ep\-Info@{ep\-Info}}
+\index{ep\-Info@{ep\-Info}!ADK@{\-A\-D\-K}}
+\subsubsection[{ep\-Info}]{\setlength{\rightskip}{0pt plus 5cm}\-Ep\-Info {\bf \-A\-D\-K\-::ep\-Info}\mbox{[}{\bf \-A\-D\-K\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_a6ffc693d731ddeb9499c11e893fc467d}
+
+
+\-Definition at line 81 of file adk.\-h.
+
+\hypertarget{class_a_d_k_ab28e3a19569c27f3ed5362e9800065c1}{\index{\-A\-D\-K@{\-A\-D\-K}!p\-Usb@{p\-Usb}}
+\index{p\-Usb@{p\-Usb}!ADK@{\-A\-D\-K}}
+\subsubsection[{p\-Usb}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-S\-B$\ast$ {\bf \-A\-D\-K\-::p\-Usb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_ab28e3a19569c27f3ed5362e9800065c1}
+
+
+\-Definition at line 73 of file adk.\-h.
+
+\hypertarget{class_a_d_k_a135db75b9e8cdd59b89f46c44dd83dd4}{\index{\-A\-D\-K@{\-A\-D\-K}!ready@{ready}}
+\index{ready@{ready}!ADK@{\-A\-D\-K}}
+\subsubsection[{ready}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-A\-D\-K\-::ready}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_k_a135db75b9e8cdd59b89f46c44dd83dd4}
+
+
+\-Definition at line 78 of file adk.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{adk_8h}{adk.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{adk_8cpp}{adk.\-cpp}\end{DoxyCompactItemize}

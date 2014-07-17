@@ -1,0 +1,60 @@
+\hypertarget{_ring_buffer_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\-Ring\-Buffer.h \-File \-Reference}
+\label{_ring_buffer_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\-Ring\-Buffer.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\-Ring\-Buffer.\-h}}
+}
+{\ttfamily \#include $<$util/atomic.\-h$>$}\*
+{\ttfamily \#include $<$stdint.\-h$>$}\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_ring_buffer_8h_a6b20d41d6252e9871430c242cb1a56e7}{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~390
+\item 
+\#define \hyperlink{_ring_buffer_8h_acd43cbe13954928e244d3370b876b62f}{\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L}~300
+\item 
+\#define \hyperlink{_ring_buffer_8h_acf1a805a0c6814d6d188a8484895cda4}{\-Ring\-Buff\-\_\-\-Data\-\_\-t}~uint8\-\_\-t
+\item 
+\#define \hyperlink{_ring_buffer_8h_ac7138106260c3e40b496566bddacf8f1}{\-Ring\-Buff\-\_\-\-Count\-\_\-t}~uint16\-\_\-t
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Ultra lightweight ring buffer, for fast insertion/deletion. 
+
+\-Definition in file \hyperlink{_ring_buffer_8h_source}{\-Ring\-Buffer.\-h}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_ring_buffer_8h_acd43cbe13954928e244d3370b876b62f}{\index{\-Ring\-Buffer.\-h@{\-Ring\-Buffer.\-h}!\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L@{\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L}}
+\index{\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L@{\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L}!RingBuffer.h@{\-Ring\-Buffer.\-h}}
+\subsubsection[{\-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-U\-F\-F\-E\-R\-\_\-\-N\-E\-A\-R\-L\-Y\-\_\-\-F\-U\-L\-L}~300}}\label{_ring_buffer_8h_acd43cbe13954928e244d3370b876b62f}
+\-Maximum number of data elements to buffer before forcing a flush. \-Must be less than \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E 
+
+\-Definition at line 52 of file \-Ring\-Buffer.\-h.
+
+\hypertarget{_ring_buffer_8h_a6b20d41d6252e9871430c242cb1a56e7}{\index{\-Ring\-Buffer.\-h@{\-Ring\-Buffer.\-h}!\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!RingBuffer.h@{\-Ring\-Buffer.\-h}}
+\subsubsection[{\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~390}}\label{_ring_buffer_8h_a6b20d41d6252e9871430c242cb1a56e7}
+\-Size of each ring buffer, in data elements -\/ must be between 1 and 255. 
+
+\-Definition at line 47 of file \-Ring\-Buffer.\-h.
+
+\hypertarget{_ring_buffer_8h_ac7138106260c3e40b496566bddacf8f1}{\index{\-Ring\-Buffer.\-h@{\-Ring\-Buffer.\-h}!\-Ring\-Buff\-\_\-\-Count\-\_\-t@{\-Ring\-Buff\-\_\-\-Count\-\_\-t}}
+\index{\-Ring\-Buff\-\_\-\-Count\-\_\-t@{\-Ring\-Buff\-\_\-\-Count\-\_\-t}!RingBuffer.h@{\-Ring\-Buffer.\-h}}
+\subsubsection[{\-Ring\-Buff\-\_\-\-Count\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Ring\-Buff\-\_\-\-Count\-\_\-t}~uint16\-\_\-t}}\label{_ring_buffer_8h_ac7138106260c3e40b496566bddacf8f1}
+\-Datatype which may be used to store the count of data stored in a buffer, retrieved via a call to \-Ring\-Buffer\-\_\-\-Get\-Count(). 
+
+\-Definition at line 63 of file \-Ring\-Buffer.\-h.
+
+\hypertarget{_ring_buffer_8h_acf1a805a0c6814d6d188a8484895cda4}{\index{\-Ring\-Buffer.\-h@{\-Ring\-Buffer.\-h}!\-Ring\-Buff\-\_\-\-Data\-\_\-t@{\-Ring\-Buff\-\_\-\-Data\-\_\-t}}
+\index{\-Ring\-Buff\-\_\-\-Data\-\_\-t@{\-Ring\-Buff\-\_\-\-Data\-\_\-t}!RingBuffer.h@{\-Ring\-Buffer.\-h}}
+\subsubsection[{\-Ring\-Buff\-\_\-\-Data\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Ring\-Buff\-\_\-\-Data\-\_\-t}~uint8\-\_\-t}}\label{_ring_buffer_8h_acf1a805a0c6814d6d188a8484895cda4}
+\-Type of data to store into the buffer. 
+
+\-Definition at line 55 of file \-Ring\-Buffer.\-h.
+

@@ -1,0 +1,1610 @@
+\hypertarget{class_report_desc_parser_base}{\section{\-Report\-Desc\-Parser\-Base \-Class \-Reference}
+\label{class_report_desc_parser_base}\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}}
+}
+
+
+{\ttfamily \#include $<$hidescriptorparser.\-h$>$}
+
+\-Inheritance diagram for \-Report\-Desc\-Parser\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_report_desc_parser_base}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8ab24601408ad7a26379df557dab8f073a}{en\-Error\-Success} =  0, 
+\hyperlink{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8a36c789b01edcb0e3bd8fc74ad6450975}{en\-Error\-Incomplete}, 
+\hyperlink{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8af987a827c15a079e71ad438be18366d4}{en\-Error\-Buffer\-Too\-Small}
+ \}
+\item 
+typedef void($\ast$ \hyperlink{class_report_desc_parser_base_aeb139df01922910be7558b3c3a893db2}{\-Usage\-Page\-Func} )(uint16\-\_\-t usage)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_report_desc_parser_base_a607a81ff9d8f282298533a1dbf10f8e1}{\-Report\-Desc\-Parser\-Base} ()
+\item 
+virtual void \hyperlink{class_report_desc_parser_base_a7ecd266cbbbc18460ab8823651225e6b}{\-Parse} (const uint16\-\_\-t len, const uint8\-\_\-t $\ast$pbuf, const uint16\-\_\-t \&offset)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_report_desc_parser_base_a3eff46688f9edbee3a58c43bbf104763}{\-Print\-Generic\-Desktop\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_aa316c748b795fbe80cdd2f69e83c7ae4}{\-Print\-Simulation\-Controls\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a938d53101e5ab4e5831276efb298fea9}{\-Print\-V\-R\-Controls\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a3db34bff0d14731df402a20fb67838d9}{\-Print\-Sports\-Controls\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a4e026cfeda7bfe9e07cf247cbcc4a122}{\-Print\-Game\-Controls\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a1b5cb93a83e2212319fe30f1a1636478}{\-Print\-Generic\-Device\-Controls\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_af86c8a065849b37590d88f68be85e293}{\-Print\-L\-E\-D\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a928f2b689012051dfe20e46bd7b21ed3}{\-Print\-Button\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a1b0cc07f038faef88431c87065370dce}{\-Print\-Ordinal\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_ac01bf8776f485b478c3bb64887e446b4}{\-Print\-Telephony\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a9af1dc144bab9e9864394594be67d2eb}{\-Print\-Consumer\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_aa62d11cfe404ee51ffd26f13c33800a1}{\-Print\-Digitizer\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_af2d133ba2b6b7d5ac3c0db3ffac531d0}{\-Print\-Alphanum\-Display\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a17e7613faa695c5d654f1cd6d9262cf4}{\-Print\-Medical\-Instrument\-Page\-Usage} (uint16\-\_\-t usage)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a3c160efea3854223f0e171a9d97a07cd}{\-Print\-Value} (uint8\-\_\-t $\ast$p, uint8\-\_\-t len)
+\item 
+static void \hyperlink{class_report_desc_parser_base_a1af970b456e54342e15a88ffd98ca6cc}{\-Print\-Byte\-Value} (uint8\-\_\-t \hyperlink{masstorage_8h_afb87d045bbf32b236fc425efe02bdc7b}{data})
+\item 
+static void \hyperlink{class_report_desc_parser_base_aef5ef3133e573ff3bdcc7861e8ebc921}{\-Print\-Item\-Title} (uint8\-\_\-t prefix)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a9e912750d3675352614ee0b1bf73fa82}{usage\-Page\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ae6dadd42986663f261aac948d24911a6}{usage\-Page\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a3021443d9320135788844c166240149f}{gen\-Desktop\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a0cca04764c613389545ab02cce068367}{gen\-Desktop\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a043e24aa742e9257202a2dc80725122c}{gen\-Desktop\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_acef88e30e3582b47deecf615495a3e8d}{gen\-Desktop\-Titles3} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ae2b1ca00d24f5c3867c90ea49ffa6e0d}{gen\-Desktop\-Titles4} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a6995298d3333564e02e06bf94f0ca5ca}{simu\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a934e0398770633c85a9e9f8cfb319f0a}{simu\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a5d9d0f1b2820bbfdddf6d54e1d826c83}{simu\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a42d34a0a49f987c9dcfdd4fb8d42bf0d}{vr\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a41af57cb0fb0bbed7277bcd04a9e9fe9}{vr\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a4daf2daa3c18f446a66854475ca56a66}{sports\-Ctrl\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a24a3f083c728c7549929cb8af0e52451}{sports\-Ctrl\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a9491a62b6a44bf98884ca1dd16b45df2}{sports\-Ctrl\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a981cacbfad335b19528e59ab2de866e5}{game\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ac9327d02115b1dd60c79c37d1d11cf41}{game\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a55e8f870eb0006bc3a9ca42e6cabf187}{gen\-Dev\-Ctrl\-Titles} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a7425dac090961547ddf7622112b98a9e}{led\-Titles} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ae86d70945d59c48153463bca302bd356}{tel\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a9e83e4d47816c0330ccae5bd31e10031}{tel\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_aefc1ad5b2631c5184c5e58ac44cfbb80}{tel\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_acc9f0e2b103473be060684e451432661}{tel\-Titles3} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a9d51bfc5c2e04a8eaf25561d6d97ae00}{tel\-Titles4} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a3882e20433145daa93bd23d4cff779e9}{tel\-Titles5} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a81af202145ab2899b222170b0d681213}{cons\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a4997a30230193326b84fb8f3d3d30536}{cons\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a7b760abbe1a67f241a9c6d34da9207f4}{cons\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ae481ca9afe5a7d500664b6802c985d8b}{cons\-Titles3} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ace9cf011244ddade875cb8f2921c3d58}{cons\-Titles4} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a0f96db464d287695f7611f38ca9b0058}{cons\-Titles5} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_af4da29c34852a2589de1c64a0bf8e4b3}{cons\-Titles6} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ac1cf3d87296aa74a35627079a5cd1753}{cons\-Titles7} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a3b4a0c98b10afe968027e78281efc752}{cons\-Titles8} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ac47d6ae6c995224d151aed3403f2e38f}{cons\-Titles9} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a27f2a10cbf94bc44a25d221d794ce3f3}{cons\-Titles\-A} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a0c406d39f05eaa4f708af495c5d20bbb}{cons\-Titles\-B} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a149498f082b56537f6958f35cdf72485}{cons\-Titles\-C} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a4db83eb7ee2c16ff29da2c09dbf182f3}{cons\-Titles\-D} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a46332dbba5ab524aedb370684510c990}{cons\-Titles\-E} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a298396c59609fab20c2a5eedb3ca0b87}{digit\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_abc5202f47578494d3f6008413f632873}{digit\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_addaa9b5724f7d1ca10ba4ca14decd40d}{digit\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a5cd50b03ac2d022ca55e6a5bbd448ac8}{aplphanum\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_afac5fab915e65babde2645e09b66e74f}{aplphanum\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_ae0090afb0e090b539fcaa4b71f099b08}{aplphanum\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a3d8d0fa8512f718e8b574e4d9e8a775f}{med\-Instr\-Titles0} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a3e22173cfb0358f71357224f88ba7233}{med\-Instr\-Titles1} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_aee85293ab9a08f5e348fe339f7e4e7e9}{med\-Instr\-Titles2} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_a986eebc1d44ff6c7b2779c584640bfa8}{med\-Instr\-Titles3} \mbox{[}$\,$\mbox{]}
+\item 
+static const char $\ast$const \hyperlink{class_report_desc_parser_base_abf57eb862e09967eb05a234f81b4a9d4}{med\-Instr\-Titles4} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual uint8\-\_\-t \hyperlink{class_report_desc_parser_base_ac1d6c015d9a2527bb2044e9a96fcaaf9}{\-Parse\-Item} (uint8\-\_\-t $\ast$$\ast$pp, uint16\-\_\-t $\ast$pcntdn)
+\item 
+void \hyperlink{class_report_desc_parser_base_a42fbc8fbccaf67eab88bd98b8d3bdd3f}{\-Set\-Usage\-Page} (uint16\-\_\-t page)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_report_desc_parser_base_a789ad1fbd8437296627412a2b4a255a3}{\-Print\-Usage\-Page} (uint16\-\_\-t page)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Multi\-Value\-Buffer \hyperlink{class_report_desc_parser_base_a5ac0dd6f06df15a4cd2bad3fa175e7b9}{the\-Buffer}
+\item 
+\-Multi\-Byte\-Value\-Parser \hyperlink{class_report_desc_parser_base_a8833e671168779d081e7f50e579bc206}{val\-Parser}
+\item 
+\-Byte\-Skipper \hyperlink{class_report_desc_parser_base_a23b769d890d9f578fd6b8f47cb1f7e23}{the\-Skipper}
+\item 
+uint8\-\_\-t \hyperlink{class_report_desc_parser_base_a82cde32720eba596e5864fe7d541ea13}{var\-Buffer} \mbox{[}sizeof(\-U\-S\-B\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R)\mbox{]}
+\item 
+uint8\-\_\-t \hyperlink{class_report_desc_parser_base_adfc790524e25a7ad715b1e9adff54a25}{item\-Parse\-State}
+\item 
+uint8\-\_\-t \hyperlink{class_report_desc_parser_base_a4f0da61c408fc42e373b6cc03cd97fab}{item\-Size}
+\item 
+uint8\-\_\-t \hyperlink{class_report_desc_parser_base_a70693c641100c952022ec5c160de1a8d}{item\-Prefix}
+\item 
+uint8\-\_\-t \hyperlink{class_report_desc_parser_base_a222b1c03a4f3e49283a58ecaa853e247}{rpt\-Size}
+\item 
+uint8\-\_\-t \hyperlink{class_report_desc_parser_base_a2c15a93cace44e39560e4613bbefaf14}{rpt\-Count}
+\item 
+uint16\-\_\-t \hyperlink{class_report_desc_parser_base_aa5223ad6eb8be8c7fb53a98d4ddde594}{total\-Size}
+\item 
+\hyperlink{class_report_desc_parser_base_aeb139df01922910be7558b3c3a893db2}{\-Usage\-Page\-Func} \hyperlink{class_report_desc_parser_base_a22006cbf92a3d4008695e53d7f6e2452}{pf\-Usage}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_report_desc_parser_base_aeb139df01922910be7558b3c3a893db2}{\-Usage\-Page\-Func} \hyperlink{class_report_desc_parser_base_af91679187bb24d185979b3ec045c215b}{usage\-Page\-Functions} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 22 of file hidescriptorparser.\-h.
+
+
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{class_report_desc_parser_base_aeb139df01922910be7558b3c3a893db2}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Usage\-Page\-Func@{\-Usage\-Page\-Func}}
+\index{\-Usage\-Page\-Func@{\-Usage\-Page\-Func}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Usage\-Page\-Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf \-Report\-Desc\-Parser\-Base\-::\-Usage\-Page\-Func})(uint16\-\_\-t usage)}}\label{class_report_desc_parser_base_aeb139df01922910be7558b3c3a893db2}
+
+
+\-Definition at line 24 of file hidescriptorparser.\-h.
+
+
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{en\-Error\-Success@{en\-Error\-Success}!\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}}\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!en\-Error\-Success@{en\-Error\-Success}}\item[{\em 
+\hypertarget{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8ab24601408ad7a26379df557dab8f073a}{en\-Error\-Success}\label{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8ab24601408ad7a26379df557dab8f073a}
+}]\index{en\-Error\-Incomplete@{en\-Error\-Incomplete}!\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}}\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!en\-Error\-Incomplete@{en\-Error\-Incomplete}}\item[{\em 
+\hypertarget{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8a36c789b01edcb0e3bd8fc74ad6450975}{en\-Error\-Incomplete}\label{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8a36c789b01edcb0e3bd8fc74ad6450975}
+}]\index{en\-Error\-Buffer\-Too\-Small@{en\-Error\-Buffer\-Too\-Small}!\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}}\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!en\-Error\-Buffer\-Too\-Small@{en\-Error\-Buffer\-Too\-Small}}\item[{\em 
+\hypertarget{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8af987a827c15a079e71ad438be18366d4}{en\-Error\-Buffer\-Too\-Small}\label{class_report_desc_parser_base_a5a8a67c612492e07c4656792b35c70d8af987a827c15a079e71ad438be18366d4}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 137 of file hidescriptorparser.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_report_desc_parser_base_a607a81ff9d8f282298533a1dbf10f8e1}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}}
+\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Report\-Desc\-Parser\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Report\-Desc\-Parser\-Base\-::\-Report\-Desc\-Parser\-Base} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_report_desc_parser_base_a607a81ff9d8f282298533a1dbf10f8e1}
+
+
+\-Definition at line 123 of file hidescriptorparser.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_report_desc_parser_base_a7ecd266cbbbc18460ab8823651225e6b}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Parse@{\-Parse}}
+\index{\-Parse@{\-Parse}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Parse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Parse} (
+\begin{DoxyParamCaption}
+\item[{const uint16\-\_\-t}]{len, }
+\item[{const uint8\-\_\-t $\ast$}]{pbuf, }
+\item[{const uint16\-\_\-t \&}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_report_desc_parser_base_a7ecd266cbbbc18460ab8823651225e6b}
+
+
+\-Definition at line 993 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_ac1d6c015d9a2527bb2044e9a96fcaaf9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Parse\-Item@{\-Parse\-Item}}
+\index{\-Parse\-Item@{\-Parse\-Item}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Parse\-Item}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::\-Parse\-Item} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$$\ast$}]{pp, }
+\item[{uint16\-\_\-t $\ast$}]{pcntdn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{class_report_desc_parser_base_ac1d6c015d9a2527bb2044e9a96fcaaf9}
+
+
+\-Reimplemented in \hyperlink{class_report_desc_parser2_a84242b62a5d202b5d2d6fe26809bc0e2}{\-Report\-Desc\-Parser2}.
+
+
+
+\-Definition at line 1091 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_af2d133ba2b6b7d5ac3c0db3ffac531d0}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Alphanum\-Display\-Page\-Usage@{\-Print\-Alphanum\-Display\-Page\-Usage}}
+\index{\-Print\-Alphanum\-Display\-Page\-Usage@{\-Print\-Alphanum\-Display\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Alphanum\-Display\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Alphanum\-Display\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_af2d133ba2b6b7d5ac3c0db3ffac531d0}
+
+
+\-Definition at line 1415 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a928f2b689012051dfe20e46bd7b21ed3}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Button\-Page\-Usage@{\-Print\-Button\-Page\-Usage}}
+\index{\-Print\-Button\-Page\-Usage@{\-Print\-Button\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Button\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Button\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a928f2b689012051dfe20e46bd7b21ed3}
+
+
+\-Definition at line 1287 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a1af970b456e54342e15a88ffd98ca6cc}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Byte\-Value@{\-Print\-Byte\-Value}}
+\index{\-Print\-Byte\-Value@{\-Print\-Byte\-Value}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Byte\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Byte\-Value} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a1af970b456e54342e15a88ffd98ca6cc}
+
+
+\-Definition at line 1020 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a9af1dc144bab9e9864394594be67d2eb}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Consumer\-Page\-Usage@{\-Print\-Consumer\-Page\-Usage}}
+\index{\-Print\-Consumer\-Page\-Usage@{\-Print\-Consumer\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Consumer\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Consumer\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a9af1dc144bab9e9864394594be67d2eb}
+
+
+\-Definition at line 1383 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_aa62d11cfe404ee51ffd26f13c33800a1}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Digitizer\-Page\-Usage@{\-Print\-Digitizer\-Page\-Usage}}
+\index{\-Print\-Digitizer\-Page\-Usage@{\-Print\-Digitizer\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Digitizer\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Digitizer\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_aa62d11cfe404ee51ffd26f13c33800a1}
+
+
+\-Definition at line 1405 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a4e026cfeda7bfe9e07cf247cbcc4a122}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Game\-Controls\-Page\-Usage@{\-Print\-Game\-Controls\-Page\-Usage}}
+\index{\-Print\-Game\-Controls\-Page\-Usage@{\-Print\-Game\-Controls\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Game\-Controls\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Game\-Controls\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a4e026cfeda7bfe9e07cf247cbcc4a122}
+
+
+\-Definition at line 1345 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a3eff46688f9edbee3a58c43bbf104763}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Generic\-Desktop\-Page\-Usage@{\-Print\-Generic\-Desktop\-Page\-Usage}}
+\index{\-Print\-Generic\-Desktop\-Page\-Usage@{\-Print\-Generic\-Desktop\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Generic\-Desktop\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Generic\-Desktop\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3eff46688f9edbee3a58c43bbf104763}
+
+
+\-Definition at line 1304 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a1b5cb93a83e2212319fe30f1a1636478}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Generic\-Device\-Controls\-Page\-Usage@{\-Print\-Generic\-Device\-Controls\-Page\-Usage}}
+\index{\-Print\-Generic\-Device\-Controls\-Page\-Usage@{\-Print\-Generic\-Device\-Controls\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Generic\-Device\-Controls\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Generic\-Device\-Controls\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a1b5cb93a83e2212319fe30f1a1636478}
+
+
+\-Definition at line 1354 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_aef5ef3133e573ff3bdcc7861e8ebc921}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Item\-Title@{\-Print\-Item\-Title}}
+\index{\-Print\-Item\-Title@{\-Print\-Item\-Title}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Item\-Title}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Item\-Title} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_aef5ef3133e573ff3bdcc7861e8ebc921}
+
+
+\-Definition at line 1026 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_af86c8a065849b37590d88f68be85e293}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-L\-E\-D\-Page\-Usage@{\-Print\-L\-E\-D\-Page\-Usage}}
+\index{\-Print\-L\-E\-D\-Page\-Usage@{\-Print\-L\-E\-D\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-L\-E\-D\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-L\-E\-D\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_af86c8a065849b37590d88f68be85e293}
+
+
+\-Definition at line 1362 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a17e7613faa695c5d654f1cd6d9262cf4}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Medical\-Instrument\-Page\-Usage@{\-Print\-Medical\-Instrument\-Page\-Usage}}
+\index{\-Print\-Medical\-Instrument\-Page\-Usage@{\-Print\-Medical\-Instrument\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Medical\-Instrument\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Medical\-Instrument\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a17e7613faa695c5d654f1cd6d9262cf4}
+
+
+\-Definition at line 1425 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a1b0cc07f038faef88431c87065370dce}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Ordinal\-Page\-Usage@{\-Print\-Ordinal\-Page\-Usage}}
+\index{\-Print\-Ordinal\-Page\-Usage@{\-Print\-Ordinal\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Ordinal\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Ordinal\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a1b0cc07f038faef88431c87065370dce}
+
+
+\-Definition at line 1295 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_aa316c748b795fbe80cdd2f69e83c7ae4}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Simulation\-Controls\-Page\-Usage@{\-Print\-Simulation\-Controls\-Page\-Usage}}
+\index{\-Print\-Simulation\-Controls\-Page\-Usage@{\-Print\-Simulation\-Controls\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Simulation\-Controls\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Simulation\-Controls\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_aa316c748b795fbe80cdd2f69e83c7ae4}
+
+
+\-Definition at line 1316 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a3db34bff0d14731df402a20fb67838d9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Sports\-Controls\-Page\-Usage@{\-Print\-Sports\-Controls\-Page\-Usage}}
+\index{\-Print\-Sports\-Controls\-Page\-Usage@{\-Print\-Sports\-Controls\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Sports\-Controls\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Sports\-Controls\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3db34bff0d14731df402a20fb67838d9}
+
+
+\-Definition at line 1335 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_ac01bf8776f485b478c3bb64887e446b4}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Telephony\-Page\-Usage@{\-Print\-Telephony\-Page\-Usage}}
+\index{\-Print\-Telephony\-Page\-Usage@{\-Print\-Telephony\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Telephony\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Telephony\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ac01bf8776f485b478c3bb64887e446b4}
+
+
+\-Definition at line 1370 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a789ad1fbd8437296627412a2b4a255a3}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Usage\-Page@{\-Print\-Usage\-Page}}
+\index{\-Print\-Usage\-Page@{\-Print\-Usage\-Page}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Usage\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Usage\-Page} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{page}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_report_desc_parser_base_a789ad1fbd8437296627412a2b4a255a3}
+
+
+\-Definition at line 1262 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a3c160efea3854223f0e171a9d97a07cd}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-Value@{\-Print\-Value}}
+\index{\-Print\-Value@{\-Print\-Value}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-Value} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{p, }
+\item[{uint8\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3c160efea3854223f0e171a9d97a07cd}
+
+
+\-Definition at line 1013 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a938d53101e5ab4e5831276efb298fea9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Print\-V\-R\-Controls\-Page\-Usage@{\-Print\-V\-R\-Controls\-Page\-Usage}}
+\index{\-Print\-V\-R\-Controls\-Page\-Usage@{\-Print\-V\-R\-Controls\-Page\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Print\-V\-R\-Controls\-Page\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Print\-V\-R\-Controls\-Page\-Usage} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{usage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a938d53101e5ab4e5831276efb298fea9}
+
+
+\-Definition at line 1326 of file hidescriptorparser.\-cpp.
+
+\hypertarget{class_report_desc_parser_base_a42fbc8fbccaf67eab88bd98b8d3bdd3f}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!\-Set\-Usage\-Page@{\-Set\-Usage\-Page}}
+\index{\-Set\-Usage\-Page@{\-Set\-Usage\-Page}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{\-Set\-Usage\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Report\-Desc\-Parser\-Base\-::\-Set\-Usage\-Page} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{page}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a42fbc8fbccaf67eab88bd98b8d3bdd3f}
+
+
+\-Definition at line 1233 of file hidescriptorparser.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_report_desc_parser_base_a5cd50b03ac2d022ca55e6a5bbd448ac8}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!aplphanum\-Titles0@{aplphanum\-Titles0}}
+\index{aplphanum\-Titles0@{aplphanum\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{aplphanum\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::aplphanum\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a5cd50b03ac2d022ca55e6a5bbd448ac8}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageAlphanumericDisplay,
+        pstrUsageBitmappedDisplay
+}
+\end{DoxyCode}
+
+
+\-Definition at line 89 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_afac5fab915e65babde2645e09b66e74f}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!aplphanum\-Titles1@{aplphanum\-Titles1}}
+\index{aplphanum\-Titles1@{aplphanum\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{aplphanum\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::aplphanum\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_afac5fab915e65babde2645e09b66e74f}
+
+
+\-Definition at line 90 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ae0090afb0e090b539fcaa4b71f099b08}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!aplphanum\-Titles2@{aplphanum\-Titles2}}
+\index{aplphanum\-Titles2@{aplphanum\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{aplphanum\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::aplphanum\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ae0090afb0e090b539fcaa4b71f099b08}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageBitmapSizeX,
+        pstrUsageBitmapSizeY,
+        pstrUsagePageReserved,
+        pstrUsageBitDepthFormat,
+        pstrUsageDisplayOrientation,
+        pstrUsagePaletteReport,
+        pstrUsagePaletteDataSize,
+        pstrUsagePaletteDataOffset,
+        pstrUsagePaletteData,
+        pstrUsageBlitReport,
+        pstrUsageBlitRectangleX1,
+        pstrUsageBlitRectangleY1,
+        pstrUsageBlitRectangleX2,
+        pstrUsageBlitRectangleY2,
+        pstrUsageBlitData,
+        pstrUsageSoftButton,
+        pstrUsageSoftButtonID,
+        pstrUsageSoftButtonSide,
+        pstrUsageSoftButtonOffset1,
+        pstrUsageSoftButtonOffset2,
+        pstrUsageSoftButtonReport
+}
+\end{DoxyCode}
+
+
+\-Definition at line 91 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a81af202145ab2899b222170b0d681213}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles0@{cons\-Titles0}}
+\index{cons\-Titles0@{cons\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a81af202145ab2899b222170b0d681213}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageConsumerControl,
+        pstrUsageNumericKeyPad,
+        pstrUsageProgrammableButton,
+        pstrUsageMicrophone,
+        pstrUsageHeadphone,
+        pstrUsageGraphicEqualizer
+}
+\end{DoxyCode}
+
+
+\-Definition at line 71 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a4997a30230193326b84fb8f3d3d30536}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles1@{cons\-Titles1}}
+\index{cons\-Titles1@{cons\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a4997a30230193326b84fb8f3d3d30536}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePlus10,
+        pstrUsagePlus100,
+        pstrUsageAMPM
+}
+\end{DoxyCode}
+
+
+\-Definition at line 72 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a7b760abbe1a67f241a9c6d34da9207f4}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles2@{cons\-Titles2}}
+\index{cons\-Titles2@{cons\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a7b760abbe1a67f241a9c6d34da9207f4}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePower,
+        pstrUsageReset,
+        pstrUsageSleep,
+        pstrUsageSleepAfter,
+        pstrUsageSleepMode,
+        pstrUsageIllumination,
+        pstrUsageFunctionButtons
+
+}
+\end{DoxyCode}
+
+
+\-Definition at line 73 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ae481ca9afe5a7d500664b6802c985d8b}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles3@{cons\-Titles3}}
+\index{cons\-Titles3@{cons\-Titles3}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles3}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles3}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ae481ca9afe5a7d500664b6802c985d8b}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageMenu,
+        pstrUsageMenuPick,
+        pstrUsageMenuUp,
+        pstrUsageMenuDown,
+        pstrUsageMenuLeft,
+        pstrUsageMenuRight,
+        pstrUsageMenuEscape,
+        pstrUsageMenuValueIncrease,
+        pstrUsageMenuValueDecrease
+}
+\end{DoxyCode}
+
+
+\-Definition at line 74 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ace9cf011244ddade875cb8f2921c3d58}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles4@{cons\-Titles4}}
+\index{cons\-Titles4@{cons\-Titles4}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles4}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles4}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ace9cf011244ddade875cb8f2921c3d58}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageDataOnScreen,
+        pstrUsageClosedCaption,
+        pstrUsageClosedCaptionSelect,
+        pstrUsageVCRTV,
+        pstrUsageBroadcastMode,
+        pstrUsageSnapshot,
+        pstrUsageStill
+}
+\end{DoxyCode}
+
+
+\-Definition at line 75 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a0f96db464d287695f7611f38ca9b0058}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles5@{cons\-Titles5}}
+\index{cons\-Titles5@{cons\-Titles5}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles5}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles5}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a0f96db464d287695f7611f38ca9b0058}
+
+
+\-Definition at line 76 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_af4da29c34852a2589de1c64a0bf8e4b3}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles6@{cons\-Titles6}}
+\index{cons\-Titles6@{cons\-Titles6}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles6}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles6}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_af4da29c34852a2589de1c64a0bf8e4b3}
+
+
+\-Definition at line 77 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ac1cf3d87296aa74a35627079a5cd1753}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles7@{cons\-Titles7}}
+\index{cons\-Titles7@{cons\-Titles7}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles7}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles7}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ac1cf3d87296aa74a35627079a5cd1753}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageVolume,
+        pstrUsageBalance,
+        pstrUsageMute,
+        pstrUsageBass,
+        pstrUsageTreble,
+        pstrUsageBassBoost,
+        pstrUsageSurroundMode,
+        pstrUsageLoudness,
+        pstrUsageMPX,
+        pstrUsageVolumeIncrement,
+        pstrUsageVolumeDecrement
+}
+\end{DoxyCode}
+
+
+\-Definition at line 78 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a3b4a0c98b10afe968027e78281efc752}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles8@{cons\-Titles8}}
+\index{cons\-Titles8@{cons\-Titles8}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles8}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles8}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3b4a0c98b10afe968027e78281efc752}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSpeedSelect,
+        pstrUsagePlaybackSpeed,
+        pstrUsageStandardPlay,
+        pstrUsageLongPlay,
+        pstrUsageExtendedPlay,
+        pstrUsageSlow
+}
+\end{DoxyCode}
+
+
+\-Definition at line 79 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ac47d6ae6c995224d151aed3403f2e38f}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles9@{cons\-Titles9}}
+\index{cons\-Titles9@{cons\-Titles9}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles9}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles9}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ac47d6ae6c995224d151aed3403f2e38f}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageFanEnable,
+        pstrUsageFanSpeed,
+        pstrUsageLightEnable,
+        pstrUsageLightIlluminationLevel,
+        pstrUsageClimateControlEnable,
+        pstrUsageRoomTemperature,
+        pstrUsageSecurityEnable,
+        pstrUsageFireAlarm,
+        pstrUsagePoliceAlarm,
+        pstrUsageProximity,
+        pstrUsageMotion,
+        pstrUsageDuresAlarm,
+        pstrUsageHoldupAlarm,
+        pstrUsageMedicalAlarm
+}
+\end{DoxyCode}
+
+
+\-Definition at line 80 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a27f2a10cbf94bc44a25d221d794ce3f3}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles\-A@{cons\-Titles\-A}}
+\index{cons\-Titles\-A@{cons\-Titles\-A}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles\-A}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles\-A}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a27f2a10cbf94bc44a25d221d794ce3f3}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageBalanceRight,
+        pstrUsageBalanceLeft,
+        pstrUsageBassIncrement,
+        pstrUsageBassDecrement,
+        pstrUsageTrebleIncrement,
+        pstrUsageTrebleDecrement
+}
+\end{DoxyCode}
+
+
+\-Definition at line 81 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a0c406d39f05eaa4f708af495c5d20bbb}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles\-B@{cons\-Titles\-B}}
+\index{cons\-Titles\-B@{cons\-Titles\-B}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles\-B}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles\-B}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a0c406d39f05eaa4f708af495c5d20bbb}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSpeakerSystem,
+        pstrUsageChannelLeft,
+        pstrUsageChannelRight,
+        pstrUsageChannelCenter,
+        pstrUsageChannelFront,
+        pstrUsageChannelCenterFront,
+        pstrUsageChannelSide,
+        pstrUsageChannelSurround,
+        pstrUsageChannelLowFreqEnhancement,
+        pstrUsageChannelTop,
+        pstrUsageChannelUnknown
+}
+\end{DoxyCode}
+
+
+\-Definition at line 82 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a149498f082b56537f6958f35cdf72485}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles\-C@{cons\-Titles\-C}}
+\index{cons\-Titles\-C@{cons\-Titles\-C}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles\-C}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles\-C}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a149498f082b56537f6958f35cdf72485}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSubChannel,
+        pstrUsageSubChannelIncrement,
+        pstrUsageSubChannelDecrement,
+        pstrUsageAlternateAudioIncrement,
+        pstrUsageAlternateAudioDecrement
+}
+\end{DoxyCode}
+
+
+\-Definition at line 83 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a4db83eb7ee2c16ff29da2c09dbf182f3}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles\-D@{cons\-Titles\-D}}
+\index{cons\-Titles\-D@{cons\-Titles\-D}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles\-D}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles\-D}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a4db83eb7ee2c16ff29da2c09dbf182f3}
+
+
+\-Definition at line 84 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a46332dbba5ab524aedb370684510c990}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!cons\-Titles\-E@{cons\-Titles\-E}}
+\index{cons\-Titles\-E@{cons\-Titles\-E}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{cons\-Titles\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::cons\-Titles\-E}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a46332dbba5ab524aedb370684510c990}
+
+
+\-Definition at line 85 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a298396c59609fab20c2a5eedb3ca0b87}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!digit\-Titles0@{digit\-Titles0}}
+\index{digit\-Titles0@{digit\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{digit\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::digit\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a298396c59609fab20c2a5eedb3ca0b87}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageDigitizer,
+        pstrUsagePen,
+        pstrUsageLightPen,
+        pstrUsageTouchScreen,
+        pstrUsageTouchPad,
+        pstrUsageWhiteBoard,
+        pstrUsageCoordinateMeasuringMachine,
+        pstrUsage3DDigitizer,
+        pstrUsageStereoPlotter,
+        pstrUsageArticulatedArm,
+        pstrUsageArmature,
+        pstrUsageMultiplePointDigitizer,
+        pstrUsageFreeSpaceWand
+}
+\end{DoxyCode}
+
+
+\-Definition at line 86 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_abc5202f47578494d3f6008413f632873}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!digit\-Titles1@{digit\-Titles1}}
+\index{digit\-Titles1@{digit\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{digit\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::digit\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_abc5202f47578494d3f6008413f632873}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageStylus,
+        pstrUsagePuck,
+        pstrUsageFinger
+
+}
+\end{DoxyCode}
+
+
+\-Definition at line 87 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_addaa9b5724f7d1ca10ba4ca14decd40d}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!digit\-Titles2@{digit\-Titles2}}
+\index{digit\-Titles2@{digit\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{digit\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::digit\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_addaa9b5724f7d1ca10ba4ca14decd40d}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageTipPressure,
+        pstrUsageBarrelPressure,
+        pstrUsageInRange,
+        pstrUsageTouch,
+        pstrUsageUntouch,
+        pstrUsageTap,
+        pstrUsageQuality,
+        pstrUsageDataValid,
+        pstrUsageTransducerIndex,
+        pstrUsageTabletFunctionKeys,
+        pstrUsageProgramChangeKeys,
+        pstrUsageBatteryStrength,
+        pstrUsageInvert,
+        pstrUsageXTilt,
+        pstrUsageYTilt,
+        pstrUsageAzimuth,
+        pstrUsageAltitude,
+        pstrUsageTwist,
+        pstrUsageTipSwitch,
+        pstrUsageSecondaryTipSwitch,
+        pstrUsageBarrelSwitch,
+        pstrUsageEraser,
+        pstrUsageTabletPick
+}
+\end{DoxyCode}
+
+
+\-Definition at line 88 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a981cacbfad335b19528e59ab2de866e5}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!game\-Titles0@{game\-Titles0}}
+\index{game\-Titles0@{game\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{game\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::game\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a981cacbfad335b19528e59ab2de866e5}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsage3DGameController,
+        pstrUsagePinballDevice,
+        pstrUsageGunDevice
+}
+\end{DoxyCode}
+
+
+\-Definition at line 61 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ac9327d02115b1dd60c79c37d1d11cf41}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!game\-Titles1@{game\-Titles1}}
+\index{game\-Titles1@{game\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{game\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::game\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ac9327d02115b1dd60c79c37d1d11cf41}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePointOfView,
+        pstrUsageTurnRightLeft,
+        pstrUsagePitchForwardBackward,
+        pstrUsageRollRightLeft,
+        pstrUsageMoveRightLeft,
+        pstrUsageMoveForwardBackward,
+        pstrUsageMoveUpDown,
+        pstrUsageLeanRightLeft,
+        pstrUsageLeanForwardBackward,
+        pstrUsageHeightOfPOV,
+        pstrUsageFlipper,
+        pstrUsageSecondaryFlipper,
+        pstrUsageBump,
+        pstrUsageNewGame,
+        pstrUsageShootBall,
+        pstrUsagePlayer,
+        pstrUsageGunBolt,
+        pstrUsageGunClip,
+        pstrUsageGunSelector,
+        pstrUsageGunSingleShot,
+        pstrUsageGunBurst,
+        pstrUsageGunAutomatic,
+        pstrUsageGunSafety,
+        pstrUsageGamepadFireJump,
+        pstrUsageGamepadTrigger
+}
+\end{DoxyCode}
+
+
+\-Definition at line 62 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a3021443d9320135788844c166240149f}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!gen\-Desktop\-Titles0@{gen\-Desktop\-Titles0}}
+\index{gen\-Desktop\-Titles0@{gen\-Desktop\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{gen\-Desktop\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::gen\-Desktop\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3021443d9320135788844c166240149f}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePointer,
+        pstrUsageMouse,
+        pstrUsageJoystick,
+        pstrUsageGamePad,
+        pstrUsageKeyboard,
+        pstrUsageKeypad,
+        pstrUsageMultiAxisController,
+        pstrUsageTabletPCSystemControls
+
+}
+\end{DoxyCode}
+
+
+\-Definition at line 48 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a0cca04764c613389545ab02cce068367}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!gen\-Desktop\-Titles1@{gen\-Desktop\-Titles1}}
+\index{gen\-Desktop\-Titles1@{gen\-Desktop\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{gen\-Desktop\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::gen\-Desktop\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a0cca04764c613389545ab02cce068367}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageX,
+        pstrUsageY,
+        pstrUsageZ,
+        pstrUsageRx,
+        pstrUsageRy,
+        pstrUsageRz,
+        pstrUsageSlider,
+        pstrUsageDial,
+        pstrUsageWheel,
+        pstrUsageHatSwitch,
+        pstrUsageCountedBuffer,
+        pstrUsageByteCount,
+        pstrUsageMotionWakeup,
+        pstrUsageStart,
+        pstrUsageSelect,
+        pstrUsagePageReserved,
+        pstrUsageVx,
+        pstrUsageVy,
+        pstrUsageVz,
+        pstrUsageVbrx,
+        pstrUsageVbry,
+        pstrUsageVbrz,
+        pstrUsageVno,
+        pstrUsageFeatureNotification,
+        pstrUsageResolutionMultiplier
+}
+\end{DoxyCode}
+
+
+\-Definition at line 49 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a043e24aa742e9257202a2dc80725122c}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!gen\-Desktop\-Titles2@{gen\-Desktop\-Titles2}}
+\index{gen\-Desktop\-Titles2@{gen\-Desktop\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{gen\-Desktop\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::gen\-Desktop\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a043e24aa742e9257202a2dc80725122c}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSystemControl,
+        pstrUsageSystemPowerDown,
+        pstrUsageSystemSleep,
+        pstrUsageSystemWakeup,
+        pstrUsageSystemContextMenu,
+        pstrUsageSystemMainMenu,
+        pstrUsageSystemAppMenu,
+        pstrUsageSystemMenuHelp,
+        pstrUsageSystemMenuExit,
+        pstrUsageSystemMenuSelect,
+        pstrUsageSystemMenuRight,
+        pstrUsageSystemMenuLeft,
+        pstrUsageSystemMenuUp,
+        pstrUsageSystemMenuDown,
+        pstrUsageSystemColdRestart,
+        pstrUsageSystemWarmRestart,
+        pstrUsageDPadUp,
+        pstrUsageDPadDown,
+        pstrUsageDPadRight,
+        pstrUsageDPadLeft
+}
+\end{DoxyCode}
+
+
+\-Definition at line 50 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_acef88e30e3582b47deecf615495a3e8d}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!gen\-Desktop\-Titles3@{gen\-Desktop\-Titles3}}
+\index{gen\-Desktop\-Titles3@{gen\-Desktop\-Titles3}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{gen\-Desktop\-Titles3}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::gen\-Desktop\-Titles3}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_acef88e30e3582b47deecf615495a3e8d}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSystemDock,
+        pstrUsageSystemUndock,
+        pstrUsageSystemSetup,
+        pstrUsageSystemBreak,
+        pstrUsageSystemDebuggerBreak,
+        pstrUsageApplicationBreak,
+        pstrUsageApplicationDebuggerBreak,
+        pstrUsageSystemSpeakerMute,
+        pstrUsageSystemHibernate
+}
+\end{DoxyCode}
+
+
+\-Definition at line 51 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ae2b1ca00d24f5c3867c90ea49ffa6e0d}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!gen\-Desktop\-Titles4@{gen\-Desktop\-Titles4}}
+\index{gen\-Desktop\-Titles4@{gen\-Desktop\-Titles4}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{gen\-Desktop\-Titles4}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::gen\-Desktop\-Titles4}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ae2b1ca00d24f5c3867c90ea49ffa6e0d}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSystemDisplayInvert,
+        pstrUsageSystemDisplayInternal,
+        pstrUsageSystemDisplayExternal,
+        pstrUsageSystemDisplayBoth,
+        pstrUsageSystemDisplayDual,
+        pstrUsageSystemDisplayToggleIntExt,
+        pstrUsageSystemDisplaySwapPriSec,
+        pstrUsageSystemDisplayLCDAutoscale
+}
+\end{DoxyCode}
+
+
+\-Definition at line 52 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a55e8f870eb0006bc3a9ca42e6cabf187}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!gen\-Dev\-Ctrl\-Titles@{gen\-Dev\-Ctrl\-Titles}}
+\index{gen\-Dev\-Ctrl\-Titles@{gen\-Dev\-Ctrl\-Titles}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{gen\-Dev\-Ctrl\-Titles}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::gen\-Dev\-Ctrl\-Titles}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a55e8f870eb0006bc3a9ca42e6cabf187}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageBatteryStrength,
+        pstrUsageWirelessChannel,
+        pstrUsageWirelessID,
+        pstrUsageDiscoverWirelessControl,
+        pstrUsageSecurityCodeCharEntered,
+        pstrUsageSecurityCodeCharErased,
+        pstrUsageSecurityCodeCleared
+}
+\end{DoxyCode}
+
+
+\-Definition at line 63 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_adfc790524e25a7ad715b1e9adff54a25}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!item\-Parse\-State@{item\-Parse\-State}}
+\index{item\-Parse\-State@{item\-Parse\-State}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{item\-Parse\-State}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::item\-Parse\-State}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_adfc790524e25a7ad715b1e9adff54a25}
+
+
+\-Definition at line 106 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a70693c641100c952022ec5c160de1a8d}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!item\-Prefix@{item\-Prefix}}
+\index{item\-Prefix@{item\-Prefix}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{item\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::item\-Prefix}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a70693c641100c952022ec5c160de1a8d}
+
+
+\-Definition at line 108 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a4f0da61c408fc42e373b6cc03cd97fab}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!item\-Size@{item\-Size}}
+\index{item\-Size@{item\-Size}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{item\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::item\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a4f0da61c408fc42e373b6cc03cd97fab}
+
+
+\-Definition at line 107 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a7425dac090961547ddf7622112b98a9e}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!led\-Titles@{led\-Titles}}
+\index{led\-Titles@{led\-Titles}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{led\-Titles}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::led\-Titles}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a7425dac090961547ddf7622112b98a9e}
+
+
+\-Definition at line 64 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a3d8d0fa8512f718e8b574e4d9e8a775f}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!med\-Instr\-Titles0@{med\-Instr\-Titles0}}
+\index{med\-Instr\-Titles0@{med\-Instr\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{med\-Instr\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::med\-Instr\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3d8d0fa8512f718e8b574e4d9e8a775f}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageVCRAcquisition,
+        pstrUsageFreezeThaw,
+        pstrUsageClipStore,
+        pstrUsageUpdate,
+        pstrUsageNext,
+        pstrUsageSave,
+        pstrUsagePrint,
+        pstrUsageMicrophoneEnable
+}
+\end{DoxyCode}
+
+
+\-Definition at line 92 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a3e22173cfb0358f71357224f88ba7233}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!med\-Instr\-Titles1@{med\-Instr\-Titles1}}
+\index{med\-Instr\-Titles1@{med\-Instr\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{med\-Instr\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::med\-Instr\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3e22173cfb0358f71357224f88ba7233}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageCine,
+        pstrUsageTransmitPower,
+        pstrUsageVolume,
+        pstrUsageFocus,
+        pstrUsageDepth
+}
+\end{DoxyCode}
+
+
+\-Definition at line 93 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_aee85293ab9a08f5e348fe339f7e4e7e9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!med\-Instr\-Titles2@{med\-Instr\-Titles2}}
+\index{med\-Instr\-Titles2@{med\-Instr\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{med\-Instr\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::med\-Instr\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_aee85293ab9a08f5e348fe339f7e4e7e9}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSoftStepPrimary,
+        pstrUsageSoftStepSecondary
+}
+\end{DoxyCode}
+
+
+\-Definition at line 94 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a986eebc1d44ff6c7b2779c584640bfa8}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!med\-Instr\-Titles3@{med\-Instr\-Titles3}}
+\index{med\-Instr\-Titles3@{med\-Instr\-Titles3}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{med\-Instr\-Titles3}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::med\-Instr\-Titles3}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a986eebc1d44ff6c7b2779c584640bfa8}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageZoomSelect,
+        pstrUsageZoomAdjust,
+        pstrUsageSpectralDopplerModeSelect,
+        pstrUsageSpectralDopplerModeAdjust,
+        pstrUsageColorDopplerModeSelect,
+        pstrUsageColorDopplerModeAdjust,
+        pstrUsageMotionModeSelect,
+        pstrUsageMotionModeAdjust,
+        pstrUsage2DModeSelect,
+        pstrUsage2DModeAdjust
+}
+\end{DoxyCode}
+
+
+\-Definition at line 95 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_abf57eb862e09967eb05a234f81b4a9d4}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!med\-Instr\-Titles4@{med\-Instr\-Titles4}}
+\index{med\-Instr\-Titles4@{med\-Instr\-Titles4}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{med\-Instr\-Titles4}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::med\-Instr\-Titles4}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_abf57eb862e09967eb05a234f81b4a9d4}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSoftControlSelect,
+        pstrUsageSoftControlAdjust
+}
+\end{DoxyCode}
+
+
+\-Definition at line 96 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a22006cbf92a3d4008695e53d7f6e2452}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!pf\-Usage@{pf\-Usage}}
+\index{pf\-Usage@{pf\-Usage}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{pf\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Usage\-Page\-Func} {\bf \-Report\-Desc\-Parser\-Base\-::pf\-Usage}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a22006cbf92a3d4008695e53d7f6e2452}
+
+
+\-Definition at line 116 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a2c15a93cace44e39560e4613bbefaf14}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!rpt\-Count@{rpt\-Count}}
+\index{rpt\-Count@{rpt\-Count}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{rpt\-Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::rpt\-Count}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a2c15a93cace44e39560e4613bbefaf14}
+
+
+\-Definition at line 110 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a222b1c03a4f3e49283a58ecaa853e247}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!rpt\-Size@{rpt\-Size}}
+\index{rpt\-Size@{rpt\-Size}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{rpt\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::rpt\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a222b1c03a4f3e49283a58ecaa853e247}
+
+
+\-Definition at line 109 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a6995298d3333564e02e06bf94f0ca5ca}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!simu\-Titles0@{simu\-Titles0}}
+\index{simu\-Titles0@{simu\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{simu\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::simu\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a6995298d3333564e02e06bf94f0ca5ca}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageFlightSimulationDevice,
+        pstrUsageAutomobileSimulationDevice,
+        pstrUsageTankSimulationDevice,
+        pstrUsageSpaceshipSimulationDevice,
+        pstrUsageSubmarineSimulationDevice,
+        pstrUsageSailingSimulationDevice,
+        pstrUsageMotocicleSimulationDevice,
+        pstrUsageSportsSimulationDevice,
+        pstrUsageAirplaneSimulationDevice,
+        pstrUsageHelicopterSimulationDevice,
+        pstrUsageMagicCarpetSimulationDevice,
+        pstrUsageBicycleSimulationDevice
+}
+\end{DoxyCode}
+
+
+\-Definition at line 53 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a934e0398770633c85a9e9f8cfb319f0a}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!simu\-Titles1@{simu\-Titles1}}
+\index{simu\-Titles1@{simu\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{simu\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::simu\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a934e0398770633c85a9e9f8cfb319f0a}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageFlightControlStick,
+        pstrUsageFlightStick,
+        pstrUsageCyclicControl,
+        pstrUsageCyclicTrim,
+        pstrUsageFlightYoke,
+        pstrUsageTrackControl
+}
+\end{DoxyCode}
+
+
+\-Definition at line 54 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a5d9d0f1b2820bbfdddf6d54e1d826c83}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!simu\-Titles2@{simu\-Titles2}}
+\index{simu\-Titles2@{simu\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{simu\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::simu\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a5d9d0f1b2820bbfdddf6d54e1d826c83}
+
+
+\-Definition at line 55 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a4daf2daa3c18f446a66854475ca56a66}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!sports\-Ctrl\-Titles0@{sports\-Ctrl\-Titles0}}
+\index{sports\-Ctrl\-Titles0@{sports\-Ctrl\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{sports\-Ctrl\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::sports\-Ctrl\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a4daf2daa3c18f446a66854475ca56a66}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageBaseballBat,
+        pstrUsageGolfClub,
+        pstrUsageRowingMachine,
+        pstrUsageTreadmill
+}
+\end{DoxyCode}
+
+
+\-Definition at line 58 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a24a3f083c728c7549929cb8af0e52451}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!sports\-Ctrl\-Titles1@{sports\-Ctrl\-Titles1}}
+\index{sports\-Ctrl\-Titles1@{sports\-Ctrl\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{sports\-Ctrl\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::sports\-Ctrl\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a24a3f083c728c7549929cb8af0e52451}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageOar,
+        pstrUsageSlope,
+        pstrUsageRate,
+        pstrUsageStickSpeed,
+        pstrUsageStickFaceAngle,
+        pstrUsageStickHeelToe,
+        pstrUsageStickFollowThough,
+        pstrUsageStickTempo,
+        pstrUsageStickType,
+        pstrUsageStickHeight
+}
+\end{DoxyCode}
+
+
+\-Definition at line 59 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a9491a62b6a44bf98884ca1dd16b45df2}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!sports\-Ctrl\-Titles2@{sports\-Ctrl\-Titles2}}
+\index{sports\-Ctrl\-Titles2@{sports\-Ctrl\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{sports\-Ctrl\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::sports\-Ctrl\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a9491a62b6a44bf98884ca1dd16b45df2}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePutter,
+        pstrUsage1Iron,
+        pstrUsage2Iron,
+        pstrUsage3Iron,
+        pstrUsage4Iron,
+        pstrUsage5Iron,
+        pstrUsage6Iron,
+        pstrUsage7Iron,
+        pstrUsage8Iron,
+        pstrUsage9Iron,
+        pstrUsage10Iron,
+        pstrUsage11Iron,
+        pstrUsageSandWedge,
+        pstrUsageLoftWedge,
+        pstrUsagePowerWedge,
+        pstrUsage1Wood,
+        pstrUsage3Wood,
+        pstrUsage5Wood,
+        pstrUsage7Wood,
+        pstrUsage9Wood
+}
+\end{DoxyCode}
+
+
+\-Definition at line 60 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ae86d70945d59c48153463bca302bd356}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!tel\-Titles0@{tel\-Titles0}}
+\index{tel\-Titles0@{tel\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{tel\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::tel\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ae86d70945d59c48153463bca302bd356}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePhone,
+        pstrUsageAnsweringMachine,
+        pstrUsageMessageControls,
+        pstrUsageHandset,
+        pstrUsageHeadset,
+        pstrUsageTelephonyKeyPad,
+        pstrUsageProgrammableButton
+}
+\end{DoxyCode}
+
+
+\-Definition at line 65 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a9e83e4d47816c0330ccae5bd31e10031}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!tel\-Titles1@{tel\-Titles1}}
+\index{tel\-Titles1@{tel\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{tel\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::tel\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a9e83e4d47816c0330ccae5bd31e10031}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageHookSwitch,
+        pstrUsageFlash,
+        pstrUsageFeature,
+        pstrUsageHold,
+        pstrUsageRedial,
+        pstrUsageTransfer,
+        pstrUsageDrop,
+        pstrUsagePark,
+        pstrUsageForwardCalls,
+        pstrUsageAlternateFunction,
+        pstrUsageLine,
+        pstrUsageSpeakerPhone,
+        pstrUsageConference,
+        pstrUsageRingEnable,
+        pstrUsageRingSelect,
+        pstrUsagePhoneMute,
+        pstrUsageCallerID,
+        pstrUsageSend
+}
+\end{DoxyCode}
+
+
+\-Definition at line 66 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_aefc1ad5b2631c5184c5e58ac44cfbb80}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!tel\-Titles2@{tel\-Titles2}}
+\index{tel\-Titles2@{tel\-Titles2}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{tel\-Titles2}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::tel\-Titles2}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_aefc1ad5b2631c5184c5e58ac44cfbb80}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageSpeedDial,
+        pstrUsageStoreNumber,
+        pstrUsageRecallNumber,
+        pstrUsagePhoneDirectory
+}
+\end{DoxyCode}
+
+
+\-Definition at line 67 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_acc9f0e2b103473be060684e451432661}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!tel\-Titles3@{tel\-Titles3}}
+\index{tel\-Titles3@{tel\-Titles3}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{tel\-Titles3}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::tel\-Titles3}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_acc9f0e2b103473be060684e451432661}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageVoiceMail,
+        pstrUsageScreenCalls,
+        pstrUsageDoNotDisturb,
+        pstrUsageMessage,
+        pstrUsageAnswerOnOff
+}
+\end{DoxyCode}
+
+
+\-Definition at line 68 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a9d51bfc5c2e04a8eaf25561d6d97ae00}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!tel\-Titles4@{tel\-Titles4}}
+\index{tel\-Titles4@{tel\-Titles4}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{tel\-Titles4}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::tel\-Titles4}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a9d51bfc5c2e04a8eaf25561d6d97ae00}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageInsideDialTone,
+        pstrUsageOutsideDialTone,
+        pstrUsageInsideRingTone,
+        pstrUsageOutsideRingTone,
+        pstrUsagePriorityRingTone,
+        pstrUsageInsideRingback,
+        pstrUsagePriorityRingback,
+        pstrUsageLineBusyTone,
+        pstrUsageReorderTone,
+        pstrUsageCallWaitingTone,
+        pstrUsageConfirmationTone1,
+        pstrUsageConfirmationTone2,
+        pstrUsageTonesOff,
+        pstrUsageOutsideRingback,
+        pstrUsageRinger
+}
+\end{DoxyCode}
+
+
+\-Definition at line 69 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a3882e20433145daa93bd23d4cff779e9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!tel\-Titles5@{tel\-Titles5}}
+\index{tel\-Titles5@{tel\-Titles5}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{tel\-Titles5}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::tel\-Titles5}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a3882e20433145daa93bd23d4cff779e9}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePhoneKey0,
+        pstrUsagePhoneKey1,
+        pstrUsagePhoneKey2,
+        pstrUsagePhoneKey3,
+        pstrUsagePhoneKey4,
+        pstrUsagePhoneKey5,
+        pstrUsagePhoneKey6,
+        pstrUsagePhoneKey7,
+        pstrUsagePhoneKey8,
+        pstrUsagePhoneKey9,
+        pstrUsagePhoneKeyStar,
+        pstrUsagePhoneKeyPound,
+        pstrUsagePhoneKeyA,
+        pstrUsagePhoneKeyB,
+        pstrUsagePhoneKeyC,
+        pstrUsagePhoneKeyD
+}
+\end{DoxyCode}
+
+
+\-Definition at line 70 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a5ac0dd6f06df15a4cd2bad3fa175e7b9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!the\-Buffer@{the\-Buffer}}
+\index{the\-Buffer@{the\-Buffer}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{the\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}\-Multi\-Value\-Buffer {\bf \-Report\-Desc\-Parser\-Base\-::the\-Buffer}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a5ac0dd6f06df15a4cd2bad3fa175e7b9}
+
+
+\-Definition at line 101 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a23b769d890d9f578fd6b8f47cb1f7e23}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!the\-Skipper@{the\-Skipper}}
+\index{the\-Skipper@{the\-Skipper}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{the\-Skipper}]{\setlength{\rightskip}{0pt plus 5cm}\-Byte\-Skipper {\bf \-Report\-Desc\-Parser\-Base\-::the\-Skipper}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a23b769d890d9f578fd6b8f47cb1f7e23}
+
+
+\-Definition at line 103 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_aa5223ad6eb8be8c7fb53a98d4ddde594}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!total\-Size@{total\-Size}}
+\index{total\-Size@{total\-Size}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{total\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::total\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_aa5223ad6eb8be8c7fb53a98d4ddde594}
+
+
+\-Definition at line 112 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_af91679187bb24d185979b3ec045c215b}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!usage\-Page\-Functions@{usage\-Page\-Functions}}
+\index{usage\-Page\-Functions@{usage\-Page\-Functions}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{usage\-Page\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Report\-Desc\-Parser\-Base\-::\-Usage\-Page\-Func} {\bf \-Report\-Desc\-Parser\-Base\-::usage\-Page\-Functions}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_report_desc_parser_base_af91679187bb24d185979b3ec045c215b}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        &ReportDescParserBase::PrintGenericDesktopPageUsage,
+        &ReportDescParserBase::PrintSimulationControlsPageUsage,
+        &ReportDescParserBase::PrintVRControlsPageUsage,
+        &ReportDescParserBase::PrintSportsControlsPageUsage,
+        &ReportDescParserBase::PrintGameControlsPageUsage,
+        &ReportDescParserBase::PrintGenericDeviceControlsPageUsage,
+        NULL, 
+        &ReportDescParserBase::PrintLEDPageUsage,
+        &ReportDescParserBase::PrintButtonPageUsage,
+        &ReportDescParserBase::PrintOrdinalPageUsage,
+        &ReportDescParserBase::PrintTelephonyPageUsage,
+        &ReportDescParserBase::PrintConsumerPageUsage,
+        &ReportDescParserBase::PrintDigitizerPageUsage,
+        NULL, 
+        NULL, 
+        NULL 
+}
+\end{DoxyCode}
+
+
+\-Definition at line 99 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a9e912750d3675352614ee0b1bf73fa82}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!usage\-Page\-Titles0@{usage\-Page\-Titles0}}
+\index{usage\-Page\-Titles0@{usage\-Page\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{usage\-Page\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const {\bf \-Report\-Desc\-Parser\-Base\-::usage\-Page\-Titles0}\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a9e912750d3675352614ee0b1bf73fa82}
+
+
+\-Definition at line 46 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_ae6dadd42986663f261aac948d24911a6}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!usage\-Page\-Titles1@{usage\-Page\-Titles1}}
+\index{usage\-Page\-Titles1@{usage\-Page\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{usage\-Page\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::usage\-Page\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_ae6dadd42986663f261aac948d24911a6}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsagePageBarCodeScanner,
+        pstrUsagePageScale,
+        pstrUsagePageMSRDevices,
+        pstrUsagePagePointOfSale,
+        pstrUsagePageCameraControl,
+        pstrUsagePageArcade
+}
+\end{DoxyCode}
+
+
+\-Definition at line 47 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a8833e671168779d081e7f50e579bc206}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!val\-Parser@{val\-Parser}}
+\index{val\-Parser@{val\-Parser}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{val\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}\-Multi\-Byte\-Value\-Parser {\bf \-Report\-Desc\-Parser\-Base\-::val\-Parser}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a8833e671168779d081e7f50e579bc206}
+
+
+\-Definition at line 102 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a82cde32720eba596e5864fe7d541ea13}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!var\-Buffer@{var\-Buffer}}
+\index{var\-Buffer@{var\-Buffer}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{var\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-Report\-Desc\-Parser\-Base\-::var\-Buffer}\mbox{[}sizeof(\-U\-S\-B\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R)\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_report_desc_parser_base_a82cde32720eba596e5864fe7d541ea13}
+
+
+\-Definition at line 104 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a42d34a0a49f987c9dcfdd4fb8d42bf0d}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!vr\-Titles0@{vr\-Titles0}}
+\index{vr\-Titles0@{vr\-Titles0}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{vr\-Titles0}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::vr\-Titles0}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a42d34a0a49f987c9dcfdd4fb8d42bf0d}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageBelt,
+        pstrUsageBodySuit,
+        pstrUsageFlexor,
+        pstrUsageGlove,
+        pstrUsageHeadTracker,
+        pstrUsageHeadMountedDisplay,
+        pstrUsageHandTracker,
+        pstrUsageOculometer,
+        pstrUsageVest,
+        pstrUsageAnimatronicDevice
+}
+\end{DoxyCode}
+
+
+\-Definition at line 56 of file hidescriptorparser.\-h.
+
+\hypertarget{class_report_desc_parser_base_a41af57cb0fb0bbed7277bcd04a9e9fe9}{\index{\-Report\-Desc\-Parser\-Base@{\-Report\-Desc\-Parser\-Base}!vr\-Titles1@{vr\-Titles1}}
+\index{vr\-Titles1@{vr\-Titles1}!ReportDescParserBase@{\-Report\-Desc\-Parser\-Base}}
+\subsubsection[{vr\-Titles1}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const {\bf \-Report\-Desc\-Parser\-Base\-::vr\-Titles1}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_report_desc_parser_base_a41af57cb0fb0bbed7277bcd04a9e9fe9}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+        pstrUsageStereoEnable,
+        pstrUsageDisplayEnable
+}
+\end{DoxyCode}
+
+
+\-Definition at line 57 of file hidescriptorparser.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hidescriptorparser_8h}{hidescriptorparser.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{hidescriptorparser_8cpp}{hidescriptorparser.\-cpp}\end{DoxyCompactItemize}

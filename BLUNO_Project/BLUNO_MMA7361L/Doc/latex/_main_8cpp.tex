@@ -1,0 +1,259 @@
+\hypertarget{_main_8cpp}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Main.cpp \-File \-Reference}
+\label{_main_8cpp}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Main.\-cpp@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Main.\-cpp}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-C\-C2540\-Driver.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-M\-M\-A7361\-L\-Driver.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Bluetooth\-Command\-Dispatcher.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Bluetooth\-Connection\-Handler.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Connection\-Protocol\-Handler.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Bluetooth\-Command\-Table.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Bluetooth\-Command\-Indexes.\-h\char`\"{}}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_main_8cpp_af16f25986aaf7ba7e4b98f1b0608bf9b}{\-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N}~3
+\begin{DoxyCompactList}\small\item\em \-Drivers. \end{DoxyCompactList}\item 
+\#define \hyperlink{_main_8cpp_aa0dff89b60b5e574c95f1db022bb8d4a}{\-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N}~4
+\item 
+\#define \hyperlink{_main_8cpp_a7c81c3814f514644b200a5840d3b16ad}{\-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N}~5
+\item 
+\#define \hyperlink{_main_8cpp_a061b33d347869af43f2fa684eb18d35f}{\-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N}~6
+\item 
+\#define \hyperlink{_main_8cpp_a9f37ee3cb59617c4f7de8c118fd06ff9}{\-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S}~0
+\begin{DoxyCompactList}\small\item\em \-Analog. \end{DoxyCompactList}\item 
+\#define \hyperlink{_main_8cpp_aafef1b990add347ce305ae809a5dfa96}{\-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S}~1
+\item 
+\#define \hyperlink{_main_8cpp_abb65b340ae755899754d6de6411fcfe0}{\-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S}~2
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_c2540___driver}{\-C\-C2540\-\_\-\-Driver} \hyperlink{_main_8cpp_a5cadb247ff7915ee1ff94fef03eb46d2}{cc2540\-\_\-driver} ((char $\ast$)\char`\"{}\-A\-C\-C\-E\-L\-E\-R\-O\-M\-E\-T\-E\-R\char`\"{},(char $\ast$) \hyperlink{_bluetooth_command_table_8h_aa9867e0eb6820057c150c47aa26ab423}{command\-\_\-pointers},\&dispatcher)
+\item 
+void \hyperlink{_main_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup} (void)
+\item 
+void \hyperlink{_main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classutilities}{utilities} \hyperlink{_main_8cpp_a21e60683ddd2875edf8f68b049a735af}{global\-\_\-utilities}
+\begin{DoxyCompactList}\small\item\em \-Global utilities. \end{DoxyCompactList}\item 
+\hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} \hyperlink{_main_8cpp_af570f243f3075e66aa6b4938759826f0}{buffer}
+\begin{DoxyCompactList}\small\item\em \-The global ring buffer type. \end{DoxyCompactList}\item 
+\hyperlink{struct_m_m_a7361_l__pin__map__t}{\-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t} \hyperlink{_main_8cpp_af7c094610a88ef878622b094472687f4}{mma7361l\-\_\-pins}
+\begin{DoxyCompactList}\small\item\em \-The pin maps for both the \-A\-D\-X\-L335 and the \-M\-M\-A7361\-L. \end{DoxyCompactList}\item 
+\hyperlink{class_bluetooth___dispatcher}{\-Bluetooth\-\_\-\-Dispatcher} dispatcher \& \hyperlink{_main_8cpp_afcad73e19b2b2def099b01a0e3eee6d0}{\-Serial}
+\begin{DoxyCompactList}\small\item\em \-The \-Bluetooth \-Command dispatcher. \end{DoxyCompactList}\item 
+struct \hyperlink{structcallback__t}{callback\-\_\-t} \hyperlink{_main_8cpp_a59c3abe6e696ab5a7f9449156021a38e}{callback\-\_\-table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_main_8cpp_a7c81c3814f514644b200a5840d3b16ad}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N}}
+\index{\-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-0\-\_\-\-G\-\_\-\-P\-I\-N}~5}}\label{_main_8cpp_a7c81c3814f514644b200a5840d3b16ad}
+
+
+\-Definition at line 35 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_a061b33d347869af43f2fa684eb18d35f}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N}}
+\index{\-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-\-G\-\_\-\-S\-E\-L\-E\-C\-T\-\_\-\-P\-I\-N}~6}}\label{_main_8cpp_a061b33d347869af43f2fa684eb18d35f}
+
+
+\-Definition at line 36 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_af16f25986aaf7ba7e4b98f1b0608bf9b}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N}}
+\index{\-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-\-S\-L\-E\-E\-P\-\_\-\-P\-I\-N}~3}}\label{_main_8cpp_af16f25986aaf7ba7e4b98f1b0608bf9b}
+
+
+\-Drivers. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Handlers \-Commands -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Defines -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-M\-M\-A7361\-L \-Defines \-Digital 
+
+\-Definition at line 33 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_aa0dff89b60b5e574c95f1db022bb8d4a}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N}}
+\index{\-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N@{\-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-\-S\-T\-\_\-\-P\-I\-N}~4}}\label{_main_8cpp_aa0dff89b60b5e574c95f1db022bb8d4a}
+
+
+\-Definition at line 34 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_a9f37ee3cb59617c4f7de8c118fd06ff9}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S@{\-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S}}
+\index{\-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S@{\-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-\-X\-\_\-\-A\-X\-I\-S}~0}}\label{_main_8cpp_a9f37ee3cb59617c4f7de8c118fd06ff9}
+
+
+\-Analog. 
+
+
+
+\-Definition at line 39 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_aafef1b990add347ce305ae809a5dfa96}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S@{\-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S}}
+\index{\-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S@{\-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-\-Y\-\_\-\-A\-X\-I\-S}~1}}\label{_main_8cpp_aafef1b990add347ce305ae809a5dfa96}
+
+
+\-Definition at line 40 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_abb65b340ae755899754d6de6411fcfe0}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S@{\-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S}}
+\index{\-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S@{\-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-M\-A7361\-L\-\_\-\-Z\-\_\-\-A\-X\-I\-S}~2}}\label{_main_8cpp_abb65b340ae755899754d6de6411fcfe0}
+
+
+\-Definition at line 41 of file \-Main.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{_main_8cpp_a5cadb247ff7915ee1ff94fef03eb46d2}{\index{\-Main.\-cpp@{\-Main.\-cpp}!cc2540\-\_\-driver@{cc2540\-\_\-driver}}
+\index{cc2540\-\_\-driver@{cc2540\-\_\-driver}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{cc2540\-\_\-driver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-C2540\-\_\-\-Driver} {\bf cc2540\-\_\-driver} (
+\begin{DoxyParamCaption}
+\item[{(char $\ast$)\char`\"{}\-A\-C\-C\-E\-L\-E\-R\-O\-M\-E\-T\-E\-R\char`\"{}}]{, }
+\item[{(char $\ast$)}]{command\-\_\-pointers, }
+\item[{\&}]{dispatcher}
+\end{DoxyParamCaption}
+)}}\label{_main_8cpp_a5cadb247ff7915ee1ff94fef03eb46d2}
+\-The \-C\-C2540 \-Driver
+\begin{DoxyItemize}
+\item \-Here we use the default setup function.... \-We could change it 
+\end{DoxyItemize}\hypertarget{_main_8cpp_afe461d27b9c48d5921c00d521181f12f}{\index{\-Main.\-cpp@{\-Main.\-cpp}!loop@{loop}}
+\index{loop@{loop}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_main_8cpp_afe461d27b9c48d5921c00d521181f12f}
+\-This is the main worker function, which never quits until the process is complete. \-We trigger the \-A\-D\-C thread \-This puts the adc values in the \-Ringbuffer
+
+\-We we are good to go
+
+\-Get the values within the ring buffer and send them via the \-Bluetooth interface
+
+\-We run the engine 
+
+\-Definition at line 137 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{\index{\-Main.\-cpp@{\-Main.\-cpp}!setup@{setup}}
+\index{setup@{setup}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf setup} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_main_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Source \-Code -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-This function overrides the \-Arduino framework setup function, with our setup routines. \-We init the \-Ring \-Buffer object
+
+\-We set the analog reference (5\-V)
+
+\-We setup the analog sensor
+
+\-S\-E\-T\-U\-P \-B\-L\-U\-E\-T\-O\-O\-T\-H \-Set the callback table within the connection protocol handler
+
+\-We connect to the host device
+
+\-We set the global lock to true 
+
+\-Definition at line 106 of file \-Main.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_main_8cpp_af570f243f3075e66aa6b4938759826f0}{\index{\-Main.\-cpp@{\-Main.\-cpp}!buffer@{buffer}}
+\index{buffer@{buffer}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Connection\-Protocol\-Handler} protocol\-\_\-handler \& {\bf buffer}}}\label{_main_8cpp_af570f243f3075e66aa6b4938759826f0}
+
+
+\-The global ring buffer type. 
+
+\-A protocol handler. 
+
+\-Definition at line 51 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_a59c3abe6e696ab5a7f9449156021a38e}{\index{\-Main.\-cpp@{\-Main.\-cpp}!callback\-\_\-table@{callback\-\_\-table}}
+\index{callback\-\_\-table@{callback\-\_\-table}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{callback\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf callback\-\_\-t} {\bf callback\-\_\-table}\mbox{[}$\,$\mbox{]}}}\label{_main_8cpp_a59c3abe6e696ab5a7f9449156021a38e}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {
+
+                
+
+                
+                REBOOT,                                 
+      ConnectionProtocolHandler::generic,                     (void*)&
+      protocol_handler,
+                RESET,                                  
+      ConnectionProtocolHandler::generic,                     (void*)&protocol_handler,
+                SUSPEND,                                
+      ConnectionProtocolHandler::generic,                     (void*)&
+      protocol_handler,
+                RESUME,                                 
+      ConnectionProtocolHandler::generic,                     (void*)&protocol_handler,
+                START,                                  
+      ConnectionProtocolHandler::generic,                     (void*)&
+      protocol_handler,
+
+                
+                GET,                                    
+      ConnectionProtocolHandler::request,                     (void*)&connection
+}
+\end{DoxyCode}
+\-This is the callback table used for the bluetooth driver. 
+
+\-Definition at line 83 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_a21e60683ddd2875edf8f68b049a735af}{\index{\-Main.\-cpp@{\-Main.\-cpp}!global\-\_\-utilities@{global\-\_\-utilities}}
+\index{global\-\_\-utilities@{global\-\_\-utilities}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{global\-\_\-utilities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utilities} {\bf global\-\_\-utilities}}}\label{_main_8cpp_a21e60683ddd2875edf8f68b049a735af}
+
+
+\-Global utilities. 
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-Global \-Variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ 
+
+\-Definition at line 48 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_af7c094610a88ef878622b094472687f4}{\index{\-Main.\-cpp@{\-Main.\-cpp}!mma7361l\-\_\-pins@{mma7361l\-\_\-pins}}
+\index{mma7361l\-\_\-pins@{mma7361l\-\_\-pins}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{mma7361l\-\_\-pins}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-M\-M\-A7361\-L\-\_\-\-Driver} mma7361l\-\_\-driver \& {\bf mma7361l\-\_\-pins}}}\label{_main_8cpp_af7c094610a88ef878622b094472687f4}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {MMA7361L_SLEEP_PIN,
+                                                                           
+      MMA7361L_ST_PIN,
+                                                                           
+      MMA7361L_0_G_PIN,
+                                                                           
+      MMA7361L_G_SELECT_PIN,
+                                                                           
+      MMA7361L_X_AXIS,
+                                                                           
+      MMA7361L_Y_AXIS,
+                                                                           
+      MMA7361L_Z_AXIS}
+\end{DoxyCode}
+
+
+\-The pin maps for both the \-A\-D\-X\-L335 and the \-M\-M\-A7361\-L. 
+
+\-The \-Accelerometer \-Driver \-The \-M\-M\-A7361\-L 
+
+\-Definition at line 54 of file \-Main.\-cpp.
+
+\hypertarget{_main_8cpp_afcad73e19b2b2def099b01a0e3eee6d0}{\index{\-Main.\-cpp@{\-Main.\-cpp}!\-Serial@{\-Serial}}
+\index{\-Serial@{\-Serial}!Main.cpp@{\-Main.\-cpp}}
+\subsubsection[{\-Serial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Bluetooth\-\_\-\-Connection\-\_\-\-Handler} connection \& {\bf \-Serial}}}\label{_main_8cpp_afcad73e19b2b2def099b01a0e3eee6d0}
+
+
+\-The \-Bluetooth \-Command dispatcher. 
+
+\-The connection. 
+
+\-Definition at line 66 of file \-Main.\-cpp.
+

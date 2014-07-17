@@ -1,0 +1,165 @@
+\hypertarget{class_p_s4_u_s_b}{\section{\-P\-S4\-U\-S\-B \-Class \-Reference}
+\label{class_p_s4_u_s_b}\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}}
+}
+
+
+{\ttfamily \#include $<$\-P\-S4\-U\-S\-B.\-h$>$}
+
+\-Inheritance diagram for \-P\-S4\-U\-S\-B\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_p_s4_u_s_b}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_p_s4_u_s_b_a1ace884e418a0b8fe0f37bba7ea240e7}{\-P\-S4\-U\-S\-B} (\-U\-S\-B $\ast$p)
+\item 
+bool \hyperlink{class_p_s4_u_s_b_a3dd2b4e19516fb76d9442937102ea97f}{connected} ()
+\item 
+void \hyperlink{class_p_s4_u_s_b_abe78ea9b765b11c08b060f923ae9d8cd}{attach\-On\-Init} (void($\ast$func\-On\-Init)(void))
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{Indent}{\bf \-H\-I\-D\-Universal implementation}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_p_s4_u_s_b_acf805149a0417d40895d5315b6ead9e6}{\-Parse\-H\-I\-D\-Data} (\hyperlink{class_h_i_d}{\-H\-I\-D} $\ast$hid, bool is\-\_\-rpt\-\_\-id, uint8\-\_\-t len, uint8\-\_\-t $\ast$buf)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_p_s4_u_s_b_a591218572aa8c5f5402483d19c1eebc6}{\-On\-Init\-Successful} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf \-P\-S4\-Parser implementation}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_p_s4_u_s_b_a75dc09d15f149e1a1b96b8d2ccbbff89}{send\-Output\-Report} (\hyperlink{struct_p_s4_output}{\-P\-S4\-Output} $\ast$output)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{\-Detailed \-Description}
+\-This class implements support for the \-P\-S4 controller via \-U\-S\-B. \-It uses the \hyperlink{class_h_i_d_universal}{\-H\-I\-D\-Universal} class for all the \-U\-S\-B communication. 
+
+\-Definition at line 31 of file \-P\-S4\-U\-S\-B.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_p_s4_u_s_b_a1ace884e418a0b8fe0f37bba7ea240e7}{\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}}
+\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!PS4USB@{\-P\-S4\-U\-S\-B}}
+\subsubsection[{\-P\-S4\-U\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-S4\-U\-S\-B\-::\-P\-S4\-U\-S\-B} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_u_s_b_a1ace884e418a0b8fe0f37bba7ea240e7}
+\-Constructor for the \hyperlink{class_p_s4_u_s_b}{\-P\-S4\-U\-S\-B} class. 
+\begin{DoxyParams}{\-Parameters}
+{\em p} & \-Pointer to the \-U\-S\-B class instance. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 37 of file \-P\-S4\-U\-S\-B.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_p_s4_u_s_b_abe78ea9b765b11c08b060f923ae9d8cd}{\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!attach\-On\-Init@{attach\-On\-Init}}
+\index{attach\-On\-Init@{attach\-On\-Init}!PS4USB@{\-P\-S4\-U\-S\-B}}
+\subsubsection[{attach\-On\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-S4\-U\-S\-B\-::attach\-On\-Init} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{func\-On\-Init}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_u_s_b_abe78ea9b765b11c08b060f923ae9d8cd}
+\-Used to call your own function when the device is successfully initialized. 
+\begin{DoxyParams}{\-Parameters}
+{\em func\-On\-Init} & \-Function to call. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 54 of file \-P\-S4\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s4_u_s_b_a3dd2b4e19516fb76d9442937102ea97f}{\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!connected@{connected}}
+\index{connected@{connected}!PS4USB@{\-P\-S4\-U\-S\-B}}
+\subsubsection[{connected}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-S4\-U\-S\-B\-::connected} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_p_s4_u_s_b_a3dd2b4e19516fb76d9442937102ea97f}
+\-Used to check if a \-P\-S4 controller is connected. \begin{DoxyReturn}{\-Returns}
+\-Returns true if it is connected. 
+\end{DoxyReturn}
+
+
+\-Definition at line 46 of file \-P\-S4\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s4_u_s_b_a591218572aa8c5f5402483d19c1eebc6}{\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!\-On\-Init\-Successful@{\-On\-Init\-Successful}}
+\index{\-On\-Init\-Successful@{\-On\-Init\-Successful}!PS4USB@{\-P\-S4\-U\-S\-B}}
+\subsubsection[{\-On\-Init\-Successful}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-P\-S4\-U\-S\-B\-::\-On\-Init\-Successful} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_p_s4_u_s_b_a591218572aa8c5f5402483d19c1eebc6}
+\-Called when a device is successfully initialized. \-Use attach\-On\-Init(void ($\ast$func\-On\-Init)(void)) to call your own function. \-This is useful for instance if you want to set the \-L\-E\-Ds in a specific way. 
+
+\-Reimplemented from \hyperlink{class_h_i_d_universal_a60f06d86767b4b2c973d08383c7a0048}{\-H\-I\-D\-Universal}.
+
+
+
+\-Definition at line 77 of file \-P\-S4\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s4_u_s_b_acf805149a0417d40895d5315b6ead9e6}{\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!\-Parse\-H\-I\-D\-Data@{\-Parse\-H\-I\-D\-Data}}
+\index{\-Parse\-H\-I\-D\-Data@{\-Parse\-H\-I\-D\-Data}!PS4USB@{\-P\-S4\-U\-S\-B}}
+\subsubsection[{\-Parse\-H\-I\-D\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-P\-S4\-U\-S\-B\-::\-Parse\-H\-I\-D\-Data} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-I\-D} $\ast$}]{hid, }
+\item[{bool}]{is\-\_\-rpt\-\_\-id, }
+\item[{uint8\-\_\-t}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_p_s4_u_s_b_acf805149a0417d40895d5315b6ead9e6}
+\-Used to parse \-U\-S\-B \hyperlink{class_h_i_d}{\-H\-I\-D} data. 
+\begin{DoxyParams}{\-Parameters}
+{\em hid} & \-Pointer to the \hyperlink{class_h_i_d}{\-H\-I\-D} class. \\
+\hline
+{\em is\-\_\-rpt\-\_\-id} & \-Only used for \-Hubs. \\
+\hline
+{\em len} & \-The length of the incoming data. \\
+\hline
+{\em buf} & \-Pointer to the data buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{class_h_i_d_universal_abac95ce57e678236993d85cbbf0c6c32}{\-H\-I\-D\-Universal}.
+
+
+
+\-Definition at line 67 of file \-P\-S4\-U\-S\-B.\-h.
+
+\hypertarget{class_p_s4_u_s_b_a75dc09d15f149e1a1b96b8d2ccbbff89}{\index{\-P\-S4\-U\-S\-B@{\-P\-S4\-U\-S\-B}!send\-Output\-Report@{send\-Output\-Report}}
+\index{send\-Output\-Report@{send\-Output\-Report}!PS4USB@{\-P\-S4\-U\-S\-B}}
+\subsubsection[{send\-Output\-Report}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-P\-S4\-U\-S\-B\-::send\-Output\-Report} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-P\-S4\-Output} $\ast$}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}\label{class_p_s4_u_s_b_a75dc09d15f149e1a1b96b8d2ccbbff89}
+\-Send the output to the \-P\-S4 controller. \-This is implemented in \hyperlink{_p_s4_b_t_8h}{\-P\-S4\-B\-T.\-h} and \hyperlink{_p_s4_u_s_b_8h}{\-P\-S4\-U\-S\-B.\-h}. 
+\begin{DoxyParams}{\-Parameters}
+{\em output} & \-Pointer to \hyperlink{struct_p_s4_output}{\-P\-S4\-Output} buffer; \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{class_p_s4_parser_a8788530b0c213dedfcf56b78e8ca4879}{\-P\-S4\-Parser}.
+
+
+
+\-Definition at line 90 of file \-P\-S4\-U\-S\-B.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{_p_s4_u_s_b_8h}{\-P\-S4\-U\-S\-B.\-h}\end{DoxyCompactItemize}

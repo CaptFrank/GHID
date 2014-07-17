@@ -1,0 +1,124 @@
+\hypertarget{class_a_c_m_async_oper}{\section{\-A\-C\-M\-Async\-Oper \-Class \-Reference}
+\label{class_a_c_m_async_oper}\index{\-A\-C\-M\-Async\-Oper@{\-A\-C\-M\-Async\-Oper}}
+}
+
+
+======================================================================  
+
+
+\-Inheritance diagram for \-A\-C\-M\-Async\-Oper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_c_m_async_oper}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_a_c_m_async_oper_a7713be3d35aeb18cdce534f4f317e967}{$\sim$\-A\-C\-M\-Async\-Oper} ()
+\begin{DoxyCompactList}\small\item\em \-Public context. \end{DoxyCompactList}\item 
+virtual uint8\-\_\-t \hyperlink{class_a_c_m_async_oper_af3e9315952212775f90eb3ccfff168c8}{\-On\-Init} (\hyperlink{class_a_c_m}{\-A\-C\-M} $\ast$pacm)
+\begin{DoxyCompactList}\small\item\em ====================================================================== \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_c_m_async_oper_a1495b1aa9969eeb0f6bc286c19c17606}{send\-\_\-frame} (int len, uint8\-\_\-t $\ast$frame)
+\item 
+bool \hyperlink{class_a_c_m_async_oper_a4088870a98b79011b3b8a7dd0028144c}{get\-\_\-frame} (uint8\-\_\-t $\ast$buf, uint16\-\_\-t $\ast$len)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+====================================================================== 
+
+\-This is the \hyperlink{class_a_c_m}{\-A\-C\-M} class object which extends the \hyperlink{class_c_d_c_async_oper}{\-C\-D\-C\-Async\-Oper} framework included in the \-Arduino package.
+
+\-It provides the standard asynchornous method to init and send/receive \-U\-S\-B packets from one node to the other. 
+
+\-Definition at line 68 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_a_c_m_async_oper_a7713be3d35aeb18cdce534f4f317e967}{\index{\-A\-C\-M\-Async\-Oper@{\-A\-C\-M\-Async\-Oper}!$\sim$\-A\-C\-M\-Async\-Oper@{$\sim$\-A\-C\-M\-Async\-Oper}}
+\index{$\sim$\-A\-C\-M\-Async\-Oper@{$\sim$\-A\-C\-M\-Async\-Oper}!ACMAsyncOper@{\-A\-C\-M\-Async\-Oper}}
+\subsubsection[{$\sim$\-A\-C\-M\-Async\-Oper}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-A\-C\-M\-Async\-Oper\-::$\sim$\-A\-C\-M\-Async\-Oper} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_c_m_async_oper_a7713be3d35aeb18cdce534f4f317e967}
+
+
+\-Public context. 
+
+\-This is the vitural deconstructor of the class. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_a_c_m_async_oper_a4088870a98b79011b3b8a7dd0028144c}{\index{\-A\-C\-M\-Async\-Oper@{\-A\-C\-M\-Async\-Oper}!get\-\_\-frame@{get\-\_\-frame}}
+\index{get\-\_\-frame@{get\-\_\-frame}!ACMAsyncOper@{\-A\-C\-M\-Async\-Oper}}
+\subsubsection[{get\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-A\-C\-M\-Async\-Oper\-::get\-\_\-frame} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{buf, }
+\item[{uint16\-\_\-t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_async_oper_a4088870a98b79011b3b8a7dd0028144c}
+\-This method gets a frame from the \-U\-S\-B controller.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buf} & -\/ the buffer where our data lies \\
+\hline
+{\em len} & -\/ the length of the data to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ returns success 
+\end{DoxyReturn}
+\hypertarget{class_a_c_m_async_oper_af3e9315952212775f90eb3ccfff168c8}{\index{\-A\-C\-M\-Async\-Oper@{\-A\-C\-M\-Async\-Oper}!\-On\-Init@{\-On\-Init}}
+\index{\-On\-Init@{\-On\-Init}!ACMAsyncOper@{\-A\-C\-M\-Async\-Oper}}
+\subsubsection[{\-On\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-Async\-Oper\-::\-On\-Init} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-A\-C\-M} $\ast$}]{pacm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_c_m_async_oper_af3e9315952212775f90eb3ccfff168c8}
+
+
+====================================================================== 
+
+\-This is the init method of the class extended from the parent class.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pacm} & -\/ the acm handle \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{class_c_d_c_async_oper_a899353c3cbf83d7f874d11e5d9db4722}{\-C\-D\-C\-Async\-Oper}.
+
+
+
+\-Definition at line 125 of file \-Mouse\-\_\-\-Chronos.\-cpp.
+
+\hypertarget{class_a_c_m_async_oper_a1495b1aa9969eeb0f6bc286c19c17606}{\index{\-A\-C\-M\-Async\-Oper@{\-A\-C\-M\-Async\-Oper}!send\-\_\-frame@{send\-\_\-frame}}
+\index{send\-\_\-frame@{send\-\_\-frame}!ACMAsyncOper@{\-A\-C\-M\-Async\-Oper}}
+\subsubsection[{send\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-A\-C\-M\-Async\-Oper\-::send\-\_\-frame} (
+\begin{DoxyParamCaption}
+\item[{int}]{len, }
+\item[{uint8\-\_\-t $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_async_oper_a1495b1aa9969eeb0f6bc286c19c17606}
+\-This is the usb frame sender utility function.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em len} & -\/ the length of the frame to send \\
+\hline
+{\em frame} & -\/ the frame buffer to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ returns success 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\hyperlink{_mouse___chronos_8cpp}{\-Mouse\-\_\-\-Chronos.\-cpp}\end{DoxyCompactItemize}

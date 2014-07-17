@@ -1,0 +1,209 @@
+\hypertarget{class_software_serial}{\section{\-Software\-Serial \-Class \-Reference}
+\label{class_software_serial}\index{\-Software\-Serial@{\-Software\-Serial}}
+}
+
+
+{\ttfamily \#include $<$\-Software\-Serial.\-h$>$}
+
+\-Inheritance diagram for \-Software\-Serial\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_software_serial}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_software_serial_aab36336db4a1ca5073071c07d910cb87}{\-Software\-Serial} (uint8\-\_\-t receive\-Pin, uint8\-\_\-t transmit\-Pin, bool inverse\-\_\-logic=false)
+\item 
+\hyperlink{class_software_serial_af6b8fff282e09a6cecc5df669ae71ee7}{$\sim$\-Software\-Serial} ()
+\item 
+void \hyperlink{class_software_serial_af1b194359d70894b3a2f38236a68480e}{begin} (long speed)
+\item 
+bool \hyperlink{class_software_serial_ad235539ef28939836bd0bde9387eb8fc}{listen} ()
+\item 
+void \hyperlink{class_software_serial_a9034270f7de617b3cc7d3f38f3a8e0df}{end} ()
+\item 
+bool \hyperlink{class_software_serial_a7b3fb4a8f57d2b5f2233f841d71ef80f}{is\-Listening} ()
+\item 
+bool \hyperlink{class_software_serial_ac6d4d5dfbe05515bf23766e2c8abfd46}{overflow} ()
+\item 
+int \hyperlink{class_software_serial_a51c2d2e79f0d982b1ef9cc9ac4453648}{peek} ()
+\item 
+virtual size\-\_\-t \hyperlink{class_software_serial_ac24e5c6af203ec636c0a200b0cb3caf0}{write} (uint8\-\_\-t byte)
+\item 
+virtual int \hyperlink{class_software_serial_a2d0b2f2868d519c716114777f482705b}{read} ()
+\item 
+virtual int \hyperlink{class_software_serial_a4cbf77a4e90e15ca576972d7952659c5}{available} ()
+\item 
+virtual void \hyperlink{class_software_serial_a9a46db376a19fc958e011e38799b902c}{flush} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_software_serial_a1546972033f250750ffd731dd15acfdf}{handle\-\_\-interrupt} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 47 of file \-Software\-Serial.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_software_serial_aab36336db4a1ca5073071c07d910cb87}{\index{\-Software\-Serial@{\-Software\-Serial}!\-Software\-Serial@{\-Software\-Serial}}
+\index{\-Software\-Serial@{\-Software\-Serial}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{\-Software\-Serial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Software\-Serial\-::\-Software\-Serial} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{receive\-Pin, }
+\item[{uint8\-\_\-t}]{transmit\-Pin, }
+\item[{bool}]{inverse\-\_\-logic = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_software_serial_aab36336db4a1ca5073071c07d910cb87}
+
+
+\-Definition at line 338 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_af6b8fff282e09a6cecc5df669ae71ee7}{\index{\-Software\-Serial@{\-Software\-Serial}!$\sim$\-Software\-Serial@{$\sim$\-Software\-Serial}}
+\index{$\sim$\-Software\-Serial@{$\sim$\-Software\-Serial}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{$\sim$\-Software\-Serial}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Software\-Serial\-::$\sim$\-Software\-Serial} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_software_serial_af6b8fff282e09a6cecc5df669ae71ee7}
+
+
+\-Definition at line 353 of file \-Software\-Serial.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_software_serial_a4cbf77a4e90e15ca576972d7952659c5}{\index{\-Software\-Serial@{\-Software\-Serial}!available@{available}}
+\index{available@{available}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{available}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Software\-Serial\-::available} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_software_serial_a4cbf77a4e90e15ca576972d7952659c5}
+
+
+\-Definition at line 441 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_af1b194359d70894b3a2f38236a68480e}{\index{\-Software\-Serial@{\-Software\-Serial}!begin@{begin}}
+\index{begin@{begin}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Software\-Serial\-::begin} (
+\begin{DoxyParamCaption}
+\item[{long}]{speed}
+\end{DoxyParamCaption}
+)}}\label{class_software_serial_af1b194359d70894b3a2f38236a68480e}
+
+
+\-Definition at line 382 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_a9034270f7de617b3cc7d3f38f3a8e0df}{\index{\-Software\-Serial@{\-Software\-Serial}!end@{end}}
+\index{end@{end}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Software\-Serial\-::end} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_software_serial_a9034270f7de617b3cc7d3f38f3a8e0df}
+
+
+\-Definition at line 418 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_a9a46db376a19fc958e011e38799b902c}{\index{\-Software\-Serial@{\-Software\-Serial}!flush@{flush}}
+\index{flush@{flush}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Software\-Serial\-::flush} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_software_serial_a9a46db376a19fc958e011e38799b902c}
+
+
+\-Definition at line 499 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_a1546972033f250750ffd731dd15acfdf}{\index{\-Software\-Serial@{\-Software\-Serial}!handle\-\_\-interrupt@{handle\-\_\-interrupt}}
+\index{handle\-\_\-interrupt@{handle\-\_\-interrupt}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{handle\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Software\-Serial\-::handle\-\_\-interrupt} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{class_software_serial_a1546972033f250750ffd731dd15acfdf}
+
+
+\-Definition at line 299 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_a7b3fb4a8f57d2b5f2233f841d71ef80f}{\index{\-Software\-Serial@{\-Software\-Serial}!is\-Listening@{is\-Listening}}
+\index{is\-Listening@{is\-Listening}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{is\-Listening}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Software\-Serial\-::is\-Listening} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_software_serial_a7b3fb4a8f57d2b5f2233f841d71ef80f}
+
+
+\-Definition at line 88 of file \-Software\-Serial.\-h.
+
+\hypertarget{class_software_serial_ad235539ef28939836bd0bde9387eb8fc}{\index{\-Software\-Serial@{\-Software\-Serial}!listen@{listen}}
+\index{listen@{listen}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{listen}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Software\-Serial\-::listen} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_software_serial_ad235539ef28939836bd0bde9387eb8fc}
+
+
+\-Definition at line 182 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_ac6d4d5dfbe05515bf23766e2c8abfd46}{\index{\-Software\-Serial@{\-Software\-Serial}!overflow@{overflow}}
+\index{overflow@{overflow}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{overflow}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Software\-Serial\-::overflow} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_software_serial_ac6d4d5dfbe05515bf23766e2c8abfd46}
+
+
+\-Definition at line 89 of file \-Software\-Serial.\-h.
+
+\hypertarget{class_software_serial_a51c2d2e79f0d982b1ef9cc9ac4453648}{\index{\-Software\-Serial@{\-Software\-Serial}!peek@{peek}}
+\index{peek@{peek}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{peek}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Software\-Serial\-::peek} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_software_serial_a51c2d2e79f0d982b1ef9cc9ac4453648}
+
+
+\-Definition at line 510 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_a2d0b2f2868d519c716114777f482705b}{\index{\-Software\-Serial@{\-Software\-Serial}!read@{read}}
+\index{read@{read}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Software\-Serial\-::read} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_software_serial_a2d0b2f2868d519c716114777f482705b}
+
+
+\-Definition at line 426 of file \-Software\-Serial.\-cpp.
+
+\hypertarget{class_software_serial_ac24e5c6af203ec636c0a200b0cb3caf0}{\index{\-Software\-Serial@{\-Software\-Serial}!write@{write}}
+\index{write@{write}!SoftwareSerial@{\-Software\-Serial}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf \-Software\-Serial\-::write} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_software_serial_ac24e5c6af203ec636c0a200b0cb3caf0}
+
+
+\-Definition at line 449 of file \-Software\-Serial.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\hyperlink{_software_serial_8h}{\-Software\-Serial.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\hyperlink{_software_serial_8cpp}{\-Software\-Serial.\-cpp}\end{DoxyCompactItemize}

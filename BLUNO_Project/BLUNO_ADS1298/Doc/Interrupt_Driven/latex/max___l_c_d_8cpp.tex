@@ -1,0 +1,116 @@
+\hypertarget{max___l_c_d_8cpp}{\section{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included \-Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.0-\/master/max\-\_\-\-L\-C\-D.cpp \-File \-Reference}
+\label{max___l_c_d_8cpp}\index{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/max\-\_\-\-L\-C\-D.\-cpp@{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/max\-\_\-\-L\-C\-D.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}max\-\_\-\-L\-C\-D.\-h\char`\"{}}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_af8903d8eea3868940c60af887473b152}{\-R\-S}~0x04
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_a07484107e6d9fdf38b53edf631d6511d}{\-E}~0x08
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_a09f62b20e3efd8eb9599770735149d5c}{\-S\-E\-T\-\_\-\-R\-S}~lcd\-Pins $|$= \hyperlink{max___l_c_d_8cpp_af8903d8eea3868940c60af887473b152}{\-R\-S}
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_af60058c58ef619d81e5779d74324041e}{\-C\-L\-R\-\_\-\-R\-S}~lcd\-Pins \&= $\sim$\hyperlink{max___l_c_d_8cpp_af8903d8eea3868940c60af887473b152}{\-R\-S}
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_a601271464f1be5c52185c85a1199e784}{\-S\-E\-T\-\_\-\-E}~lcd\-Pins $|$= \hyperlink{max___l_c_d_8cpp_a07484107e6d9fdf38b53edf631d6511d}{\-E}
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_a2382451f16ea0f18bf54dba5c7cfb471}{\-C\-L\-R\-\_\-\-E}~lcd\-Pins \&= $\sim$\hyperlink{max___l_c_d_8cpp_a07484107e6d9fdf38b53edf631d6511d}{\-E}
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_ab9142420ababc8fe568edee4796183ba}{\-S\-E\-N\-Dlcd\-Pins}()~p\-Usb-\/$>$gpio\-Wr( lcd\-Pins )
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_ac3f990e58b6f25a5e0d2935f9d03eee9}{\-L\-C\-D\-\_\-sendcmd}(a)
+\item 
+\#define \hyperlink{max___l_c_d_8cpp_ad16e47e8718230d420aee7e9dd0360e4}{\-L\-C\-D\-\_\-sendchar}(a)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{max___l_c_d_8cpp_a2382451f16ea0f18bf54dba5c7cfb471}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-C\-L\-R\-\_\-\-E@{\-C\-L\-R\-\_\-\-E}}
+\index{\-C\-L\-R\-\_\-\-E@{\-C\-L\-R\-\_\-\-E}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-C\-L\-R\-\_\-\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-L\-R\-\_\-\-E}~lcd\-Pins \&= $\sim${\bf \-E}}}\label{max___l_c_d_8cpp_a2382451f16ea0f18bf54dba5c7cfb471}
+
+
+\-Definition at line 28 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_af60058c58ef619d81e5779d74324041e}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-C\-L\-R\-\_\-\-R\-S@{\-C\-L\-R\-\_\-\-R\-S}}
+\index{\-C\-L\-R\-\_\-\-R\-S@{\-C\-L\-R\-\_\-\-R\-S}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-C\-L\-R\-\_\-\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-L\-R\-\_\-\-R\-S}~lcd\-Pins \&= $\sim${\bf \-R\-S}}}\label{max___l_c_d_8cpp_af60058c58ef619d81e5779d74324041e}
+
+
+\-Definition at line 26 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_a07484107e6d9fdf38b53edf631d6511d}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-E@{\-E}}
+\index{\-E@{\-E}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E}~0x08}}\label{max___l_c_d_8cpp_a07484107e6d9fdf38b53edf631d6511d}
+
+
+\-Definition at line 23 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_ad16e47e8718230d420aee7e9dd0360e4}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-L\-C\-D\-\_\-sendchar@{\-L\-C\-D\-\_\-sendchar}}
+\index{\-L\-C\-D\-\_\-sendchar@{\-L\-C\-D\-\_\-sendchar}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-L\-C\-D\-\_\-sendchar}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-C\-D\-\_\-sendchar}(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)}}\label{max___l_c_d_8cpp_ad16e47e8718230d420aee7e9dd0360e4}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+{   SET_RS;             \
+                            sendbyte(a);    \
+                        }
+\end{DoxyCode}
+
+
+\-Definition at line 36 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_ac3f990e58b6f25a5e0d2935f9d03eee9}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-L\-C\-D\-\_\-sendcmd@{\-L\-C\-D\-\_\-sendcmd}}
+\index{\-L\-C\-D\-\_\-sendcmd@{\-L\-C\-D\-\_\-sendcmd}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-L\-C\-D\-\_\-sendcmd}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-L\-C\-D\-\_\-sendcmd}(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)}}\label{max___l_c_d_8cpp_ac3f990e58b6f25a5e0d2935f9d03eee9}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+{   CLR_RS;             \
+                            sendbyte(a);    \
+                        }
+\end{DoxyCode}
+
+
+\-Definition at line 32 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_af8903d8eea3868940c60af887473b152}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-R\-S@{\-R\-S}}
+\index{\-R\-S@{\-R\-S}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-R\-S}~0x04}}\label{max___l_c_d_8cpp_af8903d8eea3868940c60af887473b152}
+
+
+\-Definition at line 22 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_ab9142420ababc8fe568edee4796183ba}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-S\-E\-N\-Dlcd\-Pins@{\-S\-E\-N\-Dlcd\-Pins}}
+\index{\-S\-E\-N\-Dlcd\-Pins@{\-S\-E\-N\-Dlcd\-Pins}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-S\-E\-N\-Dlcd\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-N\-Dlcd\-Pins}(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~p\-Usb-\/$>$gpio\-Wr( lcd\-Pins )}}\label{max___l_c_d_8cpp_ab9142420ababc8fe568edee4796183ba}
+
+
+\-Definition at line 30 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_a601271464f1be5c52185c85a1199e784}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-S\-E\-T\-\_\-\-E@{\-S\-E\-T\-\_\-\-E}}
+\index{\-S\-E\-T\-\_\-\-E@{\-S\-E\-T\-\_\-\-E}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-S\-E\-T\-\_\-\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-T\-\_\-\-E}~lcd\-Pins $|$= {\bf \-E}}}\label{max___l_c_d_8cpp_a601271464f1be5c52185c85a1199e784}
+
+
+\-Definition at line 27 of file max\-\_\-\-L\-C\-D.\-cpp.
+
+\hypertarget{max___l_c_d_8cpp_a09f62b20e3efd8eb9599770735149d5c}{\index{max\-\_\-\-L\-C\-D.\-cpp@{max\-\_\-\-L\-C\-D.\-cpp}!\-S\-E\-T\-\_\-\-R\-S@{\-S\-E\-T\-\_\-\-R\-S}}
+\index{\-S\-E\-T\-\_\-\-R\-S@{\-S\-E\-T\-\_\-\-R\-S}!max_LCD.cpp@{max\-\_\-\-L\-C\-D.\-cpp}}
+\subsubsection[{\-S\-E\-T\-\_\-\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-T\-\_\-\-R\-S}~lcd\-Pins $|$= {\bf \-R\-S}}}\label{max___l_c_d_8cpp_a09f62b20e3efd8eb9599770735149d5c}
+
+
+\-Definition at line 25 of file max\-\_\-\-L\-C\-D.\-cpp.
+

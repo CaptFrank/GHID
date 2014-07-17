@@ -1,0 +1,41 @@
+\hypertarget{_connection_handler_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-Connection\-Handler.h \-File \-Reference}
+\label{_connection_handler_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-Connection\-Handler.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\-Connection\-Handler.\-h}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Data\-Processor.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtx__buffer__t}{tx\-\_\-buffer\-\_\-t}
+\item 
+struct \hyperlink{structcallback__t}{callback\-\_\-t}
+\item 
+class \hyperlink{class_connection___handler}{\-Connection\-\_\-\-Handler}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5}{connection\-\_\-type\-\_\-t} \{ \hyperlink{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5aeecf9a31a37e64bd75b3b7bcdabcadcb}{\-D\-A\-T\-A\-\_\-\-S\-T\-R\-E\-A\-M\-\_\-\-B\-A\-S\-E\-D}, 
+\hyperlink{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5a06d5bd026dd9b0269a49b251d68894b8}{\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-B\-A\-S\-E\-D}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5}{\index{\-Connection\-Handler.\-h@{\-Connection\-Handler.\-h}!connection\-\_\-type\-\_\-t@{connection\-\_\-type\-\_\-t}}
+\index{connection\-\_\-type\-\_\-t@{connection\-\_\-type\-\_\-t}!ConnectionHandler.h@{\-Connection\-Handler.\-h}}
+\subsubsection[{connection\-\_\-type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf connection\-\_\-type\-\_\-t}}}\label{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5}
+\-This determines what kind of connection the bluetooth connection is \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-D\-A\-T\-A\-\_\-\-S\-T\-R\-E\-A\-M\-\_\-\-B\-A\-S\-E\-D@{\-D\-A\-T\-A\-\_\-\-S\-T\-R\-E\-A\-M\-\_\-\-B\-A\-S\-E\-D}!\-Connection\-Handler.\-h@{\-Connection\-Handler.\-h}}\index{\-Connection\-Handler.\-h@{\-Connection\-Handler.\-h}!\-D\-A\-T\-A\-\_\-\-S\-T\-R\-E\-A\-M\-\_\-\-B\-A\-S\-E\-D@{\-D\-A\-T\-A\-\_\-\-S\-T\-R\-E\-A\-M\-\_\-\-B\-A\-S\-E\-D}}\item[{\em 
+\hypertarget{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5aeecf9a31a37e64bd75b3b7bcdabcadcb}{\-D\-A\-T\-A\-\_\-\-S\-T\-R\-E\-A\-M\-\_\-\-B\-A\-S\-E\-D}\label{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5aeecf9a31a37e64bd75b3b7bcdabcadcb}
+}]\index{\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-B\-A\-S\-E\-D@{\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-B\-A\-S\-E\-D}!\-Connection\-Handler.\-h@{\-Connection\-Handler.\-h}}\index{\-Connection\-Handler.\-h@{\-Connection\-Handler.\-h}!\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-B\-A\-S\-E\-D@{\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-B\-A\-S\-E\-D}}\item[{\em 
+\hypertarget{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5a06d5bd026dd9b0269a49b251d68894b8}{\-D\-A\-T\-A\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-B\-A\-S\-E\-D}\label{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5a06d5bd026dd9b0269a49b251d68894b8}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 42 of file \-Connection\-Handler.\-h.
+

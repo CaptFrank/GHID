@@ -1,0 +1,116 @@
+.TH "Included Libraries/twi.h" 3 "Sun Mar 30 2014" "Version version 2.0" "GHID Framework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Included Libraries/twi.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTWI_READY\fP   0"
+.br
+.ti -1c
+.RI "#define \fBTWI_MRX\fP   1"
+.br
+.ti -1c
+.RI "#define \fBTWI_MTX\fP   2"
+.br
+.ti -1c
+.RI "#define \fBTWI_SRX\fP   3"
+.br
+.ti -1c
+.RI "#define \fBTWI_STX\fP   4"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtwi_init\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtwi_setAddress\fP (uint8_t)"
+.br
+.ti -1c
+.RI "uint8_t \fBtwi_readFrom\fP (uint8_t, uint8_t *, uint8_t, uint8_t)"
+.br
+.ti -1c
+.RI "uint8_t \fBtwi_writeTo\fP (uint8_t, uint8_t *, uint8_t, uint8_t, uint8_t)"
+.br
+.ti -1c
+.RI "uint8_t \fBtwi_transmit\fP (const uint8_t *, uint8_t)"
+.br
+.ti -1c
+.RI "void \fBtwi_attachSlaveRxEvent\fP (void(*)(uint8_t *, int))"
+.br
+.ti -1c
+.RI "void \fBtwi_attachSlaveTxEvent\fP (void(*)(void))"
+.br
+.ti -1c
+.RI "void \fBtwi_reply\fP (uint8_t)"
+.br
+.ti -1c
+.RI "void \fBtwi_stop\fP (void)"
+.br
+.ti -1c
+.RI "void \fBtwi_releaseBus\fP (void)"
+.br
+.in -1c
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBTWI_MRX\fP   1"
+.PP
+Definition at line 36 of file twi\&.h\&.
+.SS "#define \fBTWI_MTX\fP   2"
+.PP
+Definition at line 37 of file twi\&.h\&.
+.SS "#define \fBTWI_READY\fP   0"
+.PP
+Definition at line 35 of file twi\&.h\&.
+.SS "#define \fBTWI_SRX\fP   3"
+.PP
+Definition at line 38 of file twi\&.h\&.
+.SS "#define \fBTWI_STX\fP   4"
+.PP
+Definition at line 39 of file twi\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void \fBtwi_attachSlaveRxEvent\fP (void(*)(uint8_t *, int))"
+.PP
+Definition at line 295 of file twi\&.c\&.
+.SS "void \fBtwi_attachSlaveTxEvent\fP (void(*)(void))"
+.PP
+Definition at line 306 of file twi\&.c\&.
+.SS "void \fBtwi_init\fP (void)"
+.PP
+Definition at line 68 of file twi\&.c\&.
+.SS "uint8_t \fBtwi_readFrom\fP (uint8_t, uint8_t *, uint8_t, uint8_t)"
+.PP
+Definition at line 115 of file twi\&.c\&.
+.SS "void \fBtwi_releaseBus\fP (void)"
+.PP
+Definition at line 354 of file twi\&.c\&.
+.SS "void \fBtwi_reply\fP (uint8_t)"
+.PP
+Definition at line 317 of file twi\&.c\&.
+.SS "void \fBtwi_setAddress\fP (uint8_t)"
+.PP
+Definition at line 99 of file twi\&.c\&.
+.SS "void \fBtwi_stop\fP (void)"
+.PP
+Definition at line 333 of file twi\&.c\&.
+.SS "uint8_t \fBtwi_transmit\fP (const uint8_t *, uint8_t)"
+.PP
+Definition at line 266 of file twi\&.c\&.
+.SS "uint8_t \fBtwi_writeTo\fP (uint8_t, uint8_t *, uint8_t, uint8_t, uint8_t)"
+.PP
+Definition at line 192 of file twi\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GHID Framework from the source code\&.

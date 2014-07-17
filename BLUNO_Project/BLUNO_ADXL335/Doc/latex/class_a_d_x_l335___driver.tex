@@ -1,0 +1,227 @@
+\hypertarget{class_a_d_x_l335___driver}{\section{\-A\-D\-X\-L335\-\_\-\-Driver \-Class \-Reference}
+\label{class_a_d_x_l335___driver}\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+}
+
+
+{\ttfamily \#include $<$\-A\-D\-X\-L335\-Driver.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_d_x_l335___driver_a02a4f31abd2b0e5d57ec0b579dd5ee43}{\-A\-D\-X\-L335\-\_\-\-Driver} (\hyperlink{struct_a_d_x_l335__pin__map__t}{\-A\-D\-X\-L335\-\_\-pin\-\_\-map\-\_\-t} $\ast$pin\-\_\-map, double ref)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_d_x_l335___driver_a59b15919c6331cd9461a1bdd4c76c9cd}{begin} ()
+\item 
+void \hyperlink{class_a_d_x_l335___driver_aac4c5aa339ed8acb9e109e3a4b1c2fd8}{run} (\hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$buff)
+\item 
+int \hyperlink{class_a_d_x_l335___driver_a2c7fc1ad1a43b35ffbc3ff81365b2b36}{get\-\_\-raw} (\hyperlink{_utilities_8h_ae7747145441b0591a5c04f20f6f9189a}{axis\-\_\-t} axis)
+\item 
+int \hyperlink{class_a_d_x_l335___driver_a6450cf850dc1bd28ff5004465ac794c0}{get\-\_\-volt} (\hyperlink{_utilities_8h_ae7747145441b0591a5c04f20f6f9189a}{axis\-\_\-t} axis)
+\item 
+int \hyperlink{class_a_d_x_l335___driver_aae84d9df4e2cc17804e6b65b56380446}{get\-\_\-accel} (\hyperlink{_utilities_8h_ae7747145441b0591a5c04f20f6f9189a}{axis\-\_\-t} axis)
+\item 
+void \hyperlink{class_a_d_x_l335___driver_a9d2a3cb74eae9505fc6c4c535929f82a}{get\-\_\-accel\-\_\-xyz} (int $\ast$\-\_\-\-X\-Axis, int $\ast$\-\_\-\-Y\-Axis, int $\ast$\-\_\-\-Z\-Axis)
+\item 
+int \hyperlink{class_a_d_x_l335___driver_ae2ea2184cdced49bbf81dd142558f0de}{get\-\_\-total\-\_\-vector} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the \-A\-D\-X355 \-Analog sensor driver. \-We use it to acquire data from the sensor as well as trigger actions within the sensor device. 
+
+\-Definition at line 41 of file \-A\-D\-X\-L335\-Driver.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_a_d_x_l335___driver_a02a4f31abd2b0e5d57ec0b579dd5ee43}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{\-A\-D\-X\-L335\-\_\-\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::\-A\-D\-X\-L335\-\_\-\-Driver} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-A\-D\-X\-L335\-\_\-pin\-\_\-map\-\_\-t} $\ast$}]{pin\-\_\-map, }
+\item[{double}]{ref}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_a02a4f31abd2b0e5d57ec0b579dd5ee43}
+
+
+\-Public \-Context. 
+
+\-This is the default constructor for the class. \-A pin map is passed to the constructor to allow for setting up of the device.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pin\-\_\-map} & -\/ \-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t$\ast$ \\
+\hline
+{\em ref} & -\/ \-The reference voltage\\
+\hline
+\end{DoxyParams}
+\-This is the default constructor for the class. \-A pin map is passed to the constructor to allow for setting up of the device.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pin\-\_\-map} & -\/ \-M\-M\-A7361\-L\-\_\-pin\-\_\-map\-\_\-t$\ast$ \\
+\hline
+\end{DoxyParams}
+\-We set the internal pin map reference
+
+\-Set the reference voltage 
+
+\-Definition at line 24 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_a_d_x_l335___driver_a59b15919c6331cd9461a1bdd4c76c9cd}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!begin@{begin}}
+\index{begin@{begin}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_a59b15919c6331cd9461a1bdd4c76c9cd}
+\-This is the pin setup method. \-We create the accelerometer object 
+
+\-Definition at line 36 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+\hypertarget{class_a_d_x_l335___driver_aae84d9df4e2cc17804e6b65b56380446}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!get\-\_\-accel@{get\-\_\-accel}}
+\index{get\-\_\-accel@{get\-\_\-accel}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-accel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::get\-\_\-accel} (
+\begin{DoxyParamCaption}
+\item[{{\bf axis\-\_\-t}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_aae84d9df4e2cc17804e6b65b56380446}
+\-This is a method that gets the accelerometer value of the selected axis.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em axis} & -\/ \-The axis needed to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The analog value 
+\end{DoxyReturn}
+\-We update the accelerometer values
+
+\-Temp data
+
+\-We read the raw value of the axis defined
+
+\-Nothing to do
+
+\-Map the input to a value 
+
+\-Definition at line 117 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+\hypertarget{class_a_d_x_l335___driver_a9d2a3cb74eae9505fc6c4c535929f82a}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!get\-\_\-accel\-\_\-xyz@{get\-\_\-accel\-\_\-xyz}}
+\index{get\-\_\-accel\-\_\-xyz@{get\-\_\-accel\-\_\-xyz}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-accel\-\_\-xyz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::get\-\_\-accel\-\_\-xyz} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{\-\_\-\-X\-Axis, }
+\item[{int $\ast$}]{\-\_\-\-Y\-Axis, }
+\item[{int $\ast$}]{\-\_\-\-Z\-Axis}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_a9d2a3cb74eae9505fc6c4c535929f82a}
+\-This method does all conversions and returns the values.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-\_\-\-X\-Axis} & -\/ \-The x axis value \\
+\hline
+{\em \-\_\-\-Y\-Axis} & -\/ \-The y axis value \\
+\hline
+{\em \-\_\-\-Z\-Axis} & -\/ \-The z axis value \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 156 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+\hypertarget{class_a_d_x_l335___driver_a2c7fc1ad1a43b35ffbc3ff81365b2b36}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!get\-\_\-raw@{get\-\_\-raw}}
+\index{get\-\_\-raw@{get\-\_\-raw}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-raw}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::get\-\_\-raw} (
+\begin{DoxyParamCaption}
+\item[{{\bf axis\-\_\-t}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_a2c7fc1ad1a43b35ffbc3ff81365b2b36}
+\-This is a method that gets the raw selected axis value.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em axis} & -\/ \-The axis needed to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The analog value 
+\end{DoxyReturn}
+\-We read the raw value of the axis defined
+
+\-Nothing to do 
+
+\-Definition at line 80 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+\hypertarget{class_a_d_x_l335___driver_ae2ea2184cdced49bbf81dd142558f0de}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!get\-\_\-total\-\_\-vector@{get\-\_\-total\-\_\-vector}}
+\index{get\-\_\-total\-\_\-vector@{get\-\_\-total\-\_\-vector}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-total\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::get\-\_\-total\-\_\-vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_ae2ea2184cdced49bbf81dd142558f0de}
+\-This gets the total vector of the 3 components.
+
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The total vector 
+\end{DoxyReturn}
+
+
+\-Definition at line 169 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+\hypertarget{class_a_d_x_l335___driver_a6450cf850dc1bd28ff5004465ac794c0}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!get\-\_\-volt@{get\-\_\-volt}}
+\index{get\-\_\-volt@{get\-\_\-volt}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{get\-\_\-volt}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::get\-\_\-volt} (
+\begin{DoxyParamCaption}
+\item[{{\bf axis\-\_\-t}}]{axis}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_a6450cf850dc1bd28ff5004465ac794c0}
+\-This is a method that gets the voltage of the selected axis.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em axis} & -\/ \-The axis needed to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int -\/ \-The analog value 
+\end{DoxyReturn}
+
+
+\-Definition at line 107 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+\hypertarget{class_a_d_x_l335___driver_aac4c5aa339ed8acb9e109e3a4b1c2fd8}{\index{\-A\-D\-X\-L335\-\_\-\-Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}!run@{run}}
+\index{run@{run}!ADXL335_Driver@{\-A\-D\-X\-L335\-\_\-\-Driver}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-X\-L335\-\_\-\-Driver\-::run} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Ring\-Buff\-\_\-t} $\ast$}]{buff}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_x_l335___driver_aac4c5aa339ed8acb9e109e3a4b1c2fd8}
+\-This method runs the \-A\-D\-C thread
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buff} & -\/ \-The \-Ring\-Buff type \\
+\hline
+\end{DoxyParams}
+\-Containers
+
+\-We get all axis values
+
+\-Create a data container
+
+\-We put the data into the ringbuffer 
+
+\-Definition at line 50 of file \-A\-D\-X\-L335\-Driver.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\hyperlink{_a_d_x_l335_driver_8h}{\-A\-D\-X\-L335\-Driver.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-X\-L335/\-Src/\-Main/\hyperlink{_a_d_x_l335_driver_8cpp}{\-A\-D\-X\-L335\-Driver.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\hypertarget{class_bluetooth___dispatcher}{\section{\-Bluetooth\-\_\-\-Dispatcher \-Class \-Reference}
+\label{class_bluetooth___dispatcher}\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+}
+
+
+{\ttfamily \#include $<$\-Bluetooth\-Command\-Dispatcher.\-h$>$}
+
+\-Inheritance diagram for \-Bluetooth\-\_\-\-Dispatcher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bluetooth___dispatcher}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bluetooth___dispatcher_a9831e970fe092adc85d2cc3426052392}{\-Bluetooth\-\_\-\-Dispatcher} (\-Hardware\-Serial $\ast$serial)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth___dispatcher_a8cf1e22a7e599c1fa8d6741b7b267b3b}{setup\-\_\-dispatch} (uint8\-\_\-t $\ast$command\-\_\-ptr, uint8\-\_\-t length)
+\item 
+bool \hyperlink{class_bluetooth___dispatcher_a9de32e4c1d450d101738185124a873a8}{run\-\_\-dispatch} ()
+\item 
+\hyperlink{structresponse__t}{response\-\_\-t} $\ast$ \hyperlink{class_bluetooth___dispatcher_ab7974859a1f0150b6d0861c7200b9e7d}{get\-\_\-response} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-Hardware\-Serial $\ast$ \hyperlink{class_bluetooth___dispatcher_a9b30fd1951f4e064a707ec75b941d18e}{\-\_\-serial}
+\begin{DoxyCompactList}\small\item\em \-Private \-Context. \end{DoxyCompactList}\item 
+\hyperlink{structresponse__t}{response\-\_\-t} $\ast$ \hyperlink{class_bluetooth___dispatcher_a37efed7ffe1b2bcc846ade2406174796}{\-\_\-response}
+\begin{DoxyCompactList}\small\item\em \-The response pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the class which handles the command dispatches to the \-Bluetooth module. \-It is important that this handler class is only for command dispatch to the bluetooth module and not for data. 
+
+\-Definition at line 22 of file \-Bluetooth\-Command\-Dispatcher.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_bluetooth___dispatcher_a9831e970fe092adc85d2cc3426052392}{\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!Bluetooth_Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\subsubsection[{\-Bluetooth\-\_\-\-Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Bluetooth\-\_\-\-Dispatcher\-::\-Bluetooth\-\_\-\-Dispatcher} (
+\begin{DoxyParamCaption}
+\item[{\-Hardware\-Serial $\ast$}]{serial}
+\end{DoxyParamCaption}
+)}}\label{class_bluetooth___dispatcher_a9831e970fe092adc85d2cc3426052392}
+
+
+\-Public \-Context. 
+
+\-The default constructor for the class \-We set the internal \-Serial entry
+
+\-We set the appropriate baud rate 
+
+\-Definition at line 13 of file \-Bluetooth\-Command\-Dispatcher.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_bluetooth___dispatcher_ab7974859a1f0150b6d0861c7200b9e7d}{\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!get\-\_\-response@{get\-\_\-response}}
+\index{get\-\_\-response@{get\-\_\-response}!Bluetooth_Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\subsubsection[{get\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf response\-\_\-t} $\ast$ {\bf \-Bluetooth\-\_\-\-Dispatcher\-::get\-\_\-response} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bluetooth___dispatcher_ab7974859a1f0150b6d0861c7200b9e7d}
+\-Get access to the response entity. 
+
+\-Definition at line 55 of file \-Bluetooth\-Command\-Dispatcher.\-cpp.
+
+\hypertarget{class_bluetooth___dispatcher_a9de32e4c1d450d101738185124a873a8}{\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!run\-\_\-dispatch@{run\-\_\-dispatch}}
+\index{run\-\_\-dispatch@{run\-\_\-dispatch}!Bluetooth_Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\subsubsection[{run\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Bluetooth\-\_\-\-Dispatcher\-::run\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___dispatcher_a9de32e4c1d450d101738185124a873a8}
+\-This is the run dispatch method
+
+\begin{DoxyReturn}{\-Returns}
+success -\/ \-If the dispatch was successful 
+\end{DoxyReturn}
+\-We send the dispatch and we listen for a response
+
+\-We check for the ack from the \-C\-C2540
+
+\-Check if we got something. 
+
+\-Reimplemented from \hyperlink{class_dispatcher_ac94ea7b55709830c5e3eaeaa54afb746}{\-Dispatcher}.
+
+
+
+\-Definition at line 37 of file \-Bluetooth\-Command\-Dispatcher.\-cpp.
+
+\hypertarget{class_bluetooth___dispatcher_a8cf1e22a7e599c1fa8d6741b7b267b3b}{\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!setup\-\_\-dispatch@{setup\-\_\-dispatch}}
+\index{setup\-\_\-dispatch@{setup\-\_\-dispatch}!Bluetooth_Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\subsubsection[{setup\-\_\-dispatch}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Bluetooth\-\_\-\-Dispatcher\-::setup\-\_\-dispatch} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{command\-\_\-ptr, }
+\item[{uint8\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_bluetooth___dispatcher_a8cf1e22a7e599c1fa8d6741b7b267b3b}
+\-This is the virtual setup method for the class \-We create a dispatch 
+
+\-Reimplemented from \hyperlink{class_dispatcher_a2f2dca22ac7a8487399e284499e8095b}{\-Dispatcher}.
+
+
+
+\-Definition at line 26 of file \-Bluetooth\-Command\-Dispatcher.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_bluetooth___dispatcher_a37efed7ffe1b2bcc846ade2406174796}{\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!\-\_\-response@{\-\_\-response}}
+\index{\-\_\-response@{\-\_\-response}!Bluetooth_Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\subsubsection[{\-\_\-response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf response\-\_\-t}$\ast$ {\bf \-Bluetooth\-\_\-\-Dispatcher\-::\-\_\-response}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_bluetooth___dispatcher_a37efed7ffe1b2bcc846ade2406174796}
+
+
+\-The response pointer. 
+
+
+
+\-Reimplemented from \hyperlink{class_dispatcher_a0e3c3d9054c4d8180aa56655bb6206a2}{\-Dispatcher}.
+
+
+
+\-Definition at line 56 of file \-Bluetooth\-Command\-Dispatcher.\-h.
+
+\hypertarget{class_bluetooth___dispatcher_a9b30fd1951f4e064a707ec75b941d18e}{\index{\-Bluetooth\-\_\-\-Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}!\-\_\-serial@{\-\_\-serial}}
+\index{\-\_\-serial@{\-\_\-serial}!Bluetooth_Dispatcher@{\-Bluetooth\-\_\-\-Dispatcher}}
+\subsubsection[{\-\_\-serial}]{\setlength{\rightskip}{0pt plus 5cm}\-Hardware\-Serial$\ast$ {\bf \-Bluetooth\-\_\-\-Dispatcher\-::\-\_\-serial}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_bluetooth___dispatcher_a9b30fd1951f4e064a707ec75b941d18e}
+
+
+\-Private \-Context. 
+
+\-The internal access to the serial 
+
+\-Reimplemented from \hyperlink{class_dispatcher_ab761cd7589c1d5fda8ff1b5ec4ce679f}{\-Dispatcher}.
+
+
+
+\-Definition at line 53 of file \-Bluetooth\-Command\-Dispatcher.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_bluetooth_command_dispatcher_8h}{\-Bluetooth\-Command\-Dispatcher.\-h}\item 
+\hyperlink{_bluetooth_command_dispatcher_8cpp}{\-Bluetooth\-Command\-Dispatcher.\-cpp}\end{DoxyCompactItemize}

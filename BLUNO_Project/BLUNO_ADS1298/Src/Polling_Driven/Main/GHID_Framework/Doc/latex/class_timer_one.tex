@@ -1,0 +1,234 @@
+\hypertarget{class_timer_one}{\section{\-Timer\-One \-Class \-Reference}
+\label{class_timer_one}\index{\-Timer\-One@{\-Timer\-One}}
+}
+
+
+{\ttfamily \#include $<$\-Timer\-One.\-h$>$}
+
+\-Inheritance diagram for \-Timer\-One\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timer_one}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_timer_one_a4690114535a4df72ef92f75585bba67a}{initialize} (long microseconds=1000000)
+\item 
+void \hyperlink{class_timer_one_ac0bf37ab4c3ac0402b26b0da2efb12e9}{start} ()
+\item 
+void \hyperlink{class_timer_one_a81e3fdc3ef2e5d3cc3371a6e2f5029c0}{stop} ()
+\item 
+void \hyperlink{class_timer_one_aac3e2e27328a1b840d659088148c524b}{restart} ()
+\item 
+void \hyperlink{class_timer_one_a53432448699ed8d47c1bcb3180e7643e}{resume} ()
+\item 
+unsigned long \hyperlink{class_timer_one_a89045b4d36bda55829b436a1f807e6d8}{read} ()
+\item 
+void \hyperlink{class_timer_one_a866c9d2c3028ab38b37a0765a9551c96}{pwm} (char pin, int duty, long microseconds=-\/1)
+\item 
+void \hyperlink{class_timer_one_a54624502206cede8a759dab6bb85a62a}{disable\-Pwm} (char pin)
+\item 
+void \hyperlink{class_timer_one_abbea146168bb5b541ef3861f806726bd}{attach\-Interrupt} (void($\ast$isr)(), long microseconds=-\/1)
+\item 
+void \hyperlink{class_timer_one_ab285a795b71c774f8f6cafc0d34b8d08}{detach\-Interrupt} ()
+\item 
+void \hyperlink{class_timer_one_aea25c60594a08832393f640a24f553bf}{set\-Period} (long microseconds)
+\item 
+void \hyperlink{class_timer_one_a6818d5048dde7ea9368da519c16caa92}{set\-Pwm\-Duty} (char pin, int duty)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_timer_one_a6e5edd460d36e9c5c57cf647e86a3902}{pwm\-Period}
+\item 
+unsigned char \hyperlink{class_timer_one_a0cab72dbe00fa3936413242617a9749e}{clock\-Select\-Bits}
+\item 
+char \hyperlink{class_timer_one_ac71182fc3a2e44efbc796eb5260d3007}{old\-S\-R\-E\-G}
+\item 
+void($\ast$ \hyperlink{class_timer_one_aeed829a3f938c613579c10a015a3d1cb}{isr\-Callback} )()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 44 of file \-Timer\-One.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_timer_one_abbea146168bb5b541ef3861f806726bd}{\index{\-Timer\-One@{\-Timer\-One}!attach\-Interrupt@{attach\-Interrupt}}
+\index{attach\-Interrupt@{attach\-Interrupt}!TimerOne@{\-Timer\-One}}
+\subsubsection[{attach\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::attach\-Interrupt} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)()}]{isr, }
+\item[{long}]{microseconds = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_abbea146168bb5b541ef3861f806726bd}
+
+
+\-Definition at line 113 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_ab285a795b71c774f8f6cafc0d34b8d08}{\index{\-Timer\-One@{\-Timer\-One}!detach\-Interrupt@{detach\-Interrupt}}
+\index{detach\-Interrupt@{detach\-Interrupt}!TimerOne@{\-Timer\-One}}
+\subsubsection[{detach\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::detach\-Interrupt} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_ab285a795b71c774f8f6cafc0d34b8d08}
+
+
+\-Definition at line 123 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a54624502206cede8a759dab6bb85a62a}{\index{\-Timer\-One@{\-Timer\-One}!disable\-Pwm@{disable\-Pwm}}
+\index{disable\-Pwm@{disable\-Pwm}!TimerOne@{\-Timer\-One}}
+\subsubsection[{disable\-Pwm}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::disable\-Pwm} (
+\begin{DoxyParamCaption}
+\item[{char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a54624502206cede8a759dab6bb85a62a}
+
+
+\-Definition at line 107 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a4690114535a4df72ef92f75585bba67a}{\index{\-Timer\-One@{\-Timer\-One}!initialize@{initialize}}
+\index{initialize@{initialize}!TimerOne@{\-Timer\-One}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::initialize} (
+\begin{DoxyParamCaption}
+\item[{long}]{microseconds = {\ttfamily 1000000}}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a4690114535a4df72ef92f75585bba67a}
+
+
+\-Definition at line 49 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a866c9d2c3028ab38b37a0765a9551c96}{\index{\-Timer\-One@{\-Timer\-One}!pwm@{pwm}}
+\index{pwm@{pwm}!TimerOne@{\-Timer\-One}}
+\subsubsection[{pwm}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::pwm} (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{int}]{duty, }
+\item[{long}]{microseconds = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a866c9d2c3028ab38b37a0765a9551c96}
+
+
+\-Definition at line 91 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a89045b4d36bda55829b436a1f807e6d8}{\index{\-Timer\-One@{\-Timer\-One}!read@{read}}
+\index{read@{read}!TimerOne@{\-Timer\-One}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf \-Timer\-One\-::read} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a89045b4d36bda55829b436a1f807e6d8}
+
+
+\-Definition at line 167 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_aac3e2e27328a1b840d659088148c524b}{\index{\-Timer\-One@{\-Timer\-One}!restart@{restart}}
+\index{restart@{restart}!TimerOne@{\-Timer\-One}}
+\subsubsection[{restart}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::restart} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_aac3e2e27328a1b840d659088148c524b}
+
+
+\-Definition at line 134 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a53432448699ed8d47c1bcb3180e7643e}{\index{\-Timer\-One@{\-Timer\-One}!resume@{resume}}
+\index{resume@{resume}!TimerOne@{\-Timer\-One}}
+\subsubsection[{resume}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::resume} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a53432448699ed8d47c1bcb3180e7643e}
+
+
+\-Definition at line 129 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_aea25c60594a08832393f640a24f553bf}{\index{\-Timer\-One@{\-Timer\-One}!set\-Period@{set\-Period}}
+\index{set\-Period@{set\-Period}!TimerOne@{\-Timer\-One}}
+\subsubsection[{set\-Period}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::set\-Period} (
+\begin{DoxyParamCaption}
+\item[{long}]{microseconds}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_aea25c60594a08832393f640a24f553bf}
+
+
+\-Definition at line 57 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a6818d5048dde7ea9368da519c16caa92}{\index{\-Timer\-One@{\-Timer\-One}!set\-Pwm\-Duty@{set\-Pwm\-Duty}}
+\index{set\-Pwm\-Duty@{set\-Pwm\-Duty}!TimerOne@{\-Timer\-One}}
+\subsubsection[{set\-Pwm\-Duty}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::set\-Pwm\-Duty} (
+\begin{DoxyParamCaption}
+\item[{char}]{pin, }
+\item[{int}]{duty}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a6818d5048dde7ea9368da519c16caa92}
+
+
+\-Definition at line 77 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_ac0bf37ab4c3ac0402b26b0da2efb12e9}{\index{\-Timer\-One@{\-Timer\-One}!start@{start}}
+\index{start@{start}!TimerOne@{\-Timer\-One}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_ac0bf37ab4c3ac0402b26b0da2efb12e9}
+
+
+\-Definition at line 139 of file \-Timer\-One.\-cpp.
+
+\hypertarget{class_timer_one_a81e3fdc3ef2e5d3cc3371a6e2f5029c0}{\index{\-Timer\-One@{\-Timer\-One}!stop@{stop}}
+\index{stop@{stop}!TimerOne@{\-Timer\-One}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-One\-::stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_timer_one_a81e3fdc3ef2e5d3cc3371a6e2f5029c0}
+
+
+\-Definition at line 162 of file \-Timer\-One.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_timer_one_a0cab72dbe00fa3936413242617a9749e}{\index{\-Timer\-One@{\-Timer\-One}!clock\-Select\-Bits@{clock\-Select\-Bits}}
+\index{clock\-Select\-Bits@{clock\-Select\-Bits}!TimerOne@{\-Timer\-One}}
+\subsubsection[{clock\-Select\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf \-Timer\-One\-::clock\-Select\-Bits}}}\label{class_timer_one_a0cab72dbe00fa3936413242617a9749e}
+
+
+\-Definition at line 50 of file \-Timer\-One.\-h.
+
+\hypertarget{class_timer_one_aeed829a3f938c613579c10a015a3d1cb}{\index{\-Timer\-One@{\-Timer\-One}!isr\-Callback@{isr\-Callback}}
+\index{isr\-Callback@{isr\-Callback}!TimerOne@{\-Timer\-One}}
+\subsubsection[{isr\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf \-Timer\-One\-::isr\-Callback})()}}\label{class_timer_one_aeed829a3f938c613579c10a015a3d1cb}
+
+
+\-Definition at line 66 of file \-Timer\-One.\-h.
+
+\hypertarget{class_timer_one_ac71182fc3a2e44efbc796eb5260d3007}{\index{\-Timer\-One@{\-Timer\-One}!old\-S\-R\-E\-G@{old\-S\-R\-E\-G}}
+\index{old\-S\-R\-E\-G@{old\-S\-R\-E\-G}!TimerOne@{\-Timer\-One}}
+\subsubsection[{old\-S\-R\-E\-G}]{\setlength{\rightskip}{0pt plus 5cm}char {\bf \-Timer\-One\-::old\-S\-R\-E\-G}}}\label{class_timer_one_ac71182fc3a2e44efbc796eb5260d3007}
+
+
+\-Definition at line 51 of file \-Timer\-One.\-h.
+
+\hypertarget{class_timer_one_a6e5edd460d36e9c5c57cf647e86a3902}{\index{\-Timer\-One@{\-Timer\-One}!pwm\-Period@{pwm\-Period}}
+\index{pwm\-Period@{pwm\-Period}!TimerOne@{\-Timer\-One}}
+\subsubsection[{pwm\-Period}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf \-Timer\-One\-::pwm\-Period}}}\label{class_timer_one_a6e5edd460d36e9c5c57cf647e86a3902}
+
+
+\-Definition at line 49 of file \-Timer\-One.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Included Libraries/\hyperlink{_timer_one_8h}{\-Timer\-One.\-h}\item 
+\-Included Libraries/\hyperlink{_timer_one_8cpp}{\-Timer\-One.\-cpp}\end{DoxyCompactItemize}

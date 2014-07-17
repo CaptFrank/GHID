@@ -1,0 +1,205 @@
+\hypertarget{class_a_d_c___driver}{\section{\-A\-D\-C\-\_\-\-Driver \-Class \-Reference}
+\label{class_a_d_c___driver}\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}}
+}
+
+
+{\ttfamily \#include $<$\-A\-D\-C\-Driver.\-h$>$}
+
+\-Inheritance diagram for \-A\-D\-C\-\_\-\-Driver\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_d_c___driver}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_d_c___driver_a80f51622b357a63870fd2bdfabf62ba9}{\-A\-D\-C\-\_\-\-Driver} (const uint8\-\_\-t pin, const uint8\-\_\-t direction)
+\begin{DoxyCompactList}\small\item\em \-The default constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_d_c___driver_aa1ccc2ac2edf43b3e6f8a1cee6a125fc}{create\-\_\-\-F\-I\-R\-\_\-filter} (float gain, const float $\ast$coefs)
+\item 
+word \hyperlink{class_a_d_c___driver_a02ba26c350ebff31c5ac7d2de861d321}{read} ()
+\begin{DoxyCompactList}\small\item\em \-The read port method. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_d_c___driver_a7dd920205a602093ed1f176d0ade8751}{write} (byte duty\-\_\-cycle)
+\begin{DoxyCompactList}\small\item\em \-The write to the port method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structanalog__measurement__t}{analog\-\_\-measurement\-\_\-t} \hyperlink{class_a_d_c___driver_a6699ea9d65c805d36d9b08f663ad6980}{\-\_\-measurement}
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+word \hyperlink{class_a_d_c___driver_ab852b3ac3d9dcfba914f956b689b5e0f}{filter} (word value)
+\begin{DoxyCompactList}\small\item\em \-Protected \-Context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This framework back end allows for easy programming of each type of sensor. \-Either \-Analog, \-Digital or \-Serial \-Bus devices. \-This is the base class for the analog devices interfaced to the host. 
+
+\-Definition at line 46 of file \-A\-D\-C\-Driver.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_a_d_c___driver_a80f51622b357a63870fd2bdfabf62ba9}{\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!ADC_Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\subsubsection[{\-A\-D\-C\-\_\-\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-C\-\_\-\-Driver\-::\-A\-D\-C\-\_\-\-Driver} (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t}]{pin, }
+\item[{const uint8\-\_\-t}]{direction}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_c___driver_a80f51622b357a63870fd2bdfabf62ba9}
+
+
+\-The default constructor. 
+
+\-This is the default constructor for analog ports. \-We can use this for individual analog ports used.
+
+
+\begin{DoxyItemize}
+\item \-The pin value is the analog port used on the \-Arduino, this value is the mapped name (i.\-e. \-Analog port 1 = \-A1)
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item \-The direction value is the direction of the analog pin that is used. \-In this case this value can be input ('\-I'), output ('\-O')
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pin} & -\/ byte the pin that is used as analog pin \\
+\hline
+{\em direction} & -\/ byte the direction of the pin (\-Input / \-Output) \\
+\hline
+\end{DoxyParams}
+\-Set the important values
+
+\-Initialize internal variables.
+
+\-Setup the port 
+
+\-Definition at line 14 of file \-A\-D\-C\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_a_d_c___driver_aa1ccc2ac2edf43b3e6f8a1cee6a125fc}{\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!create\-\_\-\-F\-I\-R\-\_\-filter@{create\-\_\-\-F\-I\-R\-\_\-filter}}
+\index{create\-\_\-\-F\-I\-R\-\_\-filter@{create\-\_\-\-F\-I\-R\-\_\-filter}!ADC_Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\subsubsection[{create\-\_\-\-F\-I\-R\-\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-A\-D\-C\-\_\-\-Driver\-::create\-\_\-\-F\-I\-R\-\_\-filter} (
+\begin{DoxyParamCaption}
+\item[{float}]{gain, }
+\item[{const float $\ast$}]{coefs}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_c___driver_aa1ccc2ac2edf43b3e6f8a1cee6a125fc}
+\-This is the create method to create an \-F\-I\-R \-Filter from the base \-F\-I\-R filter class.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em gain} & -\/ \-The filter gain \\
+\hline
+{\em coefs} & -\/ \-The filter coefficients. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+bool -\/ \-Successful creation 
+\end{DoxyReturn}
+\-We enter the \-F\-I\-R class
+
+\-Check if the filter is valid 
+
+\-Definition at line 49 of file \-A\-D\-C\-Driver.\-cpp.
+
+\hypertarget{class_a_d_c___driver_ab852b3ac3d9dcfba914f956b689b5e0f}{\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!filter@{filter}}
+\index{filter@{filter}!ADC_Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\subsubsection[{filter}]{\setlength{\rightskip}{0pt plus 5cm}word {\bf \-A\-D\-C\-\_\-\-Driver\-::filter} (
+\begin{DoxyParamCaption}
+\item[{word}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_d_c___driver_ab852b3ac3d9dcfba914f956b689b5e0f}
+
+
+\-Protected \-Context. 
+
+\-This is an averaging filter for the signal input read.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em value} & -\/ the value to be processed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+value -\/ the filtered value
+\end{DoxyReturn}
+\-This is an averaging filter for the signal input read.
+
+\begin{DoxyReturn}{\-Returns}
+value -\/ the filtered value 
+\end{DoxyReturn}
+\-Process the input 
+
+\-Definition at line 95 of file \-A\-D\-C\-Driver.\-cpp.
+
+\hypertarget{class_a_d_c___driver_a02ba26c350ebff31c5ac7d2de861d321}{\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!read@{read}}
+\index{read@{read}!ADC_Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}word {\bf \-A\-D\-C\-\_\-\-Driver\-::read} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_c___driver_a02ba26c350ebff31c5ac7d2de861d321}
+
+
+\-The read port method. 
+
+\-This method is the public access reading method to enable reading of the analog port. \-This returns the value read in an unsigned integer (word -\/ 16bit value), the \-A\-D\-C read results in a 10bit value with a range or\-:
+\begin{DoxyItemize}
+\item \-Min\-: 0
+\item \-Max\-: 1024
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+result -\/ word the read value from the \-A\-D\-C. 
+\end{DoxyReturn}
+\-Assign the internal value and return it. 
+
+\-Definition at line 28 of file \-A\-D\-C\-Driver.\-cpp.
+
+\hypertarget{class_a_d_c___driver_a7dd920205a602093ed1f176d0ade8751}{\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!write@{write}}
+\index{write@{write}!ADC_Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-C\-\_\-\-Driver\-::write} (
+\begin{DoxyParamCaption}
+\item[{byte}]{duty\-\_\-cycle}
+\end{DoxyParamCaption}
+)}}\label{class_a_d_c___driver_a7dd920205a602093ed1f176d0ade8751}
+
+
+\-The write to the port method. 
+
+\-This method is the public access method that writes to the analog value. \-Note\-: \-This method does not output a digital value such as\-: 00001010 \-Instead, this method outputs a \-P\-W\-M (\-Pulse width modulated) signal, with range o\-F\-:
+\begin{DoxyItemize}
+\item \-Min\-: 0
+\item \-Max\-: 255 
+\end{DoxyItemize}\-Write the analog duty cycle to the \-P\-W\-M generator. 
+
+\-Definition at line 35 of file \-A\-D\-C\-Driver.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_a_d_c___driver_a6699ea9d65c805d36d9b08f663ad6980}{\index{\-A\-D\-C\-\_\-\-Driver@{\-A\-D\-C\-\_\-\-Driver}!\-\_\-measurement@{\-\_\-measurement}}
+\index{\-\_\-measurement@{\-\_\-measurement}!ADC_Driver@{\-A\-D\-C\-\_\-\-Driver}}
+\subsubsection[{\-\_\-measurement}]{\setlength{\rightskip}{0pt plus 5cm}{\bf analog\-\_\-measurement\-\_\-t} {\bf \-A\-D\-C\-\_\-\-Driver\-::\-\_\-measurement}}}\label{class_a_d_c___driver_a6699ea9d65c805d36d9b08f663ad6980}
+
+
+\-Public \-Context. 
+
+\-The internal measurment. 
+
+\-Definition at line 86 of file \-A\-D\-C\-Driver.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_a_d_c_driver_8h}{\-A\-D\-C\-Driver.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_a_d_c_driver_8cpp}{\-A\-D\-C\-Driver.\-cpp}\end{DoxyCompactItemize}

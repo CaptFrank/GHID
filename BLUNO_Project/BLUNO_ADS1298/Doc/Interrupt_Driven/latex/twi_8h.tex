@@ -1,0 +1,199 @@
+\hypertarget{twi_8h}{\section{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included \-Libraries/twi.h \-File \-Reference}
+\label{twi_8h}\index{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/twi.\-h@{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/twi.\-h}}
+}
+{\ttfamily \#include $<$inttypes.\-h$>$}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{twi_8h_a78f8e40420d26b512b064b1902f5d559}{\-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y}~0
+\item 
+\#define \hyperlink{twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}{\-T\-W\-I\-\_\-\-M\-R\-X}~1
+\item 
+\#define \hyperlink{twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}{\-T\-W\-I\-\_\-\-M\-T\-X}~2
+\item 
+\#define \hyperlink{twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}{\-T\-W\-I\-\_\-\-S\-R\-X}~3
+\item 
+\#define \hyperlink{twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}{\-T\-W\-I\-\_\-\-S\-T\-X}~4
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}{twi\-\_\-init} (void)
+\item 
+void \hyperlink{twi_8h_a77c13a875e935f91b58c3b8596aae88d}{twi\-\_\-set\-Address} (uint8\-\_\-t)
+\item 
+uint8\-\_\-t \hyperlink{twi_8h_a8f8b3d441d9dd1bd867b83729211b183}{twi\-\_\-read\-From} (uint8\-\_\-t, uint8\-\_\-t $\ast$, uint8\-\_\-t, uint8\-\_\-t)
+\item 
+uint8\-\_\-t \hyperlink{twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}{twi\-\_\-write\-To} (uint8\-\_\-t, uint8\-\_\-t $\ast$, uint8\-\_\-t, uint8\-\_\-t, uint8\-\_\-t)
+\item 
+uint8\-\_\-t \hyperlink{twi_8h_a4fbb74866c71979506ac52d758cfdeac}{twi\-\_\-transmit} (const uint8\-\_\-t $\ast$, uint8\-\_\-t)
+\item 
+void \hyperlink{twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}{twi\-\_\-attach\-Slave\-Rx\-Event} (void($\ast$)(uint8\-\_\-t $\ast$, int))
+\item 
+void \hyperlink{twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}{twi\-\_\-attach\-Slave\-Tx\-Event} (void($\ast$)(void))
+\item 
+void \hyperlink{twi_8h_a54e17133aa927c4c76725f1f55e37531}{twi\-\_\-reply} (uint8\-\_\-t)
+\item 
+void \hyperlink{twi_8h_acf52d6c93df110dee6d402b389e5042e}{twi\-\_\-stop} (void)
+\item 
+void \hyperlink{twi_8h_a7f830793058786f5597ddd1d80b885ae}{twi\-\_\-release\-Bus} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}{\index{twi.\-h@{twi.\-h}!\-T\-W\-I\-\_\-\-M\-R\-X@{\-T\-W\-I\-\_\-\-M\-R\-X}}
+\index{\-T\-W\-I\-\_\-\-M\-R\-X@{\-T\-W\-I\-\_\-\-M\-R\-X}!twi.h@{twi.\-h}}
+\subsubsection[{\-T\-W\-I\-\_\-\-M\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-W\-I\-\_\-\-M\-R\-X}~1}}\label{twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}
+
+
+\-Definition at line 36 of file twi.\-h.
+
+\hypertarget{twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}{\index{twi.\-h@{twi.\-h}!\-T\-W\-I\-\_\-\-M\-T\-X@{\-T\-W\-I\-\_\-\-M\-T\-X}}
+\index{\-T\-W\-I\-\_\-\-M\-T\-X@{\-T\-W\-I\-\_\-\-M\-T\-X}!twi.h@{twi.\-h}}
+\subsubsection[{\-T\-W\-I\-\_\-\-M\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-W\-I\-\_\-\-M\-T\-X}~2}}\label{twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}
+
+
+\-Definition at line 37 of file twi.\-h.
+
+\hypertarget{twi_8h_a78f8e40420d26b512b064b1902f5d559}{\index{twi.\-h@{twi.\-h}!\-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y@{\-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y}}
+\index{\-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y@{\-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y}!twi.h@{twi.\-h}}
+\subsubsection[{\-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-W\-I\-\_\-\-R\-E\-A\-D\-Y}~0}}\label{twi_8h_a78f8e40420d26b512b064b1902f5d559}
+
+
+\-Definition at line 35 of file twi.\-h.
+
+\hypertarget{twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}{\index{twi.\-h@{twi.\-h}!\-T\-W\-I\-\_\-\-S\-R\-X@{\-T\-W\-I\-\_\-\-S\-R\-X}}
+\index{\-T\-W\-I\-\_\-\-S\-R\-X@{\-T\-W\-I\-\_\-\-S\-R\-X}!twi.h@{twi.\-h}}
+\subsubsection[{\-T\-W\-I\-\_\-\-S\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-W\-I\-\_\-\-S\-R\-X}~3}}\label{twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}
+
+
+\-Definition at line 38 of file twi.\-h.
+
+\hypertarget{twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}{\index{twi.\-h@{twi.\-h}!\-T\-W\-I\-\_\-\-S\-T\-X@{\-T\-W\-I\-\_\-\-S\-T\-X}}
+\index{\-T\-W\-I\-\_\-\-S\-T\-X@{\-T\-W\-I\-\_\-\-S\-T\-X}!twi.h@{twi.\-h}}
+\subsubsection[{\-T\-W\-I\-\_\-\-S\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-W\-I\-\_\-\-S\-T\-X}~4}}\label{twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}
+
+
+\-Definition at line 39 of file twi.\-h.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}{\index{twi.\-h@{twi.\-h}!twi\-\_\-attach\-Slave\-Rx\-Event@{twi\-\_\-attach\-Slave\-Rx\-Event}}
+\index{twi\-\_\-attach\-Slave\-Rx\-Event@{twi\-\_\-attach\-Slave\-Rx\-Event}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-attach\-Slave\-Rx\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-attach\-Slave\-Rx\-Event} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(uint8\-\_\-t $\ast$, int)}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}
+
+
+\-Definition at line 295 of file twi.\-c.
+
+\hypertarget{twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}{\index{twi.\-h@{twi.\-h}!twi\-\_\-attach\-Slave\-Tx\-Event@{twi\-\_\-attach\-Slave\-Tx\-Event}}
+\index{twi\-\_\-attach\-Slave\-Tx\-Event@{twi\-\_\-attach\-Slave\-Tx\-Event}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-attach\-Slave\-Tx\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-attach\-Slave\-Tx\-Event} (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}
+
+
+\-Definition at line 306 of file twi.\-c.
+
+\hypertarget{twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}{\index{twi.\-h@{twi.\-h}!twi\-\_\-init@{twi\-\_\-init}}
+\index{twi\-\_\-init@{twi\-\_\-init}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}
+
+
+\-Definition at line 68 of file twi.\-c.
+
+\hypertarget{twi_8h_a8f8b3d441d9dd1bd867b83729211b183}{\index{twi.\-h@{twi.\-h}!twi\-\_\-read\-From@{twi\-\_\-read\-From}}
+\index{twi\-\_\-read\-From@{twi\-\_\-read\-From}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-read\-From}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf twi\-\_\-read\-From} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{, }
+\item[{uint8\-\_\-t $\ast$}]{, }
+\item[{uint8\-\_\-t}]{, }
+\item[{uint8\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a8f8b3d441d9dd1bd867b83729211b183}
+
+
+\-Definition at line 115 of file twi.\-c.
+
+\hypertarget{twi_8h_a7f830793058786f5597ddd1d80b885ae}{\index{twi.\-h@{twi.\-h}!twi\-\_\-release\-Bus@{twi\-\_\-release\-Bus}}
+\index{twi\-\_\-release\-Bus@{twi\-\_\-release\-Bus}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-release\-Bus}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-release\-Bus} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a7f830793058786f5597ddd1d80b885ae}
+
+
+\-Definition at line 354 of file twi.\-c.
+
+\hypertarget{twi_8h_a54e17133aa927c4c76725f1f55e37531}{\index{twi.\-h@{twi.\-h}!twi\-\_\-reply@{twi\-\_\-reply}}
+\index{twi\-\_\-reply@{twi\-\_\-reply}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-reply}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-reply} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a54e17133aa927c4c76725f1f55e37531}
+
+
+\-Definition at line 317 of file twi.\-c.
+
+\hypertarget{twi_8h_a77c13a875e935f91b58c3b8596aae88d}{\index{twi.\-h@{twi.\-h}!twi\-\_\-set\-Address@{twi\-\_\-set\-Address}}
+\index{twi\-\_\-set\-Address@{twi\-\_\-set\-Address}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-set\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-set\-Address} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a77c13a875e935f91b58c3b8596aae88d}
+
+
+\-Definition at line 99 of file twi.\-c.
+
+\hypertarget{twi_8h_acf52d6c93df110dee6d402b389e5042e}{\index{twi.\-h@{twi.\-h}!twi\-\_\-stop@{twi\-\_\-stop}}
+\index{twi\-\_\-stop@{twi\-\_\-stop}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf twi\-\_\-stop} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_acf52d6c93df110dee6d402b389e5042e}
+
+
+\-Definition at line 333 of file twi.\-c.
+
+\hypertarget{twi_8h_a4fbb74866c71979506ac52d758cfdeac}{\index{twi.\-h@{twi.\-h}!twi\-\_\-transmit@{twi\-\_\-transmit}}
+\index{twi\-\_\-transmit@{twi\-\_\-transmit}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-transmit}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf twi\-\_\-transmit} (
+\begin{DoxyParamCaption}
+\item[{const uint8\-\_\-t $\ast$}]{, }
+\item[{uint8\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a4fbb74866c71979506ac52d758cfdeac}
+
+
+\-Definition at line 266 of file twi.\-c.
+
+\hypertarget{twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}{\index{twi.\-h@{twi.\-h}!twi\-\_\-write\-To@{twi\-\_\-write\-To}}
+\index{twi\-\_\-write\-To@{twi\-\_\-write\-To}!twi.h@{twi.\-h}}
+\subsubsection[{twi\-\_\-write\-To}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf twi\-\_\-write\-To} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{, }
+\item[{uint8\-\_\-t $\ast$}]{, }
+\item[{uint8\-\_\-t}]{, }
+\item[{uint8\-\_\-t}]{, }
+\item[{uint8\-\_\-t}]{}
+\end{DoxyParamCaption}
+)}}\label{twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}
+
+
+\-Definition at line 192 of file twi.\-c.
+

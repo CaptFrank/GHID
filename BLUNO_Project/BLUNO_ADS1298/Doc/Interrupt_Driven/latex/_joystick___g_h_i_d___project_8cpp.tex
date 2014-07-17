@@ -1,0 +1,209 @@
+\hypertarget{_joystick___g_h_i_d___project_8cpp}{\section{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.cpp \-File \-Reference}
+\label{_joystick___g_h_i_d___project_8cpp}\index{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Examples/\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+}
+{\ttfamily \#include $<$\-Arduino.\-h$>$}\*
+{\ttfamily \#include $<$\-G\-H\-I\-D A\-P\-I/\-G\-H\-I\-D\-\_\-\-Project.\-h$>$}\*
+{\ttfamily \#include $<$\-Included Libraries/\-A\-D\-X\-L335.\-h$>$}\*
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_a3c13f45210a29355cd5cfeefa8f091c2}{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}
+\begin{DoxyCompactList}\small\item\em \-We need digital ports. \end{DoxyCompactList}\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_a8150279104183c4da0e3494bf943e927}{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}
+\begin{DoxyCompactList}\small\item\em \-We need analog ports. \end{DoxyCompactList}\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_a096f6d223bb5d11bebd9ce7535508fa2}{\-X\-\_\-\-A\-X\-I\-S}~1
+\begin{DoxyCompactList}\small\item\em \-We define our analog axis. \end{DoxyCompactList}\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_ab9e30cc0a88c208dc662906171bb8265}{\-Y\-\_\-\-A\-X\-I\-S}~0
+\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_ab31d832d82bef7f1c6df989c3040a216}{\-D\-\_\-1}~5
+\begin{DoxyCompactList}\small\item\em \-We define the digital inputs. \end{DoxyCompactList}\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_a6b9fc4d1f3b726959596f71e0e5bbe06}{\-D\-\_\-2}~3
+\item 
+\#define \hyperlink{_joystick___g_h_i_d___project_8cpp_a1d003907e9c6c3d9532ba99e3e8a1219}{\-D\-\_\-3}~4
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_joystick___g_h_i_d___project_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup} (void)
+\begin{DoxyCompactList}\small\item\em \-These are the prototypes for the sketch. \end{DoxyCompactList}\item 
+void \hyperlink{_joystick___g_h_i_d___project_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}{loop} (void)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_h_i_d___system___abstration}{\-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration} \hyperlink{_joystick___g_h_i_d___project_8cpp_ac320aae7656d467a41157a1de0129d32}{system}
+\begin{DoxyCompactList}\small\item\em \-Here we setup a context object. \end{DoxyCompactList}\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_joystick___g_h_i_d___project_8cpp_a1798b78b2767df469badbb8d72d4e1db}{\-X}
+\begin{DoxyCompactList}\small\item\em \-We need 3 analog ports for the accelerometer. \end{DoxyCompactList}\item 
+\hyperlink{class_analog___port}{\-Analog\-\_\-\-Port} \hyperlink{_joystick___g_h_i_d___project_8cpp_a069a0c4ca746adea535d53e148bd47aa}{\-Y}
+\item 
+\hyperlink{class_digital___port}{\-Digital\-\_\-\-Port} \hyperlink{_joystick___g_h_i_d___project_8cpp_a86e95d29dd37f8827834c0af3086fe11}{\-D1}
+\begin{DoxyCompactList}\small\item\em \-We need 3 digital ports for the buttons. \end{DoxyCompactList}\item 
+\hyperlink{class_digital___port}{\-Digital\-\_\-\-Port} \hyperlink{_joystick___g_h_i_d___project_8cpp_a5ceebc53afbbe9346c111cf404aa0a5f}{\-D2}
+\item 
+\hyperlink{class_digital___port}{\-Digital\-\_\-\-Port} \hyperlink{_joystick___g_h_i_d___project_8cpp_a945b42c0897f3f945507da371778d725}{\-D3}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_joystick___g_h_i_d___project_8cpp_ab31d832d82bef7f1c6df989c3040a216}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D\-\_\-1@{\-D\-\_\-1}}
+\index{\-D\-\_\-1@{\-D\-\_\-1}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-1}~5}}\label{_joystick___g_h_i_d___project_8cpp_ab31d832d82bef7f1c6df989c3040a216}
+
+
+\-We define the digital inputs. 
+
+
+
+\-Definition at line 18 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a6b9fc4d1f3b726959596f71e0e5bbe06}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D\-\_\-2@{\-D\-\_\-2}}
+\index{\-D\-\_\-2@{\-D\-\_\-2}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-2}~3}}\label{_joystick___g_h_i_d___project_8cpp_a6b9fc4d1f3b726959596f71e0e5bbe06}
+
+
+\-Definition at line 19 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a1d003907e9c6c3d9532ba99e3e8a1219}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D\-\_\-3@{\-D\-\_\-3}}
+\index{\-D\-\_\-3@{\-D\-\_\-3}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-\_\-3}~4}}\label{_joystick___g_h_i_d___project_8cpp_a1d003907e9c6c3d9532ba99e3e8a1219}
+
+
+\-Definition at line 20 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a8150279104183c4da0e3494bf943e927}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}}
+\index{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-H\-I\-D\-\_\-\-A\-N\-A\-L\-O\-G\-\_\-\-P\-O\-R\-T}}}\label{_joystick___g_h_i_d___project_8cpp_a8150279104183c4da0e3494bf943e927}
+
+
+\-We need analog ports. 
+
+
+
+\-Definition at line 8 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a3c13f45210a29355cd5cfeefa8f091c2}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}}
+\index{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T@{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-G\-H\-I\-D\-\_\-\-D\-I\-G\-I\-T\-A\-L\-\_\-\-P\-O\-R\-T}}}\label{_joystick___g_h_i_d___project_8cpp_a3c13f45210a29355cd5cfeefa8f091c2}
+
+
+\-We need digital ports. 
+
+
+
+\-Definition at line 5 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a096f6d223bb5d11bebd9ce7535508fa2}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-X\-\_\-\-A\-X\-I\-S@{\-X\-\_\-\-A\-X\-I\-S}}
+\index{\-X\-\_\-\-A\-X\-I\-S@{\-X\-\_\-\-A\-X\-I\-S}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-X\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-X\-\_\-\-A\-X\-I\-S}~1}}\label{_joystick___g_h_i_d___project_8cpp_a096f6d223bb5d11bebd9ce7535508fa2}
+
+
+\-We define our analog axis. 
+
+
+
+\-Definition at line 14 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_ab9e30cc0a88c208dc662906171bb8265}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-Y\-\_\-\-A\-X\-I\-S@{\-Y\-\_\-\-A\-X\-I\-S}}
+\index{\-Y\-\_\-\-A\-X\-I\-S@{\-Y\-\_\-\-A\-X\-I\-S}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-Y\-\_\-\-A\-X\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Y\-\_\-\-A\-X\-I\-S}~0}}\label{_joystick___g_h_i_d___project_8cpp_ab9e30cc0a88c208dc662906171bb8265}
+
+
+\-Definition at line 15 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!loop@{loop}}
+\index{loop@{loop}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf loop} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_joystick___g_h_i_d___project_8cpp_a0b33edabd7f1c4e4a0bf32c67269be2f}
+\-This is the main worker function, which never quits until the process is complete. \-We delay 10ms
+
+\-Here we check the button states with no destructive writes
+
+\-Button 1
+
+\-Button 2
+
+\-Button 3
+
+\-We map the values
+
+not used \hypertarget{_joystick___g_h_i_d___project_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!setup@{setup}}
+\index{setup@{setup}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf setup} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_joystick___g_h_i_d___project_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}
+
+
+\-These are the prototypes for the sketch. 
+
+\-This function overrides the \-Arduino framework setup function, with our setup routines. \-Here we setup the \-U\-S\-B interface
+
+\-We setup the analog and digital ports; 
+
+\-Definition at line 57 of file \-Accelerometer\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a86e95d29dd37f8827834c0af3086fe11}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D1@{\-D1}}
+\index{\-D1@{\-D1}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-\_\-\-Port} {\bf \-D1}}}\label{_joystick___g_h_i_d___project_8cpp_a86e95d29dd37f8827834c0af3086fe11}
+
+
+\-We need 3 digital ports for the buttons. 
+
+
+
+\-Definition at line 34 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a5ceebc53afbbe9346c111cf404aa0a5f}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D2@{\-D2}}
+\index{\-D2@{\-D2}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-\_\-\-Port} {\bf \-D2}}}\label{_joystick___g_h_i_d___project_8cpp_a5ceebc53afbbe9346c111cf404aa0a5f}
+
+
+\-Definition at line 35 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a945b42c0897f3f945507da371778d725}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-D3@{\-D3}}
+\index{\-D3@{\-D3}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-D3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-\_\-\-Port} {\bf \-D3}}}\label{_joystick___g_h_i_d___project_8cpp_a945b42c0897f3f945507da371778d725}
+
+
+\-Definition at line 36 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_ac320aae7656d467a41157a1de0129d32}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!system@{system}}
+\index{system@{system}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{system}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-G\-H\-I\-D\-\_\-\-System\-\_\-\-Abstration} {\bf system}}}\label{_joystick___g_h_i_d___project_8cpp_ac320aae7656d467a41157a1de0129d32}
+
+
+\-Here we setup a context object. 
+
+
+
+\-Definition at line 27 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a1798b78b2767df469badbb8d72d4e1db}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-X@{\-X}}
+\index{\-X@{\-X}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-X}}}\label{_joystick___g_h_i_d___project_8cpp_a1798b78b2767df469badbb8d72d4e1db}
+
+
+\-We need 3 analog ports for the accelerometer. 
+
+
+
+\-Definition at line 30 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+
+\hypertarget{_joystick___g_h_i_d___project_8cpp_a069a0c4ca746adea535d53e148bd47aa}{\index{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}!\-Y@{\-Y}}
+\index{\-Y@{\-Y}!Joystick_GHID_Project.cpp@{\-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp}}
+\subsubsection[{\-Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-\_\-\-Port} {\bf \-Y}}}\label{_joystick___g_h_i_d___project_8cpp_a069a0c4ca746adea535d53e148bd47aa}
+
+
+\-Definition at line 31 of file \-Joystick\-\_\-\-G\-H\-I\-D\-\_\-\-Project.\-cpp.
+

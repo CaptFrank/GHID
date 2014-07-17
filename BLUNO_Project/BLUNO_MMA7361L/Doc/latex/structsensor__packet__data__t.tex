@@ -1,0 +1,73 @@
+\hypertarget{structsensor__packet__data__t}{\section{sensor\-\_\-packet\-\_\-data\-\_\-t \-Struct \-Reference}
+\label{structsensor__packet__data__t}\index{sensor\-\_\-packet\-\_\-data\-\_\-t@{sensor\-\_\-packet\-\_\-data\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$\-Protocol\-Definition.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsensor__packet__data__t_1_1sensor__config__t}{sensor\-\_\-config\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Sensor \-Configurations. \end{DoxyCompactList}\item 
+struct \hyperlink{structsensor__packet__data__t_1_1sensor__data__t}{sensor\-\_\-data\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-The \-Sensor \-Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsensor__packet__header__t}{sensor\-\_\-packet\-\_\-header\-\_\-t} \hyperlink{structsensor__packet__data__t_a514644f179865feda63838434c236b15}{\-\_\-header}
+\begin{DoxyCompactList}\small\item\em \-The header definition. \end{DoxyCompactList}\item 
+struct \*
+\hyperlink{structsensor__packet__data__t_1_1sensor__config__t}{sensor\-\_\-packet\-\_\-data\-\_\-t\-::sensor\-\_\-config\-\_\-t} \hyperlink{structsensor__packet__data__t_a4b9984cdc2dd55735ea9167e9688c4ac}{\-\_\-sensor\-\_\-configs}
+\item 
+struct \*
+\hyperlink{structsensor__packet__data__t_1_1sensor__data__t}{sensor\-\_\-packet\-\_\-data\-\_\-t\-::sensor\-\_\-data\-\_\-t} \hyperlink{structsensor__packet__data__t_a61f1229c9a538d88a1f0cad5049643b6}{\-\_\-sensor\-\_\-data}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\-\_\-t \hyperlink{structsensor__packet__data__t_a593d9687db7d4de5d3d2e514d171d33f}{packet\-\_\-tail} = \hyperlink{_protocol_definition_8h_aba63cacf112bcb4c2ac7ffaeb1454114}{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}
+\begin{DoxyCompactList}\small\item\em \-Tail -\/ \-Determines when the packet stops. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-D\-A\-T\-A\-G\-R\-A\-M \-P\-A\-C\-K\-E\-T -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-This is the data packet for the sensors on within the sensor node system. \-It comprises of the header, the configurations of the sensor (\-Axis, \-Buttons) and the data in the form of an array of bytes 
+
+\-Definition at line 120 of file \-Protocol\-Definition.\-h.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{structsensor__packet__data__t_a514644f179865feda63838434c236b15}{\index{sensor\-\_\-packet\-\_\-data\-\_\-t@{sensor\-\_\-packet\-\_\-data\-\_\-t}!\-\_\-header@{\-\_\-header}}
+\index{\-\_\-header@{\-\_\-header}!sensor_packet_data_t@{sensor\-\_\-packet\-\_\-data\-\_\-t}}
+\subsubsection[{\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sensor\-\_\-packet\-\_\-header\-\_\-t} {\bf sensor\-\_\-packet\-\_\-data\-\_\-t\-::\-\_\-header}}}\label{structsensor__packet__data__t_a514644f179865feda63838434c236b15}
+
+
+\-The header definition. 
+
+
+
+\-Definition at line 123 of file \-Protocol\-Definition.\-h.
+
+\hypertarget{structsensor__packet__data__t_a4b9984cdc2dd55735ea9167e9688c4ac}{\index{sensor\-\_\-packet\-\_\-data\-\_\-t@{sensor\-\_\-packet\-\_\-data\-\_\-t}!\-\_\-sensor\-\_\-configs@{\-\_\-sensor\-\_\-configs}}
+\index{\-\_\-sensor\-\_\-configs@{\-\_\-sensor\-\_\-configs}!sensor_packet_data_t@{sensor\-\_\-packet\-\_\-data\-\_\-t}}
+\subsubsection[{\-\_\-sensor\-\_\-configs}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sensor\-\_\-packet\-\_\-data\-\_\-t\-::sensor\-\_\-config\-\_\-t}  {\bf sensor\-\_\-packet\-\_\-data\-\_\-t\-::\-\_\-sensor\-\_\-configs}}}\label{structsensor__packet__data__t_a4b9984cdc2dd55735ea9167e9688c4ac}
+\hypertarget{structsensor__packet__data__t_a61f1229c9a538d88a1f0cad5049643b6}{\index{sensor\-\_\-packet\-\_\-data\-\_\-t@{sensor\-\_\-packet\-\_\-data\-\_\-t}!\-\_\-sensor\-\_\-data@{\-\_\-sensor\-\_\-data}}
+\index{\-\_\-sensor\-\_\-data@{\-\_\-sensor\-\_\-data}!sensor_packet_data_t@{sensor\-\_\-packet\-\_\-data\-\_\-t}}
+\subsubsection[{\-\_\-sensor\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sensor\-\_\-packet\-\_\-data\-\_\-t\-::sensor\-\_\-data\-\_\-t} {\bf sensor\-\_\-packet\-\_\-data\-\_\-t\-::\-\_\-sensor\-\_\-data}}}\label{structsensor__packet__data__t_a61f1229c9a538d88a1f0cad5049643b6}
+\hypertarget{structsensor__packet__data__t_a593d9687db7d4de5d3d2e514d171d33f}{\index{sensor\-\_\-packet\-\_\-data\-\_\-t@{sensor\-\_\-packet\-\_\-data\-\_\-t}!packet\-\_\-tail@{packet\-\_\-tail}}
+\index{packet\-\_\-tail@{packet\-\_\-tail}!sensor_packet_data_t@{sensor\-\_\-packet\-\_\-data\-\_\-t}}
+\subsubsection[{packet\-\_\-tail}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t {\bf sensor\-\_\-packet\-\_\-data\-\_\-t\-::packet\-\_\-tail} = {\bf \-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{structsensor__packet__data__t_a593d9687db7d4de5d3d2e514d171d33f}
+
+
+\-Tail -\/ \-Determines when the packet stops. 
+
+
+
+\-Definition at line 145 of file \-Protocol\-Definition.\-h.
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_protocol_definition_8h}{\-Protocol\-Definition.\-h}\end{DoxyCompactItemize}

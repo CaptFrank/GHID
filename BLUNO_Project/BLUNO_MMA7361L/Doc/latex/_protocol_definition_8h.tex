@@ -1,0 +1,105 @@
+\hypertarget{_protocol_definition_8h}{\section{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development \-Projects/\-G\-H\-I\-D -\/ \-Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Protocol\-Definition.h \-File \-Reference}
+\label{_protocol_definition_8h}\index{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Protocol\-Definition.\-h@{/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\-Protocol\-Definition.\-h}}
+}
+{\ttfamily \#include \char`\"{}\-User\-Defines.\-h\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsensor__packet__header__t}{sensor\-\_\-packet\-\_\-header\-\_\-t}
+\item 
+struct \hyperlink{structsensor__packet__header__t_1_1packet__id__t}{sensor\-\_\-packet\-\_\-header\-\_\-t\-::packet\-\_\-id\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Packet \-Configurations. \end{DoxyCompactList}\item 
+struct \hyperlink{structsensor__packet__header__t_1_1sensor__id__t}{sensor\-\_\-packet\-\_\-header\-\_\-t\-::sensor\-\_\-id\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Sensor \-Identification. \end{DoxyCompactList}\item 
+struct \hyperlink{structsensor__packet__error__t}{sensor\-\_\-packet\-\_\-error\-\_\-t}
+\item 
+struct \hyperlink{structsensor__packet__heartbeat__t}{sensor\-\_\-packet\-\_\-heartbeat\-\_\-t}
+\item 
+struct \hyperlink{structsensor__packet__data__t}{sensor\-\_\-packet\-\_\-data\-\_\-t}
+\item 
+struct \hyperlink{structsensor__packet__data__t_1_1sensor__config__t}{sensor\-\_\-packet\-\_\-data\-\_\-t\-::sensor\-\_\-config\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Sensor \-Configurations. \end{DoxyCompactList}\item 
+struct \hyperlink{structsensor__packet__data__t_1_1sensor__data__t}{sensor\-\_\-packet\-\_\-data\-\_\-t\-::sensor\-\_\-data\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-The \-Sensor \-Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_protocol_definition_8h_a3db3c6acf49d30014828152a403a7f41}{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T}~0x01
+\begin{DoxyCompactList}\small\item\em \-Packet \-I\-Ds. \end{DoxyCompactList}\item 
+\#define \hyperlink{_protocol_definition_8h_a08929da741f048234b0c2e8c15341ffc}{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R}~0x02
+\item 
+\#define \hyperlink{_protocol_definition_8h_afe7c2978748ae8e34b2a875a4f06884f}{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}~0x03
+\item 
+\#define \hyperlink{_protocol_definition_8h_ae1c904c44f56120621316230be76a648}{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}~'\#'
+\item 
+\#define \hyperlink{_protocol_definition_8h_aba63cacf112bcb4c2ac7ffaeb1454114}{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}~'$\ast$'
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_protocol_definition_8h_a7db4018819078870576bf80126e7804d}{sensor\-\_\-t} \{ \hyperlink{_protocol_definition_8h_a7db4018819078870576bf80126e7804da60dafa947449e0289811473eca342be0}{\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E}, 
+\hyperlink{_protocol_definition_8h_a7db4018819078870576bf80126e7804dab8b87e01da07918ef6a4ed6e603ccb2c}{\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_protocol_definition_8h_afe7c2978748ae8e34b2a875a4f06884f}{\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}}
+\index{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}!ProtocolDefinition.h@{\-Protocol\-Definition.\-h}}
+\subsubsection[{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}~0x03}}\label{_protocol_definition_8h_afe7c2978748ae8e34b2a875a4f06884f}
+
+
+\-Definition at line 22 of file \-Protocol\-Definition.\-h.
+
+\hypertarget{_protocol_definition_8h_a08929da741f048234b0c2e8c15341ffc}{\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R}}
+\index{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R}!ProtocolDefinition.h@{\-Protocol\-Definition.\-h}}
+\subsubsection[{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-E\-R\-R\-O\-R}~0x02}}\label{_protocol_definition_8h_a08929da741f048234b0c2e8c15341ffc}
+
+
+\-Definition at line 21 of file \-Protocol\-Definition.\-h.
+
+\hypertarget{_protocol_definition_8h_a3db3c6acf49d30014828152a403a7f41}{\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T}}
+\index{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T}!ProtocolDefinition.h@{\-Protocol\-Definition.\-h}}
+\subsubsection[{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-H\-E\-A\-R\-T\-B\-E\-A\-T}~0x01}}\label{_protocol_definition_8h_a3db3c6acf49d30014828152a403a7f41}
+
+
+\-Packet \-I\-Ds. 
+
+\-This is the generic \-Sensor to \-Base \-Station protocol definition. \-Within this protocol, the allocated memory space and byte definitions are defined. 
+
+\-Definition at line 20 of file \-Protocol\-Definition.\-h.
+
+\hypertarget{_protocol_definition_8h_ae1c904c44f56120621316230be76a648}{\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}}
+\index{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}!ProtocolDefinition.h@{\-Protocol\-Definition.\-h}}
+\subsubsection[{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-P\-R\-E\-A\-M\-B\-L\-E}~'\#'}}\label{_protocol_definition_8h_ae1c904c44f56120621316230be76a648}
+
+
+\-Definition at line 24 of file \-Protocol\-Definition.\-h.
+
+\hypertarget{_protocol_definition_8h_aba63cacf112bcb4c2ac7ffaeb1454114}{\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}}
+\index{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L@{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}!ProtocolDefinition.h@{\-Protocol\-Definition.\-h}}
+\subsubsection[{\-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-E\-N\-S\-O\-R\-\_\-\-P\-A\-C\-K\-E\-T\-\_\-\-T\-A\-I\-L}~'$\ast$'}}\label{_protocol_definition_8h_aba63cacf112bcb4c2ac7ffaeb1454114}
+
+
+\-Definition at line 25 of file \-Protocol\-Definition.\-h.
+
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{_protocol_definition_8h_a7db4018819078870576bf80126e7804d}{\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!sensor\-\_\-t@{sensor\-\_\-t}}
+\index{sensor\-\_\-t@{sensor\-\_\-t}!ProtocolDefinition.h@{\-Protocol\-Definition.\-h}}
+\subsubsection[{sensor\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sensor\-\_\-t}}}\label{_protocol_definition_8h_a7db4018819078870576bf80126e7804d}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ \-This is the sensor type enum. \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E@{\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E}!\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}}\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E@{\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E}}\item[{\em 
+\hypertarget{_protocol_definition_8h_a7db4018819078870576bf80126e7804da60dafa947449e0289811473eca342be0}{\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E}\label{_protocol_definition_8h_a7db4018819078870576bf80126e7804da60dafa947449e0289811473eca342be0}
+}]\-S\-E\-N\-S\-O\-R\-\_\-\-M\-O\-U\-S\-E. \index{\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K@{\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}!\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}}\index{\-Protocol\-Definition.\-h@{\-Protocol\-Definition.\-h}!\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K@{\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}}\item[{\em 
+\hypertarget{_protocol_definition_8h_a7db4018819078870576bf80126e7804dab8b87e01da07918ef6a4ed6e603ccb2c}{\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K}\label{_protocol_definition_8h_a7db4018819078870576bf80126e7804dab8b87e01da07918ef6a4ed6e603ccb2c}
+}]\-S\-E\-N\-S\-O\-R\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K. \end{description}
+\end{Desc}
+
+
+
+\-Definition at line 32 of file \-Protocol\-Definition.\-h.
+

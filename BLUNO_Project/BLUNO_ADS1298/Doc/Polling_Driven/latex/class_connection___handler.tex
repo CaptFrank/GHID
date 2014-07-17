@@ -1,0 +1,161 @@
+\hypertarget{class_connection___handler}{\section{\-Connection\-\_\-\-Handler \-Class \-Reference}
+\label{class_connection___handler}\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}}
+}
+
+
+{\ttfamily \#include $<$\-Connection\-Handler.\-h$>$}
+
+\-Inheritance diagram for \-Connection\-\_\-\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_connection___handler}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_connection___handler_a391d131d7d802a8242080a6f44fdd348}{connect} ()
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_connection___handler_a7f266dbbf5c3f030de9a4732bdb17bd1}{disconnect} ()
+\item 
+virtual void \hyperlink{class_connection___handler_a0c565c93a515e30aca7c5fdf5bd7191e}{reboot} ()
+\item 
+virtual \hyperlink{structbuffer__t}{buffer\-\_\-t} $\ast$ \hyperlink{class_connection___handler_a5cdbdd2b6451b80ef35580ee8b57fce3}{read} (byte length)
+\item 
+virtual void \hyperlink{class_connection___handler_ad22f4aeae7b6f43d16ee67c841ff2efa}{write} (\hyperlink{structbuffer__t}{buffer\-\_\-t} $\ast$buf)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_connection_handler_8h_a688c9994fcf706765d41a72e7e9e39a5}{connection\-\_\-type\-\_\-t} \hyperlink{class_connection___handler_a3ac7a0346fb72ae55ffa867465e397f2}{\-\_\-con\-\_\-type}
+\begin{DoxyCompactList}\small\item\em \-Private \-Context. \end{DoxyCompactList}\item 
+\hyperlink{structbuffer__t}{buffer\-\_\-t} \hyperlink{class_connection___handler_ad1eca58f0f8cb43147ce961389293b37}{\-\_\-buff}
+\begin{DoxyCompactList}\small\item\em \-Internal \-Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is the connection handler for any connection type. \-In this case we are using this handler to handle the \-Bluetooth connection to the sensor node.
+
+\-This is the base class for communication handlers. \-It provides an interface to the other communication handler classes. 
+
+\-Definition at line 56 of file \-Connection\-Handler.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_connection___handler_a391d131d7d802a8242080a6f44fdd348}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!connect@{connect}}
+\index{connect@{connect}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Connection\-\_\-\-Handler\-::connect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_connection___handler_a391d131d7d802a8242080a6f44fdd348}
+
+
+\-Public \-Context. 
+
+\-A \-Connection method to connect to the target device.
+
+\begin{DoxyReturn}{\-Returns}
+success -\/ if the connection was successful 
+\end{DoxyReturn}
+
+
+\-Reimplemented in \hyperlink{class_bluetooth___connection___handler_ada4a47ada49b62071fba9d23b63cd128}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}.
+
+\hypertarget{class_connection___handler_a7f266dbbf5c3f030de9a4732bdb17bd1}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Connection\-\_\-\-Handler\-::disconnect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_connection___handler_a7f266dbbf5c3f030de9a4732bdb17bd1}
+\-A \-Connection method to disconnect from the target device.
+
+\begin{DoxyReturn}{\-Returns}
+success -\/ if the disconnection was successful 
+\end{DoxyReturn}
+
+
+\-Reimplemented in \hyperlink{class_bluetooth___connection___handler_a35de0a32d9f48521c8e3afd30df823f5}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}.
+
+\hypertarget{class_connection___handler_a5cdbdd2b6451b80ef35580ee8b57fce3}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!read@{read}}
+\index{read@{read}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf buffer\-\_\-t}$\ast$ {\bf \-Connection\-\_\-\-Handler\-::read} (
+\begin{DoxyParamCaption}
+\item[{byte}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_connection___handler_a5cdbdd2b6451b80ef35580ee8b57fce3}
+\-The generic read method, which reads a connection for a certain length of data and returns a \hyperlink{structbuffer__t}{buffer\-\_\-t} structure.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em length} & -\/ the buffer length to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structbuffer__t}{buffer\-\_\-t} -\/ the data container 
+\end{DoxyReturn}
+
+
+\-Reimplemented in \hyperlink{class_bluetooth___connection___handler_a03944d3fb682688354c132878dd3d8f0}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}.
+
+\hypertarget{class_connection___handler_a0c565c93a515e30aca7c5fdf5bd7191e}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!reboot@{reboot}}
+\index{reboot@{reboot}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{reboot}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Connection\-\_\-\-Handler\-::reboot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_connection___handler_a0c565c93a515e30aca7c5fdf5bd7191e}
+\-A reboot method to reset the connection device. 
+
+\-Reimplemented in \hyperlink{class_bluetooth___connection___handler_a69604d969ecc0514948314cb7b78cd1d}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}.
+
+\hypertarget{class_connection___handler_ad22f4aeae7b6f43d16ee67c841ff2efa}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!write@{write}}
+\index{write@{write}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Connection\-\_\-\-Handler\-::write} (
+\begin{DoxyParamCaption}
+\item[{{\bf buffer\-\_\-t} $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_connection___handler_ad22f4aeae7b6f43d16ee67c841ff2efa}
+\-This is the generic write method that writes a buffer type structure to the connection.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em buf} & -\/ the buffer structure to write \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{class_bluetooth___connection___handler_afb57232b5a23ddc1be523b9fe6b275b5}{\-Bluetooth\-\_\-\-Connection\-\_\-\-Handler}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_connection___handler_ad1eca58f0f8cb43147ce961389293b37}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!\-\_\-buff@{\-\_\-buff}}
+\index{\-\_\-buff@{\-\_\-buff}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{\-\_\-buff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf buffer\-\_\-t} {\bf \-Connection\-\_\-\-Handler\-::\-\_\-buff}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_connection___handler_ad1eca58f0f8cb43147ce961389293b37}
+
+
+\-Internal \-Buffer. 
+
+
+
+\-Definition at line 104 of file \-Connection\-Handler.\-h.
+
+\hypertarget{class_connection___handler_a3ac7a0346fb72ae55ffa867465e397f2}{\index{\-Connection\-\_\-\-Handler@{\-Connection\-\_\-\-Handler}!\-\_\-con\-\_\-type@{\-\_\-con\-\_\-type}}
+\index{\-\_\-con\-\_\-type@{\-\_\-con\-\_\-type}!Connection_Handler@{\-Connection\-\_\-\-Handler}}
+\subsubsection[{\-\_\-con\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf connection\-\_\-type\-\_\-t} {\bf \-Connection\-\_\-\-Handler\-::\-\_\-con\-\_\-type}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_connection___handler_a3ac7a0346fb72ae55ffa867465e397f2}
+
+
+\-Private \-Context. 
+
+\-Connection type 
+
+\-Definition at line 101 of file \-Connection\-Handler.\-h.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-A\-D\-S1298/\-Src/\-Polling\-\_\-\-Driven/\-Main/\hyperlink{_connection_handler_8h}{\-Connection\-Handler.\-h}\end{DoxyCompactItemize}

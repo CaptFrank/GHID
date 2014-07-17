@@ -1,0 +1,421 @@
+\hypertarget{class_a_c_m}{\section{\-A\-C\-M \-Class \-Reference}
+\label{class_a_c_m}\index{\-A\-C\-M@{\-A\-C\-M}}
+}
+
+
+{\ttfamily \#include $<$cdcacm.\-h$>$}
+
+\-Inheritance diagram for \-A\-C\-M\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_c_m}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_c_m_aa5d83ef9d48dab404090e9136522707a}{\-A\-C\-M} (\-U\-S\-B $\ast$pusb, \hyperlink{class_c_d_c_async_oper}{\-C\-D\-C\-Async\-Oper} $\ast$pasync)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a62c91ac62e8e3bf66bc3940d5b934c10}{\-Set\-Comm\-Feature} (uint16\-\_\-t fid, uint8\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a18208672a707391863b8abdc6714c825}{\-Get\-Comm\-Feature} (uint16\-\_\-t fid, uint8\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a74a3484a0f524ddf0e228c17addcebdf}{\-Clear\-Comm\-Feature} (uint16\-\_\-t fid)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a79eb8706c7f1432593fb2f2eee0da504}{\-Set\-Line\-Coding} (const \hyperlink{struct_l_i_n_e___c_o_d_i_n_g}{\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G} $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a9d922317b25a7ae086a6fe79984ab8d1}{\-Get\-Line\-Coding} (\hyperlink{struct_l_i_n_e___c_o_d_i_n_g}{\-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G} $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_af2e08e5f03f17ed039985147a7129bbd}{\-Set\-Control\-Line\-State} (uint8\-\_\-t \hyperlink{_mouse___chronos_8cpp_a2db8c09b4598a5b457667c34a46f311e}{state})
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a2a618cbff52737740e76977db557ddff}{\-Send\-Break} (uint16\-\_\-t duration)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a4deddfbfb1d9010b71096cbfd46b2dfb}{\-Get\-Notif} (uint16\-\_\-t $\ast$bytes\-\_\-rcvd, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a7f455b7a649522c29f2e63d668b0ccca}{\-Rcv\-Data} (uint16\-\_\-t $\ast$nbytesptr, uint8\-\_\-t $\ast$dataptr)
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_ac96caeb8d657fa76219872ceb4379923}{\-Snd\-Data} (uint16\-\_\-t nbytes, uint8\-\_\-t $\ast$dataptr)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_c_m_ad3210651d58c77d3ded4b4b83a9476b7}{\-Init} (uint8\-\_\-t parent, uint8\-\_\-t port, bool lowspeed)
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_c_m_a768c0fd4ef7f5c52de9e5e7431685279}{\-Release} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_c_m_a79e4da2cae9145d895a6a1211a96fe36}{\-Poll} ()
+\item 
+virtual uint8\-\_\-t \hyperlink{class_a_c_m_a7e0bb108012af9a99bb98aefca036d84}{\-Get\-Address} ()
+\item 
+virtual bool \hyperlink{class_a_c_m_a7161082e88359738596dd12a706ee286}{is\-Ready} ()
+\item 
+virtual void \hyperlink{class_a_c_m_af5b411a7ccc82bd77a7c5cfba6cd9a86}{\-Endpoint\-Xtract} (uint8\-\_\-t conf, uint8\-\_\-t iface, uint8\-\_\-t alt, uint8\-\_\-t proto, const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_a_c_m_aa05a65487f5e02bab40ccba1018ee5b6}{\-Print\-Endpoint\-Descriptor} (const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$ep\-\_\-ptr)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-U\-S\-B $\ast$ \hyperlink{class_a_c_m_ae403b0129d7beda921de9d9586b597f7}{p\-Usb}
+\item 
+\hyperlink{class_c_d_c_async_oper}{\-C\-D\-C\-Async\-Oper} $\ast$ \hyperlink{class_a_c_m_a3f160c6c757994f0c30bd5c5f1fb9d95}{p\-Async}
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_abaa06a619a519f4cb39cc8482af6f111}{b\-Address}
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_af1a17c2d77625599da12b26cb0c90d39}{b\-Conf\-Num}
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a5512d9e8c8c59371f16018fe8ce46b19}{b\-Control\-Iface}
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a720b72b524e03da8f17c045e0d689ba1}{b\-Data\-Iface}
+\item 
+uint8\-\_\-t \hyperlink{class_a_c_m_a058b4d4a088a002fcde4fb2b75e33f93}{b\-Num\-E\-P}
+\item 
+uint32\-\_\-t \hyperlink{class_a_c_m_a6701d70ae4734e8a81971d9fb8b085f2}{q\-Next\-Poll\-Time}
+\item 
+bool \hyperlink{class_a_c_m_acd6716c4fc871942fca55e1501dc5b09}{b\-Poll\-Enable}
+\item 
+bool \hyperlink{class_a_c_m_a8ebf4b872b0ed66e93b4ed39f46290fd}{ready}
+\item 
+\-Ep\-Info \hyperlink{class_a_c_m_a60fb6a365b78fb80a4a9842e364cf1a3}{ep\-Info} \mbox{[}\hyperlink{cdcacm_8h_aa11e629b02a0cd7d768f796732cb2694}{\-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint8\-\_\-t \hyperlink{class_a_c_m_a5917b5098e529fafe67a53e03f1e7011}{ep\-Data\-In\-Index} = 1
+\item 
+static const uint8\-\_\-t \hyperlink{class_a_c_m_a0dc940bc4f1bed7525bb768e37e6cb61}{ep\-Data\-Out\-Index} = 2
+\item 
+static const uint8\-\_\-t \hyperlink{class_a_c_m_a9b32207fdf256e5f8553ba4048b64307}{ep\-Interrupt\-In\-Index} = 3
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 138 of file cdcacm.\-h.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_a_c_m_aa5d83ef9d48dab404090e9136522707a}{\index{\-A\-C\-M@{\-A\-C\-M}!\-A\-C\-M@{\-A\-C\-M}}
+\index{\-A\-C\-M@{\-A\-C\-M}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-A\-C\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-C\-M\-::\-A\-C\-M} (
+\begin{DoxyParamCaption}
+\item[{\-U\-S\-B $\ast$}]{pusb, }
+\item[{{\bf \-C\-D\-C\-Async\-Oper} $\ast$}]{pasync}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_aa5d83ef9d48dab404090e9136522707a}
+
+
+\-Definition at line 23 of file cdcacm.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_a_c_m_a74a3484a0f524ddf0e228c17addcebdf}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Clear\-Comm\-Feature@{\-Clear\-Comm\-Feature}}
+\index{\-Clear\-Comm\-Feature@{\-Clear\-Comm\-Feature}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Clear\-Comm\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Clear\-Comm\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{fid}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a74a3484a0f524ddf0e228c17addcebdf}
+
+
+\-Definition at line 316 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_af5b411a7ccc82bd77a7c5cfba6cd9a86}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Endpoint\-Xtract@{\-Endpoint\-Xtract}}
+\index{\-Endpoint\-Xtract@{\-Endpoint\-Xtract}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Endpoint\-Xtract}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-C\-M\-::\-Endpoint\-Xtract} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{conf, }
+\item[{uint8\-\_\-t}]{iface, }
+\item[{uint8\-\_\-t}]{alt, }
+\item[{uint8\-\_\-t}]{proto, }
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_c_m_af5b411a7ccc82bd77a7c5cfba6cd9a86}
+
+
+\-Definition at line 224 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a7e0bb108012af9a99bb98aefca036d84}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Get\-Address@{\-Get\-Address}}
+\index{\-Get\-Address@{\-Get\-Address}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Get\-Address}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8\-\_\-t {\bf \-A\-C\-M\-::\-Get\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_a_c_m_a7e0bb108012af9a99bb98aefca036d84}
+
+
+\-Definition at line 180 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a18208672a707391863b8abdc6714c825}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Get\-Comm\-Feature@{\-Get\-Comm\-Feature}}
+\index{\-Get\-Comm\-Feature@{\-Get\-Comm\-Feature}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Get\-Comm\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Get\-Comm\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{fid, }
+\item[{uint8\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a18208672a707391863b8abdc6714c825}
+
+
+\-Definition at line 312 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a9d922317b25a7ae086a6fe79984ab8d1}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Get\-Line\-Coding@{\-Get\-Line\-Coding}}
+\index{\-Get\-Line\-Coding@{\-Get\-Line\-Coding}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Get\-Line\-Coding}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Get\-Line\-Coding} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G} $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a9d922317b25a7ae086a6fe79984ab8d1}
+
+
+\-Definition at line 324 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a4deddfbfb1d9010b71096cbfd46b2dfb}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Get\-Notif@{\-Get\-Notif}}
+\index{\-Get\-Notif@{\-Get\-Notif}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Get\-Notif}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Get\-Notif} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t $\ast$}]{bytes\-\_\-rcvd, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a4deddfbfb1d9010b71096cbfd46b2dfb}
+\hypertarget{class_a_c_m_ad3210651d58c77d3ded4b4b83a9476b7}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Init@{\-Init}}
+\index{\-Init@{\-Init}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Init} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{parent, }
+\item[{uint8\-\_\-t}]{port, }
+\item[{bool}]{lowspeed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_c_m_ad3210651d58c77d3ded4b4b83a9476b7}
+
+
+\-Reimplemented in \hyperlink{class_p_l2303_a23c849fb504c1fe6f46c84d04c0a47cf}{\-P\-L2303}.
+
+
+
+\-Definition at line 47 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a7161082e88359738596dd12a706ee286}{\index{\-A\-C\-M@{\-A\-C\-M}!is\-Ready@{is\-Ready}}
+\index{is\-Ready@{is\-Ready}!ACM@{\-A\-C\-M}}
+\subsubsection[{is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-A\-C\-M\-::is\-Ready} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_a_c_m_a7161082e88359738596dd12a706ee286}
+
+
+\-Definition at line 184 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a79e4da2cae9145d895a6a1211a96fe36}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Poll@{\-Poll}}
+\index{\-Poll@{\-Poll}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Poll}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Poll} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_c_m_a79e4da2cae9145d895a6a1211a96fe36}
+
+
+\-Definition at line 264 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_aa05a65487f5e02bab40ccba1018ee5b6}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Print\-Endpoint\-Descriptor@{\-Print\-Endpoint\-Descriptor}}
+\index{\-Print\-Endpoint\-Descriptor@{\-Print\-Endpoint\-Descriptor}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Print\-Endpoint\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-C\-M\-::\-Print\-Endpoint\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{const \-U\-S\-B\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R $\ast$}]{ep\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_aa05a65487f5e02bab40ccba1018ee5b6}
+
+
+\-Definition at line 336 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a7f455b7a649522c29f2e63d668b0ccca}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Rcv\-Data@{\-Rcv\-Data}}
+\index{\-Rcv\-Data@{\-Rcv\-Data}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Rcv\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Rcv\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t $\ast$}]{nbytesptr, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a7f455b7a649522c29f2e63d668b0ccca}
+
+
+\-Definition at line 300 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a768c0fd4ef7f5c52de9e5e7431685279}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Release@{\-Release}}
+\index{\-Release@{\-Release}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Release}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_a_c_m_a768c0fd4ef7f5c52de9e5e7431685279}
+
+
+\-Definition at line 251 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a2a618cbff52737740e76977db557ddff}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Send\-Break@{\-Send\-Break}}
+\index{\-Send\-Break@{\-Send\-Break}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Send\-Break}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Send\-Break} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{duration}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a2a618cbff52737740e76977db557ddff}
+
+
+\-Definition at line 332 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a62c91ac62e8e3bf66bc3940d5b934c10}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Set\-Comm\-Feature@{\-Set\-Comm\-Feature}}
+\index{\-Set\-Comm\-Feature@{\-Set\-Comm\-Feature}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Set\-Comm\-Feature}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Set\-Comm\-Feature} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{fid, }
+\item[{uint8\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a62c91ac62e8e3bf66bc3940d5b934c10}
+
+
+\-Definition at line 308 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_af2e08e5f03f17ed039985147a7129bbd}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Set\-Control\-Line\-State@{\-Set\-Control\-Line\-State}}
+\index{\-Set\-Control\-Line\-State@{\-Set\-Control\-Line\-State}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Set\-Control\-Line\-State}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Set\-Control\-Line\-State} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_af2e08e5f03f17ed039985147a7129bbd}
+
+
+\-Definition at line 328 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_a79eb8706c7f1432593fb2f2eee0da504}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Set\-Line\-Coding@{\-Set\-Line\-Coding}}
+\index{\-Set\-Line\-Coding@{\-Set\-Line\-Coding}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Set\-Line\-Coding}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Set\-Line\-Coding} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-L\-I\-N\-E\-\_\-\-C\-O\-D\-I\-N\-G} $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_a79eb8706c7f1432593fb2f2eee0da504}
+
+
+\-Definition at line 320 of file cdcacm.\-cpp.
+
+\hypertarget{class_a_c_m_ac96caeb8d657fa76219872ceb4379923}{\index{\-A\-C\-M@{\-A\-C\-M}!\-Snd\-Data@{\-Snd\-Data}}
+\index{\-Snd\-Data@{\-Snd\-Data}!ACM@{\-A\-C\-M}}
+\subsubsection[{\-Snd\-Data}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::\-Snd\-Data} (
+\begin{DoxyParamCaption}
+\item[{uint16\-\_\-t}]{nbytes, }
+\item[{uint8\-\_\-t $\ast$}]{dataptr}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_m_ac96caeb8d657fa76219872ceb4379923}
+
+
+\-Definition at line 304 of file cdcacm.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_a_c_m_abaa06a619a519f4cb39cc8482af6f111}{\index{\-A\-C\-M@{\-A\-C\-M}!b\-Address@{b\-Address}}
+\index{b\-Address@{b\-Address}!ACM@{\-A\-C\-M}}
+\subsubsection[{b\-Address}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::b\-Address}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_abaa06a619a519f4cb39cc8482af6f111}
+
+
+\-Definition at line 146 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_af1a17c2d77625599da12b26cb0c90d39}{\index{\-A\-C\-M@{\-A\-C\-M}!b\-Conf\-Num@{b\-Conf\-Num}}
+\index{b\-Conf\-Num@{b\-Conf\-Num}!ACM@{\-A\-C\-M}}
+\subsubsection[{b\-Conf\-Num}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::b\-Conf\-Num}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_af1a17c2d77625599da12b26cb0c90d39}
+
+
+\-Definition at line 147 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a5512d9e8c8c59371f16018fe8ce46b19}{\index{\-A\-C\-M@{\-A\-C\-M}!b\-Control\-Iface@{b\-Control\-Iface}}
+\index{b\-Control\-Iface@{b\-Control\-Iface}!ACM@{\-A\-C\-M}}
+\subsubsection[{b\-Control\-Iface}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::b\-Control\-Iface}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a5512d9e8c8c59371f16018fe8ce46b19}
+
+
+\-Definition at line 148 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a720b72b524e03da8f17c045e0d689ba1}{\index{\-A\-C\-M@{\-A\-C\-M}!b\-Data\-Iface@{b\-Data\-Iface}}
+\index{b\-Data\-Iface@{b\-Data\-Iface}!ACM@{\-A\-C\-M}}
+\subsubsection[{b\-Data\-Iface}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::b\-Data\-Iface}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a720b72b524e03da8f17c045e0d689ba1}
+
+
+\-Definition at line 149 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a058b4d4a088a002fcde4fb2b75e33f93}{\index{\-A\-C\-M@{\-A\-C\-M}!b\-Num\-E\-P@{b\-Num\-E\-P}}
+\index{b\-Num\-E\-P@{b\-Num\-E\-P}!ACM@{\-A\-C\-M}}
+\subsubsection[{b\-Num\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t {\bf \-A\-C\-M\-::b\-Num\-E\-P}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a058b4d4a088a002fcde4fb2b75e33f93}
+
+
+\-Definition at line 150 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_acd6716c4fc871942fca55e1501dc5b09}{\index{\-A\-C\-M@{\-A\-C\-M}!b\-Poll\-Enable@{b\-Poll\-Enable}}
+\index{b\-Poll\-Enable@{b\-Poll\-Enable}!ACM@{\-A\-C\-M}}
+\subsubsection[{b\-Poll\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-A\-C\-M\-::b\-Poll\-Enable}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_acd6716c4fc871942fca55e1501dc5b09}
+
+
+\-Definition at line 152 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a5917b5098e529fafe67a53e03f1e7011}{\index{\-A\-C\-M@{\-A\-C\-M}!ep\-Data\-In\-Index@{ep\-Data\-In\-Index}}
+\index{ep\-Data\-In\-Index@{ep\-Data\-In\-Index}!ACM@{\-A\-C\-M}}
+\subsubsection[{ep\-Data\-In\-Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t {\bf \-A\-C\-M\-::ep\-Data\-In\-Index} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_a_c_m_a5917b5098e529fafe67a53e03f1e7011}
+
+
+\-Definition at line 140 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a0dc940bc4f1bed7525bb768e37e6cb61}{\index{\-A\-C\-M@{\-A\-C\-M}!ep\-Data\-Out\-Index@{ep\-Data\-Out\-Index}}
+\index{ep\-Data\-Out\-Index@{ep\-Data\-Out\-Index}!ACM@{\-A\-C\-M}}
+\subsubsection[{ep\-Data\-Out\-Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t {\bf \-A\-C\-M\-::ep\-Data\-Out\-Index} = 2\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_a_c_m_a0dc940bc4f1bed7525bb768e37e6cb61}
+
+
+\-Definition at line 141 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a60fb6a365b78fb80a4a9842e364cf1a3}{\index{\-A\-C\-M@{\-A\-C\-M}!ep\-Info@{ep\-Info}}
+\index{ep\-Info@{ep\-Info}!ACM@{\-A\-C\-M}}
+\subsubsection[{ep\-Info}]{\setlength{\rightskip}{0pt plus 5cm}\-Ep\-Info {\bf \-A\-C\-M\-::ep\-Info}\mbox{[}{\bf \-A\-C\-M\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a60fb6a365b78fb80a4a9842e364cf1a3}
+
+
+\-Definition at line 155 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a9b32207fdf256e5f8553ba4048b64307}{\index{\-A\-C\-M@{\-A\-C\-M}!ep\-Interrupt\-In\-Index@{ep\-Interrupt\-In\-Index}}
+\index{ep\-Interrupt\-In\-Index@{ep\-Interrupt\-In\-Index}!ACM@{\-A\-C\-M}}
+\subsubsection[{ep\-Interrupt\-In\-Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\-\_\-t {\bf \-A\-C\-M\-::ep\-Interrupt\-In\-Index} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_a_c_m_a9b32207fdf256e5f8553ba4048b64307}
+
+
+\-Definition at line 142 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a3f160c6c757994f0c30bd5c5f1fb9d95}{\index{\-A\-C\-M@{\-A\-C\-M}!p\-Async@{p\-Async}}
+\index{p\-Async@{p\-Async}!ACM@{\-A\-C\-M}}
+\subsubsection[{p\-Async}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-D\-C\-Async\-Oper}$\ast$ {\bf \-A\-C\-M\-::p\-Async}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a3f160c6c757994f0c30bd5c5f1fb9d95}
+
+
+\-Definition at line 145 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_ae403b0129d7beda921de9d9586b597f7}{\index{\-A\-C\-M@{\-A\-C\-M}!p\-Usb@{p\-Usb}}
+\index{p\-Usb@{p\-Usb}!ACM@{\-A\-C\-M}}
+\subsubsection[{p\-Usb}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-S\-B$\ast$ {\bf \-A\-C\-M\-::p\-Usb}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_ae403b0129d7beda921de9d9586b597f7}
+
+
+\-Definition at line 144 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a6701d70ae4734e8a81971d9fb8b085f2}{\index{\-A\-C\-M@{\-A\-C\-M}!q\-Next\-Poll\-Time@{q\-Next\-Poll\-Time}}
+\index{q\-Next\-Poll\-Time@{q\-Next\-Poll\-Time}!ACM@{\-A\-C\-M}}
+\subsubsection[{q\-Next\-Poll\-Time}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-A\-C\-M\-::q\-Next\-Poll\-Time}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a6701d70ae4734e8a81971d9fb8b085f2}
+
+
+\-Definition at line 151 of file cdcacm.\-h.
+
+\hypertarget{class_a_c_m_a8ebf4b872b0ed66e93b4ed39f46290fd}{\index{\-A\-C\-M@{\-A\-C\-M}!ready@{ready}}
+\index{ready@{ready}!ACM@{\-A\-C\-M}}
+\subsubsection[{ready}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-A\-C\-M\-::ready}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_a_c_m_a8ebf4b872b0ed66e93b4ed39f46290fd}
+
+
+\-Definition at line 153 of file cdcacm.\-h.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{cdcacm_8h}{cdcacm.\-h}\item 
+\-G\-H\-I\-D\-\_\-\-Framework/\-Src/\-Included Libraries/\-U\-S\-B\-\_\-\-Host\-\_\-\-Shield\-\_\-2.\-0-\/master/\hyperlink{cdcacm_8cpp}{cdcacm.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+\hypertarget{class_data___processor}{\section{\-Data\-\_\-\-Processor \-Class \-Reference}
+\label{class_data___processor}\index{\-Data\-\_\-\-Processor@{\-Data\-\_\-\-Processor}}
+}
+
+
+{\ttfamily \#include $<$\-Data\-Processor.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_data___processor_a78e40f429385afd57d38d2c5fab66be2}{create\-\_\-heartbeat} (\hyperlink{_protocol_definition_8h_a7db4018819078870576bf80126e7804d}{sensor\-\_\-t} sensor\-\_\-type, char sensor\-\_\-id, \hyperlink{structsensor__packet__heartbeat__t}{sensor\-\_\-packet\-\_\-heartbeat\-\_\-t} $\ast$heart)
+\begin{DoxyCompactList}\small\item\em \-Public \-Context. \end{DoxyCompactList}\item 
+static void \hyperlink{class_data___processor_a35079c8a9d8aab08e57c32935ebe7ba4}{create\-\_\-error} (\hyperlink{_protocol_definition_8h_a7db4018819078870576bf80126e7804d}{sensor\-\_\-t} sensor\-\_\-type, char sensor\-\_\-id, uint8\-\_\-t error\-\_\-id, \hyperlink{structsensor__packet__error__t}{sensor\-\_\-packet\-\_\-error\-\_\-t} $\ast$error)
+\item 
+static void \hyperlink{class_data___processor_a502c865ae3f23558204538ac2fede0bc}{create\-\_\-data\-\_\-packet} (\hyperlink{_protocol_definition_8h_a7db4018819078870576bf80126e7804d}{sensor\-\_\-t} sensor\-\_\-type, char sensor\-\_\-id, \hyperlink{struct_ring_buff__t}{\-Ring\-Buff\-\_\-t} $\ast$buf, \hyperlink{structsensor__packet__data__t}{sensor\-\_\-packet\-\_\-data\-\_\-t} $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is the data processor for the \-Bluetooth connection. \-It is a basic static class which, takes in a buffer of data and strips the unnecessary bytes from it, as well as check if the data is valid or not. 
+
+\-Definition at line 38 of file \-Data\-Processor.\-h.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_data___processor_a502c865ae3f23558204538ac2fede0bc}{\index{\-Data\-\_\-\-Processor@{\-Data\-\_\-\-Processor}!create\-\_\-data\-\_\-packet@{create\-\_\-data\-\_\-packet}}
+\index{create\-\_\-data\-\_\-packet@{create\-\_\-data\-\_\-packet}!Data_Processor@{\-Data\-\_\-\-Processor}}
+\subsubsection[{create\-\_\-data\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Data\-\_\-\-Processor\-::create\-\_\-data\-\_\-packet} (
+\begin{DoxyParamCaption}
+\item[{{\bf sensor\-\_\-t}}]{sensor\-\_\-type, }
+\item[{char}]{sensor\-\_\-id, }
+\item[{{\bf \-Ring\-Buff\-\_\-t} $\ast$}]{buf, }
+\item[{{\bf sensor\-\_\-packet\-\_\-data\-\_\-t} $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_data___processor_a502c865ae3f23558204538ac2fede0bc}
+\-This creates a data report
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sensor\-\_\-type} & -\/ the sensor type (mouse, joystick) \\
+\hline
+{\em sensor\-\_\-id} & -\/ the sensor id \\
+\hline
+{\em buf} & -\/ the ring buffer \\
+\hline
+{\em data} & -\/ the structure ptr to store the information \\
+\hline
+\end{DoxyParams}
+\-We create the header
+
+\-First we memset the buffer to reset it
+
+\-First we memset the buffer to reset it
+
+\-We get the count
+
+\-Then we remove an object from the ring buffer.
+
+\-We remove the spacer 
+
+\-Definition at line 50 of file \-Data\-Processor.\-cpp.
+
+\hypertarget{class_data___processor_a35079c8a9d8aab08e57c32935ebe7ba4}{\index{\-Data\-\_\-\-Processor@{\-Data\-\_\-\-Processor}!create\-\_\-error@{create\-\_\-error}}
+\index{create\-\_\-error@{create\-\_\-error}!Data_Processor@{\-Data\-\_\-\-Processor}}
+\subsubsection[{create\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Data\-\_\-\-Processor\-::create\-\_\-error} (
+\begin{DoxyParamCaption}
+\item[{{\bf sensor\-\_\-t}}]{sensor\-\_\-type, }
+\item[{char}]{sensor\-\_\-id, }
+\item[{uint8\-\_\-t}]{error\-\_\-id, }
+\item[{{\bf sensor\-\_\-packet\-\_\-error\-\_\-t} $\ast$}]{error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_data___processor_a35079c8a9d8aab08e57c32935ebe7ba4}
+\-This create an error report.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sensor\-\_\-type} & -\/ the sensor type (mouse, joystick) \\
+\hline
+{\em sensor\-\_\-id} & -\/ the sensor id \\
+\hline
+{\em error\-\_\-id} & -\/ the error that occured \\
+\hline
+{\em error} & -\/ the structure ptr to store the information \\
+\hline
+\end{DoxyParams}
+\-We create the header
+
+\-We assign the error 
+
+\-Definition at line 33 of file \-Data\-Processor.\-cpp.
+
+\hypertarget{class_data___processor_a78e40f429385afd57d38d2c5fab66be2}{\index{\-Data\-\_\-\-Processor@{\-Data\-\_\-\-Processor}!create\-\_\-heartbeat@{create\-\_\-heartbeat}}
+\index{create\-\_\-heartbeat@{create\-\_\-heartbeat}!Data_Processor@{\-Data\-\_\-\-Processor}}
+\subsubsection[{create\-\_\-heartbeat}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Data\-\_\-\-Processor\-::create\-\_\-heartbeat} (
+\begin{DoxyParamCaption}
+\item[{{\bf sensor\-\_\-t}}]{sensor\-\_\-type, }
+\item[{char}]{sensor\-\_\-id, }
+\item[{{\bf sensor\-\_\-packet\-\_\-heartbeat\-\_\-t} $\ast$}]{heart}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_data___processor_a78e40f429385afd57d38d2c5fab66be2}
+
+
+\-Public \-Context. 
+
+\-This creates a heartbeat message to send to the base station.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sensor\-\_\-type} & -\/ the sensor type (mouse, joystick) \\
+\hline
+{\em sensor\-\_\-id} & -\/ the sensor id \\
+\hline
+{\em heart} & -\/ the structure ptr to store the information \\
+\hline
+\end{DoxyParams}
+\-We create the heartbeat 
+
+\-Definition at line 19 of file \-Data\-Processor.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_data_processor_8h}{\-Data\-Processor.\-h}\item 
+/\-Volumes/\-Data\-H\-D\-D/\-Documents/\-Development Projects/\-G\-H\-I\-D -\/ Beta/\-G\-H\-I\-D/\-B\-L\-U\-N\-O\-\_\-\-Project/\-B\-L\-U\-N\-O\-\_\-\-M\-M\-A7361\-L/\-Src/\-Main/\hyperlink{_data_processor_8cpp}{\-Data\-Processor.\-cpp}\end{DoxyCompactItemize}
